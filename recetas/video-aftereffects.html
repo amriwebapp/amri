@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Receta: edita vídeo con Claude y After Effects · AMRI</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%23D2561F%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-size=%2738%27 font-weight=%27800%27 font-family=%27Arial,sans-serif%27 text-anchor=%27middle%27 fill=%27white%27%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#FBF6EE;--card:#FFFFFF;--ink:#2A1F14;--mute:#7A6A58;--line:#E6DACB;--acc:#D2561F;--ok:#2E8B57;--code:#2A1F14;--codeink:#FFEBD2;--soft:#FFF1E2}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17110B;--card:#221A12;--ink:#F6EBDC;--mute:#B3A18C;--line:#3A2E22;--acc:#F0854F;--ok:#4FC283;--code:#0E0A06;--soft:#2D2116}}
+:root[data-theme="dark"]{--bg:#17110B;--card:#221A12;--ink:#F6EBDC;--mute:#B3A18C;--line:#3A2E22;--acc:#F0854F;--ok:#4FC283;--code:#0E0A06;--soft:#2D2116}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.6;font-size:17px}
+main{max-width:760px;margin:0 auto;padding:26px 16px 60px}
+h1{font-size:clamp(30px,7vw,48px);line-height:1.05;margin:0 0 10px;font-weight:800;letter-spacing:-.02em}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.meta span{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px}
+.ing{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:16px}
+.ing h2{margin:0 0 8px;font-size:18px}.ing ul{margin:0;padding-left:20px}.ing li{margin:4px 0}
+.pick{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:6px}
+.chip{font:inherit;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:700}
+.prog{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:10px 0}
+.bar{height:10px;background:var(--line);border-radius:10px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--ok);transition:width .5s}
+.pl{font-size:13px;color:var(--mute);margin-top:5px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;margin-bottom:12px;overflow:hidden}
+.step.done{border-color:var(--ok)}
+.hd{all:unset;box-sizing:border-box;display:flex;gap:14px;align-items:center;width:100%;padding:16px;cursor:pointer}
+.hd:focus-visible{outline:3px solid var(--acc);outline-offset:-3px}
+.num{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--line);font-weight:800}
+.step.open .num{background:var(--acc);color:#fff}.step.done .num{background:var(--ok);color:#fff}
+.tt{flex:1}.tt strong{display:block;font-size:19px}.tt small{color:var(--mute)}
+.chev{transition:transform .25s;color:var(--mute)}.step.open .chev{transform:rotate(90deg)}
+.bd{display:none;padding:0 18px 18px}
+.step.open .bd{display:block;animation:in .3s}@keyframes in{from{opacity:0;transform:translateY(-4px)}}
+.what{margin:0 0 10px;font-weight:500}
+.bd h3{font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--acc);margin:16px 0 4px}
+.bd ol{padding-left:22px;margin:4px 0}.bd li{margin:6px 0}
+.bd a{color:var(--acc)}
+.cb{position:relative;margin:10px 0}
+.cb pre{margin:0;background:var(--code);color:var(--codeink);border-radius:12px;padding:14px 84px 14px 14px;font:15px/1.6 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;word-break:break-word}
+.cb button{position:absolute;top:8px;right:8px;font:600 13px "Bricolage Grotesque",sans-serif;background:var(--acc);color:#fff;border:0;border-radius:8px;padding:6px 11px;cursor:pointer}
+.check{background:color-mix(in srgb,var(--ok) 13%,transparent);border-radius:10px;padding:10px 12px;margin-top:14px;font-size:15px}
+.tip{background:var(--soft);border-left:4px solid var(--acc);border-radius:8px;padding:10px 12px;font-size:15px;margin:10px 0}
+details{border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin:10px 0;font-size:15px}
+summary{cursor:pointer;font-weight:700}
+details ul{padding-left:18px;margin:8px 0 2px}
+.btn{font:inherit;font-weight:700;border-radius:12px;padding:11px 18px;cursor:pointer;border:0;background:var(--ink);color:var(--bg);margin-top:16px}
+.btn:focus-visible,.chip:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.custom{display:none;margin:10px 0}.custom.show{display:block}
+.custom textarea{width:100%;font:inherit;border:1.5px solid var(--line);border-radius:12px;padding:10px;background:var(--card);color:var(--ink);min-height:74px}
+.yn{display:flex;gap:8px;align-items:center;margin:8px 0;flex-wrap:wrap}
+.xt{margin:30px 0 4px;font-size:26px}.xs{color:var(--mute);margin:0 0 14px}
+.step.x .num{border-radius:12px}
+.fin{display:none;text-align:center;padding:26px;border:2px dashed var(--ok);border-radius:18px;margin-top:16px}
+.fin.show{display:block;animation:in .5s}.fin h2{margin:0 0 6px}
+.reset{background:none;border:0;color:var(--mute);text-decoration:underline;cursor:pointer;font:inherit;margin-top:18px}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--mute);font-weight:600;font-size:15px;text-decoration:none;margin-bottom:16px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 14px}
+.back:hover{color:var(--acc);border-color:var(--acc)}
+.foot{display:flex;justify-content:center;gap:18px;align-items:center;flex-wrap:wrap;margin-top:18px}
+.abrand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--ink);text-decoration:none;margin-bottom:18px}
+.abrand:hover{text-decoration:none}
+.abrand .logo{width:34px;height:34px;border-radius:10px;background:var(--acc);display:grid;place-items:center;color:#fff;font-size:20px}
+.abrand .sub{font-weight:600;font-size:14px;color:var(--mute);letter-spacing:0;padding-left:10px;border-left:1px solid var(--line)}
+.afoot{text-align:center;color:var(--mute);font-size:14px;margin-top:34px;padding-top:18px;border-top:1px solid var(--line)}
+.afoot a{color:var(--mute);font-weight:700;text-decoration:none}.afoot a:hover{color:var(--acc)}
+</style>
+<link rel="stylesheet" href="../assets/receta.css">
+</head>
+<body>
+<main>
+<a class="abrand" href="../index.html"><span class="logo">A</span> AMRI <span class="sub">Academia de IA</span></a>
+<a class="back" href="../index.html">← Volver a la academia</a>
+<h1>Receta: edita vídeo con Claude y After Effects</h1>
+<div class="meta"><span>⏱ 45 min aprox.</span><span>👩‍🍳 Dificultad media</span><span>💶 After Effects es de pago</span><span>🍽 Resultado: un vídeo animado en MP4</span></div>
+
+<div class="ing"><h2>Ingredientes (todos gratuitos)</h2><ul id="ing"></ul></div>
+
+<p style="margin:0 0 6px"><b>¿Qué quieres preparar?</b></p>
+<div class="pick" role="group" aria-label="Tipo"></div>
+<div class="custom" id="cu"><textarea id="cx" aria-label="Tu idea" placeholder="Describe el vídeo con tus palabras. Ejemplo: una intro de 5 segundos para mi canal de cocina con el nombre en letras grandes"></textarea>
+<div class="yn"><span>¿Vas a usar tu propio logo o un clip tuyo?</span><button class="chip" data-yn="1">Sí</button><button class="chip" data-yn="0">No</button></div>
+<div class="tip">Si dudas, elige «Sí»: te enseñamos a importar tu material. Si al final no lo usas, funciona igual.</div></div>
+
+<div class="prog"><div class="bar"><i id="bar"></i></div><div class="pl" id="pt"></div></div>
+<div id="steps"></div>
+<div class="fin" id="fin"><h2>🎉 ¡Listo, a la mesa!</h2><p>Ya tienes tu vídeo exportado en MP4. Guarda el proyecto y la orden que le diste a Claude: son tu receta para repetirlo con otros textos. Más abajo tienes extras: una plantilla reutilizable, qué hacer si algo falla y cómo usar material con permiso.</p></div>
+<h2 class="xt">Extras: después de servir</h2><p class="xs">Opcionales. No cuentan en tu progreso.</p><div id="extras"></div>
+<div class="foot"><a class="back" href="../index.html" style="margin:18px 0 0">← Volver a la academia</a><button class="reset" id="reset">Empezar de nuevo</button></div>
+<div class="afoot"><a href="../index.html">AMRI</a> · Academia abierta de IA · © 2026 AMRI</div>
+</main>
+
+<script>
+const R={key:"receta-ae",def:"intro",empty:"[describe aquí tu vídeo, arriba]",
+apps:{
+ intro:{n:"Intro con logo",db:true,d:"una intro de 5 segundos en la que aparece mi logo con un efecto de brillo, en formato horizontal 16:9"},
+ titulos:{n:"Títulos y rótulos",db:false,d:"un título animado que dice «Mi canal» y un rótulo con mi nombre y cargo que aparece abajo a la izquierda, para poner sobre mis vídeos"},
+ vertical:{n:"Vídeo vertical",db:true,d:"un vídeo vertical 9:16 de 15 segundos con un clip mío de fondo y un texto grande animado encima"},
+ anuncio:{n:"Anuncio de producto",db:false,d:"un anuncio de 10 segundos con fondo de color, el nombre de mi producto que entra con movimiento y el precio que aparece después"},
+ otra:{n:"✏️ Otra idea",db:true,d:""}
+},
+ing:()=>`<li><b>Claude Desktop</b>: el jefe de cocina. Escribe las órdenes para After Effects.</li><li><b>After Effects</b>: el horno. Donde se crea la animación. Es de pago (Adobe ofrece prueba gratuita).</li><li><b>Node.js</b>: la llave de paso. Un programa gratuito que hace falta para conectar todo.</li><li><b>Conector MCP de After Effects</b>: el camarero. Lleva los pedidos de Claude al horno. Gratuito, hecho por la comunidad.</li><li><b>Adobe Media Encoder</b>: el emplatado. Exporta tu MP4 (viene con la suscripción de Adobe).</li>`,
+steps:[
+{t:"Prepara los ingredientes",s:"10 min · instalar programas",b:()=>`<p class="what">Necesitas tres programas en el mismo ordenador. El conector solo funciona si todo está en la misma máquina.</p><h3>Pasos</h3><ol>
+<li>Instala <a href="https://claude.ai/download" target="_blank" rel="noopener">Claude Desktop</a> e inicia sesión.</li>
+<li>Instala <b>After Effects</b> (versión 2024, 2025 o 2026) desde Creative Cloud. Si no lo tienes, Adobe ofrece una <a href="https://www.adobe.com/products/aftereffects.html" target="_blank" rel="noopener">prueba gratuita</a>.</li>
+<li>Instala <a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a>: descarga la versión <b>LTS</b> y comprueba que sea la <b>24 o superior</b>.</li>
+<li>Abre una terminal (Mac: <b>Terminal</b>; Windows: <b>PowerShell</b>) y escribe esto para comprobarlo:</li></ol>${cb("node --version")}${ok("la terminal responde con un número que empieza por v24 o más.")}`},
+{t:"Da permiso a After Effects",s:"2 min · un ajuste",b:()=>`<p class="what">Para que Claude pueda mover cosas dentro del programa, After Effects tiene que permitir scripts.</p><h3>Pasos</h3><ol>
+<li>Abre After Effects.</li>
+<li>Windows: <b>Edit → Preferences → Scripting &amp; Expressions</b>. Mac: <b>After Effects → Settings → Scripting &amp; Expressions</b>.</li>
+<li>Marca <b>«Allow Scripts to Write Files and Access Network»</b> y pulsa <b>OK</b>.</li></ol>${tip("Si tu After Effects está en español, los menús se llaman parecido. El proyecto del conector puede pedir algún ajuste más: míralo en su "+`<a href="https://github.com/kumoproductions/mcp-aftereffects" target="_blank" rel="noopener">página oficial</a>.`)}${ok("has marcado la casilla y guardado las preferencias.")}`},
+{t:"Conecta Claude con After Effects",s:"10 min · el archivo de configuración",b:()=>`<p class="what">Aquí le dices a Claude Desktop que existe el conector. Es el paso más técnico, pero solo se hace una vez.</p><h3>Pasos</h3><ol>
+<li>En Claude Desktop abre <b>Settings → Developer → Edit Config</b>. Se abre una carpeta con el archivo <b>claude_desktop_config.json</b>.</li>
+<li>Ábrelo con el Bloc de notas (Windows) o TextEdit (Mac).</li>
+<li>Si el archivo está vacío, pega esto tal cual:</li></ol>${cb(`{
+  "mcpServers": {
+    "aftereffects": {
+      "command": "npx",
+      "args": ["-y", "@kumoproductions/mcp-aftereffects"]
+    }
+  }
+}`)}<ol start="4"><li>Si el archivo ya tenía otros conectores, no lo borres: añade solo el bloque <b>«aftereffects»</b> dentro de la lista <b>mcpServers</b> que ya existe.</li><li>Guarda, <b>cierra Claude Desktop del todo</b> y ábrelo otra vez.</li></ol>
+${det("¿Qué significa cada parte?",["<b>mcpServers</b>: la lista de conectores de Claude.","<b>npx</b>: un comando de Node.js que descarga y ejecuta el conector solo.","<b>@kumoproductions/mcp-aftereffects</b>: el nombre del conector."])}
+${tip("Es un proyecto de la comunidad, no de Adobe ni de Anthropic. Úsalo con tus propios proyectos y guarda siempre una copia antes de probar. Puede cambiar con el tiempo: si algo no coincide, mira su página en GitHub.")}${ok("al abrir un chat nuevo en Claude Desktop no sale ningún error y el conector aparece entre las herramientas.")}`},
+{t:"Abre After Effects y guarda el proyecto",s:"5 min · el proyecto de trabajo",b:()=>`<p class="what">El conector trabaja sobre el proyecto que tengas abierto, así que primero tiene que existir.</p><h3>Pasos</h3><ol>
+<li>Abre After Effects.</li>
+<li><b>File → New → New Project</b>.</li>
+<li><b>File → Save As</b> y guárdalo con un nombre claro en una carpeta, por ejemplo <b>mi-video.aep</b>.</li>
+<li>Si vas a usar un proyecto que ya tenías, haz antes una <b>copia</b> y trabaja sobre la copia.</li></ol>${ok("After Effects está abierto y el proyecto tiene nombre.")}`},
+{db:1,t:"Prepara tu material",s:"5 min · logo o clip",b:()=>`<p class="what">Como tu vídeo usa material propio, hay que meterlo en el proyecto para que Claude pueda usarlo.</p><h3>Pasos</h3><ol>
+<li>Pon tu logo (mejor un <b>PNG con fondo transparente</b>) o tu clip en una carpeta con un nombre sencillo, sin espacios ni acentos.</li>
+<li>En After Effects: <b>File → Import → File…</b> y elige tus archivos.</li>
+<li>Comprueba que aparecen en el panel <b>Project</b>.</li></ol>${tip("Si no tienes logo transparente, mira la receta "+`<a href="logo-ia.html">Diseña un logo con IA</a>.`)}${ok("tu logo o tu clip se ve en el panel Project.")}`},
+{t:"Pídele el vídeo a Claude",s:"10 min · la orden",b:()=>`<p class="what">Ahora Claude crea la animación directamente en tu After Effects. Tú ves cómo aparecen las capas.</p><h3>Pasos</h3><ol><li>Abre un chat nuevo en Claude Desktop.</li><li>Copia este mensaje y pégalo:</li></ol>${cb(`Tienes acceso a mi After Effects a través del conector. Quiero crear ${D()}.\n\nAntes de tocar nada, dime en pasos cortos qué vas a hacer. Después créalo en mi proyecto abierto: una composición con el tamaño y la duración adecuados, capas con nombres claros y animaciones suaves con fotogramas clave.${DB()?" Usa el material que he importado en el panel Project.":""} Al terminar, dime qué has creado y cómo previsualizarlo.`)}
+${det("¿Qué significa cada parte del mensaje?",["<b>«Quiero crear…»</b>: tu idea. Cámbiala por la tuya.","<b>Dime primero el plan</b>: así puedes corregirlo antes de que toque tu proyecto.","<b>Capas con nombres claros</b>: luego será fácil retocarlo a mano.","<b>Fotogramas clave</b>: los puntos donde algo cambia (posición, tamaño, opacidad) para crear movimiento."])}
+${tip("Empieza con algo corto y sencillo. Es mejor un vídeo de 5 segundos que sale bien que uno de un minuto lleno de fallos.")}${ok("en After Effects hay una composición nueva con capas y Claude te ha explicado qué hizo.")}`},
+{t:"Previsualiza y ajusta",s:"10 min · pulir el resultado",b:()=>`<p class="what">Casi nunca sale perfecto a la primera. Verlo y pedir cambios pequeños es lo que da buen resultado.</p><h3>Pasos</h3><ol>
+<li>Haz doble clic en la composición nueva del panel <b>Project</b>.</li>
+<li>Pulsa la <b>barra espaciadora</b> para reproducirla.</li>
+<li>Apunta lo que no te gusta y pídeselo a Claude, <b>un cambio cada vez</b>:</li></ol>${cb("Haz la entrada del título más lenta y suave, y cambia el color del texto a [tu color]. Cambia solo eso y no toques lo demás.")}
+${tip("Si un cambio sale mal, deshaz con <b>Ctrl+Z</b> (Windows) o <b>Cmd+Z</b> (Mac) en After Effects.")}${ok("al reproducirla, el movimiento, los textos y los colores son los que querías.")}`},
+{t:"Exporta tu vídeo a MP4",s:"5 min · el emplatado",b:()=>`<p class="what">Para tener un archivo que puedas subir a cualquier sitio hay que exportarlo con Adobe Media Encoder.</p><h3>Pasos</h3><ol>
+<li>Selecciona la composición.</li>
+<li>Menú <b>Composition → Add to Adobe Media Encoder Queue</b>.</li>
+<li>En Media Encoder, en la columna <b>Format</b>, elige <b>H.264</b> y como preset <b>«Match Source - High bitrate»</b>.</li>
+<li>Elige dónde guardarlo y pulsa el botón verde de <b>Play</b> (Start Queue).</li></ol>${ok("tienes un archivo .mp4 que se abre en tu reproductor y se ve como en After Effects.")}`},
+{x:1,t:"Deja una plantilla reutilizable",s:"15 min · opcional",b:()=>`<p class="what">Si vas a repetir este vídeo con otros textos, pídele a Claude que lo deje preparado.</p><h3>Pasos</h3><ol><li>Guarda el proyecto y pídele a Claude:</li></ol>${cb("Reorganiza este proyecto para que pueda reutilizarlo: deja los textos y los colores principales fáciles de cambiar, ordena las capas y explícame paso a paso cómo cambiar el texto y exportar de nuevo.")}${tip("Guarda una copia del proyecto con el nombre «plantilla» y trabaja siempre sobre copias.")}`},
+{x:1,t:"Si algo no funciona",s:"Siempre · revisa esto",b:()=>`<p class="what">Casi todos los fallos vienen de una de estas cosas.</p><ol>
+<li><b>After Effects tiene que estar abierto</b> con un proyecto antes de pedirle nada a Claude.</li>
+<li><b>Cierra y abre Claude Desktop</b> del todo tras cambiar el archivo de configuración.</li>
+<li>Revisa que el archivo de configuración esté bien copiado: una coma o una llave de más lo rompe.</li>
+<li>Repite <b>node --version</b> en la terminal: debe ser la 24 o superior.</li>
+<li>Comprueba que marcaste el permiso de scripts en las preferencias.</li>
+<li>Mira la página del conector en GitHub: ahí explican los cambios y los errores conocidos.</li></ol>${det("💡 Ideas para seguir cocinando",["Títulos animados para todos tus vídeos.","Una cortinilla de final con tu web y tus redes.","Anuncios cortos para Instagram y TikTok.","Una animación de tu logo para la firma de vídeo."])}`},
+{x:1,t:"Usa material con permiso",s:"Siempre · consejos",b:()=>`<p class="what">Antes de publicar, unas reglas sencillas.</p><ol>
+<li><b>Música:</b> usa solo canciones que tengan licencia para tu uso.</li>
+<li><b>Tipografías:</b> revisa que la fuente se pueda usar en proyectos comerciales.</li>
+<li><b>Clips e imágenes:</b> usa solo los tuyos o los que tengan licencia.</li>
+<li><b>Guarda el proyecto .aep y el .mp4</b> en la misma carpeta, para poder retocarlo dentro de meses.</li></ol>`}
+]};
+</script>
+<script>
+const KEY=R.key,APPS=R.apps;let app=R.def;
+const DB=()=>APPS[app].db;
+const D=()=>APPS[app].d||R.empty;
+const esc=t=>t.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const cb=t=>`<div class="cb"><pre>${esc(t)}</pre><button data-copy>Copiar</button></div>`;
+const ok=t=>`<div class="check">✅ <b>Sabrás que salió bien cuando</b> ${t}</div>`;
+const tip=t=>`<div class="tip">${t}</div>`;
+const det=(s,items)=>`<details><summary>${s}</summary><ul>${items.map(i=>`<li>${i}</li>`).join("")}</ul></details>`;
+const STEPS=R.steps;
+let done=new Set(),open=null;
+try{const z=JSON.parse(localStorage.getItem(KEY)||"{}");if(z.d)done=new Set(z.d);if(z.a&&APPS[z.a])app=z.a;if(z.x)APPS.otra.d=z.x;if(typeof z.b==="boolean")APPS.otra.db=z.b;}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify({d:[...done],a:app,x:APPS.otra.d,b:APPS.otra.db}));}catch(e){}};
+STEPS.forEach((t,i)=>t.id=i);
+const vis=()=>STEPS.filter(t=>!t.db||DB());
+const pick=document.querySelector(".pick"),cu=document.getElementById("cu"),cx=document.getElementById("cx");
+Object.keys(APPS).forEach(k=>{const b=document.createElement("button");b.className="chip";b.textContent=APPS[k].n;b.dataset.k=k;b.onclick=()=>{app=k;open=null;save();render();};pick.appendChild(b);});
+cx.value=APPS.otra.d;
+cx.oninput=()=>{APPS.otra.d=cx.value.trim();save();render();};
+document.querySelectorAll("[data-yn]").forEach(b=>b.onclick=()=>{APPS.otra.db=b.dataset.yn==="1";save();render();});
+function render(){
+ const v=vis(),N=v.filter(t=>!t.x).length;
+ if(open===null||(open!==-1&&!v.some(t=>t.id===open)))open=(v.find(t=>!done.has(t.id))||v[0]).id;
+ pick.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.k===app));
+ cu.classList.toggle("show",app==="otra");
+ document.querySelectorAll("[data-yn]").forEach(b=>b.setAttribute("aria-pressed",(b.dataset.yn==="1")===APPS.otra.db));
+ document.getElementById("ing").innerHTML=R.ing();
+ const card=(t,n)=>`<section class="step${t.x?" x":""}${done.has(t.id)?" done":""}${open===t.id?" open":""}" id="s${t.id}">
+ <button class="hd" data-h="${t.id}" aria-expanded="${open===t.id}"><span class="num">${done.has(t.id)?"✓":t.x?"★":n+1}</span><span class="tt"><strong>${t.t}</strong><small>${t.s}</small></span><span class="chev">▶</span></button>
+ <div class="bd">${t.b()}<button class="btn" data-d="${t.id}">${done.has(t.id)?"Marcar como pendiente":(t.x?"Entendido":(n<N-1?"Listo, siguiente paso":"¡Terminado!"))}</button></div></section>`;
+ document.getElementById("steps").innerHTML=v.filter(t=>!t.x).map(card).join("");
+ document.getElementById("extras").innerHTML=v.filter(t=>t.x).map(card).join("");
+ const c=v.filter(t=>!t.x&&done.has(t.id)).length;
+ document.getElementById("bar").style.width=Math.round(c/N*100)+"%";
+ document.getElementById("pt").textContent=c+" de "+N+" pasos completados";
+ document.getElementById("fin").classList.toggle("show",c===N);
+}
+document.addEventListener("click",e=>{
+ const h=e.target.closest("[data-h]"),d=e.target.closest("[data-d]"),c=e.target.closest("[data-copy]");
+ if(h){const i=+h.dataset.h;open=open===i?-1:i;render();}
+ else if(d){const i=+d.dataset.d,v=vis(),k=v.findIndex(t=>t.id===i);
+  if(done.has(i))done.delete(i);else{done.add(i);const nx=v[k+1];open=nx&&(!nx.x||v[k].x)?nx.id:-1;}
+  save();render();if(open>=0)document.getElementById("s"+open).scrollIntoView({behavior:"smooth"});}
+ else if(c){const t=c.previousElementSibling.textContent;
+  const fin=()=>{c.textContent="¡Copiado!";setTimeout(()=>c.textContent="Copiar",1500);};
+  const fb=()=>{const a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();try{document.execCommand("copy");}catch(x){}a.remove();fin();};
+  navigator.clipboard?navigator.clipboard.writeText(t).then(fin,fb):fb();}
+});
+document.getElementById("reset").onclick=()=>{done=new Set();open=null;save();render();scrollTo({top:0,behavior:"smooth"});};
+render();
+</script>
+<script src="../i18n.js"></script>
+<script src="../assets/receta.js"></script>
+</body>
+</html>
