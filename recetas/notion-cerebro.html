@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Receta: tu segundo cerebro en Notion · AMRI</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%23D2561F%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-size=%2738%27 font-weight=%27800%27 font-family=%27Arial,sans-serif%27 text-anchor=%27middle%27 fill=%27white%27%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#FBF6EE;--card:#FFFFFF;--ink:#2A1F14;--mute:#7A6A58;--line:#E6DACB;--acc:#D2561F;--ok:#2E8B57;--code:#2A1F14;--codeink:#FFEBD2;--soft:#FFF1E2}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17110B;--card:#221A12;--ink:#F6EBDC;--mute:#B3A18C;--line:#3A2E22;--acc:#F0854F;--ok:#4FC283;--code:#0E0A06;--soft:#2D2116}}
+:root[data-theme="dark"]{--bg:#17110B;--card:#221A12;--ink:#F6EBDC;--mute:#B3A18C;--line:#3A2E22;--acc:#F0854F;--ok:#4FC283;--code:#0E0A06;--soft:#2D2116}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.6;font-size:17px}
+main{max-width:760px;margin:0 auto;padding:26px 16px 60px}
+h1{font-size:clamp(30px,7vw,48px);line-height:1.05;margin:0 0 10px;font-weight:800;letter-spacing:-.02em}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.meta span{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px}
+.ing{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:16px}
+.ing h2{margin:0 0 8px;font-size:18px}.ing ul{margin:0;padding-left:20px}.ing li{margin:4px 0}
+.pick{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:6px}
+.chip{font:inherit;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:700}
+.prog{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:10px 0}
+.bar{height:10px;background:var(--line);border-radius:10px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--ok);transition:width .5s}
+.pl{font-size:13px;color:var(--mute);margin-top:5px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;margin-bottom:12px;overflow:hidden}
+.step.done{border-color:var(--ok)}
+.hd{all:unset;box-sizing:border-box;display:flex;gap:14px;align-items:center;width:100%;padding:16px;cursor:pointer}
+.hd:focus-visible{outline:3px solid var(--acc);outline-offset:-3px}
+.num{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--line);font-weight:800}
+.step.open .num{background:var(--acc);color:#fff}.step.done .num{background:var(--ok);color:#fff}
+.tt{flex:1}.tt strong{display:block;font-size:19px}.tt small{color:var(--mute)}
+.chev{transition:transform .25s;color:var(--mute)}.step.open .chev{transform:rotate(90deg)}
+.bd{display:none;padding:0 18px 18px}
+.step.open .bd{display:block;animation:in .3s}@keyframes in{from{opacity:0;transform:translateY(-4px)}}
+.what{margin:0 0 10px;font-weight:500}
+.bd h3{font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--acc);margin:16px 0 4px}
+.bd ol{padding-left:22px;margin:4px 0}.bd li{margin:6px 0}
+.bd a{color:var(--acc)}
+.cb{position:relative;margin:10px 0}
+.cb pre{margin:0;background:var(--code);color:var(--codeink);border-radius:12px;padding:14px 84px 14px 14px;font:15px/1.6 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;word-break:break-word}
+.cb button{position:absolute;top:8px;right:8px;font:600 13px "Bricolage Grotesque",sans-serif;background:var(--acc);color:#fff;border:0;border-radius:8px;padding:6px 11px;cursor:pointer}
+.check{background:color-mix(in srgb,var(--ok) 13%,transparent);border-radius:10px;padding:10px 12px;margin-top:14px;font-size:15px}
+.tip{background:var(--soft);border-left:4px solid var(--acc);border-radius:8px;padding:10px 12px;font-size:15px;margin:10px 0}
+details{border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin:10px 0;font-size:15px}
+summary{cursor:pointer;font-weight:700}
+details ul{padding-left:18px;margin:8px 0 2px}
+.btn{font:inherit;font-weight:700;border-radius:12px;padding:11px 18px;cursor:pointer;border:0;background:var(--ink);color:var(--bg);margin-top:16px}
+.btn:focus-visible,.chip:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.custom{display:none;margin:10px 0}.custom.show{display:block}
+.custom textarea{width:100%;font:inherit;border:1.5px solid var(--line);border-radius:12px;padding:10px;background:var(--card);color:var(--ink);min-height:74px}
+.yn{display:flex;gap:8px;align-items:center;margin:8px 0;flex-wrap:wrap}
+.xt{margin:30px 0 4px;font-size:26px}.xs{color:var(--mute);margin:0 0 14px}
+.step.x .num{border-radius:12px}
+.fin{display:none;text-align:center;padding:26px;border:2px dashed var(--ok);border-radius:18px;margin-top:16px}
+.fin.show{display:block;animation:in .5s}.fin h2{margin:0 0 6px}
+.reset{background:none;border:0;color:var(--mute);text-decoration:underline;cursor:pointer;font:inherit;margin-top:18px}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--mute);font-weight:600;font-size:15px;text-decoration:none;margin-bottom:16px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 14px}
+.back:hover{color:var(--acc);border-color:var(--acc)}
+.foot{display:flex;justify-content:center;gap:18px;align-items:center;flex-wrap:wrap;margin-top:18px}
+.abrand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--ink);text-decoration:none;margin-bottom:18px}
+.abrand:hover{text-decoration:none}
+.abrand .logo{width:34px;height:34px;border-radius:10px;background:var(--acc);display:grid;place-items:center;color:#fff;font-size:20px}
+.abrand .sub{font-weight:600;font-size:14px;color:var(--mute);letter-spacing:0;padding-left:10px;border-left:1px solid var(--line)}
+.afoot{text-align:center;color:var(--mute);font-size:14px;margin-top:34px;padding-top:18px;border-top:1px solid var(--line)}
+.afoot a{color:var(--mute);font-weight:700;text-decoration:none}.afoot a:hover{color:var(--acc)}
+</style>
+<link rel="stylesheet" href="../assets/receta.css">
+</head>
+<body>
+<main>
+<a class="abrand" href="../index.html"><span class="logo">A</span> AMRI <span class="sub">Academia de IA</span></a>
+<a class="back" href="../index.html">← Volver a la academia</a>
+<h1>Receta: tu segundo cerebro en Notion</h1>
+<div class="meta"><span>⏱ 30 min aprox.</span><span>👩‍🍳 Fácil</span><span>💶 0 € (Notion gratis)</span><span>🍽 Resultado: un Notion ordenado que se resume solo</span></div>
+
+<div class="ing"><h2>Ingredientes (todos gratuitos)</h2><ul id="ing"></ul></div>
+
+<p style="margin:0 0 6px"><b>¿Qué quieres ordenar?</b></p>
+<div class="pick" role="group" aria-label="Tipo"></div>
+<div class="custom" id="cu"><textarea id="cx" aria-label="Tu idea" placeholder="Describe qué quieres organizar. Ejemplo: las ideas para mi tesis, con fuentes, citas y un calendario de entregas"></textarea>
+<div class="yn"><span>¿Ya tienes páginas en Notion con contenido?</span><button class="chip" data-yn="1">Sí</button><button class="chip" data-yn="0">No</button></div>
+<div class="tip">Si dudas, elige «Sí»: Claude revisará lo que tienes antes de proponer nada. Si tu Notion está vacío, también funciona.</div></div>
+
+<div class="prog"><div class="bar"><i id="bar"></i></div><div class="pl" id="pt"></div></div>
+<div id="steps"></div>
+<div class="fin" id="fin"><h2>🎉 ¡Listo, a la mesa!</h2><p>Tu Notion ya tiene una estructura clara y una rutina semanal. Cada viernes, un mensaje y listo. Más abajo tienes extras de seguridad e ideas.</p></div>
+<h2 class="xt">Extras: después de servir</h2><p class="xs">Opcionales. No cuentan en tu progreso.</p><div id="extras"></div>
+<div class="foot"><a class="back" href="../index.html" style="margin:18px 0 0">← Volver a la academia</a><button class="reset" id="reset">Empezar de nuevo</button></div>
+<div class="afoot"><a href="../index.html">AMRI</a> · Academia abierta de IA · © 2026 AMRI</div>
+</main>
+
+<script>
+const R={key:"receta-notion",def:"notas",empty:"[describe aquí qué quieres ordenar, arriba]",
+apps:{
+ notas:{n:"Notas sueltas",db:true,d:"todas mis notas sueltas, ideas y enlaces guardados, agrupados por tema"},
+ proyectos:{n:"Proyectos y tareas",db:true,d:"mis proyectos con sus tareas, fechas de entrega y estado"},
+ lecturas:{n:"Libros y lecturas",db:false,d:"los libros y artículos que leo, con resumen, valoración y citas favoritas"},
+ cocina:{n:"Recetas de cocina",db:false,d:"mis recetas de cocina con ingredientes, tiempo, dificultad y fotos"},
+ otra:{n:"✏️ Otra idea",db:true,d:""}
+},
+ing:()=>`<li><b>Notion</b>: la despensa. Donde guardas todo. Plan gratuito.</li><li><b>Claude</b>: el jefe de cocina. Ordena, resume y propone.</li><li><b>Conector de Notion</b>: la llave de la despensa. Deja a Claude leer y escribir páginas.</li>`,
+steps:[
+{t:"Prepara los ingredientes",s:"3 min · cuentas",b:()=>`<p class="what">Necesitas una cuenta en Notion y otra en Claude.</p><ol><li>Entra en <a href="https://www.notion.so" target="_blank" rel="noopener">Notion</a> (plan gratuito).</li><li>Entra en <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a>.</li></ol>${ok("puedes entrar en las dos.")}`},
+{t:"Conecta Notion con Claude",s:"3 min · el conector",b:()=>`<p class="what">Un conector es un permiso para que Claude use Notion por ti. Se activa una vez y queda guardado.</p><h3>Pasos</h3><ol>
+<li>En Claude (web o app de escritorio) abre <b>Personalizar → Conectores</b> (en inglés: <i>Customize → Connectors</i>).</li>
+<li>Pulsa <b>Explorar conectores</b> (<i>Browse connectors</i>), busca <b>«Notion»</b> y pulsa <b>Conectar</b>.</li>
+<li>Se abre una ventana de Notion: inicia sesión y pulsa <b>Permitir</b>.</li>
+<li>En un chat nuevo, pulsa el botón <b>+</b> → <b>Conectores</b> y comprueba que Notion está activado.</li></ol><p>Notion te preguntará a qué espacio de trabajo quieres dar acceso. Elige el tuyo.</p>${tip("Los menús de Claude cambian de nombre a veces. Si no lo encuentras, busca «conectores» en la <a href='https://support.claude.com' target='_blank' rel='noopener'>ayuda de Claude</a>.")}${ok("Notion aparece activado en tus conectores.")}`},
+{db:1,t:"Que Claude explore tu Notion",s:"5 min · inventario",b:()=>`<p class="what">Antes de ordenar, hay que saber qué hay en la despensa.</p>${cb(`Busca en mi Notion todo lo relacionado con ${D()}. Hazme un resumen de cómo está organizado ahora y qué problemas ves (duplicados, páginas vacías, cosas sin clasificar).\n\nNo cambies nada todavía.`)}${tip("«No cambies nada todavía» es tu mejor amigo. Primero mirar, luego tocar.")}${ok("Claude te describe lo que tienes.")}`},
+{t:"Diseña la estructura",s:"5 min · el plan",b:()=>`<p class="what">Una <b>base de datos</b> de Notion es como una hoja de cálculo bonita: cada fila es una página.</p>${cb(`Propón una base de datos de Notion para organizar ${D()}.\n\nDime: las propiedades (columnas) con su tipo, 2 o 3 vistas útiles (tabla, tablero, calendario) y una plantilla para páginas nuevas. Explícalo en pocas palabras y espera mi OK.`)}${ok("tienes una propuesta que entiendes y te gusta.")}`},
+{t:"Créala en tu Notion",s:"5 min · montar",b:()=>`<p class="what">Ahora Claude la construye por ti.</p>${cb(`Perfecto. Crea en mi Notion una página llamada «Mi segundo cerebro» con esa base de datos.${DB()?" Después mueve o copia ahí mis páginas existentes que encajen, y dime cuáles has tocado.":" Añade 3 ejemplos para que vea cómo queda."}`)}
+${tip("Si Claude no puede crear algo (por ejemplo, un tipo de vista), te dirá cómo hacerlo a mano en dos clics.")}${ok("abres Notion y ves la página nueva con su base de datos.")}`},
+{t:"Tu repaso semanal",s:"5 min · la rutina",b:()=>`<p class="what">La magia está en repetirlo. Cada viernes, un mensaje:</p>${cb("Revisa lo que he añadido o cambiado esta semana en «Mi segundo cerebro». Escríbeme un resumen en 5 líneas, 3 prioridades para la semana que viene y cualquier cosa que se esté quedando olvidada. Guárdalo como página nueva llamada «Semana del [fecha]».")}${ok("tienes tu primer resumen semanal guardado en Notion.")}`},
+{x:1,t:"Cuida tu despensa",s:"Siempre · seguridad",b:()=>`<ol><li>Pide siempre <b>«enséñame antes de borrar»</b>.</li><li>No guardes contraseñas ni datos bancarios en Notion.</li><li>Notion guarda el historial de cada página: si algo sale mal, puedes volver atrás.</li></ol>`},
+{x:1,t:"Si algo no funciona",s:"Siempre · revisa esto",b:()=>`<ol><li><b>Claude no encuentra una página</b>: comprueba que el espacio de trabajo tiene acceso en el conector.</li><li><b>Resultados a medias</b>: pide partes más pequeñas («solo las notas de marzo»).</li></ol>${det("💡 Ideas para seguir",["Un diario con preguntas diarias.","Un CRM sencillo de clientes.","Un plan de estudio para tus exámenes."])}`}
+]};
+</script>
+<script>
+const KEY=R.key,APPS=R.apps;let app=R.def;
+const DB=()=>APPS[app].db;
+const D=()=>APPS[app].d||R.empty;
+const esc=t=>t.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const cb=t=>`<div class="cb"><pre>${esc(t)}</pre><button data-copy>Copiar</button></div>`;
+const ok=t=>`<div class="check">✅ <b>Sabrás que salió bien cuando</b> ${t}</div>`;
+const tip=t=>`<div class="tip">${t}</div>`;
+const det=(s,items)=>`<details><summary>${s}</summary><ul>${items.map(i=>`<li>${i}</li>`).join("")}</ul></details>`;
+const STEPS=R.steps;
+let done=new Set(),open=null;
+try{const z=JSON.parse(localStorage.getItem(KEY)||"{}");if(z.d)done=new Set(z.d);if(z.a&&APPS[z.a])app=z.a;if(z.x)APPS.otra.d=z.x;if(typeof z.b==="boolean")APPS.otra.db=z.b;}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify({d:[...done],a:app,x:APPS.otra.d,b:APPS.otra.db}));}catch(e){}};
+STEPS.forEach((t,i)=>t.id=i);
+const vis=()=>STEPS.filter(t=>!t.db||DB());
+const pick=document.querySelector(".pick"),cu=document.getElementById("cu"),cx=document.getElementById("cx");
+Object.keys(APPS).forEach(k=>{const b=document.createElement("button");b.className="chip";b.textContent=APPS[k].n;b.dataset.k=k;b.onclick=()=>{app=k;open=null;save();render();};pick.appendChild(b);});
+cx.value=APPS.otra.d;
+cx.oninput=()=>{APPS.otra.d=cx.value.trim();save();render();};
+document.querySelectorAll("[data-yn]").forEach(b=>b.onclick=()=>{APPS.otra.db=b.dataset.yn==="1";save();render();});
+function render(){
+ const v=vis(),N=v.filter(t=>!t.x).length;
+ if(open===null||(open!==-1&&!v.some(t=>t.id===open)))open=(v.find(t=>!done.has(t.id))||v[0]).id;
+ pick.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.k===app));
+ cu.classList.toggle("show",app==="otra");
+ document.querySelectorAll("[data-yn]").forEach(b=>b.setAttribute("aria-pressed",(b.dataset.yn==="1")===APPS.otra.db));
+ document.getElementById("ing").innerHTML=R.ing();
+ const card=(t,n)=>`<section class="step${t.x?" x":""}${done.has(t.id)?" done":""}${open===t.id?" open":""}" id="s${t.id}">
+ <button class="hd" data-h="${t.id}" aria-expanded="${open===t.id}"><span class="num">${done.has(t.id)?"✓":t.x?"★":n+1}</span><span class="tt"><strong>${t.t}</strong><small>${t.s}</small></span><span class="chev">▶</span></button>
+ <div class="bd">${t.b()}<button class="btn" data-d="${t.id}">${done.has(t.id)?"Marcar como pendiente":(t.x?"Entendido":(n<N-1?"Listo, siguiente paso":"¡Terminado!"))}</button></div></section>`;
+ document.getElementById("steps").innerHTML=v.filter(t=>!t.x).map(card).join("");
+ document.getElementById("extras").innerHTML=v.filter(t=>t.x).map(card).join("");
+ const c=v.filter(t=>!t.x&&done.has(t.id)).length;
+ document.getElementById("bar").style.width=Math.round(c/N*100)+"%";
+ document.getElementById("pt").textContent=c+" de "+N+" pasos completados";
+ document.getElementById("fin").classList.toggle("show",c===N);
+}
+document.addEventListener("click",e=>{
+ const h=e.target.closest("[data-h]"),d=e.target.closest("[data-d]"),c=e.target.closest("[data-copy]");
+ if(h){const i=+h.dataset.h;open=open===i?-1:i;render();}
+ else if(d){const i=+d.dataset.d,v=vis(),k=v.findIndex(t=>t.id===i);
+  if(done.has(i))done.delete(i);else{done.add(i);const nx=v[k+1];open=nx&&(!nx.x||v[k].x)?nx.id:-1;}
+  save();render();if(open>=0)document.getElementById("s"+open).scrollIntoView({behavior:"smooth"});}
+ else if(c){const t=c.previousElementSibling.textContent;
+  const fin=()=>{c.textContent="¡Copiado!";setTimeout(()=>c.textContent="Copiar",1500);};
+  const fb=()=>{const a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();try{document.execCommand("copy");}catch(x){}a.remove();fin();};
+  navigator.clipboard?navigator.clipboard.writeText(t).then(fin,fb):fb();}
+});
+document.getElementById("reset").onclick=()=>{done=new Set();open=null;save();render();scrollTo({top:0,behavior:"smooth"});};
+render();
+</script>
+<script src="../i18n.js"></script>
+<script src="../assets/receta.js"></script>
+</body>
+</html>
