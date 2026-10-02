@@ -79,3 +79,23 @@ h1{letter-spacing:-.03em}
   *,*::before,*::after{animation:none!important;transition-duration:.001s!important}
   .r-cover img{transform:none}
 }
+
+/* Derecha a izquierda (árabe) */
+[dir=rtl] .cb pre{padding:14px 14px 14px 84px}
+[dir=rtl] .cb button{right:auto;left:8px}
+.cb pre{unicode-bidi:plaintext;text-align:start}
+[dir=rtl] .bd ol,[dir=rtl] .bd ul,[dir=rtl] .ing ul,[dir=rtl] details ul{padding-left:0;padding-right:22px}
+[dir=rtl] .tip{border-left:0;border-right:4px solid var(--acc)}
+[dir=rtl] .chev{transform:scaleX(-1)}
+[dir=rtl] .step.open .chev{transform:rotate(90deg)}
+[dir=rtl] .check,[dir=rtl] .bd{text-align:right}
+[dir=rtl] .cb pre{font-family:"Noto Sans Arabic","Segoe UI",Tahoma,sans-serif;line-height:1.8}
+
+/* ⚡ Hazlo con Claude Code */
+.r-plugin{margin:-6px 0 26px;padding:18px 20px;border-radius:18px;border:1.5px dashed color-mix(in srgb,var(--acc) 45%,var(--line));background:color-mix(in srgb,var(--acc) 6%,transparent);display:flex;flex-direction:column;gap:8px}
+.r-plugin .pt{font-size:16px}
+.r-plugin p{margin:0;color:var(--mute);font-size:15px}
+.r-plugin .pcmd{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.r-plugin code{flex:1;min-width:0;overflow-x:auto;white-space:nowrap;background:var(--card,#fff);border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:14px;direction:ltr;text-align:left}
+.r-plugin button{border:0;border-radius:999px;padding:9px 16px;background:var(--ink);color:var(--bg);font:inherit;font-weight:700;font-size:13px;cursor:pointer}
+.r-plugin a{font-weight:700;font-size:14px;align-self:flex-start;color:var(--acc);text-decoration:none}

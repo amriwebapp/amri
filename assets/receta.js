@@ -6,8 +6,8 @@
 "use strict";
 // Mismo orden que en la portada (assets/academia.js)
 var ORDER=["webapp-gratis","imagenes-ia","asistente-ia","automatiza-tareas","chatbot-web","logo-ia","video-aftereffects","blender-3d",
-  "higgsfield-cine","canva-diseno","figma-a-web","notion-cerebro","gmail-calendario","claude-chrome","skills-claude","conector-propio"];
-var SVG={"higgsfield-cine":1,"canva-diseno":1,"figma-a-web":1,"notion-cerebro":1,"gmail-calendario":1,"claude-chrome":1,"skills-claude":1,"conector-propio":1};
+  "higgsfield-cine","canva-diseno","figma-a-web","notion-cerebro","gmail-calendario","claude-chrome","skills-claude","conector-propio","slack-equipo","gurusup-brain","instagram-ia"];
+var SVG={"higgsfield-cine":1,"canva-diseno":1,"figma-a-web":1,"notion-cerebro":1,"gmail-calendario":1,"claude-chrome":1,"skills-claude":1,"conector-propio":1,"slack-equipo":1,"gurusup-brain":1,"instagram-ia":1};
 var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
 var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");
 var img=function(s){return "../img/"+s+(SVG[s]?".svg":".jpg")};
@@ -18,17 +18,14 @@ var root=document.documentElement;
 var theme=null;try{theme=localStorage.getItem("amri-theme")}catch(e){}
 if(!theme)theme=matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";
 root.setAttribute("data-theme",theme);
-var bar=document.querySelector(".langbar");
-if(bar){var b=document.createElement("button");b.className="r-theme";b.type="button";
-  var paint=function(){b.textContent=theme==="dark"?"☀️":"🌙";b.setAttribute("aria-label",t("theme_aria","Cambiar tema"));};
-  paint();b.onclick=function(){theme=theme==="dark"?"light":"dark";root.setAttribute("data-theme",theme);try{localStorage.setItem("amri-theme",theme)}catch(e){}paint();};
-  bar.appendChild(b);}
+
 
 /* Portada ilustrada encima del título */
 var h1=document.querySelector("main h1");
 if(h1&&ORDER.indexOf(slug)>-1){
   var fig=document.createElement("div");fig.className="r-cover";fig.setAttribute("aria-hidden","true");
   var im=new Image();im.alt="";im.src=img(slug);im.onerror=function(){fig.remove()};fig.appendChild(im);
+  var tb=document.createElement("div");tb.className="tools-badge";tb.setAttribute("data-tools",slug);fig.appendChild(tb);if(window.AMRI_LOGO)AMRI_LOGO.fillTools(fig);
   h1.parentNode.insertBefore(fig,document.getElementById("i18n-note")||h1);
 }
 
@@ -57,6 +54,26 @@ function next(){
 }
 next();
 document.addEventListener("langchange",next);
+
+/* ⚡ Hazlo con Claude Code (plugin de AMRI) */
+function pluginBox(){
+  var old=document.querySelector(".r-plugin");if(old)old.remove();
+  var map=window.AMRI_PLUGIN&&AMRI_PLUGIN.skills;if(!map||!map[slug])return;
+  var ing=document.querySelector("main .ing");if(!ing)return;
+  var cmd="/amri:"+map[slug]+" "+t("pl_idea","tu idea");
+  var box=document.createElement("aside");box.className="r-plugin";
+  box.innerHTML='<b class="pt"></b><p></p><div class="pcmd"><code></code><button type="button"></button></div><a href="../plugin.html"></a>';
+  box.querySelector(".pt").textContent=t("pl_box_t","⚡ Hazlo con Claude Code");
+  box.querySelector("p").textContent=t("pl_box_d","");
+  box.querySelector("code").textContent=cmd;
+  var btn=box.querySelector("button");btn.textContent=t("pl_copy","Copiar");
+  btn.onclick=function(){var done=function(){btn.textContent=t("pl_copied","¡Copiado!");setTimeout(function(){btn.textContent=t("pl_copy","Copiar")},1800)};
+    if(navigator.clipboard)navigator.clipboard.writeText(cmd).then(done,function(){});};
+  box.querySelector("a").textContent=t("pl_how","Cómo instalar el plugin →");
+  ing.parentNode.insertBefore(box,ing.nextSibling);
+}
+pluginBox();
+document.addEventListener("langchange",pluginBox);
 
 /* Entrada tranquila */
 if(!RM){document.body.classList.add("r-enter");setTimeout(function(){document.body.classList.remove("r-enter")},1800);}

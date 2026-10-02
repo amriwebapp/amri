@@ -148,7 +148,50 @@ def conector():
     sparks = f'<path d="M620 250 L612 276 M650 240 V270 M680 252 L690 276" stroke="{GOLD}" stroke-width="7" stroke-linecap="round"/>'
     return frame(left + right + cable + sparks, "#FFE4D6", "#E4EEF6")
 
+def slack():
+    # tablón de mensajes con almohadilla y burbujas
+    board = f'''<rect x="300" y="200" width="460" height="390" rx="28" fill="{CREAM}" {S}/>
+<path d="M300 262 H760" {S}/><text x="332" y="246" font-family="Arial" font-weight="700" font-size="34" fill="{INK}">#</text>
+<rect x="370" y="222" width="190" height="22" rx="11" fill="{PEACH}"/>'''
+    rows = ""
+    for i,(c,w) in enumerate([(TERR,260),(SAGE,210),(GOLD,290),(SKY,180)]):
+        y = 292 + i*72
+        rows += f'<circle cx="352" cy="{y+18}" r="22" fill="{c}" {S}/><rect x="392" y="{y}" width="{w}" height="16" rx="8" fill="{INK}" opacity=".55"/><rect x="392" y="{y+26}" width="{w-60}" height="12" rx="6" fill="{INK}" opacity=".25"/>'
+    bubble = f'''<g transform="rotate(6 900 300)"><path d="M820 230 H1000 Q1030 230 1030 260 V330 Q1030 360 1000 360 H880 L850 392 L852 360 H820 Q790 360 790 330 V260 Q790 230 820 230Z" fill="{TERR}" {S}/>
+<path d="M830 280 H990 M830 314 H950" stroke="{CREAM}" stroke-width="10" stroke-linecap="round"/></g>'''
+    cup = f'<path d="M180 500 H300 V560 Q300 600 262 600 H218 Q180 600 180 560Z" fill="{SAGE}" {S}/><path d="M300 515 Q336 515 334 543 Q332 568 300 566" fill="none" {S}/>'
+    return frame(board + rows + bubble + cup, "#EDE4FF", "#FBE3D2")
+
+def gurusup():
+    # tarro-cerebro con tarjetas de conocimiento conectadas
+    jar = f'''<rect x="470" y="300" width="260" height="300" rx="46" fill="{SKY}" fill-opacity=".55" {S}/>
+<rect x="490" y="262" width="220" height="54" rx="16" fill="{WOOD2}" {S}/>
+<path d="M540 470 C520 420 560 380 600 400 C630 360 690 390 675 430 C715 450 700 510 655 505 C640 540 580 540 570 505 C530 510 520 480 540 470Z" fill="{PEACH}" {S}/>
+<path d="M600 405 C590 440 610 470 600 505 M640 420 C630 450 660 470 645 500" stroke="{INK}" stroke-width="4" fill="none" stroke-linecap="round" opacity=".6"/>'''
+    cards = ""
+    for x,y,c,r in [(230,300,CREAM,-8),(250,470,GOLD,5),(880,290,CREAM,7),(900,460,SAGE,-5)]:
+        cards += f'<g transform="rotate({r} {x+70} {y+50})"><rect x="{x}" y="{y}" width="150" height="100" rx="14" fill="{c}" {S}/><path d="M{x+20} {y+34} H{x+120} M{x+20} {y+62} H{x+90}" stroke="{INK}" stroke-width="7" stroke-linecap="round" opacity=".5"/></g>'
+    lines = f'<path d="M380 350 C430 350 440 400 470 410 M400 520 C440 520 450 480 470 470 M880 340 C820 340 790 380 730 400 M900 510 C840 510 790 480 730 470" stroke="{TERR}" stroke-width="5" fill="none" stroke-dasharray="10 10" stroke-linecap="round"/>'
+    return frame(lines + cards + jar, "#E4EEF6", "#FBE3D2")
+
+def instagram():
+    # móvil con cuadrícula de publicaciones, un reel y un corazón
+    phone = f'''<rect x="470" y="150" width="270" height="450" rx="40" fill="{CREAM}" {S}/>
+<rect x="560" y="168" width="90" height="14" rx="7" fill="{INK}" opacity=".35"/>
+<circle cx="515" cy="222" r="22" fill="{TERR}" {S}/><rect x="550" y="210" width="110" height="12" rx="6" fill="{INK}" opacity=".55"/><rect x="550" y="230" width="70" height="10" rx="5" fill="{INK}" opacity=".25"/>'''
+    tiles = ""
+    cols = [PEACH, SAGE, GOLD, SKY, LILAC, TERR, WOOD, PEACH, SAGE]
+    for i, c in enumerate(cols):
+        x = 492 + (i % 3) * 78; y = 268 + (i // 3) * 78
+        tiles += f'<rect x="{x}" y="{y}" width="70" height="70" rx="10" fill="{c}" {S}/>'
+    reel = f'''<g transform="rotate(-8 330 380)"><rect x="250" y="250" width="170" height="280" rx="28" fill="{INK}" {S}/>
+<rect x="266" y="268" width="138" height="244" rx="18" fill="{PEACH}"/><path d="M318 360 L370 392 L318 424Z" fill="{CREAM}" {S}/></g>'''
+    heart = f'''<g transform="rotate(8 880 330)"><path d="M820 230 H990 Q1020 230 1020 260 V350 Q1020 380 990 380 H880 L850 410 L852 380 H820 Q790 380 790 350 V260 Q790 230 820 230Z" fill="{CREAM}" {S}/>
+<path d="M905 345 C860 315 845 290 860 272 C875 255 898 262 905 280 C912 262 935 255 950 272 C965 290 950 315 905 345Z" fill="{TERR}" {S}/></g>'''
+    pen = f'<path d="M800 470 L930 430 L944 456 L814 498Z" fill="{GOLD}" {S}/><path d="M800 470 L786 506 L814 498Z" fill="{INK}"/>'
+    return frame(reel + phone + tiles + heart + pen, "#FCE3EC", "#FBE3D2")
+
 for slug, fn in {"higgsfield-cine":higgsfield,"canva-diseno":canva,"figma-a-web":figma,"notion-cerebro":notion,
-                 "gmail-calendario":gmail,"claude-chrome":chrome,"skills-claude":skills,"conector-propio":conector}.items():
+                 "gmail-calendario":gmail,"claude-chrome":chrome,"skills-claude":skills,"conector-propio":conector,"slack-equipo":slack,"gurusup-brain":gurusup,"instagram-ia":instagram}.items():
     open(os.path.join(OUT, slug + ".svg"), "w").write(fn())
     print("ok", slug)

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i="pg_title">AMRI · Plugin para Claude Code</title>
+<meta name="description" content="Instala el plugin de AMRI en Claude Code y cocina cada receta con un comando.">
+<meta name="theme-color" content="#FBF6EE">
+<link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/brand/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/academia.css">
+<link rel="stylesheet" href="assets/cuenta.css">
+<script>(function(){var s=null;try{s=localStorage.getItem("amri-theme")}catch(e){}if(!s)s=matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",s);})();</script>
+</head>
+<body data-page="plugin">
+<header class="top scrolled">
+  <div class="nav">
+    <a class="brand" href="index.html" aria-label="AMRI"><span class="logo"><img src="img/brand/amri-monograma.svg" alt="" width="34" height="34"></span><svg class="bwm" viewBox="315 436.5 389 130" role="img" aria-label="AMRI"><path d="M325.5,556L368.5,456L411.5,556M347,523L390,523" fill="none" class="ai" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path d="M445.5,556L445.5,456L493.5,514L541.5,456L541.5,556" fill="none" class="mr" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path d="M577.5,556L577.5,456L611.1,456C648.9,456,648.9,512,611.1,512L577.5,512M612.5,512L647.5,556" fill="none" class="mr" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path d="M674.5,556L674.5,496" fill="none" class="ai" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path class="ais" d="M674.5,447C677.92,462.58 677.92,462.58 693.5,466C677.92,469.42 677.92,469.42 674.5,485C671.08,469.42 671.08,469.42 655.5,466C671.08,462.58 671.08,462.58 674.5,447Z"/></svg> <span class="sub" data-i="brand_sub">Academia de IA</span></a>
+    <div class="nav-right">
+    </div>
+  </div>
+</header>
+<main class="pg plg">
+  <a class="mini" href="index.html" data-i="back" style="display:inline-block;margin-bottom:22px">← Volver a la academia</a>
+  <span class="plg-k" data-i="pg_kicker">Plugin para Claude Code</span>
+  <h1 data-i="pg_h">Que Claude <em>cocine contigo</em>.</h1>
+  <p class="lead" data-i="pg_lead"></p>
+
+  <ol class="plg-steps">
+    <li><span class="n">1</span><div><h2 data-i="pg_s1t">Instala Claude Code</h2><p data-i="pg_s1d"></p>
+      <div class="cmd"><code>curl -fsSL https://claude.ai/install.sh | bash</code><button type="button" data-cp></button></div>
+      <p data-i="pg_s1w"></p>
+      <div class="cmd"><code>irm https://claude.ai/install.ps1 | iex</code><button type="button" data-cp></button></div>
+      <p class="sm" data-i="pg_s1n"></p></div></li>
+    <li><span class="n">2</span><div><h2 data-i="pg_s2t">Añade AMRI</h2><p data-i="pg_s2d"></p>
+      <div class="cmd"><code>/plugin marketplace add amriwebapp/amri</code><button type="button" data-cp></button></div>
+      <div class="cmd"><code>/plugin install amri@amri</code><button type="button" data-cp></button></div></div></li>
+    <li><span class="n">3</span><div><h2 data-i="pg_s3t">Cocina una receta</h2><p data-i="pg_s3d"></p>
+      <div class="cmd"><code id="ex3"></code><button type="button" data-cp></button></div></div></li>
+    <li><span class="n">4</span><div><h2 data-i="pg_s4t">O deja que el chef lo planifique</h2><p data-i="pg_s4d"></p>
+      <div class="cmd"><code id="ex4"></code><button type="button" data-cp></button></div></div></li>
+  </ol>
+
+  <section class="plg-who"><h2 data-i="pg_who">Quién hace qué</h2>
+    <div class="plg-two">
+      <div class="card2"><h3>🤖 <span data-i="pg_c">Claude hace</span></h3><ul><li data-i="pg_c1"></li><li data-i="pg_c2"></li><li data-i="pg_c3"></li><li data-i="pg_c4"></li></ul></div>
+      <div class="card2"><h3>🙋 <span data-i="pg_u">Tú haces</span></h3><ul><li data-i="pg_u1"></li><li data-i="pg_u2"></li><li data-i="pg_u3"></li><li data-i="pg_u4"></li></ul></div>
+    </div>
+    <p class="plg-note" data-i="pg_note"></p>
+    <p class="plg-note" data-i="pg_cw"></p>
+  </section>
+
+  <section><h2 data-i="pg_list">Todas las recetas</h2>
+    <div class="plg-table"><table><thead><tr><th></th><th data-i="pg_cmd">Comando</th><th></th></tr></thead><tbody id="plgList"></tbody></table></div>
+    <p class="plg-note" data-i="pg_src"></p>
+  </section>
+</main>
+<script src="i18n.js"></script>
+<script src="assets/plugin-map.js"></script>
+<script>
+(function(){
+var ORDER=["webapp-gratis","imagenes-ia","asistente-ia","automatiza-tareas","chatbot-web","logo-ia","video-aftereffects","blender-3d","higgsfield-cine","canva-diseno","figma-a-web","notion-cerebro","gmail-calendario","claude-chrome","skills-claude","conector-propio","slack-equipo","gurusup-brain","instagram-ia"];
+var t=function(k){return window.I18N?I18N.t(k):""};
+function fill(){
+  document.getElementById("ex3").textContent="/amri:webapp-gratis "+t("pg_s3x");
+  document.getElementById("ex4").textContent="/amri:chef "+t("pg_s4x");
+  var map=(window.AMRI_PLUGIN||{}).skills||{},tb=document.getElementById("plgList");tb.innerHTML="";
+  ORDER.forEach(function(s,i){if(!map[s])return;var c=I18N.card(i),tr=document.createElement("tr");
+    tr.innerHTML='<td></td><td><code></code></td><td><a href="recetas/'+s+'.html"></a></td>';
+    tr.children[0].textContent=c.titulo;tr.querySelector("code").textContent="/amri:"+map[s];tr.querySelector("a").textContent=t("pg_open")+" →";tb.appendChild(tr);});
+  document.querySelectorAll("[data-cp]").forEach(function(btn){btn.textContent=t("pl_copy");});
+}
+fill();document.addEventListener("langchange",fill);
+document.addEventListener("click",function(e){var btn=e.target.closest("[data-cp]");if(!btn)return;var code=btn.parentNode.querySelector("code").textContent;
+  if(navigator.clipboard)navigator.clipboard.writeText(code).then(function(){btn.textContent=t("pl_copied");setTimeout(function(){btn.textContent=t("pl_copy")},1800)},function(){});});
+})();
+</script>
+</body>
+</html>
