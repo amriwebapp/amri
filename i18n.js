@@ -238,7 +238,7 @@ ar:{
  {tag:"متقدم",titulo:"اطبخ موصل MCP خاصاً بك",desc:"أنشئ موصلاً بسيطاً ليستخدم Claude بياناتك أو تطبيقك. Claude يكتب الشيفرة.",chips:CH("ساعة","متقدم","مجاناً")},
  {tag:"فريق",titulo:"Claude في Slack الخاص بك",desc:"لخّص القنوات واعثر على القرارات واكتب رسائل لفريقك دون قراءة مئة إشعار.",chips:CH("25 دقيقة","سهل","مجاناً")},
  {tag:"شركة",titulo:"دماغ شركتك مع GuruSup",desc:"اربط GuruSup Brain بـ Claude ليجيب بمعرفة شركتك الحقيقية مع ذكر المصدر.",chips:CH("30 دقيقة","متوسط","مدفوع")},
- {tag:"تواصل",titulo:"شبكاتك الاجتماعية مع Claude",desc:"إنستغرام وتيك توك ولينكدإن وX بصوتك أنت: ملفات أقوى، وفكرة واحدة مكيّفة لكل شبكة، وشهر مخطط. Claude يكتب وأنت تنشر.",chips:CH("45 دقيقة","سهل","0 €")},
+ {tag:"تواصل",titulo:"شبكاتك الاجتماعية مع Claude",desc:"إنستغرام وتيك توك ولينكدإن وX بصوتك أنت: ملفات أقوى، وفكرة واحدة مكيّفة لكل شبكة، وشهر مخطط. Claude يكتب وأنت تنشر.",chips:CH("45 دقيقة","سهل","مجاناً")},
  {tag:"تحريك",titulo:"رسوم متحركة مع Claude Opus 5.5",desc:"من اللوحة القصصية إلى رسم متحرك في متصفحك بهوية علامتك. وإن أردت، فيديو MP4 للشبكات.",chips:CH("40 دقيقة","متوسط","خطة مدفوعة")},
  {tag:"قرارات",titulo:"قرارات تلقائية مع Jev",desc:"صنّف الرسائل ورتّب البلاغات حسب الأولوية وقيّم جهات الاتصال في أجزاء من الثانية. Jev يقرر ويخبرك بثقته ويحيل إليك المشكوك فيه.",chips:CH("50 دقيقة","متوسط","مدفوع")},
  {tag:"أمان",titulo:"حارس لروبوت المحادثة مع Jev",desc:"راجع كل سؤال وكل إجابة من مساعدك لإيقاف الخدع والمواضيع الدخيلة والمعلومات المختلقة.",chips:CH("45 دقيقة","متقدم","مدفوع")}]}
@@ -474,6 +474,61 @@ Object.assign(T.ar,{
   ["إضافة أم مهارة أم موصل؟","الموصل يمنح وصولاً إلى تطبيق. المهارة وصفة يعرف Claude كيف يتبعها. الإضافة حزمة تجمع عدة مهارات (وأحياناً موصلات) لتثبيتها دفعة واحدة."]],
  lp_d:"الإضافة كتاب وصفات لـ Claude Code: تثبّتها مرة واحدة فتتحول كل وصفة إلى أمر. يطبخها Claude معك على حاسوبك، ويجمع الطاهي عدة وصفات في مشروعك الخاص.",
  lp_b2:"ما هي الإضافة؟",pl_how:"ما هي الإضافة وكيف تثبّتها ←"
+});
+/* v18 · «¿Qué quieres construir?» más completo */
+Object.assign(T.es,{
+ b_l:"Cuéntalo con tus palabras o elige lo que necesitas. Te enseñamos lo que hemos entendido, qué recetas te hacen falta y en qué orden.",
+ b_ph:"Ej.: soy fisioterapeuta, quiero una web con citas y darme a conocer en Instagram",
+ b_ex:["Una web para mi panadería con reservas","Quiero empezar un canal de vídeos","Vender mis cerámicas online","Ordenar mi correo y mi agenda","Un chatbot que no se invente nada","Soy freelance y quiero darme a conocer"],
+ b_pick:"Elige o ajusta lo que necesitas",b_g1:"Tu web y tus clientes",b_g2:"Marca y contenido",b_g3:"Oficina y equipo",b_g4:"Aprende y personaliza",
+ b_und:"Lo que hemos entendido",b_und0:"Escribe tu idea o toca lo que necesitas, y aquí verás lo que hemos entendido. Puedes quitar o añadir lo que quieras.",
+ b_none:"No hemos encontrado nada concreto en tu idea. Prueba a contarla de otra forma o elige abajo lo que necesitas.",
+ b_sector:"Parece que es para",b_have:"ya lo tienes",b_have_t:"Toca si al final sí lo necesitas",
+ b_lvl:"Tu punto de partida",b_lv:["Nunca he usado Claude","Uso Claude a veces","Uso Claude Code"],
+ b_bud:"Presupuesto",b_bd:["Solo gratis","Puedo pagar algo"],
+ b_more:"Quizá también necesites:",b_res:"Tu menú",b_about:"unas",b_h:"h",b_min:"min",
+ b_need:"Necesitarás:",b_tc:"Claude (gratis)",b_bdesk:"App de escritorio de Claude",b_tpaid:"Alguna herramienta de pago",
+ b_f1:"Prepara la base",b_f2:"Tu marca",b_f3:"Constrúyelo",b_f4:"Date a conocer",b_f5:"Organiza y automatiza",
+ b_for:"Para:",b_start:"empezar con buen pie",b_dep:"lo necesitas para el guardián",
+ b_opt:"Opcional: de pago",b_opt_d:"Has elegido «Solo gratis». Estas recetas usan herramientas de pago: guárdalas para más adelante.",
+ b_r1:"receta",b_go:"Empezar por la receta 1",b_cp:"Copiar el menú",b_sh:"Compartir",b_menu:"Mi menú en AMRI",
+ b_chef2:"Como ya usas Claude Code, el chef de AMRI puede cocinar todo el menú contigo. Pega esto:"
+});
+Object.assign(T.en,{
+ b_l:"Describe it in your own words or pick what you need. We'll show you what we understood, which recipes you need and in what order.",
+ b_ph:"E.g. I'm a physio, I want a website with appointments and to get known on Instagram",
+ b_ex:["A website for my bakery with bookings","I want to start a video channel","Sell my ceramics online","Get my email and calendar in order","A chatbot that doesn't make things up","I'm a freelancer and want to get known"],
+ b_pick:"Pick or adjust what you need",b_g1:"Your website and customers",b_g2:"Brand and content",b_g3:"Office and team",b_g4:"Learn and customise",
+ b_und:"What we understood",b_und0:"Type your idea or tap what you need, and you'll see here what we understood. You can remove or add anything.",
+ b_none:"We couldn't find anything specific in your idea. Try describing it another way or pick what you need below.",
+ b_sector:"Looks like it's for",b_have:"you already have it",b_have_t:"Tap if you do need it after all",
+ b_lvl:"Your starting point",b_lv:["I've never used Claude","I use Claude now and then","I use Claude Code"],
+ b_bud:"Budget",b_bd:["Free only","I can pay a little"],
+ b_more:"You might also need:",b_res:"Your menu",b_about:"about",b_h:"h",b_min:"min",
+ b_need:"You'll need:",b_tc:"Claude (free)",b_bdesk:"Claude desktop app",b_tpaid:"A paid tool",
+ b_f1:"Lay the groundwork",b_f2:"Your brand",b_f3:"Build it",b_f4:"Get known",b_f5:"Organise and automate",
+ b_for:"For:",b_start:"getting off to a good start",b_dep:"needed for the guardian",
+ b_opt:"Optional: paid",b_opt_d:"You chose “Free only”. These recipes use paid tools: keep them for later.",
+ b_r1:"recipe",b_go:"Start with recipe 1",b_cp:"Copy the menu",b_sh:"Share",b_menu:"My AMRI menu",
+ b_chef2:"Since you already use Claude Code, the AMRI chef can cook the whole menu with you. Paste this:"
+});
+Object.assign(T.ar,{
+ b_l:"اكتبه بكلماتك أو اختر ما تحتاجه. سنعرض لك ما فهمناه، والوصفات التي تحتاجها، وبأي ترتيب.",
+ b_ph:"مثال: أنا أخصائي علاج طبيعي، أريد موقعاً بمواعيد وأن يعرفني الناس على إنستغرام",
+ b_ex:["موقع لمخبزي مع حجوزات","أريد أن أبدأ قناة فيديو","بيع منتجاتي الخزفية عبر الإنترنت","تنظيم بريدي وتقويمي","روبوت محادثة لا يختلق شيئاً","أنا مستقل وأريد أن يعرفني الناس"],
+ b_pick:"اختر أو عدّل ما تحتاجه",b_g1:"موقعك وعملاؤك",b_g2:"العلامة والمحتوى",b_g3:"المكتب والفريق",b_g4:"تعلّم وخصّص",
+ b_und:"ما فهمناه",b_und0:"اكتب فكرتك أو اضغط على ما تحتاجه، وسترى هنا ما فهمناه. يمكنك حذف أو إضافة ما تشاء.",
+ b_none:"لم نجد شيئاً محدداً في فكرتك. جرّب وصفها بطريقة أخرى أو اختر ما تحتاجه في الأسفل.",
+ b_sector:"يبدو أنه من أجل",b_have:"لديك بالفعل",b_have_t:"اضغط إن كنت تحتاجه في النهاية",
+ b_lvl:"نقطة انطلاقك",b_lv:["لم أستخدم Claude قط","أستخدم Claude أحياناً","أستخدم Claude Code"],
+ b_bud:"الميزانية",b_bd:["مجاناً فقط","يمكنني دفع القليل"],
+ b_more:"قد تحتاج أيضاً:",b_res:"قائمتك",b_about:"نحو",b_h:"س",b_min:"د",
+ b_need:"ستحتاج:",b_tc:"Claude (مجاناً)",b_bdesk:"تطبيق Claude لسطح المكتب",b_tpaid:"أداة مدفوعة",
+ b_f1:"جهّز الأساس",b_f2:"علامتك",b_f3:"ابنِه",b_f4:"عرّف الناس بك",b_f5:"نظّم وأتمت",
+ b_for:"من أجل:",b_start:"بداية جيدة",b_dep:"ضروري للحارس",
+ b_opt:"اختياري: مدفوع",b_opt_d:"اخترت «مجاناً فقط». هذه الوصفات تستخدم أدوات مدفوعة: احتفظ بها لوقت لاحق.",
+ b_r1:"وصفة",b_go:"ابدأ بالوصفة 1",b_cp:"انسخ القائمة",b_sh:"شارك",b_menu:"قائمتي في AMRI",
+ b_chef2:"بما أنك تستخدم Claude Code، يمكن لطاهي AMRI أن يطبخ القائمة كلها معك. الصق هذا:"
 });
 var LANGS=[["es","Español"],["en","English"],["ar","العربية"]];
 function detect(){try{var s=localStorage.getItem("amri-lang");if(T[s])return s;}catch(e){}var n=((navigator.language||"es")+"").slice(0,2);return T[n]?n:"es";}
