@@ -46,7 +46,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Quieres que prepare borradores de respuesta? Claude nunca debe enviar nada por ti en esta receta: solo prepara borradores que tú revisas.
+Pregunta a la persona: **¿Quieres que prepare borradores de respuesta?** Claude nunca debe enviar nada por ti en esta receta: solo prepara borradores que tú revisas.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -116,7 +118,7 @@ Revisa mis correos de las últimas 24 horas y mi agenda de hoy. Dime:
 
 **✅ Comprobación:** en un minuto sabes qué te espera hoy.
 
-### 5. Borradores con tu tono _(solo si la app guarda datos o cuentas)_
+### 5. Borradores con tu tono _(solo si la respuesta a «Quieres que prepare borradores de respuesta» es «Sí»)_
 _5 min · responder_
 
 Claude escribe, tú revisas y envías.

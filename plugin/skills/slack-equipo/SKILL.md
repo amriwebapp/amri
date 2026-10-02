@@ -45,7 +45,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Quieres que Claude pueda publicar mensajes (siempre con tu permiso)? Si dudas, elige «No»: Claude solo leerá y resumirá. Siempre puedes activarlo después.
+Pregunta a la persona: **¿Quieres que Claude pueda publicar mensajes (siempre con tu permiso)?** Si dudas, elige «No»: Claude solo leerá y resumirá. Siempre puedes activarlo después.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -113,7 +115,7 @@ Busca en Slack qué se decidió sobre [tema]. Dime la decisión, quién la tomó
 
 **✅ Comprobación:** tienes la decisión con su enlace para comprobarla.
 
-### 5. Redacta y publica con permiso _(solo si la app guarda datos o cuentas)_
+### 5. Redacta y publica con permiso _(solo si la respuesta a «Quieres que Claude pueda publicar mensajes (siempre con tu permiso)» es «Sí»)_
 _5 min · escribir_
 
 Claude escribe el mensaje, tú lo apruebas y él lo publica.
@@ -126,7 +128,7 @@ Redacta un mensaje para el equipo sobre [tema]: claro, amable y corto. Enséñam
 
 **✅ Comprobación:** el mensaje aparece en el canal tal y como lo aprobaste.
 
-### 6. Tu canvas de los viernes _(solo si la app guarda datos o cuentas)_
+### 6. Tu canvas de los viernes _(solo si la respuesta a «Quieres que Claude pueda publicar mensajes (siempre con tu permiso)» es «Sí»)_
 _5 min · la rutina_
 
 Un **canvas** es una página dentro de Slack. Ideal para dejar el resumen de la semana a todo el equipo.

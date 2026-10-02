@@ -48,7 +48,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿La imagen tiene que llevar texto escrito? Si dudas, elige «Sí»: te enseñamos la herramienta que mejor escribe letras. Si al final no lleva texto, funciona igual.
+Pregunta a la persona: **¿La imagen tiene que llevar texto escrito?** Si dudas, elige «Sí»: te enseñamos la herramienta que mejor escribe letras. Si al final no lleva texto, funciona igual.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -139,7 +141,7 @@ Esta es la imagen que me ha salido con el prompt [pega el prompt]. Me gusta [lo 
 
 **✅ Comprobación:** tienes una imagen que te gusta de verdad.
 
-### 5. Revisa las letras _(solo si la app guarda datos o cuentas)_
+### 5. Revisa las letras _(solo si la respuesta a «La imagen tiene que llevar texto escrito» es «Sí»)_
 _5 min · que el texto se lea bien_
 
 Las IAs a veces escriben letras raras o con faltas. Hay que revisarlo con lupa.

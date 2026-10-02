@@ -47,7 +47,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿El logo tiene que llevar el nombre escrito? Si dudas, elige «Sí»: te enseñamos a que las letras queden perfectas. Siempre puedes quedarte solo con el símbolo.
+Pregunta a la persona: **¿El logo tiene que llevar el nombre escrito?** Si dudas, elige «Sí»: te enseñamos a que las letras queden perfectas. Siempre puedes quedarte solo con el símbolo.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -130,7 +132,7 @@ Este es mi logo favorito, hecho con el prompt [pega el prompt]. Quiero que sea m
 
 **✅ Comprobación:** tienes una versión que te encanta.
 
-### 5. Revisa las letras _(solo si la app guarda datos o cuentas)_
+### 5. Revisa las letras _(solo si la respuesta a «El logo tiene que llevar el nombre escrito» es «Sí»)_
 _5 min · el nombre perfecto_
 
 Las IAs a veces cambian letras o las deforman. En un logo tiene que estar perfecto.

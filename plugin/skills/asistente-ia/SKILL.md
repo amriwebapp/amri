@@ -47,7 +47,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Tiene que conocer tus documentos (catálogo, apuntes, normas…)? Si dudas, elige «Sí»: te enseñamos a darle tus documentos. Si no los necesitas, puedes saltarte ese paso.
+Pregunta a la persona: **¿Tiene que conocer tus documentos (catálogo, apuntes, normas…)?** Si dudas, elige «Sí»: te enseñamos a darle tus documentos. Si no los necesitas, puedes saltarte ese paso.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -112,7 +114,7 @@ Un **Proyecto** es un espacio en Claude con sus propias instrucciones. Todos los
 
 **✅ Comprobación:** tienes un proyecto con tus instrucciones guardadas.
 
-### 4. Llena la despensa _(solo si la app guarda datos o cuentas)_
+### 4. Llena la despensa _(solo si la respuesta a «Tiene que conocer tus documentos (catálogo, apuntes, normas…)» es «Sí»)_
 _5 min · subir tus documentos_
 
 Tu asistente responderá usando tus documentos, no información inventada.

@@ -46,7 +46,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Tu empresa ya tiene información en otras apps (Notion, Drive, Slack, HubSpot…)? Si dudas, elige «Sí»: te enseñamos a conectar esas fuentes al Brain para que Claude las use.
+Pregunta a la persona: **¿Tu empresa ya tiene información en otras apps (Notion, Drive, Slack, HubSpot…)?** Si dudas, elige «Sí»: te enseñamos a conectar esas fuentes al Brain para que Claude las use.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -63,7 +65,7 @@ Necesitas una cuenta de GuruSup con el Brain activado y tu cuenta de Claude.
 
 **✅ Comprobación:** puedes entrar en GuruSup y en Claude.
 
-### 2. Alimenta el Brain _(solo si la app guarda datos o cuentas)_
+### 2. Alimenta el Brain _(solo si la respuesta a «Tu empresa ya tiene información en otras apps (Notion, Drive, Slack, HubSpot…)» es «Sí»)_
 _10 min · la despensa_
 
 El Brain aprende de las herramientas que ya usa tu empresa. Cuanto mejor lo alimentes, mejores respuestas.

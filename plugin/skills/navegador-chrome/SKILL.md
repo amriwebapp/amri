@@ -46,7 +46,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿La tarea necesita tus datos personales (nombre, dirección, teléfono…)? Si dudas, elige «Sí»: te explicamos qué datos dar y cuáles nunca.
+Pregunta a la persona: **¿La tarea necesita tus datos personales (nombre, dirección, teléfono…)?** Si dudas, elige «Sí»: te explicamos qué datos dar y cuáles nunca.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -97,7 +99,7 @@ Antes de empezar, dime tu plan en pasos cortos. Pídeme permiso antes de pulsar 
 
 **✅ Comprobación:** Claude te enseña su plan y empieza a navegar.
 
-### 4. Tus datos, con cuidado _(solo si la app guarda datos o cuentas)_
+### 4. Tus datos, con cuidado _(solo si la respuesta a «La tarea necesita tus datos personales (nombre, dirección, teléfono…)» es «Sí»)_
 _3 min · la regla de oro_
 
 Da solo lo imprescindible, y el botón final lo pulsas tú.

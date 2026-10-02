@@ -46,7 +46,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Tienes un ejemplo o una plantilla que ya uses? Si dudas, elige «Sí»: un buen ejemplo vale más que mil explicaciones.
+Pregunta a la persona: **¿Tienes un ejemplo o una plantilla que ya uses?** Si dudas, elige «Sí»: un buen ejemplo vale más que mil explicaciones.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -85,7 +87,7 @@ Entrevístame con preguntas de una en una para entender mi método: cuándo lo u
 
 **✅ Comprobación:** has respondido a todas las preguntas.
 
-### 4. Dale tu plato de muestra _(solo si la app guarda datos o cuentas)_
+### 4. Dale tu plato de muestra _(solo si la respuesta a «Tienes un ejemplo o una plantilla que ya uses» es «Sí»)_
 _3 min · el ejemplo_
 
 - Adjunta tu ejemplo o plantilla al chat (📎).

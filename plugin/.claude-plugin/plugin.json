@@ -1,7 +1,7 @@
 {
   "name": "amri",
   "displayName": "AMRI · Academia abierta de IA",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Las recetas de AMRI como skills: Claude las cocina contigo paso a paso. Incluye /amri:chef para combinar recetas en tu propio proyecto.",
   "author": {
     "name": "AMRI",

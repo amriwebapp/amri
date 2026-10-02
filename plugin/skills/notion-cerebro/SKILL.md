@@ -45,7 +45,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Ya tienes páginas en Notion con contenido? Si dudas, elige «Sí»: Claude revisará lo que tienes antes de proponer nada. Si tu Notion está vacío, también funciona.
+Pregunta a la persona: **¿Ya tienes páginas en Notion con contenido?** Si dudas, elige «Sí»: Claude revisará lo que tienes antes de proponer nada. Si tu Notion está vacío, también funciona.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -79,7 +81,7 @@ Notion te preguntará a qué espacio de trabajo quieres dar acceso. Elige el tuy
 
 **✅ Comprobación:** Notion aparece activado en tus conectores.
 
-### 3. Que Claude explore tu Notion _(solo si la app guarda datos o cuentas)_
+### 3. Que Claude explore tu Notion _(solo si la respuesta a «Ya tienes páginas en Notion con contenido» es «Sí»)_
 _5 min · inventario_
 
 Antes de ordenar, hay que saber qué hay en la despensa.

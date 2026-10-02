@@ -47,7 +47,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Ya tienes publicaciones o reels tuyos? Si tienes al menos tres, elige «Sí»: Claude aprenderá tu voz a partir de ellos, que funciona mejor que describirla.
+Pregunta a la persona: **¿Ya tienes publicaciones o reels tuyos?** Si tienes al menos tres, elige «Sí»: Claude aprenderá tu voz a partir de ellos, que funciona mejor que describirla.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 

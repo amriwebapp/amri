@@ -47,7 +47,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Quieres que recoja los datos de contacto de los visitantes? Si dudas, elige «Sí»: es útil para no perder clientes. Recuerda avisar en tu web de cómo usas esos datos.
+Pregunta a la persona: **¿Quieres que recoja los datos de contacto de los visitantes?** Si dudas, elige «Sí»: es útil para no perder clientes. Recuerda avisar en tu web de cómo usas esos datos.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -129,7 +131,7 @@ Eres el asistente de [nombre del negocio]. Respondes siempre en español, de for
 
 **✅ Comprobación:** le preguntas algo que no está en la chuleta y te remite a tu contacto en vez de inventar.
 
-### 5. Apunta los contactos _(solo si la app guarda datos o cuentas)_
+### 5. Apunta los contactos _(solo si la respuesta a «Quieres que recoja los datos de contacto de los visitantes» es «Sí»)_
 _5 min · no perder clientes_
 
 El bot puede pedir el nombre y el correo de quien esté interesado, y tú los recibes.
