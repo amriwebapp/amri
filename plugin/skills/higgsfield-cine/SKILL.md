@@ -46,7 +46,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Vas a usar una foto tuya como referencia (tu producto, tu logo, tu local)? Si dudas, elige «Sí»: te enseñamos a subir tu foto. Si no la usas, la receta funciona igual.
+Pregunta a la persona: **¿Vas a usar una foto tuya como referencia (tu producto, tu logo, tu local)?** Si dudas, elige «Sí»: te enseñamos a subir tu foto. Si no la usas, la receta funciona igual.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -117,7 +119,7 @@ Antes de generar nada, hazme 4 preguntas cortas sobre estilo, colores, encuadre 
 
 **✅ Comprobación:** tienes una idea elegida y clara.
 
-### 4. Sube tu foto de referencia _(solo si la app guarda datos o cuentas)_
+### 4. Sube tu foto de referencia _(solo si la respuesta a «Vas a usar una foto tuya como referencia (tu producto, tu logo, tu local)» es «Sí»)_
 _3 min · el atrezo_
 
 Con una referencia, el resultado se parece a tu producto de verdad.

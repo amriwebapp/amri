@@ -81,7 +81,8 @@ function build(slug) {
   const call = f => typeof f === "function" ? vm.runInNewContext("(" + f.toString() + ")()", env) : f;
   const c = card(slug), cat = catOf(slug), name = skillName(slug);
   const steps = R.steps.filter(s => !s.x), extras = R.steps.filter(s => s.x);
-  const stepMd = (s, i) => `### ${i + 1}. ${s.t}${s.db ? " _(solo si la app guarda datos o cuentas)_" : ""}\n_${s.s || ""}_\n\n${md(call(s.b))}`;
+  const cond = P.yn ? ` _(solo si la respuesta a «${P.yn.replace(/[¿?]/g, "").trim()}» es «Sí»)_` : " _(opcional)_";
+  const stepMd = (s, i) => `### ${i + 1}. ${s.t}${s.db ? cond : ""}\n_${s.s || ""}_\n\n${md(call(s.b))}`;
   const ideas = Object.values(R.apps).filter(a => a.d && a.d !== IDEA).map(a => `- **${a.n}:** ${a.d}`).join("\n");
   const next = (cat ? cat[1] : []).filter(s => s !== slug).map(s => `- \`/amri:${skillName(s)}\` · ${card(s).titulo}`).join("\n");
   const desc = `Receta de AMRI «${c.titulo}». ${c.desc} Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar.`.replace(/"/g, "'");
@@ -105,7 +106,7 @@ ${PROTOCOL}
 
 ${md(call(R.ing))}
 
-${ideas ? "## Ideas de ejemplo\n\n" + ideas + "\n\n" : ""}${P.yn ? `## Antes de empezar\n\n${P.yn} ${md(P.yntip)}\n\n` : ""}## Pasos
+${ideas ? "## Ideas de ejemplo\n\n" + ideas + "\n\n" : ""}${P.yn ? `## Antes de empezar\n\nPregunta a la persona: **${P.yn}** ${md(P.yntip)}\n\nSi responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.\n\n` : ""}## Pasos
 
 ${steps.map(stepMd).join("\n\n")}
 

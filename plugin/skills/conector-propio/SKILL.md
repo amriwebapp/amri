@@ -47,7 +47,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Tus datos están en un archivo de tu ordenador (CSV, Excel, carpeta)? Si dudas, elige «Sí»: es la forma más sencilla de empezar.
+Pregunta a la persona: **¿Tus datos están en un archivo de tu ordenador (CSV, Excel, carpeta)?** Si dudas, elige «Sí»: es la forma más sencilla de empezar.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -118,7 +120,7 @@ npm install
 
 **✅ Comprobación:** aparece una carpeta node_modules dentro de mi-conector.
 
-### 5. Pon tus datos en la despensa _(solo si la app guarda datos o cuentas)_
+### 5. Pon tus datos en la despensa _(solo si la respuesta a «Tus datos están en un archivo de tu ordenador (CSV, Excel, carpeta)» es «Sí»)_
 _3 min · los datos_
 
 - Copia tu archivo de datos dentro de **mi-conector** (por ejemplo, **datos.csv**).

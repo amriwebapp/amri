@@ -47,7 +47,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Vas a usar tu propio logo o un clip tuyo? Si dudas, elige «Sí»: te enseñamos a importar tu material. Si al final no lo usas, funciona igual.
+Pregunta a la persona: **¿Vas a usar tu propio logo o un clip tuyo?** Si dudas, elige «Sí»: te enseñamos a importar tu material. Si al final no lo usas, funciona igual.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -143,7 +145,7 @@ El conector trabaja sobre el proyecto que tengas abierto, así que primero tiene
 
 **✅ Comprobación:** After Effects está abierto y el proyecto tiene nombre.
 
-### 5. Prepara tu material _(solo si la app guarda datos o cuentas)_
+### 5. Prepara tu material _(solo si la respuesta a «Vas a usar tu propio logo o un clip tuyo» es «Sí»)_
 _5 min · logo o clip_
 
 Como tu vídeo usa material propio, hay que meterlo en el proyecto para que Claude pueda usarlo.

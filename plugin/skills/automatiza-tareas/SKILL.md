@@ -47,7 +47,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Necesita la IA para leer, resumir o escribir texto? Si dudas, elige «Sí»: añadiremos un paso de IA. Si no hace falta, lo puedes quitar al final.
+Pregunta a la persona: **¿Necesita la IA para leer, resumir o escribir texto?** Si dudas, elige «Sí»: añadiremos un paso de IA. Si no hace falta, lo puedes quitar al final.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -110,7 +112,7 @@ Le dices a Zapier qué tiene que vigilar.
 
 **✅ Comprobación:** el test encuentra un ejemplo real (un correo, una respuesta…).
 
-### 4. Añade al cocinero: el paso de IA _(solo si la app guarda datos o cuentas)_
+### 4. Añade al cocinero: el paso de IA _(solo si la respuesta a «Necesita la IA para leer, resumir o escribir texto» es «Sí»)_
 _10 min · leer y escribir_
 
 La IA recibe el texto del disparador y lo transforma: resume, clasifica o extrae datos.

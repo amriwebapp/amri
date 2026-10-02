@@ -49,7 +49,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Necesita guardar datos o cuentas de usuario? Si dudas, elige «Sí»: funciona igual y luego puedes ignorarlo. Para cobrar online hace falta un servicio de pagos aparte; empieza sin cobros.
+Pregunta a la persona: **¿Necesita guardar datos o cuentas de usuario?** Si dudas, elige «Sí»: funciona igual y luego puedes ignorarlo. Para cobrar online hace falta un servicio de pagos aparte; empieza sin cobros.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -116,7 +118,7 @@ Un conector es un permiso para que Claude use GitHub y Supabase por ti, sin copi
 
 **✅ Comprobación:** GitHub y Supabase aparecen como «Conectado».
 
-### 4. Que Claude prepare la base de datos _(solo si la app guarda datos o cuentas)_
+### 4. Que Claude prepare la base de datos _(solo si la respuesta a «Necesita guardar datos o cuentas de usuario» es «Sí»)_
 _5 min · crear las tablas_
 
 Una tabla es como una hoja de cálculo donde se guardan tus datos. Claude la crea por ti, con seguridad para que **cada usuario vea solo lo suyo**.
@@ -141,7 +143,7 @@ Crea en mi proyecto de Supabase las tablas que necesita esta app. Usa los mismos
 
 **✅ Comprobación:** en Supabase, en **Table Editor**, ves tu tabla y aparece la seguridad (RLS) activada.
 
-### 5. Enchufa la web a Supabase _(solo si la app guarda datos o cuentas)_
+### 5. Enchufa la web a Supabase _(solo si la respuesta a «Necesita guardar datos o cuentas de usuario» es «Sí»)_
 _5 min · las dos llaves_
 
 Tu web necesita dos datos para hablar con tu base de datos: una dirección y una llave pública.

@@ -46,7 +46,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Tienes logo o colores de marca que quieras usar? Si dudas, elige «Sí»: te enseñamos a darle tu marca a Claude. Si no tienes, él te propone una paleta.
+Pregunta a la persona: **¿Tienes logo o colores de marca que quieras usar?** Si dudas, elige «Sí»: te enseñamos a darle tu marca a Claude. Si no tienes, él te propone una paleta.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -82,7 +84,7 @@ Un conector es un permiso para que Claude use Canva por ti. Se activa una vez y 
 
 **✅ Comprobación:** Canva aparece activado en tus conectores.
 
-### 3. Presenta tu marca _(solo si la app guarda datos o cuentas)_
+### 3. Presenta tu marca _(solo si la respuesta a «Tienes logo o colores de marca que quieras usar» es «Sí»)_
 _5 min · el sello_
 
 Para que todo salga con tu estilo, primero sube tu logo a Canva y cuéntale a Claude tus colores.

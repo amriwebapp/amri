@@ -47,7 +47,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Quieres publicarla en internet al terminar? Si dudas, elige «Sí»: te enlazamos la receta de publicar gratis. Puedes dejarlo para otro día.
+Pregunta a la persona: **¿Quieres publicarla en internet al terminar?** Si dudas, elige «Sí»: te enlazamos la receta de publicar gratis. Puedes dejarlo para otro día.
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -161,7 +163,7 @@ En la web, el espacio entre la cabecera y la sección de servicios es más grand
 
 **✅ Comprobación:** la web y el diseño se parecen como dos gotas de agua.
 
-### 7. Publícala gratis _(solo si la app guarda datos o cuentas)_
+### 7. Publícala gratis _(solo si la respuesta a «Quieres publicarla en internet al terminar» es «Sí»)_
 _15 min · servir_
 
 Tu archivo ya está listo para salir a internet.

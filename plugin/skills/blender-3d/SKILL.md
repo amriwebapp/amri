@@ -47,7 +47,9 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Antes de empezar
 
-¿Quieres que se mueva (animación en vídeo)? Si dudas, elige «No»: sacas una imagen fija, que es más rápido. Si luego quieres animarla, vuelve aquí y cambia a «Sí».
+Pregunta a la persona: **¿Quieres que se mueva (animación en vídeo)?** Si dudas, elige «No»: sacas una imagen fija, que es más rápido. Si luego quieres animarla, vuelve aquí y cambia a «Sí».
+
+Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
 
 ## Pasos
 
@@ -170,7 +172,7 @@ Haz que la luz sea más cálida y suave, y que el material de [objeto] parezca m
 
 **✅ Comprobación:** la vista Rendered se parece a lo que tenías en mente.
 
-### 7. Ponle movimiento _(solo si la app guarda datos o cuentas)_
+### 7. Ponle movimiento _(solo si la respuesta a «Quieres que se mueva (animación en vídeo)» es «Sí»)_
 _10 min · la animación_
 
 Una animación son muchos dibujos seguidos. Claude coloca los puntos clave del movimiento y Blender rellena el resto.
