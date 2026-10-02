@@ -522,3 +522,9 @@ footer.foot{position:relative;overflow:hidden;border-top:1px solid var(--line);p
 .bld-act{display:flex;flex-wrap:wrap;gap:10px}
 .bld-chef.hi{border-top:0;padding:14px;border-radius:18px;background:color-mix(in srgb,var(--acc) 9%,var(--card))}
 @media (max-width:620px){.bld-ex .fchip:nth-child(n+4){display:none}.bld-und{padding:14px}.bld-pick{padding:4px 14px 16px}.bld-more-box summary{padding:13px 14px}.bld-step a{grid-template-columns:auto minmax(0,1fr) auto}.bld-step .th{display:none}.bld-act .btn{flex:1 1 100%;justify-content:center}}
+.bld-res[hidden]{display:none}
+.bld-res.show{animation:bldIn .7s var(--ease) both}
+@keyframes bldIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.bld-f .btn.nudge{animation:bldNudge .9s var(--ease)}
+@keyframes bldNudge{0%,100%{transform:none;box-shadow:none}35%{transform:scale(1.05);box-shadow:0 0 0 6px color-mix(in srgb,var(--acc) 22%,transparent)}}
+@media (prefers-reduced-motion:reduce){.bld-res.show,.bld-f .btn.nudge{animation:none}}
