@@ -51,15 +51,20 @@ Ayudas a la persona a construir **su propio proyecto** combinando recetas de AMR
 - `amri:higgsfield-cine` · **Imágenes y vídeos de cine con Higgsfield**: Conecta Higgsfield a Claude y crea fotos de producto, anuncios y clips cinematográficos hablando en español.
 - `amri:video-aftereffects` · **Edita vídeo con Claude y After Effects**: Conecta Claude con After Effects y crea intros, títulos y anuncios animados dándole órdenes en español.
 - `amri:blender-3d` · **Crea 3D con Claude y Blender**: Conecta Claude con Blender y crea objetos, escenas y animaciones en 3D sin saber modelar.
-- `amri:instagram-ia` · **Tu Instagram con Claude**: Reels, carruseles y textos con tu propia voz, tu perfil afinado y un plan semanal. Claude escribe; tú publicas.
+- `amri:redes-sociales` · **Tus redes sociales con Claude**: Instagram, TikTok, LinkedIn y X con tu propia voz: perfiles afinados, una idea adaptada a cada red y un mes planificado. Claude escribe; tú publicas.
+- `amri:animaciones-opus` · **Animaciones con Claude Opus 5.5**: Del storyboard a una animación que se mueve en tu navegador, con tu marca. Y, si quieres, un vídeo MP4 para redes.
 
 ### Claude a tu medida
 - `amri:skills-propias` · **Enséñale tu método con Skills**: Convierte tu forma de trabajar en una Skill: Claude la usará sola cada vez que la necesite.
 - `amri:gurusup-brain` · **El cerebro de tu empresa con GuruSup**: Conecta GuruSup Brain a Claude para que responda con el conocimiento real de tu empresa, citando la fuente.
 - `amri:conector-propio` · **Cocina tu propio conector MCP**: Crea un conector sencillo para que Claude use tus propios datos o tu propia app. Claude escribe el código.
+- `amri:jev-decisiones` · **Decisiones automáticas con Jev**: Clasifica mensajes, prioriza incidencias o puntúa contactos en milisegundos. Jev decide, te dice su confianza y te pasa lo dudoso.
+- `amri:jev-guardian` · **Un guardián para tu chatbot con Jev**: Revisa cada pregunta y cada respuesta de tu asistente para frenar trampas, temas ajenos y datos inventados.
 
 ## Ejemplos de menú
 
 - **«Una web para mi panadería con reservas»** → `webapp-gratis` (web con reservas y base de datos) → `logo-ia` (marca) → `chatbot-web` (responde dudas de clientes) → `gmail-calendario` (avisos de reservas).
-- **«Quiero empezar un canal de vídeos cortos»** → `asistente-ia` (guiones e ideas) → `higgsfield-cine` (clips) → `canva-diseno` (portadas) → `instagram-ia` (textos, plan semanal y medición).
+- **«Quiero empezar un canal de vídeos cortos»** → `asistente-ia` (guiones e ideas) → `higgsfield-cine` (clips) → `canva-diseno` (portadas) → `redes-sociales` (textos, plan semanal y medición).
+- **«Ordenar automáticamente los mensajes que me llegan»** → `jev-decisiones` (clasifica con Jev y te pasa lo dudoso) → `jev-guardian` (si además tienes un chatbot, que revise lo que entra y sale) → `slack-equipo` (avisos).
+- **«Una intro animada para mis vídeos»** → `logo-ia` (marca) → `animaciones-opus` (storyboard, animación y MP4) → `redes-sociales` (publicar y medir).
 - **«Que mi equipo encuentre la información al momento»** → `notion-cerebro` (documentación) → `gurusup-brain` (base de conocimiento) → `slack-equipo` (respuestas en Slack).

@@ -177,7 +177,7 @@ Canva te permite recortar, ajustar el tamaño para cada red y exportar en el for
 
 ## Al terminar
 
-Ya tienes tus imágenes. Guarda los prompts que mejor te han salido: son tus recetas secretas para repetir el estilo cuando quieras. Más abajo tienes dos extras: crear una serie coherente y usar las imágenes con tranquilidad.
+Ya tienes tus imágenes. Guarda los prompts que mejor te han salido: son tus recetas secretas para repetir el estilo cuando quieras. Más abajo tienes extras para ir más allá: el mismo personaje en varias imágenes, editar fotos que ya tienes, dibujar iconos con Claude y tu chuleta de estilos.
 
 ## Extras (opcionales, después de servir)
 
@@ -197,7 +197,81 @@ Este es mi prompt ganador: [pega el prompt]. Hazme 5 variaciones con sujetos dis
 
 > 💡 Usa siempre las mismas palabras de estilo. Cambiar «acuarela» por «pintura» ya cambia el resultado.
 
-### Extra 2. Úsalas con tranquilidad
+### Extra 2. El mismo personaje en varias imágenes
+_15 min · opcional_
+
+Para una mascota de marca, un cuento o un cómic necesitas que el personaje sea siempre el mismo. El truco: una **ficha de personaje** y una **imagen de referencia**.
+
+#### Pasos
+
+- Pídele a Claude la ficha:
+
+```text
+Mi personaje es [descríbelo]. Escríbeme una ficha de personaje en inglés para generadores de imágenes: rasgos de la cara, pelo, ropa con colores exactos, proporciones y estilo de dibujo. Después dame 4 prompts que reutilicen la ficha palabra por palabra, cada uno en una escena distinta: [escena 1], [escena 2]…
+```
+
+- Genera la primera imagen y quédate con la mejor: será tu **referencia**.
+- En las siguientes, pega la ficha completa y, si tu herramienta permite subir una imagen de referencia, sube esa.
+
+> 💡 No cambies ni una palabra de la ficha. Cambia solo la escena: lo que hace el personaje y dónde está.
+
+**✅ Comprobación:** tienes al menos 3 imágenes en las que se reconoce al mismo personaje.
+
+### Extra 3. Edita una imagen que ya tienes
+_10 min · opcional_
+
+No siempre hay que empezar de cero: puedes quitar el fondo, borrar un objeto, ampliar el encuadre o cambiar una parte de una foto tuya.
+
+#### Qué herramienta usar
+
+- **Quitar el fondo o borrar un objeto**: en Canva, sube la foto y abre **Editar**. Algunas de estas funciones son solo de Canva Pro.
+
+- **Ampliar o cambiar una zona**: en Ideogram, sube tu imagen y usa sus herramientas de edición para pintar la zona que quieres cambiar.
+
+- Antes de editar, pídele a Claude la instrucción exacta:
+
+```text
+Te adjunto una foto. Quiero [quitar el fondo / ampliar el encuadre a lo ancho / cambiar la camiseta por una azul]. Dime qué herramienta gratuita me conviene, los pasos y el texto exacto que debo escribir en inglés para la zona que voy a cambiar.
+```
+
+> 💡 Edita solo fotos tuyas o con permiso. Nunca cambies la cara de una persona real ni hagas que parezca que dijo o hizo algo que no ocurrió.
+
+**✅ Comprobación:** tienes la versión editada y la original guardadas por separado.
+
+### Extra 4. Dibuja con Claude: iconos y gráficos
+_10 min · opcional_
+
+Claude no genera fotos, pero sí **dibuja con código**: iconos, logotipos sencillos, diagramas y fondos en formato **SVG**. Un SVG se ve nítido a cualquier tamaño y puedes cambiarle los colores cuando quieras.
+
+#### Pasos
+
+- En un chat de Claude, pega:
+
+```text
+Dibújame en SVG un set de 6 iconos para [tu tema]: [icono 1], [icono 2]… Estilo de línea, trazo redondeado de 2 px, 24×24, todos coherentes. Muéstramelos juntos en un artefacto y dame el código de cada uno por separado.
+```
+
+- Pide cambios con palabras: «más grueso», «esquinas redondas», «usa mi color #E07A5F».
+- Copia el código de cada icono y guárdalo como `icono.svg`. Canva y casi cualquier web lo aceptan.
+
+> 💡 Para fotos e ilustraciones realistas usa los generadores de esta receta. Para iconos, diagramas y gráficos limpios, Claude es más preciso.
+
+**✅ Comprobación:** tienes tus iconos en SVG y se ven nítidos al ampliarlos.
+
+### Extra 5. Tu chuleta de estilos
+_10 min · opcional_
+
+Aprender a nombrar estilos es lo que más mejora tus imágenes. Hazte una chuleta probando el mismo sujeto en varios estilos.
+
+```text
+Hazme una chuleta de 12 estilos para generadores de imágenes, en una tabla: nombre del estilo en inglés, qué aspecto da, para qué lo usaría y 3 palabras clave que lo provocan. Incluye acuarela, 3D, fotografía de producto, flat, risograph, cine y pixel art. Después escribe un prompt base de «[la idea de la persona]» que pueda repetir cambiando solo el estilo.
+```
+
+> 💡 Genera el mismo prompt en 4 estilos y guarda las imágenes juntas: verás de un vistazo cuál encaja con tu marca.
+
+**✅ Comprobación:** tienes tu chuleta guardada con un ejemplo de cada estilo que te gusta.
+
+### Extra 6. Úsalas con tranquilidad
 _Siempre · consejos_
 
 Unas reglas sencillas para no llevarte sustos.

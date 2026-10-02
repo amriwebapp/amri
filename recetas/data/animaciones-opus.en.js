@@ -1,0 +1,55 @@
+(window.RECIPE=window.RECIPE||{}).en={
+title:"Recipe: animations with Claude Opus 5.5",
+meta:["⏱ About 40 min", "👩‍🍳 No coding or animation skills needed", "💶 Best with a paid Claude plan", "🍽 Result: an animation in your browser and, if you want, an MP4 video"],
+ing:"Ingredients",
+q:"What do you want to animate?",
+ph:"Say what you want to see moving. Example: my bakery's name appearing with falling flour, 6 seconds, as the intro for my videos",
+yn:"Do you want to export it as an MP4 video?",
+yntip:"If you choose “Yes”, at the end you'll use Claude Code on your computer to turn the animation into a video ready for social media. If not, you'll have it in your browser and can share it with a link.",
+fin:"You now have your animation made with Claude Opus 5.5. Keep the storyboard and the chat: for the next one you'll only need to change the text and colours. Below you'll find extras to animate your website, your logo and your data.",
+R:{key:"receta-anim",def:"logo",empty:"[describe your animation here, above]",
+apps:{
+ logo:{n:"Animated logo",db:false,d:"my logo appearing letter by letter with a final sparkle, 5 seconds, cream background"},
+ explica:{n:"Animated explainer",db:true,d:"a 30-second animation that explains how my service works in 3 steps, with icons and large text"},
+ reel:{n:"Vertical reel",db:true,d:"a 15-second vertical reel with large text presenting my summer offer"},
+ datos:{n:"Data in motion",db:false,d:"a bar chart that grows month by month showing the year's sales, with the final figure highlighted"},
+ web:{n:"Animation for your website",db:false,d:"a soft background with floating shapes for my website's home page, not distracting from the text"},
+ otra:{n:"✏️ Another idea",db:true,d:""}
+},
+ing:()=>`<li><b>Claude Opus 5.5</b>: the head chef. Anthropic's model built for long, detailed work, like an animation.</li><li><b>Claude artifacts</b>: the oven. You see and test the animation right next to the chat.</li><li><b>Your browser</b>: the plate. Chrome, Safari or Firefox.</li>${DB()?`<li><b>Claude Code</b>: the kitchen assistant. Turns the animation into an MP4 video on your computer (it installs whatever is needed).</li>`:""}`,
+steps:[
+{t:"Pick the chef: Claude Opus 5.5",s:"2 min · before you start",b:()=>`<p class="what">An animation has many pieces that must fit together: timings, entrances, exits and colours. Opus 5.5 is the Claude model that best keeps long tasks like this consistent.</p><h3>Steps</h3><ol>
+<li>Go to <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> and open a new chat.</li>
+<li>Open the <b>model selector</b> (next to the text box) and choose <b>Claude Opus 5.5</b>.</li>
+<li>If it isn't on your plan, use <b>Claude Sonnet 5.5</b>: the recipe works the same, you'll just need a few more rounds of tweaks.</li></ol>
+${tip("Make the whole animation in the same chat. That way Claude remembers the storyboard and every change you ask for.")}${ok("you see Claude Opus 5.5 (or Sonnet 5.5) in the selector of the new chat.")}`},
+{t:"Write the storyboard",s:"5 min · script first, code later",b:()=>`<p class="what">Professional animators draw before they animate. A <b>storyboard</b> is the visual script: what appears, at which second and how it moves. That way you fix the idea before spending time on details.</p>${cb(`I want ${D()}.\n\nBefore animating anything, write a storyboard as a table: start and end second, what appears, how it enters and exits, and which text is shown. Also suggest the total length, 3 colours and a typeface. Format: [vertical 9:16 / horizontal 16:9 / square 1:1].\n\nKeep each text on screen long enough to read it calmly. Don't write any code yet.`)}
+${det("Why not ask for the animation straight away?",["Changing a table takes seconds; changing a finished animation takes much longer.","The storyboard is also your checklist: you'll know what should happen at each second.","If you don't like the pace, ask “make it calmer” or “more energetic” and Claude redoes the table."])}${ok("you have a storyboard that lets you picture the animation as you read it.")}`},
+{t:"Animate it in an artifact",s:"5 min · the main course",b:()=>`<p class="what">An <b>artifact</b> is a window next to the chat where Claude shows what it creates. You'll see your animation move there without installing anything.</p>${cb(`Great. Now create the animation as a single-page HTML artifact, with no external libraries, following the storyboard.\n\nRequirements:\n- All movement depends on a render(t) function that draws the frame at second t, and a DUR constant with the total length.\n- At the bottom, a play/pause button and a bar to jump to any second.\n- Eased movements (nothing linear) and large text that's readable on a phone.\n- It must look right in the storyboard's format.`)}
+${det("What is this render(t) thing?",["It's like a film: for every second <b>t</b> there's a fixed frame.","So the animation always looks the same, and the bar lets you jump straight to second 7 to check it.","It's also what lets you turn it into a video later, frame by frame."])}
+${tip("If you don't see the animation on the right, ask “show it to me in an artifact”. If it's blank, tell Claude what you see: it will fix it.")}${ok("the animation plays in the artifact and the bar lets you move through it.")}`},
+{t:"Tweak it scene by scene",s:"10 min · seasoning",b:()=>`<p class="what">Now you're the director. Watch the whole animation, then second by second, and ask for specific changes.</p><h3>How to ask for changes that work</h3><ul>
+<li>Say <b>the second</b>: “at second 3.5…”.</li>
+<li>Say <b>what happens now and what you want</b>: “the title pops in; I want it to rise slowly over 0.8 seconds”.</li>
+<li>Ask for <b>one or two changes</b> at a time.</li></ul>
+${cb("Changes: at second [x], [what happens now] → [what I want]. At second [y], [what happens now] → [what I want]. Don't touch anything else.")}
+${det("Animator words Claude understands",["<b>Easing</b>: starting or ending slowly, like a car braking.","<b>Stagger</b>: elements entering one after another, not all at once.","<b>Bounce</b>: overshooting a little and coming back, it feels cheerful.","<b>Loop</b>: ending the same way it starts so it repeats without a cut.","<b>Reading pause</b>: still time so a text can be read."])}
+${tip("Reading rule: read each text out loud twice. If you can't before it disappears, ask for it to stay longer.")}${ok("you've watched it three times in a row and wouldn't change a thing.")}`},
+{t:"Make it yours",s:"5 min · your brand",b:()=>`<p class="what">With your colours, your typeface and your logo it stops looking like a template.</p>${cb("Apply my brand: colours [#xxxxxx, #xxxxxx, #xxxxxx], typeface [Google Fonts name] and this SVG logo: [paste the code or attach the image]. Keep the timings exactly as they are.")}
+${tip("No SVG logo? The “Design your logo with AI” recipe gets one ready, and “AI images for free” shows you how to draw SVG icons with Claude.")}${ok("you can recognise your brand at first sight.")}`},
+{db:1,t:"Turn it into an MP4 video",s:"10 min · Claude Code",b:()=>`<p class="what">To upload it to Instagram, TikTok or YouTube you need a video. Claude Code opens the animation on your computer, grabs every frame and joins them into an MP4.</p><h3>Steps</h3><ol>
+<li>In the artifact, copy the code (or download it) and save it as <code>animation.html</code> in a new folder, for example <code>my-animation</code>.</li>
+<li>Open that folder in <b>Claude Code</b> and paste:</li></ol>${cb("In this folder there's animation.html, with a render(t) function and a DUR constant. Create a script that:\n1. Opens the page with Playwright (Chromium) at [1080×1920 for vertical / 1920×1080 for horizontal].\n2. For each frame at 30 fps, calls render(t) and takes a screenshot.\n3. Joins the screenshots with ffmpeg into an H.264 (yuv420p) MP4 compatible with Instagram, TikTok and YouTube.\nInstall whatever is missing, explain each command before running it and leave the video in this folder as animation.mp4.")}
+${det("Something's wrong",["<b>It comes out blank</b>: ask Claude Code to wait for the fonts to load before capturing.","<b>It stutters</b>: check that all movement is inside render(t) and not in timers.","<b>It can't find ffmpeg</b>: ask it to install it for you and explain how."])}${ok("animation.mp4 plays smoothly on your phone.")}`},
+{db:1,t:"Add sound",s:"5 min · optional but recommended",b:()=>`<p class="what">Sound makes an animation feel professional. Use royalty-free music or simple sound effects.</p>${cb("Add the track music.mp3 to the video animation.mp4 with a 1-second fade in and fade out, at a volume that doesn't cover a voice. If I don't have music, generate some soft effects with code (a hit when the title appears and a sparkle at the end) in sync with the storyboard.")}
+${tip("Only use music with a licence that lets you publish it. The free audio libraries of the social networks themselves are a good option.")}${ok("the video sounds good and the effects match what you see.")}`},
+{t:"Serve it",s:"3 min · publish",b:()=>`<p class="what">Your animation is ready for an audience.</p><ol>
+<li><b>As a link</b>: in the artifact, press <b>Share</b> (or <b>Publish</b>) and send the link.</li>
+<li><b>On your website</b>: ask Claude “adapt it so I can paste it into my website, no taller than [height]”.</li>
+${DB()?"<li><b>On social media</b>: upload <code>animation.mp4</code> from the phone app, like any video.</li>":"<li><b>On social media</b>: if you want a video, go back up and answer “Yes” to exporting as MP4.</li>"}</ol>
+${ok("someone has seen your animation outside Claude.")}`},
+{x:1,t:"Micro-animations for your website",s:"10 min · optional",b:()=>`<p class="what">Small movements that make a website nicer: buttons that react, sections that appear as you scroll and numbers that count up.</p>${cb("This is my website's HTML: [paste or attach it]. Add subtle micro-animations: buttons that react on hover, sections that fade in on scroll and counters that count up. CSS and JavaScript only, no libraries. Respect “prefers-reduced-motion” for people who prefer less movement.")}
+${tip("Less is more: if the animation stands out more than the content, it's too much.")}`},
+{x:1,t:"Your animated SVG logo",s:"10 min · optional",b:()=>`<p class="what">A logo that draws itself is tiny in size and looks perfect on your website's home page or in your signature.</p>${cb("This is my SVG logo: [paste the code]. Animate it so it draws itself stroke by stroke in 2 seconds and ends with a small sparkle. All in a single SVG file with the animation inside, working in any browser.")}`},
+{x:1,t:"Data that tells a story",s:"15 min · optional",b:()=>`<p class="what">A moving chart is easier to understand and remember than a table.</p>${cb("This is my data: [paste the table or attach the CSV]. Create a 20-second animation that tells the story of this data: start with the context, show the most important change and end with a sentence summing up the conclusion. Don't invent data.")}`}
+]}};

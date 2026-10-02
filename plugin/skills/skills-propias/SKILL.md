@@ -160,4 +160,6 @@ _Siempre · revisa esto_
 
 - `/amri:gurusup-brain` · El cerebro de tu empresa con GuruSup
 - `/amri:conector-propio` · Cocina tu propio conector MCP
+- `/amri:jev-decisiones` · Decisiones automáticas con Jev
+- `/amri:jev-guardian` · Un guardián para tu chatbot con Jev
 - `/amri:chef` · combina varias recetas en un proyecto propio

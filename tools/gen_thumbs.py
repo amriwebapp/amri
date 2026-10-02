@@ -191,7 +191,46 @@ def instagram():
     pen = f'<path d="M800 470 L930 430 L944 456 L814 498Z" fill="{GOLD}" {S}/><path d="M800 470 L786 506 L814 498Z" fill="{INK}"/>'
     return frame(reel + phone + tiles + heart + pen, "#FCE3EC", "#FBE3D2")
 
+def animacion():
+    # pizarra de storyboard + pelota que rebota en fotogramas + línea de tiempo
+    board = f'<rect x="250" y="190" width="560" height="350" rx="26" fill="{CREAM}" {S}/>'
+    arc = ""
+    pts = [(310,470),(370,330),(430,260),(490,300),(550,470),(610,390),(670,360),(730,470)]
+    for i,(x,y) in enumerate(pts):
+        op = .25 + .75*(i/(len(pts)-1))
+        arc += f'<circle cx="{x}" cy="{y}" r="26" fill="{TERR}" fill-opacity="{op:.2f}" stroke="{INK}" stroke-width="4"/>'
+    arc += f'<path d="M290 498 H770" {S}/>'
+    tl = f'<rect x="250" y="556" width="560" height="26" rx="13" fill="{WOOD2}" {S}/><rect x="250" y="556" width="330" height="26" rx="13" fill="{GOLD}" {S}/><circle cx="580" cy="569" r="20" fill="{CREAM}" {S}/>'
+    play = f'<circle cx="930" cy="400" r="78" fill="{SAGE}" {S}/><path d="M905 360 L970 400 L905 440Z" fill="{CREAM}" {S}/>'
+    film = ""
+    for i in range(4):
+        y = 230 + i*70
+        film += f'<rect x="130" y="{y}" width="80" height="56" rx="8" fill="{["#F2C1A0","#C5B3EC","#A9C6DD","#E9B64F"][i]}" {S}/>'
+    return frame(board + arc + tl + play + film, "#FFE9C7", "#E8E0FF")
+
+def jev_decisiones():
+    # embudo que reparte tarjetas en tres bandejas + medidor de confianza
+    funnel = f'<path d="M430 200 H770 L640 340 V400 H560 V340Z" fill="{SKY}" {S}/>'
+    cards = ""
+    for x,y,r,c in [(470,140,-10,CREAM),(560,120,6,PEACH),(650,145,14,CREAM)]:
+        cards += f'<g transform="rotate({r} {x+40} {y+28})"><rect x="{x}" y="{y}" width="84" height="58" rx="10" fill="{c}" {S}/><path d="M{x+14} {y+22} H{x+66} M{x+14} {y+38} H{x+50}" stroke="{INK}" stroke-width="5" stroke-linecap="round" opacity=".5"/></g>'
+    trays = ""
+    for i,(x,c) in enumerate([(330,SAGE),(530,GOLD),(730,TERR)]):
+        trays += f'<path d="M{x} 500 H{x+140} L{x+124} 586 H{x+16}Z" fill="{c}" {S}/>'
+    arrows = f'<path d="M600 404 C560 440 450 450 400 494 M600 404 V494 M600 404 C640 440 750 450 800 494" stroke="{INK}" stroke-width="5" fill="none" stroke-dasharray="10 10" stroke-linecap="round"/>'
+    gauge = f'<path d="M860 330 A90 90 0 0 1 1040 330" fill="none" stroke="{WOOD2}" stroke-width="22" stroke-linecap="round"/><path d="M860 330 A90 90 0 0 1 1010 266" fill="none" stroke="{SAGE}" stroke-width="22" stroke-linecap="round"/><path d="M950 330 L1000 280" {S}/><circle cx="950" cy="330" r="12" fill="{INK}"/>'
+    return frame(funnel + cards + arrows + trays + gauge, "#DCEFE6", "#FBE3D2")
+
+def jev_guardian():
+    # escudo con check entre burbujas: una pasa, otra se bloquea
+    shield = f'<path d="M600 170 L760 230 V360 C760 460 690 530 600 570 C510 530 440 460 440 360 V230Z" fill="{SKY}" {S}/><path d="M540 370 L585 415 L670 320" fill="none" stroke="{CREAM}" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>'
+    left = f'<g transform="rotate(-6 280 300)"><path d="M190 240 H360 Q390 240 390 270 V330 Q390 360 360 360 H250 L220 392 L222 360 H190 Q160 360 160 330 V270 Q160 240 190 240Z" fill="{CREAM}" {S}/><path d="M200 285 H350 M200 318 H310" stroke="{INK}" stroke-width="8" stroke-linecap="round" opacity=".45"/></g>'
+    bad = f'<g transform="rotate(5 300 480)"><rect x="180" y="430" width="230" height="100" rx="24" fill="{PEACH}" {S}/><path d="M270 455 L320 505 M320 455 L270 505" stroke="{TERR}" stroke-width="14" stroke-linecap="round"/></g>'
+    ok = f'<g transform="rotate(6 920 330)"><path d="M840 260 H1010 Q1040 260 1040 290 V350 Q1040 380 1010 380 H900 L870 412 L872 380 H840 Q810 380 810 350 V290 Q810 260 840 260Z" fill="{SAGE}" {S}/><path d="M850 305 H1000 M850 338 H960" stroke="{CREAM}" stroke-width="8" stroke-linecap="round"/></g>'
+    path = f'<path d="M400 300 C420 300 430 300 440 300 M760 320 C780 320 790 320 810 320" stroke="{INK}" stroke-width="5" stroke-dasharray="8 10" stroke-linecap="round"/>'
+    return frame(path + left + bad + ok + shield, "#E3E8F7", "#E7F0E4")
+
 for slug, fn in {"higgsfield-cine":higgsfield,"canva-diseno":canva,"figma-a-web":figma,"notion-cerebro":notion,
-                 "gmail-calendario":gmail,"claude-chrome":chrome,"skills-claude":skills,"conector-propio":conector,"slack-equipo":slack,"gurusup-brain":gurusup,"instagram-ia":instagram}.items():
+                 "gmail-calendario":gmail,"claude-chrome":chrome,"skills-claude":skills,"conector-propio":conector,"slack-equipo":slack,"gurusup-brain":gurusup,"redes-sociales":instagram,"animaciones-opus":animacion,"jev-decisiones":jev_decisiones,"jev-guardian":jev_guardian}.items():
     open(os.path.join(OUT, slug + ".svg"), "w").write(fn())
     print("ok", slug)

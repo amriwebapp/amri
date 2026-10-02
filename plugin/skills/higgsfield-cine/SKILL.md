@@ -234,5 +234,6 @@ _Siempre · consejos_
 
 - `/amri:video-aftereffects` · Edita vídeo con Claude y After Effects
 - `/amri:blender-3d` · Crea 3D con Claude y Blender
-- `/amri:instagram-ia` · Tu Instagram con Claude
+- `/amri:redes-sociales` · Tus redes sociales con Claude
+- `/amri:animaciones-opus` · Animaciones con Claude Opus 5.5
 - `/amri:chef` · combina varias recetas en un proyecto propio

@@ -78,7 +78,10 @@ es:{
  {tag:"Avanzado",titulo:"Cocina tu propio conector MCP",desc:"Crea un conector sencillo para que Claude use tus propios datos o tu propia app. Claude escribe el código.",chips:CH("1 h","Avanzada","0 €")},
  {tag:"Equipo",titulo:"Claude en tu Slack",desc:"Resume canales, encuentra decisiones y redacta mensajes para tu equipo sin leer cien notificaciones.",chips:CH("25 min","Fácil","0 €")},
  {tag:"Empresa",titulo:"El cerebro de tu empresa con GuruSup",desc:"Conecta GuruSup Brain a Claude para que responda con el conocimiento real de tu empresa, citando la fuente.",chips:CH("30 min","Media","De pago")},
- {tag:"Redes",titulo:"Tu Instagram con Claude",desc:"Reels, carruseles y textos con tu propia voz, tu perfil afinado y un plan semanal. Claude escribe; tú publicas.",chips:CH("40 min","Fácil","Claude Code")}]},
+ {tag:"Redes",titulo:"Tus redes sociales con Claude",desc:"Instagram, TikTok, LinkedIn y X con tu propia voz: perfiles afinados, una idea adaptada a cada red y un mes planificado. Claude escribe; tú publicas.",chips:CH("45 min","Fácil","0 €")},
+ {tag:"Animación",titulo:"Animaciones con Claude Opus 5.5",desc:"Del storyboard a una animación que se mueve en tu navegador, con tu marca. Y, si quieres, un vídeo MP4 para redes.",chips:CH("40 min","Media","Plan de pago")},
+ {tag:"Decisiones",titulo:"Decisiones automáticas con Jev",desc:"Clasifica mensajes, prioriza incidencias o puntúa contactos en milisegundos. Jev decide, te dice su confianza y te pasa lo dudoso.",chips:CH("50 min","Media","De pago")},
+ {tag:"Seguridad",titulo:"Un guardián para tu chatbot con Jev",desc:"Revisa cada pregunta y cada respuesta de tu asistente para frenar trampas, temas ajenos y datos inventados.",chips:CH("45 min","Avanzada","De pago")}]},
 en:{
  title:"AMRI · Open AI Academy — learn to create with Claude",
  meta_desc:"AMRI is a free, open-source AI academy. Step-by-step recipes to build websites, images, video, automations and connectors with Claude. No coding required.",
@@ -155,7 +158,10 @@ en:{
  {tag:"Advanced",titulo:"Cook your own MCP connector",desc:"Build a simple connector so Claude can use your own data or app. Claude writes the code.",chips:CH("1 h","Advanced","€0")},
  {tag:"Team",titulo:"Claude in your Slack",desc:"Summarise channels, find decisions and draft messages for your team without reading a hundred notifications.",chips:CH("25 min","Easy","€0")},
  {tag:"Company",titulo:"Your company's brain with GuruSup",desc:"Connect GuruSup Brain to Claude so it answers with your company's real knowledge, citing the source.",chips:CH("30 min","Medium","Paid")},
- {tag:"Social",titulo:"Your Instagram with Claude",desc:"Reels, carousels and captions in your own voice, a sharper profile and a weekly plan. Claude writes; you post.",chips:CH("40 min","Easy","Claude Code")}]},
+ {tag:"Social",titulo:"Your social media with Claude",desc:"Instagram, TikTok, LinkedIn and X in your own voice: sharper profiles, one idea adapted to each network and a month planned. Claude writes; you post.",chips:CH("45 min","Easy","€0")},
+ {tag:"Animation",titulo:"Animations with Claude Opus 5.5",desc:"From storyboard to an animation that moves in your browser, in your brand. And, if you like, an MP4 video for social media.",chips:CH("40 min","Medium","Paid plan")},
+ {tag:"Decisions",titulo:"Automatic decisions with Jev",desc:"Sort messages, prioritise tickets or score leads in milliseconds. Jev decides, tells you its confidence and hands you the doubtful ones.",chips:CH("50 min","Medium","Paid")},
+ {tag:"Safety",titulo:"A guardian for your chatbot with Jev",desc:"Check every question and every answer from your assistant to stop tricks, off-topic chats and made-up facts.",chips:CH("45 min","Advanced","Paid")}]},
 ar:{
  title:"AMRI · أكاديمية مفتوحة للذكاء الاصطناعي — تعلّم الإبداع مع Claude",
  meta_desc:"AMRI أكاديمية مجانية ومفتوحة المصدر للذكاء الاصطناعي. وصفات خطوة بخطوة لإنشاء مواقع وصور وفيديو وأتمتة وموصلات مع Claude، دون برمجة.",
@@ -232,7 +238,10 @@ ar:{
  {tag:"متقدم",titulo:"اطبخ موصل MCP خاصاً بك",desc:"أنشئ موصلاً بسيطاً ليستخدم Claude بياناتك أو تطبيقك. Claude يكتب الشيفرة.",chips:CH("ساعة","متقدم","مجاناً")},
  {tag:"فريق",titulo:"Claude في Slack الخاص بك",desc:"لخّص القنوات واعثر على القرارات واكتب رسائل لفريقك دون قراءة مئة إشعار.",chips:CH("25 دقيقة","سهل","مجاناً")},
  {tag:"شركة",titulo:"دماغ شركتك مع GuruSup",desc:"اربط GuruSup Brain بـ Claude ليجيب بمعرفة شركتك الحقيقية مع ذكر المصدر.",chips:CH("30 دقيقة","متوسط","مدفوع")},
- {tag:"تواصل",titulo:"إنستغرامك مع Claude",desc:"ريلز وكاروسيلات ونصوص بصوتك أنت، وملف شخصي أقوى وخطة أسبوعية. Claude يكتب وأنت تنشر.",chips:CH("40 دقيقة","سهل","Claude Code")}]}
+ {tag:"تواصل",titulo:"شبكاتك الاجتماعية مع Claude",desc:"إنستغرام وتيك توك ولينكدإن وX بصوتك أنت: ملفات أقوى، وفكرة واحدة مكيّفة لكل شبكة، وشهر مخطط. Claude يكتب وأنت تنشر.",chips:CH("45 دقيقة","سهل","0 €")},
+ {tag:"تحريك",titulo:"رسوم متحركة مع Claude Opus 5.5",desc:"من اللوحة القصصية إلى رسم متحرك في متصفحك بهوية علامتك. وإن أردت، فيديو MP4 للشبكات.",chips:CH("40 دقيقة","متوسط","خطة مدفوعة")},
+ {tag:"قرارات",titulo:"قرارات تلقائية مع Jev",desc:"صنّف الرسائل ورتّب البلاغات حسب الأولوية وقيّم جهات الاتصال في أجزاء من الثانية. Jev يقرر ويخبرك بثقته ويحيل إليك المشكوك فيه.",chips:CH("50 دقيقة","متوسط","مدفوع")},
+ {tag:"أمان",titulo:"حارس لروبوت المحادثة مع Jev",desc:"راجع كل سؤال وكل إجابة من مساعدك لإيقاف الخدع والمواضيع الدخيلة والمعلومات المختلقة.",chips:CH("45 دقيقة","متقدم","مدفوع")}]}
 };
 /* v15 · guía: construir, proyectos, mapa, por qué, si algo falla, glosario */
 Object.assign(T.es,{
@@ -315,7 +324,7 @@ Object.assign(T.ar,{
 Object.assign(T.es,{
  nav_paths:"Categorías",
  p_kicker:"Categorías",p_title:"Empieza por <em>lo que te interese</em>.",p_lead:"Sin niveles ni orden obligatorio: elige una categoría y abre cualquier receta. Cada una se sostiene sola.",
- p5t:"Claude a tu medida",p5d:"Enséñale a Claude tu forma de trabajar con Skills, dale tu propio conocimiento y crea tu conector.",
+ p5t:"Claude a tu medida",p5d:"Enséñale a Claude tu forma de trabajar con Skills, dale tu propio conocimiento, crea tu conector y automatiza decisiones con Jev.",
  cat_n:"recetas",cat_cta_t:"¿No sabes por dónde empezar?",cat_cta_d:"Prueba «Tu asistente personal con IA». Es la más sencilla y en un rato verás todo lo que Claude puede hacer por ti.",cat_cta_b:"Empezar por aquí",cat_see:"Ver en el recetario",
  h_title:"Así se cocina <em>una receta</em>.",h_lead:"Te lo enseñamos con un ejemplo real: la web de una panadería, de principio a fin.",
  h_s1t:"Elige qué quieres hacer",h_s1d:"Entra en el recetario y abre la receta que te interese. Cada una es un objetivo concreto —una web, un logo, un vídeo— y no hace falta seguir ningún orden.",
@@ -331,7 +340,7 @@ Object.assign(T.es,{
 Object.assign(T.en,{
  nav_paths:"Categories",
  p_kicker:"Categories",p_title:"Start with <em>whatever interests you</em>.",p_lead:"No levels, no set order: pick a category and open any recipe. Each one stands on its own.",
- p5t:"Claude, your way",p5d:"Teach Claude how you work with Skills, give it your own knowledge and build your connector.",
+ p5t:"Claude, your way",p5d:"Teach Claude how you work with Skills, give it your own knowledge, build your connector and automate decisions with Jev.",
  cat_n:"recipes",cat_cta_t:"Not sure where to start?",cat_cta_d:"Try “Your personal AI assistant”. It's the simplest one, and in no time you'll see everything Claude can do for you.",cat_cta_b:"Start here",cat_see:"Show in the recipe book",
  h_title:"How to cook <em>a recipe</em>.",h_lead:"Here's a real example from start to finish: a website for a bakery.",
  h_s1t:"Pick what you want to make",h_s1d:"Browse the recipe book and open whichever recipe interests you. Each one is a concrete goal — a website, a logo, a video — and there's no set order.",
@@ -347,7 +356,7 @@ Object.assign(T.en,{
 Object.assign(T.ar,{
  nav_paths:"الفئات",
  p_kicker:"الفئات",p_title:"ابدأ بـ<em>ما يهمّك</em>.",p_lead:"لا مستويات ولا ترتيب إلزامي: اختر فئة وافتح أي وصفة. كل وصفة مستقلة بذاتها.",
- p5t:"Claude على مقاسك",p5d:"علّم Claude طريقتك في العمل بالمهارات (Skills)، وأعطه معرفتك الخاصة، وابنِ موصلك.",
+ p5t:"Claude على مقاسك",p5d:"علّم Claude طريقتك في العمل بالمهارات (Skills)، وأعطه معرفتك الخاصة، وابنِ موصلك، وأتمت القرارات مع Jev.",
  cat_n:"وصفات",cat_cta_t:"لا تعرف من أين تبدأ؟",cat_cta_d:"جرّب «مساعدك الشخصي بالذكاء الاصطناعي». إنها الأبسط، وخلال وقت قصير سترى كل ما يمكن أن يفعله Claude لك.",cat_cta_b:"ابدأ من هنا",cat_see:"اعرضها في كتاب الوصفات",
  h_title:"هكذا تُطبخ <em>الوصفة</em>.",h_lead:"نشرحها بمثال حقيقي من البداية إلى النهاية: موقع لمخبز.",
  h_s1t:"اختر ما تريد صنعه",h_s1d:"تصفّح كتاب الوصفات وافتح الوصفة التي تهمّك. كل وصفة هدف محدد —موقع أو شعار أو فيديو— ولا يلزم اتباع أي ترتيب.",

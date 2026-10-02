@@ -29,15 +29,18 @@ const RECETAS = [
   {slug:"conector-propio",f:"web",emoji:"🔌",bg:"#FFE4D6",bg2:"#FBF6EE",c:1,n:1,svg:1},
   {slug:"slack-equipo",f:"auto",emoji:"💬",bg:"#EDE4FF",bg2:"#FBF6EE",c:1,n:1,svg:1},
   {slug:"gurusup-brain",f:"texto",emoji:"🧠",bg:"#E4EEF6",bg2:"#FBF6EE",c:1,n:1,svg:1},
-  {slug:"instagram-ia",f:"imagen",emoji:"📸",bg:"#FCE3EC",bg2:"#FBF6EE",n:1,svg:1}
+  {slug:"redes-sociales",f:"imagen",emoji:"📣",bg:"#FCE3EC",bg2:"#FBF6EE",n:1,svg:1},
+  {slug:"animaciones-opus",f:"video",emoji:"🎞️",bg:"#FFE9C7",bg2:"#FBF6EE",n:1,svg:1},
+  {slug:"jev-decisiones",f:"auto",emoji:"⚖️",bg:"#DCEFE6",bg2:"#FBF6EE",n:1,svg:1},
+  {slug:"jev-guardian",f:"web",emoji:"🛡️",bg:"#E3E8F7",bg2:"#FBF6EE",n:1,svg:1}
 ];
 const IDX = Object.fromEntries(RECETAS.map((r,i)=>[r.slug,i]));
 const PATHS = [
   {ic:"🌱",r:["asistente-ia","imagenes-ia","logo-ia"]},
   {ic:"🔌",r:["gmail-calendario","notion-cerebro","canva-diseno","claude-chrome","slack-equipo"]},
   {ic:"🛠️",r:["webapp-gratis","chatbot-web","figma-a-web","automatiza-tareas"]},
-  {ic:"🎬",r:["higgsfield-cine","video-aftereffects","blender-3d","instagram-ia"]},
-  {ic:"🧠",r:["skills-claude","gurusup-brain","conector-propio"]}
+  {ic:"🎬",r:["higgsfield-cine","video-aftereffects","blender-3d","redes-sociales","animaciones-opus"]},
+  {ic:"🧠",r:["skills-claude","gurusup-brain","conector-propio","jev-decisiones","jev-guardian"]}
 ];
 const CONNS = [
   {n:"Higgsfield",ic:"🎥",c:"#FFD9C4"},{n:"Canva",ic:"🖌️",c:"#CDEDE8"},{n:"Figma",ic:"📐",c:"#E3D9FF"},
