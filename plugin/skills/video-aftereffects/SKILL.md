@@ -289,5 +289,6 @@ Antes de publicar, unas reglas sencillas.
 
 - `/amri:higgsfield-cine` · Imágenes y vídeos de cine con Higgsfield
 - `/amri:blender-3d` · Crea 3D con Claude y Blender
-- `/amri:instagram-ia` · Tu Instagram con Claude
+- `/amri:redes-sociales` · Tus redes sociales con Claude
+- `/amri:animaciones-opus` · Animaciones con Claude Opus 5.5
 - `/amri:chef` · combina varias recetas en un proyecto propio

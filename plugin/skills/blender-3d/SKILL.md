@@ -269,5 +269,6 @@ Casi todos los fallos vienen de una de estas cosas.
 
 - `/amri:higgsfield-cine` · Imágenes y vídeos de cine con Higgsfield
 - `/amri:video-aftereffects` · Edita vídeo con Claude y After Effects
-- `/amri:instagram-ia` · Tu Instagram con Claude
+- `/amri:redes-sociales` · Tus redes sociales con Claude
+- `/amri:animaciones-opus` · Animaciones con Claude Opus 5.5
 - `/amri:chef` · combina varias recetas en un proyecto propio

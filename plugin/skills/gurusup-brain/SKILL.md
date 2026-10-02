@@ -182,4 +182,6 @@ _Siempre · consejos_
 
 - `/amri:skills-propias` · Enséñale tu método con Skills
 - `/amri:conector-propio` · Cocina tu propio conector MCP
+- `/amri:jev-decisiones` · Decisiones automáticas con Jev
+- `/amri:jev-guardian` · Un guardián para tu chatbot con Jev
 - `/amri:chef` · combina varias recetas en un proyecto propio
