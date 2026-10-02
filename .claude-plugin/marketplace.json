@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "amri",
+  "owner": {
+    "name": "AMRI",
+    "url": "https://amri.es"
+  },
+  "description": "Catálogo de AMRI, la academia abierta de IA.",
+  "plugins": [
+    {
+      "name": "amri",
+      "source": "./plugin",
+      "displayName": "AMRI · Academia abierta de IA",
+      "description": "Las recetas de AMRI como skills, más el chef que las combina en tu propio proyecto.",
+      "category": "education",
+      "homepage": "https://amri.es/plugin.html"
+    }
+  ]
+}

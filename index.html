@@ -9,12 +9,16 @@
 <meta property="og:site_name" content="AMRI">
 <meta property="og:title" content="AMRI · Academia abierta de IA">
 <meta property="og:description" content="Aprende a crear con IA, a tu ritmo. Recetas gratuitas y open source para usar Claude y sus conectores.">
-<meta property="og:image" content="img/og-amri.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%23D2561F%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-size=%2738%27 font-weight=%27800%27 font-family=%27Arial,sans-serif%27 text-anchor=%27middle%27 fill=%27white%27%3EA%3C/text%3E%3C/svg%3E">
+<meta property="og:image" content="https://amri.es/img/og-amri.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/brand/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/academia.css">
+<link rel="stylesheet" href="assets/cuenta.css">
 <script>
 /* Tema antes de pintar, para evitar parpadeo */
 (function(){try{var s=localStorage.getItem("amri-theme");if(s)document.documentElement.setAttribute("data-theme",s);}catch(e){}})();
@@ -28,16 +32,16 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
 
 <header class="top" id="top">
   <div class="nav">
-    <a class="brand" href="index.html" aria-label="AMRI"><span class="logo">A</span> AMRI <span class="sub" data-i="brand_sub">Academia de IA</span></a>
+    <a class="brand" href="index.html" aria-label="AMRI"><span class="logo"><img src="img/brand/amri-monograma.svg" alt="" width="34" height="34"></span><svg class="bwm" viewBox="315 436.5 389 130" role="img" aria-label="AMRI"><path d="M325.5,556L368.5,456L411.5,556M347,523L390,523" fill="none" class="ai" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path d="M445.5,556L445.5,456L493.5,514L541.5,456L541.5,556" fill="none" class="mr" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path d="M577.5,556L577.5,456L611.1,456C648.9,456,648.9,512,611.1,512L577.5,512M612.5,512L647.5,556" fill="none" class="mr" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path d="M674.5,556L674.5,496" fill="none" class="ai" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path class="ais" d="M674.5,447C677.92,462.58 677.92,462.58 693.5,466C677.92,469.42 677.92,469.42 674.5,485C671.08,469.42 671.08,469.42 655.5,466C671.08,462.58 671.08,462.58 674.5,447Z"/></svg> <span class="sub" data-i="brand_sub">Academia de IA</span></a>
     <nav class="navlinks" aria-label="Secciones">
       <a href="#como" data-i="nav_how">Cómo funciona</a>
-      <a href="#rutas" data-i="nav_paths">Rutas</a>
+      <a href="#categorias" data-i="nav_paths">Categorías</a>
       <a href="#conectores" data-i="nav_conn">Conectores</a>
       <a href="#recetas" data-i="nav_recipes">Recetas</a>
       <a href="#abierta" data-i="nav_open">Open source</a>
+      <a href="plugin.html" data-i="nav_plugin">Plugin</a>
     </nav>
     <div class="nav-right">
-      <button class="theme-btn" id="theme" aria-label="Cambiar tema" data-i-aria="theme_aria">🌙</button>
     </div>
   </div>
 </header>
@@ -53,13 +57,13 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
       <h1 id="heroTitle" data-i="h1" data-split>Aprende a crear <em>con IA</em>, a tu ritmo.</h1>
       <p class="lead fade-up" style="transition-delay:.9s" data-i="lead">Recetas paso a paso para usar Claude y sus conectores: webs, imágenes, vídeo, automatizaciones y tus propias herramientas. Sin jerga, sin prisas y sin saber programar.</p>
       <div class="cta-row fade-up" style="transition-delay:1.1s">
-        <a class="btn btn-primary" href="#rutas"><span data-i="cta1">Empieza por aquí</span> <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="#recetas" data-i="cta2">Ver las 16 recetas</a>
+        <a class="btn btn-primary" href="#categorias"><span data-i="cta1">Empieza por aquí</span> <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="#recetas" data-i="cta2">Ver las 18 recetas</a>
       </div>
     </div>
     <div class="orbit fade-up" id="orbit" style="transition-delay:.5s" aria-hidden="true">
       <div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div>
-      <div class="core">A</div>
+      <div class="core"><img src="img/brand/amri-icono.svg" alt=""></div>
     </div>
   </div>
   <div class="scroll-hint" aria-hidden="true"><span data-i="scroll_hint">Desliza despacio</span><span class="track"></span></div>
@@ -68,8 +72,8 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
 <!-- ============ STATS ============ -->
 <div class="wrap">
   <div class="stats reveal">
-    <div class="stat"><div class="n" data-count="16">16</div><div class="l" data-i="st1l">recetas guiadas</div></div>
-    <div class="stat"><div class="n" data-count="10">10</div><div class="l" data-i="st2l">conectores explicados</div></div>
+    <div class="stat"><div class="n" data-count="19" data-recipes>19</div><div class="l" data-i="st1l">recetas guiadas</div></div>
+    <div class="stat"><div class="n" data-count="12">12</div><div class="l" data-i="st2l">conectores explicados</div></div>
     <div class="stat"><div class="n" data-i="st3n">0 €</div><div class="l" data-i="st3l">para siempre</div></div>
     <div class="stat"><div class="n">100%</div><div class="l" data-i="st4l">código abierto</div></div>
   </div>
@@ -83,37 +87,31 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
   </div>
 </section>
 
-<!-- ============ CÓMO FUNCIONA (historia fija) ============ -->
+<!-- ============ CÓMO FUNCIONA (historia fija con un ejemplo real) ============ -->
 <section class="block" id="como" style="padding-top:40px">
   <div class="wrap">
     <span class="kicker reveal" data-i="h_kicker">Cómo funciona</span>
-    <h2 class="big reveal" data-i="h_title">Cuatro pasos. <em>Una conversación.</em></h2>
+    <h2 class="big reveal" data-i="h_title">Así se cocina <em>una receta</em>.</h2>
+    <p class="sublead reveal" data-i="h_lead">Te lo enseñamos con un ejemplo real: la web de una panadería, de principio a fin.</p>
     <div class="story" style="margin-top:30px">
-      <div class="story-sticky">
-        <div class="chat" id="chat">
-          <div class="chat-top"><i></i><i></i><i></i><span class="who"><span>A</span> Claude</span></div>
-          <div class="chat-body" id="chatBody"></div>
-        </div>
-      </div>
-      <div class="steps" id="steps">
-        <div class="stp" data-s="0"><div class="num">01</div><h3 data-i="h_s1t">Elige una receta</h3><p data-i="h_s1d">Cada receta es un objetivo concreto: una web, un logo, un vídeo. Eliges qué quieres cocinar y la receta se adapta a ti.</p><div class="mchat"></div></div>
-        <div class="stp" data-s="1"><div class="num">02</div><h3 data-i="h_s2t">Conecta tus herramientas</h3><p data-i="h_s2d">Los conectores le dan manos a Claude: Canva, Notion, Gmail, Figma, Higgsfield… Un clic y trabaja donde tú trabajas.</p><div class="mchat"></div></div>
-        <div class="stp" data-s="2"><div class="num">03</div><h3 data-i="h_s3t">Copia, pega y ajusta</h3><p data-i="h_s3d">Cada paso trae la orden exacta que tienes que darle a Claude. La copias, la personalizas y ves el resultado al momento.</p><div class="mchat"></div></div>
-        <div class="stp" data-s="3"><div class="num">04</div><h3 data-i="h_s4t">Compártelo y mejora la academia</h3><p data-i="h_s4d">Todo es abierto. Si descubres un truco, escribe tu propia receta y súmala. Así crecemos todos.</p><div class="mchat"></div></div>
-      </div>
+      <div class="story-sticky"><div class="howv" id="howv" aria-hidden="true"></div></div>
+      <ol class="steps" id="steps">
+        <li class="stp" data-s="0"><div class="num"><span>1</span></div><div class="stx"><h3 data-i="h_s1t">Elige qué quieres hacer</h3><p data-i="h_s1d"></p></div><div class="mview" aria-hidden="true"></div></li>
+        <li class="stp" data-s="1"><div class="num"><span>2</span></div><div class="stx"><h3 data-i="h_s2t">Prepara los ingredientes</h3><p data-i="h_s2d"></p></div><div class="mview" aria-hidden="true"></div></li>
+        <li class="stp" data-s="2"><div class="num"><span>3</span></div><div class="stx"><h3 data-i="h_s3t">Copia la orden y pégala en Claude</h3><p data-i="h_s3d"></p></div><div class="mview" aria-hidden="true"></div></li>
+        <li class="stp" data-s="3"><div class="num"><span>4</span></div><div class="stx"><h3 data-i="h_s4t">Disfruta el resultado y compártelo</h3><p data-i="h_s4d"></p></div><div class="mview" aria-hidden="true"></div></li>
+      </ol>
     </div>
   </div>
 </section>
 
-<!-- ============ RUTAS ============ -->
-<section class="block" id="rutas">
+<!-- ============ CATEGORÍAS ============ -->
+<section class="block" id="categorias">
   <div class="wrap">
-    <span class="kicker reveal" data-i="p_kicker">Rutas de aprendizaje</span>
-    <h2 class="big reveal" data-i="p_title">De tu primer chat a <em>tu propio conector</em>.</h2>
-    <p class="sublead reveal" data-i="p_lead">Cinco niveles, sin exámenes. Empieza por el que te apetezca: cada receta se sostiene sola.</p>
-    <div class="paths" id="paths">
-      <svg class="line" aria-hidden="true" preserveAspectRatio="none"><line x1="2" y1="0" x2="2" y2="100%"/><line class="fill" id="pathFill" x1="2" y1="0" x2="2" y2="0"/></svg>
-    </div>
+    <span class="kicker reveal" data-i="p_kicker">Categorías</span>
+    <h2 class="big reveal" data-i="p_title">Empieza por <em>lo que te interese</em>.</h2>
+    <p class="sublead reveal" data-i="p_lead">Sin niveles ni orden obligatorio: elige una categoría y abre cualquier receta. Cada una se sostiene sola.</p>
+    <div class="cats" id="cats"></div>
   </div>
 </section>
 
@@ -138,7 +136,7 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
 <section class="block" style="padding-bottom:40px">
   <div class="wrap">
     <a class="featured-card reveal" href="recetas/higgsfield-cine.html" id="featured">
-      <div class="featured-visual"><img src="img/higgsfield-cine.svg" alt="" onerror="nextImg(this)"></div>
+      <div class="featured-visual"><img src="img/higgsfield-cine.svg" alt="" onerror="nextImg(this)"><div class="tools-badge" data-tools="higgsfield-cine"></div></div>
       <div class="featured-content">
         <span class="badge" data-i="f_badge">✦ Nueva receta</span>
         <h3 data-i="f_title">Imágenes y vídeos de cine con Higgsfield</h3>
@@ -158,18 +156,35 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
     <div class="toolbar reveal">
       <div class="filters" id="filters" role="group" aria-label="Filtrar">
         <button class="fchip" data-f="all" aria-pressed="true" data-i="fl_all">Todas</button>
-        <button class="fchip" data-f="conn" data-i="fl_conn">🔌 Conectores</button>
-        <button class="fchip" data-f="web" data-i="fl_web">Webs</button>
-        <button class="fchip" data-f="imagen" data-i="fl_img">Imagen y diseño</button>
-        <button class="fchip" data-f="texto" data-i="fl_txt">Texto y chat</button>
-        <button class="fchip" data-f="auto" data-i="fl_auto">Automatización</button>
-        <button class="fchip" data-f="video" data-i="fl_video">Vídeo y 3D</button>
+        <button class="fchip" data-f="c0">🌱 <span data-i="p1t">Primeros pasos</span></button>
+        <button class="fchip" data-f="c1">🔌 <span data-i="p2t">Conecta tus apps</span></button>
+        <button class="fchip" data-f="c2">🛠️ <span data-i="p3t">Crea y publica</span></button>
+        <button class="fchip" data-f="c3">🎬 <span data-i="p4t">Estudio creativo</span></button>
+        <button class="fchip" data-f="c4">🧠 <span data-i="p5t">Claude a tu medida</span></button>
       </div>
       <label class="search"><span class="sr" data-i="search_ph">Buscar receta…</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         <input type="search" id="q" placeholder="Buscar receta…" data-i-ph="search_ph"></label>
     </div>
     <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- ============ PLUGIN ============ -->
+<section class="block" id="plugin" style="padding-bottom:20px">
+  <div class="wrap plug-band reveal">
+    <div>
+      <span class="kicker" data-i="lp_k">Plugin para Claude Code</span>
+      <h2 class="big" data-i="lp_t">¿Prefieres que <em>Claude lo cocine contigo</em>?</h2>
+      <p class="sublead" data-i="lp_d">Instala el plugin de AMRI y cada receta se convierte en un comando. O cuéntale al chef tu proyecto y él elige las recetas.</p>
+      <div class="cta-row"><a class="btn btn-primary" href="plugin.html"><span data-i="lp_b">Instalar el plugin</span> <span class="arr">→</span></a></div>
+    </div>
+    <div class="plug-term" aria-hidden="true"><div class="term-top"><i></i><i></i><i></i><span>claude</span></div>
+<pre><span class="p">›</span> /amri:webapp-gratis <span class="m" data-i="lp_e1">una web para mi panadería</span>
+<span class="c">✓</span> <span data-i="lp_r1">Web creada y publicada</span>
+
+<span class="p">›</span> /amri:chef <span class="m" data-i="lp_e2">una tienda de velas con reservas</span>
+<span class="c">✓</span> <span data-i="lp_r2">Menú: webapp → logo → chatbot → dominio</span></pre></div>
   </div>
 </section>
 
@@ -208,6 +223,7 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
       <details class="reveal"><summary data-i="q2q">¿Necesito saber programar?</summary><div class="ans"><p data-i="q2a">No. Cada paso explica qué hacer y trae el texto exacto para copiar. Si alguna vez aparece código, Claude lo escribe por ti.</p></div></details>
       <details class="reveal"><summary data-i="q3q">¿Qué es un conector y es seguro?</summary><div class="ans"><p data-i="q3a">Es un permiso para que Claude use otra app en tu nombre. Tú decides cuáles activas y puedes desconectarlos cuando quieras. Empieza siempre con permisos de solo lectura si puedes.</p></div></details>
       <details class="reveal"><summary data-i="q4q">¿Qué plan de Claude necesito?</summary><div class="ans"><p data-i="q4a">Muchas recetas funcionan con el plan gratuito. Los conectores del directorio y algunas funciones avanzadas pueden necesitar un plan de pago; lo indicamos en cada receta.</p></div></details>
+      <details class="reveal"><summary data-i="q5q">¿Necesito una cuenta?</summary><div class="ans"><p data-i="q5a">No. Todo el contenido es libre y abierto sin registrarte. La cuenta solo sirve si quieres publicar tus proyectos terminados, aparecer en la comunidad de cada receta y guardar tu recorrido de aprendizaje.</p></div></details>
     </div>
   </div>
 </section>
@@ -222,6 +238,8 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
         <input type="email" placeholder="tu@correo.com" data-i-ph="n_ph" required aria-label="Email">
         <button class="btn btn-primary" type="submit" data-i="n_btn">Avísame</button>
       </form>
+      <label class="news-consent"><input type="checkbox" id="newsConsent"><span data-i="n_consent">Acepto la <a href="privacidad.html">política de privacidad</a> y quiero recibir la newsletter.</span></label>
+      <p class="note" id="newsMsg" style="margin-top:10px;min-height:1em"></p>
     </div>
   </div>
 </section>
@@ -230,12 +248,17 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
 <footer class="foot">
   <div class="wrap foot-row">
     <div data-i="fo_l"><b>AMRI</b> · Academia abierta de IA · © 2026 · Hecha con calma y con Claude</div>
-    <div><a href="#abierta" data-i="fo_a1">Sobre AMRI</a> · <a data-repo href="#" target="_blank" rel="noopener">GitHub</a> · <a href="#" data-i="fo_a2">Contacto</a> · <a href="#" data-i="fo_a3">RSS</a></div>
+    <div><a href="#abierta" data-i="fo_a1">Sobre AMRI</a> · <a data-repo href="#" target="_blank" rel="noopener">GitHub</a> · <a href="plugin.html" data-i="nav_plugin">Plugin</a> · <a href="aviso-legal.html" data-i="fo_legal">Aviso legal</a> · <a href="privacidad.html" data-i="fo_priv">Privacidad</a> · <a href="cookies.html" data-i="fo_cookies">Cookies</a></div>
   </div>
-  <div class="wordmark" id="wordmark" aria-hidden="true">AMRI</div>
+  <p class="foot-brands" data-i="fo_brands">AMRI no está afiliada a Anthropic ni a las demás marcas mencionadas. Sus nombres y logos pertenecen a sus propietarios.</p>
+  <div class="wordmark" id="wordmark" aria-hidden="true"><svg viewBox="315 436.5 389 130"><defs><linearGradient id="wmg" gradientUnits="userSpaceOnUse" x1="0" y1="436.5" x2="0" y2="566.5"><stop offset="0" style="stop-color:var(--acc);stop-opacity:.75"/><stop offset=".95" style="stop-color:var(--acc);stop-opacity:0"/></linearGradient></defs><path d="M325.5,556L368.5,456L411.5,556M347,523L390,523" fill="none" stroke="url(#wmg)" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path d="M445.5,556L445.5,456L493.5,514L541.5,456L541.5,556" fill="none" stroke="url(#wmg)" opacity=".45" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path d="M577.5,556L577.5,456L611.1,456C648.9,456,648.9,512,611.1,512L577.5,512M612.5,512L647.5,556" fill="none" stroke="url(#wmg)" opacity=".45" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path d="M674.5,556L674.5,496" fill="none" stroke="url(#wmg)" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path fill="url(#wmg)" d="M674.5,447C677.92,462.58 677.92,462.58 693.5,466C677.92,469.42 677.92,469.42 674.5,485C671.08,469.42 671.08,469.42 655.5,466C671.08,462.58 671.08,462.58 674.5,447Z"/></svg></div>
 </footer>
 
 <script src="i18n.js"></script>
+<script src="assets/logos.js"></script>
 <script src="assets/academia.js"></script>
+<script src="assets/datos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/cuenta.js"></script>
 </body>
 </html>

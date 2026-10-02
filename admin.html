@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AMRI · Revisión de proyectos</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FBF6EE">
+<link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/brand/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/academia.css">
+<link rel="stylesheet" href="assets/cuenta.css">
+<script>(function(){var s=null;try{s=localStorage.getItem("amri-theme")}catch(e){}if(!s)s=matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",s);})();</script>
+</head>
+<body data-page="admin">
+<header class="top scrolled">
+  <div class="nav">
+    <a class="brand" href="index.html" aria-label="AMRI"><span class="logo"><img src="img/brand/amri-monograma.svg" alt="" width="34" height="34"></span><svg class="bwm" viewBox="315 436.5 389 130" role="img" aria-label="AMRI"><path d="M325.5,556L368.5,456L411.5,556M347,523L390,523" fill="none" class="ai" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path d="M445.5,556L445.5,456L493.5,514L541.5,456L541.5,556" fill="none" class="mr" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path d="M577.5,556L577.5,456L611.1,456C648.9,456,648.9,512,611.1,512L577.5,512M612.5,512L647.5,556" fill="none" class="mr" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path d="M674.5,556L674.5,496" fill="none" class="ai" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path class="ais" d="M674.5,447C677.92,462.58 677.92,462.58 693.5,466C677.92,469.42 677.92,469.42 674.5,485C671.08,469.42 671.08,469.42 655.5,466C671.08,462.58 671.08,462.58 674.5,447Z"/></svg> <span class="sub" data-i="brand_sub">Academia de IA</span></a>
+    <div class="nav-right">
+    </div>
+  </div>
+</header>
+<main class="pg">
+  <a class="mini" href="index.html" data-i="back" style="display:inline-block;margin-bottom:22px">← Volver a la academia</a>
+  <h1 id="pgT"></h1>
+  <p class="lead" id="pgL"></p>
+  <div id="panel"></div>
+</main>
+<script src="i18n.js"></script>
+<script src="assets/datos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/cuenta.js"></script>
+<script src="assets/panel.js"></script>
+</body>
+</html>

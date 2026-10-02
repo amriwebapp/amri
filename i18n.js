@@ -7,13 +7,13 @@ es:{
  meta_desc:"AMRI es una academia de IA gratuita y open source. Recetas paso a paso para crear webs, imágenes, vídeo, automatizaciones y conectores con Claude. Sin saber programar.",
  brand_sub:"Academia de IA",theme_aria:"Cambiar tema",lang_aria:"Idioma",
  back:"← Volver a la academia",next_label:"Siguiente receta",
- foot_r:'<a href="../index.html">AMRI</a> · Academia abierta de IA · © 2026 AMRI',
+ foot_r:'<a href="../index.html">AMRI</a> · Academia abierta de IA · © 2026 AMRI · <a href="../aviso-legal.html">Aviso legal</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../cookies.html">Cookies</a>',
  notice:"Esta receta está disponible por ahora solo en español. La traducción llegará pronto.",
  nav_how:"Cómo funciona",nav_paths:"Rutas",nav_conn:"Conectores",nav_recipes:"Recetas",nav_open:"Open source",
  eyebrow:"Academia abierta · gratis · open source",
  h1:"Aprende a crear <em>con IA</em>, a tu ritmo.",
  lead:"Recetas paso a paso para usar Claude y sus conectores: webs, imágenes, vídeo, automatizaciones y tus propias herramientas. Sin jerga, sin prisas y sin saber programar.",
- cta1:"Empieza por aquí",cta2:"Ver las 16 recetas",scroll_hint:"Desliza despacio",
+ cta1:"Empieza por aquí",cta2:"Ver todas las recetas",scroll_hint:"Desliza despacio",
  st1l:"recetas guiadas",st2l:"conectores explicados",st3n:"0 €",st3l:"para siempre",st4l:"código abierto",
  m_kicker:"Qué es AMRI",
  m_text:"AMRI es una academia abierta para aprender inteligencia artificial *con calma*. Aquí no hay cursos de pago ni palabras raras: hay recetas cortas que puedes seguir con un café al lado. Y esta misma web es la primera lección: *la cocinamos con Claude*, y su código es tuyo.",
@@ -37,7 +37,7 @@ es:{
  c_a1t:"Claude es el cocinero",c_a1d:"Entiende lo que quieres y decide los pasos.",
  c_a2t:"El conector es el camarero",c_a2d:"Lleva los pedidos a la app correcta y trae la respuesta.",
  c_a3t:"Tus apps son los fogones",c_a3d:"Canva, Notion, Gmail… donde de verdad se cocina.",
- conn:["imagen y vídeo de cine","diseños y presentaciones","de diseño a código","tu segundo cerebro","correo en orden","agenda sin líos","navega por ti","3D sin modelar","animación y títulos","tu código, versionado","publica gratis","tus archivos a mano"],
+ conn:["imagen y vídeo de cine","diseños y presentaciones","de diseño a código","tu segundo cerebro","correo en orden","agenda sin líos","navega por ti","3D sin modelar","animación y títulos","tu código, versionado","publica gratis","tus archivos a mano","tu equipo al día","el cerebro de tu empresa"],
  f_badge:"✦ Nueva receta",f_title:"Imágenes y vídeos de cine con Higgsfield",
  f_desc:"Conecta Higgsfield a Claude y crea fotos de producto, anuncios y clips de vídeo cinematográficos hablando en español. Sin cámara, sin editor.",
  f_c1:"⏱ 30 min",f_c2:"👩‍🍳 Fácil",f_c3:"🔌 Conector",f_open:"Abrir receta",card_open:"Ver receta",new:"Nueva",
@@ -48,14 +48,17 @@ es:{
  o_desc:"AMRI está hecha con Claude, siguiendo sus propias recetas. Puedes ver cómo está hecha, copiarla para tu proyecto o proponer mejoras.",
  o_l1:"Haz un <i>fork</i> del repositorio en GitHub.",o_l2:"Duplica cualquier receta de la carpeta <code>recetas/</code> y cambia los pasos.",o_l3:"Abre un <i>pull request</i>. Revisamos juntos y se publica.",
  o_b1:"Ver el código",o_b2:"Haz tu propia versión",o_lic1:"Código · MIT",o_lic2:"Contenido · CC BY-SA 4.0",o_term:"conversación con Claude · amri",
- o_script:"› Claude, quiero una academia de IA abierta llamada AMRI.\n  Tono tranquilo, colores crema y teja, tipografía Bricolage.\n\nEntendido. Te propongo:\n✓ Portada con animación suave al hacer scroll\n✓ 16 recetas paso a paso, con filtros y buscador\n✓ Rutas de aprendizaje en 5 niveles\n✓ Tres idiomas y modo oscuro\n\n› Añade recetas de conectores: Higgsfield, Canva, Notion…\n✓ Hecho. Cada receta guarda tu progreso.\n\nEl código es tuyo. ¿Lo publicamos en Cloudflare?",
+ o_script:"› Claude, quiero una academia de IA abierta llamada AMRI.\n  Tono tranquilo, colores crema y teja, tipografía Bricolage.\n\nEntendido. Te propongo:\n✓ Portada con animación suave al hacer scroll\n✓ Recetas paso a paso, con filtros y buscador\n✓ 5 categorías: empieza por donde quieras\n✓ Tres idiomas y modo oscuro\n\n› Añade recetas de conectores: Higgsfield, Canva, Notion…\n✓ Hecho. Cada receta guarda tu progreso.\n\nEl código es tuyo. ¿Lo publicamos en Cloudflare?",
  q_kicker:"Preguntas tranquilas",q_title:"Antes de empezar",
  q1q:"¿De verdad es gratis?",q1a:"Sí. Las recetas son gratuitas y abiertas. Muchas herramientas tienen plan gratuito; cuando alguna es de pago, la receta te lo dice al principio.",
  q2q:"¿Necesito saber programar?",q2a:"No. Cada paso explica qué hacer y trae el texto exacto para copiar. Si alguna vez aparece código, Claude lo escribe por ti.",
  q3q:"¿Qué es un conector y es seguro?",q3a:"Es un permiso para que Claude use otra app en tu nombre. Tú decides cuáles activas y puedes desconectarlos cuando quieras. Empieza siempre con permisos de solo lectura si puedes.",
  q4q:"¿Qué plan de Claude necesito?",q4a:"Muchas recetas funcionan con el plan gratuito. Algunos conectores y funciones avanzadas pueden necesitar un plan de pago; lo indicamos en cada receta.",
+ q5q:"¿Necesito una cuenta?",q5a:"No. Todo el contenido es libre y abierto sin registrarte. La cuenta solo sirve si quieres publicar tus proyectos terminados, aparecer en la comunidad de cada receta y guardar tu recorrido de aprendizaje.",
  n_title:"Una receta nueva cada semana.",n_desc:"Te escribimos cuando publicamos algo. Sin spam, sin prisas: solo cocina con IA.",n_ph:"tu@correo.com",n_btn:"Avísame",n_ok:"¡Apuntado! ✓",
  fo_l:"<b>AMRI</b> · Academia abierta de IA · © 2026 · Hecha con calma y con Claude",fo_a1:"Sobre AMRI",fo_a2:"Contacto",fo_a3:"RSS",
+ n_consent:'Acepto la <a href="privacidad.html">política de privacidad</a> y quiero recibir la newsletter.',n_err:"Revisa el correo y marca la casilla de privacidad.",n_fail:"No se ha podido guardar. Inténtalo más tarde.",
+ fo_legal:"Aviso legal",fo_priv:"Privacidad",fo_cookies:"Cookies",fo_brands:"AMRI no está afiliada a Anthropic ni a las demás marcas mencionadas. Sus nombres y logos pertenecen a sus propietarios.",legal_note:"",
  cards:[
  {tag:"Web",titulo:"Tu webapp online y gratis",desc:"Crea y publica una webapp completa con Claude, GitHub y Cloudflare, sin costes y sin programar.",chips:CH("1 h","Fácil","0 €")},
  {tag:"Imagen",titulo:"Crea imágenes con IA gratis",desc:"Genera ilustraciones, logos y fotos realistas con herramientas de IA gratuitas. Desde el prompt hasta el resultado.",chips:CH("30 min","Fácil","0 €")},
@@ -72,19 +75,22 @@ es:{
  {tag:"Automatización",titulo:"Tu secretaría: Gmail y Calendar",desc:"Cada mañana, Claude repasa tu correo y tu agenda, te dice qué importa y prepara los borradores.",chips:CH("25 min","Fácil","0 €")},
  {tag:"Navegador",titulo:"Claude navega por ti con Chrome",desc:"Compara precios, rellena formularios y recopila información de varias webs mientras tú miras.",chips:CH("20 min","Fácil","Plan de pago")},
  {tag:"Skills",titulo:"Enséñale tu método con Skills",desc:"Convierte tu forma de trabajar en una Skill: Claude la usará sola cada vez que la necesite.",chips:CH("30 min","Media","0 €")},
- {tag:"Avanzado",titulo:"Cocina tu propio conector MCP",desc:"Crea un conector sencillo para que Claude use tus propios datos o tu propia app. Claude escribe el código.",chips:CH("1 h","Avanzada","0 €")}]},
+ {tag:"Avanzado",titulo:"Cocina tu propio conector MCP",desc:"Crea un conector sencillo para que Claude use tus propios datos o tu propia app. Claude escribe el código.",chips:CH("1 h","Avanzada","0 €")},
+ {tag:"Equipo",titulo:"Claude en tu Slack",desc:"Resume canales, encuentra decisiones y redacta mensajes para tu equipo sin leer cien notificaciones.",chips:CH("25 min","Fácil","0 €")},
+ {tag:"Empresa",titulo:"El cerebro de tu empresa con GuruSup",desc:"Conecta GuruSup Brain a Claude para que responda con el conocimiento real de tu empresa, citando la fuente.",chips:CH("30 min","Media","De pago")},
+ {tag:"Redes",titulo:"Tu Instagram con Claude",desc:"Reels, carruseles y textos con tu propia voz, tu perfil afinado y un plan semanal. Claude escribe; tú publicas.",chips:CH("40 min","Fácil","Claude Code")}]},
 en:{
  title:"AMRI · Open AI Academy — learn to create with Claude",
  meta_desc:"AMRI is a free, open-source AI academy. Step-by-step recipes to build websites, images, video, automations and connectors with Claude. No coding required.",
  brand_sub:"AI Academy",theme_aria:"Change theme",lang_aria:"Language",
  back:"← Back to the academy",next_label:"Next recipe",
- foot_r:'<a href="../index.html">AMRI</a> · Open AI Academy · © 2026 AMRI',
+ foot_r:'<a href="../index.html">AMRI</a> · Open AI Academy · © 2026 AMRI · <a href="../aviso-legal.html">Legal notice</a> · <a href="../privacidad.html">Privacy</a> · <a href="../cookies.html">Cookies</a>',
  notice:"This recipe is currently available in Spanish only. The translation is coming soon.",
  nav_how:"How it works",nav_paths:"Paths",nav_conn:"Connectors",nav_recipes:"Recipes",nav_open:"Open source",
  eyebrow:"Open academy · free · open source",
  h1:"Learn to create <em>with AI</em>, at your own pace.",
  lead:"Step-by-step recipes for using Claude and its connectors: websites, images, video, automations and your own tools. No jargon, no rush, no coding.",
- cta1:"Start here",cta2:"See all 16 recipes",scroll_hint:"Scroll slowly",
+ cta1:"Start here",cta2:"See all the recipes",scroll_hint:"Scroll slowly",
  st1l:"guided recipes",st2l:"connectors explained",st3n:"€0",st3l:"forever",st4l:"open source",
  m_kicker:"What AMRI is",
  m_text:"AMRI is an open academy for learning artificial intelligence *calmly*. No paid courses, no strange words: just short recipes you can follow with a coffee by your side. And this very website is the first lesson: *we cooked it with Claude*, and its code is yours.",
@@ -108,7 +114,7 @@ en:{
  c_a1t:"Claude is the chef",c_a1d:"It understands what you want and plans the steps.",
  c_a2t:"The connector is the waiter",c_a2d:"It takes orders to the right app and brings back the answer.",
  c_a3t:"Your apps are the stove",c_a3d:"Canva, Notion, Gmail… where the real cooking happens.",
- conn:["cinematic image & video","designs & decks","from design to code","your second brain","inbox in order","a calm calendar","browses for you","3D without modelling","animation & titles","your code, versioned","publish for free","your files at hand"],
+ conn:["cinematic image & video","designs & decks","from design to code","your second brain","inbox in order","a calm calendar","browses for you","3D without modelling","animation & titles","your code, versioned","publish for free","your files at hand","your team up to date","your company's brain"],
  f_badge:"✦ New recipe",f_title:"Cinematic images and video with Higgsfield",
  f_desc:"Connect Higgsfield to Claude and create product photos, ads and cinematic video clips just by describing them. No camera, no editor.",
  f_c1:"⏱ 30 min",f_c2:"👩‍🍳 Easy",f_c3:"🔌 Connector",f_open:"Open recipe",card_open:"See recipe",new:"New",
@@ -119,14 +125,17 @@ en:{
  o_desc:"AMRI is built with Claude, following its own recipes. You can see how it's made, copy it for your project or suggest improvements.",
  o_l1:"<i>Fork</i> the repository on GitHub.",o_l2:"Duplicate any recipe in the <code>recetas/</code> folder and change the steps.",o_l3:"Open a <i>pull request</i>. We review it together and publish it.",
  o_b1:"View the code",o_b2:"Make your own version",o_lic1:"Code · MIT",o_lic2:"Content · CC BY-SA 4.0",o_term:"conversation with Claude · amri",
- o_script:"› Claude, I want an open AI academy called AMRI.\n  Calm tone, cream and terracotta colours, Bricolage font.\n\nGot it. Here's my proposal:\n✓ A landing page with gentle scroll animation\n✓ 16 step-by-step recipes, with filters and search\n✓ Learning paths in 5 levels\n✓ Three languages and dark mode\n\n› Add connector recipes: Higgsfield, Canva, Notion…\n✓ Done. Every recipe saves your progress.\n\nThe code is yours. Shall we publish it on Cloudflare?",
+ o_script:"› Claude, I want an open AI academy called AMRI.\n  Calm tone, cream and terracotta colours, Bricolage font.\n\nGot it. Here's my proposal:\n✓ A landing page with gentle scroll animation\n✓ Step-by-step recipes, with filters and search\n✓ 5 categories: start wherever you like\n✓ Three languages and dark mode\n\n› Add connector recipes: Higgsfield, Canva, Notion…\n✓ Done. Every recipe saves your progress.\n\nThe code is yours. Shall we publish it on Cloudflare?",
  q_kicker:"Calm questions",q_title:"Before you start",
  q1q:"Is it really free?",q1a:"Yes. The recipes are free and open. Many tools have a free plan; when one is paid, the recipe tells you up front.",
  q2q:"Do I need to know how to code?",q2a:"No. Each step explains what to do and includes the exact text to copy. If code ever appears, Claude writes it for you.",
  q3q:"What is a connector, and is it safe?",q3a:"It's a permission that lets Claude use another app on your behalf. You decide which ones to enable and can disconnect them anytime. Start with read-only permissions when you can.",
  q4q:"Which Claude plan do I need?",q4a:"Many recipes work on the free plan. Some connectors and advanced features may need a paid plan; each recipe says so.",
+ q5q:"Do I need an account?",q5a:"No. All content is free and open without signing up. An account is only for publishing your finished projects, appearing in each recipe's community and keeping your learning path.",
  n_title:"A new recipe every week.",n_desc:"We'll write when we publish something. No spam, no rush: just cooking with AI.",n_ph:"you@email.com",n_btn:"Notify me",n_ok:"You're in! ✓",
  fo_l:"<b>AMRI</b> · Open AI Academy · © 2026 · Made calmly, with Claude",fo_a1:"About AMRI",fo_a2:"Contact",fo_a3:"RSS",
+ n_consent:'I accept the <a href="privacidad.html">privacy policy</a> and want to receive the newsletter.',n_err:"Check your email and tick the privacy box.",n_fail:"It couldn't be saved. Please try again later.",
+ fo_legal:"Legal notice",fo_priv:"Privacy",fo_cookies:"Cookies",fo_brands:"AMRI is not affiliated with Anthropic or the other brands mentioned. Their names and logos belong to their owners.",legal_note:"This legal text is written in Spanish, which is the governing language.",
  cards:[
  {tag:"Web",titulo:"Your web app, online and free",desc:"Build and publish a complete web app with Claude, GitHub and Cloudflare, at no cost and without coding.",chips:CH("1 h","Easy","€0")},
  {tag:"Image",titulo:"Create images with AI for free",desc:"Generate illustrations, logos and realistic photos with free AI tools. From the prompt to the finished result.",chips:CH("30 min","Easy","€0")},
@@ -143,19 +152,22 @@ en:{
  {tag:"Automation",titulo:"Your secretary: Gmail and Calendar",desc:"Every morning, Claude reviews your inbox and calendar, tells you what matters and prepares drafts.",chips:CH("25 min","Easy","€0")},
  {tag:"Browser",titulo:"Claude browses for you in Chrome",desc:"Compare prices, fill in forms and gather information from several websites while you watch.",chips:CH("20 min","Easy","Paid plan")},
  {tag:"Skills",titulo:"Teach it your method with Skills",desc:"Turn the way you work into a Skill: Claude will use it on its own whenever it's needed.",chips:CH("30 min","Medium","€0")},
- {tag:"Advanced",titulo:"Cook your own MCP connector",desc:"Build a simple connector so Claude can use your own data or app. Claude writes the code.",chips:CH("1 h","Advanced","€0")}]},
+ {tag:"Advanced",titulo:"Cook your own MCP connector",desc:"Build a simple connector so Claude can use your own data or app. Claude writes the code.",chips:CH("1 h","Advanced","€0")},
+ {tag:"Team",titulo:"Claude in your Slack",desc:"Summarise channels, find decisions and draft messages for your team without reading a hundred notifications.",chips:CH("25 min","Easy","€0")},
+ {tag:"Company",titulo:"Your company's brain with GuruSup",desc:"Connect GuruSup Brain to Claude so it answers with your company's real knowledge, citing the source.",chips:CH("30 min","Medium","Paid")},
+ {tag:"Social",titulo:"Your Instagram with Claude",desc:"Reels, carousels and captions in your own voice, a sharper profile and a weekly plan. Claude writes; you post.",chips:CH("40 min","Easy","Claude Code")}]},
 ar:{
  title:"AMRI · أكاديمية مفتوحة للذكاء الاصطناعي — تعلّم الإبداع مع Claude",
  meta_desc:"AMRI أكاديمية مجانية ومفتوحة المصدر للذكاء الاصطناعي. وصفات خطوة بخطوة لإنشاء مواقع وصور وفيديو وأتمتة وموصلات مع Claude، دون برمجة.",
  brand_sub:"أكاديمية الذكاء الاصطناعي",theme_aria:"تغيير المظهر",lang_aria:"اللغة",
  back:"→ العودة إلى الأكاديمية",next_label:"الوصفة التالية",
- foot_r:'<a href="../index.html">AMRI</a> · أكاديمية مفتوحة للذكاء الاصطناعي · © 2026 AMRI',
+ foot_r:'<a href="../index.html">AMRI</a> · أكاديمية مفتوحة للذكاء الاصطناعي · © 2026 AMRI · <a href="../aviso-legal.html">إشعار قانوني</a> · <a href="../privacidad.html">الخصوصية</a> · <a href="../cookies.html">ملفات تعريف الارتباط</a>',
  notice:"هذه الوصفة متوفرة حالياً بالإسبانية فقط. ستتوفر الترجمة قريباً.",
  nav_how:"كيف تعمل",nav_paths:"المسارات",nav_conn:"الموصلات",nav_recipes:"الوصفات",nav_open:"مفتوحة المصدر",
  eyebrow:"أكاديمية مفتوحة · مجانية · مفتوحة المصدر",
  h1:"تعلّم الإبداع <em>بالذكاء الاصطناعي</em>، على مهلك.",
  lead:"وصفات خطوة بخطوة لاستخدام Claude وموصلاته: مواقع وصور وفيديو وأتمتة وأدواتك الخاصة. بلا مصطلحات، بلا عجلة، ودون برمجة.",
- cta1:"ابدأ من هنا",cta2:"شاهد الوصفات الـ16",scroll_hint:"مرّر ببطء",
+ cta1:"ابدأ من هنا",cta2:"شاهد كل الوصفات",scroll_hint:"مرّر ببطء",
  st1l:"وصفة موجّهة",st2l:"موصلات مشروحة",st3n:"مجاناً",st3l:"للأبد",st4l:"مفتوحة المصدر",
  m_kicker:"ما هي AMRI",
  m_text:"AMRI أكاديمية مفتوحة لتعلّم الذكاء الاصطناعي *بهدوء*. لا دورات مدفوعة ولا كلمات غريبة: فقط وصفات قصيرة يمكنك اتباعها مع فنجان قهوة. وهذا الموقع نفسه هو الدرس الأول: *طبخناه مع Claude*، وشيفرته ملكك.",
@@ -179,7 +191,7 @@ ar:{
  c_a1t:"Claude هو الطاهي",c_a1d:"يفهم ما تريد ويقرر الخطوات.",
  c_a2t:"الموصل هو النادل",c_a2d:"يحمل الطلبات إلى التطبيق الصحيح ويعيد الجواب.",
  c_a3t:"تطبيقاتك هي المواقد",c_a3d:"Canva وNotion وGmail… حيث يحدث الطبخ فعلاً.",
- conn:["صور وفيديو سينمائي","تصاميم وعروض","من التصميم إلى الشيفرة","دماغك الثاني","بريد منظّم","تقويم هادئ","يتصفح عنك","ثلاثي أبعاد بلا نمذجة","حركة وعناوين","شيفرتك بإصداراتها","انشر مجاناً","ملفاتك في متناولك"],
+ conn:["صور وفيديو سينمائي","تصاميم وعروض","من التصميم إلى الشيفرة","دماغك الثاني","بريد منظّم","تقويم هادئ","يتصفح عنك","ثلاثي أبعاد بلا نمذجة","حركة وعناوين","شيفرتك بإصداراتها","انشر مجاناً","ملفاتك في متناولك","فريقك على اطلاع","دماغ شركتك"],
  f_badge:"✦ وصفة جديدة",f_title:"صور وفيديو سينمائي مع Higgsfield",
  f_desc:"اربط Higgsfield بـ Claude وأنشئ صور منتجات وإعلانات ومقاطع سينمائية بمجرد وصفها. بلا كاميرا ولا محرر.",
  f_c1:"⏱ 30 دقيقة",f_c2:"👩‍🍳 سهل",f_c3:"🔌 موصل",f_open:"افتح الوصفة",card_open:"عرض الوصفة",new:"جديد",
@@ -190,14 +202,17 @@ ar:{
  o_desc:"صُنعت AMRI مع Claude باتباع وصفاتها نفسها. يمكنك رؤية كيف صُنعت، ونسخها لمشروعك، أو اقتراح تحسينات.",
  o_l1:"أنشئ <i>fork</i> للمستودع على GitHub.",o_l2:"انسخ أي وصفة من مجلد <code>recetas/</code> وغيّر الخطوات.",o_l3:"افتح <i>pull request</i>. نراجعه معاً ثم يُنشر.",
  o_b1:"شاهد الشيفرة",o_b2:"اصنع نسختك",o_lic1:"الشيفرة · MIT",o_lic2:"المحتوى · CC BY-SA 4.0",o_term:"محادثة مع Claude · amri",
- o_script:"› Claude, I want an open AI academy called AMRI.\n  Calm tone, cream and terracotta colours, Bricolage font.\n\nGot it. Here's my proposal:\n✓ A landing page with gentle scroll animation\n✓ 16 step-by-step recipes, with filters and search\n✓ Learning paths in 5 levels\n✓ Three languages and dark mode\n\n› Add connector recipes: Higgsfield, Canva, Notion…\n✓ Done. Every recipe saves your progress.\n\nThe code is yours. Shall we publish it on Cloudflare?",
+ o_script:"› Claude, I want an open AI academy called AMRI.\n  Calm tone, cream and terracotta colours, Bricolage font.\n\nGot it. Here's my proposal:\n✓ A landing page with gentle scroll animation\n✓ Step-by-step recipes, with filters and search\n✓ 5 categories: start wherever you like\n✓ Three languages and dark mode\n\n› Add connector recipes: Higgsfield, Canva, Notion…\n✓ Done. Every recipe saves your progress.\n\nThe code is yours. Shall we publish it on Cloudflare?",
  q_kicker:"أسئلة هادئة",q_title:"قبل أن تبدأ",
  q1q:"هل هي مجانية حقاً؟",q1a:"نعم. الوصفات مجانية ومفتوحة. لكثير من الأدوات خطة مجانية؛ وإن كانت إحداها مدفوعة تخبرك الوصفة بذلك من البداية.",
  q2q:"هل أحتاج إلى معرفة البرمجة؟",q2a:"لا. كل خطة تشرح ما تفعله وتتضمن النص الدقيق للنسخ. وإن ظهرت شيفرة يوماً، يكتبها Claude عنك.",
  q3q:"ما هو الموصل، وهل هو آمن؟",q3a:"إنه إذن يسمح لـ Claude باستخدام تطبيق آخر نيابة عنك. أنت تقرر ما تفعّله ويمكنك فصله متى شئت. ابدأ بصلاحيات القراءة فقط إن أمكن.",
  q4q:"أي خطة من Claude أحتاج؟",q4a:"كثير من الوصفات تعمل بالخطة المجانية. قد تحتاج بعض الموصلات والميزات المتقدمة إلى خطة مدفوعة؛ نذكر ذلك في كل وصفة.",
+ q5q:"هل أحتاج إلى حساب؟",q5a:"لا. كل المحتوى مجاني ومفتوح دون تسجيل. الحساب مفيد فقط إن أردت نشر مشاريعك المكتملة والظهور في مجتمع كل وصفة وحفظ مسار تعلّمك.",
  n_title:"وصفة جديدة كل أسبوع.",n_desc:"نراسلك عندما ننشر شيئاً. بلا رسائل مزعجة، بلا عجلة: فقط طبخ بالذكاء الاصطناعي.",n_ph:"you@email.com",n_btn:"أعلمني",n_ok:"تم التسجيل! ✓",
  fo_l:"<b>AMRI</b> · أكاديمية مفتوحة للذكاء الاصطناعي · © 2026 · صُنعت بهدوء ومع Claude",fo_a1:"عن AMRI",fo_a2:"اتصل بنا",fo_a3:"RSS",
+ n_consent:'أوافق على <a href="privacidad.html">سياسة الخصوصية</a> وأرغب في تلقي النشرة.',n_err:"تحقق من بريدك وضع علامة على خانة الخصوصية.",n_fail:"تعذّر الحفظ. حاول لاحقاً.",
+ fo_legal:"إشعار قانوني",fo_priv:"الخصوصية",fo_cookies:"ملفات تعريف الارتباط",fo_brands:"AMRI غير تابعة لـ Anthropic ولا لأي من العلامات المذكورة. أسماؤها وشعاراتها ملك لأصحابها.",legal_note:"هذا النص القانوني مكتوب بالإسبانية، وهي اللغة المعتمدة.",
  cards:[
  {tag:"ويب",titulo:"تطبيق ويب خاص بك، على الإنترنت ومجاناً",desc:"أنشئ وانشر تطبيق ويب كاملاً باستخدام Claude وGitHub وCloudflare، دون تكاليف ودون برمجة.",chips:CH("ساعة","سهل","مجاناً")},
  {tag:"صورة",titulo:"أنشئ صوراً بالذكاء الاصطناعي مجاناً",desc:"ولّد رسومات وشعارات وصوراً واقعية بأدوات ذكاء اصطناعي مجانية، من الأمر حتى النتيجة.",chips:CH("30 دقيقة","سهل","مجاناً")},
@@ -214,8 +229,109 @@ ar:{
  {tag:"أتمتة",titulo:"سكرتيرك: Gmail والتقويم",desc:"كل صباح يراجع Claude بريدك وتقويمك، يخبرك بما يهم ويجهّز المسودات.",chips:CH("25 دقيقة","سهل","مجاناً")},
  {tag:"متصفح",titulo:"Claude يتصفح عنك في Chrome",desc:"قارن الأسعار واملأ النماذج واجمع المعلومات من عدة مواقع وأنت تشاهد.",chips:CH("20 دقيقة","سهل","خطة مدفوعة")},
  {tag:"مهارات",titulo:"علّمه طريقتك بالمهارات (Skills)",desc:"حوّل طريقة عملك إلى مهارة: سيستخدمها Claude وحده كلما احتاجها.",chips:CH("30 دقيقة","متوسط","مجاناً")},
- {tag:"متقدم",titulo:"اطبخ موصل MCP خاصاً بك",desc:"أنشئ موصلاً بسيطاً ليستخدم Claude بياناتك أو تطبيقك. Claude يكتب الشيفرة.",chips:CH("ساعة","متقدم","مجاناً")}]}
+ {tag:"متقدم",titulo:"اطبخ موصل MCP خاصاً بك",desc:"أنشئ موصلاً بسيطاً ليستخدم Claude بياناتك أو تطبيقك. Claude يكتب الشيفرة.",chips:CH("ساعة","متقدم","مجاناً")},
+ {tag:"فريق",titulo:"Claude في Slack الخاص بك",desc:"لخّص القنوات واعثر على القرارات واكتب رسائل لفريقك دون قراءة مئة إشعار.",chips:CH("25 دقيقة","سهل","مجاناً")},
+ {tag:"شركة",titulo:"دماغ شركتك مع GuruSup",desc:"اربط GuruSup Brain بـ Claude ليجيب بمعرفة شركتك الحقيقية مع ذكر المصدر.",chips:CH("30 دقيقة","متوسط","مدفوع")},
+ {tag:"تواصل",titulo:"إنستغرامك مع Claude",desc:"ريلز وكاروسيلات ونصوص بصوتك أنت، وملف شخصي أقوى وخطة أسبوعية. Claude يكتب وأنت تنشر.",chips:CH("40 دقيقة","سهل","Claude Code")}]}
 };
+/* v12 · plugin de AMRI para Claude Code */
+Object.assign(T.es,{
+ set_btn:"Ajustes",set_lang:"Idioma",set_theme:"Tema",set_light:"Claro",set_dark:"Oscuro",lp_k:"Plugin para Claude Code",lp_t:"¿Prefieres que <em>Claude lo cocine contigo</em>?",lp_d:"Instala el plugin de AMRI y cada receta se convierte en un comando. O cuéntale al chef tu proyecto y él elige las recetas.",lp_b:"Instalar el plugin",lp_e1:"una web para mi panadería",lp_r1:"Web creada y publicada",lp_e2:"una tienda de velas con reservas",lp_r2:"Menú: webapp → logo → chatbot → dominio",
+ pl_box_t:"⚡ Hazlo con Claude Code",pl_box_d:"¿Prefieres que Claude la cocine contigo? Con el plugin de AMRI, pega este comando en Claude Code y cambia el final por tu idea:",
+ pl_idea:"tu idea",pl_copy:"Copiar",pl_copied:"¡Copiado!",pl_how:"Cómo instalar el plugin →",nav_plugin:"Plugin",fo_plugin:"Plugin para Claude Code",
+ pg_title:"AMRI · Plugin para Claude Code",pg_kicker:"Plugin para Claude Code",pg_h:"Que Claude <em>cocine contigo</em>.",
+ pg_lead:"Instala el plugin de AMRI y cada receta se convierte en un comando. Claude la sigue paso a paso: crea los archivos, usa la terminal y publica tu proyecto, y te pide ayuda solo cuando hace falta.",
+ pg_s1t:"Instala Claude Code",pg_s1d:"Solo la primera vez. En Mac o Linux, abre la Terminal y pega:",pg_s1w:"En Windows, abre PowerShell y pega:",pg_s1n:"Después escribe <code>claude</code> y pulsa Intro para abrirlo.",
+ pg_s2t:"Añade AMRI",pg_s2d:"Dentro de Claude Code, pega estos dos comandos, uno detrás de otro:",
+ pg_s3t:"Cocina una receta",pg_s3d:"Escribe el comando de la receta y, detrás, tu idea con tus palabras:",pg_s3x:"una web para mi panadería con horarios y un botón de WhatsApp",
+ pg_s4t:"O deja que el chef lo planifique",pg_s4d:"Describe tu proyecto. El chef elige las recetas que hacen falta, te propone un orden y las cocina una tras otra sobre el mismo proyecto.",pg_s4x:"una tienda online de velas artesanales con reservas",
+ pg_who:"Quién hace qué",pg_c:"Claude hace",pg_c1:"Crea y edita los archivos de tu proyecto",pg_c2:"Usa la terminal, git y GitHub",pg_c3:"Publica en Cloudflare y conecta Supabase",pg_c4:"Comprueba cada paso antes de seguir",
+ pg_u:"Tú haces",pg_u1:"Crear tus cuentas e iniciar sesión",pg_u2:"Aceptar los permisos que te pida",pg_u3:"Decidir y confirmar antes de publicar",pg_u4:"Pagar, si algo cuesta dinero (te avisará antes)",
+ pg_note:"Claude Code necesita un plan de pago de Claude (Pro o superior) o créditos de la API. Las recetas de la web siguen siendo gratis para todo el mundo.",
+ pg_cw:"¿Sin terminal? Las recetas del plugin también funcionan en Cowork, dentro de la app de escritorio de Claude.",
+ pg_list:"Todas las recetas",pg_cmd:"Comando",pg_open:"Ver receta",pg_src:"El plugin es open source: lo encontrarás en la carpeta <code>plugin/</code> del repositorio de AMRI. Cada receta del plugin se genera a partir de la receta de la web, así que siempre van a la par."
+});
+Object.assign(T.en,{
+ set_btn:"Settings",set_lang:"Language",set_theme:"Theme",set_light:"Light",set_dark:"Dark",lp_k:"Plugin for Claude Code",lp_t:"Rather have <em>Claude cook it with you</em>?",lp_d:"Install the AMRI plugin and every recipe becomes a command. Or tell the chef about your project and it picks the recipes.",lp_b:"Install the plugin",lp_e1:"a website for my bakery",lp_r1:"Website built and published",lp_e2:"a candle shop with bookings",lp_r2:"Menu: web app → logo → chatbot → domain",
+ pl_box_t:"⚡ Do it with Claude Code",pl_box_d:"Rather have Claude cook it with you? With the AMRI plugin, paste this command into Claude Code and replace the end with your idea:",
+ pl_idea:"your idea",pl_copy:"Copy",pl_copied:"Copied!",pl_how:"How to install the plugin →",nav_plugin:"Plugin",fo_plugin:"Plugin for Claude Code",
+ pg_title:"AMRI · Plugin for Claude Code",pg_kicker:"Plugin for Claude Code",pg_h:"Let Claude <em>cook with you</em>.",
+ pg_lead:"Install the AMRI plugin and every recipe becomes a command. Claude follows it step by step: it creates the files, uses the terminal and publishes your project, and only asks for your help when needed.",
+ pg_s1t:"Install Claude Code",pg_s1d:"Only the first time. On Mac or Linux, open Terminal and paste:",pg_s1w:"On Windows, open PowerShell and paste:",pg_s1n:"Then type <code>claude</code> and press Enter to open it.",
+ pg_s2t:"Add AMRI",pg_s2d:"Inside Claude Code, paste these two commands, one after the other:",
+ pg_s3t:"Cook a recipe",pg_s3d:"Type the recipe command followed by your idea in your own words:",pg_s3x:"a website for my bakery with opening hours and a WhatsApp button",
+ pg_s4t:"Or let the chef plan it",pg_s4d:"Describe your project. The chef picks the recipes you need, suggests an order and cooks them one after another on the same project.",pg_s4x:"an online shop for handmade candles with bookings",
+ pg_who:"Who does what",pg_c:"Claude does",pg_c1:"Creates and edits your project files",pg_c2:"Uses the terminal, git and GitHub",pg_c3:"Publishes to Cloudflare and connects Supabase",pg_c4:"Checks every step before moving on",
+ pg_u:"You do",pg_u1:"Create your accounts and sign in",pg_u2:"Accept the permissions it asks for",pg_u3:"Decide and confirm before publishing",pg_u4:"Pay, if something costs money (it will warn you first)",
+ pg_note:"Claude Code needs a paid Claude plan (Pro or higher) or API credits. The recipes on the website are still free for everyone.",
+ pg_cw:"No terminal? The plugin recipes also work in Cowork, inside the Claude desktop app.",
+ pg_list:"All recipes",pg_cmd:"Command",pg_open:"View recipe",pg_src:"The plugin is open source: you'll find it in the <code>plugin/</code> folder of the AMRI repository. Every plugin recipe is generated from the website recipe, so they always stay in sync."
+});
+Object.assign(T.ar,{
+ set_btn:"الإعدادات",set_lang:"اللغة",set_theme:"المظهر",set_light:"فاتح",set_dark:"داكن",lp_k:"إضافة لـ Claude Code",lp_t:"تفضّل أن <em>يطبخها Claude معك</em>؟",lp_d:"ثبّت إضافة AMRI فتتحول كل وصفة إلى أمر. أو أخبر الطاهي بمشروعك فيختار الوصفات.",lp_b:"ثبّت الإضافة",lp_e1:"موقع لمخبزي",lp_r1:"تم إنشاء الموقع ونشره",lp_e2:"متجر شموع مع حجوزات",lp_r2:"القائمة: تطبيق ويب ← شعار ← روبوت محادثة ← نطاق",
+ pl_box_t:"⚡ نفّذها مع Claude Code",pl_box_d:"تفضّل أن يطبخها Claude معك؟ مع إضافة AMRI، الصق هذا الأمر في Claude Code واستبدل آخره بفكرتك:",
+ pl_idea:"فكرتك",pl_copy:"نسخ",pl_copied:"تم النسخ!",pl_how:"كيف تثبّت الإضافة ←",nav_plugin:"الإضافة",fo_plugin:"إضافة لـ Claude Code",
+ pg_title:"AMRI · إضافة لـ Claude Code",pg_kicker:"إضافة لـ Claude Code",pg_h:"دع Claude <em>يطبخ معك</em>.",
+ pg_lead:"ثبّت إضافة AMRI فتتحول كل وصفة إلى أمر. يتبعها Claude خطوة بخطوة: ينشئ الملفات ويستخدم الطرفية وينشر مشروعك، ولا يطلب مساعدتك إلا عند الحاجة.",
+ pg_s1t:"ثبّت Claude Code",pg_s1d:"في المرة الأولى فقط. على Mac أو Linux افتح الطرفية والصق:",pg_s1w:"على Windows افتح PowerShell والصق:",pg_s1n:"ثم اكتب <code>claude</code> واضغط Enter لفتحه.",
+ pg_s2t:"أضف AMRI",pg_s2d:"داخل Claude Code، الصق هذين الأمرين واحداً بعد الآخر:",
+ pg_s3t:"اطبخ وصفة",pg_s3d:"اكتب أمر الوصفة وبعده فكرتك بكلماتك:",pg_s3x:"موقع لمخبزي فيه ساعات العمل وزر واتساب",
+ pg_s4t:"أو دع الطاهي يخطط",pg_s4d:"صف مشروعك. يختار الطاهي الوصفات اللازمة ويقترح ترتيباً ويطبخها واحدة تلو الأخرى على المشروع نفسه.",pg_s4x:"متجر إلكتروني لشموع يدوية مع حجوزات",
+ pg_who:"من يفعل ماذا",pg_c:"Claude يفعل",pg_c1:"ينشئ ملفات مشروعك ويعدّلها",pg_c2:"يستخدم الطرفية وgit وGitHub",pg_c3:"ينشر على Cloudflare ويربط Supabase",pg_c4:"يتحقق من كل خطوة قبل المتابعة",
+ pg_u:"أنت تفعل",pg_u1:"إنشاء حساباتك وتسجيل الدخول",pg_u2:"قبول الأذونات التي يطلبها",pg_u3:"القرار والتأكيد قبل النشر",pg_u4:"الدفع إن كان شيء مدفوعاً (سيخبرك أولاً)",
+ pg_note:"يحتاج Claude Code إلى خطة Claude مدفوعة (Pro أو أعلى) أو رصيد API. وصفات الموقع تبقى مجانية للجميع.",
+ pg_cw:"بلا طرفية؟ وصفات الإضافة تعمل أيضاً في Cowork داخل تطبيق Claude لسطح المكتب.",
+ pg_list:"كل الوصفات",pg_cmd:"الأمر",pg_open:"عرض الوصفة",pg_src:"الإضافة مفتوحة المصدر: ستجدها في مجلد <code>plugin/</code> في مستودع AMRI. كل وصفة في الإضافة تُولَّد من وصفة الموقع، فتبقيان متطابقتين دائماً."
+});
+/* v9 · categorías y nuevo «Cómo funciona» */
+Object.assign(T.es,{
+ nav_paths:"Categorías",
+ p_kicker:"Categorías",p_title:"Empieza por <em>lo que te interese</em>.",p_lead:"Sin niveles ni orden obligatorio: elige una categoría y abre cualquier receta. Cada una se sostiene sola.",
+ p5t:"Claude a tu medida",p5d:"Enséñale a Claude tu forma de trabajar con Skills, dale tu propio conocimiento y crea tu conector.",
+ cat_n:"recetas",cat_cta_t:"¿No sabes por dónde empezar?",cat_cta_d:"Prueba «Tu asistente personal con IA». Es la más sencilla y en un rato verás todo lo que Claude puede hacer por ti.",cat_cta_b:"Empezar por aquí",cat_see:"Ver en el recetario",
+ h_title:"Así se cocina <em>una receta</em>.",h_lead:"Te lo enseñamos con un ejemplo real: la web de una panadería, de principio a fin.",
+ h_s1t:"Elige qué quieres hacer",h_s1d:"Entra en el recetario y abre la receta que te interese. Cada una es un objetivo concreto —una web, un logo, un vídeo— y no hace falta seguir ningún orden.",
+ h_s2t:"Prepara los ingredientes",h_s2d:"La receta te dice qué cuentas gratuitas necesitas y, si usa un conector, cómo activarlo en Claude con un clic. Las vas marcando a medida que las tienes.",
+ h_s3t:"Copia la orden y pégala en Claude",h_s3d:"Cada paso trae el mensaje exacto. Pulsa «Copiar», pégalo en Claude y él hace el trabajo. ¿Algo no te convence? Pídele cambios con tus palabras.",
+ h_s4t:"Disfruta el resultado y compártelo",h_s4d:"Al terminar tienes algo real y funcionando. Si quieres, sube el enlace desde tu cuenta: cuando se apruebe, aparecerá en la comunidad de la receta.",
+ hv_step:"Paso",hv_of:"de",hv1_t:"Recetario",hv1_pick:"Elegida",
+ hv2_t:"Ingredientes",hv2_i1:"Cuenta en Claude",hv2_i2:"Cuenta en GitHub",hv2_i3:"Cuenta en Cloudflare",hv2_free:"gratis",hv2_ready:"¡Todo listo!",
+ hv3_t:"Paso 1 de la receta",hv3_p:"Crea una web para mi panadería con horarios, la carta y un botón de WhatsApp.",hv3_copy:"Copiar",hv3_copied:"¡Copiado!",hv3_paste:"Pegado en Claude",
+ hv3_a:"¡Hecha! Te he preparado la web con tus horarios y la carta. ¿Probamos otros colores?",
+ hv4_site:"Panadería Lola",hv4_tag:"Pan de masa madre · De 8 a 14 h",hv4_btn:"Pedir por WhatsApp",hv4_toast:"Proyecto enviado a la comunidad",hv4_done:"Receta completada"
+});
+Object.assign(T.en,{
+ nav_paths:"Categories",
+ p_kicker:"Categories",p_title:"Start with <em>whatever interests you</em>.",p_lead:"No levels, no set order: pick a category and open any recipe. Each one stands on its own.",
+ p5t:"Claude, your way",p5d:"Teach Claude how you work with Skills, give it your own knowledge and build your connector.",
+ cat_n:"recipes",cat_cta_t:"Not sure where to start?",cat_cta_d:"Try “Your personal AI assistant”. It's the simplest one, and in no time you'll see everything Claude can do for you.",cat_cta_b:"Start here",cat_see:"Show in the recipe book",
+ h_title:"How to cook <em>a recipe</em>.",h_lead:"Here's a real example from start to finish: a website for a bakery.",
+ h_s1t:"Pick what you want to make",h_s1d:"Browse the recipe book and open whichever recipe interests you. Each one is a concrete goal — a website, a logo, a video — and there's no set order.",
+ h_s2t:"Get the ingredients ready",h_s2d:"The recipe tells you which free accounts you need and, if it uses a connector, how to switch it on in Claude with one click. Tick them off as you go.",
+ h_s3t:"Copy the prompt and paste it into Claude",h_s3d:"Every step includes the exact message. Press “Copy”, paste it into Claude and it does the work. Not convinced? Ask for changes in your own words.",
+ h_s4t:"Enjoy the result and share it",h_s4d:"When you finish, you have something real that works. If you like, upload the link from your account: once approved, it appears in the recipe's community.",
+ hv_step:"Step",hv_of:"of",hv1_t:"Recipe book",hv1_pick:"Chosen",
+ hv2_t:"Ingredients",hv2_i1:"Claude account",hv2_i2:"GitHub account",hv2_i3:"Cloudflare account",hv2_free:"free",hv2_ready:"All set!",
+ hv3_t:"Recipe step 1",hv3_p:"Build a website for my bakery with opening hours, the menu and a WhatsApp button.",hv3_copy:"Copy",hv3_copied:"Copied!",hv3_paste:"Pasted into Claude",
+ hv3_a:"Done! I've built the site with your hours and menu. Shall we try other colours?",
+ hv4_site:"Lola's Bakery",hv4_tag:"Sourdough bread · 8 am to 2 pm",hv4_btn:"Order on WhatsApp",hv4_toast:"Project sent to the community",hv4_done:"Recipe completed"
+});
+Object.assign(T.ar,{
+ nav_paths:"الفئات",
+ p_kicker:"الفئات",p_title:"ابدأ بـ<em>ما يهمّك</em>.",p_lead:"لا مستويات ولا ترتيب إلزامي: اختر فئة وافتح أي وصفة. كل وصفة مستقلة بذاتها.",
+ p5t:"Claude على مقاسك",p5d:"علّم Claude طريقتك في العمل بالمهارات (Skills)، وأعطه معرفتك الخاصة، وابنِ موصلك.",
+ cat_n:"وصفات",cat_cta_t:"لا تعرف من أين تبدأ؟",cat_cta_d:"جرّب «مساعدك الشخصي بالذكاء الاصطناعي». إنها الأبسط، وخلال وقت قصير سترى كل ما يمكن أن يفعله Claude لك.",cat_cta_b:"ابدأ من هنا",cat_see:"اعرضها في كتاب الوصفات",
+ h_title:"هكذا تُطبخ <em>الوصفة</em>.",h_lead:"نشرحها بمثال حقيقي من البداية إلى النهاية: موقع لمخبز.",
+ h_s1t:"اختر ما تريد صنعه",h_s1d:"تصفّح كتاب الوصفات وافتح الوصفة التي تهمّك. كل وصفة هدف محدد —موقع أو شعار أو فيديو— ولا يلزم اتباع أي ترتيب.",
+ h_s2t:"جهّز المكوّنات",h_s2d:"تخبرك الوصفة بالحسابات المجانية التي تحتاجها، وإن كانت تستخدم موصلاً، كيف تفعّله في Claude بنقرة واحدة. ضع علامة عليها كلما جهّزتها.",
+ h_s3t:"انسخ الأمر والصقه في Claude",h_s3d:"كل خطوة تتضمن الرسالة الدقيقة. اضغط «نسخ» والصقها في Claude وسيقوم بالعمل. لم يعجبك شيء؟ اطلب التعديل بكلماتك.",
+ h_s4t:"استمتع بالنتيجة وشاركها",h_s4d:"في النهاية يكون لديك شيء حقيقي يعمل. إن أردت، ارفع الرابط من حسابك: بعد الموافقة سيظهر في مجتمع الوصفة.",
+ hv_step:"الخطوة",hv_of:"من",hv1_t:"كتاب الوصفات",hv1_pick:"تم الاختيار",
+ hv2_t:"المكوّنات",hv2_i1:"حساب Claude",hv2_i2:"حساب GitHub",hv2_i3:"حساب Cloudflare",hv2_free:"مجاني",hv2_ready:"كل شيء جاهز!",
+ hv3_t:"الخطوة 1 من الوصفة",hv3_p:"أنشئ موقعاً لمخبزي فيه ساعات العمل وقائمة المنتجات وزر واتساب.",hv3_copy:"نسخ",hv3_copied:"تم النسخ!",hv3_paste:"تم اللصق في Claude",
+ hv3_a:"تم! جهّزت لك الموقع بساعاتك وقائمتك. هل نجرّب ألواناً أخرى؟",
+ hv4_site:"مخبز لولا",hv4_tag:"خبز العجين المخمّر · من 8 إلى 14",hv4_btn:"اطلب عبر واتساب",hv4_toast:"أُرسل المشروع إلى المجتمع",hv4_done:"اكتملت الوصفة"
+});
 var LANGS=[["es","Español"],["en","English"],["ar","العربية"]];
 function detect(){try{var s=localStorage.getItem("amri-lang");if(T[s])return s;}catch(e){}var n=((navigator.language||"es")+"").slice(0,2);return T[n]?n:"es";}
 var lang=detect();
@@ -224,7 +340,7 @@ var card=function(i){return T[lang].cards[i]||T.es.cards[i]};
 
 /* CSS extra: derecha-izquierda, selector y fuente árabe */
 var st=document.createElement("style");
-st.textContent=".lang-sel{font:inherit;font-weight:600;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:8px 12px;cursor:pointer}.lang-sel:hover{border-color:var(--acc)}.lang-sel:focus-visible{outline:3px solid var(--acc);outline-offset:2px}"+
+st.textContent=".settings{position:relative}.set-btn{font:inherit;font-weight:600;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:border-color .3s}.set-btn:hover,.settings.open .set-btn{border-color:var(--acc)}.set-btn svg{transition:transform .6s cubic-bezier(.22,.8,.24,1)}.settings.open .set-btn svg{transform:rotate(60deg)}.set-btn:focus-visible,.seg button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}.set-pop{position:absolute;top:calc(100% + 10px);inset-inline-end:0;z-index:80;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;min-width:270px;box-shadow:0 24px 50px -20px rgba(42,31,20,.4);display:flex;flex-direction:column;gap:14px}.set-pop[hidden]{display:none}.set-row{display:flex;flex-direction:column;gap:8px}.set-l{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}.seg{display:flex;gap:4px;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:4px}.seg button{flex:1;font:inherit;font-size:14px;font-weight:600;border:0;background:none;color:var(--ink);border-radius:999px;padding:8px 10px;cursor:pointer;white-space:nowrap}.seg button[aria-pressed=true]{background:var(--acc);color:#fff}@media(max-width:560px){.set-btn .set-tx{display:none}.set-btn{padding:9px}}.lang-sel{font:inherit;font-weight:600;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:8px 12px;cursor:pointer}.lang-sel:hover{border-color:var(--acc)}.lang-sel:focus-visible{outline:3px solid var(--acc);outline-offset:2px}"+
 ".langbar{display:flex;justify-content:flex-end;margin-bottom:12px}.i18n-note{background:var(--soft);border-inline-start:4px solid var(--acc);border-radius:8px;padding:10px 12px;font-size:15px;margin:0 0 16px}"+
 "[dir=rtl] body{font-family:'Noto Sans Arabic','Segoe UI',Tahoma,system-ui,sans-serif;line-height:1.75}[dir=rtl] h1,[dir=rtl] h2,[dir=rtl] h3{letter-spacing:0!important}"+
 "[dir=rtl] .brand .sub,[dir=rtl] .abrand .sub{border-left:0;padding-left:0;border-right:1px solid var(--line);padding-right:10px}"+
@@ -248,24 +364,66 @@ function apply(){
   document.querySelectorAll(".back").forEach(function(e){e.textContent=t("back")});
   var af=document.querySelector(".afoot");if(af)af.innerHTML=t("foot_r");
   var n=document.getElementById("i18n-note");
-  if(lang==="es"){if(n)n.remove();}
+  if(lang==="es"||(window.RECIPE&&window.RECIPE[lang])){if(n)n.remove();}
   else{if(!n){n=document.createElement("div");n.id="i18n-note";n.className="i18n-note";var h=document.querySelector("main h1");h.parentNode.insertBefore(n,h);}n.textContent=t("notice");}
   /* el título de la pestaña de una receta no se traduce: el contenido sigue en español */
-  var rt=document.body.dataset.rt;if(rt)document.title=rt;
+  var rt=document.body.dataset.rt;if(rt&&!(window.RECIPE&&window.RECIPE[lang]))document.title=rt;
  }
- var sel=document.getElementById("lang");if(sel){sel.value=lang;sel.setAttribute("aria-label",t("lang_aria"));}
+ paintSettings();
 }
 function set(l){if(!T[l])return;lang=l;try{localStorage.setItem("amri-lang",l)}catch(e){}apply();document.dispatchEvent(new CustomEvent("langchange",{detail:l}));}
 
 function build(){
- var s=document.createElement("select");s.id="lang";s.className="lang-sel";
- LANGS.forEach(function(x){var o=document.createElement("option");o.value=x[0];o.textContent=x[1];s.appendChild(o)});
- s.onchange=function(){set(s.value)};
+ /* Ajustes: idioma y tema juntos en un solo botón */
+ var w=document.createElement("div");w.className="settings";
+ w.innerHTML='<button type="button" class="set-btn" aria-expanded="false" aria-haspopup="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span class="set-tx"></span></button>'+
+  '<div class="set-pop" role="dialog" hidden><div class="set-row"><span class="set-l" data-k="set_lang"></span><div class="seg" data-g="lang"></div></div>'+
+  '<div class="set-row"><span class="set-l" data-k="set_theme"></span><div class="seg" data-g="theme"><button type="button" data-v="light">☀️ <span data-k="set_light"></span></button><button type="button" data-v="dark">🌙 <span data-k="set_dark"></span></button></div></div></div>';
+ var segL=w.querySelector('[data-g="lang"]');
+ LANGS.forEach(function(x){var b=document.createElement("button");b.type="button";b.dataset.v=x[0];b.textContent=x[1];b.lang=x[0];segL.appendChild(b)});
+ var btn=w.querySelector(".set-btn"),pop=w.querySelector(".set-pop");
+ function open(o){pop.hidden=!o;btn.setAttribute("aria-expanded",o?"true":"false");w.classList.toggle("open",o)}
+ btn.onclick=function(e){e.stopPropagation();open(pop.hidden)};
+ document.addEventListener("click",function(e){if(!w.contains(e.target))open(false)});
+ document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!pop.hidden){open(false);btn.focus()}});
+ segL.onclick=function(e){var b=e.target.closest("button");if(b)set(b.dataset.v)};
+ w.querySelector('[data-g="theme"]').onclick=function(e){var b=e.target.closest("button");if(b)setTheme(b.dataset.v)};
  var nr=document.querySelector(".nav-right");
- if(nr){nr.insertBefore(s,nr.firstChild);}
- else{var m=document.querySelector("main");if(m){var b=document.createElement("div");b.className="langbar";b.appendChild(s);m.insertBefore(b,m.firstChild);}}
+ if(nr){nr.insertBefore(w,nr.firstChild);}
+ else{var m=document.querySelector("main");if(m){var bar=document.createElement("div");bar.className="langbar";bar.appendChild(w);m.insertBefore(bar,m.firstChild);}}
+ paintTheme();
+}
+function curTheme(){return document.documentElement.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light")}
+function setTheme(v){document.documentElement.setAttribute("data-theme",v);try{localStorage.setItem("amri-theme",v)}catch(e){}paintTheme();document.dispatchEvent(new CustomEvent("themechange",{detail:v}));}
+function paintTheme(){var v=curTheme();
+ var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=v==="dark"?"#17110B":"#FBF6EE";
+ document.querySelectorAll('.settings [data-g="theme"] button').forEach(function(b){b.setAttribute("aria-pressed",b.dataset.v===v?"true":"false")});}
+function paintSettings(){
+ document.querySelectorAll(".settings [data-k]").forEach(function(el){el.textContent=t(el.dataset.k)});
+ var b=document.querySelector(".settings .set-btn");if(b){b.querySelector(".set-tx").textContent=t("set_btn");b.setAttribute("aria-label",t("set_btn"));}
+ document.querySelectorAll('.settings [data-g="lang"] button').forEach(function(x){x.setAttribute("aria-pressed",x.dataset.v===lang?"true":"false")});
 }
 if(document.querySelector(".abrand")){document.body.dataset.rt=document.title;}
 build();apply();
+/* Banner de idioma: solo la primera visita */
+function chosen(){try{return !!localStorage.getItem("amri-lang")}catch(e){return true}}
+function langBanner(){
+ if(chosen())return;
+ var css=".lb-wrap{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:20px;background:color-mix(in srgb,var(--bg) 55%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);animation:lbf .6s cubic-bezier(.22,.8,.24,1)}"+
+ ".lb{width:min(440px,100%);background:var(--card);border:1px solid var(--line);border-radius:28px;padding:32px 26px;text-align:center;box-shadow:0 40px 90px -40px rgba(42,31,20,.55);animation:lbu .8s cubic-bezier(.22,.8,.24,1)}"+
+ ".lb .lg{width:54px;height:54px;border-radius:16px;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:800;font-size:30px;margin:0 auto 14px}"+
+ ".lb h2{margin:0 0 4px;font-size:24px;letter-spacing:-.02em}.lb p{margin:0 0 20px;color:var(--mute);font-size:15px}"+
+ ".lb button{display:flex;width:100%;align-items:center;justify-content:space-between;gap:10px;font:inherit;font-weight:700;font-size:17px;padding:14px 18px;margin-top:10px;border-radius:16px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;transition:border-color .3s,transform .4s cubic-bezier(.22,.8,.24,1)}"+
+ ".lb button:hover,.lb button:focus-visible{border-color:var(--acc);transform:translateY(-2px);outline:0}.lb button.sug{border-color:var(--acc)}.lb button small{font-weight:600;color:var(--mute);font-size:13px}"+
+ "@keyframes lbf{from{opacity:0}}@keyframes lbu{from{opacity:0;transform:translateY(20px) scale(.98)}}";
+ var st2=document.createElement("style");st2.textContent=css;document.head.appendChild(st2);
+ var w=document.createElement("div");w.className="lb-wrap";w.setAttribute("role","dialog");w.setAttribute("aria-modal","true");w.setAttribute("aria-label","Idioma · Language · اللغة");
+ var H={es:["Elige tu idioma","Puedes cambiarlo cuando quieras."],en:["Choose your language","You can change it anytime."],ar:["اختر لغتك","يمكنك تغييرها في أي وقت."]}[lang];
+ w.innerHTML='<div class="lb"><div class="lg">A</div><h2>'+H[0]+'</h2><p>'+H[1]+'</p>'+LANGS.map(function(x){return '<button type="button" data-l="'+x[0]+'" class="'+(x[0]===lang?"sug":"")+'" dir="'+(x[0]==="ar"?"rtl":"ltr")+'"><span>'+x[1]+'</span><small>'+(x[0]===lang?"✓":"")+'</small></button>'}).join("")+'</div>';
+ w.addEventListener("click",function(e){var b=e.target.closest("[data-l]");if(!b)return;set(b.dataset.l);w.style.transition="opacity .5s";w.style.opacity="0";setTimeout(function(){w.remove()},500)});
+ document.body.appendChild(w);
+ var f=w.querySelector(".sug");if(f)setTimeout(function(){f.focus()},50);
+}
+langBanner();
 window.I18N={t:t,card:card,set:set,lang:function(){return lang},conn:function(){return T[lang].conn||T.es.conn}};
 })();
