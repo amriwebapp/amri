@@ -35,6 +35,7 @@ for f in sorted(glob.glob('recetas/data/*.es.js')):
 <script src="../assets/plugin-map.js"></script>
 <script src="../assets/receta.js"></script>
 <script src="../assets/datos.js"></script>
+<script src="../assets/guia.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../assets/cuenta.js"></script>
 </body>

@@ -29,7 +29,32 @@
   <span class="plg-k" data-i="pg_kicker">Plugin para Claude Code</span>
   <h1 data-i="pg_h">Que Claude <em>cocine contigo</em>.</h1>
   <p class="lead" data-i="pg_lead"></p>
+  <a class="btn btn-primary plg-jump" href="#instalar" data-i="pg_jump">Instalarlo ahora ↓</a>
 
+  <section class="plg-what">
+    <span class="plg-k" data-i="pg_what_k">Lo básico</span>
+    <h2 data-i="pg_what_t">¿Qué es un plugin?</h2>
+    <p class="plg-p" data-i="pg_what_d"></p>
+    <div class="plg-chain">
+      <div class="card2 plg-c"><span class="plg-e">👩‍🍳</span><b data-i="pg_c1t">Claude</b><p data-i="pg_c1d"></p></div>
+      <span class="plg-plus" aria-hidden="true">+</span>
+      <div class="card2 plg-c hi"><span class="plg-e">📖</span><b data-i="pg_c2t">El plugin de AMRI</b><p data-i="pg_c2d"></p></div>
+      <span class="plg-plus" aria-hidden="true">=</span>
+      <div class="card2 plg-c"><span class="plg-e">💻</span><b data-i="pg_c3t">Tu ordenador</b><p data-i="pg_c3d"></p></div>
+    </div>
+    <p class="plg-note plg-vs" data-i="pg_vs"></p>
+  </section>
+
+  <section>
+    <h2 data-i="pg_cmp_t">La misma receta, de dos maneras</h2>
+    <div class="plg-cmp">
+      <div class="card2"><h3 data-i="pg_no_t">📖 En la web</h3><small data-i="pg_no_s"></small><ol id="cmpNo"></ol></div>
+      <div class="card2 hi"><h3 data-i="pg_yes_t">⚡ Con el plugin</h3><small data-i="pg_yes_s"></small><ol id="cmpYes"></ol></div>
+    </div>
+    <p class="plg-note" data-i="pg_cmp_n"></p>
+  </section>
+
+  <section id="instalar"><h2 data-i="pg_inst_t">Instálalo en 3 minutos</h2></section>
   <ol class="plg-steps">
     <li><span class="n">1</span><div><h2 data-i="pg_s1t">Instala Claude Code</h2><p data-i="pg_s1d"></p>
       <div class="cmd"><code>curl -fsSL https://claude.ai/install.sh | bash</code><button type="button" data-cp></button></div>
@@ -45,6 +70,17 @@
       <div class="cmd"><code id="ex4"></code><button type="button" data-cp></button></div></div></li>
   </ol>
 
+  <section>
+    <h2 data-i="pg_use_t">Cómo sacarle provecho</h2>
+    <div class="plg-uses" id="plgUses"></div>
+    <p class="plg-note" data-i="pg_use_tip"></p>
+  </section>
+
+  <section>
+    <h2 data-i="pg_demo_t">Así es una sesión con el chef</h2>
+    <div class="plg-term"><div class="plg-tt"><i></i><i></i><i></i><span>claude</span></div><pre id="plgDemo"></pre></div>
+  </section>
+
   <section class="plg-who"><h2 data-i="pg_who">Quién hace qué</h2>
     <div class="plg-two">
       <div class="card2"><h3>🤖 <span data-i="pg_c">Claude hace</span></h3><ul><li data-i="pg_c1"></li><li data-i="pg_c2"></li><li data-i="pg_c3"></li><li data-i="pg_c4"></li></ul></div>
@@ -53,6 +89,8 @@
     <p class="plg-note" data-i="pg_note"></p>
     <p class="plg-note" data-i="pg_cw"></p>
   </section>
+
+  <section><h2 data-i="pg_faq_t">Preguntas frecuentes</h2><div class="plg-faq" id="plgFaq"></div></section>
 
   <section><h2 data-i="pg_list">Todas las recetas</h2>
     <div class="plg-table"><table><thead><tr><th></th><th data-i="pg_cmd">Comando</th><th></th></tr></thead><tbody id="plgList"></tbody></table></div>
@@ -72,6 +110,12 @@ function fill(){
   ORDER.forEach(function(s,i){if(!map[s])return;var c=I18N.card(i),tr=document.createElement("tr");
     tr.innerHTML='<td></td><td><code></code></td><td><a href="recetas/'+s+'.html"></a></td>';
     tr.children[0].textContent=c.titulo;tr.querySelector("code").textContent="/amri:"+map[s];tr.querySelector("a").textContent=t("pg_open")+" →";tb.appendChild(tr);});
+  var esc=function(x){return String(x).replace(/&/g,"&amp;").replace(/</g,"&lt;")};
+  var li=function(a){return (a||[]).map(function(x){return "<li>"+esc(x)+"</li>"}).join("")};
+  document.getElementById("cmpNo").innerHTML=li(t("pg_no_l"));document.getElementById("cmpYes").innerHTML=li(t("pg_yes_l"));
+  document.getElementById("plgUses").innerHTML=(t("pg_uses")||[]).map(function(u){return '<div class="card2 plg-u"><span class="plg-e">'+u[0]+'</span><h3>'+esc(u[1])+'</h3><p>'+esc(u[2])+'</p><div class="cmd"><code>'+esc(u[3])+'</code><button type="button" data-cp></button></div></div>'}).join("");
+  document.getElementById("plgDemo").innerHTML=(t("pg_demo")||[]).map(function(x){var c=x.charAt(0)==="›"?"u":x.charAt(0)==="✓"?"ok":"c";return '<span class="'+c+'">'+esc(x)+'</span>'}).join("\n");
+  document.getElementById("plgFaq").innerHTML=(t("pg_faq")||[]).map(function(f){return '<details><summary>'+esc(f[0])+'</summary><p>'+esc(f[1])+'</p></details>'}).join("");
   document.querySelectorAll("[data-cp]").forEach(function(btn){btn.textContent=t("pl_copy");});
 }
 fill();document.addEventListener("langchange",fill);

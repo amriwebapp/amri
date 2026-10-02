@@ -80,3 +80,11 @@ Las recetas también existen como **skills** de un plugin de Claude Code, para q
 - **No edites los SKILL.md a mano.** Se generan desde las recetas de la web con `node tools/plugin.js`; el chef sale de `tools/chef.template.md`. El script también crea `assets/plugin-map.js`, que usa la web para mostrar el comando de cada receta.
 - Después de cambiar o añadir recetas: `node tools/plugin.js`, sube la versión en `plugin/.claude-plugin/plugin.json` y haz commit.
 - Comprobar: `claude plugin validate .` y `claude plugin validate plugin`.
+
+## Guía dentro de las recetas (assets/guia.js)
+- **Revisada el…**: fecha en `AMRI_DATA.revised` (assets/datos.js). Actualízala cuando revises una receta.
+- **Cómo encaja todo**: mapa automático con las herramientas de la receta (`TOOLS` en assets/logos.js).
+- **Glosario**: palabras subrayadas con su explicación (`GLOSS` en assets/guia.js, en es/en/ar).
+- **¿Por qué este paso? / ¿Algo falla?**: explicaciones y soluciones que se eligen según el texto del paso (`UNDER` y `FIX`).
+- **¿Qué quieres construir?** y **Proyectos completos** en la portada: assets/construir.js, con `keywords`, `projects` y `buildOrder` en assets/datos.js.
+- **Insignias** en el perfil: se calculan a partir de las recetas aprobadas (assets/panel.js).

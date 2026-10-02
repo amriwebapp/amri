@@ -234,6 +234,34 @@ ar:{
  {tag:"شركة",titulo:"دماغ شركتك مع GuruSup",desc:"اربط GuruSup Brain بـ Claude ليجيب بمعرفة شركتك الحقيقية مع ذكر المصدر.",chips:CH("30 دقيقة","متوسط","مدفوع")},
  {tag:"تواصل",titulo:"إنستغرامك مع Claude",desc:"ريلز وكاروسيلات ونصوص بصوتك أنت، وملف شخصي أقوى وخطة أسبوعية. Claude يكتب وأنت تنشر.",chips:CH("40 دقيقة","سهل","Claude Code")}]}
 };
+/* v15 · guía: construir, proyectos, mapa, por qué, si algo falla, glosario */
+Object.assign(T.es,{
+ b_k:"Tu proyecto",b_t:"¿Qué quieres <em>construir</em>?",b_l:"Escríbelo con tus palabras y te proponemos las recetas, en orden. Las cocinas aquí paso a paso, o con el chef de AMRI en Claude Code.",
+ b_ph:"Ej.: una web para mi peluquería con reservas e Instagram",b_btn:"Prepárame el menú",b_ex:["Una web para mi panadería con reservas","Quiero empezar un canal de vídeos","Ordenar mi correo y mi agenda"],
+ b_res:"Tu menú",b_none:"No he encontrado una receta exacta para eso. Empieza por «Tu asistente personal con IA» o mira los proyectos de abajo.",b_chef:"¿Prefieres que Claude lo cocine contigo? Pega esto en Claude Code:",b_proj:"Proyecto que encaja:",b_copy:"Copiar",b_copied:"¡Copiado!",
+ pj_k:"Proyectos completos",pj_t:"Recetas que juntas <em>son un proyecto</em>.",pj_l:"Rutas pensadas para terminar algo grande, receta a receta y en orden.",pj_go:"Empezar el proyecto",pj_n:"recetas",
+ g_rev:"Revisada el",g_map:"Cómo encaja todo",g_idea:"Tu idea",g_res:"Resultado",g_why:"¿Por qué este paso?",g_fail:"¿Algo falla?",g_under:"Qué pasa por debajo",g_fix:"Soluciones rápidas",
+ g_ask:"Si sigue sin funcionar, pídele ayuda a Claude:",g_ask_p:"Estoy siguiendo la receta «{r}» de AMRI, en el paso «{s}». Me pasa esto: [describe el problema o pega el error]. Explícame qué ocurre y cómo arreglarlo, paso a paso y sin jerga.",
+ g_hint:"💡 Las palabras subrayadas tienen explicación: pasa el ratón o tócalas."
+});
+Object.assign(T.en,{
+ b_k:"Your project",b_t:"What do you want to <em>build</em>?",b_l:"Describe it in your own words and we'll suggest the recipes, in order. Cook them here step by step, or with the AMRI chef in Claude Code.",
+ b_ph:"E.g. a website for my hair salon with bookings and Instagram",b_btn:"Plan my menu",b_ex:["A website for my bakery with bookings","I want to start a video channel","Get my email and calendar in order"],
+ b_res:"Your menu",b_none:"I couldn't find an exact recipe for that. Start with “Your personal AI assistant” or look at the projects below.",b_chef:"Rather have Claude cook it with you? Paste this into Claude Code:",b_proj:"Matching project:",b_copy:"Copy",b_copied:"Copied!",
+ pj_k:"Complete projects",pj_t:"Recipes that together <em>make a project</em>.",pj_l:"Paths designed to finish something big, recipe by recipe and in order.",pj_go:"Start the project",pj_n:"recipes",
+ g_rev:"Reviewed on",g_map:"How it all fits together",g_idea:"Your idea",g_res:"Result",g_why:"Why this step?",g_fail:"Something not working?",g_under:"What happens under the hood",g_fix:"Quick fixes",
+ g_ask:"If it still doesn't work, ask Claude for help:",g_ask_p:"I'm following the AMRI recipe “{r}”, at the step “{s}”. This is happening: [describe the problem or paste the error]. Explain what's going on and how to fix it, step by step and without jargon.",
+ g_hint:"💡 Underlined words have an explanation: hover over or tap them."
+});
+Object.assign(T.ar,{
+ b_k:"مشروعك",b_t:"ماذا تريد أن <em>تبني</em>؟",b_l:"اكتبه بكلماتك وسنقترح عليك الوصفات بالترتيب. اطبخها هنا خطوة بخطوة، أو مع طاهي AMRI في Claude Code.",
+ b_ph:"مثال: موقع لصالون الحلاقة مع حجوزات وإنستغرام",b_btn:"حضّر لي القائمة",b_ex:["موقع لمخبزي مع حجوزات","أريد أن أبدأ قناة فيديو","تنظيم بريدي وتقويمي"],
+ b_res:"قائمتك",b_none:"لم أجد وصفة مطابقة لذلك. ابدأ بـ«مساعدك الشخصي بالذكاء الاصطناعي» أو اطّلع على المشاريع في الأسفل.",b_chef:"تفضّل أن يطبخها Claude معك؟ الصق هذا في Claude Code:",b_proj:"مشروع مناسب:",b_copy:"نسخ",b_copied:"تم النسخ!",
+ pj_k:"مشاريع كاملة",pj_t:"وصفات تصنع معاً <em>مشروعاً</em>.",pj_l:"مسارات مصمّمة لإنجاز شيء كبير، وصفة بعد وصفة وبالترتيب.",pj_go:"ابدأ المشروع",pj_n:"وصفات",
+ g_rev:"رُوجعت في",g_map:"كيف يترابط كل شيء",g_idea:"فكرتك",g_res:"النتيجة",g_why:"لماذا هذه الخطوة؟",g_fail:"هل هناك مشكلة؟",g_under:"ماذا يحدث خلف الكواليس",g_fix:"حلول سريعة",
+ g_ask:"إن استمرت المشكلة، اطلب المساعدة من Claude:",g_ask_p:"أتبع وصفة AMRI «{r}»، في الخطوة «{s}». يحدث لي هذا: [صف المشكلة أو الصق الخطأ]. اشرح لي ما يحدث وكيف أصلحه، خطوة بخطوة ودون مصطلحات معقدة.",
+ g_hint:"💡 الكلمات المسطّرة لها شرح: مرّر المؤشر فوقها أو المسها."
+});
 /* v12 · plugin de AMRI para Claude Code */
 Object.assign(T.es,{
  set_btn:"Ajustes",set_lang:"Idioma",set_theme:"Tema",set_light:"Claro",set_dark:"Oscuro",lp_k:"Plugin para Claude Code",lp_t:"¿Prefieres que <em>Claude lo cocine contigo</em>?",lp_d:"Instala el plugin de AMRI y cada receta se convierte en un comando. O cuéntale al chef tu proyecto y él elige las recetas.",lp_b:"Instalar el plugin",lp_e1:"una web para mi panadería",lp_r1:"Web creada y publicada",lp_e2:"una tienda de velas con reservas",lp_r2:"Menú: webapp → logo → chatbot → dominio",
@@ -331,6 +359,112 @@ Object.assign(T.ar,{
  hv3_t:"الخطوة 1 من الوصفة",hv3_p:"أنشئ موقعاً لمخبزي فيه ساعات العمل وقائمة المنتجات وزر واتساب.",hv3_copy:"نسخ",hv3_copied:"تم النسخ!",hv3_paste:"تم اللصق في Claude",
  hv3_a:"تم! جهّزت لك الموقع بساعاتك وقائمتك. هل نجرّب ألواناً أخرى؟",
  hv4_site:"مخبز لولا",hv4_tag:"خبز العجين المخمّر · من 8 إلى 14",hv4_btn:"اطلب عبر واتساب",hv4_toast:"أُرسل المشروع إلى المجتمع",hv4_done:"اكتملت الوصفة"
+});
+/* v16 · página del plugin explicada */
+Object.assign(T.es,{
+ pg_lead:"Un plugin convierte cada receta de AMRI en un comando. Tú escribes tu idea y Claude la cocina contigo en tu ordenador: crea los archivos, usa la terminal y publica tu proyecto. Solo te pide ayuda cuando hace falta.",
+ pg_jump:"Instalarlo ahora ↓",
+ pg_what_k:"Lo básico",pg_what_t:"¿Qué es un plugin?",
+ pg_what_d:"Claude ya sabe cocinar. Un plugin es un <b>libro de recetas</b> que le das para que sepa hacer algo concreto, a tu manera y paso a paso. Se instala una vez en Claude Code y le añade comandos nuevos que empiezan por <code>/amri:</code>.",
+ pg_c1t:"Claude",pg_c1d:"El cocinero: entiende lo que quieres y sabe hacerlo.",
+ pg_c2t:"El plugin de AMRI",pg_c2d:"El libro de recetas: todas las recetas de la web y el chef que las combina.",
+ pg_c3t:"Tu ordenador",pg_c3d:"La cocina: ahí se crean los archivos y desde ahí se publica tu proyecto.",
+ pg_vs:"<b>¿Y un conector?</b> Un conector le da a Claude acceso a una app, como Gmail o Canva. Un plugin le enseña a hacer tareas completas. Se complementan: las recetas usan conectores cuando hacen falta.",
+ pg_cmp_t:"La misma receta, de dos maneras",
+ pg_no_t:"📖 En la web",pg_no_s:"Gratis · para aprender con calma",
+ pg_no_l:["Lees cada paso y entiendes por qué se hace","Copias la orden y la pegas en el chat de Claude","Vuelves a la web, marcas el paso y sigues","Tú haces cada paso, con la receta al lado"],
+ pg_yes_t:"⚡ Con el plugin",pg_yes_s:"Claude Code · para construir rápido",
+ pg_yes_l:["Escribes un solo comando con tu idea","Claude sigue la receta entera en tu ordenador","Crea los archivos, los guarda y los publica","Te avisa solo cuando necesita algo de ti"],
+ pg_cmp_n:"Lo mejor es combinarlas: lee la receta en la web para entenderla y deja que el plugin la haga contigo.",
+ pg_inst_t:"Instálalo en 3 minutos",
+ pg_use_t:"Cómo sacarle provecho",
+ pg_uses:[["🧭","Empieza un proyecto desde cero","Describe tu idea. El chef elige las recetas que hacen falta, te propone un orden y las cocina una tras otra.","/amri:chef una web para mi estudio de yoga con reservas y su Instagram"],
+  ["🎯","Haz una receta concreta","Si ya sabes lo que quieres, ve directo a la receta y añade tu idea detrás.","/amri:logo-ia un logo para mi estudio de yoga, en tonos tierra y minimalista"],
+  ["🛠️","Mejora un proyecto que ya tienes","Abre Claude Code en la carpeta de tu proyecto y pídele que aplique una receta sobre lo que ya existe.","/amri:chatbot-web añade a la web de esta carpeta un asistente que responda dudas de horarios y precios"],
+  ["🎓","Aprende mientras lo hace","Pídele que te explique cada paso antes de hacerlo. Así no solo tienes el resultado: entiendes cómo se hizo.","/amri:webapp-gratis una web para mi panadería. Explícame cada paso con palabras sencillas antes de hacerlo"],
+  ["⏯️","Retoma donde lo dejaste","Si cierras Claude Code a mitad, vuelve a abrirlo en la misma carpeta y dile por dónde ibas.","/amri:webapp-gratis seguimos: ya está en GitHub, falta publicarla en Cloudflare"]],
+ pg_use_tip:"Truco: cuanto más concreta sea tu idea (para quién es, qué tiene que poder hacer la gente y qué estilo quieres), mejor será el resultado.",
+ pg_demo_t:"Así es una sesión con el chef",
+ pg_demo:["› /amri:chef una web para mi estudio de yoga con reservas","Te propongo este menú:","  1. Diseña un logo con IA","  2. Tu webapp online y gratis (con reservas)","  3. Un chatbot para tu web","¿Empezamos por el logo?","› sí","✓ Logo listo, en tres versiones","Para guardar la web necesito que inicies sesión en GitHub. Se abrirá el navegador.","› hecho","✓ Web publicada en estudio-yoga.pages.dev"],
+ pg_faq_t:"Preguntas frecuentes",
+ pg_faq:[["¿Necesito saber programar?","No. Claude escribe el código y te explica lo que hace. Tú decides, confirmas y aprendes por el camino."],
+  ["¿Cuánto cuesta?","El plugin de AMRI es gratis y open source. Claude Code necesita un plan de pago de Claude (Pro o superior). Las recetas de la web son gratis para todo el mundo."],
+  ["¿Es seguro?","Claude te pide permiso antes de publicar, subir o borrar nada. Nunca ve tus contraseñas: los inicios de sesión los haces tú en el navegador."],
+  ["¿Y si no uso la terminal?","Las recetas del plugin también funcionan en Cowork, dentro de la app de escritorio de Claude."],
+  ["¿Cómo consigo las recetas nuevas?","Cuando AMRI publica recetas, actualiza el catálogo desde el menú /plugin de Claude Code y aparecerán los comandos nuevos."],
+  ["¿Plugin, skill o conector?","Un conector da acceso a una app. Una skill es una receta que Claude sabe seguir. Un plugin es un paquete que reúne varias skills (y a veces conectores) para instalarlas de una vez."]],
+ lp_d:"Un plugin es un libro de recetas para Claude Code: lo instalas una vez y cada receta se convierte en un comando. Claude la cocina contigo en tu ordenador, y el chef combina varias en tu propio proyecto.",
+ lp_b2:"Qué es un plugin",pl_how:"Qué es un plugin y cómo instalarlo →"
+});
+Object.assign(T.en,{
+ pg_lead:"A plugin turns every AMRI recipe into a command. You type your idea and Claude cooks it with you on your computer: it creates the files, uses the terminal and publishes your project. It only asks for your help when needed.",
+ pg_jump:"Install it now ↓",
+ pg_what_k:"The basics",pg_what_t:"What is a plugin?",
+ pg_what_d:"Claude already knows how to cook. A plugin is a <b>recipe book</b> you give it so it knows how to do something specific, your way and step by step. You install it once in Claude Code and it adds new commands that start with <code>/amri:</code>.",
+ pg_c1t:"Claude",pg_c1d:"The cook: understands what you want and knows how to do it.",
+ pg_c2t:"The AMRI plugin",pg_c2d:"The recipe book: every recipe on the website plus the chef that combines them.",
+ pg_c3t:"Your computer",pg_c3d:"The kitchen: that's where the files are created and where your project is published from.",
+ pg_vs:"<b>What about a connector?</b> A connector gives Claude access to an app, like Gmail or Canva. A plugin teaches it to do complete tasks. They work together: recipes use connectors when they need them.",
+ pg_cmp_t:"The same recipe, two ways",
+ pg_no_t:"📖 On the website",pg_no_s:"Free · to learn at your own pace",
+ pg_no_l:["You read each step and understand why it's done","You copy the prompt and paste it into Claude's chat","You come back, tick the step and carry on","You do each step, with the recipe beside you"],
+ pg_yes_t:"⚡ With the plugin",pg_yes_s:"Claude Code · to build fast",
+ pg_yes_l:["You type a single command with your idea","Claude follows the whole recipe on your computer","It creates the files, saves them and publishes them","It only stops when it needs something from you"],
+ pg_cmp_n:"The best way is to combine them: read the recipe on the website to understand it, and let the plugin do it with you.",
+ pg_inst_t:"Install it in 3 minutes",
+ pg_use_t:"How to make the most of it",
+ pg_uses:[["🧭","Start a project from scratch","Describe your idea. The chef picks the recipes you need, suggests an order and cooks them one after another.","/amri:chef a website for my yoga studio with bookings and its Instagram"],
+  ["🎯","Cook one specific recipe","If you already know what you want, go straight to the recipe and add your idea after it.","/amri:logo-ia a logo for my yoga studio, earthy tones and minimalist"],
+  ["🛠️","Improve a project you already have","Open Claude Code in your project's folder and ask it to apply a recipe to what's already there.","/amri:chatbot-web add an assistant to the website in this folder that answers questions about times and prices"],
+  ["🎓","Learn while it works","Ask it to explain each step before doing it. You don't just get the result: you understand how it was made.","/amri:webapp-gratis a website for my bakery. Explain each step in simple words before doing it"],
+  ["⏯️","Pick up where you left off","If you close Claude Code halfway, reopen it in the same folder and tell it where you were.","/amri:webapp-gratis let's continue: it's on GitHub, it still needs publishing on Cloudflare"]],
+ pg_use_tip:"Tip: the more specific your idea (who it's for, what people need to be able to do and what style you want), the better the result.",
+ pg_demo_t:"What a session with the chef looks like",
+ pg_demo:["› /amri:chef a website for my yoga studio with bookings","Here's the menu I suggest:","  1. Design a logo with AI","  2. Your web app, online and free (with bookings)","  3. A chatbot for your website","Shall we start with the logo?","› yes","✓ Logo ready, in three versions","To save the website I need you to sign in to GitHub. Your browser will open.","› done","✓ Website live at yoga-studio.pages.dev"],
+ pg_faq_t:"Frequently asked questions",
+ pg_faq:[["Do I need to know how to code?","No. Claude writes the code and explains what it does. You decide, confirm and learn along the way."],
+  ["How much does it cost?","The AMRI plugin is free and open source. Claude Code needs a paid Claude plan (Pro or higher). The recipes on the website are free for everyone."],
+  ["Is it safe?","Claude asks for permission before publishing, uploading or deleting anything. It never sees your passwords: you do the sign-ins yourself in the browser."],
+  ["What if I don't use the terminal?","The plugin recipes also work in Cowork, inside the Claude desktop app."],
+  ["How do I get new recipes?","When AMRI publishes recipes, update the catalogue from the /plugin menu in Claude Code and the new commands will appear."],
+  ["Plugin, skill or connector?","A connector gives access to an app. A skill is a recipe Claude knows how to follow. A plugin is a package that bundles several skills (and sometimes connectors) so you can install them in one go."]],
+ lp_d:"A plugin is a recipe book for Claude Code: you install it once and every recipe becomes a command. Claude cooks it with you on your computer, and the chef combines several into your own project.",
+ lp_b2:"What is a plugin?",pl_how:"What a plugin is and how to install it →"
+});
+Object.assign(T.ar,{
+ pg_lead:"الإضافة تحوّل كل وصفة من AMRI إلى أمر. تكتب فكرتك ويطبخها Claude معك على حاسوبك: ينشئ الملفات ويستخدم الطرفية وينشر مشروعك، ولا يطلب مساعدتك إلا عند الحاجة.",
+ pg_jump:"ثبّتها الآن ↓",
+ pg_what_k:"الأساسيات",pg_what_t:"ما هي الإضافة؟",
+ pg_what_d:"Claude يعرف الطبخ أصلاً. الإضافة <b>كتاب وصفات</b> تعطيه إياه ليعرف كيف ينجز شيئاً محدداً بطريقتك وخطوة بخطوة. تُثبَّت مرة واحدة في Claude Code وتضيف أوامر جديدة تبدأ بـ <code>/amri:</code>.",
+ pg_c1t:"Claude",pg_c1d:"الطاهي: يفهم ما تريد ويعرف كيف ينجزه.",
+ pg_c2t:"إضافة AMRI",pg_c2d:"كتاب الوصفات: كل وصفات الموقع والطاهي الذي يجمعها.",
+ pg_c3t:"حاسوبك",pg_c3d:"المطبخ: هناك تُنشأ الملفات ومن هناك يُنشر مشروعك.",
+ pg_vs:"<b>وماذا عن الموصل؟</b> الموصل يمنح Claude وصولاً إلى تطبيق مثل Gmail أو Canva. أما الإضافة فتعلّمه إنجاز مهام كاملة. يكمّل أحدهما الآخر: الوصفات تستخدم الموصلات عند الحاجة.",
+ pg_cmp_t:"الوصفة نفسها بطريقتين",
+ pg_no_t:"📖 على الموقع",pg_no_s:"مجاناً · للتعلّم بهدوء",
+ pg_no_l:["تقرأ كل خطوة وتفهم سببها","تنسخ الأمر وتلصقه في محادثة Claude","تعود إلى الموقع وتضع علامة على الخطوة وتتابع","تنفّذ كل خطوة بنفسك والوصفة بجانبك"],
+ pg_yes_t:"⚡ مع الإضافة",pg_yes_s:"Claude Code · للبناء بسرعة",
+ pg_yes_l:["تكتب أمراً واحداً مع فكرتك","يتبع Claude الوصفة كاملة على حاسوبك","ينشئ الملفات ويحفظها وينشرها","يتوقف فقط عندما يحتاج شيئاً منك"],
+ pg_cmp_n:"الأفضل أن تجمع بينهما: اقرأ الوصفة على الموقع لتفهمها، ودع الإضافة تنفذها معك.",
+ pg_inst_t:"ثبّتها في 3 دقائق",
+ pg_use_t:"كيف تستفيد منها أقصى استفادة",
+ pg_uses:[["🧭","ابدأ مشروعاً من الصفر","صِف فكرتك. يختار الطاهي الوصفات اللازمة ويقترح ترتيباً ويطبخها واحدة تلو الأخرى.","/amri:chef موقع لاستوديو اليوغا الخاص بي مع حجوزات وحساب إنستغرام"],
+  ["🎯","اطبخ وصفة محددة","إن كنت تعرف ما تريد، اذهب مباشرة إلى الوصفة وأضف فكرتك بعدها.","/amri:logo-ia شعار لاستوديو اليوغا بألوان ترابية وبأسلوب بسيط"],
+  ["🛠️","حسّن مشروعاً لديك","افتح Claude Code في مجلد مشروعك واطلب منه تطبيق وصفة على ما هو موجود.","/amri:chatbot-web أضف إلى موقع هذا المجلد مساعداً يجيب عن أسئلة المواعيد والأسعار"],
+  ["🎓","تعلّم وهو يعمل","اطلب منه أن يشرح كل خطوة قبل تنفيذها. هكذا لا تحصل على النتيجة فقط، بل تفهم كيف صُنعت.","/amri:webapp-gratis موقع لمخبزي. اشرح لي كل خطوة بكلمات بسيطة قبل تنفيذها"],
+  ["⏯️","تابع من حيث توقفت","إن أغلقت Claude Code في المنتصف، افتحه من جديد في المجلد نفسه وأخبره أين وصلت.","/amri:webapp-gratis لنتابع: الموقع على GitHub، ويبقى نشره على Cloudflare"]],
+ pg_use_tip:"نصيحة: كلما كانت فكرتك أدق (لمن هي، وماذا يجب أن يستطيع الناس فعله، وأي أسلوب تريد) كانت النتيجة أفضل.",
+ pg_demo_t:"هكذا تبدو جلسة مع الطاهي",
+ pg_demo:["› /amri:chef موقع لاستوديو اليوغا مع حجوزات","أقترح عليك هذه القائمة:","  1. صمّم شعاراً بالذكاء الاصطناعي","  2. تطبيق ويب خاص بك، على الإنترنت ومجاناً (مع حجوزات)","  3. روبوت محادثة لموقعك","هل نبدأ بالشعار؟","› نعم","✓ الشعار جاهز بثلاث نسخ","لحفظ الموقع أحتاج أن تسجّل الدخول إلى GitHub. سيفتح المتصفح.","› تم","✓ الموقع منشور على yoga-studio.pages.dev"],
+ pg_faq_t:"أسئلة شائعة",
+ pg_faq:[["هل أحتاج إلى معرفة البرمجة؟","لا. يكتب Claude الشيفرة ويشرح ما يفعله. أنت تقرّر وتؤكّد وتتعلّم في الطريق."],
+  ["كم تكلّف؟","إضافة AMRI مجانية ومفتوحة المصدر. يحتاج Claude Code إلى خطة Claude مدفوعة (Pro أو أعلى). وصفات الموقع مجانية للجميع."],
+  ["هل هي آمنة؟","يطلب Claude إذنك قبل نشر أي شيء أو رفعه أو حذفه. لا يرى كلمات مرورك أبداً: أنت من يسجّل الدخول في المتصفح."],
+  ["وإن لم أستخدم الطرفية؟","وصفات الإضافة تعمل أيضاً في Cowork داخل تطبيق Claude لسطح المكتب."],
+  ["كيف أحصل على الوصفات الجديدة؟","عندما ينشر AMRI وصفات جديدة، حدّث الكتالوج من قائمة ‎/plugin في Claude Code فتظهر الأوامر الجديدة."],
+  ["إضافة أم مهارة أم موصل؟","الموصل يمنح وصولاً إلى تطبيق. المهارة وصفة يعرف Claude كيف يتبعها. الإضافة حزمة تجمع عدة مهارات (وأحياناً موصلات) لتثبيتها دفعة واحدة."]],
+ lp_d:"الإضافة كتاب وصفات لـ Claude Code: تثبّتها مرة واحدة فتتحول كل وصفة إلى أمر. يطبخها Claude معك على حاسوبك، ويجمع الطاهي عدة وصفات في مشروعك الخاص.",
+ lp_b2:"ما هي الإضافة؟",pl_how:"ما هي الإضافة وكيف تثبّتها ←"
 });
 var LANGS=[["es","Español"],["en","English"],["ar","العربية"]];
 function detect(){try{var s=localStorage.getItem("amri-lang");if(T[s])return s;}catch(e){}var n=((navigator.language||"es")+"").slice(0,2);return T[n]?n:"es";}

@@ -7,21 +7,21 @@ var A=window.AMRI_ACC,D=window.AMRI_DATA;if(!A)return;
 var sb=A.sb,esc=A.esc,root=document.getElementById("panel"),PAGE=document.body.dataset.page;
 var TX={
 es:{p_t:"Tu recorrido",p_l:"Tus recetas completadas y los proyectos que has compartido.",gate_t:"Entra para ver tu perfil",gate_l:"Todo el contenido es libre. La cuenta solo sirve para publicar tus proyectos y guardar tu recorrido.",
- since:"En AMRI desde",of:"de",done:"completadas",path:"Tu progreso por categoría",lvl:"Nivel",subs:"Tus proyectos",none_subs:"Aún no has enviado ningún proyecto. Termina una receta y súbelo desde el final de la página.",
+ since:"En AMRI desde",of:"de",done:"completadas",path:"Tu progreso por categoría",badges:"Tus insignias",bg_first:"Primera receta",bg_first_d:"Completa tu primera receta.",bg_five:"Cinco recetas",bg_five_d:"Completa cinco recetas.",bg_cat:"Chef · ",bg_cat_d:"Completa todas las recetas de esta categoría.",bg_proj_d:"Termina todas las recetas del proyecto.",bg_all:"Maestro AMRI",bg_all_d:"Completa todas las recetas.",bg_share:"Compartir",bg_copied:"¡Copiado!",bg_lock:"Por conseguir",bg_msg:"He conseguido la insignia «{b}» en AMRI 🧡 Aprende a crear con IA, gratis y paso a paso: https://amri.es",lvl:"Nivel",subs:"Tus proyectos",none_subs:"Aún no has enviado ningún proyecto. Termina una receta y súbelo desde el final de la página.",
  st:{approved:"✓ Completada",pending:"⏳ En revisión",rejected:"✗ No aprobada",none:"Sin enviar"},del:"Borrar",open:"Abrir ↗",edit:"Datos de tu cuenta",save:"Guardar cambios",saved:"Guardado ✓",
  logout:"Cerrar sesión",newpw:"Crea tu nueva contraseña",setpw:"Guardar contraseña",pwok:"Contraseña actualizada ✓",confirm_del:"¿Borrar este envío?",
  how_t:"Cómo completar una receta",how:["Sigue la receta hasta el final.","Publica tu resultado: una web, una publicación en redes, un documento o un PDF.","Al final de la receta, pulsa «Sube tu proyecto» y pega el enlace (o sube el PDF).","Cuando un administrador lo apruebe, la receta cuenta como completada y tu proyecto aparece en la comunidad."],
  a_t:"Revisión de proyectos",a_l:"Aprueba o rechaza los proyectos enviados. Solo los aprobados se publican en la comunidad.",a_gate:"Esta página es solo para administradores.",
  tabs:{pending:"Pendientes",approved:"Aprobados",rejected:"Rechazados",newsletter:"Newsletter"},csv:"Descargar CSV",nl_empty:"Aún no hay suscriptores.",nl_del:"¿Borrar este suscriptor?",approve:"Aprobar",reject:"Rechazar",reason:"Motivo (opcional, lo verá la persona)",empty:"No hay nada aquí. Todo en calma. 🌿",recipe:"Receta",user:"Usuario"},
 en:{p_t:"Your journey",p_l:"Your completed recipes and the projects you've shared.",gate_t:"Sign in to see your profile",gate_l:"All content is free. An account only lets you publish your projects and keep your learning path.",
- since:"On AMRI since",of:"of",done:"completed",path:"Your progress by category",lvl:"Level",subs:"Your projects",none_subs:"You haven't sent any projects yet. Finish a recipe and upload it from the end of the page.",
+ since:"On AMRI since",of:"of",done:"completed",path:"Your progress by category",badges:"Your badges",bg_first:"First recipe",bg_first_d:"Complete your first recipe.",bg_five:"Five recipes",bg_five_d:"Complete five recipes.",bg_cat:"Chef · ",bg_cat_d:"Complete every recipe in this category.",bg_proj_d:"Finish every recipe in the project.",bg_all:"AMRI master",bg_all_d:"Complete every recipe.",bg_share:"Share",bg_copied:"Copied!",bg_lock:"Still to earn",bg_msg:"I earned the “{b}” badge on AMRI 🧡 Learn to build with AI, free and step by step: https://amri.es",lvl:"Level",subs:"Your projects",none_subs:"You haven't sent any projects yet. Finish a recipe and upload it from the end of the page.",
  st:{approved:"✓ Completed",pending:"⏳ Under review",rejected:"✗ Not approved",none:"Not sent"},del:"Delete",open:"Open ↗",edit:"Account details",save:"Save changes",saved:"Saved ✓",
  logout:"Sign out",newpw:"Create your new password",setpw:"Save password",pwok:"Password updated ✓",confirm_del:"Delete this submission?",
  how_t:"How to complete a recipe",how:["Follow the recipe to the end.","Publish your result: a website, a social post, a document or a PDF.","At the end of the recipe, click “Upload your project” and paste the link (or upload the PDF).","Once an admin approves it, the recipe counts as completed and your project appears in the community."],
  a_t:"Project review",a_l:"Approve or reject submitted projects. Only approved ones are published in the community.",a_gate:"This page is for admins only.",
  tabs:{pending:"Pending",approved:"Approved",rejected:"Rejected",newsletter:"Newsletter"},csv:"Download CSV",nl_empty:"No subscribers yet.",nl_del:"Delete this subscriber?",approve:"Approve",reject:"Reject",reason:"Reason (optional, the person will see it)",empty:"Nothing here. All calm. 🌿",recipe:"Recipe",user:"User"},
 ar:{p_t:"مسارك",p_l:"وصفاتك المكتملة والمشاريع التي شاركتها.",gate_t:"سجّل الدخول لرؤية ملفك",gate_l:"كل المحتوى مجاني. الحساب يتيح لك فقط نشر مشاريعك وحفظ مسار تعلّمك.",
- since:"في AMRI منذ",of:"من",done:"مكتملة",path:"تقدّمك حسب الفئة",lvl:"المستوى",subs:"مشاريعك",none_subs:"لم ترسل أي مشروع بعد. أكمل وصفة وارفع مشروعك من آخر الصفحة.",
+ since:"في AMRI منذ",of:"من",done:"مكتملة",path:"تقدّمك حسب الفئة",badges:"شاراتك",bg_first:"أول وصفة",bg_first_d:"أكمل وصفتك الأولى.",bg_five:"خمس وصفات",bg_five_d:"أكمل خمس وصفات.",bg_cat:"طاهٍ · ",bg_cat_d:"أكمل كل وصفات هذه الفئة.",bg_proj_d:"أنهِ كل وصفات المشروع.",bg_all:"أستاذ AMRI",bg_all_d:"أكمل كل الوصفات.",bg_share:"مشاركة",bg_copied:"تم النسخ!",bg_lock:"لم تُحقَّق بعد",bg_msg:"حصلت على شارة «{b}» في AMRI 🧡 تعلّم الإنشاء بالذكاء الاصطناعي مجاناً وخطوة بخطوة: https://amri.es",lvl:"المستوى",subs:"مشاريعك",none_subs:"لم ترسل أي مشروع بعد. أكمل وصفة وارفع مشروعك من آخر الصفحة.",
  st:{approved:"✓ مكتملة",pending:"⏳ قيد المراجعة",rejected:"✗ غير معتمدة",none:"لم يُرسل"},del:"حذف",open:"فتح ↗",edit:"بيانات حسابك",save:"حفظ التغييرات",saved:"تم الحفظ ✓",
  logout:"تسجيل الخروج",newpw:"أنشئ كلمة مرور جديدة",setpw:"حفظ كلمة المرور",pwok:"تم تحديث كلمة المرور ✓",confirm_del:"حذف هذا الإرسال؟",
  how_t:"كيف تُكمل وصفة",how:["اتبع الوصفة حتى النهاية.","انشر نتيجتك: موقعاً أو منشوراً أو مستنداً أو ملف PDF.","في آخر الوصفة اضغط «ارفع مشروعك» والصق الرابط (أو ارفع ملف PDF).","عندما يوافق عليه مسؤول، تُحتسب الوصفة مكتملة ويظهر مشروعك في المجتمع."],
@@ -61,6 +61,16 @@ async function perfil(st){
       pa.r.map(function(s){var b=best[s],k=b?b.status:"none";
         return '<a class="rc" href="'+link(s)+(k==="none"?"#comunidad":"")+'"><span class="th"><img alt="" loading="lazy" src="'+img(s)+'"></span><b>'+esc(D.title(s))+'</b><span class="st '+k+'">'+esc(t("st")[k])+'</span></a>'}).join("")+'</div>';
   }).join("");
+  /* Insignias */
+  var ok=function(sl){return best[sl]&&best[sl].status==="approved"};
+  var BG=[{ic:"🥄",n:t("bg_first"),d:t("bg_first_d"),on:doneN>=1},{ic:"🍳",n:t("bg_five"),d:t("bg_five_d"),on:doneN>=5}]
+    .concat(D.paths.map(function(pa,i){return {ic:pa.ic,n:t("bg_cat")+I18N.t("p"+(i+1)+"t"),d:t("bg_cat_d"),on:pa.r.every(ok)}}))
+    .concat((D.projects||[]).map(function(pj){return {ic:pj.ic,n:pj.t[L()]||pj.t.es,d:t("bg_proj_d"),on:pj.r.every(ok)}}))
+    .concat([{ic:"👑",n:t("bg_all"),d:t("bg_all_d"),on:doneN===total}]);
+  BG.sort(function(a,b){return (b.on?1:0)-(a.on?1:0)});
+  var badgesH='<div class="card2"><div class="sec-h">'+esc(t("badges"))+' <small>'+BG.filter(function(b){return b.on}).length+'/'+BG.length+'</small></div><div class="bdg-grid">'+
+    BG.map(function(b){return '<div class="bdg'+(b.on?' on':'')+'" title="'+esc(b.d)+'"><span class="bdg-i">'+b.ic+'</span><b>'+esc(b.n)+'</b><small>'+esc(b.on?b.d:t("bg_lock"))+'</small>'+
+      (b.on?'<button type="button" class="mini bdg-s" data-msg="'+esc(t("bg_msg").replace("{b}",b.n))+'">'+esc(t("bg_share"))+'</button>':'')+'</div>'}).join("")+'</div></div>';
   var subsH=subs.length?subs.map(function(s){var u=A.safeUrl(s.url);
     return '<div class="sub-it"><div class="t"><div><b>'+(A.KIC[s.kind]||"🔗")+' '+esc(s.title)+'</b><p>'+esc(D.title(s.recipe_slug))+' · '+fmt(s.created_at)+'</p></div><span class="st '+s.status+'">'+esc(t("st")[s.status])+'</span></div>'+
       (s.status==="rejected"&&s.review_note?'<p>💬 '+esc(s.review_note)+'</p>':'')+
@@ -69,7 +79,7 @@ async function perfil(st){
    '<div class="card2 pf-top reveal in"><div class="pf-av">'+esc((p.username||"?").charAt(0))+'</div><div><h2>@'+esc(p.username)+'</h2><p>'+esc(p.full_name||"")+(p.full_name?' · ':'')+esc(t("since"))+' '+fmt(p.created_at)+'</p>'+
      '<div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap"><button class="mini" id="logout">'+esc(t("logout"))+'</button></div></div>'+
      '<div class="pring"><svg width="118" height="118" viewBox="0 0 118 118"><circle class="bg" cx="59" cy="59" r="50"/><circle class="fg" cx="59" cy="59" r="50" stroke-dasharray="'+C+'" stroke-dashoffset="'+C+'" id="ringFg"/></svg><div><span>'+doneN+'<small>'+esc(t("of"))+' '+total+' '+esc(t("done"))+'</small></span></div></div></div>'+
-   '<div class="pf-grid"><div class="card2"><div class="sec-h">'+esc(t("path"))+'</div>'+levels+'</div>'+
+   '<div class="pf-grid"><div style="display:flex;flex-direction:column;gap:22px;min-width:0">'+badgesH+'<div class="card2"><div class="sec-h">'+esc(t("path"))+'</div>'+levels+'</div></div>'+
    '<div style="display:flex;flex-direction:column;gap:22px"><div class="card2"><div class="sec-h">'+esc(t("how_t"))+'</div><ol style="margin:0;padding-inline-start:20px;color:var(--mute);font-size:15px">'+t("how").map(function(x){return "<li style=\"margin:5px 0\">"+esc(x)+"</li>"}).join("")+'</ol></div>'+
    '<div class="card2"><div class="sec-h">'+esc(t("subs"))+'</div>'+subsH+'</div>'+
    '<div class="card2"><div class="sec-h">'+esc(t("edit"))+'</div><form class="fm" id="pfForm" novalidate>'+
@@ -79,6 +89,9 @@ async function perfil(st){
      '<div class="row"><label>'+esc(at("birth"))+'<input type="date" name="birth" value="'+esc(p.birth_date||"")+'"></label><label>'+esc(at("phone"))+'<input type="tel" name="phone" value="'+esc(p.phone||"")+'" dir="ltr" maxlength="20"></label></div>'+
      '<div class="msg"></div><button type="submit">'+esc(t("save"))+'</button></form></div></div></div>';
   setTimeout(function(){var fg=document.getElementById("ringFg");if(fg)fg.style.strokeDashoffset=off},80);
+  root.querySelectorAll(".bdg-s").forEach(function(b){b.onclick=function(){var m=b.dataset.msg,o=b.textContent;
+    if(navigator.share){navigator.share({text:m}).catch(function(){})}
+    else if(navigator.clipboard){navigator.clipboard.writeText(m).then(function(){b.textContent=t("bg_copied");setTimeout(function(){b.textContent=o},1800)},function(){})}}});
   document.getElementById("logout").onclick=async function(){await sb.auth.signOut();location.href="index.html"};
   root.querySelectorAll("[data-del]").forEach(function(b){b.onclick=async function(){if(!confirm(t("confirm_del")))return;await sb.from("submissions").delete().eq("id",b.dataset.del);perfil(A.state)}});
   var f=document.getElementById("pfForm"),box=f.querySelector(".msg");

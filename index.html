@@ -79,6 +79,24 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
   </div>
 </div>
 
+<!-- ============ ¿QUÉ QUIERES CONSTRUIR? ============ -->
+<section class="block" id="construir" style="padding-top:30px">
+  <div class="wrap">
+    <div class="bld reveal">
+      <span class="kicker" data-i="b_k">Tu proyecto</span>
+      <h2 class="big" data-i="b_t">¿Qué quieres <em>construir</em>?</h2>
+      <p class="sublead" data-i="b_l"></p>
+      <form class="bld-f" id="bldForm" autocomplete="off">
+        <label class="sr" for="bldIn" data-i="b_t">¿Qué quieres construir?</label>
+        <input id="bldIn" type="text" data-i-ph="b_ph" placeholder="Ej.: una web para mi peluquería con reservas e Instagram" maxlength="200">
+        <button type="submit" class="btn btn-primary"><span data-i="b_btn">Prepárame el menú</span> <span class="arr">→</span></button>
+      </form>
+      <div class="bld-ex" id="bldEx"></div>
+      <div class="bld-out" id="bldOut" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ MANIFIESTO ============ -->
 <section class="block">
   <div class="wrap manifesto">
@@ -112,6 +130,16 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
     <h2 class="big reveal" data-i="p_title">Empieza por <em>lo que te interese</em>.</h2>
     <p class="sublead reveal" data-i="p_lead">Sin niveles ni orden obligatorio: elige una categoría y abre cualquier receta. Cada una se sostiene sola.</p>
     <div class="cats" id="cats"></div>
+  </div>
+</section>
+
+<!-- ============ PROYECTOS COMPLETOS ============ -->
+<section class="block" id="proyectos" style="padding-top:20px">
+  <div class="wrap">
+    <span class="kicker reveal" data-i="pj_k">Proyectos completos</span>
+    <h2 class="big reveal" data-i="pj_t">Recetas que juntas <em>son un proyecto</em>.</h2>
+    <p class="sublead reveal" data-i="pj_l"></p>
+    <div class="pjs" id="pjs"></div>
   </div>
 </section>
 
@@ -177,7 +205,7 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
       <span class="kicker" data-i="lp_k">Plugin para Claude Code</span>
       <h2 class="big" data-i="lp_t">¿Prefieres que <em>Claude lo cocine contigo</em>?</h2>
       <p class="sublead" data-i="lp_d">Instala el plugin de AMRI y cada receta se convierte en un comando. O cuéntale al chef tu proyecto y él elige las recetas.</p>
-      <div class="cta-row"><a class="btn btn-primary" href="plugin.html"><span data-i="lp_b">Instalar el plugin</span> <span class="arr">→</span></a></div>
+      <div class="cta-row"><a class="btn btn-primary" href="plugin.html#instalar"><span data-i="lp_b">Instalar el plugin</span> <span class="arr">→</span></a><a class="btn btn-ghost" href="plugin.html" data-i="lp_b2">Qué es un plugin</a></div>
     </div>
     <div class="plug-term" aria-hidden="true"><div class="term-top"><i></i><i></i><i></i><span>claude</span></div>
 <pre><span class="p">›</span> /amri:webapp-gratis <span class="m" data-i="lp_e1">una web para mi panadería</span>
@@ -258,6 +286,7 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
 <script src="assets/logos.js"></script>
 <script src="assets/academia.js"></script>
 <script src="assets/datos.js"></script>
+<script src="assets/construir.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="assets/cuenta.js"></script>
 </body>
