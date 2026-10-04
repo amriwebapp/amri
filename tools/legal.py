@@ -3,7 +3,7 @@ import os
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..'))
 # ⚠️ Rellena estos datos antes de publicar
 DATOS=dict(titular="[Nombre y apellidos o razón social]",nif="[NIF/NIE/CIF]",domicilio="[Dirección completa]",
-           email="[correo de contacto]",dominio="amri.es",fecha="1 de octubre de 2026")
+           email="contact@amri.es",dominio="amri.es",fecha="1 de octubre de 2026")
 head=open('perfil.html',encoding='utf-8').read().split('<body')[0]
 def page(slug,title,body):
     h=head.replace('<title>AMRI · Tu perfil</title>',f'<title>{title} · AMRI</title>').replace('<meta name="robots" content="noindex">','')
