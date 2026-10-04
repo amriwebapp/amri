@@ -1,0 +1,11 @@
+{
+	"$schema": "https://unpkg.com/wrangler/config-schema.json",
+	"name": "amri",
+	"compatibility_date": "2026-10-04",
+	// Static site: no Worker code, the repo root is served as-is.
+	"assets": {
+		"directory": "./"
+	},
+	// Required by `wrangler preview` (Cloudflare preview builds for branches and PRs).
+	"previews": {}
+}
