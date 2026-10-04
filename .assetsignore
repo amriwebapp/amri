@@ -1,8 +1,5 @@
 .git
-.claude-plugin
-plugin
+.github
 tools
 wrangler.jsonc
 .assetsignore
-README.md
-LICENSE
