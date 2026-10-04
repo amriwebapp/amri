@@ -4,6 +4,10 @@ os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..'))
 tpl=open('tools/_head.html',encoding='utf-8').read()
 for f in sorted(glob.glob('recetas/data/*.es.js')):
     slug=os.path.basename(f)[:-6]
+    dest=f'recetas/{slug}.html'
+    if os.path.exists(dest) and 'http-equiv="refresh"' in open(dest,encoding='utf-8').read():
+        print('skip',slug,'(redirección)')
+        continue
     P=json.loads(subprocess.check_output(['node','-e',f"global.window={{}};require('./{f}');const p=window.RECIPE.es;delete p.R;console.log(JSON.stringify(p))"]))
     head=re.sub(r'<title>.*?</title>',f"<title>{P['title']} · AMRI</title>",tpl)
     meta=''.join(f'<span>{m}</span>' for m in P['meta'])
@@ -41,5 +45,5 @@ for f in sorted(glob.glob('recetas/data/*.es.js')):
 </body>
 </html>
 '''
-    open(f'recetas/{slug}.html','w',encoding='utf-8').write(head+body)
+    open(dest,'w',encoding='utf-8').write(head+body)
     print('ok',slug,langs)
