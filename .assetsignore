@@ -1,5 +1,9 @@
 .git
-.github
+.claude-plugin
+plugin
 tools
 wrangler.jsonc
 .assetsignore
+README.md
+LICENSE
+.github
