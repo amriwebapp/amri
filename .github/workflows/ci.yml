@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Syntax-check JavaScript
+        run: git ls-files -z '*.js' | xargs -0 -n1 node --check
+
+      - name: Syntax-check Python
+        run: python -m py_compile tools/*.py
+
+      - name: Regenerate recipe pages, plugin skills and legal pages
+        run: |
+          python tools/shells.py
+          node tools/plugin.js
+          python tools/legal.py
+
+      - name: Generated files match what is committed
+        run: |
+          if [ -n "$(git status --porcelain --untracked-files=all -- . ':!tools/__pycache__')" ]; then
+            echo "::error::Generated files are out of date. Run the generators (tools/shells.py, tools/plugin.js, tools/legal.py) and commit the result."
+            git status --short
+            git diff --stat
+            exit 1
+          fi
