@@ -12,7 +12,7 @@ Clasifica mensajes, prioriza incidencias o puntúa contactos en milisegundos. Je
 - 👩‍🍳 Sin saber programar: Claude Code escribe el código
 - 💶 Jev es de pago por uso y está en acceso anticipado
 - 🍽 Resultado: un clasificador que decide en milisegundos y te avisa cuando duda
-- Categoría: Claude a tu medida
+- Categoría: Para empresas (de pago)
 - Versión web (con explicaciones y comunidad): https://amri.es/recetas/jev-decisiones.html
 
 ## Cómo cocinar esta receta
@@ -25,7 +25,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 - Antes de empezar, resume el plan en 3-5 puntos y pide confirmación.
 - **Haz tú todo lo que puedas** con tus herramientas: crear y editar archivos, la terminal, git, `gh`, `npx wrangler`, npm y los conectores (MCP) que estén disponibles. Los pasos de abajo están escritos para alguien que usa Claude en el chat: adáptalos. Donde diga «copia este mensaje y pégalo en Claude», haz tú directamente lo que pide el mensaje.
 - **Lo hace la persona, nunca tú:** crear cuentas, iniciar sesión, autorizar accesos, aceptar condiciones y pagar. Dile exactamente qué pulsar, lanza el inicio de sesión de la herramienta cuando exista (`gh auth login`, `npx wrangler login`…) y espera a que confirme.
-- No pidas, no escribas y no guardes en el código contraseñas ni claves secretas. Las claves públicas (como la «anon» de Supabase) sí pueden ir en el código; las secretas, solo en variables de entorno.
+- No pidas, no escribas y no guardes en el código contraseñas ni claves secretas. Las claves públicas (como la «publicable» de Supabase, antes llamada «anon») sí pueden ir en el código; las secretas, solo en variables de entorno.
 - Pide permiso antes de cualquier acción que publique algo o no tenga vuelta atrás: subir a GitHub, desplegar, borrar.
 - Después de cada paso, comprueba su **✅ Comprobación** antes de seguir. Si falla, averigua por qué y arréglalo; si no puedes, explícalo y propón una salida.
 - Trabaja en una carpeta nueva con un nombre corto sacado de la idea, salvo que la persona ya esté dentro de su proyecto.
@@ -238,8 +238,6 @@ Decidir rápido no es lo mismo que decidir bien. Unas reglas sencillas:
 
 ## Sigue con
 
-- `/amri:skills-propias` · Enséñale tu método con Skills
 - `/amri:gurusup-brain` · El cerebro de tu empresa con GuruSup
-- `/amri:conector-propio` · Cocina tu propio conector MCP
 - `/amri:jev-guardian` · Un guardián para tu chatbot con Jev
 - `/amri:chef` · combina varias recetas en un proyecto propio

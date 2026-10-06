@@ -1,5 +1,5 @@
 (window.RECIPE=window.RECIPE||{}).en={
-title:"Recipe: cook your own MCP connector",
+title:"Recipe: cook your own connector",
 meta:["⏱ About 1 hour","👩‍🍳 Advanced","💶 €0","🍽 Result: Claude using your own data"],
 ing:"Ingredients (all free)",
 q:"What do you want Claude to be able to use?",
@@ -29,4 +29,6 @@ ${det("How do I find the full path?",["Mac: drag server.js into the Terminal and
 {x:1,t:"Debug it with the Inspector",s:"Optional · pro level",b:()=>`<p class="what">The official MCP Inspector lets you test the tools without Claude.</p>${cb("npx @modelcontextprotocol/inspector node server.js")}${tip("A local web page opens where you can see each tool and try it by hand.")}`},
 {x:1,t:"Take it online",s:"Optional · next level",b:()=>`<p class="what">A local connector only works on your computer. To use it from the web or your phone, you need to publish it as a <b>remote connector</b> (for example, on Cloudflare Workers) and add it in <b>Customize → Connectors → Add custom connector</b>, like we did with Higgsfield.</p>${cb("I want to turn my MCP server into a remote connector on Cloudflare Workers. Explain the steps for beginners and what I should keep in mind for security.")}`},
 {x:1,t:"Security",s:"Always · important",b:()=>`<ol><li>Start with <b>read-only</b> tools.</li><li>Don't put passwords or keys inside the code: use environment variables.</li><li>Only install connectors from sources you trust.</li></ol>`}
+,
+{x:1,t:"No config files to edit",s:"Optional · one click",b:()=>`<p class="what">Claude Desktop can also install connectors as <b>extensions</b>: a file you open with a double click, without editing <code>claude_desktop_config.json</code>.</p><ol><li>In Claude Desktop open <b>Settings → Extensions</b> to see the ones that already exist.</li><li>For yours, ask Claude:</li></ol>${cb("Package my MCP server in the mi-conector folder as a Claude Desktop extension (.mcpb file) and explain how to install it with a double click.")}${tip("That way you can give your connector to someone else without explaining how to edit files.")}`}
 ]}};

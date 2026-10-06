@@ -1,6 +1,6 @@
 (window.RECIPE=window.RECIPE||{}).es={
-title:"Receta: tu webapp online y gratis",
-meta:["⏱ 1 hora aprox.", "👩‍🍳 Sin saber programar", "💶 0 € para empezar", "🍽 Resultado: tu web online, a tu medida"],
+title:"Receta: tu web online y gratis",
+meta:["⏱ 1-2 horas, a tu ritmo", "👩‍🍳 Sin saber programar", "💶 0 € para empezar", "🍽 Resultado: tu web online, a tu medida"],
 ing:"Ingredientes (todos gratuitos)",
 q:"¿Qué quieres preparar?",
 ph:"Describe tu web con tus palabras. Ejemplo: una web para mi gimnasio con horarios y un formulario para apuntarse",
@@ -31,9 +31,9 @@ ${DB()?`<li>Crea tu cuenta en <a href="https://supabase.com" target="_blank" rel
 <li><b>index.html, styles.css, app.js</b>: la página, su aspecto y su funcionamiento.</li>
 ${DB()?`<li><b>Supabase</b>: dónde se guardarán los datos y las cuentas.</li><li><b>config.js</b>: un archivo donde pegarás tus «llaves» de Supabase más adelante.</li>`:""}
 <li><b>«Como si no supiera programar»</b>: para que Claude te lo explique fácil.</li></ul></details>
-<div class="tip">Si algo no te gusta, díselo con tus palabras: «hazlo más oscuro», «pon el botón más grande».</div>${ok("Claude te ha enseñado los tres archivos y te los ha explicado.")}`},
+<div class="tip">Si algo no te gusta, díselo con tus palabras: «hazlo más oscuro», «pon el botón más grande».</div><h3>Baja los archivos a tu ordenador</h3><ol><li>Crea en tu ordenador una carpeta llamada <b>mi-app</b>.</li><li>En el chat, cada archivo tiene un botón de <b>descargar</b>. Pulsa en cada uno y guárdalo en <b>mi-app</b>.</li><li>¿No ves el botón? Pídele: «Dame los archivos en un .zip para descargar». Descomprímelo dentro de <b>mi-app</b>.</li></ol><div class="tip">Si vas a usar el conector de GitHub (paso siguiente), Claude puede subir los archivos él solo. Descargarlos igualmente te deja una copia.</div>${ok("tienes los archivos de tu web dentro de la carpeta mi-app de tu ordenador.")}`},
 {t:"Conecta Claude con tus herramientas",s:"5 min · conectores",b:()=>`<p class="what">Un conector es un permiso para que Claude use GitHub${DB()?" y Supabase":""} por ti, sin copiar y pegar. Funciona con MCP, el estándar que permite a Claude usar herramientas externas.</p><h3>Pasos</h3><ol>
-<li>En Claude ve a <b>Ajustes → Conectores</b>.</li><li>Pulsa <b>Conectar</b> junto a GitHub y autoriza con tu cuenta.</li>${DB()?"<li>Haz lo mismo con Supabase.</li>":""}</ol>
+<li>En Claude abre <b>Personalizar → Conectores</b> (en inglés: <b>Customize → Connectors</b>).</li><li>Pulsa <b>Conectar</b> junto a GitHub y autoriza con tu cuenta.</li>${DB()?"<li>Haz lo mismo con Supabase.</li>":""}</ol>
 <div class="tip">Si tu plan no muestra conectores, no pasa nada: cada paso siguiente tiene una alternativa manual.</div>${ok(DB()?"GitHub y Supabase aparecen como «Conectado».":"GitHub aparece como «Conectado».")}`},
 {db:1,t:"Que Claude prepare la base de datos",s:"5 min · crear las tablas",b:()=>`<p class="what">Una tabla es como una hoja de cálculo donde se guardan tus datos. Claude la crea por ti, con seguridad para que <b>cada usuario vea solo lo suyo</b>.</p><h3>Pasos</h3><ol>
 <li>En Supabase pulsa <b>New project</b>, ponle nombre y elige una región cercana. Espera un par de minutos.</li>
@@ -44,23 +44,23 @@ ${DB()?`<li><b>Supabase</b>: dónde se guardarán los datos y las cuentas.</li><
 <li>En Supabase abre <b>SQL Editor</b>, pega el código y pulsa <b>Run</b>.</li></ul></details>${ok("en Supabase, en <b>Table Editor</b>, ves tu tabla y aparece la seguridad (RLS) activada.")}`},
 {db:1,t:"Enchufa la web a Supabase",s:"5 min · las dos llaves",b:()=>`<p class="what">Tu web necesita dos datos para hablar con tu base de datos: una dirección y una llave pública.</p><h3>Pasos</h3><ol>
 <li>En Supabase abre <b>Project Settings → API</b>.</li>
-<li>Copia la <b>Project URL</b> y la clave <b>anon public</b>.</li>
+<li>Copia la <b>Project URL</b> y la <b>clave publicable</b> (<i>publishable key</i>; en proyectos antiguos se llama <b>anon public</b>).</li>
 <li>Ábrelas en el archivo <code>config.js</code> y pégalas donde Claude indicó. Si no sabes dónde, pregúntale.</li>
-<li>Haz doble clic en <code>index.html</code> para probarla en tu ordenador.</li></ol>
-<div class="tip">⚠️ Nunca uses la clave <b>service_role</b> en tu web: da acceso total a tus datos.</div>${ok("puedes crear una cuenta en tu web y guardar un dato de prueba.")}`},
+<li>Guarda el archivo. La probarás de verdad cuando esté publicada (paso «Publica tu web»).</li></ol><div class="tip">Si abres <code>index.html</code> con doble clic, el diseño se verá, pero crear cuentas puede fallar: los navegadores limitan las webs abiertas como archivo. Es normal; online funcionará.</div>
+<div class="tip">⚠️ Nunca uses la clave <b>secreta</b> (<i>secret</i> o <b>service_role</b>) en tu web: da acceso total a tus datos.</div>${ok("config.js tiene tu Project URL y tu clave publicable.")}`},
 {t:"Guarda todo en GitHub",s:"5 min · subir los archivos",b:()=>`<p class="what">Subes tus 3 archivos a GitHub. Cloudflare los leerá de ahí para publicar tu web.</p><h3>Con el conector</h3><ol><li>Dile a Claude: «Crea un repositorio llamado mi-app y sube estos archivos».</li></ol>
 <details><summary>Sin conector: hacerlo a mano</summary><ul>
 <li>En GitHub pulsa <b>New repository</b> y llámalo <b>mi-app</b>.</li>
 <li>Pulsa <b>uploading an existing file</b>, arrastra tus archivos y confirma con <b>Commit changes</b>.</li></ul></details>${ok("ves tus archivos dentro del repositorio mi-app en GitHub.")}`},
 {t:"Publica tu web en Cloudflare",s:"10 min · ponerla online",b:()=>`<p class="what">Cloudflare Pages coge tu repositorio y lo convierte en una web pública con candado (HTTPS).</p><h3>Pasos</h3><ol>
-<li>En Cloudflare abre <b>Workers &amp; Pages → Create → Pages → Connect to Git</b>.</li>
+<li>En Cloudflare abre <b>Workers &amp; Pages → Create</b> y elige importar un repositorio de GitHub (<b>Import a repository</b> o <b>Connect to Git</b>).</li>
 <li>Elige el repositorio <b>mi-app</b>.</li>
 <li>Deja vacío «Build command» y pon <code>/</code> en «Build output directory».</li>
-<li>Pulsa <b>Save and Deploy</b> y espera 1-2 minutos.</li>
-${DB()?"<li>En Supabase, <b>Authentication → URL Configuration</b>: pega tu dirección <code>.pages.dev</code> en «Site URL».</li>":""}</ol>${ok("abres tu dirección <code>mi-app.pages.dev</code> y tu web carga.")}`},
+<li>Pulsa <b>Save and Deploy</b> (o <b>Deploy</b>) y espera 1-2 minutos.</li><li>Si ves pantallas distintas a estas, haz una captura, pégala en Claude y pregúntale qué poner.</li>
+${DB()?"<li>En Supabase, <b>Authentication → URL Configuration</b>: pega la dirección de tu web en «Site URL».</li>":""}</ol>${ok("abres tu dirección (termina en <code>.pages.dev</code> o <code>.workers.dev</code>) y tu web carga.")}`},
 {t:"Prueba antes de servir",s:"5 min · revisión final",b:()=>`<p class="what">Antes de compartirla, comprueba que todo funciona y es seguro.</p><h3>Pasos</h3><ol>
 <li>Abre tu web desde el móvil y crea una cuenta.</li>
-${DB()?`<li>Crea otra cuenta con otro correo y comprueba que <b>no ve los datos de la primera</b>.</li><li>Revisa que en tu código solo aparece la clave <b>anon</b>.</li>`:`<li>Comprueba que los enlaces, las imágenes y los botones funcionan.</li>`}
+${DB()?`<li>Crea otra cuenta con otro correo y comprueba que <b>no ve los datos de la primera</b>.</li><li>Revisa que en tu código solo aparece la clave <b>publicable</b>.</li>`:`<li>Comprueba que los enlaces, las imágenes y los botones funcionan.</li>`}
 <li>Si más adelante usas la API de Claude u otra clave secreta, guárdala en un Worker de Cloudflare, nunca en la web.</li></ol>
 <div class="tip">${DB()?"Los proyectos gratuitos de Supabase se pausan tras una semana sin uso y se reactivan con un clic. Revisa los límites actuales en sus páginas de precios.":"Revisa los límites actuales de Cloudflare Pages en su página de precios."}</div>${ok(DB()?"dos usuarios distintos ven datos distintos.":"tu web se ve bien en el móvil y todo funciona.")}`}
 ,

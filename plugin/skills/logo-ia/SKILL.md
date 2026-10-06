@@ -1,12 +1,12 @@
 ---
 name: logo-ia
-description: "Receta de AMRI «Diseña un logo con IA». Crea un logo profesional para tu proyecto en minutos, con variantes, colores y formatos listos para usar. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Diseña un logo con IA». Crea un logo para tu proyecto, con variantes, colores y formatos listos para usar. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Diseña un logo con IA
 
-Crea un logo profesional para tu proyecto en minutos, con variantes, colores y formatos listos para usar.
+Crea un logo para tu proyecto, con variantes, colores y formatos listos para usar.
 
 - ⏱ 40 min aprox.
 - 👩‍🍳 Sin saber diseñar
@@ -25,7 +25,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 - Antes de empezar, resume el plan en 3-5 puntos y pide confirmación.
 - **Haz tú todo lo que puedas** con tus herramientas: crear y editar archivos, la terminal, git, `gh`, `npx wrangler`, npm y los conectores (MCP) que estén disponibles. Los pasos de abajo están escritos para alguien que usa Claude en el chat: adáptalos. Donde diga «copia este mensaje y pégalo en Claude», haz tú directamente lo que pide el mensaje.
 - **Lo hace la persona, nunca tú:** crear cuentas, iniciar sesión, autorizar accesos, aceptar condiciones y pagar. Dile exactamente qué pulsar, lanza el inicio de sesión de la herramienta cuando exista (`gh auth login`, `npx wrangler login`…) y espera a que confirme.
-- No pidas, no escribas y no guardes en el código contraseñas ni claves secretas. Las claves públicas (como la «anon» de Supabase) sí pueden ir en el código; las secretas, solo en variables de entorno.
+- No pidas, no escribas y no guardes en el código contraseñas ni claves secretas. Las claves públicas (como la «publicable» de Supabase, antes llamada «anon») sí pueden ir en el código; las secretas, solo en variables de entorno.
 - Pide permiso antes de cualquier acción que publique algo o no tenga vuelta atrás: subir a GitHub, desplegar, borrar.
 - Después de cada paso, comprueba su **✅ Comprobación** antes de seguir. Si falla, averigua por qué y arréglalo; si no puedes, explícalo y propón una salida.
 - Trabaja en una carpeta nueva con un nombre corto sacado de la idea, salvo que la persona ya esté dentro de su proyecto.
@@ -233,6 +233,7 @@ Antes de imprimir tarjetas o rotular una tienda, unas comprobaciones sencillas.
 
 ## Sigue con
 
+- `/amri:empieza-aqui` · Empieza aquí: conoce a Claude
 - `/amri:asistente-ia` · Tu asistente personal con IA
 - `/amri:imagenes-ia` · Crea imágenes con IA gratis
 - `/amri:chef` · combina varias recetas en un proyecto propio

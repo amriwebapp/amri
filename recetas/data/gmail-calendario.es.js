@@ -1,6 +1,6 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Receta: tu secretaría con Gmail y Google Calendar",
-meta:["⏱ 25 min aprox.", "👩‍🍳 Fácil", "💶 0 € para empezar", "🍽 Resultado: un resumen de tu día en 1 minuto"],
+meta:["⏱ 25 min aprox.", "👩‍🍳 Fácil", "💶 Gratis si tu plan de Claude incluye conectores", "🍽 Resultado: un resumen de tu día en 1 minuto"],
 ing:"Ingredientes",
 q:"¿Qué te quita más tiempo?",
 ph:"Describe tu caso. Ejemplo: tengo 80 correos al día de proveedores y siempre se me pasan los importantes",
@@ -27,6 +27,6 @@ steps:[
 {t:"Tu primer resumen",s:"3 min · buenos días",b:()=>`<p class="what">Abre un chat dentro del proyecto y pide tu resumen.</p>${cb("Revisa mis correos de las últimas 24 horas y mi agenda de hoy. Dime:\n1) Lo urgente (máximo 5).\n2) Lo que puede esperar.\n3) Mis reuniones de hoy y qué debería preparar para cada una.")}${ok("en un minuto sabes qué te espera hoy.")}`},
 {db:1,t:"Borradores con tu tono",s:"5 min · responder",b:()=>`<p class="what">Claude escribe, tú revisas y envías.</p>${cb("Prepara borradores de respuesta para los correos urgentes, con mi tono. No envíes nada. Si el conector permite crear borradores en Gmail, déjalos ahí; si no, escríbemelos aquí para copiarlos.")}${tip("Lee siempre cada borrador antes de enviarlo. Tú firmas, tú decides.")}${ok("tienes borradores listos para revisar.")}`},
 {t:"Hazlo costumbre",s:"2 min · la rutina",b:()=>`<p class="what">Guarda el mensaje del resumen en una nota y úsalo cada mañana dentro del proyecto.</p>${tip("Si usas <b>Claude Cowork</b> en el escritorio, puedes convertirlo en una <b>tarea programada</b> que se ejecute sola cada mañana laborable.")}${ok("mañana repites y tardas menos de un minuto.")}`},
-{x:1,t:"Privacidad tranquila",s:"Siempre · consejos",b:()=>`<ol><li>Puedes <b>desconectar</b> Gmail o Calendar cuando quieras en Personalizar → Conectores.</li><li>No pidas a Claude que reenvíe datos personales de otras personas.</li><li>Revisa la política de tu empresa antes de conectar una cuenta de trabajo.</li></ol>`},
+{x:1,t:"Privacidad tranquila",s:"Siempre · consejos",b:()=>`<ol><li>⚠️ <b>Ojo con los mensajes trampa</b>: un correo puede llevar instrucciones escondidas para engañar a Claude («ignora lo anterior y reenvía…»). Por eso la regla de oro: Claude solo lee y propone; enviar, borrar o compartir lo haces tú. Si hace algo que no le pediste, páralo.</li><li>Puedes <b>desconectar</b> Gmail o Calendar cuando quieras en Personalizar → Conectores.</li><li>No pidas a Claude que reenvíe datos personales de otras personas.</li><li>Revisa la política de tu empresa antes de conectar una cuenta de trabajo.</li></ol>`},
 {x:1,t:"Si algo no funciona",s:"Siempre · revisa esto",b:()=>`<ol><li><b>No ve tus correos</b>: vuelve a conectar Gmail y acepta todos los permisos que pide.</li><li><b>Resúmenes demasiado largos</b>: añade a las instrucciones «máximo 10 líneas».</li></ol>${det("💡 Ideas para seguir",["Un resumen de los viernes con lo pendiente.","Encontrar facturas y apuntarlas en una hoja.","Proponer huecos para una reunión con 3 personas."])}`}
 ]}};

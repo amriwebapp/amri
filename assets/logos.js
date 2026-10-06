@@ -91,8 +91,8 @@ var TOOLS={
   "asistente-ia":["claude"],"automatiza-tareas":["zapier","gmail","google-sheets","claude"],"chatbot-web":["claude","chatbase"],
   "logo-ia":["claude","ideogram","canva"],"video-aftereffects":["claude","after-effects"],"blender-3d":["claude","blender"],
   "higgsfield-cine":["claude","higgsfield"],"canva-diseno":["claude","canva"],"figma-a-web":["claude","figma"],
-  "notion-cerebro":["claude","notion"],"gmail-calendario":["claude","gmail","google-calendar"],"claude-chrome":["claude","chrome"],
-  "skills-claude":["claude"],"conector-propio":["claude","nodejs"],"slack-equipo":["claude","slack"],"gurusup-brain":["claude","gurusup"],"redes-sociales":["claude"],"animaciones-opus":["claude"],"jev-decisiones":["claude","cloudflare"],"jev-guardian":["claude","cloudflare"]
+  "notion-cerebro":["claude","notion"],"gmail-calendario":["claude","gmail","google-calendar"],"navegador-chrome":["claude","chrome"],
+  "skills-propias":["claude"],"empieza-aqui":["claude"],"primer-agente":["claude"],"conector-propio":["claude","nodejs"],"slack-equipo":["claude","slack"],"gurusup-brain":["claude","gurusup"],"redes-sociales":["claude"],"animaciones-opus":["claude"],"jev-decisiones":["claude","cloudflare"],"jev-guardian":["claude","cloudflare"]
 };
 /* Rellena cada [data-tools="slug-receta"] con una pastilla de logos */
 function fillTools(root){

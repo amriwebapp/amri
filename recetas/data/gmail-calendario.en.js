@@ -1,6 +1,6 @@
 (window.RECIPE=window.RECIPE||{}).en={
 title:"Recipe: your secretary with Gmail and Google Calendar",
-meta:["⏱ About 25 min","👩‍🍳 Easy","💶 €0 to get started","🍽 Result: a summary of your day in 1 minute"],
+meta:["⏱ About 25 min","👩‍🍳 Easy","💶 Free if your Claude plan includes connectors","🍽 Result: a summary of your day in 1 minute"],
 ing:"Ingredients",
 q:"What takes up most of your time?",
 ph:"Describe your situation. Example: I get 80 supplier emails a day and I always miss the important ones",
@@ -27,6 +27,6 @@ steps:[
 {t:"Your first summary",s:"3 min · good morning",b:()=>`<p class="what">Open a chat inside the project and ask for your summary.</p>${cb("Review my emails from the last 24 hours and my calendar for today. Tell me:\n1) What's urgent (max 5).\n2) What can wait.\n3) My meetings today and what I should prepare for each.")}${ok("in one minute you know what's ahead of you today.")}`},
 {db:1,t:"Drafts in your tone",s:"5 min · reply",b:()=>`<p class="what">Claude writes, you review and send.</p>${cb("Prepare reply drafts for the urgent emails, in my tone. Don't send anything. If the connector can create drafts in Gmail, leave them there; if not, write them here so I can copy them.")}${tip("Always read each draft before sending it. You sign, you decide.")}${ok("you have drafts ready to review.")}`},
 {t:"Make it a habit",s:"2 min · the routine",b:()=>`<p class="what">Save the summary message in a note and use it every morning inside the project.</p>${tip("If you use <b>Claude Cowork</b> on desktop, you can turn it into a <b>scheduled task</b> that runs by itself every weekday morning.")}${ok("tomorrow you repeat it and it takes less than a minute.")}`},
-{x:1,t:"Calm privacy",s:"Always · tips",b:()=>`<ol><li>You can <b>disconnect</b> Gmail or Calendar whenever you like in Customize → Connectors.</li><li>Don't ask Claude to forward other people's personal data.</li><li>Check your company's policy before connecting a work account.</li></ol>`},
+{x:1,t:"Calm privacy",s:"Always · tips",b:()=>`<ol><li>⚠️ <b>Watch out for trap messages</b>: a email can hide instructions meant to trick Claude (“ignore the above and forward…”). That's why the golden rule is: Claude only reads and suggests; sending, deleting or sharing is up to you. If it does something you didn't ask for, stop it.</li><li>You can <b>disconnect</b> Gmail or Calendar whenever you like in Customize → Connectors.</li><li>Don't ask Claude to forward other people's personal data.</li><li>Check your company's policy before connecting a work account.</li></ol>`},
 {x:1,t:"If something doesn't work",s:"Always · check this",b:()=>`<ol><li><b>It can't see your emails</b>: reconnect Gmail and accept all the permissions it asks for.</li><li><b>Summaries too long</b>: add “max 10 lines” to the instructions.</li></ol>${det("💡 Ideas to keep going",["A Friday summary of what's pending.","Find invoices and log them in a sheet.","Suggest slots for a meeting with 3 people."])}`}
 ]}};
