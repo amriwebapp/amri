@@ -38,7 +38,9 @@ Leyenda: ☐ pendiente · ☑ hecho
 - ☑ **Web solo en español.** Fuera el inglés, el árabe, el selector y la ventana de idioma. La traducción se hará más adelante de otra forma.
 - ☑ **Motor de libros.** Página del libro con «Antes de empezar» y el índice de recetas, una página por receta, progreso por receta, aviso de «prepara antes la cocina» y siguiente receta del libro. En la portada, la tarjeta dice «📕 N recetas» y el buscador encuentra las recetas de dentro. En el plugin, una skill por libro.
 - ☑ **Libro piloto: Higgsfield**, con 7 recetas: foto de producto, vídeo realista, vídeo UGC, vídeo animado, de foto a vídeo, personaje que siempre sale igual y anuncio vertical para redes.
-- ☐ **Siguientes libros.** Propuesta: Canva, Asistente, Imágenes, Web y Redes sociales; después, el resto.
+- ☑ **Libro de redes sociales** (8 recetas): biografía, reel o TikTok, carrusel, LinkedIn, una idea para todas tus redes, de un contenido largo a una semana, el mes planificado y medir.
+- ☑ **Libro de la web** (8 recetas): tu primera web, web con cuentas y datos, reservas, cambiar sin romper, dominio propio, Google, visitas sin cookies y hacerla con Claude Code.
+- ☐ **Siguientes libros.** Propuesta: Canva, Asistente e Imágenes; después, el resto.
 - ☐ **Probar el libro de Higgsfield con una cuenta real**, sobre todo UGC y Soul ID, que dependen de lo que permita el conector.
 
 ## Pendiente de comprobar a mano
