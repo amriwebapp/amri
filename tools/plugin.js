@@ -68,6 +68,7 @@ function build(slug) {
   ctx.window.RECIPE = {};
   vm.runInNewContext(fs.readFileSync(file, "utf8"), ctx);
   const P = ctx.window.RECIPE.es, R = P.R;
+  if (!R.apps) { R.apps = { base: { n: "", db: true, d: "" } }; R.def = "base"; }
   const APPS = R.apps, app = R.def;
   const IDEA = "[la idea de la persona]";
   Object.keys(APPS).forEach(k => { if (k === app) APPS[k].d = IDEA; });
@@ -85,6 +86,18 @@ function build(slug) {
   const cond = P.yn ? ` _(solo si la respuesta a «${P.yn.replace(/[¿?]/g, "").trim()}» es «Sí»)_` : " _(opcional)_";
   const stepMd = (s, i) => `### ${i + 1}. ${s.t}${s.db ? cond : ""}\n_${s.s || ""}_\n\n${md(call(s.b))}`;
   const ideas = Object.values(R.apps).filter(a => a.d && a.d !== IDEA).map(a => `- **${a.n}:** ${a.d}`).join("\n");
+  /* Libro: cada receta de dentro, con sus propios pasos */
+  const libro = (P.recetas || []).map((r, k) => {
+    const env2 = Object.assign({}, env, { APPS: r.apps, app: r.def || Object.keys(r.apps)[0], D: () => IDEA, DB: () => true });
+    const call2 = f => typeof f === "function" ? vm.runInNewContext("(" + f.toString() + ")()", env2) : f;
+    const main = r.steps.filter(x => !x.x), ex = r.steps.filter(x => x.x);
+    const ej = Object.values(r.apps).filter(a => a.d).map(a => `  - ${a.n}: ${a.d}`).join("\n");
+    const st = (x, i, pre) => `#### ${pre}${i + 1}. ${x.t}\n_${x.s || ""}_\n\n${md(call2(x.b))}`;
+    return `### Receta ${k + 1}: ${r.t}\n\n${r.d || ""}\n\n${(r.meta || []).map(m => "- " + m).join("\n")}\n- Versión web: ${SITE}/recetas/${slug}--${r.s}.html\n${ej ? "- Ideas de ejemplo:\n" + ej + "\n" : ""}\n` +
+      main.map((x, i) => st(x, i, "")).join("\n\n") +
+      (ex.length ? "\n\n" + ex.map((x, i) => st(x, i, "Extra ")).join("\n\n") : "") +
+      (r.fin ? `\n\n**Al terminar:** ${md(r.fin)}` : "");
+  }).join("\n\n");
   const next = (cat ? cat[1] : []).filter(s => s !== slug).map(s => `- \`/amri:${skillName(s)}\` · ${card(s).titulo}`).join("\n");
   const desc = `Receta de AMRI «${c.titulo}». ${c.desc} Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar.`.replace(/"/g, "'");
   const out = `---
@@ -107,9 +120,16 @@ ${PROTOCOL}
 
 ${md(call(R.ing))}
 
-${ideas ? "## Ideas de ejemplo\n\n" + ideas + "\n\n" : ""}${P.yn ? `## Antes de empezar\n\nPregunta a la persona: **${P.yn}** ${md(P.yntip)}\n\nSi responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.\n\n` : ""}## Pasos
+${ideas ? "## Ideas de ejemplo\n\n" + ideas + "\n\n" : ""}${P.yn ? `## Antes de empezar\n\nPregunta a la persona: **${P.yn}** ${md(P.yntip)}\n\nSi responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.\n\n` : ""}${libro ? `## Este es un libro de recetas
 
-${steps.map(stepMd).join("\n\n")}
+Tiene una preparación común («Antes de empezar») y ${P.recetas.length} recetas concretas. Según la idea de la persona:
+1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
+2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
+3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
+
+` : ""}## ${libro ? "Antes de empezar" : "Pasos"}
+
+${steps.map(stepMd).join("\n\n")}${libro ? "\n\n## Recetas del libro\n\n" + libro : ""}
 
 ## Al terminar
 

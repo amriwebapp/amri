@@ -6,12 +6,6 @@ var UI={
  es:{copy:"Copiar",copied:"¡Copiado!",ok:"Sabrás que salió bien cuando",undo:"Marcar como pendiente",gotit:"Entendido",next:"Listo, siguiente paso",end:"¡Terminado!",
    of:function(c,n){return c+" de "+n+" pasos completados"},yes:"Sí",no:"No",reset:"Empezar de nuevo",xt:"Extras: después de servir",xs:"Opcionales. No cuentan en tu progreso.",
    finh:"🎉 ¡Listo, a la mesa!",idea:"Tu idea",type:"Tipo"},
- en:{copy:"Copy",copied:"Copied!",ok:"You'll know it worked when",undo:"Mark as pending",gotit:"Got it",next:"Done, next step",end:"Finished!",
-   of:function(c,n){return c+" of "+n+" steps completed"},yes:"Yes",no:"No",reset:"Start over",xt:"Extras: after serving",xs:"Optional. They don't count towards your progress.",
-   finh:"🎉 Done, dinner is served!",idea:"Your idea",type:"Type"},
- ar:{copy:"نسخ",copied:"تم النسخ!",ok:"ستعرف أنها نجحت عندما",undo:"وضع علامة: لم يكتمل",gotit:"فهمت",next:"تم، الخطوة التالية",end:"انتهيت!",
-   of:function(c,n){return "أكملت "+c+" من "+n+" خطوات"},yes:"نعم",no:"لا",reset:"ابدأ من جديد",xt:"إضافات: بعد التقديم",xs:"اختيارية. لا تُحتسب في تقدّمك.",
-   finh:"🎉 جاهز، إلى المائدة!",idea:"فكرتك",type:"النوع"}
 };
 var LANG=(window.I18N&&I18N.lang())||"es";
 if(!RECIPE[LANG])LANG="es";
@@ -49,6 +43,8 @@ function setLang(l){
   pick.innerHTML="";
   Object.keys(APPS).forEach(function(k){var b=document.createElement("button");b.className="chip";b.textContent=APPS[k].n;b.dataset.k=k;
     b.onclick=function(){app=k;open=null;save();render()};pick.appendChild(b)});
+  /* Sin opciones que elegir (por ejemplo, «Antes de empezar» de un libro): se oculta la pregunta */
+  var single=Object.keys(APPS).length<2;pick.style.display=single?"none":"";$("rq").parentNode.style.display=single?"none":"";
   render();
 }
 cx.value=custom.d;

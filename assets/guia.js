@@ -44,57 +44,6 @@ var GLOSS={
   [["Cowork"],"El modo de la app de escritorio de Claude en el que trabaja con tus documentos y carpetas, sin terminal."],
   [["clave publicable"],"La llave de Supabase que puede ir en tu web sin peligro: solo deja hacer lo que permiten tus reglas."]
  ],
- en:[
-  [["repository","repositories","repo"],"A folder of your project stored on GitHub, with the history of every change."],
-  [["GitHub"],"A free service to store code in the cloud and see every change you make."],
-  [["Cloudflare"],"A company that publishes your website on the internet, fast and with a padlock (HTTPS). The basic plan is free."],
-  [["Supabase"],"A ready-to-use database and user account system, with a free plan."],
-  [["database","databases"],"Where your app stores its data in an orderly way, like a very powerful spreadsheet."],
-  [["domain","domains"],"Your website's address, like amri.es. You rent it by the year."],
-  [["DNS"],"The internet's phone book: it translates your domain into the server's address."],
-  [["HTTPS"],"The secure connection: the padlock you see next to the address."],
-  [["connector","connectors"],"Permission for Claude to use another app for you (Gmail, Canva…). You can remove it any time."],
-  [["MCP"],"The standard connectors use so Claude can talk to other tools."],
-  [["prompt","prompts"],"The message or instruction you give Claude."],
-  [["API"],"The door through which two programs talk to each other."],
-  [["terminal","Terminal"],"The window where you give the computer instructions by typing text."],
-  [["plugin"],"A package that adds features to a program, such as new recipes for Claude Code."],
-  [["Skill","Skills"],"Saved instructions that Claude uses on its own when the task fits."],
-  [["RLS"],"Database rules so each person only sees their own data."],
-  [["HTML"],"The skeleton of a web page: text, headings, images and buttons."],
-  [["CSS"],"A website's style: colours, sizes, fonts and positions."],
-  [["JavaScript"],"The code that makes a website react: buttons, forms and animations."],
-  [["commit"],"Saving a change to your repository's history, with a note about what you changed."],
-  [["Claude Code"],"The version of Claude that works with the files on your computer, from the desktop app or the terminal: it creates files and runs commands for you."],
-  [["agent","agents"],"Claude working on its own on a task with several steps: it makes a plan, carries it out, checks the result and asks your permission before anything important."],
-  [["subagent","subagents"],"A helper Claude hands part of a big task to, for example researching or reviewing."],
-  [["Cowork"],"The Claude desktop app mode where it works with your documents and folders, without a terminal."],
-  [["publishable key"],"The Supabase key that can safely go on your website: it only allows what your rules permit."]
- ],
- ar:[
-  [["مستودع","المستودع"],"مجلد مشروعك محفوظ في GitHub مع سجل كل تغيير."],
-  [["GitHub"],"خدمة مجانية لحفظ الشيفرة في السحابة ورؤية كل تغيير تجريه."],
-  [["Cloudflare"],"شركة تنشر موقعك على الإنترنت بسرعة ومع قفل أمان (HTTPS). الخطة الأساسية مجانية."],
-  [["Supabase"],"قاعدة بيانات ونظام حسابات مستخدمين جاهزان للاستخدام، مع خطة مجانية."],
-  [["قاعدة بيانات","قاعدة البيانات"],"المكان الذي يحفظ فيه تطبيقك البيانات بترتيب، كجدول بيانات قوي جداً."],
-  [["نطاق","النطاق"],"عنوان موقعك، مثل amri.es. يُستأجر بالسنة."],
-  [["DNS"],"دليل هاتف الإنترنت: يترجم نطاقك إلى عنوان الخادم."],
-  [["HTTPS"],"الاتصال الآمن: القفل الذي تراه بجانب العنوان."],
-  [["موصل","الموصل","موصلات"],"إذن لـ Claude لاستخدام تطبيق آخر نيابة عنك (Gmail وCanva…). يمكنك إزالته متى شئت."],
-  [["MCP"],"المعيار الذي تستخدمه الموصلات ليتحدث Claude مع أدوات أخرى."],
-  [["API"],"الباب الذي يتحدث منه برنامجان معاً."],
-  [["الطرفية"],"النافذة التي تعطي فيها أوامر للحاسوب بكتابة نص."],
-  [["إضافة","الإضافة"],"حزمة تضيف ميزات إلى برنامج، مثل وصفات جديدة لـ Claude Code."],
-  [["Skill","Skills"],"تعليمات محفوظة يستخدمها Claude وحده عندما تناسب المهمة."],
-  [["RLS"],"قواعد في قاعدة البيانات ليرى كل شخص بياناته فقط."],
-  [["HTML"],"هيكل صفحة الويب: النصوص والعناوين والصور والأزرار."],
-  [["CSS"],"مظهر الموقع: الألوان والأحجام والخطوط والمواضع."],
-  [["JavaScript"],"الشيفرة التي تجعل الموقع يتفاعل: الأزرار والنماذج والحركة."],
-  [["Claude Code"],"نسخة Claude التي تعمل بملفات حاسوبك، من تطبيق سطح المكتب أو من الطرفية: تنشئ الملفات وتنفذ الأوامر نيابة عنك."],
-  [["وكيل","وكلاء"],"Claude يعمل وحده على مهمة من عدة خطوات: يضع خطة وينفذها ويتحقق من النتيجة ويستأذنك قبل أي أمر مهم."],
-  [["Cowork"],"وضع في تطبيق Claude لسطح المكتب يعمل فيه بمستنداتك ومجلداتك دون طرفية."],
-  [["المفتاح العام"],"مفتاح Supabase الذي يمكن وضعه في موقعك بأمان: لا يسمح إلا بما تسمح به قواعدك."]
- ]
 };
 
 /* ---------------- Qué pasa por debajo ---------------- */
@@ -113,38 +62,8 @@ var UNDER={
   [["video","clip"],"Generar vídeo consume mucha potencia, por eso estas herramientas usan créditos. Prueba la idea en una imagen fija antes de gastar en vídeo."],
   [["automatiz","zapier"],"Una automatización es una receta que se repite sola: algo la dispara (una hora, un correo nuevo) y después sigue unos pasos fijos."]
  ],
- en:[
-  [["account","accounts","sign up"],"Each service does one thing very well: GitHub stores, Cloudflare publishes, Claude thinks. That's why you use several accounts: your project doesn't depend on a single place and you can swap one piece without touching the others."],
-  [["github","repository"],"Git saves every version of your files. If something breaks, you can go back. And Cloudflare watches your repository and publishes every change you push automatically."],
-  [["cloudflare","publish","pages"],"Cloudflare copies your website to servers all over the world, so it loads fast from any country and you don't need your own server."],
-  [["supabase","database","table"],"Your website is the shop front; the data lives in Supabase. RLS rules mean that even though everyone uses the same table, each person only sees their own data."],
-  [["connector","mcp","connect"],"A connector gives Claude a limited pass to act in another app on your behalf. Claude never sees your password and you can withdraw the permission any time."],
-  [["copy this","paste","message","prompt"],"The recipe's prompts give Claude the context it needs: what you want, who it's for and in what format. The more specific the message, the better the result."],
-  [["domain","dns"],"Your domain is your address; DNS says which server it leads to. When you point it to Cloudflare, every visit goes through there."],
-  [["skill"],"Claude doesn't remember your previous conversations, but it does read your Skills when the task fits. They're its long-term memory for the way you work."],
-  [["claude code","terminal","plugin"],"Claude Code works directly on your computer: it creates files and runs commands. That's why it asks for permission before each important action."],
-  [["image","logo","illustration"],"Image generators don't draw stroke by stroke: they create the image out of noise following your description. That's why style, light and colours in the prompt change the result so much."],
-  [["video","clip"],"Generating video takes a lot of computing power, so these tools use credits. Test the idea as a still image before spending on video."],
-  [["automat","zapier"],"An automation is a recipe that repeats itself: something triggers it (a time, a new email) and then it follows fixed steps."]
- ],
- ar:[
-  [["حساب","حسابات"],"كل خدمة تتقن شيئاً واحداً: GitHub يحفظ، وCloudflare ينشر، وClaude يفكر. لذلك تستخدم عدة حسابات: لا يعتمد مشروعك على مكان واحد، ويمكنك تغيير قطعة دون المساس بالباقي."],
-  [["github","مستودع"],"يحفظ Git كل نسخة من ملفاتك. إن تعطل شيء يمكنك الرجوع. كما يراقب Cloudflare مستودعك وينشر تلقائياً كل تغيير ترفعه."],
-  [["cloudflare","انشر","ينشر"],"ينسخ Cloudflare موقعك إلى خوادم حول العالم، فيُحمَّل بسرعة من أي بلد ولا تحتاج إلى خادم خاص."],
-  [["supabase","قاعدة","جدول"],"موقعك هو الواجهة؛ والبيانات تعيش في Supabase. قواعد RLS تجعل كل شخص يرى بياناته فقط رغم أن الجميع يستخدم الجدول نفسه."],
-  [["موصل","mcp","اربط"],"يمنح الموصل Claude تصريحاً محدوداً للعمل في تطبيق آخر نيابة عنك. لا يرى Claude كلمة مرورك ويمكنك سحب الإذن متى شئت."],
-  [["انسخ","الصق","رسالة"],"أوامر الوصفة تعطي Claude السياق الذي يحتاجه: ماذا تريد، ولمن، وبأي صيغة. كلما كانت الرسالة أدق كانت النتيجة أفضل."],
-  [["نطاق","dns"],"نطاقك هو عنوانك؛ وDNS يحدد إلى أي خادم يوصل. عندما توجّهه إلى Cloudflare تمر كل الزيارات من هناك."],
-  [["skill","مهارة"],"لا يتذكر Claude محادثاتك السابقة، لكنه يقرأ مهاراتك عندما تناسب المهمة. إنها ذاكرته الطويلة لطريقة عملك."],
-  [["claude code","الطرفية","إضافة"],"يعمل Claude Code مباشرة على حاسوبك: ينشئ الملفات وينفذ الأوامر. لذلك يطلب الإذن قبل كل خطوة مهمة."],
-  [["صورة","شعار"],"مولّدات الصور لا ترسم خطاً بخط: تنشئ الصورة من ضجيج وفق وصفك. لذلك يغيّر الأسلوب والإضاءة والألوان في الأمر النتيجة كثيراً."],
-  [["فيديو"],"توليد الفيديو يستهلك قدرة كبيرة، لذلك تستخدم هذه الأدوات أرصدة. جرّب الفكرة كصورة ثابتة قبل الإنفاق على الفيديو."],
-  [["أتمتة","zapier"],"الأتمتة وصفة تتكرر وحدها: شيء يطلقها (وقت، بريد جديد) ثم تتبع خطوات ثابتة."]
- ]
 };
-var UNDER_DEF={es:"Este paso deja preparado lo que necesita el siguiente. Si lo saltas, lo normal es que más adelante algo no funcione.",
- en:"This step prepares what the next one needs. If you skip it, something usually won't work later on.",
- ar:"هذه الخطوة تجهّز ما تحتاجه الخطوة التالية. إن تخطيتها، فغالباً لن يعمل شيء لاحقاً."};
+var UNDER_DEF={es:"Este paso deja preparado lo que necesita el siguiente. Si lo saltas, lo normal es que más adelante algo no funcione."};
 
 /* ---------------- Si algo falla ---------------- */
 var FIX={
@@ -159,28 +78,6 @@ var FIX={
   [["imagen","logo"],"¿Las imágenes no se parecen a lo que pides? Describe estilo, encuadre y luz, y pide cuatro variantes para elegir."],
   [["terminal","claude code"],"¿«command not found»? La herramienta no está instalada, o tienes que cerrar y volver a abrir la Terminal después de instalarla."]
  ],
- en:[
-  [["github","repository"],"Files missing on GitHub? On a Mac, folders starting with a dot are hidden: press ⌘ + Shift + . in Finder to see them and upload them too."],
-  [["cloudflare","pages"],"Blank page or 404 error? In Cloudflare, check that the Build output directory is the folder where index.html is."],
-  [["domain","dns"],"“This site can't be reached” after changing DNS? Wait a few hours or flush your computer's DNS cache; try from your phone on mobile data."],
-  [["supabase","database"],"Data not saving? Check that you copied the full Project URL and publishable (or older “anon”) key, and that the RLS rules allow inserts."],
-  [["connector"],"Can't see the connector? Look in Customize → Connectors; some depend on your plan. Every step has a manual alternative."],
-  [["copy this","paste","prompt","claude"],"Claude not doing what you want? Ask for one change at a time and explain what you expected to see and what you see."],
-  [["plugin","marketplace"],"“Marketplace file not found”? The repository has no .claude-plugin folder: check it was uploaded."],
-  [["image","logo"],"Images don't look like what you asked for? Describe style, framing and light, and ask for four variations to choose from."],
-  [["terminal","claude code"],"“command not found”? The tool isn't installed, or you need to close and reopen Terminal after installing it."]
- ],
- ar:[
-  [["github","مستودع"],"ملفات ناقصة في GitHub؟ على Mac المجلدات التي تبدأ بنقطة مخفية: اضغط ⌘ + Shift + . في Finder لرؤيتها وارفعها أيضاً."],
-  [["cloudflare"],"صفحة فارغة أو خطأ 404؟ في Cloudflare تحقق أن مجلد الإخراج (Build output directory) هو المجلد الذي فيه index.html."],
-  [["نطاق","dns"],"«لا يمكن الوصول إلى الموقع» بعد تغيير DNS؟ انتظر بضع ساعات أو امسح ذاكرة DNS في حاسوبك؛ جرّب من الهاتف ببيانات الجوال."],
-  [["supabase","قاعدة"],"البيانات لا تُحفظ؟ تحقق أنك نسخت Project URL والمفتاح العام (أو «anon» في المشاريع القديمة) كاملين، وأن قواعد RLS تسمح بالإضافة."],
-  [["موصل"],"لا ترى الموصل؟ ابحث عنه في Customize ← Connectors؛ بعضها يعتمد على خطتك. لكل خطوة بديل يدوي."],
-  [["انسخ","الصق","claude"],"Claude لا يفعل ما تريد؟ اطلب تغييراً واحداً في كل مرة واشرح ما كنت تتوقعه وما تراه."],
-  [["إضافة","marketplace"],"«Marketplace file not found»؟ المستودع ليس فيه مجلد ‎.claude-plugin: تحقق من رفعه."],
-  [["صورة","شعار"],"الصور لا تشبه ما تطلبه؟ صِف الأسلوب والإطار والإضاءة، واطلب أربعة بدائل لتختار."],
-  [["الطرفية","claude code"],"«command not found»؟ الأداة غير مثبّتة، أو عليك إغلاق الطرفية وفتحها من جديد بعد التثبيت."]
- ]
 };
 
 function pick(lib,text,max,title){

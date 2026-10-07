@@ -8,7 +8,6 @@
 .acc-btn.plain{padding:8px 15px}
 .acc-badge{background:var(--acc);color:#fff;border-radius:999px;font-size:12px;padding:1px 7px;font-weight:800}
 @media(max-width:560px){.acc-btn .nm{display:none}.acc-btn{padding:6px}.acc-btn.plain{padding:8px 12px}}
-
 /* Ventana modal */
 .md-wrap{position:fixed;inset:0;z-index:150;display:grid;place-items:center;padding:16px;background:color-mix(in srgb,var(--bg) 55%,transparent);
   backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);animation:mdf .5s cubic-bezier(.22,.8,.24,1);overflow-y:auto}
@@ -49,7 +48,6 @@
 .howto{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:14px}
 .howto b{display:block;margin-bottom:4px}
 .howto ol{margin:0;padding-inline-start:18px}.howto li{margin:3px 0}
-
 /* Comunidad bajo cada receta */
 .comunidad{margin:44px 0 10px;padding-top:30px;border-top:1px solid var(--line)}
 .comunidad .ch{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:6px}
@@ -69,7 +67,6 @@
 .pj p{margin:3px 0 0;font-size:14.5px;color:var(--mute)}
 .pj .go{color:var(--acc);font-weight:700;font-size:14px;white-space:nowrap}
 .c-empty{text-align:center;padding:26px;border:1.5px dashed var(--line);border-radius:18px;color:var(--mute)}
-
 /* Páginas de perfil y revisión */
 .pg{max-width:980px;margin:0 auto;padding:110px 22px 80px}
 .pg h1{font-size:clamp(34px,5vw,54px);letter-spacing:-.035em;line-height:1.02;margin:0 0 8px}
@@ -141,7 +138,6 @@
 .news-consent input{margin-top:3px;accent-color:var(--acc)}
 .foot-brands{font-size:12.5px;color:var(--mute);opacity:.85;max-width:var(--maxw);margin:14px auto 0;padding:0 22px}
 @media(max-width:700px){.legal table.lt{display:block;overflow-x:auto;table-layout:auto;overflow-wrap:normal;-webkit-overflow-scrolling:touch}.legal .lt th,.legal .lt td{min-width:150px}}
-
 /* Página del plugin */
 .plg-k{display:block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:6px}
 .plg h1 em{font-style:normal;color:var(--acc)}
@@ -163,7 +159,6 @@
 .plg-table code{direction:ltr;display:inline-block;white-space:nowrap;font-size:13.5px;background:var(--soft);padding:3px 8px;border-radius:8px}
 .plg-table a{white-space:nowrap;font-weight:700}
 .plg section{margin-top:34px}.plg section h2{font-size:24px;letter-spacing:-.02em;margin:0}
-
 /* Insignias */
 .sec-h small{font-weight:700;color:var(--mute);letter-spacing:0;margin-inline-start:6px}
 .bdg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
@@ -173,7 +168,6 @@
 .bdg.on .bdg-i{background:linear-gradient(145deg,#F2A77E,var(--acc));box-shadow:0 10px 22px -10px var(--acc)}
 .bdg b{font-size:14px;line-height:1.25}.bdg small{font-size:12px;color:var(--mute);line-height:1.3}
 .bdg-s{margin-top:6px}
-
 /* Página del plugin: explicación */
 .plg-jump{margin:18px 0 6px}
 .plg .plg-what{margin-top:40px}
@@ -199,15 +193,12 @@
 .plg-tt i{width:10px;height:10px;border-radius:50%;background:#3A2E22}.plg-tt span{margin-inline-start:8px}
 .plg-term pre{margin:0;padding:18px 20px;color:#F6EBDC;font-size:14.5px;line-height:1.75;white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .plg-term .u{color:#F0854F}.plg-term .ok{color:#4FC283}.plg-term .c{color:#E6DACB}
-[dir=rtl] .plg-term pre{direction:rtl;text-align:right}
 .plg-faq{display:flex;flex-direction:column;gap:10px;margin-top:14px}
 .plg-faq details{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:14px 18px}
 .plg-faq summary{font-weight:700;cursor:pointer}.plg-faq p{margin:8px 0 0;color:var(--mute)}
 .plg-u .cmd{flex-direction:column;align-items:stretch}
 .plg-u .cmd code{white-space:normal;overflow-wrap:anywhere;line-height:1.5}
 .plg-u .cmd button{align-self:flex-start}
-[dir=rtl] .plg-u .cmd button{align-self:flex-end}
-
 /* v19 · requisitos del plugin, bien visibles */
 .plg-req{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;color:var(--ink);max-width:720px}
 .plg-req a{color:var(--acc)}

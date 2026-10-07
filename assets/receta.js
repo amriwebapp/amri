@@ -9,7 +9,8 @@ var ORDER=["webapp-gratis","imagenes-ia","asistente-ia","automatiza-tareas","cha
   "higgsfield-cine","canva-diseno","figma-a-web","notion-cerebro","gmail-calendario","navegador-chrome","skills-propias","conector-propio","slack-equipo","gurusup-brain","redes-sociales","animaciones-opus","jev-decisiones","jev-guardian","empieza-aqui","primer-agente"];
 var SVG={"higgsfield-cine":1,"canva-diseno":1,"figma-a-web":1,"notion-cerebro":1,"gmail-calendario":1,"navegador-chrome":1,"skills-propias":1,"conector-propio":1,"slack-equipo":1,"gurusup-brain":1,"redes-sociales":1,"animaciones-opus":1,"jev-decisiones":1,"jev-guardian":1,"empieza-aqui":1,"primer-agente":1};
 var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
-var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");
+var slug=document.body.dataset.slug||(location.pathname.split("/").pop()||"").replace(/\.html$/,"");
+var inBook=!!document.body.dataset.receta; // receta dentro de un libro: libro.js pone la siguiente
 var img=function(s){return "../img/"+s+(SVG[s]?".svg":".jpg")};
 var t=function(k,f){return (window.I18N&&I18N.t(k))||f};
 var root=document.documentElement;
@@ -45,7 +46,7 @@ onScroll();
 /* Siguiente receta */
 function next(){
   var old=document.querySelector(".r-next");if(old)old.remove();
-  var i=ORDER.indexOf(slug);if(i<0||!window.I18N)return;
+  var i=ORDER.indexOf(slug);if(i<0||!window.I18N||inBook)return;
   var n=(i+1)%ORDER.length,c=I18N.card(n);
   var a=document.createElement("a");a.className="r-next";a.href=ORDER[n]+".html";
   a.innerHTML='<span class="th"><img alt="" loading="lazy" src="'+img(ORDER[n])+'"></span><span><small>'+t("next_label","Siguiente receta")+' →</small><b></b></span>';
@@ -60,7 +61,8 @@ function pluginBox(){
   var old=document.querySelector(".r-plugin");if(old)old.remove();
   var map=window.AMRI_PLUGIN&&AMRI_PLUGIN.skills;if(!map||!map[slug])return;
   var ing=document.querySelector("main .ing");if(!ing)return;
-  var cmd="/amri:"+map[slug]+" "+t("pl_idea","tu idea");
+  var rt=inBook&&window.RECIPE?RECIPE.es.title+": ":"";
+  var cmd="/amri:"+map[slug]+" "+rt+t("pl_idea","tu idea");
   var box=document.createElement("aside");box.className="r-plugin";
   box.innerHTML='<b class="pt"></b><p></p><div class="pcmd"><code></code><button type="button"></button></div><a href="../plugin.html"></a>';
   box.querySelector(".pt").textContent=t("pl_box_t","⚡ Hazlo con Claude Code");

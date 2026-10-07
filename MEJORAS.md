@@ -34,6 +34,13 @@ Leyenda: ☐ pendiente · ☑ hecho
 - ☑ **18. Promesas exageradas.** Fuera «en una hora la tendrás publicada», «en minutos» y «es fascinante»; la web marca «1-2 horas, a tu ritmo».
 - ☑ **19. Traducciones incompletas.** Comprobado con un script: las 24 recetas existen en es / en / ar, con las mismas opciones y los mismos pasos, y todos los pasos se generan sin errores.
 
+## Libros de recetas (octubre de 2026)
+- ☑ **Web solo en español.** Fuera el inglés, el árabe, el selector y la ventana de idioma. La traducción se hará más adelante de otra forma.
+- ☑ **Motor de libros.** Página del libro con «Antes de empezar» y el índice de recetas, una página por receta, progreso por receta, aviso de «prepara antes la cocina» y siguiente receta del libro. En la portada, la tarjeta dice «📕 N recetas» y el buscador encuentra las recetas de dentro. En el plugin, una skill por libro.
+- ☑ **Libro piloto: Higgsfield**, con 7 recetas: foto de producto, vídeo realista, vídeo UGC, vídeo animado, de foto a vídeo, personaje que siempre sale igual y anuncio vertical para redes.
+- ☐ **Siguientes libros.** Propuesta: Canva, Asistente, Imágenes, Web y Redes sociales; después, el resto.
+- ☐ **Probar el libro de Higgsfield con una cuenta real**, sobre todo UGC y Soul ID, que dependen de lo que permita el conector.
+
 ## Pendiente de comprobar a mano
 - Recorrer en un móvil real la portada (animaciones y la nueva categoría a lo ancho).
 - Seguir de verdad «Tu primer agente» con una cuenta de pago para confirmar los nombres actuales de los menús (Cowork / Code) y, después, poner su fecha en `revised`.

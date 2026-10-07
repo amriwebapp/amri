@@ -73,7 +73,6 @@ cook='''
 <h2>2. Almacenamiento técnico del navegador</h2>
 <p>Para que la web funcione guardamos en tu navegador (almacenamiento local) algunos datos técnicos imprescindibles, que no te identifican ante terceros:</p>
 <table class="lt"><tr><th>Dato</th><th>Para qué</th><th>Duración</th></tr>
-<tr><td><code>amri-lang</code></td><td>Recordar el idioma que elegiste.</td><td>Hasta que lo borres.</td></tr>
 <tr><td><code>amri-theme</code></td><td>Recordar el modo claro u oscuro.</td><td>Hasta que lo borres.</td></tr>
 <tr><td><code>receta-…</code></td><td>Recordar tu progreso en cada receta.</td><td>Hasta que lo borres.</td></tr>
 <tr><td><code>sb-…-auth-token</code></td><td>Mantener tu sesión iniciada (solo si tienes cuenta).</td><td>Hasta que cierres sesión.</td></tr></table>
