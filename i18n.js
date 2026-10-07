@@ -60,7 +60,7 @@ es:{
  n_consent:'Acepto la <a href="privacidad.html">política de privacidad</a> y quiero recibir la newsletter.',n_err:"Revisa el correo y marca la casilla de privacidad.",n_fail:"No se ha podido guardar. Inténtalo más tarde.",
  fo_legal:"Aviso legal",fo_priv:"Privacidad",fo_cookies:"Cookies",fo_brands:"AMRI no está afiliada a Anthropic ni a las demás marcas mencionadas. Sus nombres y logos pertenecen a sus propietarios.",legal_note:"",
  cards:[
- {tag:"Web",titulo:"Tu web online y gratis",desc:"Crea y publica una webapp completa con Claude, GitHub y Cloudflare, sin costes y sin programar.",chips:CH("1 h","Fácil","Gratis")},
+ {tag:"Web",titulo:"Tu web online y gratis",desc:"Un libro con 8 recetas: tu primera web, cuentas de usuario, reservas, dominio propio, Google y visitas. Con Claude, GitHub y Cloudflare, sin programar.",chips:CH("20-90 min","Fácil","Gratis")},
  {tag:"Imagen",titulo:"Crea imágenes con IA gratis",desc:"Genera ilustraciones, logos y fotos realistas con herramientas de IA gratuitas. Desde el prompt hasta el resultado.",chips:CH("30 min","Fácil","Gratis")},
  {tag:"Chat",titulo:"Tu asistente personal con IA",desc:"Monta un asistente que contesta tus preguntas, resume textos y te ayuda a escribir, usando Claude o ChatGPT.",chips:CH("20 min","Fácil","Gratis")},
  {tag:"Automatización",titulo:"Automatiza tareas aburridas con IA",desc:"Conecta tu correo, tu calendario y tus hojas de cálculo para que la IA haga el trabajo repetitivo por ti.",chips:CH("45 min","Media","Gratis")},
@@ -78,7 +78,7 @@ es:{
  {tag:"Avanzado",titulo:"Cocina tu propio conector",desc:"Crea un conector sencillo para que Claude use tus propios datos o tu propia app. Claude escribe el código.",chips:CH("1 h","Avanzada","Gratis")},
  {tag:"Equipo",titulo:"Claude en tu Slack",desc:"Resume canales, encuentra decisiones y redacta mensajes para tu equipo sin leer cien notificaciones.",chips:CH("25 min","Fácil","Según tu plan")},
  {tag:"Empresa",titulo:"El cerebro de tu empresa con GuruSup",desc:"Conecta GuruSup Brain a Claude para que responda con el conocimiento real de tu empresa, citando la fuente.",chips:CH("30 min","Media","De pago")},
- {tag:"Redes",titulo:"Tus redes sociales con Claude",desc:"Instagram, TikTok, LinkedIn y X con tu propia voz: perfiles afinados, una idea adaptada a cada red y un mes planificado. Claude escribe; tú publicas.",chips:CH("45 min","Fácil","Gratis")},
+ {tag:"Redes",titulo:"Tus redes sociales con Claude",desc:"Un libro con 8 recetas: biografía, reels, carruseles, LinkedIn, una idea para todas tus redes, un mes planificado y medir. Con tu propia voz.",chips:CH("15-30 min","Fácil","Gratis")},
  {tag:"Animación",titulo:"Animaciones con Claude Opus 5.5",desc:"Del storyboard a una animación que se mueve en tu navegador, con tu marca. Y, si quieres, un vídeo MP4 para redes.",chips:CH("40 min","Media","Plan de pago")},
  {tag:"Decisiones",titulo:"Decisiones automáticas con Jev",desc:"Clasifica mensajes, prioriza incidencias o puntúa contactos en milisegundos. Jev decide, te dice su confianza y te pasa lo dudoso.",chips:CH("50 min","Media","De pago")},
  {tag:"Seguridad",titulo:"Un guardián para tu chatbot con Jev",desc:"Revisa cada pregunta y cada respuesta de tu asistente para frenar trampas, temas ajenos y datos inventados.",chips:CH("45 min","Avanzada","De pago")},
