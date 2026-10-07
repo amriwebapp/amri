@@ -1,15 +1,15 @@
 ---
 name: canva-diseno
-description: "Receta de AMRI «Diseña en Canva hablando con Claude». Posts, presentaciones y carteles creados en tu cuenta de Canva desde una conversación, con tu marca. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Diseña en Canva hablando con Claude». Claude diseña en tu Canva: posts, presentaciones, carteles, currículum, tarjetas y versiones nuevas de diseños que ya tienes. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Diseña en Canva hablando con Claude
 
-Posts, presentaciones y carteles creados en tu cuenta de Canva desde una conversación, con tu marca.
+Claude diseña en tu Canva: posts, presentaciones, carteles, currículum, tarjetas y versiones nuevas de diseños que ya tienes.
 
-- ⏱ 25 min aprox.
-- 👩‍🍳 Fácil
+- 📕 6 recetas
+- ⏱ 15-25 min cada una
 - 💶 Gratis si tu plan de Claude incluye conectores
 - 🍽 Resultado: diseños editables en tu Canva
 - Categoría: Conecta tus apps
@@ -31,36 +31,25 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 - Trabaja en una carpeta nueva con un nombre corto sacado de la idea, salvo que la persona ya esté dentro de su proyecto.
 - Al terminar: resume lo que se ha hecho, da los enlaces importantes y propón la siguiente receta de «Sigue con». Invita a compartir el resultado en la comunidad de la receta en https://amri.es.
 
-## Ingredientes (todos gratuitos)
+## Ingredientes
 
 - **Claude**: el diseñador jefe. Decide textos, estructura y estilo.
 - **Canva**: el taller. Donde se crean y guardan los diseños. Plan gratuito.
-- **Conector de Canva**: el aprendiz. Crea, busca y exporta diseños en tu cuenta.
-- **Tu logo y tus colores**: el sello de la casa.
+- **El conector de Canva**: el aprendiz. Crea, busca y exporta diseños en tu cuenta.
 
-## Ideas de ejemplo
+## Este es un libro de recetas
 
-- **Presentación:** una presentación de 8 diapositivas, clara y visual, para explicar mi proyecto a posibles clientes
-- **Cartel o flyer:** un cartel A4 para un evento, con título grande, fecha, hora y lugar bien visibles
-- **Currículum:** un currículum de una página, limpio y moderno, con mi experiencia y mis habilidades
+Tiene una preparación común («Antes de empezar») y 6 recetas concretas. Según la idea de la persona:
+1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
+2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
+3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
 
 ## Antes de empezar
 
-Pregunta a la persona: **¿Tienes logo o colores de marca que quieras usar?** Si dudas, elige «Sí»: te enseñamos a darle tu marca a Claude. Si no tienes, él te propone una paleta.
-
-Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
-
-## Pasos
-
-### 1. Prepara los ingredientes
+### 1. Crea tus cuentas
 _3 min · cuentas_
 
-Solo necesitas una cuenta en Claude y otra en Canva.
-
-#### Pasos
-
 - Entra en [Claude](https://claude.ai).
-
 - Crea tu cuenta gratuita en [Canva](https://www.canva.com) si no la tienes.
 
 **✅ Comprobación:** puedes entrar en las dos.
@@ -68,124 +57,282 @@ Solo necesitas una cuenta en Claude y otra en Canva.
 ### 2. Conecta Canva con Claude
 _3 min · el conector_
 
-Un conector es un permiso para que Claude use Canva por ti. Se activa una vez y queda guardado.
-
-#### Pasos
-
-- En Claude (web o app de escritorio) abre **Personalizar → Conectores** (en inglés: _Customize → Connectors_).
-
-- Pulsa **Explorar conectores** (_Browse connectors_), busca **«Canva»** y pulsa **Conectar**.
-
-- Se abre una ventana de Canva: inicia sesión y pulsa **Permitir**.
-
-- En un chat nuevo, pulsa el botón **+** → **Conectores** y comprueba que Canva está activado.
+- En Claude (web o app de escritorio) abre **Personalizar → Conectores** (en inglés: **Customize → Connectors**).
+- Pulsa **Explorar conectores**, busca «Canva» y pulsa **Conectar**.
+- Inicia sesión en Canva y pulsa **Permitir**.
+- En un chat nuevo, pulsa **+ → Conectores** y comprueba que Canva está activado.
 
 > 💡 Los menús de Claude cambian de nombre a veces. Si no lo encuentras, busca «conectores» en la ayuda de Claude.
 
-**✅ Comprobación:** Canva aparece activado en tus conectores.
+**✅ Comprobación:** Canva aparece activado.
 
-### 3. Presenta tu marca _(solo si la respuesta a «Tienes logo o colores de marca que quieras usar» es «Sí»)_
+### 3. Presenta tu marca
 _5 min · el sello_
 
-Para que todo salga con tu estilo, primero sube tu logo a Canva y cuéntale a Claude tus colores.
-
-#### Pasos
-
-- En Canva, pulsa **Subidos → Subir archivos** y sube tu logo (mejor PNG con fondo transparente).
-
-- En Claude, escribe:
+- En Canva, pulsa **Subidos → Subir archivos** y sube tu logo (mejor PNG sin fondo).
+- En Claude, crea un proyecto **Mis diseños** y pega en sus instrucciones:
 
 ```text
-Mi marca: colores principales [#D2561F y #FBF6EE], tipografía [la que uses], tono [cercano y tranquilo]. Mi logo está subido en Canva con el nombre [nombre del archivo]. Úsalo en todo lo que diseñes hoy.
+Diseño en Canva a través del conector.
+Mi marca: colores [#D2561F y #FBF6EE], tipografía [la que uses], tono [cercano y tranquilo].
+Mi logo está subido en Canva con el nombre [nombre del archivo].
+Antes de diseñar, propón siempre los textos y espera mi OK.
 ```
 
-> 💡 ¿No sabes el código de tus colores? Pregúntale a Claude: «Propón una paleta de 3 colores para una marca de [lo tuyo]».
+> 💡 ¿No tienes logo ni colores? Mira el libro [Diseña tu logo con IA](logo-ia.html), o pide a Claude una paleta de 3 colores.
 
-**✅ Comprobación:** Claude te repite tu marca con sus palabras.
+**✅ Comprobación:** tienes el proyecto «Mis diseños» con tu marca.
 
-### 4. Pide tu diseño
-_5 min · la orden_
+## Recetas del libro
 
-Primero los textos, luego el diseño. Así no pierdes tiempo con versiones que no te gustan.
+### Receta 1: Posts para Instagram
 
-#### Pasos
+Tres posts con tu marca, listos para publicar o retocar.
 
-- Pega esto en el chat:
+- ⏱ 20 min
+- 👩‍🍳 Fácil
+- 📱 Redes
+- 🍽 Resultado: 3 posts en tu Canva
+- Versión web: https://amri.es/recetas/canva-diseno--posts.html
+- Ideas de ejemplo:
+  - Un producto nuevo: tres posts cuadrados para Instagram que anuncien mi nuevo producto, con un titular corto y mucho aire
+  - Consejos: tres posts con un consejo útil de mi sector cada uno
+  - Una oferta: tres posts para una oferta de tiempo limitado
+
+#### 1. Primero los textos
+_5 min · lo que dice_
 
 ```text
-Usa Canva para crear [la idea de la persona].
-
-Antes de diseñar, propón los textos de cada pieza y espera mi OK. Cuando te lo dé, crea el diseño con mi marca y dame el enlace para abrirlo en Canva.
+Usa Canva para crear [la idea de la persona]. Antes de diseñar, propón los textos de cada post y espera mi OK.
 ```
 
-**¿Qué significa cada parte?**
+**✅ Comprobación:** has aprobado los textos.
 
-- **«Usa Canva»**: le dice a Claude que use el conector, no que lo dibuje él.
-- **Primero los textos**: lo más importante de un diseño es lo que dice.
-- **El enlace**: para abrirlo y retocarlo tú.
+#### 2. El diseño
+_10 min · Claude diseña_
 
-**✅ Comprobación:** Claude te da uno o varios enlaces a diseños nuevos en tu Canva.
+```text
+OK. Crea los diseños con mi marca y dame los enlaces para abrirlos en Canva.
+```
 
-### 5. Retoca a mano en Canva
+**✅ Comprobación:** tienes los enlaces a 3 diseños nuevos en tu Canva.
+
+#### 3. Retoca y descarga
 _5 min · tu toque_
 
-La IA hace el 80 %. El último toque es tuyo.
+- Abre los enlaces y cambia lo que quieras a mano.
+- O pídeselo a Claude, un cambio cada vez: «haz el titular más grande en el segundo».
+- Descarga en **PNG** desde **Compartir → Descargar**.
 
-#### Pasos
+**✅ Comprobación:** tienes los 3 posts descargados.
 
-- Abre el enlace. El diseño está en tu cuenta, en **Proyectos**.
+**Al terminar:** Tus posts están en Canva. Para el texto que acompaña a cada post, mira el libro de redes sociales.
 
-- Cambia lo que quieras: textos, fotos, colores.
+### Receta 2: Una presentación
 
-- ¿Prefieres que lo haga Claude? Pídeselo en el chat, un cambio cada vez:
+Diapositivas claras y visuales para explicar tu proyecto o tu clase.
+
+- ⏱ 25 min
+- 👩‍🍳 Fácil
+- 📊 Presentación
+- 🍽 Resultado: una presentación en tu Canva
+- Versión web: https://amri.es/recetas/canva-diseno--presentacion.html
+- Ideas de ejemplo:
+  - Para clientes: una presentación de 8 diapositivas, clara y visual, para explicar mi proyecto a posibles clientes
+  - Para una clase: una presentación de 10 diapositivas para una clase, con poco texto y ejemplos
+  - Para mi equipo: una presentación corta con los resultados del mes para mi equipo
+
+#### 1. El guion
+_10 min · la estructura_
 
 ```text
-En el diseño que acabas de crear, haz el titular más grande y cambia la foto de fondo por algo más luminoso. No toques lo demás.
+Quiero [la idea de la persona]. Propón el guion: título de cada diapositiva y una o dos frases. Una idea por diapositiva. Espera mi OK.
 ```
 
-**✅ Comprobación:** el diseño está como tú querías.
+**✅ Comprobación:** has aprobado el guion.
 
-### 6. Exporta y publica
-_2 min · servir_
-
-Descárgalo en el formato que necesites.
+#### 2. El diseño
+_10 min · en Canva_
 
 ```text
-Exporta el diseño como PNG para redes y también como PDF para imprimir. Dame los enlaces de descarga.
+Crea la presentación en Canva con mi marca, siguiendo el guion. Poco texto y letra grande. Dame el enlace.
 ```
 
-> 💡 También puedes exportar desde Canva con el botón **Compartir → Descargar**.
+**✅ Comprobación:** tienes la presentación en tu Canva.
 
-**✅ Comprobación:** tienes los archivos descargados.
+#### 3. Las notas para hablar
+_5 min · el discurso_
+
+```text
+Escríbeme lo que diría en cada diapositiva, en frases cortas, para no leer la pantalla.
+```
+
+**✅ Comprobación:** tienes tus notas.
+
+**Al terminar:** Tu presentación está en Canva. Ensáyala en voz alta una vez con el cronómetro.
+
+### Receta 3: Cartel o flyer para imprimir
+
+Un cartel A4 para un evento, con la fecha y el lugar bien visibles.
+
+- ⏱ 20 min
+- 👩‍🍳 Fácil
+- 🖨 Impresión
+- 🍽 Resultado: un cartel en PDF listo para imprimir
+- Versión web: https://amri.es/recetas/canva-diseno--cartel.html
+- Ideas de ejemplo:
+  - Evento: un cartel A4 para un evento, con título grande, fecha, hora y lugar bien visibles
+  - Mi negocio: un flyer A5 para repartir que presente mi negocio y su horario
+
+#### 1. Los textos
+_5 min · lo esencial_
+
+```text
+Usa Canva para crear [la idea de la persona]. Antes, propón los textos: lo que se tiene que leer desde lejos y lo que va en pequeño.
+```
+
+**✅ Comprobación:** has aprobado los textos.
+
+#### 2. El diseño
+_10 min · en Canva_
+
+```text
+Crea el diseño en Canva con mi marca. Que el título se lea a 3 metros. Dame el enlace.
+```
+
+**✅ Comprobación:** tienes el cartel en tu Canva.
+
+#### 3. Exporta para imprimir
+_5 min · PDF_
+
+```text
+Exporta el diseño como PDF para imprimir y dame el enlace de descarga.
+```
+
+> 💡 También puedes hacerlo desde Canva: **Compartir → Descargar → PDF para imprimir**.
+
+**✅ Comprobación:** tienes el PDF.
+
+**Al terminar:** Tu cartel está listo para imprimir. Imprime una prueba antes de hacer muchas copias.
+
+### Receta 4: Tu currículum
+
+Un currículum de una página, limpio y moderno, con tu experiencia bien contada.
+
+- ⏱ 25 min
+- 👩‍🍳 Fácil
+- 📄 CV
+- 🍽 Resultado: tu CV en PDF
+- Versión web: https://amri.es/recetas/canva-diseno--cv.html
+- Ideas de ejemplo:
+  - Un puesto concreto: un currículum de una página, limpio y moderno, para el puesto que busco
+  - Cambio de sector: un currículum que destaque lo que me sirve para cambiar de sector
+
+#### 1. Cuéntale tu experiencia
+_10 min · el contenido_
+
+```text
+Quiero [la idea de la persona]. Esta es mi experiencia, sin orden: [pégala o sube tu CV antiguo]. Escríbela de forma clara y concreta, con logros y no solo tareas. No inventes nada.
+```
+
+**✅ Comprobación:** tienes los textos del CV.
+
+#### 2. El diseño
+_10 min · en Canva_
+
+```text
+Crea el currículum en Canva, en una página, limpio y fácil de leer. Dame el enlace.
+```
+
+**✅ Comprobación:** tienes el CV en tu Canva.
+
+#### 3. Revisa y descarga
+_5 min · PDF_
+
+- Revisa fechas, nombres y tu teléfono.
+- Descárgalo en **PDF**.
+
+**✅ Comprobación:** tienes tu CV en PDF.
+
+**Al terminar:** Tu currículum está listo. Adáptalo un poco a cada oferta: Claude te ayuda en un minuto.
+
+### Receta 5: Tarjetas de visita
+
+Tarjetas con tu logo y tus datos, listas para imprimir.
+
+- ⏱ 15 min
+- 👩‍🍳 Fácil
+- 💳 Impresión
+- 🍽 Resultado: tus tarjetas en PDF
+- Versión web: https://amri.es/recetas/canva-diseno--tarjetas.html
+- Ideas de ejemplo:
+  - Profesional: tarjetas de visita sobrias con mi logo, nombre, profesión, teléfono y web
+  - Creativa: tarjetas de visita con mucho color y un código QR a mi web
+
+#### 1. Diseña las tarjetas
+_10 min · en Canva_
+
+```text
+Usa Canva para crear [la idea de la persona]. Mis datos: [escríbelos]. Haz la cara y el dorso. Dame el enlace.
+```
+
+**✅ Comprobación:** tienes las tarjetas en tu Canva.
+
+#### 2. Revisa y exporta
+_5 min · PDF_
+
+- Comprueba cada dato letra por letra.
+- Pide: «Exporta como PDF para imprimir».
+
+**✅ Comprobación:** tienes el PDF para la imprenta.
+
+**Al terminar:** Tus tarjetas están listas. Pide una prueba a la imprenta antes del pedido grande.
+
+### Receta 6: Actualiza un diseño que ya tienes
+
+Claude busca en tus diseños antiguos y hace una versión nueva con los cambios.
+
+- ⏱ 10 min
+- 👩‍🍳 Muy fácil
+- ♻️ Reutilizar
+- 🍽 Resultado: tu diseño actualizado
+- Versión web: https://amri.es/recetas/canva-diseno--reutilizar.html
+- Ideas de ejemplo:
+  - Cambiar la fecha: crear una versión nueva con la fecha actualizada
+  - Otro formato: crear una versión en formato historia vertical
+
+#### 1. Búscalo
+_5 min · en tu Canva_
+
+```text
+Busca en mi Canva los diseños de [evento o tema] y enséñame cuáles has encontrado.
+```
+
+**✅ Comprobación:** Claude ha encontrado el diseño.
+
+#### 2. La versión nueva
+_5 min · el cambio_
+
+```text
+Con ese diseño, quiero [la idea de la persona]: [detalla]. Deja el original como está y dame el enlace del nuevo.
+```
+
+**✅ Comprobación:** tienes el diseño nuevo y el original intacto.
+
+**Al terminar:** Diseño actualizado sin empezar de cero.
 
 ## Al terminar
 
-Tus diseños ya están en tu cuenta de Canva, listos para retocar a mano o publicar. Más abajo tienes extras: reutilizar diseños y qué hacer si algo falla.
+Canva está conectado y Claude conoce tu marca. Elige qué quieres diseñar.
 
 ## Extras (opcionales, después de servir)
 
-### Extra 1. Reutiliza lo que ya tienes
-_Opcional_
-
-Claude también puede buscar en tus diseños antiguos.
-
-```text
-Busca en mi Canva los diseños que hice para [evento o tema] y crea una versión nueva con la fecha actualizada.
-```
-
-### Extra 2. Si algo no funciona
+### Extra 1. Si algo no funciona
 _Siempre · revisa esto_
 
 - **Claude dibuja en vez de usar Canva**: empieza el mensaje con «Usa el conector de Canva».
 - **No encuentra tu logo**: dile el nombre exacto del archivo subido.
-- **Alguna función es de Canva Pro** (kit de marca, quitar fondos): el resto funciona con el plan gratuito.
-
-**💡 Ideas para seguir diseñando**
-
-- Un calendario de contenido para todo el mes.
-- Tarjetas de visita.
-- Menús para tu restaurante.
-- Miniaturas para YouTube.
+- Algunas funciones son de **Canva Pro** (kit de marca, quitar fondos); el resto funciona con el plan gratuito.
 
 ## Sigue con
 
