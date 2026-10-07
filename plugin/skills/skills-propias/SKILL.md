@@ -1,17 +1,17 @@
 ---
 name: skills-propias
-description: "Receta de AMRI «Enséñale tu método con Skills». Convierte tu forma de trabajar en una Skill: Claude la usará sola cada vez que la necesite. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Enséñale tu método con Skills». Convierte tu forma de trabajar en Skills: informes con tu formato, correos con tu estilo, fichas de producto o material de clase. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Enséñale tu método con Skills
 
-Convierte tu forma de trabajar en una Skill: Claude la usará sola cada vez que la necesite.
+Convierte tu forma de trabajar en Skills: informes con tu formato, correos con tu estilo, fichas de producto o material de clase.
 
-- ⏱ 30 min aprox.
-- 👩‍🍳 Dificultad media
+- 📕 4 recetas
+- ⏱ 25-30 min cada una
 - 💶 Gratis si tu plan de Claude incluye Skills
-- 🍽 Resultado: una Skill que Claude usa sola
+- 🍽 Resultado: Skills que Claude usa solo
 - Categoría: Claude a tu medida
 - Versión web (con explicaciones y comunidad): https://amri.es/recetas/skills-propias.html
 
@@ -38,19 +38,14 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 - **Tu ejemplo o plantilla**: el plato de muestra.
 - **Ejecución de código activada**: la encimera. Las Skills la necesitan.
 
-## Ideas de ejemplo
+## Este es un libro de recetas
 
-- **Correos con mi estilo:** responder correos de clientes con mi tono, mis firmas y mis respuestas habituales
-- **Fichas de producto:** escribir fichas de producto para mi tienda con título, descripción, ventajas y medidas
-- **Material de clase:** preparar fichas de ejercicios para mis alumnos con nivel, objetivos y soluciones
+Tiene una preparación común («Antes de empezar») y 4 recetas concretas. Según la idea de la persona:
+1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
+2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
+3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
 
 ## Antes de empezar
-
-Pregunta a la persona: **¿Tienes un ejemplo o una plantilla que ya uses?** Si dudas, elige «Sí»: un buen ejemplo vale más que mil explicaciones.
-
-Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
-
-## Pasos
 
 ### 1. Entiende qué es una Skill
 _3 min · la idea_
@@ -74,7 +69,21 @@ _2 min · ajustes_
 
 **✅ Comprobación:** ves la sección de Skills.
 
-### 3. Que Claude te entreviste
+## Recetas del libro
+
+### Receta 1: Informes siempre con tu formato
+
+Tu estructura, tu tono y tus gráficos, en cada informe.
+
+- ⏱ 30 min
+- 👩‍🍳 Media
+- 📊 Informes
+- 🍽 Resultado: una Skill de informes
+- Versión web: https://amri.es/recetas/skills-propias--informes.html
+- Ideas de ejemplo:
+  - Informes con mi formato: escribir informes mensuales siempre con la misma estructura, tono y gráficos
+
+#### 1. Que Claude te entreviste
 _10 min · tu método_
 
 Tú sabes hacerlo; Claude sabe escribirlo. Deja que te pregunte.
@@ -87,7 +96,7 @@ Entrevístame con preguntas de una en una para entender mi método: cuándo lo u
 
 **✅ Comprobación:** has respondido a todas las preguntas.
 
-### 4. Dale tu plato de muestra _(solo si la respuesta a «Tienes un ejemplo o una plantilla que ya uses» es «Sí»)_
+#### 2. Dale tu plato de muestra
 _3 min · el ejemplo_
 
 - Adjunta tu ejemplo o plantilla al chat (📎).
@@ -101,7 +110,7 @@ Este es un ejemplo de cómo me gusta que quede. Inclúyelo en la Skill como refe
 
 **✅ Comprobación:** Claude ha entendido tu ejemplo.
 
-### 5. Que Claude escriba la Skill
+#### 3. Que Claude escriba la Skill
 _5 min · redactar_
 
 ```text
@@ -116,7 +125,7 @@ Ahora escribe la Skill. Crea una carpeta con un archivo SKILL.md que tenga: un n
 
 **✅ Comprobación:** tienes un archivo .zip descargado.
 
-### 6. Instálala
+#### 4. Instálala
 _2 min · al cajón_
 
 - Vuelve a la sección de **Skills** de los ajustes.
@@ -125,7 +134,7 @@ _2 min · al cajón_
 
 **✅ Comprobación:** tu Skill aparece en la lista.
 
-### 7. Pruébala sin nombrarla
+#### 5. Pruébala sin nombrarla
 _5 min · el examen_
 
 La prueba de fuego: pedir la tarea sin mencionar la Skill.
@@ -138,9 +147,245 @@ La prueba de fuego: pedir la tarea sin mencionar la Skill.
 
 **✅ Comprobación:** Claude aplica tu método sin que se lo recuerdes.
 
+**Al terminar:** Claude ya conoce tu método. A partir de ahora lo aplicará solo cuando lo necesite. Y si quieres, compártelo: puede ser una receta de AMRI.
+
+### Receta 2: Correos con tu estilo
+
+Tu tono, tu firma y tus respuestas habituales, en cada correo a clientes.
+
+- ⏱ 25 min
+- 👩‍🍳 Media
+- ✉️ Correos
+- 🍽 Resultado: una Skill de correos
+- Versión web: https://amri.es/recetas/skills-propias--correos.html
+- Ideas de ejemplo:
+  - Correos con mi estilo: responder correos de clientes con mi tono, mis firmas y mis respuestas habituales
+
+#### 1. Que Claude te entreviste
+_10 min · tu método_
+
+Tú sabes hacerlo; Claude sabe escribirlo. Deja que te pregunte.
+
+```text
+Quiero crear una Skill para [la idea de la persona].
+
+Entrevístame con preguntas de una en una para entender mi método: cuándo lo uso, qué pasos sigo, qué errores evito y cómo sé que ha quedado bien. Máximo 8 preguntas.
+```
+
+**✅ Comprobación:** has respondido a todas las preguntas.
+
+#### 2. Dale tu plato de muestra
+_3 min · el ejemplo_
+
+- Adjunta tu ejemplo o plantilla al chat (📎).
+- Escribe:
+
+```text
+Este es un ejemplo de cómo me gusta que quede. Inclúyelo en la Skill como referencia y explica qué tiene de bueno.
+```
+
+> 💡 Quita datos personales o confidenciales del ejemplo antes de subirlo.
+
+**✅ Comprobación:** Claude ha entendido tu ejemplo.
+
+#### 3. Que Claude escriba la Skill
+_5 min · redactar_
+
+```text
+Ahora escribe la Skill. Crea una carpeta con un archivo SKILL.md que tenga: un nombre corto, una descripción clara de CUÁNDO usarla, y las instrucciones paso a paso. Si hace falta, añade plantillas o ejemplos en archivos aparte. Empaquétala en un .zip para que pueda descargarla.
+```
+
+**Una buena descripción…**
+
+- Dice cuándo usarla: «Úsala cuando el usuario pida el acta de una reunión».
+- Usa las palabras que tú usarías al pedirlo.
+- Es corta: una o dos frases.
+
+**✅ Comprobación:** tienes un archivo .zip descargado.
+
+#### 4. Instálala
+_2 min · al cajón_
+
+- Vuelve a la sección de **Skills** de los ajustes.
+- Pulsa **Subir Skill** (_Upload skill_) y elige tu .zip.
+- Comprueba que aparece activada.
+
+**✅ Comprobación:** tu Skill aparece en la lista.
+
+#### 5. Pruébala sin nombrarla
+_5 min · el examen_
+
+La prueba de fuego: pedir la tarea sin mencionar la Skill.
+
+```text
+[Pide la tarea como la pedirías normalmente, sin decir «usa la Skill»]
+```
+
+> 💡 Si Claude no la usa, mejora la descripción: añade las palabras exactas con las que la pides.
+
+**✅ Comprobación:** Claude aplica tu método sin que se lo recuerdes.
+
+**Al terminar:** Claude ya conoce tu método. A partir de ahora lo aplicará solo cuando lo necesite. Y si quieres, compártelo: puede ser una receta de AMRI.
+
+### Receta 3: Fichas de producto
+
+Título, descripción, ventajas y medidas, siempre igual de completas.
+
+- ⏱ 25 min
+- 👩‍🍳 Media
+- 🏷 Tienda
+- 🍽 Resultado: una Skill de fichas de producto
+- Versión web: https://amri.es/recetas/skills-propias--fichas.html
+- Ideas de ejemplo:
+  - Fichas de producto: escribir fichas de producto para mi tienda con título, descripción, ventajas y medidas
+
+#### 1. Que Claude te entreviste
+_10 min · tu método_
+
+Tú sabes hacerlo; Claude sabe escribirlo. Deja que te pregunte.
+
+```text
+Quiero crear una Skill para [la idea de la persona].
+
+Entrevístame con preguntas de una en una para entender mi método: cuándo lo uso, qué pasos sigo, qué errores evito y cómo sé que ha quedado bien. Máximo 8 preguntas.
+```
+
+**✅ Comprobación:** has respondido a todas las preguntas.
+
+#### 2. Dale tu plato de muestra
+_3 min · el ejemplo_
+
+- Adjunta tu ejemplo o plantilla al chat (📎).
+- Escribe:
+
+```text
+Este es un ejemplo de cómo me gusta que quede. Inclúyelo en la Skill como referencia y explica qué tiene de bueno.
+```
+
+> 💡 Quita datos personales o confidenciales del ejemplo antes de subirlo.
+
+**✅ Comprobación:** Claude ha entendido tu ejemplo.
+
+#### 3. Que Claude escriba la Skill
+_5 min · redactar_
+
+```text
+Ahora escribe la Skill. Crea una carpeta con un archivo SKILL.md que tenga: un nombre corto, una descripción clara de CUÁNDO usarla, y las instrucciones paso a paso. Si hace falta, añade plantillas o ejemplos en archivos aparte. Empaquétala en un .zip para que pueda descargarla.
+```
+
+**Una buena descripción…**
+
+- Dice cuándo usarla: «Úsala cuando el usuario pida el acta de una reunión».
+- Usa las palabras que tú usarías al pedirlo.
+- Es corta: una o dos frases.
+
+**✅ Comprobación:** tienes un archivo .zip descargado.
+
+#### 4. Instálala
+_2 min · al cajón_
+
+- Vuelve a la sección de **Skills** de los ajustes.
+- Pulsa **Subir Skill** (_Upload skill_) y elige tu .zip.
+- Comprueba que aparece activada.
+
+**✅ Comprobación:** tu Skill aparece en la lista.
+
+#### 5. Pruébala sin nombrarla
+_5 min · el examen_
+
+La prueba de fuego: pedir la tarea sin mencionar la Skill.
+
+```text
+[Pide la tarea como la pedirías normalmente, sin decir «usa la Skill»]
+```
+
+> 💡 Si Claude no la usa, mejora la descripción: añade las palabras exactas con las que la pides.
+
+**✅ Comprobación:** Claude aplica tu método sin que se lo recuerdes.
+
+**Al terminar:** Claude ya conoce tu método. A partir de ahora lo aplicará solo cuando lo necesite. Y si quieres, compártelo: puede ser una receta de AMRI.
+
+### Receta 4: Material de clase
+
+Fichas de ejercicios con nivel, objetivos y soluciones.
+
+- ⏱ 25 min
+- 👩‍🍳 Media
+- 🎓 Clases
+- 🍽 Resultado: una Skill de material de clase
+- Versión web: https://amri.es/recetas/skills-propias--clases.html
+- Ideas de ejemplo:
+  - Material de clase: preparar fichas de ejercicios para mis alumnos con nivel, objetivos y soluciones
+
+#### 1. Que Claude te entreviste
+_10 min · tu método_
+
+Tú sabes hacerlo; Claude sabe escribirlo. Deja que te pregunte.
+
+```text
+Quiero crear una Skill para [la idea de la persona].
+
+Entrevístame con preguntas de una en una para entender mi método: cuándo lo uso, qué pasos sigo, qué errores evito y cómo sé que ha quedado bien. Máximo 8 preguntas.
+```
+
+**✅ Comprobación:** has respondido a todas las preguntas.
+
+#### 2. Dale tu plato de muestra
+_3 min · el ejemplo_
+
+- Adjunta tu ejemplo o plantilla al chat (📎).
+- Escribe:
+
+```text
+Este es un ejemplo de cómo me gusta que quede. Inclúyelo en la Skill como referencia y explica qué tiene de bueno.
+```
+
+> 💡 Quita datos personales o confidenciales del ejemplo antes de subirlo.
+
+**✅ Comprobación:** Claude ha entendido tu ejemplo.
+
+#### 3. Que Claude escriba la Skill
+_5 min · redactar_
+
+```text
+Ahora escribe la Skill. Crea una carpeta con un archivo SKILL.md que tenga: un nombre corto, una descripción clara de CUÁNDO usarla, y las instrucciones paso a paso. Si hace falta, añade plantillas o ejemplos en archivos aparte. Empaquétala en un .zip para que pueda descargarla.
+```
+
+**Una buena descripción…**
+
+- Dice cuándo usarla: «Úsala cuando el usuario pida el acta de una reunión».
+- Usa las palabras que tú usarías al pedirlo.
+- Es corta: una o dos frases.
+
+**✅ Comprobación:** tienes un archivo .zip descargado.
+
+#### 4. Instálala
+_2 min · al cajón_
+
+- Vuelve a la sección de **Skills** de los ajustes.
+- Pulsa **Subir Skill** (_Upload skill_) y elige tu .zip.
+- Comprueba que aparece activada.
+
+**✅ Comprobación:** tu Skill aparece en la lista.
+
+#### 5. Pruébala sin nombrarla
+_5 min · el examen_
+
+La prueba de fuego: pedir la tarea sin mencionar la Skill.
+
+```text
+[Pide la tarea como la pedirías normalmente, sin decir «usa la Skill»]
+```
+
+> 💡 Si Claude no la usa, mejora la descripción: añade las palabras exactas con las que la pides.
+
+**✅ Comprobación:** Claude aplica tu método sin que se lo recuerdes.
+
+**Al terminar:** Claude ya conoce tu método. A partir de ahora lo aplicará solo cuando lo necesite. Y si quieres, compártelo: puede ser una receta de AMRI.
+
 ## Al terminar
 
-Claude ya conoce tu método. A partir de ahora lo aplicará solo cuando lo necesite. Y si quieres, compártelo: puede ser una receta de AMRI.
+Las Skills están activadas. Elige qué método quieres enseñarle.
 
 ## Extras (opcionales, después de servir)
 
