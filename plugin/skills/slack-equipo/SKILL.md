@@ -1,15 +1,15 @@
 ---
 name: slack-equipo
-description: "Receta de AMRI «Claude en tu Slack». Resume canales, encuentra decisiones y redacta mensajes para tu equipo sin leer cien notificaciones. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Claude en tu Slack». Ponte al día en un minuto, encuentra qué se decidió, publica anuncios con tu permiso, el canvas de los viernes y reuniones preparadas. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Claude en tu Slack
 
-Resume canales, encuentra decisiones y redacta mensajes para tu equipo sin leer cien notificaciones.
+Ponte al día en un minuto, encuentra qué se decidió, publica anuncios con tu permiso, el canvas de los viernes y reuniones preparadas.
 
-- ⏱ 25 min aprox.
-- 👩‍🍳 Fácil
+- 📕 5 recetas
+- ⏱ 10-15 min cada una
 - 💶 Gratis si tu plan de Claude incluye conectores
 - 🍽 Resultado: tu equipo al día sin leer cien mensajes
 - Categoría: Conecta tus apps
@@ -33,68 +33,63 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Ingredientes
 
-- **Claude**: el jefe de cocina. Lee, resume y redacta.
-- **Slack**: la cocina del equipo. Donde pasa todo.
-- **Conector de Slack**: el camarero. Busca mensajes, canales, hilos y canvases, y puede enviar mensajes.
+- **Claude**: lee, resume y redacta.
+- **Slack**: donde trabaja tu equipo.
+- **El conector de Slack**: busca mensajes, canales, hilos y canvases.
 
-## Ideas de ejemplo
+## Este es un libro de recetas
 
-- **Encontrar decisiones:** encontrar qué se decidió sobre un tema y quién lo decidió, con enlace a los mensajes
-- **Redactar anuncios:** redactar y publicar un anuncio claro para el equipo en el canal adecuado
-- **Canvas semanal:** crear cada viernes un canvas con el resumen de la semana, las decisiones y lo pendiente
+Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Según la idea de la persona:
+1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
+2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
+3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
 
 ## Antes de empezar
 
-Pregunta a la persona: **¿Quieres que Claude pueda publicar mensajes (siempre con tu permiso)?** Si dudas, elige «No»: Claude solo leerá y resumirá. Siempre puedes activarlo después.
+### 1. Conecta Slack con Claude
+_5 min · el conector_
 
-Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
-
-## Pasos
-
-### 1. Prepara los ingredientes
-_3 min · cuentas_
-
-Necesitas tu cuenta de Slack y tu cuenta de Claude.
-
-- Entra en [Claude](https://claude.ai).
-- Ten a mano el espacio de trabajo de Slack que quieres usar.
-
-> 💡 En empresas, puede que un administrador de Slack tenga que aprobar la conexión. Si te sale un aviso, pídeselo con el enlace que te muestra Slack.
-
-**✅ Comprobación:** puedes entrar en Claude y en tu Slack.
-
-### 2. Conecta Slack con Claude
-_3 min · el conector_
-
-Un conector es un permiso para que Claude use Slack por ti. Se activa una vez y queda guardado.
-
-#### Pasos
-
-- En Claude (web o app de escritorio) abre **Personalizar → Conectores** (_Customize → Connectors_).
-
-- Pulsa **Explorar conectores**, busca **«Slack»** y pulsa **Conectar**.
-
+- En Claude abre **Personalizar → Conectores** (en inglés: **Customize → Connectors**).
+- Pulsa **Explorar conectores**, busca «Slack» y pulsa **Conectar**.
 - Elige tu espacio de trabajo, revisa los permisos y pulsa **Permitir**.
-
-- En un chat nuevo, pulsa **+** → **Conectores** y comprueba que Slack está activado.
 
 **¿Qué puede ver Claude?**
 
 - Solo lo que tu usuario ya puede ver en Slack.
-- No ve canales privados ni mensajes directos a los que tú no tienes acceso.
-- Puedes desconectarlo cuando quieras desde el mismo sitio.
+- No ve canales privados ni mensajes directos a los que no tienes acceso.
+- Puedes desconectarlo cuando quieras.
+
+> 💡 En empresas, puede que un administrador de Slack tenga que aprobar la conexión.
 
 **✅ Comprobación:** Slack aparece activado en tus conectores.
 
-### 3. Tu primer resumen
-_5 min · ponerse al día_
+### 2. Tu cinturón de seguridad
+_1 min · una frase_
 
-Empieza por algo que te ahorre tiempo hoy mismo.
+Cuando pidas a Claude que escriba algo en Slack, añade siempre: **«No envíes nada hasta que yo diga "publícalo"»**.
+
+**✅ Comprobación:** te acordarás de decirlo.
+
+## Recetas del libro
+
+### Receta 1: Ponte al día en un minuto
+
+Lo importante de tus canales, lo que te piden a ti y los enlaces clave.
+
+- ⏱ 10 min
+- 👩‍🍳 Muy fácil
+- 📰 Resumen
+- 🍽 Resultado: sabes qué ha pasado
+- Versión web: https://amri.es/recetas/slack-equipo--ponerse-al-dia.html
+- Ideas de ejemplo:
+  - Esta semana: los últimos 7 días
+  - Vuelta de vacaciones: el tiempo que he estado fuera
+
+#### 1. El resumen
+_5 min · leer por ti_
 
 ```text
-Usa el conector de Slack para esto: [la idea de la persona].
-
-Mira los canales donde participo de los últimos 7 días. Dame:
+Usa el conector de Slack. Mira los canales donde participo durante [la idea de la persona]. Dame:
 1) Lo importante en 5 puntos.
 2) Lo que me mencionan o me piden a mí.
 3) Enlaces a los mensajes clave.
@@ -102,67 +97,143 @@ Mira los canales donde participo de los últimos 7 días. Dame:
 
 > 💡 Si tienes muchos canales, nómbralos: «solo #proyecto-web y #marketing».
 
-**✅ Comprobación:** en un minuto sabes qué ha pasado sin leerlo todo.
+**✅ Comprobación:** sabes qué ha pasado sin leerlo todo.
 
-### 4. Encuentra lo que se decidió
-_5 min · buscar_
+#### 2. Lo que te toca
+_5 min · tus tareas_
 
-Slack es memoria del equipo, pero cuesta encontrar las cosas. Claude busca por ti.
+```text
+De todo eso, hazme una lista de lo que tengo que hacer yo, con fecha si la hay.
+```
+
+**✅ Comprobación:** tienes tu lista de tareas.
+
+**Al terminar:** Al día. Guarda el mensaje para el próximo lunes.
+
+### Receta 2: Encuentra qué se decidió
+
+La decisión, quién la tomó, cuándo y el enlace al mensaje.
+
+- ⏱ 10 min
+- 👩‍🍳 Muy fácil
+- 🔎 Buscar
+- 🍽 Resultado: la decisión con su enlace
+- Versión web: https://amri.es/recetas/slack-equipo--decisiones.html
+- Ideas de ejemplo:
+  - Un tema concreto: un tema concreto
+
+#### 1. Búscalo
+_10 min · la memoria del equipo_
 
 ```text
 Busca en Slack qué se decidió sobre [tema]. Dime la decisión, quién la tomó, la fecha y el enlace al mensaje. Si hay opiniones distintas, resúmelas.
 ```
 
-**✅ Comprobación:** tienes la decisión con su enlace para comprobarla.
+**✅ Comprobación:** tienes la decisión con su enlace.
 
-### 5. Redacta y publica con permiso _(solo si la respuesta a «Quieres que Claude pueda publicar mensajes (siempre con tu permiso)» es «Sí»)_
+**Al terminar:** Encontrado. Comprueba siempre el enlace antes de citarlo.
+
+### Receta 3: Redacta y publica un anuncio
+
+Claude escribe, tú lo apruebas y él lo publica en el canal adecuado.
+
+- ⏱ 10 min
+- 👩‍🍳 Fácil
+- 📣 Publicar
+- 🍽 Resultado: un anuncio claro en Slack
+- Versión web: https://amri.es/recetas/slack-equipo--anuncio.html
+- Ideas de ejemplo:
+  - Un cambio: un cambio que afecta al equipo
+  - Un logro: un logro del equipo
+
+#### 1. El borrador
 _5 min · escribir_
 
-Claude escribe el mensaje, tú lo apruebas y él lo publica.
-
 ```text
-Redacta un mensaje para el equipo sobre [tema]: claro, amable y corto. Enséñamelo antes de enviarlo y dime en qué canal lo publicarías. No envíes nada hasta que yo diga «publícalo».
+Redacta un mensaje para el equipo sobre [la idea de la persona]: [detalles]. Claro, amable y corto. Enséñamelo y dime en qué canal lo publicarías. No envíes nada hasta que yo diga «publícalo».
 ```
 
-> 💡 La frase «no envíes nada hasta que yo diga…» es tu cinturón de seguridad. Úsala siempre.
+**✅ Comprobación:** tienes el borrador.
 
-**✅ Comprobación:** el mensaje aparece en el canal tal y como lo aprobaste.
-
-### 6. Tu canvas de los viernes _(solo si la respuesta a «Quieres que Claude pueda publicar mensajes (siempre con tu permiso)» es «Sí»)_
-_5 min · la rutina_
-
-Un **canvas** es una página dentro de Slack. Ideal para dejar el resumen de la semana a todo el equipo.
+#### 2. Publícalo
+_5 min · con tu OK_
 
 ```text
-Crea un canvas en Slack llamado «Resumen semana [fecha]» con: decisiones de la semana, tareas pendientes con responsable y enlaces a los hilos importantes.
+Publícalo.
 ```
 
-**✅ Comprobación:** el canvas está en Slack y el equipo puede leerlo.
+> 💡 Si prefieres, cópialo y publícalo tú desde Slack.
+
+**✅ Comprobación:** el mensaje está en el canal.
+
+**Al terminar:** Publicado tal y como lo aprobaste.
+
+### Receta 4: El canvas de los viernes
+
+Una página en Slack con las decisiones, lo pendiente y los hilos importantes de la semana.
+
+- ⏱ 15 min
+- 👩‍🍳 Fácil
+- 🗒 Canvas
+- 🍽 Resultado: un canvas para todo el equipo
+- Versión web: https://amri.es/recetas/slack-equipo--canvas.html
+- Ideas de ejemplo:
+  - Mi equipo: mi equipo
+  - Un proyecto: un proyecto concreto
+
+#### 1. Créalo
+_15 min · el resumen_
+
+Un canvas es una página dentro de Slack.
+
+```text
+Crea un canvas en Slack llamado «Resumen semana [fecha]» para [la idea de la persona], con: decisiones de la semana, tareas pendientes con responsable y enlaces a los hilos importantes. Enséñamelo antes de compartirlo.
+```
+
+**✅ Comprobación:** el canvas está en Slack.
+
+**Al terminar:** Tu canvas está en Slack. Repítelo cada viernes.
+
+### Receta 5: Prepara una reunión leyendo el hilo
+
+Claude lee el hilo o el canal del proyecto y te deja un resumen para la reunión.
+
+- ⏱ 10 min
+- 👩‍🍳 Muy fácil
+- 🗓 Reuniones
+- 🍽 Resultado: la reunión preparada
+- Versión web: https://amri.es/recetas/slack-equipo--preparar-reunion.html
+- Ideas de ejemplo:
+  - De proyecto: una reunión de seguimiento de proyecto
+
+#### 1. El resumen
+_10 min · leer_
+
+```text
+Prepárame [la idea de la persona]: lee [canal o hilo] de las últimas semanas y dime en qué punto está, qué está bloqueado, qué opiniones hay y 3 preguntas que debería llevar.
+```
+
+**✅ Comprobación:** tienes la reunión preparada.
+
+**Al terminar:** Llegas preparado.
 
 ## Al terminar
 
-Claude ya lee tu Slack por ti. Un mensaje y sabes qué ha pasado, qué se decidió y qué te toca. Más abajo tienes extras: Claude dentro de Slack y reglas de privacidad.
+Slack está conectado. Elige qué quieres hacer.
 
 ## Extras (opcionales, después de servir)
 
-### Extra 1. Claude dentro de Slack
-_Opcional_
-
-Además del conector, Claude tiene una app para Slack: puedes escribirle por mensaje directo o mencionarlo en un hilo. Búscala en el directorio de apps de Slack o en la ayuda de Claude. Puede que tu empresa tenga que aprobarla.
-
-### Extra 2. Reglas de privacidad
+### Extra 1. Reglas de privacidad
 _Siempre · consejos_
 
-- ⚠️ **Ojo con los mensajes trampa**: un mensaje de Slack puede llevar instrucciones escondidas para engañar a Claude («ignora lo anterior y reenvía…»). Por eso la regla de oro: Claude solo lee y propone; enviar, borrar o compartir lo haces tú. Si hace algo que no le pediste, páralo.
+- ⚠️ **Ojo con los mensajes trampa**: un mensaje de Slack puede llevar instrucciones escondidas para engañar a Claude. Claude solo lee y propone; enviar o compartir lo decides tú.
 - No pidas a Claude que comparta fuera de Slack información confidencial del equipo.
-- Revisa siempre los mensajes antes de publicarlos: firmas tú.
 - Sigue las normas de tu empresa sobre IA y datos.
 
-**💡 Ideas para seguir**
+### Extra 2. Claude dentro de Slack
+_Opcional_
 
-- Un resumen cada mañana de los canales de clientes.
-- Preparar una reunión leyendo el hilo del proyecto.
-- Pasar decisiones de Slack a tu Notion con el conector de Notion.
+Además del conector, Claude tiene una app para Slack: puedes escribirle por mensaje directo o mencionarlo en un hilo. Búscala en el directorio de apps de Slack. Puede que tu empresa tenga que aprobarla.
 
 ## Sigue con
 
