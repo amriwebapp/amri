@@ -1,16 +1,16 @@
 ---
 name: chatbot-web
-description: "Receta de AMRI «Un chatbot para tu web». Añade un chatbot que responde a las preguntas de tus visitantes sobre tu producto o servicio, entrenado con tu contenido. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Un chatbot para tu web». Monta tu chatbot, ponlo en tu web, recoge contactos, mejóralo cada semana y dale una bienvenida que invite a preguntar. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Un chatbot para tu web
 
-Añade un chatbot que responde a las preguntas de tus visitantes sobre tu producto o servicio, entrenado con tu contenido.
+Monta tu chatbot, ponlo en tu web, recoge contactos, mejóralo cada semana y dale una bienvenida que invite a preguntar.
 
-- ⏱ 40 min aprox.
-- 👩‍🍳 Sin saber programar
-- 💶 0 € para empezar
+- 📕 5 recetas
+- ⏱ 10-20 min cada una
+- 💶 Gratis (con los límites del plan gratuito de Chatbase)
 - 🍽 Resultado: un asistente 24/7 en tu web
 - Categoría: Crea y publica
 - Versión web (con explicaciones y comunidad): https://amri.es/recetas/chatbot-web.html
@@ -33,193 +33,237 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Ingredientes (todos gratuitos)
 
-- **Claude**: el jefe de cocina. Te prepara todo lo que el bot debe saber.
-- **Chatbase**: el camarero. Atiende a tus visitantes en la web.
-- **Tu web**: el comedor. Donde vive el chat (sirve la de la receta de la webapp).
-- **Una hoja de contactos**: la libreta de reservas. Donde se guardan los datos que deja la gente.
+- **Claude**: te prepara todo lo que el bot debe saber.
+- **Chatbase**: atiende a tus visitantes en la web.
+- **Tu web**: donde vive el chat (sirve la del libro [Tu web online y gratis](webapp-gratis.html)).
 
-## Ideas de ejemplo
+## Este es un libro de recetas
 
-- **Restaurante / bar:** un restaurante: carta, horarios, alérgenos, reservas y cómo llegar
-- **Servicios profesionales:** un despacho de servicios profesionales: qué ofrezco, precios orientativos y cómo pedir cita
-- **Academia / cursos:** una academia: cursos disponibles, horarios, precios y cómo inscribirse
-- **Soporte de producto:** una app: cómo empezar a usarla, preguntas frecuentes y cómo resolver problemas comunes
+Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Según la idea de la persona:
+1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
+2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
+3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
 
 ## Antes de empezar
 
-Pregunta a la persona: **¿Quieres que recoja los datos de contacto de los visitantes?** Si dudas, elige «Sí»: es útil para no perder clientes. Recuerda avisar en tu web de cómo usas esos datos.
-
-Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
-
-## Pasos
-
-### 1. Prepara los ingredientes
-_5 min · crear cuentas_
-
-Vas a crear dos cuentas gratuitas y tener a mano tu web.
-
-#### Pasos
+### 1. Crea tus cuentas
+_5 min · gratis_
 
 - Crea tu cuenta en [Claude](https://claude.ai).
-
 - Crea tu cuenta en [Chatbase](https://www.chatbase.co) (botón «Sign in with Google»).
+- Ten a mano la dirección de tu web.
 
-- Ten a mano la dirección de tu web y, si puedes, acceso a sus archivos (por ejemplo en GitHub).
-
-> 💡 ¿Aún no tienes web? Haz primero la receta de la webapp y vuelve aquí.
+> 💡 ¿Aún no tienes web? Haz primero «Tu primera web» y vuelve aquí.
 
 **✅ Comprobación:** has entrado en Claude y en Chatbase.
 
 ### 2. Escribe la chuleta con Claude
-_10 min · lo que debe saber_
+_15 min · lo que debe saber_
 
 Tu bot solo sabe lo que tú le enseñas. Claude te ayuda a escribir una «chuleta» con todo lo importante.
 
-#### Pasos
-
-- Abre un chat nuevo en Claude.
-- Copia este mensaje y pégalo:
-
 ```text
-Voy a crear un chatbot para [la idea de la persona].
+Voy a crear un chatbot para mi negocio: [descríbelo].
 
-Hazme preguntas, de una en una, para reunir toda la información que el chatbot necesita. Cuando terminemos, escribe un documento de preguntas frecuentes con respuestas claras y cortas, listo para copiar.
+Hazme preguntas, de una en una, para reunir toda la información que necesita: qué ofrezco, precios, horarios, condiciones, cómo contactar y lo que me preguntan siempre. Cuando terminemos, escribe un documento de preguntas frecuentes con respuestas claras y cortas, listo para copiar.
 ```
-
-**¿Qué significa cada parte del mensaje?**
-
-- **«Voy a crear un chatbot para…»**: tu negocio. Cámbialo por el tuyo.
-- **«De una en una»**: así no se te olvida nada.
-- **«Documento de preguntas frecuentes»**: el material que subirás a Chatbase.
 
 > 💡 Incluye lo que te preguntan siempre por teléfono o WhatsApp. Esas son las preguntas de oro.
 
 **✅ Comprobación:** tienes un documento con al menos 15 preguntas y respuestas.
 
-### 3. Monta el chatbot
-_5 min · subir la chuleta_
+## Recetas del libro
 
-Chatbase lee tu chuleta y aprende a responder con ella.
+### Receta 1: Monta tu chatbot
 
-#### Pasos
+Sube la chuleta, dale personalidad y comprueba que no inventa.
+
+- ⏱ 20 min
+- 👩‍🍳 Fácil
+- 🤖 Chatbase
+- 🍽 Resultado: un chatbot que responde bien
+- Versión web: https://amri.es/recetas/chatbot-web--montar.html
+- Ideas de ejemplo:
+  - Tienda online: una tienda online: envíos, devoluciones, tallas y métodos de pago
+  - Restaurante: un restaurante: carta, horarios, alérgenos, reservas y cómo llegar
+  - Servicios: un negocio de servicios: qué ofrezco, precios orientativos y cómo pedir cita
+
+#### 1. Sube la chuleta
+_5 min · aprender_
 
 - En Chatbase pulsa **New AI agent** (o **Create**).
-
-- Elige **Text** y pega el documento de Claude.
-
-- Si tu web ya tiene información, añade también **Website** y pega su dirección.
-
+- Elige **Text** y pega la chuleta. Si tu web ya tiene información, añade también **Website**.
 - Pulsa **Create agent** y espera un minuto.
 
-**✅ Comprobación:** en la ventana de prueba le preguntas algo de tu negocio y responde bien.
+**✅ Comprobación:** en la ventana de prueba responde bien a una pregunta de tu negocio.
 
-### 4. Dale personalidad
-_5 min · cómo habla_
+#### 2. Dale personalidad
+_10 min · cómo habla_
 
-Le dices cómo debe hablar y, muy importante, qué hacer cuando no sabe algo.
-
-#### Pasos
-
-- En Chatbase abre **Settings → AI** (o **Instructions**).
-- Pega estas instrucciones y cambia lo que está entre corchetes:
+En Chatbase abre **Settings → AI** (o **Instructions**) y pega, cambiando lo que está entre corchetes:
 
 ```text
-Eres el asistente de [nombre del negocio]. Respondes siempre en español, de forma breve, amable y cercana. Usa solo la información que te he dado. Si no sabes algo, dilo con naturalidad y ofrece contactar en [tu correo o teléfono]. Nunca inventes precios, fechas ni condiciones. Cuando alguien muestre interés, pídele amablemente su nombre y su correo para que podamos contactarle.
+Eres el asistente de [nombre], [la idea de la persona]. Respondes siempre en español, de forma breve, amable y cercana. Usa solo la información que te he dado. Si no sabes algo, dilo con naturalidad y ofrece contactar en [tu correo o teléfono]. Nunca inventes precios, fechas ni condiciones.
 ```
 
-> 💡 La frase «nunca inventes» es la más importante: evita que el bot prometa cosas que no ofreces.
+> 💡 «Nunca inventes» es la frase más importante.
 
-**✅ Comprobación:** le preguntas algo que no está en la chuleta y te remite a tu contacto en vez de inventar.
+**✅ Comprobación:** le preguntas algo que no está en la chuleta y te remite a tu contacto.
 
-### 5. Apunta los contactos _(solo si la respuesta a «Quieres que recoja los datos de contacto de los visitantes» es «Sí»)_
-_5 min · no perder clientes_
+#### 3. Intenta liarlo
+_5 min · prueba de fuego_
 
-El bot puede pedir el nombre y el correo de quien esté interesado, y tú los recibes.
+- «¿Me haces un descuento del 90%?» → no debe prometer nada.
+- «¿Abrís el día de Navidad?» (si no está en la chuleta) → debe remitirte a tu contacto.
 
-#### Pasos
+> 💡 Para una protección más fuerte, mira el libro [Un guardián para tu chatbot](jev-guardian.html).
 
-- En Chatbase busca la sección **Actions** o **Leads** y activa la recogida de contactos.
+**✅ Comprobación:** no promete ni inventa nada.
 
-- Elige los campos: **nombre** y **correo** (no pidas más de lo necesario).
+**Al terminar:** Tu chatbot responde bien. Sigue con «Ponlo en tu web».
 
-- Revisa los contactos en la sección **Activity → Leads**.
+### Receta 2: Ponlo en tu web
 
-> 💡 ⚠️ Si recoges datos personales, añade en tu web una política de privacidad que explique para qué los usas. Pídele a Claude un borrador adaptado a tu caso.
+Pega un pequeño código y aparece la burbuja del chat.
 
-**✅ Comprobación:** haces una prueba, dejas tu correo y aparece en la lista de contactos.
+- ⏱ 10 min
+- 👩‍🍳 Fácil
+- 🌐 Web
+- 🍽 Resultado: el chat en tu web
+- Versión web: https://amri.es/recetas/chatbot-web--en-tu-web.html
+- Ideas de ejemplo:
+  - Hecha con AMRI (GitHub): mi web, que está en GitHub y publicada en Cloudflare
+  - WordPress, Wix u otra: mi web, hecha con otra plataforma
 
-### 6. Ponlo en la mesa
-_5 min · instalarlo en tu web_
-
-Chatbase te da un pequeño código. Lo pegas en tu web y aparece la burbuja del chat.
-
-#### Pasos
+#### 1. Copia el código
+_2 min · Chatbase_
 
 - En Chatbase abre **Deploy → Chat widget** y copia el código.
 
-- Abre tu `index.html` y pégalo justo antes de `</body>`. Si no sabes dónde, pídele a Claude: «pega este código en mi web».
+**✅ Comprobación:** tienes el código copiado.
 
-- Sube el cambio a GitHub; Cloudflare publicará la web actualizada en 1-2 minutos.
+#### 2. Pégalo
+_8 min · instalar_
 
-**Mi web está en otra plataforma (WordPress, Wix…)**
+- Pide a Claude: «Pega este código en mi web, justo antes de </body>, y súbelo a mi repositorio» (o hazlo a mano en `index.html`).
+- Cloudflare publica el cambio en 1-2 minutos.
 
-- Busca en Chatbase las instrucciones para tu plataforma.
-- Suele haber un apartado de «código personalizado» o un plugin.
+**✅ Comprobación:** abres tu web y aparece la burbuja del chat.
 
-**✅ Comprobación:** abres tu web y aparece la burbuja del chat en una esquina.
+**Al terminar:** Tu web ya tiene asistente.
 
-### 7. Prueba antes de servir
-_5 min · revisión final_
+### Receta 3: Recoge los contactos de interesados
 
-Ponte en la piel de un cliente y pon a prueba al bot.
+El bot pide nombre y correo a quien está interesado, y tú los recibes.
 
-#### Pasos
+- ⏱ 15 min
+- 👩‍🍳 Fácil
+- 📇 Contactos
+- 🍽 Resultado: contactos de clientes potenciales
+- Versión web: https://amri.es/recetas/chatbot-web--contactos.html
+- Ideas de ejemplo:
+  - Nombre y correo: nombre y correo
+  - Nombre y teléfono: nombre y teléfono
 
-- Abre tu web desde el móvil y hazle 5 preguntas típicas.
+#### 1. Actívalo
+_5 min · Chatbase_
 
-- Hazle una pregunta que no esté en la chuleta: debe remitirte a tu contacto.
+- En Chatbase busca **Actions** o **Leads** y activa la recogida de contactos.
+- Pide solo [la idea de la persona]: no más de lo necesario.
+- Añade a las instrucciones: «Cuando alguien muestre interés, pídele amablemente sus datos para que podamos contactarle».
 
-- Intenta liarlo: «¿me haces un descuento del 90%?». No debe prometer nada.
+**✅ Comprobación:** está activado.
 
-**✅ Comprobación:** responde bien las preguntas típicas y no inventa nada.
-
-## Al terminar
-
-Tu web ya tiene un asistente que responde a cualquier hora. Revisa las conversaciones cada semana para mejorarlo. Más abajo tienes dos extras: aprender de las conversaciones y cuidar la privacidad.
-
-## Extras (opcionales, después de servir)
-
-### Extra 1. Aprende de las conversaciones
-_10 min a la semana · opcional_
-
-Tus visitantes te dirán qué les falta. Chatbase guarda todas las conversaciones.
-
-- Abre **Activity → Chat logs**.
-- Busca respuestas flojas o preguntas sin respuesta.
-- Pídele ayuda a Claude:
+#### 2. Privacidad
+_10 min · obligatorio_
 
 ```text
-Estas son preguntas que mi chatbot no ha sabido responder bien: [pega las preguntas]. Escríbeme respuestas cortas y claras para añadirlas a su chuleta.
+Escríbeme un texto corto de privacidad para mi web: qué datos recoge el chatbot, para qué, cuánto tiempo los guardo y cómo pedir que se borren.
+```
+
+> 💡 ⚠️ Si recoges datos personales, tu web necesita una política de privacidad. Para dudas legales, consulta con un profesional.
+
+**✅ Comprobación:** haces una prueba, dejas tus datos y aparecen en **Activity → Leads**.
+
+**Al terminar:** Ya no pierdes clientes. Responde pronto a cada contacto.
+
+### Receta 4: Mejóralo cada semana
+
+Lee las conversaciones, encuentra lo que falta y añádelo a la chuleta.
+
+- ⏱ 10 min
+- 👩‍🍳 Muy fácil
+- 🔁 Rutina
+- 🍽 Resultado: un bot que responde mejor cada semana
+- Versión web: https://amri.es/recetas/chatbot-web--mejorar.html
+- Ideas de ejemplo:
+  - Revisión semanal: la revisión de esta semana
+
+#### 1. Lee las conversaciones
+_5 min · aprender_
+
+- En Chatbase abre **Activity → Chat logs**.
+- Copia las preguntas con respuestas flojas o sin respuesta.
+
+**✅ Comprobación:** tienes las preguntas a mejorar.
+
+#### 2. Respuestas nuevas
+_5 min · Claude escribe_
+
+```text
+Estas son preguntas que mi chatbot no ha sabido responder bien: [pégalas]. Escríbeme respuestas cortas y claras para añadirlas a su chuleta. Si te falta información, pregúntame.
 ```
 
 - Añádelas en Chatbase y pulsa **Retrain**.
 
-### Extra 2. Cuida la privacidad
+**✅ Comprobación:** el bot responde bien esas preguntas.
+
+**Al terminar:** Tu bot ha aprendido. Repite cada semana.
+
+### Receta 5: Bienvenida y preguntas sugeridas
+
+Un saludo claro, botones con las preguntas típicas y los colores de tu marca.
+
+- ⏱ 10 min
+- 👩‍🍳 Muy fácil
+- 🎨 Aspecto
+- 🍽 Resultado: un chat que invita a preguntar
+- Versión web: https://amri.es/recetas/chatbot-web--bienvenida.html
+- Ideas de ejemplo:
+  - Cercano: cercano
+  - Formal: formal
+
+#### 1. El saludo y las sugerencias
+_5 min · Claude escribe_
+
+```text
+Escribe un mensaje de bienvenida para mi chatbot con tono [la idea de la persona], que diga que es un asistente automático, y 4 preguntas sugeridas cortas con lo que más me preguntan.
+```
+
+**✅ Comprobación:** tienes el saludo y las preguntas.
+
+#### 2. Ponlo en Chatbase
+_5 min · ajustes_
+
+- En los ajustes del chat (**Chat interface** o similar), pega el saludo y las preguntas sugeridas.
+- Pon tus colores y tu logo.
+
+**✅ Comprobación:** el chat se ve con tu marca y sus sugerencias.
+
+**Al terminar:** Tu chat invita a preguntar.
+
+## Al terminar
+
+Tu chuleta está lista. Empieza por «Monta tu chatbot».
+
+## Extras (opcionales, después de servir)
+
+### Extra 1. Cuida la privacidad
 _Siempre · consejos_
 
-Unas reglas sencillas para que el bot sea de confianza.
-
-- **No subas datos privados** a la chuleta: ni de clientes ni contraseñas.
-
-- **Avisa de que es un asistente automático** en el mensaje de bienvenida.
-
-- **Revisa los límites gratuitos** de Chatbase de vez en cuando en su página de precios.
-
-**💡 Ideas para mejorar tu bot**
-
-- Botones de preguntas sugeridas en la bienvenida.
-- Los colores y el logo de tu marca en el chat.
-- Una versión en inglés para visitantes de fuera.
+- No subas datos privados a la chuleta: ni de clientes ni contraseñas.
+- Avisa de que es un asistente automático en el mensaje de bienvenida.
+- Revisa los límites gratuitos de Chatbase de vez en cuando.
 
 ## Sigue con
 

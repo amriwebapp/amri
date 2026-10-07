@@ -36,17 +36,17 @@ Ayudas a la persona a construir **su propio proyecto** combinando recetas de AMR
 - `amri:logo-ia` · **Diseña un logo con IA**: Logo con nombre, símbolo o iniciales, todos los formatos, tu kit de marca y cómo comprobar y proteger tu logo.
 
 ### Conecta tus apps
-- `amri:gmail-calendario` · **Tu secretaría: Gmail y Calendar**: Cada mañana, Claude repasa tu correo y tu agenda, te dice qué importa y prepara los borradores.
-- `amri:notion-cerebro` · **Tu segundo cerebro en Notion**: Claude ordena tus notas, crea bases de datos y te resume la semana dentro de tu Notion.
+- `amri:gmail-calendario` · **Tu secretaría: Gmail y Calendar**: Tu resumen de cada mañana, borradores con tu tono, reuniones preparadas, huecos en la agenda, facturas localizadas y la bandeja en orden. Claude nunca envía nada por ti.
+- `amri:notion-cerebro` · **Tu segundo cerebro en Notion**: Ordena tus notas, un tablero de proyectos, tu repaso de los viernes, tu biblioteca de lecturas, actas de reuniones y preguntas a tu Notion.
 - `amri:canva-diseno` · **Diseña en Canva hablando con Claude**: Claude diseña en tu Canva: posts, presentaciones, carteles, currículum, tarjetas y versiones nuevas de diseños que ya tienes.
-- `amri:navegador-chrome` · **Claude navega por ti con Chrome**: Compara precios, rellena formularios y recopila información de varias webs mientras tú miras.
-- `amri:slack-equipo` · **Claude en tu Slack**: Resume canales, encuentra decisiones y redacta mensajes para tu equipo sin leer cien notificaciones.
+- `amri:navegador-chrome` · **Claude navega por ti con Chrome**: Compara precios, investiga con fuentes, rellena formularios sin enviarlos, planea viajes y revisa tu propia web. Comprar y pagar, siempre tú.
+- `amri:slack-equipo` · **Claude en tu Slack**: Ponte al día en un minuto, encuentra qué se decidió, publica anuncios con tu permiso, el canvas de los viernes y reuniones preparadas.
 
 ### Crea y publica
 - `amri:webapp-gratis` · **Tu web online y gratis**: Un libro con 8 recetas: tu primera web, cuentas de usuario, reservas, dominio propio, Google y visitas. Con Claude, GitHub y Cloudflare, sin programar.
-- `amri:chatbot-web` · **Un chatbot para tu web**: Añade un chatbot que responde a las preguntas de tus visitantes sobre tu producto o servicio, entrenado con tu contenido.
-- `amri:figma-a-web` · **De Figma a web real**: Claude lee tu diseño de Figma y lo convierte en una web que funciona, fiel a colores, textos y espacios.
-- `amri:automatiza-tareas` · **Automatiza tareas aburridas con IA**: Conecta tu correo, tu calendario y tus hojas de cálculo para que la IA haga el trabajo repetitivo por ti.
+- `amri:chatbot-web` · **Un chatbot para tu web**: Monta tu chatbot, ponlo en tu web, recoge contactos, mejóralo cada semana y dale una bienvenida que invite a preguntar.
+- `amri:figma-a-web` · **De Figma a web real**: Una página completa, componentes, pantallas de app, tus estilos como variables y publicarla en internet.
+- `amri:automatiza-tareas` · **Automatiza tareas aburridas con IA**: Cinco automatizaciones con Zapier: correos resumidos en una hoja, facturas a Drive, citas al calendario, formularios con aviso y mensajes clasificados.
 
 ### Estudio creativo
 - `amri:higgsfield-cine` · **Imágenes y vídeos de cine con Higgsfield**: Un libro con 7 recetas: foto de producto, vídeo realista, vídeo UGC, animación, foto a vídeo, personajes y anuncios. Hablando en español con Claude.

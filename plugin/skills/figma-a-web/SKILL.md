@@ -1,15 +1,15 @@
 ---
 name: figma-a-web
-description: "Receta de AMRI «De Figma a web real». Claude lee tu diseño de Figma y lo convierte en una web que funciona, fiel a colores, textos y espacios. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «De Figma a web real». Una página completa, componentes, pantallas de app, tus estilos como variables y publicarla en internet. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # De Figma a web real
 
-Claude lee tu diseño de Figma y lo convierte en una web que funciona, fiel a colores, textos y espacios.
+Una página completa, componentes, pantallas de app, tus estilos como variables y publicarla en internet.
 
-- ⏱ 1 hora aprox.
-- 👩‍🍳 Dificultad media
+- 📕 5 recetas
+- ⏱ 15-40 min cada una
 - 💶 Gratis si tu plan de Claude incluye conectores
 - 🍽 Resultado: tu diseño convertido en web
 - Categoría: Crea y publica
@@ -33,167 +33,235 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Ingredientes (todos gratuitos)
 
-- **Figma**: el plano de la cocina. Donde está tu diseño. Plan gratuito.
+- **Figma**: el plano. Donde está tu diseño. Plan gratuito.
 - **Claude**: el constructor. Lee el diseño y escribe la web.
-- **Conector de Figma**: las gafas de Claude. Le deja ver capas, colores, textos y medidas.
-- **Tu navegador**: la mesa. Para probar la web en tu ordenador.
-- **GitHub y Cloudflare**: el reparto a domicilio. Para publicarla gratis.
+- **El conector de Figma**: las gafas de Claude. Le deja ver capas, colores, textos y medidas.
 
-## Ideas de ejemplo
+## Este es un libro de recetas
 
-- **Portfolio:** un portfolio con mi presentación, una galería de proyectos y un formulario de contacto
-- **Un componente:** una tarjeta de producto con imagen, precio y botón, en sus estados normal y al pasar el ratón
-- **Pantalla de app:** la pantalla principal de una app móvil con menú inferior y una lista de tarjetas
+Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Según la idea de la persona:
+1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
+2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
+3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
 
 ## Antes de empezar
 
-Pregunta a la persona: **¿Quieres publicarla en internet al terminar?** Si dudas, elige «Sí»: te enlazamos la receta de publicar gratis. Puedes dejarlo para otro día.
-
-Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
-
-## Pasos
-
-### 1. Prepara los ingredientes
-_5 min · cuentas_
-
-Necesitas un diseño en Figma. Si no tienes uno, usa una plantilla de la comunidad.
-
-#### Pasos
+### 1. Ten un diseño en Figma
+_5 min · el plano_
 
 - Entra en [Figma](https://www.figma.com) con una cuenta gratuita.
-
-- Si no tienes diseño, busca en **Figma Community** una plantilla gratuita de página web y pulsa **Open in Figma**.
-
-- Entra en [Claude](https://claude.ai).
+- Si no tienes diseño, busca en **Figma Community** una plantilla gratuita de web y pulsa **Open in Figma**.
 
 **✅ Comprobación:** tienes un diseño abierto en Figma.
 
-### 2. Ordena el diseño
-_10 min · mise en place_
+### 2. Conecta Figma con Claude
+_3 min · el conector_
 
-Un diseño ordenado se convierte en una web mucho mejor. Es como cortar los ingredientes antes de cocinar.
+- En Claude abre **Personalizar → Conectores** (en inglés: **Customize → Connectors**).
+- Pulsa **Explorar conectores**, busca «Figma» y pulsa **Conectar**.
+- Inicia sesión y pulsa **Permitir**.
 
-#### Pasos
+**✅ Comprobación:** Figma aparece activado.
+
+### 3. Ordena el diseño
+_10 min · cortar los ingredientes_
+
+Un diseño ordenado se convierte en una web mucho mejor.
 
 - Pon cada pantalla en su propio **frame** (marco) con un nombre claro: «Inicio», «Contacto».
-
-- Nombra las capas importantes: «Cabecera», «Botón reservar», «Foto principal».
-
-- Si sabes usar **Auto layout**, úsalo: Claude entenderá mejor cómo se ordena todo.
-
-> 💡 No hace falta que sea perfecto. Con que los nombres tengan sentido, ya ayuda mucho.
+- Nombra las capas importantes: «Cabecera», «Botón reservar».
+- Si sabes usar **Auto layout**, úsalo.
 
 **✅ Comprobación:** tu frame principal tiene nombre y sus capas se entienden.
 
-### 3. Conecta Figma con Claude
-_3 min · el conector_
+### 4. Copiar el enlace de un frame
+_1 min · señalar_
 
-Un conector es un permiso para que Claude use Figma por ti. Se activa una vez y queda guardado.
+En cada receta tendrás que darle a Claude el enlace de lo que quieres convertir:
 
-#### Pasos
+- Haz clic en el frame o el elemento.
+- Clic derecho → **Copy/Paste as → Copy link to selection**.
 
-- En Claude (web o app de escritorio) abre **Personalizar → Conectores** (en inglés: _Customize → Connectors_).
+**✅ Comprobación:** sabes copiar el enlace (empieza por figma.com/design/…).
 
-- Pulsa **Explorar conectores** (_Browse connectors_), busca **«Figma»** y pulsa **Conectar**.
+## Recetas del libro
 
-- Se abre una ventana de Figma: inicia sesión y pulsa **Permitir**.
+### Receta 1: Una página completa
 
-- En un chat nuevo, pulsa el botón **+** → **Conectores** y comprueba que Figma está activado.
+Tu página de inicio o tu portfolio, convertidos en un index.html fiel al diseño.
 
-> 💡 Los menús de Claude cambian de nombre a veces. Si no lo encuentras, busca «conectores» en la ayuda de Claude.
+- ⏱ 40 min
+- 👩‍🍳 Media
+- 🖥 Página
+- 🍽 Resultado: tu página como web
+- Versión web: https://amri.es/recetas/figma-a-web--pagina.html
+- Ideas de ejemplo:
+  - Página de inicio: una página de inicio con cabecera, servicios, opiniones y un pie con contacto
+  - Portfolio: un portfolio con mi presentación, una galería de proyectos y un formulario de contacto
 
-**✅ Comprobación:** Figma aparece activado en tus conectores.
-
-### 4. Copia el enlace del frame
-_1 min · señala el plato_
-
-Claude necesita saber qué parte del diseño tiene que construir.
-
-#### Pasos
-
-- En Figma, haz clic en tu frame principal.
-
-- Clic derecho → **Copy/Paste as → Copy link to selection** (Copiar enlace a la selección).
-
-**✅ Comprobación:** tienes un enlace que empieza por figma.com/design/…
-
-### 5. Pide tu web
-_10 min · la orden_
-
-Claude lee el diseño y lo convierte en una web real.
-
-#### Pasos
-
-- Abre un chat nuevo y pega (cambia el enlace por el tuyo):
+#### 1. Pide la web
+_15 min · la orden_
 
 ```text
-Este es el enlace a un frame de Figma: [pega aquí tu enlace]
+Este es el enlace a un frame de Figma: [pega tu enlace]
 
 Usa el conector de Figma para leerlo. Es [la idea de la persona].
 
-Conviértelo en una web en un único archivo index.html con HTML y CSS. Respeta colores, tipografías, tamaños y espacios. Que se vea bien en móvil. Usa textos reales del diseño, no «lorem ipsum». Al final dime qué partes no has podido copiar exactamente.
+Conviértelo en una web en un único archivo index.html con HTML y CSS. Respeta colores, tipografías, tamaños y espacios. Que se vea bien en móvil. Usa los textos reales del diseño. Al final dime qué partes no has podido copiar exactamente.
 ```
 
-**¿Qué significa cada parte?**
+**✅ Comprobación:** tienes el archivo index.html.
 
-- **Un único archivo**: más fácil de probar y publicar.
-- **Que se vea bien en móvil**: la mayoría de tus visitas vendrán del teléfono.
-- **Qué no has podido copiar**: así sabes qué revisar.
+#### 2. Compara al lado
+_15 min · ajustar_
 
-**✅ Comprobación:** Claude te da un archivo index.html para descargar o copiar.
-
-### 6. Pruébala y compara
-_10 min · probar la sal_
-
-Abre la web al lado del diseño y busca diferencias.
-
-#### Pasos
-
-- Guarda el archivo como **index.html** en una carpeta y ábrelo con doble clic.
-
-- Ponlo al lado de Figma y compara.
-
+- Guarda el archivo y ábrelo con doble clic, al lado de Figma.
 - Pide los ajustes de uno en uno:
 
 ```text
-En la web, el espacio entre la cabecera y la sección de servicios es más grande que en Figma. Ajústalo para que sea igual y no cambies nada más.
+El espacio entre la cabecera y la sección de servicios es más grande que en Figma. Ajústalo para que sea igual y no cambies nada más.
 ```
 
-> 💡 Para ver cómo queda en móvil: en el navegador pulsa F12 y el icono del teléfono.
+> 💡 Para verla como en el móvil: en el navegador pulsa F12 y el icono del teléfono.
 
-**✅ Comprobación:** la web y el diseño se parecen como dos gotas de agua.
+**✅ Comprobación:** la web y el diseño se parecen mucho.
 
-### 7. Publícala gratis _(solo si la respuesta a «Quieres publicarla en internet al terminar» es «Sí»)_
-_15 min · servir_
+#### 3. Guarda la versión buena
+_5 min · copia_
 
-Tu archivo ya está listo para salir a internet.
+Guarda el archivo y la conversación: si cambias el diseño, pedirás solo esa parte.
 
-- Sigue desde el paso de GitHub de la receta [Tu webapp online y gratis](webapp-gratis.html).
-- Sube tu **index.html** en lugar de crear uno nuevo.
+**✅ Comprobación:** tienes la versión final guardada.
 
-**✅ Comprobación:** tienes una dirección web que puedes abrir desde el móvil.
+**Al terminar:** Tu diseño ya es una web. Para publicarla, mira «Publícala».
+
+### Receta 2: Un componente: botón, tarjeta o menú
+
+Una pieza suelta, con sus estados (normal, al pasar el ratón), lista para reutilizar.
+
+- ⏱ 15 min
+- 👩‍🍳 Fácil
+- 🧩 Componente
+- 🍽 Resultado: el código de un componente
+- Versión web: https://amri.es/recetas/figma-a-web--componente.html
+- Ideas de ejemplo:
+  - Tarjeta de producto: una tarjeta de producto con imagen, precio y botón, en sus estados normal y al pasar el ratón
+  - Menú: un menú de navegación que en el móvil se convierte en un botón desplegable
+
+#### 1. Pídelo
+_10 min · la pieza_
+
+```text
+Este es el enlace a un componente de Figma: [enlace]. Conviértelo en HTML y CSS: [la idea de la persona]. Dame una página de prueba con el componente y su código por separado para copiarlo.
+```
+
+**✅ Comprobación:** ves el componente funcionando en la página de prueba.
+
+#### 2. Pruébalo
+_5 min · estados_
+
+Pasa el ratón por encima, pulsa y míralo en el móvil.
+
+**✅ Comprobación:** se comporta como en el diseño.
+
+**Al terminar:** Tu componente está listo para usarlo en cualquier página.
+
+### Receta 3: Una pantalla de app móvil
+
+La pantalla principal de tu app, como web que se ve en el móvil.
+
+- ⏱ 30 min
+- 👩‍🍳 Media
+- 📱 App
+- 🍽 Resultado: tu pantalla de app funcionando en el navegador
+- Versión web: https://amri.es/recetas/figma-a-web--app.html
+- Ideas de ejemplo:
+  - Pantalla de inicio: la pantalla principal de una app móvil con menú inferior y una lista de tarjetas
+  - Perfil: la pantalla de perfil de usuario
+
+#### 1. Pídela
+_20 min · la pantalla_
+
+```text
+Este es el enlace al frame de Figma: [enlace]. Es [la idea de la persona]. Conviértelo en una web pensada para móvil, en un único index.html, que se pueda tocar (menú y botones). Fiel a colores, tamaños y espacios.
+```
+
+**✅ Comprobación:** tienes el archivo.
+
+#### 2. Pruébala en tu móvil
+_10 min · tocar_
+
+- Ábrela en el navegador con el modo móvil (F12 e icono del teléfono).
+- Pide ajustes de uno en uno.
+
+**✅ Comprobación:** se ve y se toca como en el diseño.
+
+**Al terminar:** Tu pantalla funciona. Es un prototipo: para una app real hará falta más trabajo.
+
+### Receta 4: Tus colores y letras como variables
+
+Convierte los estilos de Figma en variables CSS: cambias un color y cambia en toda la web.
+
+- ⏱ 15 min
+- 👩‍🍳 Media
+- 🎨 Estilos
+- 🍽 Resultado: tu web lista para cambiar de colores en un minuto
+- Versión web: https://amri.es/recetas/figma-a-web--variables.html
+- Ideas de ejemplo:
+  - Colores y textos: los estilos y variables de color y texto
+
+#### 1. Conviértelos
+_10 min · variables_
+
+```text
+Lee [la idea de la persona] de mi archivo de Figma y conviértelos en variables CSS al principio de mi web. Usa esas variables en toda la web en lugar de los colores escritos a mano. Este es el código: [pégalo].
+```
+
+**✅ Comprobación:** tu web usa variables.
+
+#### 2. Pruébalo
+_5 min · un cambio_
+
+```text
+Cambia el color principal por [color] para ver cómo queda. Luego vuelve al original.
+```
+
+**✅ Comprobación:** toda la web cambia de color con un solo cambio.
+
+**Al terminar:** Ahora cambiar la marca de tu web es cuestión de un minuto.
+
+### Receta 5: Publícala en internet
+
+Tu index.html convertido en una web pública y gratuita.
+
+- ⏱ 20 min
+- 👩‍🍳 Fácil
+- 🚀 Publicar
+- 🍽 Resultado: tu diseño en una dirección web
+- Versión web: https://amri.es/recetas/figma-a-web--publicar.html
+
+#### 1. Sigue el libro de la web
+_20 min · publicar_
+
+- Si no tienes cuentas, haz «Antes de empezar» del libro [Tu web online y gratis](webapp-gratis.html).
+- Después sigue [Tu primera web](webapp-gratis--primera-web.html) desde el paso 3 («Guárdala en GitHub»), subiendo tu `index.html` y tus imágenes.
+
+**✅ Comprobación:** tienes una dirección web que se abre desde el móvil.
+
+**Al terminar:** Tu diseño está en internet.
 
 ## Al terminar
 
-Tu diseño ya es una web que funciona. Guarda el archivo y la conversación: si cambias el diseño en Figma, puedes pedirle a Claude que actualice solo esa parte.
+Figma está conectado y tu diseño ordenado. Elige qué convertir.
 
 ## Extras (opcionales, después de servir)
 
-### Extra 1. Tus colores como variables
-_Opcional · nivel pro_
-
-Si usas variables o estilos en Figma, pide que se conviertan en variables CSS. Así cambiar un color cambia toda la web.
-
-```text
-Lee los estilos y variables de color y texto de mi archivo de Figma y conviértelos en variables CSS al principio del archivo. Usa esas variables en toda la web.
-```
-
-### Extra 2. Si algo no funciona
+### Extra 1. Si algo no funciona
 _Siempre · revisa esto_
 
-- **Claude no puede leer el enlace**: comprueba que el conector está activado y que tu cuenta de Figma tiene acceso al archivo.
+- **Claude no puede leer el enlace**: comprueba que el conector está activado y que tu cuenta tiene acceso al archivo.
 - **Fuentes distintas**: pide que use Google Fonts con la misma tipografía o la más parecida.
-- **Imágenes que faltan**: expórtalas desde Figma y ponlas en la misma carpeta; dile a Claude sus nombres.
+- **Faltan imágenes**: expórtalas desde Figma, ponlas en la misma carpeta y dile a Claude sus nombres.
 
 ## Sigue con
 

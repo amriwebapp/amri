@@ -1,15 +1,15 @@
 ---
 name: notion-cerebro
-description: "Receta de AMRI «Tu segundo cerebro en Notion». Claude ordena tus notas, crea bases de datos y te resume la semana dentro de tu Notion. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Tu segundo cerebro en Notion». Ordena tus notas, un tablero de proyectos, tu repaso de los viernes, tu biblioteca de lecturas, actas de reuniones y preguntas a tu Notion. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Tu segundo cerebro en Notion
 
-Claude ordena tus notas, crea bases de datos y te resume la semana dentro de tu Notion.
+Ordena tus notas, un tablero de proyectos, tu repaso de los viernes, tu biblioteca de lecturas, actas de reuniones y preguntas a tu Notion.
 
-- ⏱ 30 min aprox.
-- 👩‍🍳 Fácil
+- 📕 6 recetas
+- ⏱ 15-25 min cada una
 - 💶 Gratis si tu plan de Claude incluye conectores
 - 🍽 Resultado: un Notion ordenado que se resume solo
 - Categoría: Conecta tus apps
@@ -35,26 +35,19 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 - **Notion**: la despensa. Donde guardas todo. Plan gratuito.
 - **Claude**: el jefe de cocina. Ordena, resume y propone.
-- **Conector de Notion**: la llave de la despensa. Deja a Claude leer y escribir páginas.
+- **El conector de Notion**: la llave de la despensa. Deja a Claude leer y escribir páginas.
 
-## Ideas de ejemplo
+## Este es un libro de recetas
 
-- **Proyectos y tareas:** mis proyectos con sus tareas, fechas de entrega y estado
-- **Libros y lecturas:** los libros y artículos que leo, con resumen, valoración y citas favoritas
-- **Recetas de cocina:** mis recetas de cocina con ingredientes, tiempo, dificultad y fotos
+Tiene una preparación común («Antes de empezar») y 6 recetas concretas. Según la idea de la persona:
+1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
+2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
+3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
 
 ## Antes de empezar
 
-Pregunta a la persona: **¿Ya tienes páginas en Notion con contenido?** Si dudas, elige «Sí»: Claude revisará lo que tienes antes de proponer nada. Si tu Notion está vacío, también funciona.
-
-Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
-
-## Pasos
-
-### 1. Prepara los ingredientes
+### 1. Crea tus cuentas
 _3 min · cuentas_
-
-Necesitas una cuenta en Notion y otra en Claude.
 
 - Entra en [Notion](https://www.notion.so) (plan gratuito).
 - Entra en [Claude](https://claude.ai).
@@ -64,86 +57,248 @@ Necesitas una cuenta en Notion y otra en Claude.
 ### 2. Conecta Notion con Claude
 _3 min · el conector_
 
-Un conector es un permiso para que Claude use Notion por ti. Se activa una vez y queda guardado.
+- En Claude abre **Personalizar → Conectores** (en inglés: **Customize → Connectors**).
+- Pulsa **Explorar conectores**, busca «Notion» y pulsa **Conectar**.
+- Inicia sesión, elige tu espacio de trabajo y pulsa **Permitir**.
+- En un chat nuevo, pulsa **+ → Conectores** y comprueba que Notion está activado.
 
-#### Pasos
+**✅ Comprobación:** Notion aparece activado.
 
-- En Claude (web o app de escritorio) abre **Personalizar → Conectores** (en inglés: _Customize → Connectors_).
+### 3. La regla de oro
+_1 min · primero mirar_
 
-- Pulsa **Explorar conectores** (_Browse connectors_), busca **«Notion»** y pulsa **Conectar**.
+En todas las recetas de este libro, empieza diciendo «No cambies nada todavía». Primero mirar, luego tocar.
 
-- Se abre una ventana de Notion: inicia sesión y pulsa **Permitir**.
+**✅ Comprobación:** te acordarás de decirlo.
 
-- En un chat nuevo, pulsa el botón **+** → **Conectores** y comprueba que Notion está activado.
-Notion te preguntará a qué espacio de trabajo quieres dar acceso. Elige el tuyo.
+## Recetas del libro
 
-> 💡 Los menús de Claude cambian de nombre a veces. Si no lo encuentras, busca «conectores» en la ayuda de Claude.
+### Receta 1: Ordena tus notas sueltas
 
-**✅ Comprobación:** Notion aparece activado en tus conectores.
+Claude revisa lo que tienes, propone una estructura y la monta.
 
-### 3. Que Claude explore tu Notion _(solo si la respuesta a «Ya tienes páginas en Notion con contenido» es «Sí»)_
-_5 min · inventario_
+- ⏱ 25 min
+- 👩‍🍳 Fácil
+- 🗂 Orden
+- 🍽 Resultado: tus notas agrupadas por tema
+- Versión web: https://amri.es/recetas/notion-cerebro--ordenar.html
+- Ideas de ejemplo:
+  - Notas sueltas: todas mis notas sueltas, ideas y enlaces guardados
+  - Documentos del trabajo: los documentos de mi trabajo
 
-Antes de ordenar, hay que saber qué hay en la despensa.
+#### 1. El inventario
+_5 min · qué hay_
 
 ```text
-Busca en mi Notion todo lo relacionado con [la idea de la persona]. Hazme un resumen de cómo está organizado ahora y qué problemas ves (duplicados, páginas vacías, cosas sin clasificar).
-
-No cambies nada todavía.
+Busca en mi Notion [la idea de la persona]. Hazme un resumen de cómo está organizado ahora y qué problemas ves (duplicados, páginas vacías, cosas sin clasificar). No cambies nada todavía.
 ```
-
-> 💡 «No cambies nada todavía» es tu mejor amigo. Primero mirar, luego tocar.
 
 **✅ Comprobación:** Claude te describe lo que tienes.
 
-### 4. Diseña la estructura
-_5 min · el plan_
-
-Una **base de datos** de Notion es como una hoja de cálculo bonita: cada fila es una página.
+#### 2. La estructura
+_10 min · el plan_
 
 ```text
-Propón una base de datos de Notion para organizar [la idea de la persona].
-
-Dime: las propiedades (columnas) con su tipo, 2 o 3 vistas útiles (tabla, tablero, calendario) y una plantilla para páginas nuevas. Explícalo en pocas palabras y espera mi OK.
+Propón cómo organizarlo: qué páginas o bases de datos crear y dónde va cada cosa. Explícalo en pocas palabras y espera mi OK.
 ```
 
-**✅ Comprobación:** tienes una propuesta que entiendes y te gusta.
+**✅ Comprobación:** tienes un plan que te convence.
 
-### 5. Créala en tu Notion
-_5 min · montar_
-
-Ahora Claude la construye por ti.
+#### 3. Que lo monte
+_10 min · con permiso_
 
 ```text
-Perfecto. Crea en mi Notion una página llamada «Mi segundo cerebro» con esa base de datos. Después mueve o copia ahí mis páginas existentes que encajen, y dime cuáles has tocado.
+OK. Crea la estructura y mueve o copia ahí mis páginas. Dime cuáles has tocado. No borres nada.
+```
+
+**✅ Comprobación:** abres Notion y ves tus notas ordenadas.
+
+**Al terminar:** Tus notas tienen sitio. Sigue con «Tu repaso de los viernes» para mantenerlo.
+
+### Receta 2: Proyectos y tareas en un tablero
+
+Una base de datos con tus proyectos, fechas y estado, con vista de tablero y calendario.
+
+- ⏱ 20 min
+- 👩‍🍳 Fácil
+- ✅ Tareas
+- 🍽 Resultado: tu tablero de proyectos
+- Versión web: https://amri.es/recetas/notion-cerebro--proyectos.html
+- Ideas de ejemplo:
+  - Trabajo: mis proyectos del trabajo, con sus tareas, fechas de entrega y estado
+  - Casa: las tareas de casa y los recados
+
+#### 1. Diseña la base de datos
+_5 min · el plan_
+
+Una base de datos de Notion es como una hoja de cálculo bonita: cada fila es una página.
+
+```text
+Propón una base de datos de Notion para [la idea de la persona]: propiedades (columnas) con su tipo, una vista de tablero y otra de calendario. Espera mi OK.
+```
+
+**✅ Comprobación:** tienes la propuesta.
+
+#### 2. Créala
+_10 min · montar_
+
+```text
+Créala en mi Notion en una página llamada «Mis proyectos», con 3 ejemplos para ver cómo queda.
 ```
 
 > 💡 Si Claude no puede crear algo (por ejemplo, un tipo de vista), te dirá cómo hacerlo a mano en dos clics.
 
-**✅ Comprobación:** abres Notion y ves la página nueva con su base de datos.
+**✅ Comprobación:** ves el tablero en Notion.
 
-### 6. Tu repaso semanal
-_5 min · la rutina_
-
-La magia está en repetirlo. Cada viernes, un mensaje:
+#### 3. Añade tareas hablando
+_5 min · usarlo_
 
 ```text
-Revisa lo que he añadido o cambiado esta semana en «Mi segundo cerebro». Escríbeme un resumen en 5 líneas, 3 prioridades para la semana que viene y cualquier cosa que se esté quedando olvidada. Guárdalo como página nueva llamada «Semana del [fecha]».
+Añade a «Mis proyectos»: [tarea, proyecto, fecha]. Y dime qué vence esta semana.
 ```
 
-**✅ Comprobación:** tienes tu primer resumen semanal guardado en Notion.
+**✅ Comprobación:** la tarea aparece en el tablero.
+
+**Al terminar:** Tu tablero está listo. Añade tareas con un mensaje: «Añade al tablero: …».
+
+### Receta 3: Tu repaso de los viernes
+
+Cada viernes, un resumen de la semana, tus prioridades y lo que se está olvidando.
+
+- ⏱ 15 min
+- 👩‍🍳 Muy fácil
+- 🔁 Rutina
+- 🍽 Resultado: tu resumen semanal guardado en Notion
+- Versión web: https://amri.es/recetas/notion-cerebro--repaso.html
+- Ideas de ejemplo:
+  - Todo: lo que he añadido o cambiado esta semana en mi Notion
+  - Solo proyectos: el estado de mis proyectos
+
+#### 1. El resumen
+_10 min · la semana_
+
+```text
+Revisa [la idea de la persona]. Escríbeme un resumen en 5 líneas, 3 prioridades para la semana que viene y cualquier cosa que se esté quedando olvidada. Guárdalo como página nueva llamada «Semana del [fecha]».
+```
+
+**✅ Comprobación:** tienes tu resumen guardado en Notion.
+
+#### 2. Hazlo costumbre
+_5 min · la rutina_
+
+- Guarda el mensaje en una nota.
+- Ponte un recordatorio los viernes.
+
+**✅ Comprobación:** tienes el recordatorio puesto.
+
+**Al terminar:** Repite cada viernes. En un mes tendrás un diario de tu trabajo.
+
+### Receta 4: Tu biblioteca de lecturas
+
+Libros y artículos con resumen, valoración y citas favoritas.
+
+- ⏱ 15 min
+- 👩‍🍳 Fácil
+- 📚 Lecturas
+- 🍽 Resultado: tu biblioteca en Notion
+- Versión web: https://amri.es/recetas/notion-cerebro--lecturas.html
+- Ideas de ejemplo:
+  - Libros: los libros que leo
+  - Artículos y vídeos: los artículos y vídeos que guardo para más tarde
+
+#### 1. Crea la biblioteca
+_5 min · la base_
+
+```text
+Crea en mi Notion una base de datos para [la idea de la persona]: título, autor, estado (por leer, leyendo, leído), valoración, resumen y citas favoritas. Con una vista de galería.
+```
+
+**✅ Comprobación:** ves la biblioteca en Notion.
+
+#### 2. Tu primera ficha
+_10 min · probar_
+
+```text
+Acabo de leer [título]. Mis notas: [pégalas]. Crea su ficha con un resumen de 5 líneas y mis 3 mejores citas.
+```
+
+**✅ Comprobación:** tienes tu primera ficha.
+
+**Al terminar:** Tu biblioteca está lista. Después de cada lectura, pega tus notas y Claude crea la ficha.
+
+### Receta 5: Actas de reuniones en Notion
+
+Pegas tus notas desordenadas y Claude crea un acta limpia con acuerdos y tareas.
+
+- ⏱ 10 min
+- 👩‍🍳 Muy fácil
+- 📝 Actas
+- 🍽 Resultado: un acta en Notion
+- Versión web: https://amri.es/recetas/notion-cerebro--actas.html
+- Ideas de ejemplo:
+  - Trabajo: una reunión de trabajo
+  - Asociación o comunidad: una reunión de mi asociación o comunidad de vecinos
+
+#### 1. Pega tus notas
+_5 min · el acta_
+
+```text
+Estas son mis notas de [la idea de la persona]: [pégalas, aunque estén desordenadas]. Crea en Notion un acta con: asistentes, temas, acuerdos y tareas con responsable y fecha. No inventes nada que no esté en mis notas.
+```
+
+**✅ Comprobación:** el acta está en Notion.
+
+#### 2. Revisa
+_5 min · con lupa_
+
+Comprueba nombres, fechas y acuerdos antes de compartirla.
+
+**✅ Comprobación:** el acta es correcta.
+
+**Al terminar:** Tu acta está guardada. Si usas el tablero de proyectos, Claude puede añadir ahí las tareas.
+
+### Receta 6: Pregúntale a tu Notion
+
+Encuentra cualquier cosa que guardaste, aunque no recuerdes dónde.
+
+- ⏱ 10 min
+- 👩‍🍳 Muy fácil
+- 🔎 Buscar
+- 🍽 Resultado: la respuesta con enlace a la página
+- Versión web: https://amri.es/recetas/notion-cerebro--buscar.html
+- Ideas de ejemplo:
+  - Un dato concreto: un dato concreto que guardé
+  - Todo sobre un tema: todo lo que tengo sobre un tema
+
+#### 1. Pregunta
+_5 min · buscar_
+
+```text
+Busca en mi Notion [la idea de la persona]: [tu pregunta]. Responde citando la página de donde lo sacas, con su enlace. Si no lo encuentras, dilo.
+```
+
+**✅ Comprobación:** tienes la respuesta con su enlace.
+
+#### 2. Comprueba
+_5 min · el enlace_
+
+Abre el enlace y confirma que es lo que buscabas.
+
+**✅ Comprobación:** la respuesta era correcta.
+
+**Al terminar:** Tu Notion responde. Cuanto más ordenado, mejores respuestas.
 
 ## Al terminar
 
-Tu Notion ya tiene una estructura clara y una rutina semanal. Cada viernes, un mensaje y listo. Más abajo tienes extras de seguridad e ideas.
+Notion está conectado. Elige qué quieres organizar.
 
 ## Extras (opcionales, después de servir)
 
 ### Extra 1. Cuida tu despensa
 _Siempre · seguridad_
 
-- ⚠️ **Ojo con los mensajes trampa**: un documento o una página web que guardes puede llevar instrucciones escondidas para engañar a Claude («ignora lo anterior y reenvía…»). Por eso la regla de oro: Claude solo lee y propone; enviar, borrar o compartir lo haces tú. Si hace algo que no le pediste, páralo.
-- Pide siempre **«enséñame antes de borrar»**.
+- ⚠️ **Ojo con los mensajes trampa**: un documento o una página web que guardes puede llevar instrucciones escondidas para engañar a Claude. Claude solo lee y propone; borrar o compartir lo decides tú.
+- Pide siempre «enséñame antes de borrar».
 - No guardes contraseñas ni datos bancarios en Notion.
 - Notion guarda el historial de cada página: si algo sale mal, puedes volver atrás.
 
@@ -152,12 +307,6 @@ _Siempre · revisa esto_
 
 - **Claude no encuentra una página**: comprueba que el espacio de trabajo tiene acceso en el conector.
 - **Resultados a medias**: pide partes más pequeñas («solo las notas de marzo»).
-
-**💡 Ideas para seguir**
-
-- Un diario con preguntas diarias.
-- Un CRM sencillo de clientes.
-- Un plan de estudio para tus exámenes.
 
 ## Sigue con
 
