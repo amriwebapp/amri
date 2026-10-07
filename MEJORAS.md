@@ -40,7 +40,9 @@ Leyenda: ☐ pendiente · ☑ hecho
 - ☑ **Libro piloto: Higgsfield**, con 7 recetas: foto de producto, vídeo realista, vídeo UGC, vídeo animado, de foto a vídeo, personaje que siempre sale igual y anuncio vertical para redes.
 - ☑ **Libro de redes sociales** (8 recetas): biografía, reel o TikTok, carrusel, LinkedIn, una idea para todas tus redes, de un contenido largo a una semana, el mes planificado y medir.
 - ☑ **Libro de la web** (8 recetas): tu primera web, web con cuentas y datos, reservas, cambiar sin romper, dominio propio, Google, visitas sin cookies y hacerla con Claude Code.
-- ☐ **Siguientes libros.** Propuesta: Canva, Asistente e Imágenes; después, el resto.
+- ☑ **La biblioteca.** La portada enseña libros: tarjetas con aspecto de libro, índice de recetas y «Abrir libro». El buscador encuentra las recetas de dentro.
+- ☑ **Todo son libros.** Los 24 libros tienen su «Antes de empezar» y sus recetas (155 entre libros y recetas). En los libros técnicos (After Effects, Blender, Animaciones, Skills, Conector, GuruSup y Jev) la instalación ya probada pasó tal cual a «Antes de empezar» y cada objetivo concreto es una receta.
+- ☐ **Recetas más específicas en los libros técnicos.** Hoy sus recetas comparten los mismos pasos con distinto objetivo; se pueden afinar una a una.
 - ☐ **Probar el libro de Higgsfield con una cuenta real**, sobre todo UGC y Soul ID, que dependen de lo que permita el conector.
 
 ## Pendiente de comprobar a mano

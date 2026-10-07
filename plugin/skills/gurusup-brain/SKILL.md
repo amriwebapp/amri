@@ -1,15 +1,15 @@
 ---
 name: gurusup-brain
-description: "Receta de AMRI «El cerebro de tu empresa con GuruSup». Conecta GuruSup Brain a Claude para que responda con el conocimiento real de tu empresa, citando la fuente. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «El cerebro de tu empresa con GuruSup». Claude responde con el conocimiento real de tu empresa: dudas del equipo, clientes, guía de bienvenida y propuestas de venta. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # El cerebro de tu empresa con GuruSup
 
-Conecta GuruSup Brain a Claude para que responda con el conocimiento real de tu empresa, citando la fuente.
+Claude responde con el conocimiento real de tu empresa: dudas del equipo, clientes, guía de bienvenida y propuestas de venta.
 
-- ⏱ 30 min aprox.
-- 👩‍🍳 Dificultad media
+- 📕 4 recetas
+- ⏱ 10-15 min cada una
 - 💶 GuruSup es de pago (pide demo)
 - 🍽 Resultado: Claude responde con lo que sabe tu empresa
 - Categoría: Para empresas (de pago)
@@ -38,19 +38,14 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 - **Conector de GuruSup Brain**: el camarero. Lleva las preguntas de Claude al Brain y trae las respuestas.
 - **Tus apps de empresa**: la despensa. Notion, Drive, Slack, HubSpot… lo que el Brain leerá.
 
-## Ideas de ejemplo
+## Este es un libro de recetas
 
-- **Atención al cliente:** preparar respuestas a clientes usando nuestras condiciones, precios y casos resueltos
-- **Onboarding:** crear una guía de bienvenida para una persona nueva con todo lo que necesita saber de la empresa
-- **Propuestas de venta:** preparar propuestas comerciales con nuestros servicios, casos de éxito y precios actualizados
+Tiene una preparación común («Antes de empezar») y 4 recetas concretas. Según la idea de la persona:
+1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
+2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
+3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
 
 ## Antes de empezar
-
-Pregunta a la persona: **¿Tu empresa ya tiene información en otras apps (Notion, Drive, Slack, HubSpot…)?** Si dudas, elige «Sí»: te enseñamos a conectar esas fuentes al Brain para que Claude las use.
-
-Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
-
-## Pasos
 
 ### 1. Prepara los ingredientes
 _5 min · cuentas_
@@ -65,7 +60,7 @@ Necesitas una cuenta de GuruSup con el Brain activado y tu cuenta de Claude.
 
 **✅ Comprobación:** puedes entrar en GuruSup y en Claude.
 
-### 2. Alimenta el Brain _(solo si la respuesta a «Tu empresa ya tiene información en otras apps (Notion, Drive, Slack, HubSpot…)» es «Sí»)_
+### 2. Alimenta el Brain
 _10 min · la despensa_
 
 El Brain aprende de las herramientas que ya usa tu empresa. Cuanto mejor lo alimentes, mejores respuestas.
@@ -107,7 +102,35 @@ https://mcp.brain.gurusup.com/mcp
 
 **✅ Comprobación:** GuruSup Brain aparece activado en tus conectores.
 
-### 4. Tu primera pregunta
+### 4. Hazlo costumbre con un proyecto
+_5 min · las reglas_
+
+Un proyecto de Claude guarda la regla de consultar el Brain siempre.
+
+- En Claude: **Proyectos → Crear proyecto**, llámalo **Mi empresa**.
+- En **Instrucciones**, pega:
+
+```text
+Antes de responder cualquier cosa sobre la empresa, consulta GuruSup Brain. Cita siempre la fuente. Si no está en el Brain, dilo claramente y no lo inventes. Responde breve y en el tono de la empresa.
+```
+
+**✅ Comprobación:** en los chats del proyecto, Claude consulta el Brain sin que se lo pidas.
+
+## Recetas del libro
+
+### Receta 1: Dudas del equipo
+
+Procesos, políticas, herramientas y a quién preguntar, respondido con tus documentos.
+
+- ⏱ 10 min
+- 👩‍🍳 Fácil
+- 👥 Equipo
+- 🍽 Resultado: respuestas internas con su fuente
+- Versión web: https://amri.es/recetas/gurusup-brain--equipo.html
+- Ideas de ejemplo:
+  - Dudas del equipo: responder las dudas internas del equipo: procesos, políticas, herramientas y a quién preguntar
+
+#### 1. Tu primera pregunta
 _5 min · probar_
 
 Haz una pregunta cuya respuesta conozcas. Así compruebas que responde con la versión buena.
@@ -122,21 +145,7 @@ Empieza por esta pregunta: [escribe una duda real]. Dime de qué fuente sale la 
 
 **✅ Comprobación:** la respuesta coincide con lo que tú sabes y cita su fuente.
 
-### 5. Hazlo costumbre con un proyecto
-_5 min · las reglas_
-
-Un proyecto de Claude guarda la regla de consultar el Brain siempre.
-
-- En Claude: **Proyectos → Crear proyecto**, llámalo **Mi empresa**.
-- En **Instrucciones**, pega:
-
-```text
-Antes de responder cualquier cosa sobre la empresa, consulta GuruSup Brain. Cita siempre la fuente. Si no está en el Brain, dilo claramente y no lo inventes. Responde breve y en el tono de la empresa.
-```
-
-**✅ Comprobación:** en los chats del proyecto, Claude consulta el Brain sin que se lo pidas.
-
-### 6. Rellena los huecos
+#### 2. Rellena los huecos
 _5 min · mejorar_
 
 Cada «no lo sé» es una oportunidad: la información que falta se añade una vez y sirve para siempre.
@@ -147,9 +156,131 @@ Hazme una lista de las preguntas de hoy que el Brain no pudo responder bien, y d
 
 **✅ Comprobación:** tienes una lista de huecos y a quién preguntar.
 
+**Al terminar:** Claude ya consulta el cerebro de tu empresa antes de responder. Menos preguntas repetidas y respuestas con la versión buena de las cosas.
+
+### Receta 2: Respuestas a clientes
+
+Respuestas basadas en vuestras condiciones, precios y casos resueltos.
+
+- ⏱ 10 min
+- 👩‍🍳 Fácil
+- 💬 Clientes
+- 🍽 Resultado: respuestas a clientes con fuente
+- Versión web: https://amri.es/recetas/gurusup-brain--clientes.html
+- Ideas de ejemplo:
+  - Atención al cliente: preparar respuestas a clientes usando nuestras condiciones, precios y casos resueltos
+
+#### 1. Tu primera pregunta
+_5 min · probar_
+
+Haz una pregunta cuya respuesta conozcas. Así compruebas que responde con la versión buena.
+
+```text
+Consulta primero GuruSup Brain. Quiero [la idea de la persona].
+
+Empieza por esta pregunta: [escribe una duda real]. Dime de qué fuente sale la respuesta y si falta información.
+```
+
+> 💡 Pide siempre la fuente. Si Claude no la da, desconfía y compruébalo.
+
+**✅ Comprobación:** la respuesta coincide con lo que tú sabes y cita su fuente.
+
+#### 2. Rellena los huecos
+_5 min · mejorar_
+
+Cada «no lo sé» es una oportunidad: la información que falta se añade una vez y sirve para siempre.
+
+```text
+Hazme una lista de las preguntas de hoy que el Brain no pudo responder bien, y dime qué persona o documento podría completarlas.
+```
+
+**✅ Comprobación:** tienes una lista de huecos y a quién preguntar.
+
+**Al terminar:** Claude ya consulta el cerebro de tu empresa antes de responder. Menos preguntas repetidas y respuestas con la versión buena de las cosas.
+
+### Receta 3: Guía de bienvenida
+
+Todo lo que necesita saber una persona nueva, sacado de vuestra documentación.
+
+- ⏱ 15 min
+- 👩‍🍳 Fácil
+- 👋 Onboarding
+- 🍽 Resultado: una guía de bienvenida
+- Versión web: https://amri.es/recetas/gurusup-brain--bienvenida.html
+- Ideas de ejemplo:
+  - Onboarding: crear una guía de bienvenida para una persona nueva con todo lo que necesita saber de la empresa
+
+#### 1. Tu primera pregunta
+_5 min · probar_
+
+Haz una pregunta cuya respuesta conozcas. Así compruebas que responde con la versión buena.
+
+```text
+Consulta primero GuruSup Brain. Quiero [la idea de la persona].
+
+Empieza por esta pregunta: [escribe una duda real]. Dime de qué fuente sale la respuesta y si falta información.
+```
+
+> 💡 Pide siempre la fuente. Si Claude no la da, desconfía y compruébalo.
+
+**✅ Comprobación:** la respuesta coincide con lo que tú sabes y cita su fuente.
+
+#### 2. Rellena los huecos
+_5 min · mejorar_
+
+Cada «no lo sé» es una oportunidad: la información que falta se añade una vez y sirve para siempre.
+
+```text
+Hazme una lista de las preguntas de hoy que el Brain no pudo responder bien, y dime qué persona o documento podría completarlas.
+```
+
+**✅ Comprobación:** tienes una lista de huecos y a quién preguntar.
+
+**Al terminar:** Claude ya consulta el cerebro de tu empresa antes de responder. Menos preguntas repetidas y respuestas con la versión buena de las cosas.
+
+### Receta 4: Propuestas de venta
+
+Servicios, casos de éxito y precios actualizados en una propuesta.
+
+- ⏱ 15 min
+- 👩‍🍳 Fácil
+- 📈 Ventas
+- 🍽 Resultado: una propuesta comercial
+- Versión web: https://amri.es/recetas/gurusup-brain--propuestas.html
+- Ideas de ejemplo:
+  - Propuestas de venta: preparar propuestas comerciales con nuestros servicios, casos de éxito y precios actualizados
+
+#### 1. Tu primera pregunta
+_5 min · probar_
+
+Haz una pregunta cuya respuesta conozcas. Así compruebas que responde con la versión buena.
+
+```text
+Consulta primero GuruSup Brain. Quiero [la idea de la persona].
+
+Empieza por esta pregunta: [escribe una duda real]. Dime de qué fuente sale la respuesta y si falta información.
+```
+
+> 💡 Pide siempre la fuente. Si Claude no la da, desconfía y compruébalo.
+
+**✅ Comprobación:** la respuesta coincide con lo que tú sabes y cita su fuente.
+
+#### 2. Rellena los huecos
+_5 min · mejorar_
+
+Cada «no lo sé» es una oportunidad: la información que falta se añade una vez y sirve para siempre.
+
+```text
+Hazme una lista de las preguntas de hoy que el Brain no pudo responder bien, y dime qué persona o documento podría completarlas.
+```
+
+**✅ Comprobación:** tienes una lista de huecos y a quién preguntar.
+
+**Al terminar:** Claude ya consulta el cerebro de tu empresa antes de responder. Menos preguntas repetidas y respuestas con la versión buena de las cosas.
+
 ## Al terminar
 
-Claude ya consulta el cerebro de tu empresa antes de responder. Menos preguntas repetidas y respuestas con la versión buena de las cosas. Más abajo tienes extras: usarlo en Claude Code y cuidar los permisos.
+El Brain está conectado. Elige para qué lo quieres usar.
 
 ## Extras (opcionales, después de servir)
 

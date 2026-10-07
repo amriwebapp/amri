@@ -1,17 +1,17 @@
 ---
 name: video-aftereffects
-description: "Receta de AMRI «Edita vídeo con Claude y After Effects». Conecta Claude con After Effects y crea intros, títulos y anuncios animados dándole órdenes en español. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Edita vídeo con Claude y After Effects». Conecta Claude con After Effects y pídele en español: una intro con tu logo, títulos y rótulos, un vídeo vertical con texto animado o un anuncio de producto. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Edita vídeo con Claude y After Effects
 
-Conecta Claude con After Effects y crea intros, títulos y anuncios animados dándole órdenes en español.
+Conecta Claude con After Effects y pídele en español: una intro con tu logo, títulos y rótulos, un vídeo vertical con texto animado o un anuncio de producto.
 
-- ⏱ 45 min aprox.
-- 👩‍🍳 Dificultad media
+- 📕 4 recetas
+- ⏱ 25-30 min cada una
 - 💶 After Effects es de pago
-- 🍽 Resultado: un vídeo animado en MP4
+- 🍽 Resultado: vídeos animados en MP4
 - Categoría: Estudio creativo
 - Versión web (con explicaciones y comunidad): https://amri.es/recetas/video-aftereffects.html
 
@@ -39,19 +39,14 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 - **Conector MCP de After Effects**: el camarero. Lleva los pedidos de Claude al horno. Gratuito, hecho por la comunidad.
 - **Adobe Media Encoder**: el emplatado. Exporta tu MP4 (viene con la suscripción de Adobe).
 
-## Ideas de ejemplo
+## Este es un libro de recetas
 
-- **Títulos y rótulos:** un título animado que dice «Mi canal» y un rótulo con mi nombre y cargo que aparece abajo a la izquierda, para poner sobre mis vídeos
-- **Vídeo vertical:** un vídeo vertical 9:16 de 15 segundos con un clip mío de fondo y un texto grande animado encima
-- **Anuncio de producto:** un anuncio de 10 segundos con fondo de color, el nombre de mi producto que entra con movimiento y el precio que aparece después
+Tiene una preparación común («Antes de empezar») y 4 recetas concretas. Según la idea de la persona:
+1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
+2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
+3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
 
 ## Antes de empezar
-
-Pregunta a la persona: **¿Vas a usar tu propio logo o un clip tuyo?** Si dudas, elige «Sí»: te enseñamos a importar tu material. Si al final no lo usas, funciona igual.
-
-Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
-
-## Pasos
 
 ### 1. Prepara los ingredientes
 _10 min · instalar programas_
@@ -145,7 +140,21 @@ El conector trabaja sobre el proyecto que tengas abierto, así que primero tiene
 
 **✅ Comprobación:** After Effects está abierto y el proyecto tiene nombre.
 
-### 5. Prepara tu material _(solo si la respuesta a «Vas a usar tu propio logo o un clip tuyo» es «Sí»)_
+## Recetas del libro
+
+### Receta 1: Una intro con tu logo
+
+Tu logo apareciendo con un efecto de brillo, 5 segundos, para el principio de tus vídeos.
+
+- ⏱ 25 min
+- 👩‍🍳 Media
+- 🎬 Intro
+- 🍽 Resultado: tu intro en MP4
+- Versión web: https://amri.es/recetas/video-aftereffects--intro-logo.html
+- Ideas de ejemplo:
+  - Intro con logo: una intro de 5 segundos en la que aparece mi logo con un efecto de brillo, en formato horizontal 16:9
+
+#### 1. Prepara tu material
 _5 min · logo o clip_
 
 Como tu vídeo usa material propio, hay que meterlo en el proyecto para que Claude pueda usarlo.
@@ -162,7 +171,7 @@ Como tu vídeo usa material propio, hay que meterlo en el proyecto para que Clau
 
 **✅ Comprobación:** tu logo o tu clip se ve en el panel Project.
 
-### 6. Pídele el vídeo a Claude
+#### 2. Pídele el vídeo a Claude
 _10 min · la orden_
 
 Ahora Claude crea la animación directamente en tu After Effects. Tú ves cómo aparecen las capas.
@@ -189,7 +198,7 @@ Antes de tocar nada, dime en pasos cortos qué vas a hacer. Después créalo en 
 
 **✅ Comprobación:** en After Effects hay una composición nueva con capas y Claude te ha explicado qué hizo.
 
-### 7. Previsualiza y ajusta
+#### 3. Previsualiza y ajusta
 _10 min · pulir el resultado_
 
 Casi nunca sale perfecto a la primera. Verlo y pedir cambios pequeños es lo que da buen resultado.
@@ -210,7 +219,7 @@ Haz la entrada del título más lenta y suave, y cambia el color del texto a [tu
 
 **✅ Comprobación:** al reproducirla, el movimiento, los textos y los colores son los que querías.
 
-### 8. Exporta tu vídeo a MP4
+#### 4. Exporta tu vídeo a MP4
 _5 min · el emplatado_
 
 Para tener un archivo que puedas subir a cualquier sitio hay que exportarlo con Adobe Media Encoder.
@@ -227,9 +236,299 @@ Para tener un archivo que puedas subir a cualquier sitio hay que exportarlo con 
 
 **✅ Comprobación:** tienes un archivo .mp4 que se abre en tu reproductor y se ve como en After Effects.
 
+**Al terminar:** Ya tienes tu vídeo exportado en MP4. Guarda el proyecto y la orden que le diste a Claude: son tu receta para repetirlo con otros textos.
+
+### Receta 2: Títulos y rótulos animados
+
+Un título para tu canal y un rótulo con tu nombre y cargo, para poner sobre tus vídeos.
+
+- ⏱ 25 min
+- 👩‍🍳 Media
+- 🔤 Títulos
+- 🍽 Resultado: títulos listos para tus vídeos
+- Versión web: https://amri.es/recetas/video-aftereffects--titulos.html
+- Ideas de ejemplo:
+  - Títulos y rótulos: un título animado que dice «Mi canal» y un rótulo con mi nombre y cargo que aparece abajo a la izquierda, para poner sobre mis vídeos
+
+#### 1. Prepara tu material
+_5 min · logo o clip_
+
+Como tu vídeo usa material propio, hay que meterlo en el proyecto para que Claude pueda usarlo.
+
+#### Pasos
+
+- Pon tu logo (mejor un **PNG con fondo transparente**) o tu clip en una carpeta con un nombre sencillo, sin espacios ni acentos.
+
+- En After Effects: **File → Import → File…** y elige tus archivos.
+
+- Comprueba que aparecen en el panel **Project**.
+
+> 💡 Si no tienes logo transparente, mira la receta [Diseña un logo con IA](logo-ia.html).
+
+**✅ Comprobación:** tu logo o tu clip se ve en el panel Project.
+
+#### 2. Pídele el vídeo a Claude
+_10 min · la orden_
+
+Ahora Claude crea la animación directamente en tu After Effects. Tú ves cómo aparecen las capas.
+
+#### Pasos
+
+- Abre un chat nuevo en Claude Desktop.
+- Copia este mensaje y pégalo:
+
+```text
+Tienes acceso a mi After Effects a través del conector. Quiero crear [la idea de la persona].
+
+Antes de tocar nada, dime en pasos cortos qué vas a hacer. Después créalo en mi proyecto abierto: una composición con el tamaño y la duración adecuados, capas con nombres claros y animaciones suaves con fotogramas clave. Usa el material que he importado en el panel Project. Al terminar, dime qué has creado y cómo previsualizarlo.
+```
+
+**¿Qué significa cada parte del mensaje?**
+
+- **«Quiero crear…»**: tu idea. Cámbiala por la tuya.
+- **Dime primero el plan**: así puedes corregirlo antes de que toque tu proyecto.
+- **Capas con nombres claros**: luego será fácil retocarlo a mano.
+- **Fotogramas clave**: los puntos donde algo cambia (posición, tamaño, opacidad) para crear movimiento.
+
+> 💡 Empieza con algo corto y sencillo. Es mejor un vídeo de 5 segundos que sale bien que uno de un minuto lleno de fallos.
+
+**✅ Comprobación:** en After Effects hay una composición nueva con capas y Claude te ha explicado qué hizo.
+
+#### 3. Previsualiza y ajusta
+_10 min · pulir el resultado_
+
+Casi nunca sale perfecto a la primera. Verlo y pedir cambios pequeños es lo que da buen resultado.
+
+#### Pasos
+
+- Haz doble clic en la composición nueva del panel **Project**.
+
+- Pulsa la **barra espaciadora** para reproducirla.
+
+- Apunta lo que no te gusta y pídeselo a Claude, **un cambio cada vez**:
+
+```text
+Haz la entrada del título más lenta y suave, y cambia el color del texto a [tu color]. Cambia solo eso y no toques lo demás.
+```
+
+> 💡 Si un cambio sale mal, deshaz con **Ctrl+Z** (Windows) o **Cmd+Z** (Mac) en After Effects.
+
+**✅ Comprobación:** al reproducirla, el movimiento, los textos y los colores son los que querías.
+
+#### 4. Exporta tu vídeo a MP4
+_5 min · el emplatado_
+
+Para tener un archivo que puedas subir a cualquier sitio hay que exportarlo con Adobe Media Encoder.
+
+#### Pasos
+
+- Selecciona la composición.
+
+- Menú **Composition → Add to Adobe Media Encoder Queue**.
+
+- En Media Encoder, en la columna **Format**, elige **H.264** y como preset **«Match Source - High bitrate»**.
+
+- Elige dónde guardarlo y pulsa el botón verde de **Play** (Start Queue).
+
+**✅ Comprobación:** tienes un archivo .mp4 que se abre en tu reproductor y se ve como en After Effects.
+
+**Al terminar:** Ya tienes tu vídeo exportado en MP4. Guarda el proyecto y la orden que le diste a Claude: son tu receta para repetirlo con otros textos.
+
+### Receta 3: Vídeo vertical con texto animado
+
+15 segundos en 9:16 con tu clip de fondo y un texto grande que se mueve, para redes.
+
+- ⏱ 30 min
+- 👩‍🍳 Media
+- 📱 Vertical
+- 🍽 Resultado: un vídeo vertical en MP4
+- Versión web: https://amri.es/recetas/video-aftereffects--vertical.html
+- Ideas de ejemplo:
+  - Vídeo vertical: un vídeo vertical 9:16 de 15 segundos con un clip mío de fondo y un texto grande animado encima
+
+#### 1. Prepara tu material
+_5 min · logo o clip_
+
+Como tu vídeo usa material propio, hay que meterlo en el proyecto para que Claude pueda usarlo.
+
+#### Pasos
+
+- Pon tu logo (mejor un **PNG con fondo transparente**) o tu clip en una carpeta con un nombre sencillo, sin espacios ni acentos.
+
+- En After Effects: **File → Import → File…** y elige tus archivos.
+
+- Comprueba que aparecen en el panel **Project**.
+
+> 💡 Si no tienes logo transparente, mira la receta [Diseña un logo con IA](logo-ia.html).
+
+**✅ Comprobación:** tu logo o tu clip se ve en el panel Project.
+
+#### 2. Pídele el vídeo a Claude
+_10 min · la orden_
+
+Ahora Claude crea la animación directamente en tu After Effects. Tú ves cómo aparecen las capas.
+
+#### Pasos
+
+- Abre un chat nuevo en Claude Desktop.
+- Copia este mensaje y pégalo:
+
+```text
+Tienes acceso a mi After Effects a través del conector. Quiero crear [la idea de la persona].
+
+Antes de tocar nada, dime en pasos cortos qué vas a hacer. Después créalo en mi proyecto abierto: una composición con el tamaño y la duración adecuados, capas con nombres claros y animaciones suaves con fotogramas clave. Usa el material que he importado en el panel Project. Al terminar, dime qué has creado y cómo previsualizarlo.
+```
+
+**¿Qué significa cada parte del mensaje?**
+
+- **«Quiero crear…»**: tu idea. Cámbiala por la tuya.
+- **Dime primero el plan**: así puedes corregirlo antes de que toque tu proyecto.
+- **Capas con nombres claros**: luego será fácil retocarlo a mano.
+- **Fotogramas clave**: los puntos donde algo cambia (posición, tamaño, opacidad) para crear movimiento.
+
+> 💡 Empieza con algo corto y sencillo. Es mejor un vídeo de 5 segundos que sale bien que uno de un minuto lleno de fallos.
+
+**✅ Comprobación:** en After Effects hay una composición nueva con capas y Claude te ha explicado qué hizo.
+
+#### 3. Previsualiza y ajusta
+_10 min · pulir el resultado_
+
+Casi nunca sale perfecto a la primera. Verlo y pedir cambios pequeños es lo que da buen resultado.
+
+#### Pasos
+
+- Haz doble clic en la composición nueva del panel **Project**.
+
+- Pulsa la **barra espaciadora** para reproducirla.
+
+- Apunta lo que no te gusta y pídeselo a Claude, **un cambio cada vez**:
+
+```text
+Haz la entrada del título más lenta y suave, y cambia el color del texto a [tu color]. Cambia solo eso y no toques lo demás.
+```
+
+> 💡 Si un cambio sale mal, deshaz con **Ctrl+Z** (Windows) o **Cmd+Z** (Mac) en After Effects.
+
+**✅ Comprobación:** al reproducirla, el movimiento, los textos y los colores son los que querías.
+
+#### 4. Exporta tu vídeo a MP4
+_5 min · el emplatado_
+
+Para tener un archivo que puedas subir a cualquier sitio hay que exportarlo con Adobe Media Encoder.
+
+#### Pasos
+
+- Selecciona la composición.
+
+- Menú **Composition → Add to Adobe Media Encoder Queue**.
+
+- En Media Encoder, en la columna **Format**, elige **H.264** y como preset **«Match Source - High bitrate»**.
+
+- Elige dónde guardarlo y pulsa el botón verde de **Play** (Start Queue).
+
+**✅ Comprobación:** tienes un archivo .mp4 que se abre en tu reproductor y se ve como en After Effects.
+
+**Al terminar:** Ya tienes tu vídeo exportado en MP4. Guarda el proyecto y la orden que le diste a Claude: son tu receta para repetirlo con otros textos.
+
+### Receta 4: Anuncio animado de producto
+
+10 segundos con fondo de color, el nombre de tu producto entrando con movimiento y el precio.
+
+- ⏱ 30 min
+- 👩‍🍳 Media
+- 🛍 Anuncio
+- 🍽 Resultado: un anuncio en MP4
+- Versión web: https://amri.es/recetas/video-aftereffects--anuncio.html
+- Ideas de ejemplo:
+  - Anuncio de producto: un anuncio de 10 segundos con fondo de color, el nombre de mi producto que entra con movimiento y el precio que aparece después
+
+#### 1. Prepara tu material
+_5 min · logo o clip_
+
+Como tu vídeo usa material propio, hay que meterlo en el proyecto para que Claude pueda usarlo.
+
+#### Pasos
+
+- Pon tu logo (mejor un **PNG con fondo transparente**) o tu clip en una carpeta con un nombre sencillo, sin espacios ni acentos.
+
+- En After Effects: **File → Import → File…** y elige tus archivos.
+
+- Comprueba que aparecen en el panel **Project**.
+
+> 💡 Si no tienes logo transparente, mira la receta [Diseña un logo con IA](logo-ia.html).
+
+**✅ Comprobación:** tu logo o tu clip se ve en el panel Project.
+
+#### 2. Pídele el vídeo a Claude
+_10 min · la orden_
+
+Ahora Claude crea la animación directamente en tu After Effects. Tú ves cómo aparecen las capas.
+
+#### Pasos
+
+- Abre un chat nuevo en Claude Desktop.
+- Copia este mensaje y pégalo:
+
+```text
+Tienes acceso a mi After Effects a través del conector. Quiero crear [la idea de la persona].
+
+Antes de tocar nada, dime en pasos cortos qué vas a hacer. Después créalo en mi proyecto abierto: una composición con el tamaño y la duración adecuados, capas con nombres claros y animaciones suaves con fotogramas clave. Usa el material que he importado en el panel Project. Al terminar, dime qué has creado y cómo previsualizarlo.
+```
+
+**¿Qué significa cada parte del mensaje?**
+
+- **«Quiero crear…»**: tu idea. Cámbiala por la tuya.
+- **Dime primero el plan**: así puedes corregirlo antes de que toque tu proyecto.
+- **Capas con nombres claros**: luego será fácil retocarlo a mano.
+- **Fotogramas clave**: los puntos donde algo cambia (posición, tamaño, opacidad) para crear movimiento.
+
+> 💡 Empieza con algo corto y sencillo. Es mejor un vídeo de 5 segundos que sale bien que uno de un minuto lleno de fallos.
+
+**✅ Comprobación:** en After Effects hay una composición nueva con capas y Claude te ha explicado qué hizo.
+
+#### 3. Previsualiza y ajusta
+_10 min · pulir el resultado_
+
+Casi nunca sale perfecto a la primera. Verlo y pedir cambios pequeños es lo que da buen resultado.
+
+#### Pasos
+
+- Haz doble clic en la composición nueva del panel **Project**.
+
+- Pulsa la **barra espaciadora** para reproducirla.
+
+- Apunta lo que no te gusta y pídeselo a Claude, **un cambio cada vez**:
+
+```text
+Haz la entrada del título más lenta y suave, y cambia el color del texto a [tu color]. Cambia solo eso y no toques lo demás.
+```
+
+> 💡 Si un cambio sale mal, deshaz con **Ctrl+Z** (Windows) o **Cmd+Z** (Mac) en After Effects.
+
+**✅ Comprobación:** al reproducirla, el movimiento, los textos y los colores son los que querías.
+
+#### 4. Exporta tu vídeo a MP4
+_5 min · el emplatado_
+
+Para tener un archivo que puedas subir a cualquier sitio hay que exportarlo con Adobe Media Encoder.
+
+#### Pasos
+
+- Selecciona la composición.
+
+- Menú **Composition → Add to Adobe Media Encoder Queue**.
+
+- En Media Encoder, en la columna **Format**, elige **H.264** y como preset **«Match Source - High bitrate»**.
+
+- Elige dónde guardarlo y pulsa el botón verde de **Play** (Start Queue).
+
+**✅ Comprobación:** tienes un archivo .mp4 que se abre en tu reproductor y se ve como en After Effects.
+
+**Al terminar:** Ya tienes tu vídeo exportado en MP4. Guarda el proyecto y la orden que le diste a Claude: son tu receta para repetirlo con otros textos.
+
 ## Al terminar
 
-Ya tienes tu vídeo exportado en MP4. Guarda el proyecto y la orden que le diste a Claude: son tu receta para repetirlo con otros textos. Más abajo tienes extras: una plantilla reutilizable, qué hacer si algo falla y cómo usar material con permiso.
+After Effects está conectado con Claude. Elige qué vídeo quieres hacer.
 
 ## Extras (opcionales, después de servir)
 
