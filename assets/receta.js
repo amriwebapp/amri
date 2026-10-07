@@ -6,8 +6,8 @@
 "use strict";
 // Mismo orden que en la portada (assets/academia.js)
 var ORDER=["webapp-gratis","imagenes-ia","asistente-ia","automatiza-tareas","chatbot-web","logo-ia","video-aftereffects","blender-3d",
-  "higgsfield-cine","canva-diseno","figma-a-web","notion-cerebro","gmail-calendario","claude-chrome","skills-claude","conector-propio","slack-equipo","gurusup-brain","redes-sociales","animaciones-opus","jev-decisiones","jev-guardian"];
-var SVG={"higgsfield-cine":1,"canva-diseno":1,"figma-a-web":1,"notion-cerebro":1,"gmail-calendario":1,"claude-chrome":1,"skills-claude":1,"conector-propio":1,"slack-equipo":1,"gurusup-brain":1,"redes-sociales":1,"animaciones-opus":1,"jev-decisiones":1,"jev-guardian":1};
+  "higgsfield-cine","canva-diseno","figma-a-web","notion-cerebro","gmail-calendario","navegador-chrome","skills-propias","conector-propio","slack-equipo","gurusup-brain","redes-sociales","animaciones-opus","jev-decisiones","jev-guardian","empieza-aqui","primer-agente"];
+var SVG={"higgsfield-cine":1,"canva-diseno":1,"figma-a-web":1,"notion-cerebro":1,"gmail-calendario":1,"navegador-chrome":1,"skills-propias":1,"conector-propio":1,"slack-equipo":1,"gurusup-brain":1,"redes-sociales":1,"animaciones-opus":1,"jev-decisiones":1,"jev-guardian":1,"empieza-aqui":1,"primer-agente":1};
 var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
 var slug=(location.pathname.split("/").pop()||"").replace(/\.html$/,"");
 var img=function(s){return "../img/"+s+(SVG[s]?".svg":".jpg")};

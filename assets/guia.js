@@ -38,7 +38,11 @@ var GLOSS={
   [["CSS"],"El estilo de una web: colores, tamaños, tipografías y posiciones."],
   [["JavaScript"],"El código que hace que la web reaccione: botones, formularios y animaciones."],
   [["commit"],"Guardar un cambio en el historial de tu repositorio, con una nota de qué cambiaste."],
-  [["Claude Code"],"La versión de Claude que trabaja en la terminal de tu ordenador: crea archivos y ejecuta órdenes por ti."]
+  [["Claude Code"],"La versión de Claude que trabaja con los archivos de tu ordenador, desde la app de escritorio o la terminal: crea archivos y ejecuta órdenes por ti."],
+  [["agente","agentes"],"Claude trabajando por su cuenta en una tarea de varios pasos: hace un plan, lo ejecuta, comprueba el resultado y te pide permiso antes de lo importante."],
+  [["subagente","subagentes"],"Un ayudante al que Claude encarga una parte de una tarea grande, por ejemplo investigar o revisar."],
+  [["Cowork"],"El modo de la app de escritorio de Claude en el que trabaja con tus documentos y carpetas, sin terminal."],
+  [["clave publicable"],"La llave de Supabase que puede ir en tu web sin peligro: solo deja hacer lo que permiten tus reglas."]
  ],
  en:[
   [["repository","repositories","repo"],"A folder of your project stored on GitHub, with the history of every change."],
@@ -61,7 +65,11 @@ var GLOSS={
   [["CSS"],"A website's style: colours, sizes, fonts and positions."],
   [["JavaScript"],"The code that makes a website react: buttons, forms and animations."],
   [["commit"],"Saving a change to your repository's history, with a note about what you changed."],
-  [["Claude Code"],"The version of Claude that works in your computer's terminal: it creates files and runs commands for you."]
+  [["Claude Code"],"The version of Claude that works with the files on your computer, from the desktop app or the terminal: it creates files and runs commands for you."],
+  [["agent","agents"],"Claude working on its own on a task with several steps: it makes a plan, carries it out, checks the result and asks your permission before anything important."],
+  [["subagent","subagents"],"A helper Claude hands part of a big task to, for example researching or reviewing."],
+  [["Cowork"],"The Claude desktop app mode where it works with your documents and folders, without a terminal."],
+  [["publishable key"],"The Supabase key that can safely go on your website: it only allows what your rules permit."]
  ],
  ar:[
   [["مستودع","المستودع"],"مجلد مشروعك محفوظ في GitHub مع سجل كل تغيير."],
@@ -82,7 +90,10 @@ var GLOSS={
   [["HTML"],"هيكل صفحة الويب: النصوص والعناوين والصور والأزرار."],
   [["CSS"],"مظهر الموقع: الألوان والأحجام والخطوط والمواضع."],
   [["JavaScript"],"الشيفرة التي تجعل الموقع يتفاعل: الأزرار والنماذج والحركة."],
-  [["Claude Code"],"نسخة Claude التي تعمل في طرفية حاسوبك: تنشئ الملفات وتنفذ الأوامر نيابة عنك."]
+  [["Claude Code"],"نسخة Claude التي تعمل بملفات حاسوبك، من تطبيق سطح المكتب أو من الطرفية: تنشئ الملفات وتنفذ الأوامر نيابة عنك."],
+  [["وكيل","وكلاء"],"Claude يعمل وحده على مهمة من عدة خطوات: يضع خطة وينفذها ويتحقق من النتيجة ويستأذنك قبل أي أمر مهم."],
+  [["Cowork"],"وضع في تطبيق Claude لسطح المكتب يعمل فيه بمستنداتك ومجلداتك دون طرفية."],
+  [["المفتاح العام"],"مفتاح Supabase الذي يمكن وضعه في موقعك بأمان: لا يسمح إلا بما تسمح به قواعدك."]
  ]
 };
 
@@ -141,8 +152,8 @@ var FIX={
   [["github","repositorio"],"¿Faltan archivos en GitHub? En Mac, las carpetas que empiezan por punto están ocultas: pulsa ⌘ + Mayús + . en Finder para verlas y súbelas también."],
   [["cloudflare","pages"],"¿La web sale en blanco o con error 404? En Cloudflare, revisa que la carpeta de salida (Build output directory) sea donde está index.html."],
   [["dominio","dns"],"¿«No se puede acceder al sitio» después de cambiar los DNS? Espera unas horas o vacía la caché DNS de tu ordenador; prueba desde el móvil con datos."],
-  [["supabase","base de datos"],"¿No se guardan los datos? Comprueba que copiaste completas la Project URL y la clave «anon», y que las reglas RLS permiten insertar."],
-  [["conector"],"¿No ves el conector? Búscalo en Ajustes → Conectores; algunos dependen de tu plan. Cada paso tiene una alternativa manual."],
+  [["supabase","base de datos"],"¿No se guardan los datos? Comprueba que copiaste completas la Project URL y la clave publicable (o «anon» en proyectos antiguos), y que las reglas RLS permiten insertar."],
+  [["conector"],"¿No ves el conector? Búscalo en Personalizar → Conectores (Customize → Connectors); algunos dependen de tu plan. Cada paso tiene una alternativa manual."],
   [["copia este","pega","prompt","claude"],"¿Claude no hace lo que quieres? Pide un solo cambio cada vez y explica qué esperabas ver y qué ves."],
   [["plugin","marketplace"],"¿«Marketplace file not found»? El repositorio no tiene la carpeta .claude-plugin: comprueba que se subió."],
   [["imagen","logo"],"¿Las imágenes no se parecen a lo que pides? Describe estilo, encuadre y luz, y pide cuatro variantes para elegir."],
@@ -152,8 +163,8 @@ var FIX={
   [["github","repository"],"Files missing on GitHub? On a Mac, folders starting with a dot are hidden: press ⌘ + Shift + . in Finder to see them and upload them too."],
   [["cloudflare","pages"],"Blank page or 404 error? In Cloudflare, check that the Build output directory is the folder where index.html is."],
   [["domain","dns"],"“This site can't be reached” after changing DNS? Wait a few hours or flush your computer's DNS cache; try from your phone on mobile data."],
-  [["supabase","database"],"Data not saving? Check that you copied the full Project URL and “anon” key, and that the RLS rules allow inserts."],
-  [["connector"],"Can't see the connector? Look in Settings → Connectors; some depend on your plan. Every step has a manual alternative."],
+  [["supabase","database"],"Data not saving? Check that you copied the full Project URL and publishable (or older “anon”) key, and that the RLS rules allow inserts."],
+  [["connector"],"Can't see the connector? Look in Customize → Connectors; some depend on your plan. Every step has a manual alternative."],
   [["copy this","paste","prompt","claude"],"Claude not doing what you want? Ask for one change at a time and explain what you expected to see and what you see."],
   [["plugin","marketplace"],"“Marketplace file not found”? The repository has no .claude-plugin folder: check it was uploaded."],
   [["image","logo"],"Images don't look like what you asked for? Describe style, framing and light, and ask for four variations to choose from."],
@@ -163,8 +174,8 @@ var FIX={
   [["github","مستودع"],"ملفات ناقصة في GitHub؟ على Mac المجلدات التي تبدأ بنقطة مخفية: اضغط ⌘ + Shift + . في Finder لرؤيتها وارفعها أيضاً."],
   [["cloudflare"],"صفحة فارغة أو خطأ 404؟ في Cloudflare تحقق أن مجلد الإخراج (Build output directory) هو المجلد الذي فيه index.html."],
   [["نطاق","dns"],"«لا يمكن الوصول إلى الموقع» بعد تغيير DNS؟ انتظر بضع ساعات أو امسح ذاكرة DNS في حاسوبك؛ جرّب من الهاتف ببيانات الجوال."],
-  [["supabase","قاعدة"],"البيانات لا تُحفظ؟ تحقق أنك نسخت Project URL ومفتاح «anon» كاملين، وأن قواعد RLS تسمح بالإضافة."],
-  [["موصل"],"لا ترى الموصل؟ ابحث عنه في الإعدادات ← الموصلات؛ بعضها يعتمد على خطتك. لكل خطوة بديل يدوي."],
+  [["supabase","قاعدة"],"البيانات لا تُحفظ؟ تحقق أنك نسخت Project URL والمفتاح العام (أو «anon» في المشاريع القديمة) كاملين، وأن قواعد RLS تسمح بالإضافة."],
+  [["موصل"],"لا ترى الموصل؟ ابحث عنه في Customize ← Connectors؛ بعضها يعتمد على خطتك. لكل خطوة بديل يدوي."],
   [["انسخ","الصق","claude"],"Claude لا يفعل ما تريد؟ اطلب تغييراً واحداً في كل مرة واشرح ما كنت تتوقعه وما تراه."],
   [["إضافة","marketplace"],"«Marketplace file not found»؟ المستودع ليس فيه مجلد ‎.claude-plugin: تحقق من رفعه."],
   [["صورة","شعار"],"الصور لا تشبه ما تطلبه؟ صِف الأسلوب والإطار والإضاءة، واطلب أربعة بدائل لتختار."],

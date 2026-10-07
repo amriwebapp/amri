@@ -10,7 +10,7 @@ Claude ordena tus notas, crea bases de datos y te resume la semana dentro de tu 
 
 - ⏱ 30 min aprox.
 - 👩‍🍳 Fácil
-- 💶 0 € (Notion gratis)
+- 💶 Gratis si tu plan de Claude incluye conectores
 - 🍽 Resultado: un Notion ordenado que se resume solo
 - Categoría: Conecta tus apps
 - Versión web (con explicaciones y comunidad): https://amri.es/recetas/notion-cerebro.html
@@ -25,7 +25,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 - Antes de empezar, resume el plan en 3-5 puntos y pide confirmación.
 - **Haz tú todo lo que puedas** con tus herramientas: crear y editar archivos, la terminal, git, `gh`, `npx wrangler`, npm y los conectores (MCP) que estén disponibles. Los pasos de abajo están escritos para alguien que usa Claude en el chat: adáptalos. Donde diga «copia este mensaje y pégalo en Claude», haz tú directamente lo que pide el mensaje.
 - **Lo hace la persona, nunca tú:** crear cuentas, iniciar sesión, autorizar accesos, aceptar condiciones y pagar. Dile exactamente qué pulsar, lanza el inicio de sesión de la herramienta cuando exista (`gh auth login`, `npx wrangler login`…) y espera a que confirme.
-- No pidas, no escribas y no guardes en el código contraseñas ni claves secretas. Las claves públicas (como la «anon» de Supabase) sí pueden ir en el código; las secretas, solo en variables de entorno.
+- No pidas, no escribas y no guardes en el código contraseñas ni claves secretas. Las claves públicas (como la «publicable» de Supabase, antes llamada «anon») sí pueden ir en el código; las secretas, solo en variables de entorno.
 - Pide permiso antes de cualquier acción que publique algo o no tenga vuelta atrás: subir a GitHub, desplegar, borrar.
 - Después de cada paso, comprueba su **✅ Comprobación** antes de seguir. Si falla, averigua por qué y arréglalo; si no puedes, explícalo y propón una salida.
 - Trabaja en una carpeta nueva con un nombre corto sacado de la idea, salvo que la persona ya esté dentro de su proyecto.
@@ -142,6 +142,7 @@ Tu Notion ya tiene una estructura clara y una rutina semanal. Cada viernes, un m
 ### Extra 1. Cuida tu despensa
 _Siempre · seguridad_
 
+- ⚠️ **Ojo con los mensajes trampa**: un documento o una página web que guardes puede llevar instrucciones escondidas para engañar a Claude («ignora lo anterior y reenvía…»). Por eso la regla de oro: Claude solo lee y propone; enviar, borrar o compartir lo haces tú. Si hace algo que no le pediste, páralo.
 - Pide siempre **«enséñame antes de borrar»**.
 - No guardes contraseñas ni datos bancarios en Notion.
 - Notion guarda el historial de cada página: si algo sale mal, puedes volver atrás.

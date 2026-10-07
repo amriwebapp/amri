@@ -1,5 +1,5 @@
 /* ==========================================================
-   AMRI · Academia de IA — estilos de la portada
+   AMRI · Plataforma de IA — estilos de la portada
    Paleta y tipografía originales (Bricolage Grotesque, crema + teja)
    ========================================================== */
 :root{
@@ -528,3 +528,8 @@ footer.foot{position:relative;overflow:hidden;border-top:1px solid var(--line);p
 .bld-f .btn.nudge{animation:bldNudge .9s var(--ease)}
 @keyframes bldNudge{0%,100%{transform:none;box-shadow:none}35%{transform:scale(1.05);box-shadow:0 0 0 6px color-mix(in srgb,var(--acc) 22%,transparent)}}
 @media (prefers-reduced-motion:reduce){.bld-res.show,.bld-f .btn.nudge{animation:none}}
+
+/* v19 · «Empieza aquí» a lo ancho y nota de precios */
+.cat-cta{grid-column:1/-1}
+.price-note{font-size:14px;color:var(--mute);margin:-6px 0 22px;line-height:1.6}
+.price-note b{color:var(--ink);font-weight:650}

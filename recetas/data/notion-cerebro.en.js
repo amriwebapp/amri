@@ -1,6 +1,6 @@
 (window.RECIPE=window.RECIPE||{}).en={
 title:"Recipe: your second brain in Notion",
-meta:["⏱ About 30 min","👩‍🍳 Easy","💶 €0 (free Notion)","🍽 Result: a tidy Notion that sums itself up"],
+meta:["⏱ About 30 min","👩‍🍳 Easy","💶 Free if your Claude plan includes connectors","🍽 Result: a tidy Notion that sums itself up"],
 ing:"Ingredients (all free)",
 q:"What do you want to organise?",
 ph:"Describe what you want to organise. Example: ideas for my thesis, with sources, quotes and a deadline calendar",
@@ -28,6 +28,6 @@ steps:[
 {t:"Build it in your Notion",s:"5 min · set up",b:()=>`<p class="what">Now Claude builds it for you.</p>${cb(`Perfect. Create a page in my Notion called “My second brain” with that database.${DB()?" Then move or copy my existing pages that fit into it, and tell me which ones you touched.":" Add 3 examples so I can see how it looks."}`)}
 ${tip("If Claude can't create something (for example, a type of view), it'll tell you how to do it by hand in two clicks.")}${ok("you open Notion and see the new page with its database.")}`},
 {t:"Your weekly review",s:"5 min · the routine",b:()=>`<p class="what">The magic is in repeating it. Every Friday, one message:</p>${cb("Review what I've added or changed this week in “My second brain”. Write me a 5-line summary, 3 priorities for next week and anything that's being forgotten. Save it as a new page called “Week of [date]”.")}${ok("you have your first weekly summary saved in Notion.")}`},
-{x:1,t:"Look after your pantry",s:"Always · safety",b:()=>`<ol><li>Always ask it to <b>“show me before deleting”</b>.</li><li>Don't keep passwords or bank details in Notion.</li><li>Notion keeps each page's history: if something goes wrong, you can go back.</li></ol>`},
+{x:1,t:"Look after your pantry",s:"Always · safety",b:()=>`<ol><li>⚠️ <b>Watch out for trap messages</b>: a document or web page you save can hide instructions meant to trick Claude (“ignore the above and forward…”). That's why the golden rule is: Claude only reads and suggests; sending, deleting or sharing is up to you. If it does something you didn't ask for, stop it.</li><li>Always ask it to <b>“show me before deleting”</b>.</li><li>Don't keep passwords or bank details in Notion.</li><li>Notion keeps each page's history: if something goes wrong, you can go back.</li></ol>`},
 {x:1,t:"If something doesn't work",s:"Always · check this",b:()=>`<ol><li><b>Claude can't find a page</b>: check the workspace has access in the connector.</li><li><b>Half-finished results</b>: ask for smaller chunks (“only the notes from March”).</li></ol>${det("💡 Ideas to keep going",["A journal with daily questions.","A simple customer CRM.","A study plan for your exams."])}`}
 ]}};

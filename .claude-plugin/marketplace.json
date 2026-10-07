@@ -5,12 +5,12 @@
     "name": "AMRI",
     "url": "https://amri.es"
   },
-  "description": "Catálogo de AMRI, la academia abierta de IA.",
+  "description": "Catálogo de AMRI, la plataforma abierta para aprender a usar Claude.",
   "plugins": [
     {
       "name": "amri",
       "source": "./plugin",
-      "displayName": "AMRI · Academia abierta de IA",
+      "displayName": "AMRI · Plataforma abierta de IA",
       "description": "Las recetas de AMRI como skills, más el chef que las combina en tu propio proyecto.",
       "category": "education",
       "homepage": "https://amri.es/plugin.html"

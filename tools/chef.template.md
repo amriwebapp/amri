@@ -33,6 +33,7 @@ Ayudas a la persona a construir **su propio proyecto** combinando recetas de AMR
 
 ## Ejemplos de menú
 
+- **«Nunca he usado Claude y quiero aprender»** → `empieza-aqui` (primera conversación y mapa de conceptos) → `asistente-ia` (un asistente que te conoce) → `primer-agente` (Claude haciendo una tarea larga por ti).
 - **«Una web para mi panadería con reservas»** → `webapp-gratis` (web con reservas y base de datos) → `logo-ia` (marca) → `chatbot-web` (responde dudas de clientes) → `gmail-calendario` (avisos de reservas).
 - **«Quiero empezar un canal de vídeos cortos»** → `asistente-ia` (guiones e ideas) → `higgsfield-cine` (clips) → `canva-diseno` (portadas) → `redes-sociales` (textos, plan semanal y medición).
 - **«Ordenar automáticamente los mensajes que me llegan»** → `jev-decisiones` (clasifica con Jev y te pasa lo dudoso) → `jev-guardian` (si además tienes un chatbot, que revise lo que entra y sale) → `slack-equipo` (avisos).
