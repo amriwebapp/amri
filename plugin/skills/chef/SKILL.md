@@ -30,15 +30,15 @@ Ayudas a la persona a construir **su propio proyecto** combinando recetas de AMR
 ## El recetario
 
 ### Primeros pasos
-- `amri:empieza-aqui` · **Empieza aquí: conoce a Claude**: Tu primera conversación y un mapa sencillo de todo lo demás: proyectos, conectores, Skills, plugins y agentes.
-- `amri:asistente-ia` · **Tu asistente personal con IA**: Monta un asistente que contesta tus preguntas, resume textos y te ayuda a escribir, usando Claude o ChatGPT.
-- `amri:imagenes-ia` · **Crea imágenes con IA gratis**: Genera ilustraciones, logos y fotos realistas con herramientas de IA gratuitas. Desde el prompt hasta el resultado.
-- `amri:logo-ia` · **Diseña un logo con IA**: Crea un logo para tu proyecto, con variantes, colores y formatos listos para usar.
+- `amri:empieza-aqui` · **Empieza aquí: conoce a Claude**: El primer libro: tu primera conversación, cómo pedir bien, darle tus archivos y el mapa de todo lo demás (proyectos, conectores, Skills, plugins y agentes).
+- `amri:asistente-ia` · **Tu asistente personal con IA**: Un asistente que te conoce: correos difíciles, documentos largos, estudiar, organizar tu semana, responder a clientes y tus atajos.
+- `amri:imagenes-ia` · **Crea imágenes con IA gratis**: Ilustraciones, fotos de producto, carteles con texto, series con el mismo estilo, personajes, edición de fotos e iconos. Con herramientas gratuitas.
+- `amri:logo-ia` · **Diseña un logo con IA**: Logo con nombre, símbolo o iniciales, todos los formatos, tu kit de marca y cómo comprobar y proteger tu logo.
 
 ### Conecta tus apps
 - `amri:gmail-calendario` · **Tu secretaría: Gmail y Calendar**: Cada mañana, Claude repasa tu correo y tu agenda, te dice qué importa y prepara los borradores.
 - `amri:notion-cerebro` · **Tu segundo cerebro en Notion**: Claude ordena tus notas, crea bases de datos y te resume la semana dentro de tu Notion.
-- `amri:canva-diseno` · **Diseña en Canva hablando con Claude**: Posts, presentaciones y carteles creados en tu cuenta de Canva desde una conversación, con tu marca.
+- `amri:canva-diseno` · **Diseña en Canva hablando con Claude**: Claude diseña en tu Canva: posts, presentaciones, carteles, currículum, tarjetas y versiones nuevas de diseños que ya tienes.
 - `amri:navegador-chrome` · **Claude navega por ti con Chrome**: Compara precios, rellena formularios y recopila información de varias webs mientras tú miras.
 - `amri:slack-equipo` · **Claude en tu Slack**: Resume canales, encuentra decisiones y redacta mensajes para tu equipo sin leer cien notificaciones.
 
@@ -56,7 +56,7 @@ Ayudas a la persona a construir **su propio proyecto** combinando recetas de AMR
 - `amri:animaciones-opus` · **Animaciones con Claude Opus 5.5**: Del storyboard a una animación que se mueve en tu navegador, con tu marca. Y, si quieres, un vídeo MP4 para redes.
 
 ### Claude a tu medida
-- `amri:primer-agente` · **Tu primer agente: Claude trabaja por ti**: Dale una tarea de varios pasos y mira cómo Claude hace un plan, lo ejecuta en tu ordenador y te pide permiso antes de lo importante.
+- `amri:primer-agente` · **Tu primer agente: Claude trabaja por ti**: Claude hace tareas largas en tu ordenador: ordenar carpetas, informes, hojas de cálculo, una web, la terminal y tu primer subagente. Siempre con tu permiso.
 - `amri:skills-propias` · **Enséñale tu método con Skills**: Convierte tu forma de trabajar en una Skill: Claude la usará sola cada vez que la necesite.
 - `amri:conector-propio` · **Cocina tu propio conector**: Crea un conector sencillo para que Claude use tus propios datos o tu propia app. Claude escribe el código.
 

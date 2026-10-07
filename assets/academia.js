@@ -200,27 +200,39 @@ function renderGrid(){
     .sort((a,b)=>(b.top||0)-(a.top||0))
     .filter(r=>filter==="all"||(filter==="conn"?r.c:CAT_OF[r.slug]===filter))
     .filter(r=>!query||norm(r.titulo+" "+r.desc+" "+r.tag+" "+subs(r.slug).map(x=>x.t+" "+x.d).join(" ")).includes(norm(query)));
+  renderHits();
   if(!list.length){grid.innerHTML=`<div class="empty">${T("empty")}</div>`;return;}
-  grid.innerHTML=list.map((r,i)=>`
-    <a class="card" href="recetas/${r.slug}.html" style="transition-delay:${Math.min(i,8)*.07}s">
+  const count=n=>`📕 ${n} ${n===1?T("lib_one"):T("lib_many")}`;
+  grid.innerHTML=list.map((r,i)=>{const rs=subs(r.slug),n=rs.length||1;return `
+    <a class="card book" href="recetas/${r.slug}.html" style="transition-delay:${Math.min(i,8)*.07}s">
       <div class="card-thumb" style="background:linear-gradient(135deg,${r.bg},${r.bg2})">
-        <span class="tag">${esc(r.tag)}</span>${subs(r.slug).length?`<span class="conn book">📕 ${subs(r.slug).length} recetas</span>`:r.c?`<span class="conn">🔌 ${esc(T("card_conn"))}</span>`:""}${r.n?`<span class="new">${T("new")}</span>`:""}
+        <span class="tag">${esc(r.tag)}</span><span class="conn book">${count(n)}</span>${r.n?`<span class="new">${T("new")}</span>`:""}
         ${r.emoji}
         <img src="img/${r.slug}.${r.svg?"svg":"jpg"}" alt="" loading="lazy" onerror="nextImg(this)">
         <div class="tools-badge" data-tools="${r.slug}"></div>
       </div>
       <div class="card-body">
+        <span class="kick">${esc(T("lib_k"))}${r.c?` · 🔌 ${esc(T("card_conn"))}`:""}</span>
         <h3>${esc(r.titulo)}</h3>
         <p class="desc">${esc(r.desc)}</p>
+        ${rs.length?`<ul class="toc">${rs.slice(0,3).map(x=>`<li>${esc(x.t)}</li>`).join("")}${rs.length>3?`<li class="more-r">${esc(T("lib_more").replace("{n}",rs.length-3))}</li>`:""}</ul>`:""}
         <div class="chips">${r.chips.map(c=>`<span>${esc(c)}</span>`).join("")}</div>
         <span class="more">${T("card_open")} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </div>
-    </a>`).join("");
+    </a>`}).join("");
   const cards=$$(".card",grid);
   if(window.AMRI_LOGO)AMRI_LOGO.fillTools(grid);
   if(RM){cards.forEach(c=>c.classList.add("in"));return;}
   requestAnimationFrame(()=>requestAnimationFrame(()=>cards.forEach(c=>{const r=c.getBoundingClientRect();if(r.top<innerHeight)c.classList.add("in");else io.observe(c);})));
   cards.forEach(c=>c.addEventListener("transitionend",()=>c.style.transitionDelay="0s",{once:true}));
+}
+/* Recetas de dentro de los libros que encajan con la búsqueda */
+function renderHits(){
+  const box=$("#hits");if(!box)return;
+  if(!query||query.length<3){box.innerHTML="";return;}
+  const q=norm(query),hits=[];
+  RECETAS.forEach((r,i)=>subs(r.slug).forEach(x=>{if(norm(x.t+" "+x.d).includes(q))hits.push({b:I18N.card(i).titulo,slug:r.slug,x})}));
+  box.innerHTML=hits.length?`<h3>${esc(T("lib_hits"))}</h3><div class="hit-list">${hits.slice(0,8).map(h=>`<a class="hit" href="recetas/${h.slug}--${h.x.s}.html"><b>${esc(h.x.t)}</b><small>${esc(T("lib_in"))} «${esc(h.b)}»</small><span aria-hidden="true">→</span></a>`).join("")}</div>`:"";
 }
 function setFilter(f){filter=f;$$(".fchip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.f===f));renderGrid();}
 $("#filters").addEventListener("click",e=>{const b=e.target.closest(".fchip");if(b)setFilter(b.dataset.f);});
