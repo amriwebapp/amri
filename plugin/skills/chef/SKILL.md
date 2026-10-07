@@ -50,20 +50,20 @@ Ayudas a la persona a construir **su propio proyecto** combinando recetas de AMR
 
 ### Estudio creativo
 - `amri:higgsfield-cine` · **Imágenes y vídeos de cine con Higgsfield**: Un libro con 7 recetas: foto de producto, vídeo realista, vídeo UGC, animación, foto a vídeo, personajes y anuncios. Hablando en español con Claude.
-- `amri:video-aftereffects` · **Edita vídeo con Claude y After Effects**: Conecta Claude con After Effects y crea intros, títulos y anuncios animados dándole órdenes en español.
-- `amri:blender-3d` · **Crea 3D con Claude y Blender**: Conecta Claude con Blender y crea objetos, escenas y animaciones en 3D sin saber modelar.
+- `amri:video-aftereffects` · **Edita vídeo con Claude y After Effects**: Conecta Claude con After Effects y pídele en español: una intro con tu logo, títulos y rótulos, un vídeo vertical con texto animado o un anuncio de producto.
+- `amri:blender-3d` · **Crea 3D con Claude y Blender**: Sin saber modelar: un objeto, una escena, tu logo en 3D, tu producto girando o un personaje simpático.
 - `amri:redes-sociales` · **Tus redes sociales con Claude**: Un libro con 8 recetas: biografía, reels, carruseles, LinkedIn, una idea para todas tus redes, un mes planificado y medir. Con tu propia voz.
-- `amri:animaciones-opus` · **Animaciones con Claude Opus 5.5**: Del storyboard a una animación que se mueve en tu navegador, con tu marca. Y, si quieres, un vídeo MP4 para redes.
+- `amri:animaciones-opus` · **Animaciones con Claude Opus 5.5**: Tu logo animado, una explicación animada, un reel vertical, datos en movimiento o una animación para tu web. En el navegador o en MP4.
 
 ### Claude a tu medida
 - `amri:primer-agente` · **Tu primer agente: Claude trabaja por ti**: Claude hace tareas largas en tu ordenador: ordenar carpetas, informes, hojas de cálculo, una web, la terminal y tu primer subagente. Siempre con tu permiso.
-- `amri:skills-propias` · **Enséñale tu método con Skills**: Convierte tu forma de trabajar en una Skill: Claude la usará sola cada vez que la necesite.
-- `amri:conector-propio` · **Cocina tu propio conector**: Crea un conector sencillo para que Claude use tus propios datos o tu propia app. Claude escribe el código.
+- `amri:skills-propias` · **Enséñale tu método con Skills**: Convierte tu forma de trabajar en Skills: informes con tu formato, correos con tu estilo, fichas de producto o material de clase.
+- `amri:conector-propio` · **Cocina tu propio conector**: Que Claude use tus propios datos: tu hoja de cálculo, tu carpeta de notas, un archivo propio o una API pública. Claude escribe el código.
 
 ### Para empresas (de pago)
-- `amri:gurusup-brain` · **El cerebro de tu empresa con GuruSup**: Conecta GuruSup Brain a Claude para que responda con el conocimiento real de tu empresa, citando la fuente.
-- `amri:jev-decisiones` · **Decisiones automáticas con Jev**: Clasifica mensajes, prioriza incidencias o puntúa contactos en milisegundos. Jev decide, te dice su confianza y te pasa lo dudoso.
-- `amri:jev-guardian` · **Un guardián para tu chatbot con Jev**: Revisa cada pregunta y cada respuesta de tu asistente para frenar trampas, temas ajenos y datos inventados.
+- `amri:gurusup-brain` · **El cerebro de tu empresa con GuruSup**: Claude responde con el conocimiento real de tu empresa: dudas del equipo, clientes, guía de bienvenida y propuestas de venta.
+- `amri:jev-decisiones` · **Decisiones automáticas con Jev**: Clasifica mensajes, prioriza incidencias, puntúa contactos, lee reseñas o modera comentarios. Jev decide y te pasa lo dudoso.
+- `amri:jev-guardian` · **Un guardián para tu chatbot con Jev**: Un guardián para el chatbot de tu web, para respuestas con fuentes, para tu tienda online o para un asistente interno.
 
 ## Ejemplos de menú
 
