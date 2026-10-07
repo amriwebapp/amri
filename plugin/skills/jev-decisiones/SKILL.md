@@ -138,89 +138,72 @@ TypeSafe publica una **skill** gratuita: un manual que enseña a Claude Code a u
 
 ### Receta 1: Clasifica los mensajes de tu formulario
 
-Presupuesto, soporte, factura o spam, en milisegundos.
+Presupuesto, soporte, factura o spam, en milisegundos, y lo dudoso para ti.
 
 - ⏱ 35 min
 - 👩‍🍳 Media
 - 📨 Mensajes
-- 🍽 Resultado: tus mensajes clasificados
+- 🍽 Resultado: tus mensajes clasificados automáticamente
 - Versión web: https://amri.es/recetas/jev-decisiones--mensajes.html
 - Ideas de ejemplo:
-  - Clasificar mensajes: clasificar los mensajes de mi formulario de contacto en: presupuesto, soporte, factura o spam
+  - Formulario de contacto: clasificar los mensajes de mi formulario de contacto en: presupuesto, soporte, factura o spam
 
-#### 1. Cocina tu clasificador
-_10 min · el plato principal_
+#### 1. Escribe los criterios
+_10 min · tu conocimiento_
 
-Ahora Claude Code escribe un pequeño programa que envía cada caso a Jev y guarda su decisión.
-
-```text
-Usa la skill de TypeSafe. Quiero un pequeño programa en Python que use Jev para [la idea de la persona].
-
-- Lee la llave de TYPESAFE_API_KEY desde .env.
-- Elige la pregunta adecuada (Choice, Score o Noul) y explícame por qué.
-- Escribe criterios claros para cada opción, como se los explicarías a una persona nueva.
-- Crea ejemplos.csv con 20 casos inventados pero realistas, incluidos algunos difíciles.
-- Ejecútalo y guarda en resultados.csv: el caso, la decisión, las probabilidades y la confianza.
-
-Explícame cada paso antes de ejecutarlo.
-```
-
-**¿Qué son los «criterios»?**
-
-- Son las descripciones de cada opción. Jev decide comparando el texto con ellas.
-- Ejemplo: «soporte: el cliente tiene un problema técnico con algo que ya ha comprado».
-- Unos criterios claros importan más que el código: es donde está tu conocimiento.
-
-**✅ Comprobación:** existe resultados.csv con una decisión y una confianza para cada ejemplo.
-
-#### 2. Prueba y lee la confianza
-_10 min · probar antes de servir_
-
-Antes de fiarte, compara lo que decide Jev con lo que decidirías tú.
+Jev decide comparando cada mensaje con la descripción de cada opción. Escríbelas como se las explicarías a una persona nueva.
 
 ```text
-Muéstrame resultados.csv como tabla, ordenada de menor a mayor confianza. Para cada caso dudoso, explícame qué criterio lo confunde y propón cómo reescribir los criterios. No cambies el código, solo los criterios.
+Quiero [la idea de la persona]. Ayúdame a escribir un criterio de una o dos frases para cada categoría, con lo que SÍ es y lo que NO es. Ejemplo: «soporte: el cliente tiene un problema con algo que ya ha comprado; no incluye preguntas de precio».
 ```
 
-- Marca los casos en los que no estás de acuerdo.
-- Pide a Claude Code que ajuste los criterios y vuelva a ejecutarlo.
-- Añade a `ejemplos.csv` casos reales (sin nombres ni datos personales).
+**✅ Comprobación:** tienes un criterio claro para cada categoría.
 
-> 💡 Fíjate en la confianza: una decisión correcta con poca confianza te dice que los criterios aún no están claros.
+#### 2. Cocina el clasificador
+_10 min · Claude Code_
+
+En Claude Code, en tu carpeta con el archivo `.env`, pega:
+
+```text
+Usa la skill de TypeSafe. Crea un programa en Python que use una pregunta Choice de Jev con estas categorías y criterios: [pega tus criterios]. Lee la llave de TYPESAFE_API_KEY en .env. Crea ejemplos.csv con 20 mensajes realistas, incluidos algunos difíciles (un cliente enfadado que también pide factura, spam que parece presupuesto). Ejecútalo y guarda en resultados.csv: mensaje, categoría, probabilidades y confianza. Explícame cada paso antes de ejecutarlo.
+```
+
+**✅ Comprobación:** existe resultados.csv con una decisión por mensaje.
+
+#### 3. Prueba y ajusta los criterios
+_10 min · probar_
+
+```text
+Muéstrame resultados.csv ordenado de menor a mayor confianza. Para cada caso dudoso, explícame qué criterio lo confunde y propón cómo reescribirlo. No cambies el código, solo los criterios.
+```
 
 **✅ Comprobación:** estás de acuerdo con Jev en casi todos los casos con confianza alta.
 
-#### 3. Si duda, que te pregunte
-_5 min · una persona al mando_
-
-El truco profesional: Jev decide solo cuando está seguro y te pasa a ti los casos dudosos. Así automatizas la mayoría sin arriesgarte con el resto.
+#### 4. Lo dudoso, para ti
+_5 min · umbral_
 
 ```text
-Añade un umbral de confianza de 0,8. Si la confianza es mayor, aplica la decisión. Si es menor, guarda el caso en revisar.csv con la decisión propuesta para que yo lo revise. Al final, dime qué porcentaje se ha decidido solo y cuántos quedan para mí.
+Añade un umbral de confianza de 0,85: por encima, aplica la categoría; por debajo, guarda el mensaje en revisar.csv con la categoría propuesta. Dime qué porcentaje se decide solo.
 ```
 
-> 💡 Empieza con un umbral alto (0,9) y bájalo poco a poco cuando veas que acierta. Mejor revisar de más al principio.
+> 💡 Empieza con un umbral alto y bájalo poco a poco cuando veas que acierta.
 
-**✅ Comprobación:** los casos dudosos llegan a revisar.csv y el resto se decide solo.
+**✅ Comprobación:** los dudosos van a revisar.csv.
 
-#### 4. Conéctalo a tu web o tus apps
+#### 5. Conéctalo a tu formulario
 _10 min · servirlo_
 
-Convierte el clasificador en un servicio en internet al que tu formulario o tus apps envían cada mensaje nuevo.
-
 ```text
-Convierte el clasificador en un Cloudflare Worker que reciba un texto por POST y devuelva la decisión, la confianza y si necesita revisión. Guarda la llave de Jev como secreto del Worker (wrangler secret put TYPESAFE_API_KEY), nunca en el código. Añade una clave propia para que solo mi web pueda llamarlo y explícame cómo conectarlo a mi formulario.
+Convierte el clasificador en un Cloudflare Worker que reciba el mensaje del formulario por POST y devuelva la categoría, la confianza y si necesita revisión. Guarda la llave de Jev como secreto del Worker (wrangler secret put TYPESAFE_API_KEY), nunca en el código. Explícame cómo conectarlo a mi formulario.
 ```
 
-> 💡 ¿Quieres un aviso cuando algo necesite revisión? Con la receta «Claude en tu Slack» puedes enviar los casos dudosos a un canal.
+**✅ Comprobación:** al enviar un mensaje de prueba desde tu formulario, recibes la categoría en menos de un segundo.
 
-**✅ Comprobación:** al enviar un mensaje de prueba desde tu formulario, recibes la decisión en menos de un segundo.
-
-**Al terminar:** Ya tienes un clasificador con Jev que decide en milisegundos, te dice cuánta confianza tiene y te pasa a ti los casos dudosos. Revísalo cada mes con casos nuevos: tus criterios mejoran con el uso.
+**Al terminar:** Tus mensajes llegan ya clasificados. Revisa revisar.csv cada día unos minutos.
 
 ### Receta 2: Prioriza incidencias
 
-Urgente, normal o puede esperar, para atender primero lo importante.
+Urgente, normal o puede esperar, para atender primero lo que importa.
 
 - ⏱ 35 min
 - 👩‍🍳 Media
@@ -228,159 +211,112 @@ Urgente, normal o puede esperar, para atender primero lo importante.
 - 🍽 Resultado: incidencias ordenadas por prioridad
 - Versión web: https://amri.es/recetas/jev-decisiones--urgencias.html
 - Ideas de ejemplo:
-  - Prioridad de incidencias: decidir si una incidencia de un cliente es urgente, normal o puede esperar
+  - Urgente, normal o espera: decidir si una incidencia de un cliente es urgente, normal o puede esperar
 
-#### 1. Cocina tu clasificador
-_10 min · el plato principal_
-
-Ahora Claude Code escribe un pequeño programa que envía cada caso a Jev y guarda su decisión.
+#### 1. Define qué es urgente
+_10 min · tu criterio_
 
 ```text
-Usa la skill de TypeSafe. Quiero un pequeño programa en Python que use Jev para [la idea de la persona].
-
-- Lee la llave de TYPESAFE_API_KEY desde .env.
-- Elige la pregunta adecuada (Choice, Score o Noul) y explícame por qué.
-- Escribe criterios claros para cada opción, como se los explicarías a una persona nueva.
-- Crea ejemplos.csv con 20 casos inventados pero realistas, incluidos algunos difíciles.
-- Ejecútalo y guarda en resultados.csv: el caso, la decisión, las probabilidades y la confianza.
-
-Explícame cada paso antes de ejecutarlo.
+Quiero [la idea de la persona]. Hazme preguntas para definir qué es urgente en mi negocio (dinero perdido, clientes bloqueados, datos en riesgo…) y escribe un criterio de dos frases para cada nivel, con ejemplos.
 ```
 
-**¿Qué son los «criterios»?**
+> 💡 Si todo es urgente, nada lo es. Que «urgente» sea de verdad excepcional.
 
-- Son las descripciones de cada opción. Jev decide comparando el texto con ellas.
-- Ejemplo: «soporte: el cliente tiene un problema técnico con algo que ya ha comprado».
-- Unos criterios claros importan más que el código: es donde está tu conocimiento.
+**✅ Comprobación:** tienes los tres criterios.
 
-**✅ Comprobación:** existe resultados.csv con una decisión y una confianza para cada ejemplo.
-
-#### 2. Prueba y lee la confianza
-_10 min · probar antes de servir_
-
-Antes de fiarte, compara lo que decide Jev con lo que decidirías tú.
+#### 2. Cocina el priorizador
+_10 min · Claude Code_
 
 ```text
-Muéstrame resultados.csv como tabla, ordenada de menor a mayor confianza. Para cada caso dudoso, explícame qué criterio lo confunde y propón cómo reescribir los criterios. No cambies el código, solo los criterios.
+Usa la skill de TypeSafe. Crea un programa en Python con una pregunta Choice de Jev con los niveles urgente, normal y puede esperar, y estos criterios: [pégalos]. Llave en TYPESAFE_API_KEY (.env). Crea ejemplos.csv con 20 incidencias realistas (algunas que parecen urgentes y no lo son). Guarda resultados.csv con nivel, probabilidades y confianza.
 ```
 
-- Marca los casos en los que no estás de acuerdo.
-- Pide a Claude Code que ajuste los criterios y vuelva a ejecutarlo.
-- Añade a `ejemplos.csv` casos reales (sin nombres ni datos personales).
+**✅ Comprobación:** existe resultados.csv.
 
-> 💡 Fíjate en la confianza: una decisión correcta con poca confianza te dice que los criterios aún no están claros.
+#### 3. El error que no te puedes permitir
+_10 min · probar_
 
-**✅ Comprobación:** estás de acuerdo con Jev en casi todos los casos con confianza alta.
-
-#### 3. Si duda, que te pregunte
-_5 min · una persona al mando_
-
-El truco profesional: Jev decide solo cuando está seguro y te pasa a ti los casos dudosos. Así automatizas la mayoría sin arriesgarte con el resto.
+Aquí el peor error es marcar como «puede esperar» algo urgente.
 
 ```text
-Añade un umbral de confianza de 0,8. Si la confianza es mayor, aplica la decisión. Si es menor, guarda el caso en revisar.csv con la decisión propuesta para que yo lo revise. Al final, dime qué porcentaje se ha decidido solo y cuántos quedan para mí.
+Busca en resultados.csv incidencias urgentes que Jev haya puesto en otro nivel. Ajusta los criterios para que eso no pase, aunque marque alguna normal como urgente.
 ```
 
-> 💡 Empieza con un umbral alto (0,9) y bájalo poco a poco cuando veas que acierta. Mejor revisar de más al principio.
+**✅ Comprobación:** ninguna incidencia urgente queda abajo.
 
-**✅ Comprobación:** los casos dudosos llegan a revisar.csv y el resto se decide solo.
+#### 4. Lo dudoso, para ti
+_5 min · umbral_
 
-#### 4. Conéctalo a tu web o tus apps
+```text
+Si la confianza es menor de 0,9 o si duda entre urgente y otro nivel, trátala como urgente y guárdala en revisar.csv.
+```
+
+**✅ Comprobación:** ante la duda, sube de prioridad.
+
+#### 5. Avisa al equipo
 _10 min · servirlo_
 
-Convierte el clasificador en un servicio en internet al que tu formulario o tus apps envían cada mensaje nuevo.
-
 ```text
-Convierte el clasificador en un Cloudflare Worker que reciba un texto por POST y devuelva la decisión, la confianza y si necesita revisión. Guarda la llave de Jev como secreto del Worker (wrangler secret put TYPESAFE_API_KEY), nunca en el código. Añade una clave propia para que solo mi web pueda llamarlo y explícame cómo conectarlo a mi formulario.
+Convierte el priorizador en un Cloudflare Worker (llave como secreto) y, cuando una incidencia sea urgente, envía un aviso a mi canal de Slack con un webhook guardado como secreto. Explícame cómo conectarlo.
 ```
 
-> 💡 ¿Quieres un aviso cuando algo necesite revisión? Con la receta «Claude en tu Slack» puedes enviar los casos dudosos a un canal.
+**✅ Comprobación:** una incidencia urgente de prueba avisa en Slack.
 
-**✅ Comprobación:** al enviar un mensaje de prueba desde tu formulario, recibes la decisión en menos de un segundo.
-
-**Al terminar:** Ya tienes un clasificador con Jev que decide en milisegundos, te dice cuánta confianza tiene y te pasa a ti los casos dudosos. Revísalo cada mes con casos nuevos: tus criterios mejoran con el uso.
+**Al terminar:** Tus incidencias llegan ordenadas. Lo urgente, lo primero.
 
 ### Receta 3: Puntúa tus contactos
 
-La probabilidad de que un contacto se convierta en cliente, de 0 a 10.
+La probabilidad de que un contacto se convierta en cliente, de 0 a 10, para llamar primero a los mejores.
 
 - ⏱ 35 min
 - 👩‍🍳 Media
 - 🎯 Contactos
-- 🍽 Resultado: tus contactos puntuados
+- 🍽 Resultado: tus contactos ordenados por interés
 - Versión web: https://amri.es/recetas/jev-decisiones--contactos.html
 - Ideas de ejemplo:
-  - Puntuar contactos: puntuar de 0 a 10 la probabilidad de que un contacto del formulario se convierta en cliente
+  - Del formulario: puntuar de 0 a 10 la probabilidad de que un contacto del formulario se convierta en cliente
 
-#### 1. Cocina tu clasificador
-_10 min · el plato principal_
-
-Ahora Claude Code escribe un pequeño programa que envía cada caso a Jev y guarda su decisión.
+#### 1. Tu cliente ideal
+_10 min · el criterio_
 
 ```text
-Usa la skill de TypeSafe. Quiero un pequeño programa en Python que use Jev para [la idea de la persona].
-
-- Lee la llave de TYPESAFE_API_KEY desde .env.
-- Elige la pregunta adecuada (Choice, Score o Noul) y explícame por qué.
-- Escribe criterios claros para cada opción, como se los explicarías a una persona nueva.
-- Crea ejemplos.csv con 20 casos inventados pero realistas, incluidos algunos difíciles.
-- Ejecútalo y guarda en resultados.csv: el caso, la decisión, las probabilidades y la confianza.
-
-Explícame cada paso antes de ejecutarlo.
+Quiero [la idea de la persona]. Ayúdame a describir mi cliente ideal y las señales que suben o bajan la puntuación (tamaño, urgencia, presupuesto, cómo escribe). Hazlo en un criterio de 5 líneas.
 ```
 
-**¿Qué son los «criterios»?**
+**✅ Comprobación:** tienes el criterio de tu cliente ideal.
 
-- Son las descripciones de cada opción. Jev decide comparando el texto con ellas.
-- Ejemplo: «soporte: el cliente tiene un problema técnico con algo que ya ha comprado».
-- Unos criterios claros importan más que el código: es donde está tu conocimiento.
-
-**✅ Comprobación:** existe resultados.csv con una decisión y una confianza para cada ejemplo.
-
-#### 2. Prueba y lee la confianza
-_10 min · probar antes de servir_
-
-Antes de fiarte, compara lo que decide Jev con lo que decidirías tú.
+#### 2. Cocina el puntuador
+_10 min · Claude Code_
 
 ```text
-Muéstrame resultados.csv como tabla, ordenada de menor a mayor confianza. Para cada caso dudoso, explícame qué criterio lo confunde y propón cómo reescribir los criterios. No cambies el código, solo los criterios.
+Usa la skill de TypeSafe. Crea un programa en Python con una pregunta Score de Jev (0 a 10) y este criterio: [pégalo]. Llave en TYPESAFE_API_KEY (.env). Usa contactos.csv (te paso uno sin datos personales, o inventa 20 realistas). Guarda resultados.csv ordenado de mayor a menor puntuación, con la confianza.
 ```
 
-- Marca los casos en los que no estás de acuerdo.
-- Pide a Claude Code que ajuste los criterios y vuelva a ejecutarlo.
-- Añade a `ejemplos.csv` casos reales (sin nombres ni datos personales).
+**✅ Comprobación:** tienes tus contactos ordenados.
 
-> 💡 Fíjate en la confianza: una decisión correcta con poca confianza te dice que los criterios aún no están claros.
+#### 3. Compara con tu intuición
+_10 min · probar_
 
-**✅ Comprobación:** estás de acuerdo con Jev en casi todos los casos con confianza alta.
-
-#### 3. Si duda, que te pregunte
-_5 min · una persona al mando_
-
-El truco profesional: Jev decide solo cuando está seguro y te pasa a ti los casos dudosos. Así automatizas la mayoría sin arriesgarte con el resto.
+Mira los 5 primeros y los 5 últimos. ¿Tú los ordenarías igual?
 
 ```text
-Añade un umbral de confianza de 0,8. Si la confianza es mayor, aplica la decisión. Si es menor, guarda el caso en revisar.csv con la decisión propuesta para que yo lo revise. Al final, dime qué porcentaje se ha decidido solo y cuántos quedan para mí.
+Estos contactos los pondría yo más arriba: [cuáles]. Ajusta el criterio para reflejarlo, sin cambiar el código.
 ```
 
-> 💡 Empieza con un umbral alto (0,9) y bájalo poco a poco cuando veas que acierta. Mejor revisar de más al principio.
+**✅ Comprobación:** el orden se parece al tuyo.
 
-**✅ Comprobación:** los casos dudosos llegan a revisar.csv y el resto se decide solo.
-
-#### 4. Conéctalo a tu web o tus apps
+#### 4. Que se puntúen solos
 _10 min · servirlo_
 
-Convierte el clasificador en un servicio en internet al que tu formulario o tus apps envían cada mensaje nuevo.
-
 ```text
-Convierte el clasificador en un Cloudflare Worker que reciba un texto por POST y devuelva la decisión, la confianza y si necesita revisión. Guarda la llave de Jev como secreto del Worker (wrangler secret put TYPESAFE_API_KEY), nunca en el código. Añade una clave propia para que solo mi web pueda llamarlo y explícame cómo conectarlo a mi formulario.
+Convierte el puntuador en un Cloudflare Worker (llave como secreto) que reciba cada contacto nuevo del formulario, lo puntúe y lo añada a mi hoja de Google Sheets con su puntuación. Explícame los pasos.
 ```
 
-> 💡 ¿Quieres un aviso cuando algo necesite revisión? Con la receta «Claude en tu Slack» puedes enviar los casos dudosos a un canal.
+> 💡 ⚠️ La puntuación ayuda a ordenar, no a descartar a nadie. Contesta a todos.
 
-**✅ Comprobación:** al enviar un mensaje de prueba desde tu formulario, recibes la decisión en menos de un segundo.
+**✅ Comprobación:** un contacto de prueba aparece en tu hoja con su puntuación.
 
-**Al terminar:** Ya tienes un clasificador con Jev que decide en milisegundos, te dice cuánta confianza tiene y te pasa a ti los casos dudosos. Revísalo cada mes con casos nuevos: tus criterios mejoran con el uso.
+**Al terminar:** Ya sabes a quién llamar primero.
 
 ### Receta 4: Lee tus reseñas
 
@@ -389,80 +325,46 @@ Positiva, negativa o mixta, y si necesita una respuesta tuya.
 - ⏱ 30 min
 - 👩‍🍳 Media
 - ⭐ Reseñas
-- 🍽 Resultado: tus reseñas clasificadas
+- 🍽 Resultado: tus reseñas clasificadas y las que necesitan respuesta
 - Versión web: https://amri.es/recetas/jev-decisiones--resenas.html
 - Ideas de ejemplo:
-  - Reseñas: decidir si una reseña es positiva, negativa o mixta, y si necesita una respuesta mía
+  - Reseñas de clientes: decidir si una reseña es positiva, negativa o mixta, y si necesita una respuesta mía
 
-#### 1. Cocina tu clasificador
-_10 min · el plato principal_
+#### 1. Reúne tus reseñas
+_5 min · los datos_
 
-Ahora Claude Code escribe un pequeño programa que envía cada caso a Jev y guarda su decisión.
+Copia tus últimas reseñas (texto y estrellas) en `resenas.csv`, sin nombres de clientes.
 
-```text
-Usa la skill de TypeSafe. Quiero un pequeño programa en Python que use Jev para [la idea de la persona].
+**✅ Comprobación:** tienes resenas.csv.
 
-- Lee la llave de TYPESAFE_API_KEY desde .env.
-- Elige la pregunta adecuada (Choice, Score o Noul) y explícame por qué.
-- Escribe criterios claros para cada opción, como se los explicarías a una persona nueva.
-- Crea ejemplos.csv con 20 casos inventados pero realistas, incluidos algunos difíciles.
-- Ejecútalo y guarda en resultados.csv: el caso, la decisión, las probabilidades y la confianza.
-
-Explícame cada paso antes de ejecutarlo.
-```
-
-**¿Qué son los «criterios»?**
-
-- Son las descripciones de cada opción. Jev decide comparando el texto con ellas.
-- Ejemplo: «soporte: el cliente tiene un problema técnico con algo que ya ha comprado».
-- Unos criterios claros importan más que el código: es donde está tu conocimiento.
-
-**✅ Comprobación:** existe resultados.csv con una decisión y una confianza para cada ejemplo.
-
-#### 2. Prueba y lee la confianza
-_10 min · probar antes de servir_
-
-Antes de fiarte, compara lo que decide Jev con lo que decidirías tú.
+#### 2. Cocina el lector
+_10 min · Claude Code_
 
 ```text
-Muéstrame resultados.csv como tabla, ordenada de menor a mayor confianza. Para cada caso dudoso, explícame qué criterio lo confunde y propón cómo reescribir los criterios. No cambies el código, solo los criterios.
+Usa la skill de TypeSafe. Quiero [la idea de la persona]. Crea un programa en Python con dos preguntas a Jev por reseña: una Choice (positiva, negativa, mixta) y una Noul («¿necesita una respuesta del dueño? Sí si hay una queja concreta, una pregunta o un malentendido»). Llave en TYPESAFE_API_KEY (.env). Lee resenas.csv y guarda resultados.csv con las dos decisiones y su confianza.
 ```
 
-- Marca los casos en los que no estás de acuerdo.
-- Pide a Claude Code que ajuste los criterios y vuelva a ejecutarlo.
-- Añade a `ejemplos.csv` casos reales (sin nombres ni datos personales).
+**✅ Comprobación:** existe resultados.csv.
 
-> 💡 Fíjate en la confianza: una decisión correcta con poca confianza te dice que los criterios aún no están claros.
-
-**✅ Comprobación:** estás de acuerdo con Jev en casi todos los casos con confianza alta.
-
-#### 3. Si duda, que te pregunte
-_5 min · una persona al mando_
-
-El truco profesional: Jev decide solo cuando está seguro y te pasa a ti los casos dudosos. Así automatizas la mayoría sin arriesgarte con el resto.
+#### 3. Revisa las mixtas
+_10 min · probar_
 
 ```text
-Añade un umbral de confianza de 0,8. Si la confianza es mayor, aplica la decisión. Si es menor, guarda el caso en revisar.csv con la decisión propuesta para que yo lo revise. Al final, dime qué porcentaje se ha decidido solo y cuántos quedan para mí.
+Muéstrame las reseñas mixtas y las que necesitan respuesta, de menor a mayor confianza. ¿Hay alguna mal clasificada? Propón cómo afinar las preguntas.
 ```
 
-> 💡 Empieza con un umbral alto (0,9) y bájalo poco a poco cuando veas que acierta. Mejor revisar de más al principio.
+**✅ Comprobación:** estás de acuerdo con la clasificación.
 
-**✅ Comprobación:** los casos dudosos llegan a revisar.csv y el resto se decide solo.
-
-#### 4. Conéctalo a tu web o tus apps
-_10 min · servirlo_
-
-Convierte el clasificador en un servicio en internet al que tu formulario o tus apps envían cada mensaje nuevo.
+#### 4. Respuestas con Claude
+_5 min · responder_
 
 ```text
-Convierte el clasificador en un Cloudflare Worker que reciba un texto por POST y devuelva la decisión, la confianza y si necesita revisión. Guarda la llave de Jev como secreto del Worker (wrangler secret put TYPESAFE_API_KEY), nunca en el código. Añade una clave propia para que solo mi web pueda llamarlo y explícame cómo conectarlo a mi formulario.
+Para las reseñas que necesitan respuesta, escribe un borrador corto y amable para cada una, sin prometer nada que no pueda cumplir. No publiques nada.
 ```
 
-> 💡 ¿Quieres un aviso cuando algo necesite revisión? Con la receta «Claude en tu Slack» puedes enviar los casos dudosos a un canal.
+**✅ Comprobación:** tienes borradores para revisar y publicar tú.
 
-**✅ Comprobación:** al enviar un mensaje de prueba desde tu formulario, recibes la decisión en menos de un segundo.
-
-**Al terminar:** Ya tienes un clasificador con Jev que decide en milisegundos, te dice cuánta confianza tiene y te pasa a ti los casos dudosos. Revísalo cada mes con casos nuevos: tus criterios mejoran con el uso.
+**Al terminar:** Ya sabes qué reseñas responder primero. Las respuestas, escríbelas tú (o con Claude) y revísalas.
 
 ### Receta 5: Modera comentarios
 
@@ -474,77 +376,47 @@ Si un comentario se publica directamente o lo revisas tú antes.
 - 🍽 Resultado: comentarios moderados con tu supervisión
 - Versión web: https://amri.es/recetas/jev-decisiones--comentarios.html
 - Ideas de ejemplo:
-  - Moderar comentarios: decidir si un comentario de mi web se publica directamente o lo reviso yo antes
+  - Comentarios de mi web: decidir si un comentario de mi web se publica directamente o lo reviso yo antes
 
-#### 1. Cocina tu clasificador
-_10 min · el plato principal_
-
-Ahora Claude Code escribe un pequeño programa que envía cada caso a Jev y guarda su decisión.
+#### 1. Tus normas
+_10 min · el criterio_
 
 ```text
-Usa la skill de TypeSafe. Quiero un pequeño programa en Python que use Jev para [la idea de la persona].
-
-- Lee la llave de TYPESAFE_API_KEY desde .env.
-- Elige la pregunta adecuada (Choice, Score o Noul) y explícame por qué.
-- Escribe criterios claros para cada opción, como se los explicarías a una persona nueva.
-- Crea ejemplos.csv con 20 casos inventados pero realistas, incluidos algunos difíciles.
-- Ejecútalo y guarda en resultados.csv: el caso, la decisión, las probabilidades y la confianza.
-
-Explícame cada paso antes de ejecutarlo.
+Quiero [la idea de la persona]. Ayúdame a escribir mis normas de comentarios en 5 puntos (respeto, spam, enlaces, datos personales, temas fuera de lugar) y convierte la decisión en una pregunta de sí o no: «¿Se puede publicar sin revisar?».
 ```
 
-**¿Qué son los «criterios»?**
+**✅ Comprobación:** tienes tus normas y la pregunta.
 
-- Son las descripciones de cada opción. Jev decide comparando el texto con ellas.
-- Ejemplo: «soporte: el cliente tiene un problema técnico con algo que ya ha comprado».
-- Unos criterios claros importan más que el código: es donde está tu conocimiento.
-
-**✅ Comprobación:** existe resultados.csv con una decisión y una confianza para cada ejemplo.
-
-#### 2. Prueba y lee la confianza
-_10 min · probar antes de servir_
-
-Antes de fiarte, compara lo que decide Jev con lo que decidirías tú.
+#### 2. Cocina el moderador
+_10 min · Claude Code_
 
 ```text
-Muéstrame resultados.csv como tabla, ordenada de menor a mayor confianza. Para cada caso dudoso, explícame qué criterio lo confunde y propón cómo reescribir los criterios. No cambies el código, solo los criterios.
+Usa la skill de TypeSafe. Crea un programa en Python con una pregunta Noul de Jev: «¿Se puede publicar sin revisar según estas normas? [pega tus normas]». Llave en TYPESAFE_API_KEY (.env). Crea comentarios.csv con 20 ejemplos (normales, críticos pero respetuosos, spam, insultos). Guarda resultados.csv con la decisión y la confianza.
 ```
 
-- Marca los casos en los que no estás de acuerdo.
-- Pide a Claude Code que ajuste los criterios y vuelva a ejecutarlo.
-- Añade a `ejemplos.csv` casos reales (sin nombres ni datos personales).
+> 💡 Una crítica respetuosa no es motivo para ocultar un comentario. Asegúrate de que tus normas lo dicen.
 
-> 💡 Fíjate en la confianza: una decisión correcta con poca confianza te dice que los criterios aún no están claros.
+**✅ Comprobación:** existe resultados.csv.
 
-**✅ Comprobación:** estás de acuerdo con Jev en casi todos los casos con confianza alta.
-
-#### 3. Si duda, que te pregunte
-_5 min · una persona al mando_
-
-El truco profesional: Jev decide solo cuando está seguro y te pasa a ti los casos dudosos. Así automatizas la mayoría sin arriesgarte con el resto.
+#### 3. Prueba los dos errores
+_10 min · probar_
 
 ```text
-Añade un umbral de confianza de 0,8. Si la confianza es mayor, aplica la decisión. Si es menor, guarda el caso en revisar.csv con la decisión propuesta para que yo lo revise. Al final, dime qué porcentaje se ha decidido solo y cuántos quedan para mí.
+Muéstrame los comentarios que se publicarían y no deberían, y los que se frenarían siendo correctos. Ajusta las normas para corregir ambos.
 ```
 
-> 💡 Empieza con un umbral alto (0,9) y bájalo poco a poco cuando veas que acierta. Mejor revisar de más al principio.
+**✅ Comprobación:** no se cuela spam ni se frenan críticas respetuosas.
 
-**✅ Comprobación:** los casos dudosos llegan a revisar.csv y el resto se decide solo.
-
-#### 4. Conéctalo a tu web o tus apps
+#### 4. Conéctalo a tu web
 _10 min · servirlo_
 
-Convierte el clasificador en un servicio en internet al que tu formulario o tus apps envían cada mensaje nuevo.
-
 ```text
-Convierte el clasificador en un Cloudflare Worker que reciba un texto por POST y devuelva la decisión, la confianza y si necesita revisión. Guarda la llave de Jev como secreto del Worker (wrangler secret put TYPESAFE_API_KEY), nunca en el código. Añade una clave propia para que solo mi web pueda llamarlo y explícame cómo conectarlo a mi formulario.
+Convierte el moderador en un Cloudflare Worker (llave como secreto) que reciba cada comentario nuevo y devuelva publicar o revisar. Si la confianza es baja, que siempre sea revisar. Explícame cómo conectarlo a mi web.
 ```
 
-> 💡 ¿Quieres un aviso cuando algo necesite revisión? Con la receta «Claude en tu Slack» puedes enviar los casos dudosos a un canal.
+**✅ Comprobación:** un comentario de prueba queda publicado o en revisión según tus normas.
 
-**✅ Comprobación:** al enviar un mensaje de prueba desde tu formulario, recibes la decisión en menos de un segundo.
-
-**Al terminar:** Ya tienes un clasificador con Jev que decide en milisegundos, te dice cuánta confianza tiene y te pasa a ti los casos dudosos. Revísalo cada mes con casos nuevos: tus criterios mejoran con el uso.
+**Al terminar:** Tus comentarios se moderan solos y lo dudoso lo decides tú.
 
 ## Al terminar
 

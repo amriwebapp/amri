@@ -9,12 +9,12 @@ es:{
  back:"← Volver a la plataforma",next_label:"Siguiente receta",
  foot_r:'<a href="../index.html">AMRI</a> · Plataforma abierta de IA · © 2026 AMRI · <a href="mailto:contact@amri.es">Contacto</a> · <a href="../aviso-legal.html">Aviso legal</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../cookies.html">Cookies</a>',
  notice:"Esta receta está disponible por ahora solo en español. La traducción llegará pronto.",
- nav_how:"Cómo funciona",nav_paths:"Rutas",nav_conn:"Conectores",nav_recipes:"Libros",nav_open:"Código abierto",
+ nav_how:"Cómo funciona",nav_start:"Empieza aquí",nav_paths:"Rutas",nav_conn:"Conectores",nav_recipes:"Biblioteca",nav_open:"Código abierto",
  eyebrow:"Plataforma abierta · gratis · para todo el mundo",
  h1:"Aprende a usar <em>Claude</em>, a tu ritmo.",
- lead:"Recetas paso a paso para aprender a usar Claude de verdad: desde tu primera conversación hasta agentes que trabajan por ti. Sin jerga, sin prisas y sin saber programar.",
- cta1:"Empieza por aquí",cta2:"Ver todos los libros",scroll_hint:"Desliza despacio",
- st1l:"recetas guiadas",st2l:"conectores explicados",st3n:"0 €",st3l:"para siempre",st4l:"código abierto",
+ lead:"Libros de recetas, gratis y paso a paso. En cada receta copias un mensaje, lo pegas en Claude y terminas con algo real: tu web online, tu logo, tu correo en orden… Sin jerga y sin saber programar.",
+ cta1:"Empieza aquí · 15 min, gratis",cta2:"Ver la biblioteca",scroll_hint:"Desliza despacio",
+ st1l:"recetas paso a paso",st2l:"libros",st3n:"0 €",st3l:"para siempre",st4l:"código abierto",
  m_kicker:"Qué es AMRI",
  m_text:"AMRI es una plataforma abierta para aprender inteligencia artificial *con calma*. Aquí no hay cursos de pago ni palabras raras: hay recetas cortas que puedes seguir con un café al lado. Y esta misma web es la primera lección: *la cocinamos con Claude*, y su código es tuyo.",
  h_kicker:"Cómo funciona",h_title:"Cuatro pasos. <em>Una conversación.</em>",
@@ -194,6 +194,22 @@ Object.assign(T.es,{
  q6q:"¿Qué es un agente?",q6a:"Es Claude trabajando por su cuenta en una tarea de varios pasos: hace un plan, abre y crea archivos, comprueba el resultado y te pide permiso antes de lo importante. En un chat, Claude te dice cómo hacer algo; como agente, lo hace contigo. Pruébalo en la receta <a href=\"recetas/primer-agente.html\">Tu primer agente</a>.",
  q7q:"Chat, proyecto, conector, Skill, plugin, agente… ¿qué es cada cosa?",q7a:"<b>Chat</b>: una conversación. <b>Proyecto</b>: una carpeta con instrucciones que Claude recuerda. <b>Conector</b>: un permiso para usar otra app. <b>Skill</b>: tu forma de hacer algo, guardada. <b>Plugin</b>: un paquete de Skills. <b>Agente</b>: Claude haciendo una tarea larga por su cuenta. Te lo explicamos con calma en <a href=\"recetas/empieza-aqui.html\">Empieza aquí</a>.",
  pg_req:"<b>Antes de empezar:</b> el plugin funciona dentro de Claude Code, que necesita un plan de pago de Claude. ¿Es tu primera vez? Haz antes <a href=\"recetas/empieza-aqui.html\">Empieza aquí</a> y <a href=\"recetas/primer-agente.html\">Tu primer agente</a>: con ellas, todo esto se entiende solo."
+});
+/* v21 · portada más clara: primer paso, qué te llevas y lo avanzado aparte */
+Object.assign(T.es,{
+ hero_note:"Sin registrarte en AMRI. Solo necesitas una cuenta de Claude, que también es gratis.",
+ fp_badge:"✦ Tu primer paso",fp_title:"Empieza aquí: conoce a Claude",
+ fp_desc:"En 15 minutos y gratis: creas tu cuenta, haces tu primera tarea útil con Claude y entiendes todo lo que verás después.",
+ fp_gets:"<li>Tu cuenta de Claude lista</li><li>Una tarea real hecha con Claude</li><li>Saber qué libro abrir después</li>",
+ fp_c1:"⏱ 15 min",fp_c2:"💶 Gratis",fp_c3:"👩‍🍳 Sin saber nada",fp_open:"Abrir el primer libro",
+ mx_k:"Para ir más allá",mx_t:"Cuando ya te muevas <em>con soltura</em>.",
+ mx_l:"Nada de esto hace falta para empezar. Son las piezas que usan los libros más avanzados: conectores para que Claude use tus apps, el plugin para Claude Code y el código de esta misma web.",
+ h_title:"Así se cocina <em>un libro</em>.",h_lead:"Te lo enseñamos con un ejemplo real: la web de una panadería, de principio a fin.",
+ h_s1t:"Elige un libro",h_s1d:"En la biblioteca, abre el libro de lo que quieres conseguir: una web, un logo, tus redes… Dentro hay varias recetas concretas; elige la tuya.",
+ h_s2t:"Prepara la cocina una vez",h_s2d:"«Antes de empezar» te dice qué cuentas gratuitas necesitas y cómo conectarlas. Se hace una sola vez por libro.",
+ hv1_t:"Biblioteca",
+ b_k:"¿Tienes un proyecto?",
+ c_kicker:"Conectores"
 });
 var lang="es";
 var t=function(k){var v=T.es[k];return v!==undefined?v:""};

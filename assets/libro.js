@@ -33,7 +33,8 @@ if(!B.R.apps){B.R.apps={base:{n:"",db:true,d:""}};B.R.def="base";}
 
 /* ---------- Pintar cuando el motor ya ha terminado ---------- */
 function card(r,i){var st=recState(r);
-  return '<a class="lb-card'+(st.ok?" ok":"")+'" href="'+slug+'--'+r.s+'.html"><span class="lb-n">'+(st.ok?"✓":i+1)+'</span><span class="lb-tx"><b>'+esc(r.t)+'</b>'+
+  var lead=r.portada?'<img class="lb-img" alt="" loading="lazy" src="../'+esc(r.portada)+'">':'<span class="lb-n">'+(st.ok?"✓":i+1)+'</span>';
+  return '<a class="lb-card'+(st.ok?" ok":"")+(r.portada?" has-img":"")+'" href="'+slug+'--'+r.s+'.html">'+lead+'<span class="lb-tx"><b>'+esc(r.t)+'</b>'+
     (r.d?'<small>'+esc(r.d)+'</small>':'')+'<span class="lb-ch">'+(r.meta||[]).slice(0,2).map(function(m){return '<i>'+esc(m)+'</i>'}).join("")+
     (st.n&&!st.ok?'<i class="lb-pr">'+st.n+' de '+st.of+' pasos</i>':'')+'</span></span><span class="lb-go" aria-hidden="true">→</span></a>'}
 
@@ -51,7 +52,21 @@ function bookPage(){
   var ingBox=document.querySelector("main .ing");if(ingBox)ingBox.parentNode.insertBefore(lnk,ingBox);
 }
 
+/* Portada y ejemplo real de una receta (opcionales, en los datos):
+   portada:"img/recetas/<libro>--<receta>.jpg"
+   ejemplo:{t:"Título del proyecto",d:"Qué se hizo y cómo quedó",img:"img/…",url:"https://…"} */
+function showcase(){
+  var im=document.querySelector(".r-cover img");
+  if(R.portada&&im){im.onerror=null;im.src="../"+R.portada;}
+  var E=R.ejemplo;if(!E)return;
+  var box=document.createElement("section");box.className="lb-ej";
+  box.innerHTML='<h2>📸 Así quedó'+(E.t?': '+esc(E.t):'')+'</h2>'+(E.img?'<img alt="" loading="lazy" src="../'+esc(E.img)+'">':'')+
+    (E.d?'<p>'+E.d+'</p>':'')+(E.url?'<a href="'+esc(E.url)+'" target="_blank" rel="noopener">Ver el resultado →</a>':'');
+  var ing=document.querySelector("main .ing");if(ing)ing.parentNode.insertBefore(box,ing);
+}
+
 function recipePage(){
+  showcase();
   var i=B.recetas.indexOf(R),h1=document.getElementById("rh1");
   var crumb=document.createElement("a");crumb.className="lb-crumb";crumb.href=slug+".html";
   crumb.innerHTML='📕 Libro: <b>'+esc(B.title.replace(/^Libro:\s*/,""))+'</b> · receta '+(i+1)+' de '+B.recetas.length;

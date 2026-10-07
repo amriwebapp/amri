@@ -155,7 +155,7 @@ $$(".stp").forEach(s=>s.addEventListener("click",()=>{if(innerWidth>900)s.scroll
 /* ---------- Categorías (sin niveles: cada uno empieza por donde quiera) ---------- */
 const CAT_OF={};PATHS.forEach((p,i)=>p.r.forEach(s=>CAT_OF[s]="c"+i));
 function buildPaths(){
-  const box=$("#cats");box.innerHTML=PATHS.map((p,i)=>`
+  const box=$("#cats");if(!box)return;box.innerHTML=PATHS.map((p,i)=>`
     <article class="cat reveal" style="--d:${(i%3)*.08}s">
       <div class="cat-h"><span class="cat-ic">${p.ic}</span><span class="cat-n">${p.r.length} ${T("cat_n")}</span></div>
       <h3>${T("p"+(i+1)+"t")}</h3><p>${T("p"+(i+1)+"d")}</p>
@@ -167,7 +167,7 @@ function buildPaths(){
       <span class="cat-see">${T("cat_cta_b")} <span class="arr">→</span></span></a>`;
   observe($$(".cat",box));
 }
-$("#cats").addEventListener("click",e=>{const b=e.target.closest(".cat-see");if(!b)return;setFilter(b.dataset.cat);
+$("#cats")&&$("#cats").addEventListener("click",e=>{const b=e.target.closest(".cat-see");if(!b)return;setFilter(b.dataset.cat);
   $("#recetas").scrollIntoView({behavior:RM?"auto":"smooth"});});
 
 /* ---------- Carrusel de conectores ---------- */
@@ -246,6 +246,7 @@ function observe(els){els.forEach(el=>RM?el.classList.add("in"):io.observe(el));
 const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,to=+el.dataset.count;
   if(RM){el.textContent=to;return;}const t0=performance.now(),D=1800;
   const step=t=>{const p=clamp((t-t0)/D,0,1);el.textContent=Math.round(to*(1-Math.pow(1-p,4)));if(p<1)requestAnimationFrame(step);};requestAnimationFrame(step);}),{threshold:.6});
+$$("[data-books]").forEach(el=>el.dataset.count=RECETAS.length);
 $$("[data-recipes]").forEach(el=>el.dataset.count=RECETAS.reduce((n,r)=>n+(subs(r.slug).length||1),0));
 $$("[data-count]").forEach(el=>{el.textContent="0";cio.observe(el);});
 

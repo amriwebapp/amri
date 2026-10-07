@@ -13,60 +13,55 @@ steps:[
 {x:1,t:"Si algo no funciona",s:"Siempre · revisa esto",b:()=>`<ol><li><b>No se instala</b>: el .zip debe contener la carpeta con el SKILL.md dentro.</li><li><b>No se usa sola</b>: la descripción es demasiado vaga. Hazla más concreta.</li><li><b>Hace cosas raras</b>: pide a Claude que revise la Skill y la simplifique.</li></ol>`}
 ]},
 recetas:[
-{s:"informes",t:"Informes siempre con tu formato",d:"Tu estructura, tu tono y tus gráficos, en cada informe.",
-meta:["⏱ 30 min","👩‍🍳 Media","📊 Informes","🍽 Resultado: una Skill de informes"],
-q:"¿Qué quieres enseñarle?",ph:"Describe la tarea que repites. Ejemplo: preparar el acta de las reuniones de mi asociación siempre con el mismo formato",yn:"¿Tienes un ejemplo o una plantilla que ya uses?",yntip:"Si dudas, elige «Sí»: un buen ejemplo vale más que mil explicaciones.",
-fin:"Claude ya conoce tu método. A partir de ahora lo aplicará solo cuando lo necesite. Y si quieres, compártelo: puede ser una receta de AMRI.",
-def:"informes",empty:"[describe aquí tu método, arriba]",
-apps:{"informes":{"n":"Informes con mi formato","db":true,"d":"escribir informes mensuales siempre con la misma estructura, tono y gráficos"},"otra":{"n":"✏️ A mi manera","db":true,"d":""}},
+{s:"informes",t:"Informes siempre con tu formato",d:"Tu estructura, tu tono y tus gráficos, en cada informe, sin repetir instrucciones.",
+meta:["⏱ 30 min","👩‍🍳 Media","📊 Informes","🍽 Resultado: una Skill de informes instalada"],
+q:"¿Qué informes haces?",ph:"Di cuáles. Ejemplo: el informe mensual de ventas para la dirección",
+fin:"Claude ya hace tus informes a tu manera. Pídele uno sin nombrar la Skill y verás.",
+def:"informes",empty:"[di qué informes haces, arriba]",
+apps:{informes:{n:"Informe mensual",db:true,d:"escribir informes mensuales siempre con la misma estructura, tono y gráficos"},
+ otra:{n:"✏️ A mi manera",db:true,d:""}},
 steps:[
-{t:"Que Claude te entreviste",s:"10 min · tu método",b:()=>`<p class="what">Tú sabes hacerlo; Claude sabe escribirlo. Deja que te pregunte.</p>${cb(`Quiero crear una Skill para ${D()}.\n\nEntrevístame con preguntas de una en una para entender mi método: cuándo lo uso, qué pasos sigo, qué errores evito y cómo sé que ha quedado bien. Máximo 8 preguntas.`)}${ok("has respondido a todas las preguntas.")}`},
-{db:1,t:"Dale tu plato de muestra",s:"3 min · el ejemplo",b:()=>`<ol><li>Adjunta tu ejemplo o plantilla al chat (📎).</li><li>Escribe:</li></ol>${cb("Este es un ejemplo de cómo me gusta que quede. Inclúyelo en la Skill como referencia y explica qué tiene de bueno.")}${tip("Quita datos personales o confidenciales del ejemplo antes de subirlo.")}${ok("Claude ha entendido tu ejemplo.")}`},
-{t:"Que Claude escriba la Skill",s:"5 min · redactar",b:()=>`${cb("Ahora escribe la Skill. Crea una carpeta con un archivo SKILL.md que tenga: un nombre corto, una descripción clara de CUÁNDO usarla, y las instrucciones paso a paso. Si hace falta, añade plantillas o ejemplos en archivos aparte. Empaquétala en un .zip para que pueda descargarla.")}
-${det("Una buena descripción…",["Dice cuándo usarla: «Úsala cuando el usuario pida el acta de una reunión».","Usa las palabras que tú usarías al pedirlo.","Es corta: una o dos frases."])}${ok("tienes un archivo .zip descargado.")}`},
-{t:"Instálala",s:"2 min · al cajón",b:()=>`<ol><li>Vuelve a la sección de <b>Skills</b> de los ajustes.</li><li>Pulsa <b>Subir Skill</b> (<i>Upload skill</i>) y elige tu .zip.</li><li>Comprueba que aparece activada.</li></ol>${ok("tu Skill aparece en la lista.")}`},
-{t:"Pruébala sin nombrarla",s:"5 min · el examen",b:()=>`<p class="what">La prueba de fuego: pedir la tarea sin mencionar la Skill.</p>${cb("[Pide la tarea como la pedirías normalmente, sin decir «usa la Skill»]")}${tip("Si Claude no la usa, mejora la descripción: añade las palabras exactas con las que la pides.")}${ok("Claude aplica tu método sin que se lo recuerdes.")}`}
+{t:"Que Claude te entreviste",s:"10 min · tu método",b:()=>`${cb(`Quiero crear una Skill para ${D()}.\n\nEntrevístame, de una en una, con estas preguntas y las que necesites: ¿para quién es el informe? ¿qué secciones lleva y en qué orden? ¿qué datos y de dónde salen? ¿qué gráficos uso? ¿qué tono y qué extensión? ¿qué errores no quiero ver nunca? Máximo 8 preguntas.`)}${ok("has respondido a todas las preguntas.")}`},
+{t:"Dale un informe bueno",s:"3 min · el modelo",b:()=>`<ol><li>Adjunta un informe tuyo que te guste (sin datos confidenciales).</li></ol>${cb("Este es un informe que me gusta. Inclúyelo en la Skill como modelo de estructura y explica qué tiene de bueno.")}${ok("Claude ha entendido tu modelo.")}`},
+{t:"Que escriba la Skill",s:"5 min · el archivo",b:()=>`${cb("Escribe la Skill: una carpeta con SKILL.md (nombre corto, descripción que diga cuándo usarla y las instrucciones paso a paso) y una plantilla del informe en un archivo aparte. La descripción debe empezar por: «Úsala cuando haya que preparar el informe mensual…». Empaquétala en un .zip.")}${ok("tienes el .zip descargado.")}`},
+{t:"Instálala y pruébala sin nombrarla",s:"7 min · el examen",b:()=>`<ol><li>En la sección de Skills de los ajustes, pulsa <b>Subir Skill</b> y elige el .zip.</li><li>En un chat nuevo, pide:</li></ol>${cb("Prepárame el informe de este mes con estos datos: [pega tus datos].")}${tip("Si no usa tu formato, mejora la descripción con las palabras exactas que usas al pedirlo.")}${ok("el informe sale con tu estructura sin que se lo recuerdes.")}`}
 ]},
 {s:"correos",t:"Correos con tu estilo",d:"Tu tono, tu firma y tus respuestas habituales, en cada correo a clientes.",
-meta:["⏱ 25 min","👩‍🍳 Media","✉️ Correos","🍽 Resultado: una Skill de correos"],
-q:"¿Qué quieres enseñarle?",ph:"Describe la tarea que repites. Ejemplo: preparar el acta de las reuniones de mi asociación siempre con el mismo formato",yn:"¿Tienes un ejemplo o una plantilla que ya uses?",yntip:"Si dudas, elige «Sí»: un buen ejemplo vale más que mil explicaciones.",
-fin:"Claude ya conoce tu método. A partir de ahora lo aplicará solo cuando lo necesite. Y si quieres, compártelo: puede ser una receta de AMRI.",
-def:"correos",empty:"[describe aquí tu método, arriba]",
-apps:{"correos":{"n":"Correos con mi estilo","db":true,"d":"responder correos de clientes con mi tono, mis firmas y mis respuestas habituales"},"otra":{"n":"✏️ A mi manera","db":true,"d":""}},
+meta:["⏱ 25 min","👩‍🍳 Media","✉️ Correos","🍽 Resultado: una Skill de correos instalada"],
+q:"¿Qué correos escribes?",ph:"Di cuáles. Ejemplo: respuestas a clientes que piden presupuesto",
+fin:"Tus correos ya suenan a ti sin explicárselo cada vez.",
+def:"correos",empty:"[di qué correos escribes, arriba]",
+apps:{correos:{n:"Correos a clientes",db:true,d:"responder correos de clientes con mi tono, mis firmas y mis respuestas habituales"},
+ otra:{n:"✏️ A mi manera",db:true,d:""}},
 steps:[
-{t:"Que Claude te entreviste",s:"10 min · tu método",b:()=>`<p class="what">Tú sabes hacerlo; Claude sabe escribirlo. Deja que te pregunte.</p>${cb(`Quiero crear una Skill para ${D()}.\n\nEntrevístame con preguntas de una en una para entender mi método: cuándo lo uso, qué pasos sigo, qué errores evito y cómo sé que ha quedado bien. Máximo 8 preguntas.`)}${ok("has respondido a todas las preguntas.")}`},
-{db:1,t:"Dale tu plato de muestra",s:"3 min · el ejemplo",b:()=>`<ol><li>Adjunta tu ejemplo o plantilla al chat (📎).</li><li>Escribe:</li></ol>${cb("Este es un ejemplo de cómo me gusta que quede. Inclúyelo en la Skill como referencia y explica qué tiene de bueno.")}${tip("Quita datos personales o confidenciales del ejemplo antes de subirlo.")}${ok("Claude ha entendido tu ejemplo.")}`},
-{t:"Que Claude escriba la Skill",s:"5 min · redactar",b:()=>`${cb("Ahora escribe la Skill. Crea una carpeta con un archivo SKILL.md que tenga: un nombre corto, una descripción clara de CUÁNDO usarla, y las instrucciones paso a paso. Si hace falta, añade plantillas o ejemplos en archivos aparte. Empaquétala en un .zip para que pueda descargarla.")}
-${det("Una buena descripción…",["Dice cuándo usarla: «Úsala cuando el usuario pida el acta de una reunión».","Usa las palabras que tú usarías al pedirlo.","Es corta: una o dos frases."])}${ok("tienes un archivo .zip descargado.")}`},
-{t:"Instálala",s:"2 min · al cajón",b:()=>`<ol><li>Vuelve a la sección de <b>Skills</b> de los ajustes.</li><li>Pulsa <b>Subir Skill</b> (<i>Upload skill</i>) y elige tu .zip.</li><li>Comprueba que aparece activada.</li></ol>${ok("tu Skill aparece en la lista.")}`},
-{t:"Pruébala sin nombrarla",s:"5 min · el examen",b:()=>`<p class="what">La prueba de fuego: pedir la tarea sin mencionar la Skill.</p>${cb("[Pide la tarea como la pedirías normalmente, sin decir «usa la Skill»]")}${tip("Si Claude no la usa, mejora la descripción: añade las palabras exactas con las que la pides.")}${ok("Claude aplica tu método sin que se lo recuerdes.")}`}
+{t:"Que Claude te entreviste",s:"8 min · tu estilo",b:()=>`${cb(`Quiero crear una Skill para ${D()}.\n\nPregúntame, de una en una: ¿tuteo o usted? ¿cómo saludo y cómo me despido? ¿cuál es mi firma? ¿qué respondo siempre a las 5 preguntas más típicas? ¿qué palabras no uso nunca? ¿qué no debo prometer? Máximo 8 preguntas.`)}${ok("has respondido a todo.")}`},
+{t:"Pega tres correos tuyos",s:"3 min · tu voz",b:()=>`${cb("Estos son tres correos que escribí yo y me gustan: [pégalos, sin datos de clientes]. Úsalos en la Skill como ejemplo de mi tono.")}${ok("Claude ha visto tus correos.")}`},
+{t:"Que escriba la Skill",s:"5 min · el archivo",b:()=>`${cb("Escribe la Skill: SKILL.md con nombre corto, una descripción que empiece por «Úsala cuando haya que responder a un cliente…», mis reglas de tono, mi firma y mis respuestas habituales en un archivo aparte. Empaquétala en un .zip.")}${ok("tienes el .zip.")}`},
+{t:"Instálala y pruébala",s:"9 min · el examen",b:()=>`<ol><li>Súbela en <b>Subir Skill</b>.</li><li>En un chat nuevo, pega un correo real de un cliente (sin datos personales) y pide: «Respóndele».</li></ol>${ok("la respuesta suena a ti y lleva tu firma.")}`}
 ]},
 {s:"fichas",t:"Fichas de producto",d:"Título, descripción, ventajas y medidas, siempre igual de completas.",
-meta:["⏱ 25 min","👩‍🍳 Media","🏷 Tienda","🍽 Resultado: una Skill de fichas de producto"],
-q:"¿Qué quieres enseñarle?",ph:"Describe la tarea que repites. Ejemplo: preparar el acta de las reuniones de mi asociación siempre con el mismo formato",yn:"¿Tienes un ejemplo o una plantilla que ya uses?",yntip:"Si dudas, elige «Sí»: un buen ejemplo vale más que mil explicaciones.",
-fin:"Claude ya conoce tu método. A partir de ahora lo aplicará solo cuando lo necesite. Y si quieres, compártelo: puede ser una receta de AMRI.",
-def:"fichas",empty:"[describe aquí tu método, arriba]",
-apps:{"fichas":{"n":"Fichas de producto","db":true,"d":"escribir fichas de producto para mi tienda con título, descripción, ventajas y medidas"},"otra":{"n":"✏️ A mi manera","db":true,"d":""}},
+meta:["⏱ 25 min","👩‍🍳 Media","🏷 Tienda","🍽 Resultado: una Skill de fichas de producto instalada"],
+q:"¿Qué vendes?",ph:"Di qué. Ejemplo: cerámica hecha a mano",
+fin:"Cada producto nuevo tendrá su ficha completa en un minuto.",
+def:"fichas",empty:"[di qué vendes, arriba]",
+apps:{fichas:{n:"Mi tienda",db:true,d:"escribir fichas de producto para mi tienda con título, descripción, ventajas y medidas"},
+ otra:{n:"✏️ A mi manera",db:true,d:""}},
 steps:[
-{t:"Que Claude te entreviste",s:"10 min · tu método",b:()=>`<p class="what">Tú sabes hacerlo; Claude sabe escribirlo. Deja que te pregunte.</p>${cb(`Quiero crear una Skill para ${D()}.\n\nEntrevístame con preguntas de una en una para entender mi método: cuándo lo uso, qué pasos sigo, qué errores evito y cómo sé que ha quedado bien. Máximo 8 preguntas.`)}${ok("has respondido a todas las preguntas.")}`},
-{db:1,t:"Dale tu plato de muestra",s:"3 min · el ejemplo",b:()=>`<ol><li>Adjunta tu ejemplo o plantilla al chat (📎).</li><li>Escribe:</li></ol>${cb("Este es un ejemplo de cómo me gusta que quede. Inclúyelo en la Skill como referencia y explica qué tiene de bueno.")}${tip("Quita datos personales o confidenciales del ejemplo antes de subirlo.")}${ok("Claude ha entendido tu ejemplo.")}`},
-{t:"Que Claude escriba la Skill",s:"5 min · redactar",b:()=>`${cb("Ahora escribe la Skill. Crea una carpeta con un archivo SKILL.md que tenga: un nombre corto, una descripción clara de CUÁNDO usarla, y las instrucciones paso a paso. Si hace falta, añade plantillas o ejemplos en archivos aparte. Empaquétala en un .zip para que pueda descargarla.")}
-${det("Una buena descripción…",["Dice cuándo usarla: «Úsala cuando el usuario pida el acta de una reunión».","Usa las palabras que tú usarías al pedirlo.","Es corta: una o dos frases."])}${ok("tienes un archivo .zip descargado.")}`},
-{t:"Instálala",s:"2 min · al cajón",b:()=>`<ol><li>Vuelve a la sección de <b>Skills</b> de los ajustes.</li><li>Pulsa <b>Subir Skill</b> (<i>Upload skill</i>) y elige tu .zip.</li><li>Comprueba que aparece activada.</li></ol>${ok("tu Skill aparece en la lista.")}`},
-{t:"Pruébala sin nombrarla",s:"5 min · el examen",b:()=>`<p class="what">La prueba de fuego: pedir la tarea sin mencionar la Skill.</p>${cb("[Pide la tarea como la pedirías normalmente, sin decir «usa la Skill»]")}${tip("Si Claude no la usa, mejora la descripción: añade las palabras exactas con las que la pides.")}${ok("Claude aplica tu método sin que se lo recuerdes.")}`}
+{t:"Que Claude te entreviste",s:"8 min · tu formato",b:()=>`${cb(`Quiero crear una Skill para ${D()}.\n\nPregúntame, de una en una: ¿qué secciones lleva cada ficha? ¿cuánto de largo el título y la descripción? ¿qué datos técnicos son obligatorios (medidas, material, cuidados)? ¿qué tono? ¿qué palabras usa mi cliente al buscar? ¿qué no debo afirmar nunca? Máximo 8 preguntas.`)}${ok("has respondido a todo.")}`},
+{t:"Dale tu mejor ficha",s:"3 min · el modelo",b:()=>`${cb("Esta es la mejor ficha de mi tienda: [pégala]. Úsala como modelo en la Skill.")}${ok("Claude tiene tu modelo.")}`},
+{t:"Que escriba la Skill",s:"5 min · el archivo",b:()=>`${cb("Escribe la Skill: SKILL.md con descripción que empiece por «Úsala cuando haya que escribir la ficha de un producto…», las reglas y una plantilla. Que nunca invente medidas ni materiales: si falta un dato, que lo pregunte. Empaquétala en un .zip.")}${ok("tienes el .zip.")}`},
+{t:"Instálala y pruébala",s:"9 min · el examen",b:()=>`<ol><li>Súbela en <b>Subir Skill</b>.</li><li>Pide: «Ficha para este producto: [datos y una foto]».</li></ol>${ok("la ficha sale completa, con tu formato y sin datos inventados.")}`}
 ]},
-{s:"clases",t:"Material de clase",d:"Fichas de ejercicios con nivel, objetivos y soluciones.",
-meta:["⏱ 25 min","👩‍🍳 Media","🎓 Clases","🍽 Resultado: una Skill de material de clase"],
-q:"¿Qué quieres enseñarle?",ph:"Describe la tarea que repites. Ejemplo: preparar el acta de las reuniones de mi asociación siempre con el mismo formato",yn:"¿Tienes un ejemplo o una plantilla que ya uses?",yntip:"Si dudas, elige «Sí»: un buen ejemplo vale más que mil explicaciones.",
-fin:"Claude ya conoce tu método. A partir de ahora lo aplicará solo cuando lo necesite. Y si quieres, compártelo: puede ser una receta de AMRI.",
-def:"clases",empty:"[describe aquí tu método, arriba]",
-apps:{"clases":{"n":"Material de clase","db":false,"d":"preparar fichas de ejercicios para mis alumnos con nivel, objetivos y soluciones"},"otra":{"n":"✏️ A mi manera","db":true,"d":""}},
+{s:"clases",t:"Material de clase",d:"Fichas de ejercicios con nivel, objetivos y soluciones, siempre con tu estructura.",
+meta:["⏱ 25 min","👩‍🍳 Media","🎓 Clases","🍽 Resultado: una Skill de material de clase instalada"],
+q:"¿Qué enseñas?",ph:"Di qué y a quién. Ejemplo: matemáticas a 2.º de la ESO",
+fin:"Ya tienes un ayudante que prepara material a tu manera.",
+def:"clases",empty:"[di qué enseñas, arriba]",
+apps:{clases:{n:"Fichas de ejercicios",db:false,d:"preparar fichas de ejercicios para mis alumnos con nivel, objetivos y soluciones"},
+ otra:{n:"✏️ A mi manera",db:false,d:""}},
 steps:[
-{t:"Que Claude te entreviste",s:"10 min · tu método",b:()=>`<p class="what">Tú sabes hacerlo; Claude sabe escribirlo. Deja que te pregunte.</p>${cb(`Quiero crear una Skill para ${D()}.\n\nEntrevístame con preguntas de una en una para entender mi método: cuándo lo uso, qué pasos sigo, qué errores evito y cómo sé que ha quedado bien. Máximo 8 preguntas.`)}${ok("has respondido a todas las preguntas.")}`},
-{db:1,t:"Dale tu plato de muestra",s:"3 min · el ejemplo",b:()=>`<ol><li>Adjunta tu ejemplo o plantilla al chat (📎).</li><li>Escribe:</li></ol>${cb("Este es un ejemplo de cómo me gusta que quede. Inclúyelo en la Skill como referencia y explica qué tiene de bueno.")}${tip("Quita datos personales o confidenciales del ejemplo antes de subirlo.")}${ok("Claude ha entendido tu ejemplo.")}`},
-{t:"Que Claude escriba la Skill",s:"5 min · redactar",b:()=>`${cb("Ahora escribe la Skill. Crea una carpeta con un archivo SKILL.md que tenga: un nombre corto, una descripción clara de CUÁNDO usarla, y las instrucciones paso a paso. Si hace falta, añade plantillas o ejemplos en archivos aparte. Empaquétala en un .zip para que pueda descargarla.")}
-${det("Una buena descripción…",["Dice cuándo usarla: «Úsala cuando el usuario pida el acta de una reunión».","Usa las palabras que tú usarías al pedirlo.","Es corta: una o dos frases."])}${ok("tienes un archivo .zip descargado.")}`},
-{t:"Instálala",s:"2 min · al cajón",b:()=>`<ol><li>Vuelve a la sección de <b>Skills</b> de los ajustes.</li><li>Pulsa <b>Subir Skill</b> (<i>Upload skill</i>) y elige tu .zip.</li><li>Comprueba que aparece activada.</li></ol>${ok("tu Skill aparece en la lista.")}`},
-{t:"Pruébala sin nombrarla",s:"5 min · el examen",b:()=>`<p class="what">La prueba de fuego: pedir la tarea sin mencionar la Skill.</p>${cb("[Pide la tarea como la pedirías normalmente, sin decir «usa la Skill»]")}${tip("Si Claude no la usa, mejora la descripción: añade las palabras exactas con las que la pides.")}${ok("Claude aplica tu método sin que se lo recuerdes.")}`}
+{t:"Que Claude te entreviste",s:"8 min · tu método",b:()=>`${cb(`Quiero crear una Skill para ${D()}. Enseño [qué] a [quién].\n\nPregúntame, de una en una: ¿qué partes lleva cada ficha? ¿cómo ordeno los ejercicios por dificultad? ¿cómo escribo los objetivos? ¿cómo presento las soluciones? ¿qué adaptaciones hago para quien va más lento? Máximo 8 preguntas.`)}${ok("has respondido a todo.")}`},
+{t:"Que escriba la Skill",s:"5 min · el archivo",b:()=>`${cb("Escribe la Skill: SKILL.md con descripción que empiece por «Úsala cuando haya que preparar una ficha de ejercicios…», la estructura, las reglas de dificultad y una plantilla. Empaquétala en un .zip.")}${ok("tienes el .zip.")}`},
+{t:"Instálala y pruébala",s:"12 min · el examen",b:()=>`<ol><li>Súbela en <b>Subir Skill</b>.</li><li>Pide: «Prepárame una ficha sobre [tema] para la clase de mañana».</li><li>Resuelve tú dos ejercicios para comprobar las soluciones.</li></ol>${ok("la ficha sigue tu estructura y las soluciones son correctas.")}`}
 ]}
 ]};

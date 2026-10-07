@@ -24,48 +24,52 @@ ${det("¿Qué puede ver Claude?",["Solo la información a la que tu usuario de G
 {x:1,t:"Permisos y confianza",s:"Siempre · consejos",b:()=>`<ol><li>Revisa quién puede ver qué dentro de GuruSup: Claude respeta esos permisos.</li><li>No conectes fuentes con datos personales sensibles si no hace falta.</li><li>Lee la política de privacidad de GuruSup y las normas de tu empresa sobre IA.</li></ol>${det("💡 Ideas para seguir",["Un asistente de onboarding para cada puesto.","Respuestas a clientes revisadas por una persona antes de enviarse.","Documentar procesos que hoy solo están en la cabeza de alguien."])}`}
 ]},
 recetas:[
-{s:"equipo",t:"Dudas del equipo",d:"Procesos, políticas, herramientas y a quién preguntar, respondido con tus documentos.",
-meta:["⏱ 10 min","👩‍🍳 Fácil","👥 Equipo","🍽 Resultado: respuestas internas con su fuente"],
-q:"¿Para qué lo quieres usar?",ph:"Describe tu caso. Ejemplo: que cualquier persona nueva del equipo sepa cómo gestionamos las devoluciones",yn:"¿Tu empresa ya tiene información en otras apps (Notion, Drive, Slack, HubSpot…)?",yntip:"Si dudas, elige «Sí»: te enseñamos a conectar esas fuentes al Brain para que Claude las use.",
-fin:"Claude ya consulta el cerebro de tu empresa antes de responder. Menos preguntas repetidas y respuestas con la versión buena de las cosas.",
-def:"equipo",empty:"[describe aquí tu caso, arriba]",
-apps:{"equipo":{"n":"Dudas del equipo","db":true,"d":"responder las dudas internas del equipo: procesos, políticas, herramientas y a quién preguntar"},"otra":{"n":"✏️ A mi manera","db":true,"d":""}},
+{s:"equipo",t:"Dudas del equipo",d:"Procesos, políticas, herramientas y a quién preguntar, respondido con vuestros documentos y su fuente.",
+meta:["⏱ 15 min","👩‍🍳 Fácil","👥 Equipo","🍽 Resultado: respuestas internas con su fuente y una lista de huecos"],
+q:"¿Qué dudas son las más típicas?",ph:"Di algunas. Ejemplo: cómo pido vacaciones, dónde están las plantillas de factura",
+fin:"Tu equipo tiene respuestas con fuente. Completa los huecos y cada semana responderá mejor.",
+def:"equipo",empty:"[escribe las dudas típicas, arriba]",
+apps:{equipo:{n:"Dudas internas",db:true,d:"responder las dudas internas del equipo: procesos, políticas, herramientas y a quién preguntar"},
+ otra:{n:"✏️ A mi manera",db:true,d:""}},
 steps:[
-{t:"Tu primera pregunta",s:"5 min · probar",b:()=>`<p class="what">Haz una pregunta cuya respuesta conozcas. Así compruebas que responde con la versión buena.</p>${cb(`Consulta primero GuruSup Brain. Quiero ${D()}.\n\nEmpieza por esta pregunta: [escribe una duda real]. Dime de qué fuente sale la respuesta y si falta información.`)}
-${tip("Pide siempre la fuente. Si Claude no la da, desconfía y compruébalo.")}${ok("la respuesta coincide con lo que tú sabes y cita su fuente.")}`},
-{t:"Rellena los huecos",s:"5 min · mejorar",b:()=>`<p class="what">Cada «no lo sé» es una oportunidad: la información que falta se añade una vez y sirve para siempre.</p>${cb("Hazme una lista de las preguntas de hoy que el Brain no pudo responder bien, y dime qué persona o documento podría completarlas.")}${ok("tienes una lista de huecos y a quién preguntar.")}`}
+{t:"Una pregunta de control",s:"5 min · confianza",b:()=>`<p class="what">Empieza por una duda cuya respuesta conozcas: así compruebas que el Brain responde con la versión buena.</p>${cb(`Consulta primero GuruSup Brain. Quiero ${D()}. Pregunta: [una duda cuya respuesta sepas]. Dime de qué documento sale la respuesta y de qué fecha es.`)}${ok("la respuesta es correcta y cita su fuente.")}`},
+{t:"Las 10 dudas de siempre",s:"5 min · el día a día",b:()=>`${cb("Responde con GuruSup Brain estas dudas típicas del equipo, una por una, con su fuente: [pega tus dudas]. Si alguna no está documentada, dilo claramente.")}${ok("tienes las respuestas y sabes cuáles faltan.")}`},
+{t:"Rellena los huecos",s:"5 min · mejorar",b:()=>`${cb("Hazme una lista de las dudas que el Brain no pudo responder bien y dime qué persona o documento podría completarlas.")}${ok("tienes la lista de huecos y a quién preguntar.")}`}
 ]},
-{s:"clientes",t:"Respuestas a clientes",d:"Respuestas basadas en vuestras condiciones, precios y casos resueltos.",
-meta:["⏱ 10 min","👩‍🍳 Fácil","💬 Clientes","🍽 Resultado: respuestas a clientes con fuente"],
-q:"¿Para qué lo quieres usar?",ph:"Describe tu caso. Ejemplo: que cualquier persona nueva del equipo sepa cómo gestionamos las devoluciones",yn:"¿Tu empresa ya tiene información en otras apps (Notion, Drive, Slack, HubSpot…)?",yntip:"Si dudas, elige «Sí»: te enseñamos a conectar esas fuentes al Brain para que Claude las use.",
-fin:"Claude ya consulta el cerebro de tu empresa antes de responder. Menos preguntas repetidas y respuestas con la versión buena de las cosas.",
-def:"clientes",empty:"[describe aquí tu caso, arriba]",
-apps:{"clientes":{"n":"Atención al cliente","db":true,"d":"preparar respuestas a clientes usando nuestras condiciones, precios y casos resueltos"},"otra":{"n":"✏️ A mi manera","db":true,"d":""}},
+{s:"clientes",t:"Respuestas a clientes",d:"Borradores de respuesta basados en vuestras condiciones, precios y casos resueltos, sin prometer de más.",
+meta:["⏱ 15 min","👩‍🍳 Fácil","💬 Clientes","🍽 Resultado: respuestas a clientes con fuente"],
+q:"¿Qué pregunta el cliente?",ph:"Pega una consulta real. Ejemplo: ¿puedo cambiar mi plan a mitad de mes?",
+fin:"Tienes respuestas basadas en la información oficial. Revisa cada una antes de enviarla.",
+def:"clientes",empty:"[pega la consulta, arriba]",
+apps:{clientes:{n:"Consultas de clientes",db:true,d:"preparar respuestas a clientes usando nuestras condiciones, precios y casos resueltos"},
+ otra:{n:"✏️ A mi manera",db:true,d:""}},
 steps:[
-{t:"Tu primera pregunta",s:"5 min · probar",b:()=>`<p class="what">Haz una pregunta cuya respuesta conozcas. Así compruebas que responde con la versión buena.</p>${cb(`Consulta primero GuruSup Brain. Quiero ${D()}.\n\nEmpieza por esta pregunta: [escribe una duda real]. Dime de qué fuente sale la respuesta y si falta información.`)}
-${tip("Pide siempre la fuente. Si Claude no la da, desconfía y compruébalo.")}${ok("la respuesta coincide con lo que tú sabes y cita su fuente.")}`},
-{t:"Rellena los huecos",s:"5 min · mejorar",b:()=>`<p class="what">Cada «no lo sé» es una oportunidad: la información que falta se añade una vez y sirve para siempre.</p>${cb("Hazme una lista de las preguntas de hoy que el Brain no pudo responder bien, y dime qué persona o documento podría completarlas.")}${ok("tienes una lista de huecos y a quién preguntar.")}`}
+{t:"El borrador con fuente",s:"5 min · responder",b:()=>`${cb(`Consulta primero GuruSup Brain. Quiero ${D()}. El cliente pregunta: [pega la consulta, sin datos personales].\n\nEscribe un borrador amable y corto. Debajo, la fuente de cada dato. Si algo no está en nuestra información, no lo prometas: di que lo consultamos.`)}${ok("tienes el borrador con sus fuentes.")}`},
+{t:"Comprueba lo delicado",s:"5 min · con lupa",b:()=>`<p class="what">Revisa a mano precios, plazos y condiciones: es lo que más problemas da si está desactualizado.</p>${cb("¿Alguna de las fuentes que has usado podría estar desactualizada? Dime la fecha de cada una.")}${ok("los datos delicados están comprobados.")}`},
+{t:"Envíalo tú",s:"5 min · firmar",b:()=>`<ol><li>Ajusta el tono si hace falta y envíalo desde tu herramienta de soporte.</li><li>Si la consulta era nueva, añádela al Brain para la próxima vez.</li></ol>${ok("la respuesta está enviada.")}`}
 ]},
 {s:"bienvenida",t:"Guía de bienvenida",d:"Todo lo que necesita saber una persona nueva, sacado de vuestra documentación.",
 meta:["⏱ 15 min","👩‍🍳 Fácil","👋 Onboarding","🍽 Resultado: una guía de bienvenida"],
-q:"¿Para qué lo quieres usar?",ph:"Describe tu caso. Ejemplo: que cualquier persona nueva del equipo sepa cómo gestionamos las devoluciones",yn:"¿Tu empresa ya tiene información en otras apps (Notion, Drive, Slack, HubSpot…)?",yntip:"Si dudas, elige «Sí»: te enseñamos a conectar esas fuentes al Brain para que Claude las use.",
-fin:"Claude ya consulta el cerebro de tu empresa antes de responder. Menos preguntas repetidas y respuestas con la versión buena de las cosas.",
-def:"onboarding",empty:"[describe aquí tu caso, arriba]",
-apps:{"onboarding":{"n":"Onboarding","db":true,"d":"crear una guía de bienvenida para una persona nueva con todo lo que necesita saber de la empresa"},"otra":{"n":"✏️ A mi manera","db":true,"d":""}},
+q:"¿Para qué puesto?",ph:"Di cuál. Ejemplo: una persona nueva en atención al cliente",
+fin:"La guía está lista. Pide a la persona nueva que te diga qué echó en falta.",
+def:"onboarding",empty:"[di el puesto, arriba]",
+apps:{onboarding:{n:"Persona nueva",db:true,d:"crear una guía de bienvenida para una persona nueva con todo lo que necesita saber de la empresa"},
+ otra:{n:"✏️ A mi manera",db:true,d:""}},
 steps:[
-{t:"Tu primera pregunta",s:"5 min · probar",b:()=>`<p class="what">Haz una pregunta cuya respuesta conozcas. Así compruebas que responde con la versión buena.</p>${cb(`Consulta primero GuruSup Brain. Quiero ${D()}.\n\nEmpieza por esta pregunta: [escribe una duda real]. Dime de qué fuente sale la respuesta y si falta información.`)}
-${tip("Pide siempre la fuente. Si Claude no la da, desconfía y compruébalo.")}${ok("la respuesta coincide con lo que tú sabes y cita su fuente.")}`},
-{t:"Rellena los huecos",s:"5 min · mejorar",b:()=>`<p class="what">Cada «no lo sé» es una oportunidad: la información que falta se añade una vez y sirve para siempre.</p>${cb("Hazme una lista de las preguntas de hoy que el Brain no pudo responder bien, y dime qué persona o documento podría completarlas.")}${ok("tienes una lista de huecos y a quién preguntar.")}`}
+{t:"El índice",s:"5 min · estructura",b:()=>`${cb(`Consulta primero GuruSup Brain. Quiero ${D()} para el puesto de [puesto]. Propón un índice: primer día, primera semana, primer mes, herramientas, normas y a quién preguntar cada cosa. Espera mi OK.`)}${ok("has aprobado el índice.")}`},
+{t:"La guía",s:"5 min · contenido",b:()=>`${cb("Escribe la guía con ese índice usando solo nuestra documentación, con la fuente de cada sección. Marca con [FALTA] lo que no encuentres.")}${ok("tienes la guía, con los huecos marcados.")}`},
+{t:"Completa y comparte",s:"5 min · cerrar",b:()=>`<ol><li>Rellena los [FALTA] con quien corresponda.</li><li>Comparte la guía con la persona nueva.</li></ol>${ok("la guía está completa y compartida.")}`}
 ]},
-{s:"propuestas",t:"Propuestas de venta",d:"Servicios, casos de éxito y precios actualizados en una propuesta.",
+{s:"propuestas",t:"Propuestas de venta",d:"Servicios, casos de éxito y precios actualizados en una propuesta para un cliente concreto.",
 meta:["⏱ 15 min","👩‍🍳 Fácil","📈 Ventas","🍽 Resultado: una propuesta comercial"],
-q:"¿Para qué lo quieres usar?",ph:"Describe tu caso. Ejemplo: que cualquier persona nueva del equipo sepa cómo gestionamos las devoluciones",yn:"¿Tu empresa ya tiene información en otras apps (Notion, Drive, Slack, HubSpot…)?",yntip:"Si dudas, elige «Sí»: te enseñamos a conectar esas fuentes al Brain para que Claude las use.",
-fin:"Claude ya consulta el cerebro de tu empresa antes de responder. Menos preguntas repetidas y respuestas con la versión buena de las cosas.",
-def:"ventas",empty:"[describe aquí tu caso, arriba]",
-apps:{"ventas":{"n":"Propuestas de venta","db":false,"d":"preparar propuestas comerciales con nuestros servicios, casos de éxito y precios actualizados"},"otra":{"n":"✏️ A mi manera","db":true,"d":""}},
+q:"¿Para qué cliente?",ph:"Describe al cliente y lo que necesita. Ejemplo: una cadena de 5 gimnasios que quiere automatizar reservas",
+fin:"Tu propuesta está lista. Revisa los precios antes de enviarla.",
+def:"ventas",empty:"[describe al cliente, arriba]",
+apps:{ventas:{n:"Un cliente concreto",db:false,d:"preparar una propuesta comercial con nuestros servicios, casos de éxito y precios actualizados"},
+ otra:{n:"✏️ A mi manera",db:false,d:""}},
 steps:[
-{t:"Tu primera pregunta",s:"5 min · probar",b:()=>`<p class="what">Haz una pregunta cuya respuesta conozcas. Así compruebas que responde con la versión buena.</p>${cb(`Consulta primero GuruSup Brain. Quiero ${D()}.\n\nEmpieza por esta pregunta: [escribe una duda real]. Dime de qué fuente sale la respuesta y si falta información.`)}
-${tip("Pide siempre la fuente. Si Claude no la da, desconfía y compruébalo.")}${ok("la respuesta coincide con lo que tú sabes y cita su fuente.")}`},
-{t:"Rellena los huecos",s:"5 min · mejorar",b:()=>`<p class="what">Cada «no lo sé» es una oportunidad: la información que falta se añade una vez y sirve para siempre.</p>${cb("Hazme una lista de las preguntas de hoy que el Brain no pudo responder bien, y dime qué persona o documento podría completarlas.")}${ok("tienes una lista de huecos y a quién preguntar.")}`}
+{t:"Entiende al cliente",s:"5 min · contexto",b:()=>`${cb(`Consulta primero GuruSup Brain. Quiero ${D()}. El cliente: [descripción]. ¿Qué servicios nuestros encajan y qué casos de éxito parecidos tenemos? Con fuente.`)}${ok("sabes qué ofrecer y con qué casos.")}`},
+{t:"La propuesta",s:"5 min · escribirla",b:()=>`${cb("Escribe la propuesta: su problema, nuestra solución, un caso parecido, precio y siguientes pasos. Usa solo precios de nuestra documentación y di de qué fecha son.")}${ok("tienes la propuesta.")}`},
+{t:"Revisa precios y envía",s:"5 min · con lupa",b:()=>`<p class="what">Comprueba con la persona responsable que los precios están vigentes antes de enviarla.</p>${ok("la propuesta está revisada.")}`}
 ]}
 ]};

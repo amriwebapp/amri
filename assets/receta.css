@@ -134,3 +134,11 @@ h1{letter-spacing:-.03em}
 .lb-prep.ok{background:color-mix(in srgb,var(--ok) 12%,transparent);border-left-color:var(--ok)}
 .lb-prep a{color:var(--acc);font-weight:700}
 .lb-all{margin:12px 0 0}.lb-all a{color:var(--acc);font-weight:700}
+
+/* Portada y ejemplo real de cada receta (opcionales) */
+.lb-card.has-img{grid-template-columns:72px 1fr auto}
+.lb-img{width:72px;height:72px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+.lb-ej{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin:0 0 16px}
+.lb-ej h2{margin:0 0 10px;font-size:18px}
+.lb-ej img{width:100%;border-radius:12px;border:1px solid var(--line);margin:0 0 10px}
+.lb-ej p{margin:0 0 8px}.lb-ej a{color:var(--acc);font-weight:700}

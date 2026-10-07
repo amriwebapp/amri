@@ -120,83 +120,90 @@ Antes de responder cualquier cosa sobre la empresa, consulta GuruSup Brain. Cita
 
 ### Receta 1: Dudas del equipo
 
-Procesos, políticas, herramientas y a quién preguntar, respondido con tus documentos.
+Procesos, políticas, herramientas y a quién preguntar, respondido con vuestros documentos y su fuente.
 
-- ⏱ 10 min
+- ⏱ 15 min
 - 👩‍🍳 Fácil
 - 👥 Equipo
-- 🍽 Resultado: respuestas internas con su fuente
+- 🍽 Resultado: respuestas internas con su fuente y una lista de huecos
 - Versión web: https://amri.es/recetas/gurusup-brain--equipo.html
 - Ideas de ejemplo:
-  - Dudas del equipo: responder las dudas internas del equipo: procesos, políticas, herramientas y a quién preguntar
+  - Dudas internas: responder las dudas internas del equipo: procesos, políticas, herramientas y a quién preguntar
 
-#### 1. Tu primera pregunta
-_5 min · probar_
+#### 1. Una pregunta de control
+_5 min · confianza_
 
-Haz una pregunta cuya respuesta conozcas. Así compruebas que responde con la versión buena.
+Empieza por una duda cuya respuesta conozcas: así compruebas que el Brain responde con la versión buena.
 
 ```text
-Consulta primero GuruSup Brain. Quiero [la idea de la persona].
-
-Empieza por esta pregunta: [escribe una duda real]. Dime de qué fuente sale la respuesta y si falta información.
+Consulta primero GuruSup Brain. Quiero [la idea de la persona]. Pregunta: [una duda cuya respuesta sepas]. Dime de qué documento sale la respuesta y de qué fecha es.
 ```
 
-> 💡 Pide siempre la fuente. Si Claude no la da, desconfía y compruébalo.
+**✅ Comprobación:** la respuesta es correcta y cita su fuente.
 
-**✅ Comprobación:** la respuesta coincide con lo que tú sabes y cita su fuente.
+#### 2. Las 10 dudas de siempre
+_5 min · el día a día_
 
-#### 2. Rellena los huecos
+```text
+Responde con GuruSup Brain estas dudas típicas del equipo, una por una, con su fuente: [pega tus dudas]. Si alguna no está documentada, dilo claramente.
+```
+
+**✅ Comprobación:** tienes las respuestas y sabes cuáles faltan.
+
+#### 3. Rellena los huecos
 _5 min · mejorar_
 
-Cada «no lo sé» es una oportunidad: la información que falta se añade una vez y sirve para siempre.
-
 ```text
-Hazme una lista de las preguntas de hoy que el Brain no pudo responder bien, y dime qué persona o documento podría completarlas.
+Hazme una lista de las dudas que el Brain no pudo responder bien y dime qué persona o documento podría completarlas.
 ```
 
-**✅ Comprobación:** tienes una lista de huecos y a quién preguntar.
+**✅ Comprobación:** tienes la lista de huecos y a quién preguntar.
 
-**Al terminar:** Claude ya consulta el cerebro de tu empresa antes de responder. Menos preguntas repetidas y respuestas con la versión buena de las cosas.
+**Al terminar:** Tu equipo tiene respuestas con fuente. Completa los huecos y cada semana responderá mejor.
 
 ### Receta 2: Respuestas a clientes
 
-Respuestas basadas en vuestras condiciones, precios y casos resueltos.
+Borradores de respuesta basados en vuestras condiciones, precios y casos resueltos, sin prometer de más.
 
-- ⏱ 10 min
+- ⏱ 15 min
 - 👩‍🍳 Fácil
 - 💬 Clientes
 - 🍽 Resultado: respuestas a clientes con fuente
 - Versión web: https://amri.es/recetas/gurusup-brain--clientes.html
 - Ideas de ejemplo:
-  - Atención al cliente: preparar respuestas a clientes usando nuestras condiciones, precios y casos resueltos
+  - Consultas de clientes: preparar respuestas a clientes usando nuestras condiciones, precios y casos resueltos
 
-#### 1. Tu primera pregunta
-_5 min · probar_
-
-Haz una pregunta cuya respuesta conozcas. Así compruebas que responde con la versión buena.
+#### 1. El borrador con fuente
+_5 min · responder_
 
 ```text
-Consulta primero GuruSup Brain. Quiero [la idea de la persona].
+Consulta primero GuruSup Brain. Quiero [la idea de la persona]. El cliente pregunta: [pega la consulta, sin datos personales].
 
-Empieza por esta pregunta: [escribe una duda real]. Dime de qué fuente sale la respuesta y si falta información.
+Escribe un borrador amable y corto. Debajo, la fuente de cada dato. Si algo no está en nuestra información, no lo prometas: di que lo consultamos.
 ```
 
-> 💡 Pide siempre la fuente. Si Claude no la da, desconfía y compruébalo.
+**✅ Comprobación:** tienes el borrador con sus fuentes.
 
-**✅ Comprobación:** la respuesta coincide con lo que tú sabes y cita su fuente.
+#### 2. Comprueba lo delicado
+_5 min · con lupa_
 
-#### 2. Rellena los huecos
-_5 min · mejorar_
-
-Cada «no lo sé» es una oportunidad: la información que falta se añade una vez y sirve para siempre.
+Revisa a mano precios, plazos y condiciones: es lo que más problemas da si está desactualizado.
 
 ```text
-Hazme una lista de las preguntas de hoy que el Brain no pudo responder bien, y dime qué persona o documento podría completarlas.
+¿Alguna de las fuentes que has usado podría estar desactualizada? Dime la fecha de cada una.
 ```
 
-**✅ Comprobación:** tienes una lista de huecos y a quién preguntar.
+**✅ Comprobación:** los datos delicados están comprobados.
 
-**Al terminar:** Claude ya consulta el cerebro de tu empresa antes de responder. Menos preguntas repetidas y respuestas con la versión buena de las cosas.
+#### 3. Envíalo tú
+_5 min · firmar_
+
+- Ajusta el tono si hace falta y envíalo desde tu herramienta de soporte.
+- Si la consulta era nueva, añádela al Brain para la próxima vez.
+
+**✅ Comprobación:** la respuesta está enviada.
+
+**Al terminar:** Tienes respuestas basadas en la información oficial. Revisa cada una antes de enviarla.
 
 ### Receta 3: Guía de bienvenida
 
@@ -208,39 +215,39 @@ Todo lo que necesita saber una persona nueva, sacado de vuestra documentación.
 - 🍽 Resultado: una guía de bienvenida
 - Versión web: https://amri.es/recetas/gurusup-brain--bienvenida.html
 - Ideas de ejemplo:
-  - Onboarding: crear una guía de bienvenida para una persona nueva con todo lo que necesita saber de la empresa
+  - Persona nueva: crear una guía de bienvenida para una persona nueva con todo lo que necesita saber de la empresa
 
-#### 1. Tu primera pregunta
-_5 min · probar_
-
-Haz una pregunta cuya respuesta conozcas. Así compruebas que responde con la versión buena.
+#### 1. El índice
+_5 min · estructura_
 
 ```text
-Consulta primero GuruSup Brain. Quiero [la idea de la persona].
-
-Empieza por esta pregunta: [escribe una duda real]. Dime de qué fuente sale la respuesta y si falta información.
+Consulta primero GuruSup Brain. Quiero [la idea de la persona] para el puesto de [puesto]. Propón un índice: primer día, primera semana, primer mes, herramientas, normas y a quién preguntar cada cosa. Espera mi OK.
 ```
 
-> 💡 Pide siempre la fuente. Si Claude no la da, desconfía y compruébalo.
+**✅ Comprobación:** has aprobado el índice.
 
-**✅ Comprobación:** la respuesta coincide con lo que tú sabes y cita su fuente.
-
-#### 2. Rellena los huecos
-_5 min · mejorar_
-
-Cada «no lo sé» es una oportunidad: la información que falta se añade una vez y sirve para siempre.
+#### 2. La guía
+_5 min · contenido_
 
 ```text
-Hazme una lista de las preguntas de hoy que el Brain no pudo responder bien, y dime qué persona o documento podría completarlas.
+Escribe la guía con ese índice usando solo nuestra documentación, con la fuente de cada sección. Marca con [FALTA] lo que no encuentres.
 ```
 
-**✅ Comprobación:** tienes una lista de huecos y a quién preguntar.
+**✅ Comprobación:** tienes la guía, con los huecos marcados.
 
-**Al terminar:** Claude ya consulta el cerebro de tu empresa antes de responder. Menos preguntas repetidas y respuestas con la versión buena de las cosas.
+#### 3. Completa y comparte
+_5 min · cerrar_
+
+- Rellena los [FALTA] con quien corresponda.
+- Comparte la guía con la persona nueva.
+
+**✅ Comprobación:** la guía está completa y compartida.
+
+**Al terminar:** La guía está lista. Pide a la persona nueva que te diga qué echó en falta.
 
 ### Receta 4: Propuestas de venta
 
-Servicios, casos de éxito y precios actualizados en una propuesta.
+Servicios, casos de éxito y precios actualizados en una propuesta para un cliente concreto.
 
 - ⏱ 15 min
 - 👩‍🍳 Fácil
@@ -248,35 +255,34 @@ Servicios, casos de éxito y precios actualizados en una propuesta.
 - 🍽 Resultado: una propuesta comercial
 - Versión web: https://amri.es/recetas/gurusup-brain--propuestas.html
 - Ideas de ejemplo:
-  - Propuestas de venta: preparar propuestas comerciales con nuestros servicios, casos de éxito y precios actualizados
+  - Un cliente concreto: preparar una propuesta comercial con nuestros servicios, casos de éxito y precios actualizados
 
-#### 1. Tu primera pregunta
-_5 min · probar_
-
-Haz una pregunta cuya respuesta conozcas. Así compruebas que responde con la versión buena.
+#### 1. Entiende al cliente
+_5 min · contexto_
 
 ```text
-Consulta primero GuruSup Brain. Quiero [la idea de la persona].
-
-Empieza por esta pregunta: [escribe una duda real]. Dime de qué fuente sale la respuesta y si falta información.
+Consulta primero GuruSup Brain. Quiero [la idea de la persona]. El cliente: [descripción]. ¿Qué servicios nuestros encajan y qué casos de éxito parecidos tenemos? Con fuente.
 ```
 
-> 💡 Pide siempre la fuente. Si Claude no la da, desconfía y compruébalo.
+**✅ Comprobación:** sabes qué ofrecer y con qué casos.
 
-**✅ Comprobación:** la respuesta coincide con lo que tú sabes y cita su fuente.
-
-#### 2. Rellena los huecos
-_5 min · mejorar_
-
-Cada «no lo sé» es una oportunidad: la información que falta se añade una vez y sirve para siempre.
+#### 2. La propuesta
+_5 min · escribirla_
 
 ```text
-Hazme una lista de las preguntas de hoy que el Brain no pudo responder bien, y dime qué persona o documento podría completarlas.
+Escribe la propuesta: su problema, nuestra solución, un caso parecido, precio y siguientes pasos. Usa solo precios de nuestra documentación y di de qué fecha son.
 ```
 
-**✅ Comprobación:** tienes una lista de huecos y a quién preguntar.
+**✅ Comprobación:** tienes la propuesta.
 
-**Al terminar:** Claude ya consulta el cerebro de tu empresa antes de responder. Menos preguntas repetidas y respuestas con la versión buena de las cosas.
+#### 3. Revisa precios y envía
+_5 min · con lupa_
+
+Comprueba con la persona responsable que los precios están vigentes antes de enviarla.
+
+**✅ Comprobación:** la propuesta está revisada.
+
+**Al terminar:** Tu propuesta está lista. Revisa los precios antes de enviarla.
 
 ## Al terminar
 

@@ -49,104 +49,60 @@ ${tip("Es un proyecto de la comunidad, no de Adobe ni de Anthropic. Úsalo con t
 <li><b>Guarda el proyecto .aep y el .mp4</b> en la misma carpeta, para poder retocarlo dentro de meses.</li></ol>`}
 ]},
 recetas:[
-{s:"intro-logo",t:"Una intro con tu logo",d:"Tu logo apareciendo con un efecto de brillo, 5 segundos, para el principio de tus vídeos.",
-meta:["⏱ 25 min","👩‍🍳 Media","🎬 Intro","🍽 Resultado: tu intro en MP4"],
-q:"¿Qué quieres preparar?",ph:"Describe el vídeo con tus palabras. Ejemplo: una intro de 5 segundos para mi canal de cocina con el nombre en letras grandes",yn:"¿Vas a usar tu propio logo o un clip tuyo?",yntip:"Si dudas, elige «Sí»: te enseñamos a importar tu material. Si al final no lo usas, funciona igual.",
-fin:"Ya tienes tu vídeo exportado en MP4. Guarda el proyecto y la orden que le diste a Claude: son tu receta para repetirlo con otros textos.",
-def:"intro",empty:"[describe aquí tu vídeo, arriba]",
-apps:{"intro":{"n":"Intro con logo","db":true,"d":"una intro de 5 segundos en la que aparece mi logo con un efecto de brillo, en formato horizontal 16:9"},"otra":{"n":"✏️ A mi manera","db":true,"d":""}},
+{s:"intro-logo",t:"Una intro con tu logo",d:"Tu logo apareciendo con un brillo, 5 segundos en horizontal, para el principio de tus vídeos.",
+meta:["⏱ 25 min","👩‍🍳 Media","🎬 Intro","🍽 Resultado: tu intro en MP4 (1920×1080)"],
+q:"¿Qué estilo de intro?",ph:"Describe cómo quieres que aparezca tu logo. Ejemplo: que se dibuje solo y termine con un destello dorado",
+fin:"Tu intro está lista. Pégala al principio de tus vídeos en cualquier editor.",
+def:"intro",empty:"[describe tu intro, arriba]",
+apps:{intro:{n:"Brillo elegante",db:true,d:"una intro de 5 segundos en la que aparece mi logo con un efecto de brillo, en formato horizontal 16:9"},
+ rebote:{n:"Entrada con rebote",db:true,d:"una intro de 4 segundos en la que mi logo cae, rebota un poco y se queda en el centro, con un fondo de mi color"},
+ otra:{n:"✏️ A mi manera",db:true,d:""}},
 steps:[
-{db:1,t:"Prepara tu material",s:"5 min · logo o clip",b:()=>`<p class="what">Como tu vídeo usa material propio, hay que meterlo en el proyecto para que Claude pueda usarlo.</p><h3>Pasos</h3><ol>
-<li>Pon tu logo (mejor un <b>PNG con fondo transparente</b>) o tu clip en una carpeta con un nombre sencillo, sin espacios ni acentos.</li>
-<li>En After Effects: <b>File → Import → File…</b> y elige tus archivos.</li>
-<li>Comprueba que aparecen en el panel <b>Project</b>.</li></ol>${tip("Si no tienes logo transparente, mira la receta "+`<a href="logo-ia.html">Diseña un logo con IA</a>.`)}${ok("tu logo o tu clip se ve en el panel Project.")}`},
-{t:"Pídele el vídeo a Claude",s:"10 min · la orden",b:()=>`<p class="what">Ahora Claude crea la animación directamente en tu After Effects. Tú ves cómo aparecen las capas.</p><h3>Pasos</h3><ol><li>Abre un chat nuevo en Claude Desktop.</li><li>Copia este mensaje y pégalo:</li></ol>${cb(`Tienes acceso a mi After Effects a través del conector. Quiero crear ${D()}.\n\nAntes de tocar nada, dime en pasos cortos qué vas a hacer. Después créalo en mi proyecto abierto: una composición con el tamaño y la duración adecuados, capas con nombres claros y animaciones suaves con fotogramas clave.${DB()?" Usa el material que he importado en el panel Project.":""} Al terminar, dime qué has creado y cómo previsualizarlo.`)}
-${det("¿Qué significa cada parte del mensaje?",["<b>«Quiero crear…»</b>: tu idea. Cámbiala por la tuya.","<b>Dime primero el plan</b>: así puedes corregirlo antes de que toque tu proyecto.","<b>Capas con nombres claros</b>: luego será fácil retocarlo a mano.","<b>Fotogramas clave</b>: los puntos donde algo cambia (posición, tamaño, opacidad) para crear movimiento."])}
-${tip("Empieza con algo corto y sencillo. Es mejor un vídeo de 5 segundos que sale bien que uno de un minuto lleno de fallos.")}${ok("en After Effects hay una composición nueva con capas y Claude te ha explicado qué hizo.")}`},
-{t:"Previsualiza y ajusta",s:"10 min · pulir el resultado",b:()=>`<p class="what">Casi nunca sale perfecto a la primera. Verlo y pedir cambios pequeños es lo que da buen resultado.</p><h3>Pasos</h3><ol>
-<li>Haz doble clic en la composición nueva del panel <b>Project</b>.</li>
-<li>Pulsa la <b>barra espaciadora</b> para reproducirla.</li>
-<li>Apunta lo que no te gusta y pídeselo a Claude, <b>un cambio cada vez</b>:</li></ol>${cb("Haz la entrada del título más lenta y suave, y cambia el color del texto a [tu color]. Cambia solo eso y no toques lo demás.")}
-${tip("Si un cambio sale mal, deshaz con <b>Ctrl+Z</b> (Windows) o <b>Cmd+Z</b> (Mac) en After Effects.")}${ok("al reproducirla, el movimiento, los textos y los colores son los que querías.")}`},
-{t:"Exporta tu vídeo a MP4",s:"5 min · el emplatado",b:()=>`<p class="what">Para tener un archivo que puedas subir a cualquier sitio hay que exportarlo con Adobe Media Encoder.</p><h3>Pasos</h3><ol>
-<li>Selecciona la composición.</li>
-<li>Menú <b>Composition → Add to Adobe Media Encoder Queue</b>.</li>
-<li>En Media Encoder, en la columna <b>Format</b>, elige <b>H.264</b> y como preset <b>«Match Source - High bitrate»</b>.</li>
-<li>Elige dónde guardarlo y pulsa el botón verde de <b>Play</b> (Start Queue).</li></ol>${ok("tienes un archivo .mp4 que se abre en tu reproductor y se ve como en After Effects.")}`}
+{t:"Importa tu logo",s:"5 min · el material",b:()=>`<ol><li>Ten tu logo como <b>PNG con fondo transparente</b> (o SVG/AI si lo tienes).</li><li>En After Effects: <b>File → Import → File…</b> y elige el logo.</li><li>Comprueba que aparece en el panel <b>Project</b> con un nombre sin espacios ni acentos, por ejemplo <code>logo.png</code>.</li></ol>${tip("¿No tienes logo transparente? Mira el libro <a href=\"logo-ia.html\">Diseña tu logo con IA</a>.")}${ok("el logo está en el panel Project.")}`},
+{t:"Pide la intro",s:"10 min · Claude anima",b:()=>`${cb(`Tienes acceso a mi After Effects a través del conector. Quiero ${D()}.\n\nUsa el archivo logo.png del panel Project. Crea una composición de 1920×1080, 30 fps. Fondo de color liso [tu color]. El logo entra suave (escala de 80 % a 100 % y opacidad de 0 a 100 en 1 segundo), luego un brillo lo recorre de izquierda a derecha y se queda quieto al final. Deja 1 segundo quieto al final para cortar sin prisas.\n\nAntes de tocar nada, dime el plan en pasos cortos. Pon nombres claros a las capas.`)}${ok("en After Effects hay una composición nueva con el logo animado.")}`},
+{t:"Revísala con la barra espaciadora",s:"5 min · pulir",b:()=>`<ol><li>Abre la composición y pulsa la <b>barra espaciadora</b>.</li><li>Pide cambios de uno en uno:</li></ol>${cb("Haz la entrada del logo más lenta (1,5 segundos) y el brillo más sutil. Cambia solo eso.")}${tip("Una intro buena es corta: si pasa de 6 segundos, la gente la salta.")}${ok("la intro dura unos 5 segundos y te gusta.")}`},
+{t:"Exporta a MP4",s:"5 min · Media Encoder",b:()=>`<ol><li>Selecciona la composición y elige <b>Composition → Add to Adobe Media Encoder Queue</b>.</li><li>Formato <b>H.264</b>, preset <b>«Match Source - High bitrate»</b>.</li><li>Pulsa el botón verde de <b>Play</b>.</li></ol>${ok("tienes intro.mp4 y se ve igual que en After Effects.")}`}
 ]},
-{s:"titulos",t:"Títulos y rótulos animados",d:"Un título para tu canal y un rótulo con tu nombre y cargo, para poner sobre tus vídeos.",
-meta:["⏱ 25 min","👩‍🍳 Media","🔤 Títulos","🍽 Resultado: títulos listos para tus vídeos"],
-q:"¿Qué quieres preparar?",ph:"Describe el vídeo con tus palabras. Ejemplo: una intro de 5 segundos para mi canal de cocina con el nombre en letras grandes",yn:"¿Vas a usar tu propio logo o un clip tuyo?",yntip:"Si dudas, elige «Sí»: te enseñamos a importar tu material. Si al final no lo usas, funciona igual.",
-fin:"Ya tienes tu vídeo exportado en MP4. Guarda el proyecto y la orden que le diste a Claude: son tu receta para repetirlo con otros textos.",
-def:"titulos",empty:"[describe aquí tu vídeo, arriba]",
-apps:{"titulos":{"n":"Títulos y rótulos","db":false,"d":"un título animado que dice «Mi canal» y un rótulo con mi nombre y cargo que aparece abajo a la izquierda, para poner sobre mis vídeos"},"otra":{"n":"✏️ A mi manera","db":true,"d":""}},
+{s:"titulos",t:"Títulos y rótulos animados",d:"El título de tu canal y un rótulo con tu nombre y cargo, con fondo transparente para ponerlos encima de tus vídeos.",
+meta:["⏱ 25 min","👩‍🍳 Media","🔤 Títulos","🍽 Resultado: títulos con fondo transparente (.mov)"],
+q:"¿Qué títulos necesitas?",ph:"Escribe los textos. Ejemplo: «Recetas de la abuela» y «Lola Martín · Cocinera»",
+fin:"Tus títulos están listos. Arrástralos encima de tus vídeos en el editor que uses.",
+def:"titulos",empty:"[escribe tus textos, arriba]",
+apps:{titulos:{n:"Título y rótulo",db:false,d:"un título animado que dice «Mi canal» y un rótulo con mi nombre y cargo que aparece abajo a la izquierda, para poner sobre mis vídeos"},
+ subtitulo:{n:"Rótulo de sección",db:false,d:"un rótulo de sección que aparece en una esquina con el nombre de cada parte del vídeo"},
+ otra:{n:"✏️ A mi manera",db:false,d:""}},
 steps:[
-{db:1,t:"Prepara tu material",s:"5 min · logo o clip",b:()=>`<p class="what">Como tu vídeo usa material propio, hay que meterlo en el proyecto para que Claude pueda usarlo.</p><h3>Pasos</h3><ol>
-<li>Pon tu logo (mejor un <b>PNG con fondo transparente</b>) o tu clip en una carpeta con un nombre sencillo, sin espacios ni acentos.</li>
-<li>En After Effects: <b>File → Import → File…</b> y elige tus archivos.</li>
-<li>Comprueba que aparecen en el panel <b>Project</b>.</li></ol>${tip("Si no tienes logo transparente, mira la receta "+`<a href="logo-ia.html">Diseña un logo con IA</a>.`)}${ok("tu logo o tu clip se ve en el panel Project.")}`},
-{t:"Pídele el vídeo a Claude",s:"10 min · la orden",b:()=>`<p class="what">Ahora Claude crea la animación directamente en tu After Effects. Tú ves cómo aparecen las capas.</p><h3>Pasos</h3><ol><li>Abre un chat nuevo en Claude Desktop.</li><li>Copia este mensaje y pégalo:</li></ol>${cb(`Tienes acceso a mi After Effects a través del conector. Quiero crear ${D()}.\n\nAntes de tocar nada, dime en pasos cortos qué vas a hacer. Después créalo en mi proyecto abierto: una composición con el tamaño y la duración adecuados, capas con nombres claros y animaciones suaves con fotogramas clave.${DB()?" Usa el material que he importado en el panel Project.":""} Al terminar, dime qué has creado y cómo previsualizarlo.`)}
-${det("¿Qué significa cada parte del mensaje?",["<b>«Quiero crear…»</b>: tu idea. Cámbiala por la tuya.","<b>Dime primero el plan</b>: así puedes corregirlo antes de que toque tu proyecto.","<b>Capas con nombres claros</b>: luego será fácil retocarlo a mano.","<b>Fotogramas clave</b>: los puntos donde algo cambia (posición, tamaño, opacidad) para crear movimiento."])}
-${tip("Empieza con algo corto y sencillo. Es mejor un vídeo de 5 segundos que sale bien que uno de un minuto lleno de fallos.")}${ok("en After Effects hay una composición nueva con capas y Claude te ha explicado qué hizo.")}`},
-{t:"Previsualiza y ajusta",s:"10 min · pulir el resultado",b:()=>`<p class="what">Casi nunca sale perfecto a la primera. Verlo y pedir cambios pequeños es lo que da buen resultado.</p><h3>Pasos</h3><ol>
-<li>Haz doble clic en la composición nueva del panel <b>Project</b>.</li>
-<li>Pulsa la <b>barra espaciadora</b> para reproducirla.</li>
-<li>Apunta lo que no te gusta y pídeselo a Claude, <b>un cambio cada vez</b>:</li></ol>${cb("Haz la entrada del título más lenta y suave, y cambia el color del texto a [tu color]. Cambia solo eso y no toques lo demás.")}
-${tip("Si un cambio sale mal, deshaz con <b>Ctrl+Z</b> (Windows) o <b>Cmd+Z</b> (Mac) en After Effects.")}${ok("al reproducirla, el movimiento, los textos y los colores son los que querías.")}`},
-{t:"Exporta tu vídeo a MP4",s:"5 min · el emplatado",b:()=>`<p class="what">Para tener un archivo que puedas subir a cualquier sitio hay que exportarlo con Adobe Media Encoder.</p><h3>Pasos</h3><ol>
-<li>Selecciona la composición.</li>
-<li>Menú <b>Composition → Add to Adobe Media Encoder Queue</b>.</li>
-<li>En Media Encoder, en la columna <b>Format</b>, elige <b>H.264</b> y como preset <b>«Match Source - High bitrate»</b>.</li>
-<li>Elige dónde guardarlo y pulsa el botón verde de <b>Play</b> (Start Queue).</li></ol>${ok("tienes un archivo .mp4 que se abre en tu reproductor y se ve como en After Effects.")}`}
+{t:"Decide textos y colores",s:"3 min · antes",b:()=>`<p class="what">Ten a mano los textos exactos y el color de tu marca. Los títulos tienen que leerse en el móvil en menos de 2 segundos.</p>${ok("tienes los textos y el color.")}`},
+{t:"Pide los títulos",s:"12 min · Claude anima",b:()=>`${cb(`Tienes acceso a mi After Effects a través del conector. Quiero ${D()}. Textos: [tus textos].\n\nCrea una composición de 1920×1080, 30 fps, de 6 segundos, SIN fondo (transparente). El rótulo entra deslizándose desde la izquierda en 0,6 s con una barra de color [tu color] detrás del texto, se queda 4 segundos y sale igual. Letra grande y legible, con un poco de sombra para que se lea sobre cualquier imagen. Deja los textos en capas separadas y con nombre para poder cambiarlos.\n\nDime el plan antes de empezar.`)}${ok("hay una composición con los títulos y sin fondo.")}`},
+{t:"Pruébalo sobre un vídeo",s:"5 min · legibilidad",b:()=>`<ol><li>Arrastra uno de tus vídeos debajo de los títulos en la composición, solo para probar.</li><li>Comprueba que se lee bien. Después borra esa capa.</li></ol>${cb("El texto se lee mal sobre fondos claros. Haz la barra un poco más opaca. Cambia solo eso.")}${ok("los títulos se leen bien sobre tu vídeo.")}`},
+{t:"Exporta con fondo transparente",s:"5 min · Media Encoder",b:()=>`<ol><li><b>Composition → Add to Adobe Media Encoder Queue</b>.</li><li>Formato <b>QuickTime</b>, códec <b>Apple ProRes 4444</b>, y en el vídeo activa el canal <b>alfa</b> (RGB + Alpha).</li><li>Pulsa <b>Play</b>.</li></ol>${tip("Un MP4 no guarda transparencia: por eso aquí se usa .mov. Tu editor lo pondrá encima de tus vídeos sin fondo negro.")}${cb("¿Cómo exporto esta composición con fondo transparente desde Media Encoder? Dime exactamente qué elegir en cada desplegable.")}${ok("al poner el .mov sobre un vídeo, no aparece fondo negro.")}`}
 ]},
-{s:"vertical",t:"Vídeo vertical con texto animado",d:"15 segundos en 9:16 con tu clip de fondo y un texto grande que se mueve, para redes.",
-meta:["⏱ 30 min","👩‍🍳 Media","📱 Vertical","🍽 Resultado: un vídeo vertical en MP4"],
-q:"¿Qué quieres preparar?",ph:"Describe el vídeo con tus palabras. Ejemplo: una intro de 5 segundos para mi canal de cocina con el nombre en letras grandes",yn:"¿Vas a usar tu propio logo o un clip tuyo?",yntip:"Si dudas, elige «Sí»: te enseñamos a importar tu material. Si al final no lo usas, funciona igual.",
-fin:"Ya tienes tu vídeo exportado en MP4. Guarda el proyecto y la orden que le diste a Claude: son tu receta para repetirlo con otros textos.",
-def:"vertical",empty:"[describe aquí tu vídeo, arriba]",
-apps:{"vertical":{"n":"Vídeo vertical","db":true,"d":"un vídeo vertical 9:16 de 15 segundos con un clip mío de fondo y un texto grande animado encima"},"otra":{"n":"✏️ A mi manera","db":true,"d":""}},
+{s:"vertical",t:"Vídeo vertical con texto animado",d:"15 segundos en 9:16 con tu clip de fondo y un texto grande que se mueve, para Reels, TikTok o Shorts.",
+meta:["⏱ 30 min","👩‍🍳 Media","📱 Vertical","🍽 Resultado: un vídeo vertical en MP4 (1080×1920)"],
+q:"¿Qué vídeo quieres?",ph:"Describe el clip y el texto. Ejemplo: mi clip amasando pan con el texto «Pan de verdad, cada mañana»",
+fin:"Tu vídeo vertical está listo para subirlo desde el móvil.",
+def:"vertical",empty:"[describe tu vídeo, arriba]",
+apps:{vertical:{n:"Clip con texto",db:true,d:"un vídeo vertical 9:16 de 15 segundos con un clip mío de fondo y un texto grande animado encima"},
+ tres:{n:"3 frases que van apareciendo",db:true,d:"un vídeo vertical de 15 segundos con mi clip de fondo y 3 frases cortas que aparecen una detrás de otra"},
+ otra:{n:"✏️ A mi manera",db:true,d:""}},
 steps:[
-{db:1,t:"Prepara tu material",s:"5 min · logo o clip",b:()=>`<p class="what">Como tu vídeo usa material propio, hay que meterlo en el proyecto para que Claude pueda usarlo.</p><h3>Pasos</h3><ol>
-<li>Pon tu logo (mejor un <b>PNG con fondo transparente</b>) o tu clip en una carpeta con un nombre sencillo, sin espacios ni acentos.</li>
-<li>En After Effects: <b>File → Import → File…</b> y elige tus archivos.</li>
-<li>Comprueba que aparecen en el panel <b>Project</b>.</li></ol>${tip("Si no tienes logo transparente, mira la receta "+`<a href="logo-ia.html">Diseña un logo con IA</a>.`)}${ok("tu logo o tu clip se ve en el panel Project.")}`},
-{t:"Pídele el vídeo a Claude",s:"10 min · la orden",b:()=>`<p class="what">Ahora Claude crea la animación directamente en tu After Effects. Tú ves cómo aparecen las capas.</p><h3>Pasos</h3><ol><li>Abre un chat nuevo en Claude Desktop.</li><li>Copia este mensaje y pégalo:</li></ol>${cb(`Tienes acceso a mi After Effects a través del conector. Quiero crear ${D()}.\n\nAntes de tocar nada, dime en pasos cortos qué vas a hacer. Después créalo en mi proyecto abierto: una composición con el tamaño y la duración adecuados, capas con nombres claros y animaciones suaves con fotogramas clave.${DB()?" Usa el material que he importado en el panel Project.":""} Al terminar, dime qué has creado y cómo previsualizarlo.`)}
-${det("¿Qué significa cada parte del mensaje?",["<b>«Quiero crear…»</b>: tu idea. Cámbiala por la tuya.","<b>Dime primero el plan</b>: así puedes corregirlo antes de que toque tu proyecto.","<b>Capas con nombres claros</b>: luego será fácil retocarlo a mano.","<b>Fotogramas clave</b>: los puntos donde algo cambia (posición, tamaño, opacidad) para crear movimiento."])}
-${tip("Empieza con algo corto y sencillo. Es mejor un vídeo de 5 segundos que sale bien que uno de un minuto lleno de fallos.")}${ok("en After Effects hay una composición nueva con capas y Claude te ha explicado qué hizo.")}`},
-{t:"Previsualiza y ajusta",s:"10 min · pulir el resultado",b:()=>`<p class="what">Casi nunca sale perfecto a la primera. Verlo y pedir cambios pequeños es lo que da buen resultado.</p><h3>Pasos</h3><ol>
-<li>Haz doble clic en la composición nueva del panel <b>Project</b>.</li>
-<li>Pulsa la <b>barra espaciadora</b> para reproducirla.</li>
-<li>Apunta lo que no te gusta y pídeselo a Claude, <b>un cambio cada vez</b>:</li></ol>${cb("Haz la entrada del título más lenta y suave, y cambia el color del texto a [tu color]. Cambia solo eso y no toques lo demás.")}
-${tip("Si un cambio sale mal, deshaz con <b>Ctrl+Z</b> (Windows) o <b>Cmd+Z</b> (Mac) en After Effects.")}${ok("al reproducirla, el movimiento, los textos y los colores son los que querías.")}`},
-{t:"Exporta tu vídeo a MP4",s:"5 min · el emplatado",b:()=>`<p class="what">Para tener un archivo que puedas subir a cualquier sitio hay que exportarlo con Adobe Media Encoder.</p><h3>Pasos</h3><ol>
-<li>Selecciona la composición.</li>
-<li>Menú <b>Composition → Add to Adobe Media Encoder Queue</b>.</li>
-<li>En Media Encoder, en la columna <b>Format</b>, elige <b>H.264</b> y como preset <b>«Match Source - High bitrate»</b>.</li>
-<li>Elige dónde guardarlo y pulsa el botón verde de <b>Play</b> (Start Queue).</li></ol>${ok("tienes un archivo .mp4 que se abre en tu reproductor y se ve como en After Effects.")}`}
+{t:"Importa tu clip",s:"5 min · el material",b:()=>`<ol><li>Graba o elige un clip vertical de al menos 15 segundos.</li><li><b>File → Import → File…</b> y llámalo <code>clip.mp4</code> en el panel Project.</li></ol>${ok("el clip está en el panel Project.")}`},
+{t:"Pide el vídeo",s:"12 min · Claude anima",b:()=>`${cb(`Tienes acceso a mi After Effects a través del conector. Quiero ${D()}. Texto: [tu texto].\n\nComposición de 1080×1920, 30 fps, 15 segundos, con clip.mp4 de fondo ajustado al tamaño. Los textos, grandes y en el centro, dentro de la zona segura (sin tocar los 250 px de arriba ni los 400 de abajo, donde las redes ponen sus botones). Cada texto entra con un pequeño salto y se queda el tiempo suficiente para leerlo. Oscurece un poco el clip para que el texto se lea.\n\nDime el plan antes de empezar.`)}${ok("hay una composición vertical con tu clip y los textos.")}`},
+{t:"Revísalo como en el móvil",s:"8 min · pulir",b:()=>`<ol><li>Reprodúcelo a tamaño pequeño, como lo verías en el móvil.</li><li>¿Se lee cada texto sin pausar? Si no:</li></ol>${cb("El segundo texto desaparece antes de poder leerlo. Déjalo 1 segundo más y adelanta el tercero. Cambia solo eso.")}${ok("cada texto se lee sin pausar el vídeo.")}`},
+{t:"Exporta para redes",s:"5 min · Media Encoder",b:()=>`<ol><li><b>Composition → Add to Adobe Media Encoder Queue</b>.</li><li>Formato <b>H.264</b>, preset <b>«Match Source - High bitrate»</b> (mantiene el 1080×1920).</li><li>Pulsa <b>Play</b> y pásalo al móvil.</li></ol>${ok("tienes el MP4 vertical y se ve bien en tu móvil.")}`}
 ]},
-{s:"anuncio",t:"Anuncio animado de producto",d:"10 segundos con fondo de color, el nombre de tu producto entrando con movimiento y el precio.",
-meta:["⏱ 30 min","👩‍🍳 Media","🛍 Anuncio","🍽 Resultado: un anuncio en MP4"],
-q:"¿Qué quieres preparar?",ph:"Describe el vídeo con tus palabras. Ejemplo: una intro de 5 segundos para mi canal de cocina con el nombre en letras grandes",yn:"¿Vas a usar tu propio logo o un clip tuyo?",yntip:"Si dudas, elige «Sí»: te enseñamos a importar tu material. Si al final no lo usas, funciona igual.",
-fin:"Ya tienes tu vídeo exportado en MP4. Guarda el proyecto y la orden que le diste a Claude: son tu receta para repetirlo con otros textos.",
-def:"anuncio",empty:"[describe aquí tu vídeo, arriba]",
-apps:{"anuncio":{"n":"Anuncio de producto","db":false,"d":"un anuncio de 10 segundos con fondo de color, el nombre de mi producto que entra con movimiento y el precio que aparece después"},"otra":{"n":"✏️ A mi manera","db":true,"d":""}},
+{s:"anuncio",t:"Anuncio animado de producto",d:"10 segundos con fondo de color, el nombre de tu producto entrando con movimiento y el precio al final.",
+meta:["⏱ 30 min","👩‍🍳 Media","🛍 Anuncio","🍽 Resultado: un anuncio en MP4, cuadrado y vertical"],
+q:"¿Qué producto?",ph:"Nombre, precio y una ventaja. Ejemplo: «Vela Lavanda», 18 €, dura 40 horas",
+fin:"Tu anuncio está listo en dos formatos. Pruébalo en redes con dos colores de fondo distintos.",
+def:"anuncio",empty:"[escribe tu producto, arriba]",
+apps:{anuncio:{n:"Nombre y precio",db:true,d:"un anuncio de 10 segundos con fondo de color, el nombre de mi producto que entra con movimiento y el precio que aparece después"},
+ oferta:{n:"Oferta con fecha",db:true,d:"un anuncio de 8 segundos que anuncia una oferta con el descuento muy grande y la fecha de fin"},
+ otra:{n:"✏️ A mi manera",db:true,d:""}},
 steps:[
-{db:1,t:"Prepara tu material",s:"5 min · logo o clip",b:()=>`<p class="what">Como tu vídeo usa material propio, hay que meterlo en el proyecto para que Claude pueda usarlo.</p><h3>Pasos</h3><ol>
-<li>Pon tu logo (mejor un <b>PNG con fondo transparente</b>) o tu clip en una carpeta con un nombre sencillo, sin espacios ni acentos.</li>
-<li>En After Effects: <b>File → Import → File…</b> y elige tus archivos.</li>
-<li>Comprueba que aparecen en el panel <b>Project</b>.</li></ol>${tip("Si no tienes logo transparente, mira la receta "+`<a href="logo-ia.html">Diseña un logo con IA</a>.`)}${ok("tu logo o tu clip se ve en el panel Project.")}`},
-{t:"Pídele el vídeo a Claude",s:"10 min · la orden",b:()=>`<p class="what">Ahora Claude crea la animación directamente en tu After Effects. Tú ves cómo aparecen las capas.</p><h3>Pasos</h3><ol><li>Abre un chat nuevo en Claude Desktop.</li><li>Copia este mensaje y pégalo:</li></ol>${cb(`Tienes acceso a mi After Effects a través del conector. Quiero crear ${D()}.\n\nAntes de tocar nada, dime en pasos cortos qué vas a hacer. Después créalo en mi proyecto abierto: una composición con el tamaño y la duración adecuados, capas con nombres claros y animaciones suaves con fotogramas clave.${DB()?" Usa el material que he importado en el panel Project.":""} Al terminar, dime qué has creado y cómo previsualizarlo.`)}
-${det("¿Qué significa cada parte del mensaje?",["<b>«Quiero crear…»</b>: tu idea. Cámbiala por la tuya.","<b>Dime primero el plan</b>: así puedes corregirlo antes de que toque tu proyecto.","<b>Capas con nombres claros</b>: luego será fácil retocarlo a mano.","<b>Fotogramas clave</b>: los puntos donde algo cambia (posición, tamaño, opacidad) para crear movimiento."])}
-${tip("Empieza con algo corto y sencillo. Es mejor un vídeo de 5 segundos que sale bien que uno de un minuto lleno de fallos.")}${ok("en After Effects hay una composición nueva con capas y Claude te ha explicado qué hizo.")}`},
-{t:"Previsualiza y ajusta",s:"10 min · pulir el resultado",b:()=>`<p class="what">Casi nunca sale perfecto a la primera. Verlo y pedir cambios pequeños es lo que da buen resultado.</p><h3>Pasos</h3><ol>
-<li>Haz doble clic en la composición nueva del panel <b>Project</b>.</li>
-<li>Pulsa la <b>barra espaciadora</b> para reproducirla.</li>
-<li>Apunta lo que no te gusta y pídeselo a Claude, <b>un cambio cada vez</b>:</li></ol>${cb("Haz la entrada del título más lenta y suave, y cambia el color del texto a [tu color]. Cambia solo eso y no toques lo demás.")}
-${tip("Si un cambio sale mal, deshaz con <b>Ctrl+Z</b> (Windows) o <b>Cmd+Z</b> (Mac) en After Effects.")}${ok("al reproducirla, el movimiento, los textos y los colores son los que querías.")}`},
-{t:"Exporta tu vídeo a MP4",s:"5 min · el emplatado",b:()=>`<p class="what">Para tener un archivo que puedas subir a cualquier sitio hay que exportarlo con Adobe Media Encoder.</p><h3>Pasos</h3><ol>
-<li>Selecciona la composición.</li>
-<li>Menú <b>Composition → Add to Adobe Media Encoder Queue</b>.</li>
-<li>En Media Encoder, en la columna <b>Format</b>, elige <b>H.264</b> y como preset <b>«Match Source - High bitrate»</b>.</li>
-<li>Elige dónde guardarlo y pulsa el botón verde de <b>Play</b> (Start Queue).</li></ol>${ok("tienes un archivo .mp4 que se abre en tu reproductor y se ve como en After Effects.")}`}
+{t:"Tu material",s:"5 min · producto",b:()=>`<ol><li>Importa una foto de tu producto con fondo transparente (<code>producto.png</code>) y tu logo.</li><li>Ten claros el nombre, el precio y una sola ventaja.</li></ol>${tip("¿Foto sin fondo? En el libro <a href=\"logo-ia.html\">del logo</a> te enseñamos a quitarlo con remove.bg.")}${ok("producto y logo están en el panel Project.")}`},
+{t:"Pide el anuncio",s:"12 min · Claude anima",b:()=>`${cb(`Tienes acceso a mi After Effects a través del conector. Quiero ${D()}. Producto: [nombre], precio: [precio], ventaja: [una frase].\n\nComposición de 1080×1080, 30 fps. Segundo 0-2: el producto entra con un pequeño giro sobre fondo [tu color]. Segundo 2-5: el nombre entra letra a letra. Segundo 5-8: la ventaja. Segundo 8-10: el precio grande y el logo abajo. Movimientos suaves, letra grande.\n\nDime el plan antes de empezar.`)}${ok("tienes el anuncio cuadrado.")}`},
+{t:"La versión vertical",s:"5 min · reaprovechar",b:()=>`${cb("Duplica la composición en 1080×1920 y recoloca los elementos para el formato vertical, respetando la zona segura de arriba y abajo. No cambies los tiempos.")}${ok("tienes el anuncio también en vertical.")}`},
+{t:"Exporta las dos",s:"8 min · Media Encoder",b:()=>`<ol><li>Añade las dos composiciones a la cola de Media Encoder.</li><li>Formato <b>H.264</b>, «Match Source - High bitrate», y <b>Play</b>.</li></ol>${ok("tienes anuncio-cuadrado.mp4 y anuncio-vertical.mp4.")}`}
 ]}
 ]};
