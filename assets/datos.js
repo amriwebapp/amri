@@ -18,17 +18,17 @@ window.AMRI_DATA={
 /* ---- Proyectos completos (rutas que encadenan recetas) ---- */
 window.AMRI_DATA.projects=[
   {id:"negocio",ic:"🏪",r:["logo-ia","webapp-gratis","chatbot-web","redes-sociales"],
-   t:{es:"Tu negocio online en un fin de semana",en:"Your business online in a weekend",ar:"مشروعك على الإنترنت في عطلة أسبوع"},
-   d:{es:"Marca, web con reservas, un asistente que atiende a tus clientes y tus redes sociales en marcha.",en:"A brand, a website with bookings, an assistant that answers your customers and your social media up and running.",ar:"علامة تجارية، وموقع بحجوزات، ومساعد يجيب عملاءك، وشبكاتك الاجتماعية جاهزة."}},
+   t:{es:"Tu negocio online en un fin de semana"},
+   d:{es:"Marca, web con reservas, un asistente que atiende a tus clientes y tus redes sociales en marcha."}},
   {id:"marca",ic:"✨",r:["logo-ia","canva-diseno","webapp-gratis","redes-sociales"],
-   t:{es:"Tu marca personal",en:"Your personal brand",ar:"علامتك الشخصية"},
-   d:{es:"Logo, plantillas con tus colores, un portfolio online y contenido con tu voz.",en:"A logo, templates in your colours, an online portfolio and content in your voice.",ar:"شعار، وقوالب بألوانك، ومعرض أعمال على الإنترنت، ومحتوى بصوتك."}},
+   t:{es:"Tu marca personal"},
+   d:{es:"Logo, plantillas con tus colores, un portfolio online y contenido con tu voz."}},
   {id:"oficina",ic:"🗂️",r:["asistente-ia","gmail-calendario","notion-cerebro","automatiza-tareas","slack-equipo"],
-   t:{es:"Tu oficina con IA",en:"Your AI-powered office",ar:"مكتبك مع الذكاء الاصطناعي"},
-   d:{es:"Correo y agenda en orden, notas que se organizan solas, tareas automáticas y tu equipo conectado.",en:"Email and calendar in order, notes that organise themselves, automatic tasks and your team connected.",ar:"بريد وتقويم منظمان، وملاحظات تنتظم وحدها، ومهام آلية، وفريقك متصل."}},
+   t:{es:"Tu oficina con IA"},
+   d:{es:"Correo y agenda en orden, notas que se organizan solas, tareas automáticas y tu equipo conectado."}},
   {id:"video",ic:"🎬",r:["asistente-ia","higgsfield-cine","video-aftereffects","redes-sociales"],
-   t:{es:"Tu canal de vídeo",en:"Your video channel",ar:"قناتك للفيديو"},
-   d:{es:"Ideas y guiones, clips de cine, títulos animados y un plan para publicar cada semana.",en:"Ideas and scripts, cinematic clips, animated titles and a plan to post every week.",ar:"أفكار وسيناريوهات، ولقطات سينمائية، وعناوين متحركة، وخطة للنشر كل أسبوع."}}
+   t:{es:"Tu canal de vídeo"},
+   d:{es:"Ideas y guiones, clips de cine, títulos animados y un plan para publicar cada semana."}}
 ];
 /* ---- Fecha de la última revisión real de cada receta ----
    Pon aquí la fecha SOLO cuando alguien haya seguido la receta de principio a fin y comprobado que funciona.

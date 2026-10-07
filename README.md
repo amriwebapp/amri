@@ -7,12 +7,14 @@ La propia web es un ejemplo: está hecha con Claude siguiendo sus propias receta
 
 ```
 index.html            Portada
-i18n.js               Textos en español, inglés y árabe
+i18n.js               Textos de la web (solo en español)
 assets/academia.css   Estilos y animaciones de la portada
 assets/academia.js    Animaciones de scroll, órbita, categorías, «cómo funciona», recetario
 assets/receta.css/js  Capa común de las páginas de receta (portada, tema, siguiente receta)
 recetas/*.html        Carcasa de cada receta (se genera con tools/shells.py)
-recetas/data/         Contenido de cada receta en es / en / ar
+recetas/data/         Contenido de cada receta o libro (<slug>.es.js)
+assets/libro.js       Libros de recetas: «Antes de empezar», índice y recetas de dentro
+assets/libros.js      Índice de libros (lo genera tools/shells.py)
 assets/motor.js       Motor de pasos común a todas las recetas
 assets/cuenta.js      Registro, acceso, comunidad y subida de proyectos
 assets/panel.js       Perfil (recorrido) y panel de revisión
@@ -48,12 +50,22 @@ tools/                Scripts para regenerar ilustraciones y recetas nuevas
 - La newsletter guarda los correos en la tabla `newsletter` de Supabase (con consentimiento explícito).
   Desde `admin.html` → pestaña «Newsletter» puedes verlos, borrarlos y descargarlos en CSV.
 
+## Libros de recetas
+
+Un libro es una receta con una preparación común («Antes de empezar», una sola vez) y varias recetas concretas dentro.
+El primero es `recetas/data/higgsfield-cine.es.js`: cópialo como plantilla.
+
+- En el archivo de datos, `R.steps` es «Antes de empezar» y `recetas:[…]` son las recetas de dentro. Cada una tiene `s` (su nombre en la dirección), `t`, `d`, `meta`, `q`, `ph`, `fin`, `def`, `apps` y `steps`.
+- `python3 tools/shells.py` crea la página del libro (`recetas/<libro>.html`), una página por receta (`recetas/<libro>--<receta>.html`) y `assets/libros.js`.
+- El progreso se guarda por separado: el libro en `R.key` y cada receta en `R.key/<receta>`.
+- En el plugin, cada libro es una sola skill que elige la receta adecuada.
+
 ## Añadir una receta
 
-1. Crea `recetas/data/<slug>.es.js` (y `.en.js`, `.ar.js`, con las mismas opciones y el mismo número de pasos) copiando uno existente.
+1. Crea `recetas/data/<slug>.es.js` copiando uno existente (o un libro, si va a tener varias recetas dentro).
 2. Añade el `slug` **al final** de estas listas (el orden debe ser el mismo en todas, porque la tarjeta se busca por posición):
    `RECETAS` en `assets/academia.js` · `ORDER` (y `SVG`) en `assets/receta.js` · `order` (y `svg`) en `assets/datos.js` · `ORDER` en `tools/plugin.js` · `ORDER` en `plugin.html`.
-3. Añade su tarjeta al final de `cards` en `i18n.js`, en los tres idiomas. El tercer chip es el precio: *Gratis*, *Según tu plan*, *Plan de pago* o *De pago*.
+3. Añade su tarjeta al final de `cards` en `i18n.js`. El tercer chip es el precio: *Gratis*, *Según tu plan*, *Plan de pago* o *De pago*.
 4. Ponla en una categoría (`PATHS` en `assets/academia.js` y `paths` en `assets/datos.js`, `CATS` en `tools/plugin.js`), en `META`/`ORDER`/`NEEDS` de `assets/construir.js` y en `TOOLS` de `assets/logos.js`.
 5. Pon su imagen en `img/<slug>.svg` (con `python3 tools/gen_thumbs.py`) o `img/<slug>.jpg`.
 6. Ejecuta `python3 tools/shells.py` y `node tools/plugin.js`, y sube también lo que generan.
