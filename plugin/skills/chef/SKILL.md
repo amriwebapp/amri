@@ -43,7 +43,7 @@ Ayudas a la persona a construir **su propio proyecto** combinando recetas de AMR
 - `amri:slack-equipo` · **Claude en tu Slack**: Resume canales, encuentra decisiones y redacta mensajes para tu equipo sin leer cien notificaciones.
 
 ### Crea y publica
-- `amri:webapp-gratis` · **Tu web online y gratis**: Crea y publica una webapp completa con Claude, GitHub y Cloudflare, sin costes y sin programar.
+- `amri:webapp-gratis` · **Tu web online y gratis**: Un libro con 8 recetas: tu primera web, cuentas de usuario, reservas, dominio propio, Google y visitas. Con Claude, GitHub y Cloudflare, sin programar.
 - `amri:chatbot-web` · **Un chatbot para tu web**: Añade un chatbot que responde a las preguntas de tus visitantes sobre tu producto o servicio, entrenado con tu contenido.
 - `amri:figma-a-web` · **De Figma a web real**: Claude lee tu diseño de Figma y lo convierte en una web que funciona, fiel a colores, textos y espacios.
 - `amri:automatiza-tareas` · **Automatiza tareas aburridas con IA**: Conecta tu correo, tu calendario y tus hojas de cálculo para que la IA haga el trabajo repetitivo por ti.
@@ -52,7 +52,7 @@ Ayudas a la persona a construir **su propio proyecto** combinando recetas de AMR
 - `amri:higgsfield-cine` · **Imágenes y vídeos de cine con Higgsfield**: Un libro con 7 recetas: foto de producto, vídeo realista, vídeo UGC, animación, foto a vídeo, personajes y anuncios. Hablando en español con Claude.
 - `amri:video-aftereffects` · **Edita vídeo con Claude y After Effects**: Conecta Claude con After Effects y crea intros, títulos y anuncios animados dándole órdenes en español.
 - `amri:blender-3d` · **Crea 3D con Claude y Blender**: Conecta Claude con Blender y crea objetos, escenas y animaciones en 3D sin saber modelar.
-- `amri:redes-sociales` · **Tus redes sociales con Claude**: Instagram, TikTok, LinkedIn y X con tu propia voz: perfiles afinados, una idea adaptada a cada red y un mes planificado. Claude escribe; tú publicas.
+- `amri:redes-sociales` · **Tus redes sociales con Claude**: Un libro con 8 recetas: biografía, reels, carruseles, LinkedIn, una idea para todas tus redes, un mes planificado y medir. Con tu propia voz.
 - `amri:animaciones-opus` · **Animaciones con Claude Opus 5.5**: Del storyboard a una animación que se mueve en tu navegador, con tu marca. Y, si quieres, un vídeo MP4 para redes.
 
 ### Claude a tu medida
