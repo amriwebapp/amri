@@ -1,17 +1,17 @@
 ---
 name: empieza-aqui
-description: "Receta de AMRI «Empieza aquí: conoce a Claude». Tu primera conversación y un mapa sencillo de todo lo demás: proyectos, conectores, Skills, plugins y agentes. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Empieza aquí: conoce a Claude». El primer libro: tu primera conversación, cómo pedir bien, darle tus archivos y el mapa de todo lo demás (proyectos, conectores, Skills, plugins y agentes). Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Empieza aquí: conoce a Claude
 
-Tu primera conversación y un mapa sencillo de todo lo demás: proyectos, conectores, Skills, plugins y agentes.
+El primer libro: tu primera conversación, cómo pedir bien, darle tus archivos y el mapa de todo lo demás (proyectos, conectores, Skills, plugins y agentes).
 
-- ⏱ 15 min aprox.
-- 👩‍🍳 Muy fácil
+- 📕 5 recetas
+- ⏱ 10-15 min cada una
 - 💶 Gratis
-- 🍽 Resultado: tu primera conversación y un mapa de todo lo demás
+- 🍽 Resultado: sabes usar Claude y entiendes todo lo demás
 - Categoría: Primeros pasos
 - Versión web (con explicaciones y comunidad): https://amri.es/recetas/empieza-aqui.html
 
@@ -35,29 +35,21 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 - **Claude**: tu ayudante. Entiende lo que le pides con palabras normales.
 - **Un correo electrónico**: para crear tu cuenta.
-- **Tu móvil u ordenador**: para llevar a Claude contigo.
 - **Algo real que hacer**: aprenderás más con una tarea de verdad que con una prueba.
 
-## Ideas de ejemplo
+## Este es un libro de recetas
 
-- **Aprender algo:** entender un tema que me cuesta, con ejemplos sencillos y preguntas para comprobar que lo he entendido
-- **Organizar mi semana:** organizar mi semana con mis tareas, mis citas y algún rato libre
-- **Tener ideas:** darme ideas para un proyecto personal y ayudarme a elegir la mejor
+Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Según la idea de la persona:
+1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
+2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
+3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
 
 ## Antes de empezar
-
-Pregunta a la persona: **¿Quieres tener Claude también en el móvil o en el ordenador?** Si dudas, elige «Sí». Si prefieres no instalar nada, funciona igual desde el navegador.
-
-Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
-
-## Pasos
 
 ### 1. Crea tu cuenta
 _3 min · gratis_
 
 Claude es una inteligencia artificial: un programa con el que hablas como con una persona y que te ayuda a escribir, pensar, aprender y crear.
-
-#### Pasos
 
 - Entra en [claude.ai](https://claude.ai).
 
@@ -69,12 +61,10 @@ Claude es una inteligencia artificial: un programa con el que hablas como con un
 
 **✅ Comprobación:** ves una caja para escribir que te pregunta en qué puede ayudarte.
 
-### 2. Llévalo contigo _(solo si la respuesta a «Quieres tener Claude también en el móvil o en el ordenador» es «Sí»)_
+### 2. Llévalo contigo
 _3 min · móvil y ordenador_
 
-Tus conversaciones son las mismas en todas partes: empiezas en el móvil y sigues en el ordenador.
-
-#### Pasos
+Tus conversaciones son las mismas en todas partes: empiezas en el móvil y sigues en el ordenador. Este paso es opcional, pero muy cómodo.
 
 - **Móvil:** busca «Claude» en la App Store o en Google Play. Comprueba que el autor es **Anthropic**.
 
@@ -82,16 +72,29 @@ Tus conversaciones son las mismas en todas partes: empiezas en el móvil y sigue
 
 - Entra con la misma cuenta.
 
-> 💡 En el móvil puedes hablarle en voz alta: pulsa el micrófono.
+**✅ Comprobación:** ves tus conversaciones en la app, o has decidido usar solo el navegador.
 
-**✅ Comprobación:** ves tus conversaciones en la app.
+## Recetas del libro
 
-### 3. Tu primera conversación
+### Receta 1: Tu primera conversación
+
+Háblale como a una persona y consigue algo útil en 5 minutos.
+
+- ⏱ 10 min
+- 👩‍🍳 Muy fácil
+- 💬 Chat
+- 🍽 Resultado: tu primera tarea hecha con Claude
+- Versión web: https://amri.es/recetas/empieza-aqui--primera-conversacion.html
+- Ideas de ejemplo:
+  - Escribir y resumir: escribir un correo difícil y resumir un texto largo
+  - Aprender algo: entender un tema que me cuesta, con ejemplos sencillos y preguntas para comprobar que lo he entendido
+  - Organizar mi semana: organizar mi semana con mis tareas, mis citas y algún rato libre
+  - Tener ideas: darme ideas para un proyecto personal y ayudarme a elegir la mejor
+
+#### 1. El primer mensaje
 _5 min · a probar_
 
-Háblale como a una persona. No hace falta usar palabras especiales.
-
-#### Copia este mensaje y pégalo
+No hace falta usar palabras especiales: escribe como hablas.
 
 ```text
 Hola, Claude. Es la primera vez que te uso. Quiero que me ayudes a [la idea de la persona].
@@ -99,107 +102,243 @@ Hola, Claude. Es la primera vez que te uso. Quiero que me ayudes a [la idea de l
 Antes de empezar, hazme 3 preguntas cortas para entender bien lo que necesito. Después hazlo y explícame qué has hecho.
 ```
 
-**Trucos para que te entienda mejor**
+**✅ Comprobación:** Claude te ha hecho preguntas y te ha dado un resultado.
 
-- Dile **para quién** es y **para qué**.
-- Pide la forma que quieres: «en 5 puntos», «en una tabla», «más corto».
-- Si algo no te gusta, díselo: «más cercano», «sin emojis». Puedes pedir cambios todas las veces que quieras.
+#### 2. Pide cambios
+_3 min · a tu gusto_
 
-**✅ Comprobación:** Claude te ha hecho preguntas y te ha dado un resultado que te sirve.
+Lo primero que te da Claude es un borrador. Dile qué cambiar, con tus palabras:
 
-### 4. Comprueba lo importante
-_3 min · con cabeza_
+- «Más corto».
+- «Más cercano, menos formal».
+- «Ponlo en una lista».
+- «Sin emojis».
 
-Claude acierta mucho, pero a veces se equivoca y lo dice con mucha seguridad. Tú tienes la última palabra.
+> 💡 Puedes pedir cambios todas las veces que quieras. No se cansa.
 
-#### Pregúntale
+**✅ Comprobación:** el resultado está como querías.
+
+#### 3. Comprueba lo importante
+_2 min · con cabeza_
 
 ```text
 ¿Hay algo en tu respuesta de lo que no estés seguro? Dime qué debería comprobar yo.
 ```
 
-> 💡 Con temas de salud, dinero o leyes, compara siempre con una fuente fiable o con un profesional.
+**✅ Comprobación:** sabes qué partes conviene revisar antes de usarlo.
 
-> 💡 ⚠️ No le des contraseñas, números de tarjeta ni datos privados de otras personas.
+**Al terminar:** Ya has hablado con Claude. Sigue con «Pide mejor»: con cuatro trucos, sus respuestas mejoran muchísimo.
 
-**✅ Comprobación:** sabes qué partes de la respuesta conviene revisar.
+### Receta 2: Pide mejor: el mensaje perfecto
 
-### 5. El mapa de Claude
-_5 min · seis palabras_
+Cuatro ingredientes que hacen que Claude acierte a la primera.
 
-En AMRI verás seis palabras una y otra vez. Esto es lo que significan, sin tecnicismos:
+- ⏱ 15 min
+- 👩‍🍳 Fácil
+- ✍️ Mensajes
+- 🍽 Resultado: tu plantilla de mensaje para cualquier tarea
+- Versión web: https://amri.es/recetas/empieza-aqui--pide-mejor.html
+- Ideas de ejemplo:
+  - Una tarea del trabajo: preparar una reunión importante del trabajo
+  - Algo de casa: organizar una mudanza
+  - Estudios: preparar un examen
 
-- **💬 Chat**: una conversación con Claude. Es lo que acabas de hacer.
+#### 1. Los cuatro ingredientes
+_3 min · la idea_
 
-- **📁 Proyecto**: una carpeta con tus instrucciones y documentos. Todos los chats que abras dentro los tienen en cuenta. [Receta: tu asistente personal](asistente-ia.html).
+Un buen mensaje tiene cuatro partes. No hace falta que sean largas:
 
-- **🔌 Conector**: un permiso para que Claude use otra app por ti, como Gmail, Canva o Notion. Lo quitas cuando quieras. [Receta: Gmail y Calendar](gmail-calendario.html).
+- **Quién es Claude**: «Actúa como un profesor paciente».
+- **Contexto**: para quién es, qué sabes ya, qué te preocupa.
+- **La tarea**: qué quieres exactamente.
+- **La forma**: «en 5 puntos», «en una tabla», «en un correo de 100 palabras».
 
-- **📖 Skill**: una ficha con tu forma de hacer algo. Claude la usa sola cuando toca. [Receta: enséñale tu método](skills-propias.html).
+**✅ Comprobación:** sabrías decir los cuatro ingredientes.
+
+#### 2. Pruébalo con una tarea real
+_5 min · práctica_
+
+```text
+Actúa como [quién quieres que sea].
+
+Contexto: quiero [la idea de la persona]. [Para quién es, qué sé ya, qué me preocupa.]
+
+Tarea: [qué quieres exactamente].
+
+Forma: [cómo lo quieres: lista, tabla, correo, cuánto de largo].
+```
+
+**✅ Comprobación:** la respuesta encaja mucho mejor que con un mensaje corto.
+
+#### 3. Que Claude mejore tu mensaje
+_5 min · el truco_
+
+Si no sabes cómo pedir algo, pídele a Claude que te ayude a pedirlo.
+
+```text
+Quiero pedirte esto: [explícalo como te salga]. Antes de hacerlo, escríbeme el mensaje perfecto para pedírtelo, con quién eres, contexto, tarea y forma. Después hazlo.
+```
+
+**✅ Comprobación:** tienes un mensaje bien escrito y su resultado.
+
+**Al terminar:** Ya tienes tu plantilla. Guárdala en una nota del móvil: te servirá para casi todo.
+
+### Receta 3: Dale tus archivos: PDF, fotos y capturas
+
+Sube un documento, una foto o una captura de pantalla y pregúntale lo que quieras.
+
+- ⏱ 10 min
+- 👩‍🍳 Muy fácil
+- 📎 Archivos
+- 🍽 Resultado: un documento entendido en minutos
+- Versión web: https://amri.es/recetas/empieza-aqui--archivos.html
+- Ideas de ejemplo:
+  - Un documento largo: un documento largo en PDF
+  - Una foto: la foto de un papel, una etiqueta o un menú
+  - Una captura de pantalla: una captura de pantalla de un error o de una web que no entiendo
+
+#### 1. Súbelo
+_2 min · el clip_
+
+- En un chat, pulsa el **+** o el clip 📎, o arrastra el archivo a la ventana.
+- En el móvil también puedes hacer una foto directamente.
+
+> 💡 ⚠️ No subas documentos con contraseñas, datos bancarios o datos personales de otras personas.
+
+**✅ Comprobación:** ves el archivo en el chat.
+
+#### 2. Pregúntale
+_5 min · entenderlo_
+
+```text
+Te he subido [la idea de la persona]. Explícamelo con palabras sencillas: de qué trata, qué es lo más importante y si hay algo que debería revisar con cuidado. Cita la parte del documento de la que sacas cada cosa.
+```
+
+**✅ Comprobación:** entiendes el archivo y sabes dónde está cada cosa.
+
+#### 3. Haz algo con él
+_3 min · usarlo_
+
+Ahora que lo entiende, pídele trabajo:
+
+- «Hazme una lista de las fechas y plazos».
+- «Escribe una respuesta a este correo».
+- «Pasa esta tabla de la foto a una hoja de cálculo».
+
+**✅ Comprobación:** tienes algo útil hecho a partir de tu archivo.
+
+**Al terminar:** Ya sabes darle archivos a Claude. Es una de las cosas que más tiempo ahorra.
+
+### Receta 4: El mapa de Claude: seis palabras
+
+Chat, proyecto, conector, Skill, plugin y agente, explicados sin jerga y con su receta.
+
+- ⏱ 10 min
+- 👩‍🍳 Muy fácil
+- 🗺 Conceptos
+- 🍽 Resultado: entiendes todo lo que verás en AMRI
+- Versión web: https://amri.es/recetas/empieza-aqui--mapa.html
+- Ideas de ejemplo:
+  - Quiero entenderlo todo: entender todas las piezas
+  - Que use mis apps: que Claude trabaje dentro de mis apps
+  - Que trabaje solo: que Claude haga tareas largas por mí
+
+#### 1. Las seis palabras
+_5 min · el mapa_
+
+- **💬 Chat**: una conversación con Claude.
+
+- **📁 Proyecto**: una carpeta con tus instrucciones y documentos. Todos los chats de dentro los tienen en cuenta. [Libro: tu asistente personal](asistente-ia.html).
+
+- **🔌 Conector**: un permiso para que Claude use otra app por ti, como Gmail, Canva o Notion. Lo quitas cuando quieras. [Libro: Gmail y Calendar](gmail-calendario.html).
+
+- **📖 Skill**: una ficha con tu forma de hacer algo. Claude la usa sola cuando toca. [Libro: Skills](skills-propias.html).
 
 - **📦 Plugin**: un paquete con varias Skills (y a veces conectores) que se instala de una vez. [El plugin de AMRI](../plugin.html).
 
-- **🤖 Agente**: Claude trabajando por su cuenta en una tarea de varios pasos. Hace un plan, lo ejecuta, comprueba el resultado y te pide permiso antes de lo importante. [Receta: tu primer agente](primer-agente.html).
+- **🤖 Agente**: Claude trabajando por su cuenta en una tarea de varios pasos. [Libro: tu primer agente](primer-agente.html).
 
-> 💡 No hace falta aprenderlo de memoria: en las recetas, las palabras subrayadas tienen su explicación.
+**✅ Comprobación:** sabrías explicar qué es un conector y qué es un agente.
 
-**✅ Comprobación:** sabrías explicar con tus palabras qué es un conector y qué es un agente.
+#### 2. Pregúntale a Claude
+_3 min · tu caso_
 
-### 6. Elige tu camino
+```text
+Quiero [la idea de la persona]. Explícame, sin tecnicismos, cuál de estas piezas necesito (chat, proyecto, conector, Skill, plugin o agente) y por qué.
+```
+
+**✅ Comprobación:** sabes qué pieza necesitas.
+
+#### 3. Elige tu siguiente libro
 _2 min · ¿y ahora?_
 
-Cada receta se puede hacer sola. Elige según lo que quieras conseguir:
-
-- Que Claude te conozca y te ayude cada día → [Tu asistente personal](asistente-ia.html).
-
-- Que trabaje dentro de tus apps → [Gmail y Calendar](gmail-calendario.html), [Canva](canva-diseno.html) o [Notion](notion-cerebro.html).
-
+- Que Claude te conozca → [Tu asistente personal](asistente-ia.html).
+- Que trabaje en tus apps → [Gmail y Calendar](gmail-calendario.html), [Canva](canva-diseno.html) o [Notion](notion-cerebro.html).
 - Crear algo para internet → [Tu web online y gratis](webapp-gratis.html).
+- Que haga tareas largas → [Tu primer agente](primer-agente.html).
+- ¿Tienes un proyecto? Cuéntalo en [«¿Qué quieres construir?»](../index.html#construir).
 
-- Que haga tareas largas por ti → [Tu primer agente](primer-agente.html).
+**✅ Comprobación:** has elegido tu siguiente libro.
 
-- ¿Tienes un proyecto en mente? Cuéntalo en [«¿Qué quieres construir?»](../index.html#construir) y te proponemos las recetas en orden.
+**Al terminar:** Ya conoces el mapa. Elige el siguiente libro según lo que quieras conseguir.
 
-**✅ Comprobación:** has elegido tu próxima receta.
+### Receta 5: Dónde usar Claude, planes y privacidad
+
+Web, móvil, escritorio, Chrome y Claude Code; qué es gratis y cómo cuidar tus datos.
+
+- ⏱ 10 min
+- 👩‍🍳 Muy fácil
+- ⚙️ Ajustes
+- 🍽 Resultado: Claude configurado a tu gusto
+- Versión web: https://amri.es/recetas/empieza-aqui--planes.html
+- Ideas de ejemplo:
+  - Mi privacidad: qué pasa con mis conversaciones
+  - Si me merece la pena pagar: si me merece la pena un plan de pago
+  - Dónde usarlo: en qué sitio me conviene usar Claude
+
+#### 1. Dónde usar Claude
+_3 min · cada sitio_
+
+- **Web (claude.ai)**: todo lo básico, desde cualquier navegador.
+- **Móvil**: chats, fotos y voz.
+- **App de escritorio**: además, Cowork y Claude Code, para trabajar con los archivos de tu ordenador.
+- **Claude in Chrome**: una extensión con la que Claude usa webs por ti.
+
+**✅ Comprobación:** sabes dónde te conviene usarlo.
+
+#### 2. Los planes, sin letra pequeña
+_3 min · qué es gratis_
+
+- **Gratis**: chats, proyectos y la mayoría de libros básicos de AMRI. Tiene un límite de mensajes.
+- **De pago (Pro o superior)**: más mensajes y funciones como Claude Code, Cowork o la extensión de Chrome.
+
+> 💡 Los precios cambian: míralos en [claude.ai/pricing](https://claude.ai/pricing). Cada tarjeta de AMRI dice si el libro es gratis o depende de tu plan.
+
+**✅ Comprobación:** sabes si te basta el plan gratuito.
+
+#### 3. Tu privacidad
+_4 min · ajustes_
+
+- En los ajustes de Claude, en **Privacidad**, decides si tus conversaciones se pueden usar para mejorar Claude.
+- Puedes borrar cualquier conversación cuando quieras.
+- Regla sencilla: no escribas nada que no pondrías en un correo a alguien de confianza.
+
+**✅ Comprobación:** has revisado tus ajustes de privacidad.
+
+**Al terminar:** Ya sabes dónde usar Claude, qué cuesta y cómo cuidar tu privacidad.
 
 ## Al terminar
 
-Ya conoces a Claude y sabes qué es cada cosa. A partir de aquí, elige la receta que te apetezca: todas se pueden hacer solas.
+Ya tienes tu cuenta. Empieza por «Tu primera conversación» y sigue en el orden que quieras.
 
 ## Extras (opcionales, después de servir)
 
-### Extra 1. Dónde usar Claude
-_Opcional · cada sitio, para qué_
+### Extra 1. Usa Claude con cabeza
+_Siempre · lo básico_
 
-- **Web (claude.ai)**: todo lo básico, desde cualquier navegador.
-
-- **Móvil**: chats, fotos y voz cuando no estás en el ordenador.
-
-- **App de escritorio**: lo mismo que la web y, además, Cowork y Claude Code, para que Claude trabaje con los archivos de tu ordenador.
-
-- **Claude in Chrome**: una extensión con la que Claude usa webs por ti. [Receta](navegador-chrome.html).
-
-- **Claude Code**: para crear webs y programas en tu ordenador, desde la app de escritorio o desde la terminal. [Receta](primer-agente.html).
-
-### Extra 2. Los planes, sin letra pequeña
-_Opcional · qué es gratis_
-
-- **Gratis**: chats, proyectos y la mayoría de recetas básicas de AMRI. Tiene un límite de mensajes.
-
-- **De pago (Pro o superior)**: más mensajes y funciones como Claude Code, Cowork o la extensión de Chrome.
-
-- Algunas funciones, como ciertos conectores o las Skills, dependen del plan. Si no las ves, la receta te da otro camino.
-
-> 💡 Los precios cambian: consúltalos en [claude.ai/pricing](https://claude.ai/pricing). En cada tarjeta de AMRI verás si la receta es gratis, depende de tu plan o es de pago.
-
-### Extra 3. Tu privacidad
-_Siempre · ajustes_
-
-- En los ajustes de Claude, en **Privacidad**, decides si tus conversaciones se pueden usar para mejorar Claude.
-
-- Puedes borrar cualquier conversación cuando quieras.
-
-- Regla sencilla: no escribas nada que no pondrías en un correo a alguien de confianza.
+- Claude acierta mucho, pero a veces se equivoca y lo dice muy seguro. Con temas de salud, dinero o leyes, contrasta siempre.
+- No le des contraseñas, números de tarjeta ni datos privados de otras personas.
+- Tú tienes la última palabra en todo lo que publiques o envíes.
 
 ## Sigue con
 

@@ -487,3 +487,19 @@ footer.foot{position:relative;overflow:hidden;border-top:1px solid var(--line);p
 .price-note{font-size:14px;color:var(--mute);margin:-6px 0 22px;line-height:1.6}
 .price-note b{color:var(--ink);font-weight:650}
 .card-thumb .conn.book{background:var(--ink);color:var(--bg)}
+
+/* ---------- La biblioteca: tarjetas con aspecto de libro ---------- */
+.card.book{position:relative;overflow:visible;box-shadow:5px 5px 0 -1px var(--card),5px 5px 0 0 var(--line),10px 10px 0 -1px var(--card),10px 10px 0 0 var(--line)}
+.card.book .card-thumb{border-radius:var(--radius) var(--radius) 0 0}
+.card.book.in:hover{box-shadow:5px 5px 0 -1px var(--card),5px 5px 0 0 var(--line),10px 10px 0 -1px var(--card),10px 10px 0 0 var(--line),var(--shadow)}
+.card .kick{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin-bottom:6px}
+.card .toc{list-style:none;margin:0 0 16px;padding:12px 14px;background:var(--soft);border:1px solid var(--line);border-radius:14px;font-size:14px}
+.card .toc li{padding:3px 0 3px 18px;position:relative;line-height:1.35}
+.card .toc li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--acc)}
+.card .toc li.more-r{color:var(--mute);font-weight:600}.card .toc li.more-r::before{background:var(--line)}
+.hits{margin:-4px 0 24px}.hits:empty{display:none}
+.hits h3{font-size:15px;margin:0 0 10px;color:var(--mute);font-weight:700}
+.hit-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.hit{display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:center;padding:12px 16px;border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--ink);text-decoration:none;transition:border-color .3s,transform .3s}
+.hit:hover{border-color:var(--acc);transform:translateY(-2px)}
+.hit b{font-size:15.5px}.hit small{grid-column:1;color:var(--mute);font-size:13px}.hit span{grid-row:1/3;grid-column:2;color:var(--acc);font-size:18px}

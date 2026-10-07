@@ -1,17 +1,17 @@
 ---
 name: primer-agente
-description: "Receta de AMRI «Tu primer agente: Claude trabaja por ti». Dale una tarea de varios pasos y mira cómo Claude hace un plan, lo ejecuta en tu ordenador y te pide permiso antes de lo importante. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Tu primer agente: Claude trabaja por ti». Claude hace tareas largas en tu ordenador: ordenar carpetas, informes, hojas de cálculo, una web, la terminal y tu primer subagente. Siempre con tu permiso. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Tu primer agente: Claude trabaja por ti
 
-Dale una tarea de varios pasos y mira cómo Claude hace un plan, lo ejecuta en tu ordenador y te pide permiso antes de lo importante.
+Claude hace tareas largas en tu ordenador: ordenar carpetas, informes, hojas de cálculo, una web, la terminal y tu primer subagente. Siempre con tu permiso.
 
-- ⏱ 40 min aprox.
-- 👩‍🍳 Sin saber programar
+- 📕 6 recetas
+- ⏱ 20-40 min cada una
 - 💶 Necesita un plan de pago de Claude
-- 🍽 Resultado: una tarea hecha por Claude de principio a fin
+- 🍽 Resultado: tareas largas hechas por Claude, con tu permiso
 - Categoría: Claude a tu medida
 - Versión web (con explicaciones y comunidad): https://amri.es/recetas/primer-agente.html
 
@@ -35,74 +35,92 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 - **Claude con un plan de pago** (Pro o superior): el agente. Los modos que trabajan con tus archivos no están en el plan gratuito.
 - **La app de escritorio de Claude**: donde trabaja. Mac o Windows.
-- **Una carpeta de prueba**: el único sitio donde le dejarás trabajar.
-- **La terminal**: una ventana donde se dan órdenes al ordenador escribiendo. Ya viene en tu ordenador.
+- **Una carpeta de prueba**: el único sitio donde le dejarás trabajar al principio.
 
-## Ideas de ejemplo
+## Este es un libro de recetas
 
-- **Un informe con mis documentos:** leer los documentos de la carpeta y prepararme un informe de una página con lo más importante
-- **Limpiar una hoja de cálculo:** revisar la hoja de cálculo de la carpeta, corregir errores evidentes y hacerme un resumen con totales
-- **Una web sencilla:** crear una web de una página para presentarme, abrirla en el navegador y mejorarla hasta que quede bien
+Tiene una preparación común («Antes de empezar») y 6 recetas concretas. Según la idea de la persona:
+1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
+2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
+3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
 
 ## Antes de empezar
-
-Pregunta a la persona: **¿Te animas a probar también la terminal?** Si dudas, elige «No»: con la app de escritorio no la necesitas. Con «Sí» aprenderás a usar Claude Code desde la terminal, como hacen los programadores.
-
-Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
-
-## Pasos
 
 ### 1. Qué es un agente
 _3 min · la idea_
 
-Hasta ahora has usado Claude como un chat: tú preguntas, él responde y tú haces el resto. Un **agente** es Claude trabajando por su cuenta en una tarea de varios pasos: hace un plan, abre y crea archivos, comprueba si ha salido bien, corrige y te avisa al terminar.
+Hasta ahora has usado Claude como un chat: tú preguntas, él responde y tú haces el resto. Un **agente** hace el trabajo: planifica, abre y crea archivos, comprueba si ha salido bien, corrige y te avisa al terminar.
 
 **La diferencia, con un ejemplo**
 
 - **Chat**: te explica cómo ordenar tu carpeta de descargas.
 - **Agente**: la ordena, te enseña el resultado y te pregunta antes de borrar nada.
 
-> 💡 Tú pones el objetivo y los límites. Claude hace el trabajo. Lo importante siempre lo apruebas tú.
-
 **✅ Comprobación:** sabrías explicar la diferencia entre un chat y un agente.
 
-### 2. Prepara la cocina
-_10 min · app y carpeta_
+### 2. Instala la app y crea tu carpeta
+_10 min · la cocina_
 
-#### Pasos
-
-- Descarga la app de escritorio desde [claude.ai/download](https://claude.ai/download) e inicia sesión.
-
+- Descarga la app de escritorio desde [claude.ai/download](https://claude.ai/download) e inicia sesión con tu cuenta de pago.
 - Crea en tu escritorio una carpeta llamada **prueba-agente**.
+- Copia dentro unos cuantos archivos para practicar. **Copias, no los originales.**
 
-- Copia dentro unos cuantos archivos para la tarea. **Copias, no los originales.**
-
-> 💡 Trabajar con copias la primera vez es la mejor red de seguridad: si algo sale mal, borras la carpeta y vuelves a empezar.
+> 💡 Trabajar con copias es la mejor red de seguridad: si algo sale mal, borras la carpeta y vuelves a empezar.
 
 **✅ Comprobación:** tienes la app abierta y la carpeta prueba-agente con archivos de prueba.
 
-### 3. Abre el modo agente
-_3 min · Cowork o Code_
-
-En la app de escritorio, Claude puede trabajar como agente de dos formas:
+### 3. Los dos modos: Cowork y Code
+_3 min · cuál usar_
 
 - **Cowork**: para tareas con tus documentos: ordenar, resumir, preparar informes u hojas de cálculo.
-
 - **Code** (Claude Code): para crear webs, pequeños programas o automatizaciones.
-
-#### Pasos
-
-- Elige el que encaje con tu tarea.
-- Cuando te pregunte con qué carpeta trabajar, elige **prueba-agente**. Solo esa.
 
 > 💡 Los nombres de los menús cambian de vez en cuando. Si no ves Cowork ni Code, actualiza la app y comprueba que tu plan es de pago.
 
-**✅ Comprobación:** Claude tiene acceso a tu carpeta de prueba, y a nada más.
+**✅ Comprobación:** ves Cowork y Code en la app.
 
-### 4. Pídele un plan primero
+### 4. Tu mensaje de seguridad
+_2 min · para siempre_
+
+Guarda este mensaje en una nota. Lo pegarás al principio de cada tarea, cambiando solo la primera línea.
+
+```text
+Quiero que hagas esto: [la tarea].
+
+Trabaja solo dentro de la carpeta [nombre].
+Antes de hacer nada, dime tu plan en pasos cortos y espera mi OK.
+No borres ni sobrescribas ningún archivo sin preguntarme.
+Al terminar, resúmeme qué has cambiado.
+```
+
+**✅ Comprobación:** tienes el mensaje guardado en una nota.
+
+## Recetas del libro
+
+### Receta 1: Tu primera tarea: ordena una carpeta
+
+La tarea perfecta para empezar: Claude ordena archivos y tú apruebas cada paso.
+
+- ⏱ 20 min
+- 👩‍🍳 Fácil
+- 🗂 Cowork
+- 🍽 Resultado: una carpeta ordenada por Claude
+- Versión web: https://amri.es/recetas/primer-agente--primera-tarea.html
+- Ideas de ejemplo:
+  - Descargas: ordenar los archivos de la carpeta en subcarpetas por tipo y darme una lista de lo que hay
+  - Fotos: ordenar las fotos de la carpeta en subcarpetas por fecha y renombrarlas con la fecha y el lugar si aparece
+  - Facturas: renombrar las facturas de la carpeta con la fecha, la empresa y el importe, y hacerme una lista
+
+#### 1. Abre Cowork en tu carpeta
+_3 min · empezar_
+
+- En la app, abre **Cowork**.
+- Cuando te pregunte con qué carpeta trabajar, elige **prueba-agente**. Solo esa.
+
+**✅ Comprobación:** Claude tiene acceso a tu carpeta de prueba y a nada más.
+
+#### 2. Pide el plan
 _5 min · la orden_
-
-#### Copia este mensaje y pégalo
 
 ```text
 Quiero que hagas esto: [la idea de la persona].
@@ -113,129 +131,284 @@ No borres ni sobrescribas ningún archivo sin preguntarme.
 Al terminar, resúmeme qué has cambiado.
 ```
 
-**¿Por qué cada parte?**
-
-- «Solo dentro de la carpeta»: decides dónde puede tocar.
-- «Dime tu plan»: ves qué va a hacer antes de que lo haga, y puedes corregirlo.
-- «No borres sin preguntarme»: lo que no tiene vuelta atrás lo decides tú.
-
 **✅ Comprobación:** Claude te ha enseñado un plan que entiendes.
 
-### 5. Déjale trabajar
-_10 min · aprueba con calma_
+#### 3. Déjale trabajar
+_7 min · aprueba con calma_
 
-#### Pasos
+- Si el plan te parece bien, responde **«OK, adelante»**. Si no, corrígelo.
+- Cuando te pida permiso (crear, mover o borrar archivos), lee qué es y decide.
 
-- Si el plan te parece bien, responde **«OK, adelante»**. Si no, corrígelo con tus palabras.
+> 💡 Al principio, da los permisos de uno en uno.
 
-- Mientras trabaja, verás lo que va haciendo.
+**✅ Comprobación:** Claude ha terminado y te ha dado un resumen.
 
-- Cuando te pida permiso (crear, mover o borrar archivos, entrar en internet), lee qué es y decide.
-
-> 💡 Al principio, da los permisos de uno en uno. Cuando le cojas confianza, podrás darle más libertad.
-
-> 💡 Si hace algo que no querías, pulsa el botón de parar y explícale qué esperabas.
-
-**✅ Comprobación:** Claude ha terminado y te ha dado un resumen de lo que ha hecho.
-
-### 6. Revisa y deshaz si hace falta
+#### 4. Revisa y deshaz si hace falta
 _5 min · tú decides_
 
-Abre la carpeta y comprueba el resultado con tus ojos. Si algo no te convence, pídeselo:
+Abre la carpeta y mira el resultado. Si algo no te convence:
 
 ```text
 Deshaz el último cambio y explícame qué habías hecho y por qué.
 ```
 
-> 💡 Para la próxima vez: guarda el mensaje del paso 4 en una nota. Te servirá para cualquier tarea, cambiando solo la primera línea.
+**✅ Comprobación:** la carpeta está como querías.
 
-**✅ Comprobación:** el resultado está como querías, o has deshecho lo que no te gustaba.
+**Al terminar:** Tu primera tarea con un agente: objetivo, plan, permiso y revisión. Ese es el método para todo.
 
-### 7. Claude Code en la terminal _(solo si la respuesta a «Te animas a probar también la terminal» es «Sí»)_
-_10 min · instalarlo_
+### Receta 2: Un informe con tus documentos
 
-La terminal es una ventana donde das órdenes al ordenador escribiendo. Claude Code funciona ahí igual que en la app.
+Claude lee varios documentos de una carpeta y te prepara un informe de una página.
 
-#### Pasos
+- ⏱ 25 min
+- 👩‍🍳 Fácil
+- 📄 Cowork
+- 🍽 Resultado: un informe en un documento nuevo
+- Versión web: https://amri.es/recetas/primer-agente--informe.html
+- Ideas de ejemplo:
+  - Actas de reuniones: leer las actas de reunión de la carpeta y hacerme un informe con las decisiones, los pendientes y quién se encarga de cada uno
+  - Presupuestos: leer los presupuestos de la carpeta y hacerme una tabla comparativa con precio, plazo y condiciones
+  - Apuntes: leer mis apuntes de la carpeta y hacerme un resumen de una página con lo más importante para el examen
 
-- **Mac:** abre la app **Terminal** y pega:
+#### 1. Prepara la carpeta
+_5 min · solo lo necesario_
+
+- Copia los documentos a **prueba-agente** (o a una carpeta nueva solo para esto).
+- Quita los que no tengan que ver.
+
+> 💡 ⚠️ Si hay datos personales de otras personas, piensa si de verdad hacen falta.
+
+**✅ Comprobación:** la carpeta tiene solo los documentos del informe.
+
+#### 2. Pide el informe
+_10 min · la orden_
 
 ```text
-curl -fsSL https://claude.ai/install.sh | bash
+Quiero que hagas esto: [la idea de la persona].
+
+Trabaja solo dentro de la carpeta [nombre]. Antes de empezar, dime qué documentos has encontrado y tu plan. Guarda el informe como un documento nuevo, sin tocar los originales. Indica de qué documento sale cada dato.
 ```
 
-- **Windows:** abre **PowerShell** y pega:
+**✅ Comprobación:** Claude ha creado el informe en un documento nuevo.
+
+#### 3. Comprueba tres datos
+_10 min · con lupa_
+
+Elige tres datos del informe al azar y búscalos en los documentos originales.
+
+```text
+Este dato no coincide con el documento: [cuál]. Revísalo y corrige el informe.
+```
+
+**✅ Comprobación:** los datos que has comprobado coinciden.
+
+**Al terminar:** Tienes tu informe. Guarda el mensaje: el mes que viene solo cambias la carpeta.
+
+### Receta 3: Limpia y resume una hoja de cálculo
+
+Claude revisa un Excel o CSV, corrige errores evidentes y te hace un resumen con totales.
+
+- ⏱ 25 min
+- 👩‍🍳 Media
+- 📊 Cowork
+- 🍽 Resultado: tu hoja limpia y un resumen
+- Versión web: https://amri.es/recetas/primer-agente--hoja.html
+- Ideas de ejemplo:
+  - Gastos: revisar la hoja de gastos, unificar el formato de fechas y categorías, y hacerme un resumen por mes y por categoría
+  - Lista de clientes: revisar la lista de clientes, quitar duplicados y marcar los datos que falten
+  - Ventas: revisar la hoja de ventas y hacerme un resumen con los productos que más y menos se venden
+
+#### 1. Copia la hoja
+_3 min · una copia_
+
+- Copia la hoja a tu carpeta de prueba. **Una copia**: el original no se toca.
+
+**✅ Comprobación:** la copia está en la carpeta.
+
+#### 2. Pide la revisión
+_12 min · la orden_
+
+```text
+Quiero que hagas esto: [la idea de la persona].
+
+Trabaja solo con la copia de la carpeta [nombre]. Antes de cambiar nada, dime qué errores has encontrado y qué propones. Guarda el resultado en un archivo nuevo y el resumen aparte.
+```
+
+**✅ Comprobación:** tienes la hoja limpia en un archivo nuevo y el resumen.
+
+#### 3. Comprueba los totales
+_10 min · con calma_
+
+Suma tú una columna o un mes a mano y compáralo con el resumen.
+
+```text
+Explícame cómo has calculado este total: [cuál]. ¿Has quitado o cambiado alguna fila?
+```
+
+**✅ Comprobación:** los totales que has comprobado cuadran.
+
+**Al terminar:** Tu hoja está limpia y resumida. Revisa siempre los totales antes de usarlos para algo importante.
+
+### Receta 4: Una web sencilla con Claude Code
+
+Claude crea una web de una página, la abre en el navegador y la mejora contigo.
+
+- ⏱ 30 min
+- 👩‍🍳 Media
+- 💻 Claude Code
+- 🍽 Resultado: una web en tu ordenador
+- Versión web: https://amri.es/recetas/primer-agente--web.html
+- Ideas de ejemplo:
+  - Presentación personal: crear una web de una página para presentarme, abrirla en el navegador y mejorarla hasta que quede bien
+  - Un evento: crear una web de una página para un evento, con fecha, lugar y programa
+
+#### 1. Abre Code en una carpeta nueva
+_3 min · empezar_
+
+- Crea una carpeta **mi-web**.
+- En la app, abre **Code** y elige esa carpeta.
+
+**✅ Comprobación:** Claude Code está abierto en mi-web.
+
+#### 2. Pídela
+_15 min · Claude trabaja_
+
+```text
+Quiero que hagas esto: [la idea de la persona].
+
+Trabaja solo en esta carpeta. Antes de empezar, dime tu plan. Hazla con HTML, CSS y JavaScript sencillos, que se vea bien en el móvil. Cuando acabes, ábrela en el navegador para que la vea.
+```
+
+**✅ Comprobación:** ves tu web en el navegador.
+
+#### 3. Mejórala con frases cortas
+_10 min · a tu gusto_
+
+- «Pon los colores más cálidos».
+- «Añade una sección de contacto».
+- «Que el título sea más grande en el móvil».
+
+> 💡 Un cambio cada vez. Si algo se rompe, pide «vuelve a como estaba antes».
+
+**✅ Comprobación:** la web está como querías.
+
+**Al terminar:** Tienes tu web en tu ordenador. Para publicarla gratis, sigue el libro «Tu web online y gratis».
+
+### Receta 5: Claude Code en la terminal
+
+Instálalo, ábrelo en tu carpeta y aprende los cuatro trucos que te dan control.
+
+- ⏱ 20 min
+- 👩‍🍳 Media
+- ⌨️ Terminal
+- 🍽 Resultado: Claude Code funcionando en la terminal
+- Versión web: https://amri.es/recetas/primer-agente--terminal.html
+- Ideas de ejemplo:
+  - Mac: Mac
+  - Windows: Windows
+
+#### 1. Instálalo
+_5 min · una línea_
+
+La terminal es una ventana donde das órdenes al ordenador escribiendo.
+
+- Abre **PowerShell** y pega:
 
 ```text
 irm https://claude.ai/install.ps1 | iex
 ```
 
-- Cierra la ventana, ábrela de nuevo y entra en tu carpeta de prueba:
+> 💡 ¿Sale «command not found» después? Cierra la terminal del todo y vuelve a abrirla.
+
+**✅ Comprobación:** la instalación ha terminado sin errores.
+
+#### 2. Ábrelo en tu carpeta
+_5 min · empezar_
 
 ```text
 cd Desktop/prueba-agente
 claude
 ```
 
-- Inicia sesión cuando te lo pida y pega el mismo mensaje del paso 4.
-
-> 💡 ¿Sale «command not found»? Cierra la terminal del todo y vuelve a abrirla.
+- Inicia sesión cuando te lo pida.
+- Pega tu mensaje de seguridad con una tarea pequeña.
 
 **✅ Comprobación:** Claude Code te responde dentro de la terminal.
 
-### 8. Cuatro trucos de la terminal _(solo si la respuesta a «Te animas a probar también la terminal» es «Sí»)_
-_5 min · con seguridad_
+#### 3. Cuatro trucos
+_10 min · control_
 
 - **Mayús + Tab**: cambia de modo. En el **modo plan**, Claude solo propone y no toca nada.
-
-- **/rewind** (o pulsa **Esc** dos veces): vuelve a un punto anterior y deshace los cambios.
-
-- **/init**: Claude crea un archivo CLAUDE.md con notas de tu proyecto, que leerá cada vez que vuelvas.
-
+- **/rewind** (o **Esc** dos veces): vuelve a un punto anterior y deshace los cambios.
+- **/init**: crea un archivo CLAUDE.md con notas de tu proyecto, que leerá cada vez.
 - **/help**: todo lo que puedes hacer.
 
 **✅ Comprobación:** has probado el modo plan y sabes cómo deshacer.
 
+**Al terminar:** Ya usas Claude Code como los programadores. Desde aquí puedes instalar el plugin de AMRI.
+
+### Receta 6: Agentes en equipo: tu primer subagente
+
+Crea un ayudante especializado (por ejemplo, un revisor) al que Claude le pasa parte del trabajo.
+
+- ⏱ 25 min
+- 👩‍🍳 Avanzada
+- 🧑‍🤝‍🧑 Claude Code
+- 🍽 Resultado: un subagente revisor que Claude usa solo
+- Versión web: https://amri.es/recetas/primer-agente--equipo.html
+- Ideas de ejemplo:
+  - Revisor de textos: un revisor que comprueba faltas, tono y datos inventados antes de entregar un texto
+  - Investigador: un investigador que busca información y la devuelve resumida con sus fuentes
+
+#### 1. Qué es un subagente
+_3 min · la idea_
+
+En tareas grandes, Claude puede repartir el trabajo entre ayudantes especializados, llamados **subagentes**. Cada uno tiene sus propias instrucciones. Antes de llegar aquí, haz varias tareas con un solo agente.
+
+**✅ Comprobación:** sabes para qué sirve un subagente.
+
+#### 2. Créalo con /agents
+_12 min · en Claude Code_
+
+- En Claude Code, escribe `/agents` y elige crear uno nuevo.
+- Cuando te pida describirlo, pega:
+
+```text
+Quiero [la idea de la persona]. Que actúe solo cuando se lo pidan, que explique qué ha encontrado en una lista corta y que nunca cambie archivos sin permiso.
+```
+
+**✅ Comprobación:** el subagente aparece en la lista de /agents.
+
+#### 3. Ponlo a trabajar
+_10 min · probar_
+
+```text
+Escribe un texto corto de presentación para mi web y, antes de dármelo, pásaselo a mi subagente para que lo revise. Dime qué ha corregido.
+```
+
+**✅ Comprobación:** Claude ha usado el subagente y te dice qué ha cambiado.
+
+**Al terminar:** Ya tienes tu primer subagente. Puedes crear más, pero empieza con pocos y muy concretos.
+
 ## Al terminar
 
-Has trabajado con tu primer agente: le diste un objetivo, aprobaste su plan y revisaste el resultado. Ese es el método para cualquier tarea, pequeña o grande.
+Tu cocina está lista. Empieza por «Tu primera tarea» y después elige la receta que quieras.
 
 ## Extras (opcionales, después de servir)
 
-### Extra 1. Agentes que trabajan en equipo
-_Opcional · siguiente nivel_
-
-En tareas grandes, Claude puede repartir el trabajo entre varios ayudantes, llamados **subagentes**: uno investiga, otro escribe y otro revisa. En Claude Code puedes crear los tuyos con **/agents**.
-
-> 💡 Antes de llegar aquí, haz varias tareas pequeñas con un solo agente. Así sabrás qué pedir y cómo revisar.
-
-### Extra 2. Recetas enteras con un comando
-_Opcional · el plugin de AMRI_
-
-Con Claude Code puedes instalar el [plugin de AMRI](../plugin.html). Cada receta de esta web se convierte en un comando, y Claude la hace contigo de principio a fin.
-
-```text
-/amri:chef una web para mi estudio de yoga con reservas
-```
-
-### Extra 3. Reglas de la casa
+### Extra 1. Reglas de la casa
 _Siempre · seguridad_
 
 - Dale acceso solo a la carpeta que necesita.
-
 - Nunca le escribas contraseñas ni datos bancarios.
-
 - Ojo con las trampas: una web o un documento pueden esconder instrucciones para engañar a Claude. Si hace algo que no le pediste, páralo.
-
 - Antes de publicar, enviar o borrar algo, revisa tú.
 
-### Extra 4. Si algo no funciona
+### Extra 2. Si algo no funciona
 _Siempre · revisa esto_
 
 - **No veo Cowork ni Code**: actualiza la app y comprueba que tu plan es de pago.
-
 - **Se para a mitad**: escríbele «sigue por donde ibas».
-
 - **Hace más de lo que pedí**: vuelve a empezar pidiendo el plan primero y di qué no debe tocar.
 
 ## Sigue con

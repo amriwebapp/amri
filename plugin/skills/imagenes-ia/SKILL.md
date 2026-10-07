@@ -1,16 +1,16 @@
 ---
 name: imagenes-ia
-description: "Receta de AMRI «Crea imágenes con IA gratis». Genera ilustraciones, logos y fotos realistas con herramientas de IA gratuitas. Desde el prompt hasta el resultado. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Crea imágenes con IA gratis». Ilustraciones, fotos de producto, carteles con texto, series con el mismo estilo, personajes, edición de fotos e iconos. Con herramientas gratuitas. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Crea imágenes con IA gratis
 
-Genera ilustraciones, logos y fotos realistas con herramientas de IA gratuitas. Desde el prompt hasta el resultado.
+Ilustraciones, fotos de producto, carteles con texto, series con el mismo estilo, personajes, edición de fotos e iconos. Con herramientas gratuitas.
 
-- ⏱ 30 min aprox.
-- 👩‍🍳 Sin saber dibujar
-- 💶 0 € para empezar
+- 📕 7 recetas
+- ⏱ 15-30 min cada una
+- 💶 Gratis
 - 🍽 Resultado: imágenes listas para usar
 - Categoría: Primeros pasos
 - Versión web (con explicaciones y comunidad): https://amri.es/recetas/imagenes-ia.html
@@ -33,263 +33,366 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Ingredientes (todos gratuitos)
 
-- **Claude**: el jefe de cocina. Convierte tu idea en un buen prompt.
+- **Claude**: el jefe de cocina. Convierte tu idea en una buena descripción.
 - **Bing Image Creator**: el horno. Genera las imágenes gratis.
 - **Ideogram**: el pastelero. El que mejor escribe letras dentro de una imagen.
 - **Canva**: el emplatado. Recorta, retoca y exporta.
 
-## Ideas de ejemplo
+## Este es un libro de recetas
 
-- **Foto de producto:** una foto de producto de una taza de cerámica artesanal sobre una mesa de madera, luz de mañana
-- **Post para redes:** una imagen para Instagram que anuncia la apertura de mi cafetería, ambiente acogedor
-- **Cartel con texto:** un cartel para un concierto de jazz con el texto «Jazz en la terraza · 12 de julio»
-- **Avatar / perfil:** un avatar estilo 3D amable de una persona sonriente con gafas, fondo liso
-- **Portada con título:** la portada de un ebook de recetas veganas con el título «Verde y fácil»
+Tiene una preparación común («Antes de empezar») y 7 recetas concretas. Según la idea de la persona:
+1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
+2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
+3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
 
 ## Antes de empezar
 
-Pregunta a la persona: **¿La imagen tiene que llevar texto escrito?** Si dudas, elige «Sí»: te enseñamos la herramienta que mejor escribe letras. Si al final no lleva texto, funciona igual.
-
-Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
-
-## Pasos
-
-### 1. Prepara los ingredientes
-_5 min · crear cuentas_
-
-Vas a crear cuatro cuentas gratuitas. Con una cuenta de Microsoft o Google entras en casi todas.
-
-#### Pasos
+### 1. Crea tus cuentas
+_5 min · cuentas gratis_
 
 - Crea tu cuenta en [Claude](https://claude.ai).
 
 - Entra en [Bing Image Creator](https://www.bing.com/images/create) con una cuenta de Microsoft.
 
-- Crea tu cuenta en [Ideogram](https://ideogram.ai) (botón «Continue with Google»).
+- Crea tu cuenta en [Ideogram](https://ideogram.ai).
 
 - Crea tu cuenta en [Canva](https://www.canva.com).
 
-**✅ Comprobación:** tienes las cuatro pestañas abiertas y has entrado en todas.
+> 💡 Los límites gratuitos de cada herramienta cambian. Si te quedas sin créditos en una, prueba con la otra o espera al día siguiente.
 
-### 2. Pídele el prompt a Claude
-_5 min · la receta de la imagen_
+**✅ Comprobación:** has entrado en todas.
 
-Un **prompt** es la descripción que le das a la IA. Cuanto más concreto, mejor sale. Claude te lo escribe por ti.
+### 2. La fórmula de una buena descripción
+_3 min · cinco ingredientes_
 
-#### Pasos
+A la descripción que le das a la IA se le llama **prompt**. Una buena tiene cinco ingredientes:
 
-- Abre un chat nuevo en Claude.
-- Copia este mensaje y pégalo:
+- **Sujeto**: qué sale.
+- **Estilo**: acuarela, 3D, fotografía…
+- **Luz**: suave, de atardecer, de estudio.
+- **Colores**.
+- **Encuadre**: de cerca, desde arriba, de cuerpo entero.
 
-```text
-Quiero crear [la idea de la persona].
+> 💡 Describe lo que SÍ quieres. La IA entiende mal los «no»: en vez de «sin gente», escribe «una calle vacía».
 
-Escríbeme 3 prompts distintos para un generador de imágenes con IA. Cada uno debe describir: el sujeto, el estilo (por ejemplo acuarela, 3D, fotografía), la luz, los colores y el encuadre. La imagen lleva texto: pon el texto exacto entre comillas y dime dónde colocarlo. Escríbelos en inglés, que funciona mejor, y explícame en español qué cambia entre uno y otro.
-```
+**✅ Comprobación:** sabrías decir los cinco ingredientes.
 
-**¿Qué significa cada parte del mensaje?**
+### 3. Crea el proyecto «Mis imágenes»
+_3 min · las reglas_
 
-- **«Quiero crear…»**: tu idea. Cámbiala por la tuya.
-- **Sujeto, estilo, luz, colores, encuadre**: los cinco ingredientes de un buen prompt.
-- **Texto entre comillas**: así la IA sabe qué letras escribir exactamente.
-- **En inglés**: los generadores entienden mejor el inglés, pero te lo explica en español.
-
-> 💡 Describe lo que SÍ quieres. La IA entiende mal los «no»: en vez de «sin gente» escribe «una calle vacía».
-
-**✅ Comprobación:** Claude te ha dado tres prompts y entiendes la diferencia entre ellos.
-
-### 3. Hornea las primeras imágenes
-_5 min · generar_
-
-Pegas el prompt en el generador y en unos segundos te da varias versiones.
-
-#### Pasos
-
-- Abre **Ideogram**.
-
-- Pega el primer prompt de Claude y pulsa **Generate**.
-
-- Repite con los otros dos prompts.
-
-- Descarga las que más te gusten.
-
-> 💡 Cada generación tarda unos segundos. Si hay cola, espera un poco: no hace falta pulsar otra vez.
-
-**No me deja generar o me da error**
-
-- Algunas palabras están bloqueadas (violencia, famosos, marcas). Reformula con palabras neutras.
-- Si has gastado tus créditos del día, prueba mañana o usa la otra herramienta.
-- Revisa los límites gratuitos actuales en la página de cada herramienta.
-
-**✅ Comprobación:** tienes al menos 3 imágenes descargadas en tu ordenador o móvil.
-
-### 4. Ajusta la sazón
-_5 min · mejorar el resultado_
-
-Casi nunca sale perfecta a la primera. Elige la mejor y pídele a Claude que la mejore contigo.
-
-#### Pasos
-
-- Vuelve al mismo chat de Claude.
-- Pega este mensaje (puedes adjuntar la imagen):
+- En Claude crea un proyecto llamado **Mis imágenes**.
+- En sus instrucciones, pega:
 
 ```text
-Esta es la imagen que me ha salido con el prompt [pega el prompt]. Me gusta [lo que te gusta], pero quiero cambiar [lo que no te gusta]. Reescribe el prompt para corregirlo sin perder lo bueno.
+Me ayudas a crear imágenes con generadores de IA gratuitos (Bing Image Creator e Ideogram).
+
+Cuando te pida una imagen, escríbeme 3 prompts en inglés con sujeto, estilo, luz, colores y encuadre, y explícame en español qué cambia entre ellos. Si lleva texto, pon el texto exacto entre comillas. Cuando algo funcione, guárdalo en un bloque para reutilizarlo.
 ```
 
-> 💡 Cambia una sola cosa cada vez. Si cambias cinco a la vez, no sabrás cuál ha funcionado.
+**✅ Comprobación:** tienes el proyecto con sus instrucciones.
 
-**✅ Comprobación:** tienes una imagen que te gusta de verdad.
+## Recetas del libro
 
-### 5. Revisa las letras _(solo si la respuesta a «La imagen tiene que llevar texto escrito» es «Sí»)_
-_5 min · que el texto se lea bien_
+### Receta 1: Una ilustración con tu estilo
 
-Las IAs a veces escriben letras raras o con faltas. Hay que revisarlo con lupa.
+Para una camiseta, un cuento, tu web o una tarjeta.
 
-#### Pasos
+- ⏱ 20 min
+- 👩‍🍳 Fácil
+- 🎨 Ilustración
+- 🍽 Resultado: una ilustración que te gusta
+- Versión web: https://amri.es/recetas/imagenes-ia--ilustracion.html
+- Ideas de ejemplo:
+  - Cuento: una ilustración de cuento, colorida y amable, de un zorro leyendo en un bosque de otoño
+  - Camiseta: una ilustración sencilla y con fondo liso para estampar en una camiseta
+  - Para mi web: una ilustración plana y limpia para la portada de mi web
 
-- Lee el texto de la imagen letra por letra.
-
-- Si hay un error pequeño, en Ideogram usa **Remix** con el mismo prompt y el texto entre comillas.
-
-- Si sigue fallando, genera la imagen **sin texto** y añádelo después en Canva con la herramienta **Texto**.
-
-> 💡 El truco profesional: fondo con IA y letras en Canva. Queda perfecto y puedes cambiar el texto cuando quieras.
-
-**✅ Comprobación:** el texto se lee bien y no tiene faltas.
-
-### 6. Emplata y sirve
-_5 min · retocar y exportar_
-
-Canva te permite recortar, ajustar el tamaño para cada red y exportar en el formato correcto.
-
-#### Pasos
-
-- En Canva pulsa **Crear diseño** y elige el tamaño (post de Instagram, historia, A4…).
-
-- Pulsa **Subir** y arrastra tu imagen.
-
-- Ajusta brillo y contraste en **Editar foto** si hace falta.
-
-- Pulsa **Compartir → Descargar**: **PNG** para gráficos y **JPG** para fotos.
-
-**✅ Comprobación:** tienes tu imagen final descargada con el tamaño correcto.
-
-## Al terminar
-
-Ya tienes tus imágenes. Guarda los prompts que mejor te han salido: son tus recetas secretas para repetir el estilo cuando quieras. Más abajo tienes extras para ir más allá: el mismo personaje en varias imágenes, editar fotos que ya tienes, dibujar iconos con Claude y tu chuleta de estilos.
-
-## Extras (opcionales, después de servir)
-
-### Extra 1. Crea una serie con el mismo estilo
-_15 min · opcional_
-
-Si necesitas varias imágenes que parezcan de la misma familia (para una web o una campaña), reutiliza tu receta.
-
-#### Pasos
-
-- Guarda en una nota el prompt que mejor te salió.
-- Pídele a Claude:
+#### 1. Tres prompts
+_5 min · Claude escribe_
 
 ```text
-Este es mi prompt ganador: [pega el prompt]. Hazme 5 variaciones con sujetos distintos ([sujeto 1], [sujeto 2]...) pero manteniendo exactamente el mismo estilo, luz y colores.
+Quiero [la idea de la persona]. Dame 3 prompts con estilos distintos.
 ```
 
-> 💡 Usa siempre las mismas palabras de estilo. Cambiar «acuarela» por «pintura» ya cambia el resultado.
+**✅ Comprobación:** tienes 3 prompts y entiendes la diferencia.
 
-### Extra 2. El mismo personaje en varias imágenes
-_15 min · opcional_
+#### 2. Genera
+_5 min · el horno_
 
-Para una mascota de marca, un cuento o un cómic necesitas que el personaje sea siempre el mismo. El truco: una **ficha de personaje** y una **imagen de referencia**.
+- Abre **Bing Image Creator**, pega el primer prompt y pulsa **Crear**.
+- Repite con los otros dos.
+- Descarga la que más te guste.
 
-#### Pasos
+> 💡 Si te da error, puede que alguna palabra esté bloqueada (famosos, marcas). Reformula.
 
-- Pídele a Claude la ficha:
+**✅ Comprobación:** tienes una imagen favorita.
+
+#### 3. Ajusta
+_10 min · un cambio cada vez_
 
 ```text
-Mi personaje es [descríbelo]. Escríbeme una ficha de personaje en inglés para generadores de imágenes: rasgos de la cara, pelo, ropa con colores exactos, proporciones y estilo de dibujo. Después dame 4 prompts que reutilicen la ficha palabra por palabra, cada uno en una escena distinta: [escena 1], [escena 2]…
+Me ha salido esto con el prompt [pégalo]. Me gusta [qué], pero quiero cambiar [qué]. Reescribe el prompt cambiando solo eso.
 ```
 
-- Genera la primera imagen y quédate con la mejor: será tu **referencia**.
-- En las siguientes, pega la ficha completa y, si tu herramienta permite subir una imagen de referencia, sube esa.
+**✅ Comprobación:** tienes la ilustración como querías.
 
-> 💡 No cambies ni una palabra de la ficha. Cambia solo la escena: lo que hace el personaje y dónde está.
+**Al terminar:** Tienes tu ilustración. Guarda el prompt ganador para repetir el estilo.
 
-**✅ Comprobación:** tienes al menos 3 imágenes en las que se reconoce al mismo personaje.
+### Receta 2: Foto de producto realista
 
-### Extra 3. Edita una imagen que ya tienes
-_10 min · opcional_
+Tu producto en una escena bonita, como de catálogo.
 
-No siempre hay que empezar de cero: puedes quitar el fondo, borrar un objeto, ampliar el encuadre o cambiar una parte de una foto tuya.
+- ⏱ 20 min
+- 👩‍🍳 Fácil
+- 📸 Producto
+- 🍽 Resultado: una foto de producto para tu tienda o redes
+- Versión web: https://amri.es/recetas/imagenes-ia--producto.html
+- Ideas de ejemplo:
+  - Sobre una mesa: una foto de producto de mi taza de cerámica sobre una mesa de madera, con luz de mañana
+  - Fondo blanco: una foto de producto sobre fondo blanco puro, centrada y bien iluminada
+  - En uso: una foto de mi producto mientras alguien lo usa, en un ambiente acogedor
 
-#### Qué herramienta usar
-
-- **Quitar el fondo o borrar un objeto**: en Canva, sube la foto y abre **Editar**. Algunas de estas funciones son solo de Canva Pro.
-
-- **Ampliar o cambiar una zona**: en Ideogram, sube tu imagen y usa sus herramientas de edición para pintar la zona que quieres cambiar.
-
-- Antes de editar, pídele a Claude la instrucción exacta:
+#### 1. Describe tu producto con detalle
+_5 min · Claude escribe_
 
 ```text
-Te adjunto una foto. Quiero [quitar el fondo / ampliar el encuadre a lo ancho / cambiar la camiseta por una azul]. Dime qué herramienta gratuita me conviene, los pasos y el texto exacto que debo escribir en inglés para la zona que voy a cambiar.
+Quiero [la idea de la persona]. Mi producto es: [forma, tamaño, color, material]. Dame 3 prompts de fotografía de producto realista, con la luz y el encuadre de un catálogo profesional.
 ```
+
+**✅ Comprobación:** tienes 3 prompts.
+
+#### 2. Genera y elige
+_10 min · el horno_
+
+- Genera los 3 prompts en Bing Image Creator.
+- Elige la más realista y descárgala.
+
+> 💡 Una IA gratuita no puede copiar exactamente tu producto. Sirve para ideas, fondos y redes; para tu producto exacto, usa una foto de referencia (libro de Higgsfield).
+
+**✅ Comprobación:** tienes una foto que encaja con tu producto.
+
+#### 3. Ajusta el tamaño en Canva
+_5 min · emplatar_
+
+- En Canva, crea un diseño del tamaño que necesites y sube la imagen.
+- Descarga: **JPG** para fotos.
+
+**✅ Comprobación:** tienes la foto en el tamaño justo.
+
+**Al terminar:** Tienes tu foto. Si necesitas que sea tu producto exacto, mira el libro de Higgsfield: trabaja con tu foto de referencia.
+
+### Receta 3: Una imagen con texto: cartel o portada
+
+Carteles, portadas y anuncios con letras que se leen bien.
+
+- ⏱ 25 min
+- 👩‍🍳 Fácil
+- 🔤 Texto
+- 🍽 Resultado: un cartel o una portada sin faltas
+- Versión web: https://amri.es/recetas/imagenes-ia--con-texto.html
+- Ideas de ejemplo:
+  - Cartel: un cartel para un concierto de jazz con el texto «Jazz en la terraza · 12 de julio»
+  - Portada: la portada de un ebook de recetas veganas con el título «Verde y fácil»
+  - Anuncio: un anuncio para redes con el texto «Nueva colección»
+
+#### 1. El prompt con el texto entre comillas
+_5 min · Claude escribe_
+
+```text
+Quiero [la idea de la persona]. Dame 3 prompts para Ideogram, con el texto exacto entre comillas y dónde colocarlo.
+```
+
+**✅ Comprobación:** tienes 3 prompts con el texto entre comillas.
+
+#### 2. Genera en Ideogram
+_10 min · el pastelero_
+
+- Abre **Ideogram**, pega el prompt y genera.
+- Lee el texto letra por letra.
+- Si hay un error, usa **Remix** con el mismo prompt.
+
+**✅ Comprobación:** el texto se lee bien.
+
+#### 3. Si las letras siguen fallando
+_10 min · el truco profesional_
+
+Genera la imagen **sin texto** y añade las letras en Canva. Queda perfecto y lo puedes cambiar cuando quieras.
+
+```text
+Recomiéndame 2 tipografías gratuitas de Canva que encajen con esta imagen y dónde poner el texto.
+```
+
+**✅ Comprobación:** tienes la imagen final con el texto perfecto.
+
+**Al terminar:** Tu imagen con texto está lista y se lee perfecta.
+
+### Receta 4: Una serie con el mismo estilo
+
+Varias imágenes que parecen de la misma familia, para tu web o una campaña.
+
+- ⏱ 25 min
+- 👩‍🍳 Media
+- 🖼 Serie
+- 🍽 Resultado: 5 imágenes con el mismo estilo
+- Versión web: https://amri.es/recetas/imagenes-ia--serie.html
+- Ideas de ejemplo:
+  - Secciones de mi web: las secciones de mi web
+  - Una campaña: una campaña de redes de 5 publicaciones
+
+#### 1. Tu prompt ganador
+_5 min · el estilo_
+
+Parte de una imagen que ya te guste (de la receta «Una ilustración con tu estilo», por ejemplo).
+
+**✅ Comprobación:** tienes el prompt de esa imagen.
+
+#### 2. Las variaciones
+_10 min · Claude escribe_
+
+```text
+Este es mi prompt ganador: [pégalo]. Quiero una serie para [la idea de la persona]: hazme 5 variaciones con sujetos distintos ([sujeto 1], [sujeto 2]…), manteniendo exactamente el mismo estilo, luz y colores, palabra por palabra.
+```
+
+**✅ Comprobación:** tienes 5 prompts con el mismo estilo.
+
+#### 3. Genera y compara juntas
+_10 min · coherencia_
+
+- Genera las 5.
+- Ponlas juntas (en Canva, por ejemplo) y descarta la que desentone.
+
+**✅ Comprobación:** las 5 parecen de la misma familia.
+
+**Al terminar:** Tu serie es coherente. Guarda el prompt base: es el «sello» de tu marca.
+
+### Receta 5: El mismo personaje en varias imágenes
+
+Una mascota de marca o el protagonista de un cuento, reconocible en cada escena.
+
+- ⏱ 30 min
+- 👩‍🍳 Media
+- 🧸 Personaje
+- 🍽 Resultado: tu personaje en 3 escenas
+- Versión web: https://amri.es/recetas/imagenes-ia--personaje.html
+- Ideas de ejemplo:
+  - Mascota de marca: la mascota de mi marca
+  - Protagonista de cuento: el protagonista de un cuento infantil
+
+#### 1. La ficha del personaje
+_10 min · fijar rasgos_
+
+```text
+Quiero crear [la idea de la persona]: [descríbelo]. Escríbeme una ficha de personaje en inglés para generadores de imágenes: rasgos, pelo o pelaje, ropa con colores exactos, proporciones y estilo de dibujo. Después dame 3 prompts que reutilicen la ficha palabra por palabra, cada uno en una escena distinta.
+```
+
+**✅ Comprobación:** tienes la ficha y 3 prompts.
+
+#### 2. La imagen de referencia
+_10 min · la buena_
+
+- Genera la primera escena varias veces y quédate con la mejor: será tu **referencia**.
+
+**✅ Comprobación:** tienes la imagen de referencia.
+
+#### 3. Las demás escenas
+_10 min · coherencia_
+
+- En las siguientes, pega la ficha completa sin cambiar ni una palabra.
+- Si tu herramienta deja subir una imagen de referencia, sube la buena.
+
+> 💡 Para un personaje que salga siempre idéntico en vídeo, mira la receta «Un personaje que siempre sale igual» del libro de Higgsfield.
+
+**✅ Comprobación:** se reconoce al mismo personaje en las 3 escenas.
+
+**Al terminar:** Tu personaje se reconoce. Guarda su ficha en el proyecto «Mis imágenes».
+
+### Receta 6: Edita una foto que ya tienes
+
+Quita el fondo, borra un objeto o amplía el encuadre de una foto tuya.
+
+- ⏱ 15 min
+- 👩‍🍳 Fácil
+- ✂️ Edición
+- 🍽 Resultado: tu foto editada
+- Versión web: https://amri.es/recetas/imagenes-ia--editar.html
+- Ideas de ejemplo:
+  - Quitar el fondo: quitar el fondo
+  - Borrar un objeto: borrar un objeto o una persona del fondo
+  - Ampliar el encuadre: ampliar el encuadre a lo ancho
+
+#### 1. Pregunta qué herramienta usar
+_5 min · el camino_
+
+```text
+Te adjunto una foto. Quiero [la idea de la persona]. Dime qué herramienta gratuita me conviene (Canva o Ideogram), los pasos y, si hace falta, el texto exacto en inglés para la zona que voy a cambiar.
+```
+
+**✅ Comprobación:** sabes qué herramienta usar y cómo.
+
+#### 2. Edita
+_10 min · manos a la obra_
+
+- **Quitar el fondo o borrar un objeto**: en Canva, sube la foto y abre **Editar**. Algunas funciones son solo de Canva Pro.
+- **Ampliar o cambiar una zona**: en Ideogram, sube la imagen y usa sus herramientas de edición.
 
 > 💡 Edita solo fotos tuyas o con permiso. Nunca cambies la cara de una persona real ni hagas que parezca que dijo o hizo algo que no ocurrió.
 
 **✅ Comprobación:** tienes la versión editada y la original guardadas por separado.
 
-### Extra 4. Dibuja con Claude: iconos y gráficos
-_10 min · opcional_
+**Al terminar:** Tu foto está editada. Guarda siempre la original aparte.
 
-Claude no genera fotos, pero sí **dibuja con código**: iconos, logotipos sencillos, diagramas y fondos en formato **SVG**. Un SVG se ve nítido a cualquier tamaño y puedes cambiarle los colores cuando quieras.
+### Receta 7: Iconos y gráficos dibujados por Claude
 
-#### Pasos
+Claude dibuja con código (SVG): iconos y gráficos nítidos a cualquier tamaño.
 
-- En un chat de Claude, pega:
+- ⏱ 15 min
+- 👩‍🍳 Fácil
+- 🔷 SVG
+- 🍽 Resultado: un set de iconos coherentes
+- Versión web: https://amri.es/recetas/imagenes-ia--iconos.html
+- Ideas de ejemplo:
+  - Iconos para mi web: 6 iconos para las secciones de mi web
+  - Un diagrama: un diagrama sencillo que explique cómo funciona mi servicio en 4 pasos
+
+#### 1. Pídelos
+_5 min · Claude dibuja_
 
 ```text
-Dibújame en SVG un set de 6 iconos para [tu tema]: [icono 1], [icono 2]… Estilo de línea, trazo redondeado de 2 px, 24×24, todos coherentes. Muéstramelos juntos en un artefacto y dame el código de cada uno por separado.
+Dibújame en SVG [la idea de la persona]. Estilo de línea, trazo redondeado de 2 px, todos coherentes. Muéstramelos juntos y dame el código de cada uno por separado.
 ```
+
+**✅ Comprobación:** ves los iconos en el chat.
+
+#### 2. Ajusta y guarda
+_10 min · a tu gusto_
 
 - Pide cambios con palabras: «más grueso», «esquinas redondas», «usa mi color #E07A5F».
-- Copia el código de cada icono y guárdalo como `icono.svg`. Canva y casi cualquier web lo aceptan.
+- Copia el código de cada uno y guárdalo como `icono.svg`. Canva y casi cualquier web lo aceptan.
 
-> 💡 Para fotos e ilustraciones realistas usa los generadores de esta receta. Para iconos, diagramas y gráficos limpios, Claude es más preciso.
+**✅ Comprobación:** tienes tus iconos en SVG.
 
-**✅ Comprobación:** tienes tus iconos en SVG y se ven nítidos al ampliarlos.
+**Al terminar:** Tus iconos se ven nítidos a cualquier tamaño y puedes cambiarles el color cuando quieras.
 
-### Extra 5. Tu chuleta de estilos
-_10 min · opcional_
+## Al terminar
 
-Aprender a nombrar estilos es lo que más mejora tus imágenes. Hazte una chuleta probando el mismo sujeto en varios estilos.
+Tu cocina está lista. Elige la imagen que quieres hacer.
+
+## Extras (opcionales, después de servir)
+
+### Extra 1. Tu chuleta de estilos
+_Opcional · 10 min_
 
 ```text
-Hazme una chuleta de 12 estilos para generadores de imágenes, en una tabla: nombre del estilo en inglés, qué aspecto da, para qué lo usaría y 3 palabras clave que lo provocan. Incluye acuarela, 3D, fotografía de producto, flat, risograph, cine y pixel art. Después escribe un prompt base de «[la idea de la persona]» que pueda repetir cambiando solo el estilo.
+Hazme una chuleta de 12 estilos para generadores de imágenes, en una tabla: nombre del estilo en inglés, qué aspecto da, para qué lo usaría y 3 palabras clave que lo provocan.
 ```
 
-> 💡 Genera el mismo prompt en 4 estilos y guarda las imágenes juntas: verás de un vistazo cuál encaja con tu marca.
-
-**✅ Comprobación:** tienes tu chuleta guardada con un ejemplo de cada estilo que te gusta.
-
-### Extra 6. Úsalas con tranquilidad
+### Extra 2. Úsalas con tranquilidad
 _Siempre · consejos_
 
-Unas reglas sencillas para no llevarte sustos.
-
-- **Revisa las condiciones** de cada herramienta antes de un uso comercial: cambian con el tiempo.
-
-- **No imites a personas reales** ni marcas registradas.
-
-- **Revisa manos, ojos y detalles**: es donde la IA más se equivoca.
-
-- **Guarda tus prompts** en una carpeta: son tu recetario personal.
-
-**💡 Ideas para seguir cocinando**
-
-- Fondos para tu web o presentaciones.
-- Ilustraciones para un cuento infantil.
-- Mockups de producto antes de fabricarlo.
-- Iconos para tu app con el mismo estilo.
+- Revisa las condiciones de cada herramienta antes de un uso comercial: cambian con el tiempo.
+- No imites a personas reales ni marcas registradas.
+- Revisa manos, ojos y detalles: es donde la IA más se equivoca.
+- Guarda tus prompts: son tu recetario personal.
 
 ## Sigue con
 
