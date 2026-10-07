@@ -1,17 +1,17 @@
 ---
 name: automatiza-tareas
-description: "Receta de AMRI «Automatiza tareas aburridas con IA». Conecta tu correo, tu calendario y tus hojas de cálculo para que la IA haga el trabajo repetitivo por ti. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Automatiza tareas aburridas con IA». Cinco automatizaciones con Zapier: correos resumidos en una hoja, facturas a Drive, citas al calendario, formularios con aviso y mensajes clasificados. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Automatiza tareas aburridas con IA
 
-Conecta tu correo, tu calendario y tus hojas de cálculo para que la IA haga el trabajo repetitivo por ti.
+Cinco automatizaciones con Zapier: correos resumidos en una hoja, facturas a Drive, citas al calendario, formularios con aviso y mensajes clasificados.
 
-- ⏱ 45 min aprox.
-- 👩‍🍳 Sin saber programar
-- 💶 0 € para empezar
-- 🍽 Resultado: una tarea que se hace sola
+- 📕 5 recetas
+- ⏱ 25-40 min cada una
+- 💶 Gratis (con los límites del plan gratuito de Zapier)
+- 🍽 Resultado: tareas que se hacen solas
 - Categoría: Crea y publica
 - Versión web (con explicaciones y comunidad): https://amri.es/recetas/automatiza-tareas.html
 
@@ -34,195 +34,306 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 ## Ingredientes (todos gratuitos)
 
 - **Zapier**: el robot de cocina. Hace la tarea solo, una y otra vez.
-- **Tus apps** (Gmail, Google Drive, Sheets…): los fogones. Donde pasan las cosas.
-- **IA dentro de Zapier**: el cocinero. Lee y escribe el texto por ti.
+- **Tus apps** (Gmail, Google Drive, Sheets, Calendar…): donde pasan las cosas.
 - **Claude**: el jefe de cocina. Te ayuda a planificar y a resolver dudas.
 
-## Ideas de ejemplo
+## Este es un libro de recetas
 
-- **Guardar facturas:** cuando me llegue un correo con una factura adjunta, que el archivo se guarde en una carpeta de Google Drive
-- **Eventos al calendario:** cuando un correo mencione una cita con fecha y hora, que se cree el evento en mi calendario
-- **Formulario a hoja:** cuando alguien rellene mi formulario, que se apunte en una hoja y me llegue un aviso por correo
-- **Clasificar mensajes:** cuando me llegue un correo de un cliente, que la IA lo clasifique (duda, queja, pedido) y me avise solo de los urgentes
+Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Según la idea de la persona:
+1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
+2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
+3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
 
 ## Antes de empezar
 
-Pregunta a la persona: **¿Necesita la IA para leer, resumir o escribir texto?** Si dudas, elige «Sí»: añadiremos un paso de IA. Si no hace falta, lo puedes quitar al final.
+### 1. Crea tus cuentas
+_5 min · gratis_
 
-Si responde «No», sáltate los pasos marcados con _(solo si la respuesta… es «Sí»)_ y adapta los demás a esa respuesta.
-
-## Pasos
-
-### 1. Prepara los ingredientes
-_5 min · crear cuentas_
-
-Vas a crear dos cuentas gratuitas. Con tu cuenta de Google entras en ambas.
-
-#### Pasos
-
-- Crea tu cuenta en [Zapier](https://zapier.com/sign-up) (botón «Sign up with Google»).
-
+- Crea tu cuenta en [Zapier](https://zapier.com) (botón «Sign up with Google»).
 - Crea tu cuenta en [Claude](https://claude.ai).
-
-- Asegúrate de tener acceso a las apps que vas a usar (por ejemplo Gmail y Google Sheets).
 
 **✅ Comprobación:** has entrado en Zapier y en Claude.
 
-### 2. Pídele el plan a Claude
-_5 min · diseñar la automatización_
-
-Toda automatización tiene un **disparador** (lo que pasa) y una o varias **acciones** (lo que se hace). Claude te lo dibuja paso a paso.
-
-#### Pasos
-
-- Abre un chat nuevo en Claude.
-- Copia este mensaje y pégalo:
-
-```text
-Quiero automatizar esto con Zapier: [la idea de la persona].
-
-Explícame paso a paso cómo montar el Zap: qué disparador elegir, qué acciones añadir y qué campos rellenar en cada una. Incluye un paso de IA y escríbeme las instrucciones exactas que debo darle. Explícamelo con palabras simples, como si nunca hubiera usado Zapier.
-```
-
-**¿Qué significa cada palabra?**
+### 2. Cómo funciona una automatización
+_3 min · la idea_
 
 - **Zap**: el nombre que Zapier da a cada automatización.
-- **Disparador (trigger)**: el momento en que empieza. Ejemplo: «llega un correo».
-- **Acción (action)**: lo que hace Zapier. Ejemplo: «añade una fila».
-- **Paso de IA**: un ayudante que lee o escribe texto en medio del proceso.
+- **Disparador** (_trigger_): el momento en que empieza. Ejemplo: «llega un correo».
+- **Acción** (_action_): lo que hace Zapier. Ejemplo: «añade una fila».
+- **Paso de IA**: un ayudante que lee o escribe texto en medio.
 
-**✅ Comprobación:** tienes un plan claro con el disparador y las acciones.
+**✅ Comprobación:** sabrías explicar qué es un disparador y una acción.
 
-### 3. Enciende el fuego: el disparador
-_10 min · cuándo empieza_
+### 3. Tu ayudante para montar Zaps
+_3 min · un proyecto_
 
-Le dices a Zapier qué tiene que vigilar.
-
-#### Pasos
-
-- En Zapier pulsa **+ Create → Zaps**.
-
-- Pulsa **Trigger** y elige: `Gmail → New Email`.
-
-- Pulsa **Sign in** para conectar tu cuenta y autoriza.
-
-- Pulsa **Test trigger**: Zapier buscará un ejemplo real.
-
-> 💡 Para correos, crea antes una etiqueta en Gmail (por ejemplo «automatizar») y elige que solo vigile esa. Así controlas qué entra.
-
-**✅ Comprobación:** el test encuentra un ejemplo real (un correo, una respuesta…).
-
-### 4. Añade al cocinero: el paso de IA _(solo si la respuesta a «Necesita la IA para leer, resumir o escribir texto» es «Sí»)_
-_10 min · leer y escribir_
-
-La IA recibe el texto del disparador y lo transforma: resume, clasifica o extrae datos.
-
-#### Pasos
-
-- Pulsa **+** debajo del disparador y busca **AI by Zapier**.
-
-- Elige la opción para analizar o transformar texto.
-
-- En las instrucciones pega esto (y ajústalo a tu caso):
+- En Claude crea un proyecto **Mis automatizaciones**.
+- En sus instrucciones, pega:
 
 ```text
-Lee el siguiente texto y devuelve: 1) un resumen en 3 puntos, 2) la categoría (duda, queja, pedido u otro), 3) si es urgente (sí/no), 4) la fecha si aparece alguna. Texto:
+Me ayudas a montar automatizaciones en Zapier aunque nunca lo haya usado. Explícame cada paso con palabras simples: qué disparador elegir, qué acciones añadir y qué campos rellenar. Si algo falla, pídeme el mensaje de error.
 ```
 
-- Al final del mensaje, pulsa el botón **+** para insertar el campo **Body** (el cuerpo del correo).
-- Pulsa **Test step**.
+**✅ Comprobación:** tienes el proyecto.
+
+## Recetas del libro
+
+### Receta 1: Correos importantes resumidos en una hoja
+
+Cuando llega un correo con una etiqueta, la IA lo resume en 3 puntos y lo apunta en Google Sheets.
+
+- ⏱ 40 min
+- 👩‍🍳 Media
+- 📧 Gmail + IA + Sheets
+- 🍽 Resultado: una hoja que se rellena sola
+- Versión web: https://amri.es/recetas/automatiza-tareas--resumir-correos.html
+- Ideas de ejemplo:
+  - De clientes: los correos de clientes
+  - De proveedores: los correos de proveedores
+
+#### 1. Prepara la etiqueta y la hoja
+_5 min · antes_
+
+- En Gmail, crea una etiqueta llamada **automatizar** y pónsela a un correo de ejemplo de [la idea de la persona].
+- En Google Sheets, crea una hoja con estos títulos en la primera fila: **Fecha, De, Asunto, Resumen**.
+
+**✅ Comprobación:** tienes la etiqueta con un correo de ejemplo y la hoja.
+
+#### 2. El disparador
+_10 min · cuándo empieza_
+
+- En Zapier pulsa **+ Create → Zaps**.
+- Pulsa **Trigger** y elige **Gmail → New Labeled Email** (o «New Email» con la etiqueta).
+- Conecta tu cuenta y elige la etiqueta **automatizar**.
+- Pulsa **Test trigger**.
+
+**✅ Comprobación:** el test encuentra tu correo de ejemplo.
+
+#### 3. El paso de IA
+_10 min · resumir_
+
+- Pulsa **+** y busca **AI by Zapier**. Elige la opción de analizar o transformar texto.
+- En las instrucciones pega esto y, al final, inserta con **+** el campo **Body** del correo:
+
+```text
+Resume este correo en 3 puntos cortos, en español. Si aparece una fecha o un importe, inclúyelo. Correo:
+```
 
 **No encuentro AI by Zapier**
 
-- Busca «ChatGPT» o «Claude» entre las apps: también sirven, aunque piden una clave propia.
-- Pregúntale a Claude qué opción de IA está disponible en tu plan de Zapier.
+- Busca «Claude» o «ChatGPT» entre las apps: también sirven, aunque piden una clave propia.
+- Pregunta en tu proyecto de Claude qué opción de IA está disponible en tu plan.
 
-**✅ Comprobación:** el test te devuelve el resumen y la categoría del ejemplo.
+**✅ Comprobación:** el test devuelve el resumen del ejemplo.
 
-### 5. Sirve el plato: la acción final
-_5 min · qué se hace_
+#### 4. La acción y la prueba
+_15 min · encender_
 
-Ahora dices dónde acaba el resultado.
+- Pulsa **+** y elige **Google Sheets → Create Spreadsheet Row**.
+- Elige tu hoja y rellena cada columna con **+**: fecha, remitente, asunto y el resumen de la IA.
+- Pulsa **Test step** y luego **Publish**.
+- Etiqueta un correo nuevo y espera unos minutos.
 
-#### Pasos
+**✅ Comprobación:** aparece una fila nueva con el resumen, sin que hagas nada.
 
-- Pulsa **+** y elige: `Google Sheets → Create Spreadsheet Row`.
+**Al terminar:** Cada correo con la etiqueta se resume y se apunta solo.
 
-- Conecta tu cuenta si te lo pide.
+### Receta 2: Facturas adjuntas guardadas en Drive
 
-- Rellena cada campo pulsando **+** y eligiendo el dato de los pasos anteriores (por ejemplo, el resumen de la IA).
+Cuando llega un correo con una factura adjunta, el archivo se guarda solo en una carpeta.
 
-- Pulsa **Test step**.
+- ⏱ 25 min
+- 👩‍🍳 Fácil
+- 🧾 Gmail + Drive
+- 🍽 Resultado: tus facturas en una carpeta, solas
+- Versión web: https://amri.es/recetas/automatiza-tareas--facturas-drive.html
+- Ideas de ejemplo:
+  - Todas las facturas: todas las facturas que llegan con la etiqueta
+  - De un proveedor: las facturas de un proveedor concreto
 
-> 💡 Si vas a usar una hoja de cálculo, créala antes con los títulos en la primera fila: Fecha, De, Resumen… Zapier los reconocerá.
+#### 1. Prepara la etiqueta y la carpeta
+_5 min · antes_
 
-**✅ Comprobación:** ves el resultado de prueba en su sitio (la fila, el archivo, el evento…).
+- En Gmail, crea un filtro que ponga la etiqueta **facturas** a [la idea de la persona] (pide ayuda a Claude si no sabes crear filtros).
+- En Google Drive, crea una carpeta **Facturas**.
 
-### 6. Prueba antes de servir
-_5 min · encender_
+**✅ Comprobación:** tienes la etiqueta y la carpeta.
 
-Toca activarlo y probarlo con un caso real.
+#### 2. El disparador
+_10 min · cuándo_
 
-#### Pasos
+- En Zapier crea un Zap con el disparador **Gmail → New Attachment**.
+- Elige la etiqueta **facturas** y pulsa **Test trigger**.
 
-- Pulsa **Publish** para activar el Zap.
+**✅ Comprobación:** el test encuentra un adjunto de ejemplo.
 
-- Provoca el disparador de verdad (envíate un correo, rellena el formulario…).
+#### 3. La acción y la prueba
+_10 min · encender_
 
-- Espera unos minutos y comprueba el resultado.
+- Añade **Google Drive → Upload File**, elige la carpeta **Facturas** y, en el archivo, el adjunto del paso anterior.
+- Pulsa **Test step** y luego **Publish**.
 
-- Revisa en **Zap history** que aparece en verde.
+**✅ Comprobación:** la factura de prueba aparece en la carpeta.
 
-> 💡 Los planes gratuitos tienen un límite de tareas al mes y pueden tardar unos minutos en reaccionar. Revisa los límites actuales en la página de precios de Zapier.
+**Al terminar:** Tus facturas se guardan solas. Revisa la carpeta a fin de mes.
 
-**✅ Comprobación:** el caso real llega solo a su sitio sin que hagas nada.
+### Receta 3: Citas de los correos al calendario
+
+Cuando un correo menciona una cita con fecha y hora, la IA la extrae y crea el evento.
+
+- ⏱ 35 min
+- 👩‍🍳 Media
+- 📅 Gmail + IA + Calendar
+- 🍽 Resultado: eventos creados solos
+- Versión web: https://amri.es/recetas/automatiza-tareas--citas-calendario.html
+- Ideas de ejemplo:
+  - De clientes: las citas que me piden los clientes
+  - Médicos y gestiones: las confirmaciones de citas médicas y gestiones
+
+#### 1. El disparador
+_10 min · cuándo_
+
+- Pon la etiqueta **citas** a un correo de ejemplo de [la idea de la persona].
+- En Zapier, disparador **Gmail → New Labeled Email** con esa etiqueta. Pulsa **Test trigger**.
+
+**✅ Comprobación:** el test encuentra tu correo.
+
+#### 2. Que la IA saque la fecha
+_10 min · leer_
+
+- Añade **AI by Zapier** y pega estas instrucciones, insertando el **Body** al final:
+
+```text
+Del siguiente correo, extrae: título de la cita, fecha de inicio (formato AAAA-MM-DD HH:MM), duración en minutos y lugar. Si falta algo, deja el campo vacío. Correo:
+```
+
+**✅ Comprobación:** el test devuelve los datos de la cita.
+
+#### 3. Crea el evento
+_15 min · encender_
+
+- Añade **Google Calendar → Create Detailed Event** y rellena título, inicio y lugar con los datos de la IA.
+- Pulsa **Test step** y luego **Publish**.
+
+> 💡 Añade un **Filter** antes del evento: que siga solo si la IA ha encontrado fecha.
+
+**✅ Comprobación:** el evento de prueba aparece en tu calendario.
+
+**Al terminar:** Las citas llegan solas a tu calendario. Revísalas de vez en cuando: la IA puede equivocarse con una fecha.
+
+### Receta 4: Formulario a hoja, con aviso
+
+Cuando alguien rellena tu formulario, se apunta en una hoja y te llega un correo.
+
+- ⏱ 25 min
+- 👩‍🍳 Fácil
+- 📋 Forms + Sheets + Gmail
+- 🍽 Resultado: respuestas ordenadas y aviso al momento
+- Versión web: https://amri.es/recetas/automatiza-tareas--formulario-hoja.html
+- Ideas de ejemplo:
+  - Inscripciones: mi formulario de inscripción
+  - Contacto: mi formulario de contacto
+
+#### 1. El formulario
+_5 min · Google Forms_
+
+- Crea [la idea de la persona] en [Google Forms](https://forms.google.com) (pide a Claude las preguntas si no las tienes).
+- Respóndelo una vez tú para tener un ejemplo.
+
+**✅ Comprobación:** tienes el formulario con una respuesta de prueba.
+
+#### 2. Disparador y hoja
+_10 min · apuntar_
+
+- En Zapier, disparador **Google Forms → New Form Response**. Test.
+- Acción **Google Sheets → Create Spreadsheet Row** con cada respuesta en su columna.
+
+**✅ Comprobación:** la respuesta de prueba aparece en la hoja.
+
+#### 3. El aviso
+_10 min · enterarte_
+
+- Añade **Gmail → Send Email** a tu propio correo, con el nombre y la respuesta en el texto.
+- Pulsa **Publish** y rellena el formulario otra vez.
+
+**✅ Comprobación:** te llega el correo de aviso y la fila nueva.
+
+**Al terminar:** Cada respuesta se apunta sola y te avisa.
+
+### Receta 5: Clasifica mensajes y avísame de lo urgente
+
+La IA lee cada correo de cliente, lo clasifica (duda, queja, pedido) y solo te avisa de lo urgente.
+
+- ⏱ 40 min
+- 👩‍🍳 Media
+- ⚖️ IA + filtro
+- 🍽 Resultado: solo te enteras de lo urgente
+- Versión web: https://amri.es/recetas/automatiza-tareas--clasificar.html
+- Ideas de ejemplo:
+  - Correos de clientes: los correos de clientes
+  - Soporte: los correos de soporte
+
+#### 1. El disparador
+_10 min · cuándo_
+
+- Etiqueta como **clasificar** [la idea de la persona] (con un filtro de Gmail).
+- En Zapier, disparador **Gmail → New Labeled Email**. Test.
+
+**✅ Comprobación:** el test encuentra un correo de ejemplo.
+
+#### 2. Que la IA clasifique
+_10 min · decidir_
+
+- Añade **AI by Zapier** con estas instrucciones (inserta el **Body** al final):
+
+```text
+Lee el correo y responde solo con: categoría (duda, queja, pedido u otro), urgente (sí/no) y un resumen de una frase. Es urgente si hay un problema con un pedido pagado o si el cliente está muy enfadado. Correo:
+```
+
+**✅ Comprobación:** el test devuelve la categoría y si es urgente.
+
+#### 3. Filtro y aviso
+_20 min · solo lo urgente_
+
+- Añade **Filter**: que siga solo si «urgente» contiene «sí».
+- Añade **Gmail → Send Email** a ti con la categoría y el resumen.
+- Pulsa **Publish** y pruébalo con un correo urgente y otro que no lo sea.
+
+**✅ Comprobación:** solo te llega el aviso del urgente.
+
+**Al terminar:** Ya solo te llegan avisos de lo urgente. Para clasificar a gran escala, mira el libro de Jev.
 
 ## Al terminar
 
-Tu tarea ya se hace sola. Cada vez que ocurra el disparador, Zapier hará el trabajo por ti. Más abajo tienes dos extras: encadenar más pasos y qué hacer si algo falla.
+Tu cocina está lista. Elige la primera tarea que quieres quitarte de encima.
 
 ## Extras (opcionales, después de servir)
 
-### Extra 1. Encadena más pasos
-_15 min · opcional_
+### Extra 1. Si algo se quema
+_Siempre · solucionar errores_
 
-Cuando la primera funcione, puedes añadirle más cosas: filtros, avisos o más acciones.
+Zapier te avisa por correo cuando algo falla y guarda el historial.
 
-#### Ideas
-
-- **Filter**: que siga solo si se cumple una condición (por ejemplo «urgente = sí»).
-
-- **Aviso**: un correo o mensaje cuando pase algo importante.
-
-- **Segunda acción**: además de apuntarlo, guardarlo en otra app.
+- Abre **Zap history** y pulsa la ejecución en rojo.
+- Copia el error y pégalo en Claude:
 
 ```text
-Tengo este Zap funcionando: [describe los pasos]. Quiero añadir: [tu mejora]. Dime exactamente qué pasos añadir y dónde.
+Mi Zap da este error: [pega el error]. El Zap hace esto: [describe los pasos]. ¿Cómo lo arreglo? Explícamelo paso a paso.
 ```
+
+### Extra 2. Encadena más pasos
+_Opcional_
+
+- **Filter**: que siga solo si se cumple una condición («urgente = sí»).
+- **Aviso**: un correo o mensaje cuando pase algo importante.
+- **Segunda acción**: además de apuntarlo, guardarlo en otra app.
 
 > 💡 Un cambio cada vez. Prueba el Zap después de cada mejora.
 
-### Extra 2. Si algo se quema
-_Siempre · solucionar errores_
+### Extra 3. Límites del plan gratuito
+_Siempre · tenlo en cuenta_
 
-No te asustes: Zapier te avisa por correo cuando algo falla y guarda el historial.
-
-- Abre **Zap history** y pulsa sobre la ejecución en rojo.
-
-- Copia el mensaje de error.
-
-- Pídele ayuda a Claude:
-
-```text
-Mi Zap de Zapier da este error: [pega el error]. El Zap hace esto: [describe los pasos]. ¿Cómo lo arreglo? Explícamelo paso a paso.
-```
-
-**💡 Otras tareas que puedes automatizar**
-
-- Guardar en una hoja los nuevos suscriptores.
-- Recordatorios automáticos a clientes antes de una cita.
-- Publicar en redes cuando subes una entrada al blog.
-- Un resumen diario de tus correos importantes.
+Los planes gratuitos de Zapier tienen un límite de tareas al mes y pueden tardar unos minutos en reaccionar. Revisa los límites actuales en su página de precios.
 
 ## Sigue con
 
