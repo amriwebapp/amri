@@ -37,6 +37,9 @@ const RECETAS = [
   {slug:"primer-agente",f:"auto",emoji:"🤖",bg:"#FFE4D6",bg2:"#FBF6EE",n:1,svg:1,top:1}
 ];
 const IDX = Object.fromEntries(RECETAS.map((r,i)=>[r.slug,i]));
+// Libros: recetas de dentro de cada libro (lo genera tools/shells.py)
+const LIBROS = window.AMRI_LIBROS || {};
+const subs = slug => LIBROS[slug] || [];
 const PATHS = [
   {ic:"🌱",r:["empieza-aqui","asistente-ia","imagenes-ia","logo-ia"]},
   {ic:"🔌",r:["gmail-calendario","notion-cerebro","canva-diseno","navegador-chrome","slack-equipo"]},
@@ -196,12 +199,12 @@ function renderGrid(){
   const list=RECETAS.map((r,i)=>Object.assign({},r,I18N.card(i)))
     .sort((a,b)=>(b.top||0)-(a.top||0))
     .filter(r=>filter==="all"||(filter==="conn"?r.c:CAT_OF[r.slug]===filter))
-    .filter(r=>!query||norm(r.titulo+" "+r.desc+" "+r.tag).includes(norm(query)));
+    .filter(r=>!query||norm(r.titulo+" "+r.desc+" "+r.tag+" "+subs(r.slug).map(x=>x.t+" "+x.d).join(" ")).includes(norm(query)));
   if(!list.length){grid.innerHTML=`<div class="empty">${T("empty")}</div>`;return;}
   grid.innerHTML=list.map((r,i)=>`
     <a class="card" href="recetas/${r.slug}.html" style="transition-delay:${Math.min(i,8)*.07}s">
       <div class="card-thumb" style="background:linear-gradient(135deg,${r.bg},${r.bg2})">
-        <span class="tag">${esc(r.tag)}</span>${r.c?`<span class="conn">🔌 ${esc(T("card_conn"))}</span>`:""}${r.n?`<span class="new">${T("new")}</span>`:""}
+        <span class="tag">${esc(r.tag)}</span>${subs(r.slug).length?`<span class="conn book">📕 ${subs(r.slug).length} recetas</span>`:r.c?`<span class="conn">🔌 ${esc(T("card_conn"))}</span>`:""}${r.n?`<span class="new">${T("new")}</span>`:""}
         ${r.emoji}
         <img src="img/${r.slug}.${r.svg?"svg":"jpg"}" alt="" loading="lazy" onerror="nextImg(this)">
         <div class="tools-badge" data-tools="${r.slug}"></div>
@@ -231,7 +234,7 @@ function observe(els){els.forEach(el=>RM?el.classList.add("in"):io.observe(el));
 const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,to=+el.dataset.count;
   if(RM){el.textContent=to;return;}const t0=performance.now(),D=1800;
   const step=t=>{const p=clamp((t-t0)/D,0,1);el.textContent=Math.round(to*(1-Math.pow(1-p,4)));if(p<1)requestAnimationFrame(step);};requestAnimationFrame(step);}),{threshold:.6});
-$$("[data-recipes]").forEach(el=>el.dataset.count=RECETAS.length);
+$$("[data-recipes]").forEach(el=>el.dataset.count=RECETAS.reduce((n,r)=>n+(subs(r.slug).length||1),0));
 $$("[data-count]").forEach(el=>{el.textContent="0";cio.observe(el);});
 
 /* ---------- Máquina de escribir ---------- */

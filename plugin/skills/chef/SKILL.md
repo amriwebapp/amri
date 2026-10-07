@@ -49,7 +49,7 @@ Ayudas a la persona a construir **su propio proyecto** combinando recetas de AMR
 - `amri:automatiza-tareas` · **Automatiza tareas aburridas con IA**: Conecta tu correo, tu calendario y tus hojas de cálculo para que la IA haga el trabajo repetitivo por ti.
 
 ### Estudio creativo
-- `amri:higgsfield-cine` · **Imágenes y vídeos de cine con Higgsfield**: Conecta Higgsfield a Claude y crea fotos de producto, anuncios y clips cinematográficos hablando en español.
+- `amri:higgsfield-cine` · **Imágenes y vídeos de cine con Higgsfield**: Un libro con 7 recetas: foto de producto, vídeo realista, vídeo UGC, animación, foto a vídeo, personajes y anuncios. Hablando en español con Claude.
 - `amri:video-aftereffects` · **Edita vídeo con Claude y After Effects**: Conecta Claude con After Effects y crea intros, títulos y anuncios animados dándole órdenes en español.
 - `amri:blender-3d` · **Crea 3D con Claude y Blender**: Conecta Claude con Blender y crea objetos, escenas y animaciones en 3D sin saber modelar.
 - `amri:redes-sociales` · **Tus redes sociales con Claude**: Instagram, TikTok, LinkedIn y X con tu propia voz: perfiles afinados, una idea adaptada a cada red y un mes planificado. Claude escribe; tú publicas.
