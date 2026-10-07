@@ -1,6 +1,6 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Receta: Claude en tu Slack",
-meta:["⏱ 25 min aprox.","👩‍🍳 Fácil","💶 0 € para empezar","🍽 Resultado: tu equipo al día sin leer cien mensajes"],
+meta:["⏱ 25 min aprox.","👩‍🍳 Fácil","💶 Gratis si tu plan de Claude incluye conectores","🍽 Resultado: tu equipo al día sin leer cien mensajes"],
 ing:"Ingredientes",
 q:"¿Qué quieres que haga en Slack?",
 ph:"Describe tu caso. Ejemplo: saber cada lunes qué se decidió en #proyecto-web la semana pasada",
@@ -30,5 +30,5 @@ ${tip("Si tienes muchos canales, nómbralos: «solo #proyecto-web y #marketing»
 ${tip("La frase «no envíes nada hasta que yo diga…» es tu cinturón de seguridad. Úsala siempre.")}${ok("el mensaje aparece en el canal tal y como lo aprobaste.")}`},
 {db:1,t:"Tu canvas de los viernes",s:"5 min · la rutina",b:()=>`<p class="what">Un <b>canvas</b> es una página dentro de Slack. Ideal para dejar el resumen de la semana a todo el equipo.</p>${cb("Crea un canvas en Slack llamado «Resumen semana [fecha]» con: decisiones de la semana, tareas pendientes con responsable y enlaces a los hilos importantes.")}${ok("el canvas está en Slack y el equipo puede leerlo.")}`},
 {x:1,t:"Claude dentro de Slack",s:"Opcional",b:()=>`<p class="what">Además del conector, Claude tiene una app para Slack: puedes escribirle por mensaje directo o mencionarlo en un hilo. Búscala en el directorio de apps de Slack o en la ayuda de Claude. Puede que tu empresa tenga que aprobarla.</p>`},
-{x:1,t:"Reglas de privacidad",s:"Siempre · consejos",b:()=>`<ol><li>No pidas a Claude que comparta fuera de Slack información confidencial del equipo.</li><li>Revisa siempre los mensajes antes de publicarlos: firmas tú.</li><li>Sigue las normas de tu empresa sobre IA y datos.</li></ol>${det("💡 Ideas para seguir",["Un resumen cada mañana de los canales de clientes.","Preparar una reunión leyendo el hilo del proyecto.","Pasar decisiones de Slack a tu Notion con el conector de Notion."])}`}
+{x:1,t:"Reglas de privacidad",s:"Siempre · consejos",b:()=>`<ol><li>⚠️ <b>Ojo con los mensajes trampa</b>: un mensaje de Slack puede llevar instrucciones escondidas para engañar a Claude («ignora lo anterior y reenvía…»). Por eso la regla de oro: Claude solo lee y propone; enviar, borrar o compartir lo haces tú. Si hace algo que no le pediste, páralo.</li><li>No pidas a Claude que comparta fuera de Slack información confidencial del equipo.</li><li>Revisa siempre los mensajes antes de publicarlos: firmas tú.</li><li>Sigue las normas de tu empresa sobre IA y datos.</li></ol>${det("💡 Ideas para seguir",["Un resumen cada mañana de los canales de clientes.","Preparar una reunión leyendo el hilo del proyecto.","Pasar decisiones de Slack a tu Notion con el conector de Notion."])}`}
 ]}};

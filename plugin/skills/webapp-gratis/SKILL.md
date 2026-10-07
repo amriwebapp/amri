@@ -1,14 +1,14 @@
 ---
 name: webapp-gratis
-description: "Receta de AMRI «Tu webapp online y gratis». Crea y publica una webapp completa con Claude, GitHub y Cloudflare, sin costes y sin programar. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Tu web online y gratis». Crea y publica una webapp completa con Claude, GitHub y Cloudflare, sin costes y sin programar. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
-# Tu webapp online y gratis
+# Tu web online y gratis
 
 Crea y publica una webapp completa con Claude, GitHub y Cloudflare, sin costes y sin programar.
 
-- ⏱ 1 hora aprox.
+- ⏱ 1-2 horas, a tu ritmo
 - 👩‍🍳 Sin saber programar
 - 💶 0 € para empezar
 - 🍽 Resultado: tu web online, a tu medida
@@ -25,7 +25,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 - Antes de empezar, resume el plan en 3-5 puntos y pide confirmación.
 - **Haz tú todo lo que puedas** con tus herramientas: crear y editar archivos, la terminal, git, `gh`, `npx wrangler`, npm y los conectores (MCP) que estén disponibles. Los pasos de abajo están escritos para alguien que usa Claude en el chat: adáptalos. Donde diga «copia este mensaje y pégalo en Claude», haz tú directamente lo que pide el mensaje.
 - **Lo hace la persona, nunca tú:** crear cuentas, iniciar sesión, autorizar accesos, aceptar condiciones y pagar. Dile exactamente qué pulsar, lanza el inicio de sesión de la herramienta cuando exista (`gh auth login`, `npx wrangler login`…) y espera a que confirme.
-- No pidas, no escribas y no guardes en el código contraseñas ni claves secretas. Las claves públicas (como la «anon» de Supabase) sí pueden ir en el código; las secretas, solo en variables de entorno.
+- No pidas, no escribas y no guardes en el código contraseñas ni claves secretas. Las claves públicas (como la «publicable» de Supabase, antes llamada «anon») sí pueden ir en el código; las secretas, solo en variables de entorno.
 - Pide permiso antes de cualquier acción que publique algo o no tenga vuelta atrás: subir a GitHub, desplegar, borrar.
 - Después de cada paso, comprueba su **✅ Comprobación** antes de seguir. Si falla, averigua por qué y arréglalo; si no puedes, explícalo y propón una salida.
 - Trabaja en una carpeta nueva con un nombre corto sacado de la idea, salvo que la persona ya esté dentro de su proyecto.
@@ -101,7 +101,15 @@ Hazla como una web sencilla con tres archivos: index.html, styles.css y app.js. 
 
 > 💡 Si algo no te gusta, díselo con tus palabras: «hazlo más oscuro», «pon el botón más grande».
 
-**✅ Comprobación:** Claude te ha enseñado los tres archivos y te los ha explicado.
+#### Baja los archivos a tu ordenador
+
+- Crea en tu ordenador una carpeta llamada **mi-app**.
+- En el chat, cada archivo tiene un botón de **descargar**. Pulsa en cada uno y guárdalo en **mi-app**.
+- ¿No ves el botón? Pídele: «Dame los archivos en un .zip para descargar». Descomprímelo dentro de **mi-app**.
+
+> 💡 Si vas a usar el conector de GitHub (paso siguiente), Claude puede subir los archivos él solo. Descargarlos igualmente te deja una copia.
+
+**✅ Comprobación:** tienes los archivos de tu web dentro de la carpeta mi-app de tu ordenador.
 
 ### 3. Conecta Claude con tus herramientas
 _5 min · conectores_
@@ -110,7 +118,7 @@ Un conector es un permiso para que Claude use GitHub y Supabase por ti, sin copi
 
 #### Pasos
 
-- En Claude ve a **Ajustes → Conectores**.
+- En Claude abre **Personalizar → Conectores** (en inglés: **Customize → Connectors**).
 - Pulsa **Conectar** junto a GitHub y autoriza con tu cuenta.
 - Haz lo mismo con Supabase.
 
@@ -152,15 +160,17 @@ Tu web necesita dos datos para hablar con tu base de datos: una dirección y una
 
 - En Supabase abre **Project Settings → API**.
 
-- Copia la **Project URL** y la clave **anon public**.
+- Copia la **Project URL** y la **clave publicable** (_publishable key_; en proyectos antiguos se llama **anon public**).
 
 - Ábrelas en el archivo `config.js` y pégalas donde Claude indicó. Si no sabes dónde, pregúntale.
 
-- Haz doble clic en `index.html` para probarla en tu ordenador.
+- Guarda el archivo. La probarás de verdad cuando esté publicada (paso «Publica tu web»).
 
-> 💡 ⚠️ Nunca uses la clave **service_role** en tu web: da acceso total a tus datos.
+> 💡 Si abres `index.html` con doble clic, el diseño se verá, pero crear cuentas puede fallar: los navegadores limitan las webs abiertas como archivo. Es normal; online funcionará.
 
-**✅ Comprobación:** puedes crear una cuenta en tu web y guardar un dato de prueba.
+> 💡 ⚠️ Nunca uses la clave **secreta** (_secret_ o **service_role**) en tu web: da acceso total a tus datos.
+
+**✅ Comprobación:** config.js tiene tu Project URL y tu clave publicable.
 
 ### 6. Guarda todo en GitHub
 _5 min · subir los archivos_
@@ -186,17 +196,18 @@ Cloudflare Pages coge tu repositorio y lo convierte en una web pública con cand
 
 #### Pasos
 
-- En Cloudflare abre **Workers & Pages → Create → Pages → Connect to Git**.
+- En Cloudflare abre **Workers & Pages → Create** y elige importar un repositorio de GitHub (**Import a repository** o **Connect to Git**).
 
 - Elige el repositorio **mi-app**.
 
 - Deja vacío «Build command» y pon `/` en «Build output directory».
 
-- Pulsa **Save and Deploy** y espera 1-2 minutos.
+- Pulsa **Save and Deploy** (o **Deploy**) y espera 1-2 minutos.
+- Si ves pantallas distintas a estas, haz una captura, pégala en Claude y pregúntale qué poner.
 
-- En Supabase, **Authentication → URL Configuration**: pega tu dirección `.pages.dev` en «Site URL».
+- En Supabase, **Authentication → URL Configuration**: pega la dirección de tu web en «Site URL».
 
-**✅ Comprobación:** abres tu dirección `mi-app.pages.dev` y tu web carga.
+**✅ Comprobación:** abres tu dirección (termina en `.pages.dev` o `.workers.dev`) y tu web carga.
 
 ### 8. Prueba antes de servir
 _5 min · revisión final_
@@ -208,7 +219,7 @@ Antes de compartirla, comprueba que todo funciona y es seguro.
 - Abre tu web desde el móvil y crea una cuenta.
 
 - Crea otra cuenta con otro correo y comprueba que **no ve los datos de la primera**.
-- Revisa que en tu código solo aparece la clave **anon**.
+- Revisa que en tu código solo aparece la clave **publicable**.
 
 - Si más adelante usas la API de Claude u otra clave secreta, guárdala en un Worker de Cloudflare, nunca en la web.
 

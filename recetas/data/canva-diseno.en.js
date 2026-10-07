@@ -1,6 +1,6 @@
 (window.RECIPE=window.RECIPE||{}).en={
 title:"Recipe: design in Canva by talking to Claude",
-meta:["⏱ About 25 min","👩‍🍳 Easy","💶 €0 (free Canva)","🍽 Result: editable designs in your Canva"],
+meta:["⏱ About 25 min","👩‍🍳 Easy","💶 Free if your Claude plan includes connectors","🍽 Result: editable designs in your Canva"],
 ing:"Ingredients (all free)",
 q:"What do you want to design?",
 ph:"Describe your design. Example: an A4 poster for my neighbourhood market on Saturday the 12th, with times and address",

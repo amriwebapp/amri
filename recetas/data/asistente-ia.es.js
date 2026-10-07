@@ -39,7 +39,7 @@ ${tip("⚠️ No subas contraseñas, datos bancarios ni datos personales de otra
 ${tip("Si algo no te gusta, díselo: «más corto», «más formal», «sin emojis». Y luego pídele: «añade esto a tus instrucciones».")}${ok("la respuesta te sirve casi sin tocarla.")}`},
 {t:"Guarda tus atajos",s:"3 min · tu libreta de mensajes",b:()=>`<p class="what">Los mensajes que repites a menudo son oro. Guárdalos para pegarlos en un segundo.</p><h3>Pasos</h3><ol><li>Copia en tu nota los mensajes que mejor te han funcionado.</li><li>Pídele a Claude que te sugiera más:</li></ol>${cb("Según lo que sabes de mí, dame 5 mensajes cortos que podría usar a diario contigo para ahorrar tiempo. Déjalos listos para copiar.")}${ok("tienes al menos 5 atajos guardados en tu nota.")}`},
 {x:1,t:"Conéctalo con tus apps",s:"10 min · opcional",b:()=>`<p class="what">Con los <b>conectores</b>, Claude puede leer tu correo, tu calendario o tus documentos de Google sin copiar y pegar.</p><h3>Pasos</h3><ol>
-<li>En Claude ve a <b>Ajustes → Conectores</b>.</li>
+<li>En Claude abre <b>Personalizar → Conectores</b> (en inglés: <b>Customize → Connectors</b>).</li>
 <li>Pulsa <b>Conectar</b> junto a la app que quieras y autoriza.</li>
 <li>Prueba: «¿Qué tengo en el calendario mañana?».</li></ol>
 ${tip("Conecta solo lo que necesites. Puedes desconectar cualquier app cuando quieras desde el mismo sitio.")}`},

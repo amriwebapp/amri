@@ -10,7 +10,7 @@ Claude lee tu diseño de Figma y lo convierte en una web que funciona, fiel a co
 
 - ⏱ 1 hora aprox.
 - 👩‍🍳 Dificultad media
-- 💶 0 € para empezar
+- 💶 Gratis si tu plan de Claude incluye conectores
 - 🍽 Resultado: tu diseño convertido en web
 - Categoría: Crea y publica
 - Versión web (con explicaciones y comunidad): https://amri.es/recetas/figma-a-web.html
@@ -25,7 +25,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 - Antes de empezar, resume el plan en 3-5 puntos y pide confirmación.
 - **Haz tú todo lo que puedas** con tus herramientas: crear y editar archivos, la terminal, git, `gh`, `npx wrangler`, npm y los conectores (MCP) que estén disponibles. Los pasos de abajo están escritos para alguien que usa Claude en el chat: adáptalos. Donde diga «copia este mensaje y pégalo en Claude», haz tú directamente lo que pide el mensaje.
 - **Lo hace la persona, nunca tú:** crear cuentas, iniciar sesión, autorizar accesos, aceptar condiciones y pagar. Dile exactamente qué pulsar, lanza el inicio de sesión de la herramienta cuando exista (`gh auth login`, `npx wrangler login`…) y espera a que confirme.
-- No pidas, no escribas y no guardes en el código contraseñas ni claves secretas. Las claves públicas (como la «anon» de Supabase) sí pueden ir en el código; las secretas, solo en variables de entorno.
+- No pidas, no escribas y no guardes en el código contraseñas ni claves secretas. Las claves públicas (como la «publicable» de Supabase, antes llamada «anon») sí pueden ir en el código; las secretas, solo en variables de entorno.
 - Pide permiso antes de cualquier acción que publique algo o no tenga vuelta atrás: subir a GitHub, desplegar, borrar.
 - Después de cada paso, comprueba su **✅ Comprobación** antes de seguir. Si falla, averigua por qué y arréglalo; si no puedes, explícalo y propón una salida.
 - Trabaja en una carpeta nueva con un nombre corto sacado de la idea, salvo que la persona ya esté dentro de su proyecto.
@@ -197,7 +197,7 @@ _Siempre · revisa esto_
 
 ## Sigue con
 
-- `/amri:webapp-gratis` · Tu webapp online y gratis
+- `/amri:webapp-gratis` · Tu web online y gratis
 - `/amri:chatbot-web` · Un chatbot para tu web
 - `/amri:automatiza-tareas` · Automatiza tareas aburridas con IA
 - `/amri:chef` · combina varias recetas en un proyecto propio

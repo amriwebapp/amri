@@ -230,7 +230,32 @@ def jev_guardian():
     path = f'<path d="M400 300 C420 300 430 300 440 300 M760 320 C780 320 790 320 810 320" stroke="{INK}" stroke-width="5" stroke-dasharray="8 10" stroke-linecap="round"/>'
     return frame(path + left + bad + ok + shield, "#E3E8F7", "#E7F0E4")
 
+def empieza():
+    # poste con tres flechas y una burbuja de «hola»: el primer paso
+    post = f'<rect x="586" y="250" width="28" height="352" rx="10" fill="{WOOD2}" {S}/>'
+    signs = f'<path d="M620 270 H800 L840 305 L800 340 H620Z" fill="{TERR}" {S}/><path d="M650 305 H780" stroke="{CREAM}" stroke-width="10" stroke-linecap="round"/>'
+    signs += f'<path d="M580 370 H410 L370 405 L410 440 H580Z" fill="{SAGE}" {S}/><path d="M430 405 H550" stroke="{CREAM}" stroke-width="10" stroke-linecap="round"/>'
+    signs += f'<path d="M620 470 H770 L805 500 L770 530 H620Z" fill="{GOLD}" {S}/><path d="M650 500 H740" stroke="{CREAM}" stroke-width="10" stroke-linecap="round"/>'
+    bubble = f'<g transform="rotate(-4 290 230)"><path d="M190 160 H390 Q420 160 420 190 V260 Q420 290 390 290 H270 L235 325 L238 290 H190 Q160 290 160 260 V190 Q160 160 190 160Z" fill="{CREAM}" {S}/><path d="M200 210 H370 M200 245 H320" stroke="{INK}" stroke-width="8" stroke-linecap="round" opacity=".45"/></g>'
+    sprout = f'<path d="M900 600 C900 560 900 540 900 520" {S} fill="none"/><path d="M900 540 C870 520 850 520 840 500 C870 495 890 505 900 530Z" fill="{SAGE}" {S}/><path d="M900 525 C930 500 950 500 965 480 C935 475 910 490 900 515Z" fill="{SAGE}" {S}/>'
+    return frame(post + signs + bubble + sprout, "#E7F0E4", "#FBE3D2")
+
+def agente():
+    # ayudante con lista de tareas marcadas y una carpeta
+    body = f'<rect x="470" y="330" width="260" height="230" rx="40" fill="{PEACH}" {S}/>'
+    head = f'<rect x="490" y="180" width="220" height="160" rx="50" fill="{CREAM}" {S}/><circle cx="560" cy="260" r="16" fill="{INK}"/><circle cx="640" cy="260" r="16" fill="{INK}"/><path d="M570 300 Q600 318 630 300" fill="none" {S}/>'
+    head += f'<path d="M600 180 V140" {S}/><circle cx="600" cy="130" r="14" fill="{GOLD}" {S}/>'
+    lst = f'<g transform="rotate(4 880 360)"><rect x="790" y="240" width="190" height="250" rx="16" fill="{CREAM}" {S}/>'
+    for i,(y,c) in enumerate([(295,SAGE),(355,SAGE),(415,CREAM)]):
+        lst += f'<rect x="815" y="{y-17}" width="34" height="34" rx="8" fill="{c}" {S}/>'
+        if c==SAGE: lst += f'<path d="M822 {y} L830 {y+8} L843 {y-8}" fill="none" stroke="{CREAM}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>'
+        lst += f'<path d="M866 {y} H950" stroke="{INK}" stroke-width="7" stroke-linecap="round" opacity=".45"/>'
+    lst += '</g>'
+    folder = f'<g transform="rotate(-5 300 470)"><path d="M190 400 H270 L295 425 H410 Q425 425 425 440 V560 Q425 575 410 575 H205 Q190 575 190 560Z" fill="{SKY}" {S}/><path d="M190 450 H425" {S}/></g>'
+    arms = f'<path d="M730 420 C770 410 780 380 790 370" fill="none" {S}/><path d="M470 430 C440 440 430 460 425 480" fill="none" {S}/>'
+    return frame(folder + arms + body + head + lst, "#FFE4D6", "#E7F0E4")
+
 for slug, fn in {"higgsfield-cine":higgsfield,"canva-diseno":canva,"figma-a-web":figma,"notion-cerebro":notion,
-                 "gmail-calendario":gmail,"claude-chrome":chrome,"skills-claude":skills,"conector-propio":conector,"slack-equipo":slack,"gurusup-brain":gurusup,"redes-sociales":instagram,"animaciones-opus":animacion,"jev-decisiones":jev_decisiones,"jev-guardian":jev_guardian}.items():
+                 "gmail-calendario":gmail,"navegador-chrome":chrome,"skills-propias":skills,"conector-propio":conector,"slack-equipo":slack,"gurusup-brain":gurusup,"redes-sociales":instagram,"animaciones-opus":animacion,"jev-decisiones":jev_decisiones,"jev-guardian":jev_guardian,"empieza-aqui":empieza,"primer-agente":agente}.items():
     open(os.path.join(OUT, slug + ".svg"), "w").write(fn())
     print("ok", slug)

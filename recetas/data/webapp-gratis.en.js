@@ -1,6 +1,6 @@
 (window.RECIPE=window.RECIPE||{}).en={
-title:"Recipe: your web app, online and free",
-meta:["⏱ About 1 hour","👩‍🍳 No coding needed","💶 €0 to get started","🍽 Result: your website online, made to measure"],
+title:"Recipe: your website, online and free",
+meta:["⏱ 1-2 hours, at your own pace","👩‍🍳 No coding needed","💶 €0 to get started","🍽 Result: your website online, made to measure"],
 ing:"Ingredients (all free)",
 q:"What do you want to make?",
 ph:"Describe your website in your own words. Example: a website for my gym with timetables and a sign-up form",
@@ -31,9 +31,9 @@ ${DB()?`<li>Create your account on <a href="https://supabase.com" target="_blank
 <li><b>index.html, styles.css, app.js</b>: the page, its look and how it works.</li>
 ${DB()?`<li><b>Supabase</b>: where the data and accounts will be stored.</li><li><b>config.js</b>: a file where you'll paste your Supabase “keys” later.</li>`:""}
 <li><b>“As if I didn't know how to code”</b>: so Claude explains it simply.</li></ul></details>
-<div class="tip">If you don't like something, tell it in your own words: “make it darker”, “make the button bigger”.</div>${ok("Claude has shown you the three files and explained them.")}`},
+<div class="tip">If you don't like something, tell it in your own words: “make it darker”, “make the button bigger”.</div><h3>Download the files to your computer</h3><ol><li>Create a folder on your computer called <b>my-app</b>.</li><li>In the chat, each file has a <b>download</b> button. Click each one and save it in <b>my-app</b>.</li><li>Can't see the button? Ask: “Give me the files in a .zip to download”. Unzip it inside <b>my-app</b>.</li></ol><div class="tip">If you'll use the GitHub connector (next step), Claude can upload the files itself. Downloading them anyway gives you a copy.</div>${ok("you have your website files inside the my-app folder on your computer.")}`},
 {t:"Connect Claude to your tools",s:"5 min · connectors",b:()=>`<p class="what">A connector is a permission for Claude to use GitHub${DB()?" and Supabase":""} for you, without copying and pasting. It works with MCP, the standard that lets Claude use external tools.</p><h3>Steps</h3><ol>
-<li>In Claude go to <b>Customize → Connectors</b>.</li><li>Click <b>Connect</b> next to GitHub and authorise it with your account.</li>${DB()?"<li>Do the same with Supabase.</li>":""}</ol>
+<li>In Claude open <b>Customize → Connectors</b>.</li><li>Click <b>Connect</b> next to GitHub and authorise it with your account.</li>${DB()?"<li>Do the same with Supabase.</li>":""}</ol>
 <div class="tip">If your plan doesn't show connectors, don't worry: every next step has a manual alternative.</div>${ok(DB()?"GitHub and Supabase show as “Connected”.":"GitHub shows as “Connected”.")}`},
 {db:1,t:"Let Claude set up the database",s:"5 min · create the tables",b:()=>`<p class="what">A table is like a spreadsheet where your data is stored. Claude creates it for you, with security so <b>each user only sees their own data</b>.</p><h3>Steps</h3><ol>
 <li>In Supabase click <b>New project</b>, name it and choose a nearby region. Wait a couple of minutes.</li>
@@ -44,23 +44,23 @@ ${DB()?`<li><b>Supabase</b>: where the data and accounts will be stored.</li><li
 <li>In Supabase open <b>SQL Editor</b>, paste the code and click <b>Run</b>.</li></ul></details>${ok("in Supabase, in <b>Table Editor</b>, you see your table with security (RLS) enabled.")}`},
 {db:1,t:"Plug the website into Supabase",s:"5 min · the two keys",b:()=>`<p class="what">Your website needs two pieces of information to talk to your database: an address and a public key.</p><h3>Steps</h3><ol>
 <li>In Supabase open <b>Project Settings → API</b>.</li>
-<li>Copy the <b>Project URL</b> and the <b>anon public</b> key (or the publishable key).</li>
+<li>Copy the <b>Project URL</b> and the <b>publishable key</b> (in older projects it's called <b>anon public</b>).</li>
 <li>Open the <code>config.js</code> file and paste them where Claude said. If you're not sure where, ask it.</li>
-<li>Double-click <code>index.html</code> to try it on your computer.</li></ol>
-<div class="tip">⚠️ Never use the <b>service_role</b> (secret) key on your website: it gives full access to your data.</div>${ok("you can create an account on your website and save a test item.")}`},
+<li>Save the file. You'll test it for real once it's published (step “Publish your website”).</li></ol><div class="tip">If you open <code>index.html</code> by double-clicking, the design will show, but creating accounts may fail: browsers limit websites opened as files. That's normal; it will work online.</div>
+<div class="tip">⚠️ Never use the <b>service_role</b> (secret) key on your website: it gives full access to your data.</div>${ok("config.js has your Project URL and your publishable key.")}`},
 {t:"Save everything on GitHub",s:"5 min · upload the files",b:()=>`<p class="what">You upload your 3 files to GitHub. Cloudflare will read them from there to publish your website.</p><h3>With the connector</h3><ol><li>Tell Claude: “Create a repository called my-app and upload these files”.</li></ol>
 <details><summary>Without the connector: by hand</summary><ul>
 <li>On GitHub click <b>New repository</b> and call it <b>my-app</b>.</li>
 <li>Click <b>uploading an existing file</b>, drag in your files and confirm with <b>Commit changes</b>.</li></ul></details>${ok("you see your files inside the my-app repository on GitHub.")}`},
 {t:"Publish your site on Cloudflare",s:"10 min · put it online",b:()=>`<p class="what">Cloudflare Pages takes your repository and turns it into a public website with a padlock (HTTPS).</p><h3>Steps</h3><ol>
-<li>In Cloudflare open <b>Workers &amp; Pages → Create → Pages → Connect to Git</b>.</li>
+<li>In Cloudflare open <b>Workers &amp; Pages → Create</b> and choose to import a GitHub repository (<b>Import a repository</b> or <b>Connect to Git</b>).</li>
 <li>Choose the <b>my-app</b> repository.</li>
 <li>Leave “Build command” empty and put <code>/</code> in “Build output directory”.</li>
-<li>Click <b>Save and Deploy</b> and wait 1-2 minutes.</li>
-${DB()?"<li>In Supabase, <b>Authentication → URL Configuration</b>: paste your <code>.pages.dev</code> address into “Site URL”.</li>":""}</ol>${ok("you open your <code>my-app.pages.dev</code> address and your website loads.")}`},
+<li>Click <b>Save and Deploy</b> (or <b>Deploy</b>) and wait 1-2 minutes.</li><li>If your screens look different, take a screenshot, paste it into Claude and ask what to enter.</li>
+${DB()?"<li>In Supabase, <b>Authentication → URL Configuration</b>: paste your website address into “Site URL”.</li>":""}</ol>${ok("you open your address (it ends in <code>.pages.dev</code> or <code>.workers.dev</code>) and your website loads.")}`},
 {t:"Taste before serving",s:"5 min · final check",b:()=>`<p class="what">Before sharing it, check that everything works and is secure.</p><h3>Steps</h3><ol>
 <li>Open your website on your phone and create an account.</li>
-${DB()?`<li>Create another account with a different email and check it <b>can't see the first one's data</b>.</li><li>Check that only the <b>anon</b>/publishable key appears in your code.</li>`:`<li>Check that links, images and buttons work.</li>`}
+${DB()?`<li>Create another account with a different email and check it <b>can't see the first one's data</b>.</li><li>Check that only the <b>publishable</b> key appears in your code.</li>`:`<li>Check that links, images and buttons work.</li>`}
 <li>If you later use the Claude API or any other secret key, keep it in a Cloudflare Worker, never on the website.</li></ol>
 <div class="tip">${DB()?"Free Supabase projects pause after a week without use and reactivate with one click. Check the current limits on their pricing pages.":"Check the current Cloudflare Pages limits on its pricing page."}</div>${ok(DB()?"two different users see different data.":"your website looks good on mobile and everything works.")}`}
 ,

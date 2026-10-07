@@ -1,6 +1,6 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Receta: diseña en Canva hablando con Claude",
-meta:["⏱ 25 min aprox.", "👩‍🍳 Fácil", "💶 0 € (Canva gratis)", "🍽 Resultado: diseños editables en tu Canva"],
+meta:["⏱ 25 min aprox.", "👩‍🍳 Fácil", "💶 Gratis si tu plan de Claude incluye conectores", "🍽 Resultado: diseños editables en tu Canva"],
 ing:"Ingredientes (todos gratuitos)",
 q:"¿Qué quieres diseñar?",
 ph:"Describe tu diseño. Ejemplo: un cartel A4 para el mercadillo de mi barrio del sábado 12, con horario y dirección",

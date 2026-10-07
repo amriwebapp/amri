@@ -207,3 +207,7 @@
 .plg-u .cmd code{white-space:normal;overflow-wrap:anywhere;line-height:1.5}
 .plg-u .cmd button{align-self:flex-start}
 [dir=rtl] .plg-u .cmd button{align-self:flex-end}
+
+/* v19 · requisitos del plugin, bien visibles */
+.plg-req{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;color:var(--ink);max-width:720px}
+.plg-req a{color:var(--acc)}

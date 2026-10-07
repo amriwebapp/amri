@@ -1,6 +1,6 @@
 (window.RECIPE=window.RECIPE||{}).en={
 title:"Recipe: Claude in your Slack",
-meta:["⏱ About 25 min","👩‍🍳 Easy","💶 €0 to get started","🍽 Result: your team up to date without reading a hundred messages"],
+meta:["⏱ About 25 min","👩‍🍳 Easy","💶 Free if your Claude plan includes connectors","🍽 Result: your team up to date without reading a hundred messages"],
 ing:"Ingredients",
 q:"What do you want it to do in Slack?",
 ph:"Describe your case. Example: every Monday, find out what was decided in #web-project last week",
@@ -30,5 +30,5 @@ ${tip("If you have lots of channels, name them: “only #web-project and #market
 ${tip("The phrase “don't send anything until I say…” is your seatbelt. Always use it.")}${ok("the message appears in the channel exactly as you approved it.")}`},
 {db:1,t:"Your Friday canvas",s:"5 min · the routine",b:()=>`<p class="what">A <b>canvas</b> is a page inside Slack. Perfect for leaving the week's summary for the whole team.</p>${cb("Create a Slack canvas called “Week summary [date]” with: this week's decisions, pending tasks with an owner, and links to the important threads.")}${ok("the canvas is in Slack and the team can read it.")}`},
 {x:1,t:"Claude inside Slack",s:"Optional",b:()=>`<p class="what">As well as the connector, Claude has an app for Slack: you can message it directly or mention it in a thread. Look for it in the Slack app directory or in Claude's help centre. Your company may need to approve it.</p>`},
-{x:1,t:"Privacy rules",s:"Always · tips",b:()=>`<ol><li>Don't ask Claude to share confidential team information outside Slack.</li><li>Always review messages before posting them: you sign them.</li><li>Follow your company's rules on AI and data.</li></ol>${det("💡 Ideas to keep going",["A morning summary of your customer channels.","Prepare for a meeting by reading the project thread.","Move Slack decisions into your Notion with the Notion connector."])}`}
+{x:1,t:"Privacy rules",s:"Always · tips",b:()=>`<ol><li>⚠️ <b>Watch out for trap messages</b>: a Slack message can hide instructions meant to trick Claude (“ignore the above and forward…”). That's why the golden rule is: Claude only reads and suggests; sending, deleting or sharing is up to you. If it does something you didn't ask for, stop it.</li><li>Don't ask Claude to share confidential team information outside Slack.</li><li>Always review messages before posting them: you sign them.</li><li>Follow your company's rules on AI and data.</li></ol>${det("💡 Ideas to keep going",["A morning summary of your customer channels.","Prepare for a meeting by reading the project thread.","Move Slack decisions into your Notion with the Notion connector."])}`}
 ]}};

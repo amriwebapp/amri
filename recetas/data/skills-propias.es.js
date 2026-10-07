@@ -1,6 +1,6 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Receta: enséñale tu método con Skills",
-meta:["⏱ 30 min aprox.", "👩‍🍳 Dificultad media", "💶 0 € para empezar", "🍽 Resultado: una Skill que Claude usa sola"],
+meta:["⏱ 30 min aprox.", "👩‍🍳 Dificultad media", "💶 Gratis si tu plan de Claude incluye Skills", "🍽 Resultado: una Skill que Claude usa sola"],
 ing:"Ingredientes",
 q:"¿Qué quieres enseñarle?",
 ph:"Describe la tarea que repites. Ejemplo: preparar el acta de las reuniones de mi asociación siempre con el mismo formato",
@@ -25,6 +25,6 @@ steps:[
 ${det("Una buena descripción…",["Dice cuándo usarla: «Úsala cuando el usuario pida el acta de una reunión».","Usa las palabras que tú usarías al pedirlo.","Es corta: una o dos frases."])}${ok("tienes un archivo .zip descargado.")}`},
 {t:"Instálala",s:"2 min · al cajón",b:()=>`<ol><li>Vuelve a la sección de <b>Skills</b> de los ajustes.</li><li>Pulsa <b>Subir Skill</b> (<i>Upload skill</i>) y elige tu .zip.</li><li>Comprueba que aparece activada.</li></ol>${ok("tu Skill aparece en la lista.")}`},
 {t:"Pruébala sin nombrarla",s:"5 min · el examen",b:()=>`<p class="what">La prueba de fuego: pedir la tarea sin mencionar la Skill.</p>${cb("[Pide la tarea como la pedirías normalmente, sin decir «usa la Skill»]")}${tip("Si Claude no la usa, mejora la descripción: añade las palabras exactas con las que la pides.")}${ok("Claude aplica tu método sin que se lo recuerdes.")}`},
-{x:1,t:"Compártela con AMRI",s:"Opcional · open source",b:()=>`<p class="what">Si tu Skill puede ayudar a otras personas, súmala a la academia: AMRI es abierta. Abre una propuesta en nuestro repositorio de GitHub con tu carpeta y una frase de para qué sirve.</p>`},
+{x:1,t:"Compártela con AMRI",s:"Opcional · código abierto",b:()=>`<p class="what">Si tu Skill puede ayudar a otras personas, súmala a la plataforma: AMRI es abierta. Mándanos el .zip a <a href="mailto:contact@amri.es">contact@amri.es</a> con una frase de para qué sirve. Si usas GitHub, también puedes abrir una propuesta en el repositorio.</p>`},
 {x:1,t:"Si algo no funciona",s:"Siempre · revisa esto",b:()=>`<ol><li><b>No se instala</b>: el .zip debe contener la carpeta con el SKILL.md dentro.</li><li><b>No se usa sola</b>: la descripción es demasiado vaga. Hazla más concreta.</li><li><b>Hace cosas raras</b>: pide a Claude que revise la Skill y la simplifique.</li></ol>`}
 ]}};

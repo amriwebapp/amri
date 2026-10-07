@@ -1,10 +1,10 @@
 ---
 name: conector-propio
-description: "Receta de AMRI «Cocina tu propio conector MCP». Crea un conector sencillo para que Claude use tus propios datos o tu propia app. Claude escribe el código. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Cocina tu propio conector». Crea un conector sencillo para que Claude use tus propios datos o tu propia app. Claude escribe el código. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
-# Cocina tu propio conector MCP
+# Cocina tu propio conector
 
 Crea un conector sencillo para que Claude use tus propios datos o tu propia app. Claude escribe el código.
 
@@ -25,7 +25,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 - Antes de empezar, resume el plan en 3-5 puntos y pide confirmación.
 - **Haz tú todo lo que puedas** con tus herramientas: crear y editar archivos, la terminal, git, `gh`, `npx wrangler`, npm y los conectores (MCP) que estén disponibles. Los pasos de abajo están escritos para alguien que usa Claude en el chat: adáptalos. Donde diga «copia este mensaje y pégalo en Claude», haz tú directamente lo que pide el mensaje.
 - **Lo hace la persona, nunca tú:** crear cuentas, iniciar sesión, autorizar accesos, aceptar condiciones y pagar. Dile exactamente qué pulsar, lanza el inicio de sesión de la herramienta cuando exista (`gh auth login`, `npx wrangler login`…) y espera a que confirme.
-- No pidas, no escribas y no guardes en el código contraseñas ni claves secretas. Las claves públicas (como la «anon» de Supabase) sí pueden ir en el código; las secretas, solo en variables de entorno.
+- No pidas, no escribas y no guardes en el código contraseñas ni claves secretas. Las claves públicas (como la «publicable» de Supabase, antes llamada «anon») sí pueden ir en el código; las secretas, solo en variables de entorno.
 - Pide permiso antes de cualquier acción que publique algo o no tenga vuelta atrás: subir a GitHub, desplegar, borrar.
 - Después de cada paso, comprueba su **✅ Comprobación** antes de seguir. Si falla, averigua por qué y arréglalo; si no puedes, explícalo y propón una salida.
 - Trabaja en una carpeta nueva con un nombre corto sacado de la idea, salvo que la persona ya esté dentro de su proyecto.
@@ -200,10 +200,22 @@ _Siempre · importante_
 - No pongas contraseñas ni claves dentro del código: usa variables de entorno.
 - Instala solo conectores de fuentes en las que confíes.
 
+### Extra 4. Sin tocar archivos de configuración
+_Opcional · con un clic_
+
+Claude Desktop también instala conectores como **extensiones**: un archivo que se abre con doble clic, sin editar `claude_desktop_config.json`.
+
+- En Claude Desktop abre **Ajustes → Extensiones** (_Settings → Extensions_) para ver las que ya existen.
+- Para el tuyo, pídele a Claude:
+
+```text
+Empaqueta mi servidor MCP de la carpeta mi-conector como extensión de Claude Desktop (archivo .mcpb) y explícame cómo instalarla con doble clic.
+```
+
+> 💡 Así puedes pasarle tu conector a otra persona sin explicarle cómo editar archivos.
+
 ## Sigue con
 
+- `/amri:primer-agente` · Tu primer agente: Claude trabaja por ti
 - `/amri:skills-propias` · Enséñale tu método con Skills
-- `/amri:gurusup-brain` · El cerebro de tu empresa con GuruSup
-- `/amri:jev-decisiones` · Decisiones automáticas con Jev
-- `/amri:jev-guardian` · Un guardián para tu chatbot con Jev
 - `/amri:chef` · combina varias recetas en un proyecto propio

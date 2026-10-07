@@ -1,12 +1,12 @@
-# AMRI · Academia abierta de IA
+# AMRI · Plataforma abierta de IA
 
-Academia gratuita y open source para aprender a crear con IA usando Claude y sus conectores (MCP).
+Plataforma gratuita y open source para aprender a crear con IA usando Claude y sus conectores (MCP).
 La propia web es un ejemplo: está hecha con Claude siguiendo sus propias recetas.
 
 ## Estructura
 
 ```
-index.html            Portada (academia)
+index.html            Portada
 i18n.js               Textos en español, inglés y árabe
 assets/academia.css   Estilos y animaciones de la portada
 assets/academia.js    Animaciones de scroll, órbita, categorías, «cómo funciona», recetario
@@ -50,10 +50,14 @@ tools/                Scripts para regenerar ilustraciones y recetas nuevas
 
 ## Añadir una receta
 
-1. Crea `recetas/data/<slug>.es.js` (y `.en.js`, `.ar.js`) copiando uno existente, y ejecuta `python3 tools/shells.py` para generar la página.
-2. Añade su `slug` a `RECETAS` (y, si quieres, a `PATHS`) en `assets/academia.js`, y a `ORDER` en `assets/receta.js`.
-3. Añade su tarjeta (título, descripción, chips) en `cards` de `i18n.js`, en el mismo orden.
-4. Pon su imagen en `img/<slug>.jpg` o `img/<slug>.svg`.
+1. Crea `recetas/data/<slug>.es.js` (y `.en.js`, `.ar.js`, con las mismas opciones y el mismo número de pasos) copiando uno existente.
+2. Añade el `slug` **al final** de estas listas (el orden debe ser el mismo en todas, porque la tarjeta se busca por posición):
+   `RECETAS` en `assets/academia.js` · `ORDER` (y `SVG`) en `assets/receta.js` · `order` (y `svg`) en `assets/datos.js` · `ORDER` en `tools/plugin.js` · `ORDER` en `plugin.html`.
+3. Añade su tarjeta al final de `cards` en `i18n.js`, en los tres idiomas. El tercer chip es el precio: *Gratis*, *Según tu plan*, *Plan de pago* o *De pago*.
+4. Ponla en una categoría (`PATHS` en `assets/academia.js` y `paths` en `assets/datos.js`, `CATS` en `tools/plugin.js`), en `META`/`ORDER`/`NEEDS` de `assets/construir.js` y en `TOOLS` de `assets/logos.js`.
+5. Pon su imagen en `img/<slug>.svg` (con `python3 tools/gen_thumbs.py`) o `img/<slug>.jpg`.
+6. Ejecuta `python3 tools/shells.py` y `node tools/plugin.js`, y sube también lo que generan.
+7. Cuando alguien haya seguido la receta entera y funcione, pon la fecha en `revised` de `assets/datos.js`.
 
 ## Licencia
 

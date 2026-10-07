@@ -1,5 +1,5 @@
 (window.RECIPE=window.RECIPE||{}).es={
-title:"Receta: cocina tu propio conector MCP",
+title:"Receta: cocina tu propio conector",
 meta:["⏱ 1 hora aprox.", "👩‍🍳 Dificultad avanzada", "💶 0 €", "🍽 Resultado: Claude usando tus propios datos"],
 ing:"Ingredientes (todos gratuitos)",
 q:"¿Qué quieres que Claude pueda usar?",
@@ -29,4 +29,6 @@ ${det("¿Cómo sé la ruta completa?",["Mac: arrastra server.js a la Terminal y 
 {x:1,t:"Depúralo con el Inspector",s:"Opcional · nivel pro",b:()=>`<p class="what">El Inspector oficial de MCP te deja probar las herramientas sin Claude.</p>${cb("npx @modelcontextprotocol/inspector node server.js")}${tip("Se abre una web local donde ves cada herramienta y puedes probarla a mano.")}`},
 {x:1,t:"Llévalo a internet",s:"Opcional · siguiente nivel",b:()=>`<p class="what">Un conector local solo funciona en tu ordenador. Para usarlo desde la web o el móvil hay que publicarlo como <b>conector remoto</b> (por ejemplo, en Cloudflare Workers) y añadirlo en <b>Personalizar → Conectores → Añadir conector personalizado</b>, como hicimos con Higgsfield.</p>${cb("Quiero convertir mi servidor MCP en un conector remoto en Cloudflare Workers. Explícame los pasos para principiantes y qué debo tener en cuenta de seguridad.")}`},
 {x:1,t:"Seguridad",s:"Siempre · importante",b:()=>`<ol><li>Empieza con herramientas de <b>solo lectura</b>.</li><li>No pongas contraseñas ni claves dentro del código: usa variables de entorno.</li><li>Instala solo conectores de fuentes en las que confíes.</li></ol>`}
+,
+{x:1,t:"Sin tocar archivos de configuración",s:"Opcional · con un clic",b:()=>`<p class="what">Claude Desktop también instala conectores como <b>extensiones</b>: un archivo que se abre con doble clic, sin editar <code>claude_desktop_config.json</code>.</p><ol><li>En Claude Desktop abre <b>Ajustes → Extensiones</b> (<i>Settings → Extensions</i>) para ver las que ya existen.</li><li>Para el tuyo, pídele a Claude:</li></ol>${cb("Empaqueta mi servidor MCP de la carpeta mi-conector como extensión de Claude Desktop (archivo .mcpb) y explícame cómo instalarla con doble clic.")}${tip("Así puedes pasarle tu conector a otra persona sin explicarle cómo editar archivos.")}`}
 ]}};

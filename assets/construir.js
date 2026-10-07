@@ -15,14 +15,14 @@ var img=function(s){return D.img(s,"")};
 
 /* ---------- Recetas: minutos, coste (0 gratis · 1 prueba gratis · 2 de pago) y herramienta extra ---------- */
 var META={
- "asistente-ia":{m:20,p:0,f:1},"skills-claude":{m:30,p:0,f:1},
+ "empieza-aqui":{m:15,p:0,f:1},"asistente-ia":{m:20,p:0,f:1},"primer-agente":{m:40,p:2,f:1,t:"desk"},"skills-propias":{m:30,p:0,f:1},
  "logo-ia":{m:40,p:0,f:2},"imagenes-ia":{m:30,p:0,f:2},"canva-diseno":{m:25,p:0,f:2},
  "webapp-gratis":{m:60,p:0,f:3},"figma-a-web":{m:60,p:0,f:3},"chatbot-web":{m:40,p:0,f:3},"jev-guardian":{m:45,p:2,f:3,t:"cc"},"conector-propio":{m:60,p:0,f:3,t:"desk"},
  "redes-sociales":{m:45,p:0,f:4},"higgsfield-cine":{m:30,p:1,f:4},"video-aftereffects":{m:45,p:2,f:4,t:"desk"},"animaciones-opus":{m:40,p:2,f:4},"blender-3d":{m:45,p:0,f:4,t:"desk"},
- "gmail-calendario":{m:25,p:0,f:5},"notion-cerebro":{m:30,p:0,f:5},"slack-equipo":{m:25,p:0,f:5},"gurusup-brain":{m:30,p:2,f:5},"automatiza-tareas":{m:45,p:0,f:5},"jev-decisiones":{m:50,p:2,f:5,t:"cc"},"claude-chrome":{m:20,p:2,f:5}
+ "gmail-calendario":{m:25,p:0,f:5},"notion-cerebro":{m:30,p:0,f:5},"slack-equipo":{m:25,p:0,f:5},"gurusup-brain":{m:30,p:2,f:5},"automatiza-tareas":{m:45,p:0,f:5},"jev-decisiones":{m:50,p:2,f:5,t:"cc"},"navegador-chrome":{m:20,p:2,f:5}
 };
-var ORDER=["asistente-ia","skills-claude","logo-ia","imagenes-ia","canva-diseno","webapp-gratis","figma-a-web","chatbot-web","jev-guardian","conector-propio",
- "redes-sociales","higgsfield-cine","video-aftereffects","animaciones-opus","blender-3d","gmail-calendario","notion-cerebro","slack-equipo","gurusup-brain","automatiza-tareas","jev-decisiones","claude-chrome"];
+var ORDER=["empieza-aqui","asistente-ia","primer-agente","skills-propias","logo-ia","imagenes-ia","canva-diseno","webapp-gratis","figma-a-web","chatbot-web","jev-guardian","conector-propio",
+ "redes-sociales","higgsfield-cine","video-aftereffects","animaciones-opus","blender-3d","gmail-calendario","notion-cerebro","slack-equipo","gurusup-brain","automatiza-tareas","jev-decisiones","navegador-chrome"];
 
 /* ---------- Necesidades: lo que la persona quiere conseguir ----------
    g grupo · r recetas · a necesidades relacionadas · k palabras clave (es/en/ar; una palabra = raíz, varias = frase) */
@@ -69,14 +69,16 @@ var NEEDS=[
   k:["automatiz","automatic","repetitiv","excel","hoja de calculo","factura","informe","copiar y pegar","ahorrar tiempo","automate","spreadsheet","invoice","report","save time","اتمته","تلقائي","متكرر","جدول","فواتير","تقارير"]},
  {id:"clasificar",g:3,ic:"⚖️",l:{es:"Clasificar y priorizar mensajes",en:"Sort and prioritise messages",ar:"تصنيف الرسائل وترتيب أولوياتها"},r:["jev-decisiones"],a:["correo","automatizar","guardian"],
   k:["clasificar","priorizar","prioridad","decidir","filtrar","spam","urgente","incidencia","lead","puntuar","resena","moderar","classify","prioriti","triage","urgent","ticket","score","review","moderat","تصنيف","اولويه","عاجل","مراجعات"]},
- {id:"navegador",g:3,ic:"🧭",l:{es:"Investigar y rellenar webs por ti",en:"Research and fill in websites for you",ar:"البحث وملء المواقع نيابة عنك"},r:["claude-chrome"],a:["automatizar","escribir"],
+ {id:"navegador",g:3,ic:"🧭",l:{es:"Investigar y rellenar webs por ti",en:"Research and fill in websites for you",ar:"البحث وملء المواقع نيابة عنك"},r:["navegador-chrome"],a:["automatizar","escribir"],
   k:["investigar","buscar en internet","comparar precio","rellenar formulario","navegador","chrome","research","browse","compare prices","fill in forms","fill forms","بحث","متصفح","مقارنه اسعار"]},
- {id:"empezar",g:4,ic:"🌱",l:{es:"Empezar desde cero con la IA",en:"Start from zero with AI",ar:"البداية من الصفر مع الذكاء الاصطناعي"},r:["asistente-ia"],a:["escribir","imagenes"],
+ {id:"empezar",g:4,ic:"🌱",l:{es:"Empezar desde cero con la IA",en:"Start from zero with AI",ar:"البداية من الصفر مع الذكاء الاصطناعي"},r:["empieza-aqui","asistente-ia"],a:["escribir","agente"],
   k:["empezar con la ia","empezar con claude","aprender","principiante","novato","nunca he usado","no se nada","desde cero","beginner","learn","new to ai","never used","مبتدئ","اتعلم","من الصفر"]},
  {id:"escribir",g:4,ic:"✍️",l:{es:"Escribir, resumir y tener ideas",en:"Write, summarise and brainstorm",ar:"الكتابة والتلخيص والأفكار"},r:["asistente-ia"],a:["metodo","redes"],
   k:["escribir","redactar","resumir","texto","carta","guion","lluvia de ideas","traducir","brainstorm","write","summari","draft","script","translate","كتابه","تلخيص","افكار","ترجمه"]},
- {id:"metodo",g:4,ic:"📖",l:{es:"Que Claude trabaje a tu manera",en:"Claude working your way",ar:"أن يعمل Claude بطريقتك"},r:["skills-claude"],a:["escribir","conector"],
+ {id:"metodo",g:4,ic:"📖",l:{es:"Que Claude trabaje a tu manera",en:"Claude working your way",ar:"أن يعمل Claude بطريقتك"},r:["skills-propias"],a:["escribir","conector"],
   k:["skill","metodo","mi forma","a mi manera","proceso","siempre igual","mi estilo","my way","process","method","my style","طريقتي","مهاره","اسلوبي"]},
+ {id:"agente",g:4,ic:"🤖",l:{es:"Que Claude haga tareas largas por ti",en:"Claude doing long tasks for you",ar:"أن ينجز Claude مهاماً طويلة عنك"},r:["primer-agente"],a:["metodo","automatizar"],
+  k:["agente","agentes","claude code","cowork","terminal","que trabaje solo","haga por mi","tareas largas","ordenar archivos","agent","agents","do it for me","long tasks","organise files","organize files","وكيل","وكلاء","ينجز عني"]},
  {id:"conector",g:4,ic:"🔌",l:{es:"Conectar tus propias apps o datos",en:"Connect your own apps or data",ar:"ربط تطبيقاتك أو بياناتك"},r:["conector-propio"],a:["metodo","automatizar"],
   k:["conector","mcp","api","mis datos","base de datos","integrar","integracion","mi app","mi programa","connector","integrate","database","my data","my app","موصل","ربط","قاعده بيانات","بياناتي"]}
 ];

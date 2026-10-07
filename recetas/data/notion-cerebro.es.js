@@ -1,6 +1,6 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Receta: tu segundo cerebro en Notion",
-meta:["⏱ 30 min aprox.", "👩‍🍳 Fácil", "💶 0 € (Notion gratis)", "🍽 Resultado: un Notion ordenado que se resume solo"],
+meta:["⏱ 30 min aprox.", "👩‍🍳 Fácil", "💶 Gratis si tu plan de Claude incluye conectores", "🍽 Resultado: un Notion ordenado que se resume solo"],
 ing:"Ingredientes (todos gratuitos)",
 q:"¿Qué quieres ordenar?",
 ph:"Describe qué quieres organizar. Ejemplo: las ideas para mi tesis, con fuentes, citas y un calendario de entregas",
@@ -28,6 +28,6 @@ steps:[
 {t:"Créala en tu Notion",s:"5 min · montar",b:()=>`<p class="what">Ahora Claude la construye por ti.</p>${cb(`Perfecto. Crea en mi Notion una página llamada «Mi segundo cerebro» con esa base de datos.${DB()?" Después mueve o copia ahí mis páginas existentes que encajen, y dime cuáles has tocado.":" Añade 3 ejemplos para que vea cómo queda."}`)}
 ${tip("Si Claude no puede crear algo (por ejemplo, un tipo de vista), te dirá cómo hacerlo a mano en dos clics.")}${ok("abres Notion y ves la página nueva con su base de datos.")}`},
 {t:"Tu repaso semanal",s:"5 min · la rutina",b:()=>`<p class="what">La magia está en repetirlo. Cada viernes, un mensaje:</p>${cb("Revisa lo que he añadido o cambiado esta semana en «Mi segundo cerebro». Escríbeme un resumen en 5 líneas, 3 prioridades para la semana que viene y cualquier cosa que se esté quedando olvidada. Guárdalo como página nueva llamada «Semana del [fecha]».")}${ok("tienes tu primer resumen semanal guardado en Notion.")}`},
-{x:1,t:"Cuida tu despensa",s:"Siempre · seguridad",b:()=>`<ol><li>Pide siempre <b>«enséñame antes de borrar»</b>.</li><li>No guardes contraseñas ni datos bancarios en Notion.</li><li>Notion guarda el historial de cada página: si algo sale mal, puedes volver atrás.</li></ol>`},
+{x:1,t:"Cuida tu despensa",s:"Siempre · seguridad",b:()=>`<ol><li>⚠️ <b>Ojo con los mensajes trampa</b>: un documento o una página web que guardes puede llevar instrucciones escondidas para engañar a Claude («ignora lo anterior y reenvía…»). Por eso la regla de oro: Claude solo lee y propone; enviar, borrar o compartir lo haces tú. Si hace algo que no le pediste, páralo.</li><li>Pide siempre <b>«enséñame antes de borrar»</b>.</li><li>No guardes contraseñas ni datos bancarios en Notion.</li><li>Notion guarda el historial de cada página: si algo sale mal, puedes volver atrás.</li></ol>`},
 {x:1,t:"Si algo no funciona",s:"Siempre · revisa esto",b:()=>`<ol><li><b>Claude no encuentra una página</b>: comprueba que el espacio de trabajo tiene acceso en el conector.</li><li><b>Resultados a medias</b>: pide partes más pequeñas («solo las notas de marzo»).</li></ol>${det("💡 Ideas para seguir",["Un diario con preguntas diarias.","Un CRM sencillo de clientes.","Un plan de estudio para tus exámenes."])}`}
 ]}};

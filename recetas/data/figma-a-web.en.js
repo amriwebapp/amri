@@ -1,6 +1,6 @@
 (window.RECIPE=window.RECIPE||{}).en={
 title:"Recipe: from Figma to a real website",
-meta:["⏱ About 1 hour","👩‍🍳 Medium difficulty","💶 €0 to get started","🍽 Result: your design turned into a website"],
+meta:["⏱ About 1 hour","👩‍🍳 Medium difficulty","💶 Free if your Claude plan includes connectors","🍽 Result: your design turned into a website"],
 ing:"Ingredients (all free)",
 q:"What design do you have?",
 ph:"Describe what's in your design. Example: the homepage of my yoga studio, with timetables and a booking button",

@@ -1,5 +1,5 @@
 /* ==========================================================
-   AMRI · Academia de IA — interacción y animaciones de la portada
+   AMRI · Plataforma de IA — interacción y animaciones de la portada
    Sin dependencias. Respeta "prefers-reduced-motion".
    ========================================================== */
 (function(){
@@ -9,7 +9,7 @@
 const REPO = "https://github.com/amriwebapp/amri";
 
 /* ---------- Datos (los textos traducibles viven en i18n.js) ---------- */
-// f = categoría · c = usa conectores · n = nueva
+// f = categoría · c = usa conectores · n = nueva · top = sale primero en el recetario
 const RECETAS = [
   {slug:"webapp-gratis",f:"web",emoji:"🌐",bg:"#FFE4D6",bg2:"#FBF6EE"},
   {slug:"imagenes-ia",f:"imagen",emoji:"🎨",bg:"#E4E0FF",bg2:"#EFEAFF"},
@@ -24,23 +24,26 @@ const RECETAS = [
   {slug:"figma-a-web",f:"web",emoji:"📐",bg:"#EDE4FF",bg2:"#FBF6EE",c:1,n:1,svg:1},
   {slug:"notion-cerebro",f:"texto",emoji:"🗂️",bg:"#F2EADF",bg2:"#FBF6EE",c:1,n:1,svg:1},
   {slug:"gmail-calendario",f:"auto",emoji:"📬",bg:"#FFEFD0",bg2:"#FBF6EE",c:1,n:1,svg:1},
-  {slug:"claude-chrome",f:"auto",emoji:"🧭",bg:"#E2EEF8",bg2:"#FBF6EE",c:1,n:1,svg:1},
-  {slug:"skills-claude",f:"texto",emoji:"📖",bg:"#E6F2DC",bg2:"#FBF6EE",n:1,svg:1},
+  {slug:"navegador-chrome",f:"auto",emoji:"🧭",bg:"#E2EEF8",bg2:"#FBF6EE",c:1,n:1,svg:1},
+  {slug:"skills-propias",f:"texto",emoji:"📖",bg:"#E6F2DC",bg2:"#FBF6EE",n:1,svg:1},
   {slug:"conector-propio",f:"web",emoji:"🔌",bg:"#FFE4D6",bg2:"#FBF6EE",c:1,n:1,svg:1},
   {slug:"slack-equipo",f:"auto",emoji:"💬",bg:"#EDE4FF",bg2:"#FBF6EE",c:1,n:1,svg:1},
   {slug:"gurusup-brain",f:"texto",emoji:"🧠",bg:"#E4EEF6",bg2:"#FBF6EE",c:1,n:1,svg:1},
   {slug:"redes-sociales",f:"imagen",emoji:"📣",bg:"#FCE3EC",bg2:"#FBF6EE",n:1,svg:1},
   {slug:"animaciones-opus",f:"video",emoji:"🎞️",bg:"#FFE9C7",bg2:"#FBF6EE",n:1,svg:1},
   {slug:"jev-decisiones",f:"auto",emoji:"⚖️",bg:"#DCEFE6",bg2:"#FBF6EE",n:1,svg:1},
-  {slug:"jev-guardian",f:"web",emoji:"🛡️",bg:"#E3E8F7",bg2:"#FBF6EE",n:1,svg:1}
+  {slug:"jev-guardian",f:"web",emoji:"🛡️",bg:"#E3E8F7",bg2:"#FBF6EE",n:1,svg:1},
+  {slug:"empieza-aqui",f:"texto",emoji:"🌱",bg:"#E7F0E4",bg2:"#FBF6EE",n:1,svg:1,top:2},
+  {slug:"primer-agente",f:"auto",emoji:"🤖",bg:"#FFE4D6",bg2:"#FBF6EE",n:1,svg:1,top:1}
 ];
 const IDX = Object.fromEntries(RECETAS.map((r,i)=>[r.slug,i]));
 const PATHS = [
-  {ic:"🌱",r:["asistente-ia","imagenes-ia","logo-ia"]},
-  {ic:"🔌",r:["gmail-calendario","notion-cerebro","canva-diseno","claude-chrome","slack-equipo"]},
+  {ic:"🌱",r:["empieza-aqui","asistente-ia","imagenes-ia","logo-ia"]},
+  {ic:"🔌",r:["gmail-calendario","notion-cerebro","canva-diseno","navegador-chrome","slack-equipo"]},
   {ic:"🛠️",r:["webapp-gratis","chatbot-web","figma-a-web","automatiza-tareas"]},
   {ic:"🎬",r:["higgsfield-cine","video-aftereffects","blender-3d","redes-sociales","animaciones-opus"]},
-  {ic:"🧠",r:["skills-claude","gurusup-brain","conector-propio","jev-decisiones","jev-guardian"]}
+  {ic:"🧠",r:["primer-agente","skills-propias","conector-propio"]},
+  {ic:"🏢",r:["gurusup-brain","jev-decisiones","jev-guardian"]}
 ];
 const CONNS = [
   {n:"Higgsfield",ic:"🎥",c:"#FFD9C4"},{n:"Canva",ic:"🖌️",c:"#CDEDE8"},{n:"Figma",ic:"📐",c:"#E3D9FF"},
@@ -156,7 +159,7 @@ function buildPaths(){
       <ul class="rl">${p.r.map(s=>`<li><a href="recetas/${s}.html"><span>${RECETAS[IDX[s]].emoji}</span>${esc(I18N.card(IDX[s]).titulo)}</a></li>`).join("")}</ul>
       <button class="cat-see" data-cat="c${i}">${T("cat_see")} <span class="arr">→</span></button>
     </article>`).join("")+`
-    <a class="cat cat-cta reveal" style="--d:.16s" href="recetas/asistente-ia.html">
+    <a class="cat cat-cta reveal" style="--d:.16s" href="recetas/empieza-aqui.html">
       <span class="cat-ic">🧭</span><h3>${T("cat_cta_t")}</h3><p>${T("cat_cta_d")}</p>
       <span class="cat-see">${T("cat_cta_b")} <span class="arr">→</span></span></a>`;
   observe($$(".cat",box));
@@ -191,13 +194,14 @@ const grid=$("#grid");let filter="all",query="";
 function norm(s){return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");}
 function renderGrid(){
   const list=RECETAS.map((r,i)=>Object.assign({},r,I18N.card(i)))
+    .sort((a,b)=>(b.top||0)-(a.top||0))
     .filter(r=>filter==="all"||(filter==="conn"?r.c:CAT_OF[r.slug]===filter))
     .filter(r=>!query||norm(r.titulo+" "+r.desc+" "+r.tag).includes(norm(query)));
   if(!list.length){grid.innerHTML=`<div class="empty">${T("empty")}</div>`;return;}
   grid.innerHTML=list.map((r,i)=>`
     <a class="card" href="recetas/${r.slug}.html" style="transition-delay:${Math.min(i,8)*.07}s">
       <div class="card-thumb" style="background:linear-gradient(135deg,${r.bg},${r.bg2})">
-        <span class="tag">${esc(r.tag)}</span>${r.c?`<span class="conn">🔌 MCP</span>`:""}${r.n?`<span class="new">${T("new")}</span>`:""}
+        <span class="tag">${esc(r.tag)}</span>${r.c?`<span class="conn">🔌 ${esc(T("card_conn"))}</span>`:""}${r.n?`<span class="new">${T("new")}</span>`:""}
         ${r.emoji}
         <img src="img/${r.slug}.${r.svg?"svg":"jpg"}" alt="" loading="lazy" onerror="nextImg(this)">
         <div class="tools-badge" data-tools="${r.slug}"></div>
