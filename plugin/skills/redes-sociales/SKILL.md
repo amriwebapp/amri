@@ -1,15 +1,14 @@
 ---
 name: redes-sociales
-description: "Receta de AMRI «Tus redes sociales con Claude». Un libro con 8 recetas: biografía, reels, carruseles, LinkedIn, una idea para todas tus redes, un mes planificado y medir. Con tu propia voz. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Tus redes sociales con Claude». Biografía, reels, carruseles, LinkedIn, una idea para todas tus redes, un mes planificado y medir. Con tu propia voz. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Tus redes sociales con Claude
 
-Un libro con 8 recetas: biografía, reels, carruseles, LinkedIn, una idea para todas tus redes, un mes planificado y medir. Con tu propia voz.
+Biografía, reels, carruseles, LinkedIn, una idea para todas tus redes, un mes planificado y medir. Con tu propia voz.
 
-- 📕 8 recetas
-- ⏱ 15-30 min cada una
+- 📕 7 recetas
 - 💶 Gratis
 - 🍽 Resultado: contenido que suena a ti, cada semana
 - Categoría: Estudio creativo
@@ -39,7 +38,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Este es un libro de recetas
 
-Tiene una preparación común («Antes de empezar») y 8 recetas concretas. Según la idea de la persona:
+Tiene una preparación común («Antes de empezar») y 7 recetas concretas. Según la idea de la persona:
 1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
 2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
 3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
@@ -47,7 +46,7 @@ Tiene una preparación común («Antes de empezar») y 8 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Elige tus redes y pásalas a profesional
-_5 min · antes de nada_
+_antes de nada_
 
 Claude escribe y tú decides qué publicas. Nada se publica solo: así cumples las normas de cada red y no arriesgas tu cuenta.
 
@@ -58,7 +57,7 @@ Claude escribe y tú decides qué publicas. Nada se publica solo: así cumples l
 **✅ Comprobación:** tus perfiles son profesionales.
 
 ### 2. Crea el proyecto «Mis redes»
-_3 min · la libreta_
+_la libreta_
 
 Un proyecto de Claude es una carpeta con memoria: lo que guardes en sus instrucciones, Claude lo tiene en cuenta en todos los chats de dentro.
 
@@ -69,7 +68,7 @@ Un proyecto de Claude es una carpeta con memoria: lo que guardes en sus instrucc
 **✅ Comprobación:** tienes el proyecto «Mis redes».
 
 ### 3. Enséñale tu voz
-_10 min · el paso más importante_
+_el paso más importante_
 
 Si Claude no conoce tu voz, todo sonará a «escrito por IA». Este paso lo evita.
 
@@ -97,7 +96,7 @@ Al final, escribe una «guía de voz» de una página que pueda pegar en las ins
 **✅ Comprobación:** la guía de voz está en las instrucciones del proyecto y, al leerla, suena a ti.
 
 ### 4. Elige tus temas fijos
-_5 min · de qué vas a hablar_
+_de qué vas a hablar_
 
 Tus temas fijos (los creadores los llaman **pilares**) son 3 o 4 asuntos sobre los que siempre hablas. Te ahorran el «¿hoy qué publico?».
 
@@ -115,7 +114,6 @@ Con mi guía de voz, propón 4 temas fijos para mis redes. Para cada uno: qué p
 
 En tres segundos alguien decide si te sigue. Tu biografía tiene que decir qué haces, para quién y por qué seguirte.
 
-- ⏱ 15 min
 - 👩‍🍳 Fácil
 - 👤 Perfil
 - 🍽 Resultado: tu biografía nueva en cada red
@@ -127,7 +125,7 @@ En tres segundos alguien decide si te sigue. Tu biografía tiene que decir qué 
   - X / Threads: mi biografía de X y de Threads
 
 #### 1. Pide tres versiones
-_5 min · escribir_
+_escribir_
 
 ```text
 Quiero mejorar [la idea de la persona]. Esta es la actual: [pégala, o escribe «no tengo»].
@@ -138,7 +136,7 @@ Escribe 3 versiones respetando el límite de caracteres de esa red. Cada una deb
 **✅ Comprobación:** tienes 3 versiones para elegir.
 
 #### 2. Elige y ajusta
-_3 min · con tu voz_
+_con tu voz_
 
 ```text
 Me quedo con la versión [número]. Hazla más [corta / cercana / concreta] y comprueba que suena a mi guía de voz.
@@ -147,7 +145,7 @@ Me quedo con la versión [número]. Hazla más [corta / cercana / concreta] y co
 **✅ Comprobación:** tienes una biografía que te convence.
 
 #### 3. Foto, nombre y enlace
-_5 min · el resto del perfil_
+_el resto del perfil_
 
 ```text
 Revisa el resto de mi perfil: mi nombre visible es [nombre], mi foto es [descríbela] y mi enlace va a [dónde]. Dime qué cambiarías para que se entienda a qué me dedico en tres segundos.
@@ -158,7 +156,7 @@ Revisa el resto de mi perfil: mi nombre visible es [nombre], mi foto es [descrí
 **✅ Comprobación:** sabes qué cambiar en tu foto, nombre y enlace.
 
 #### 4. Cámbialo en la red
-_2 min · publicar_
+_publicar_
 
 - Abre tu perfil en la app de la red y pulsa **Editar perfil**.
 - Pega la biografía nueva y guarda.
@@ -172,7 +170,6 @@ _2 min · publicar_
 
 Gancho para el primer segundo, guion de 30 segundos, qué grabar y los subtítulos.
 
-- ⏱ 30 min
 - 👩‍🍳 Fácil
 - 🎥 Vídeo corto
 - 🍽 Resultado: un vídeo corto listo para grabar y publicar
@@ -184,7 +181,7 @@ Gancho para el primer segundo, guion de 30 segundos, qué grabar y los subtítul
   - Detrás de las cámaras: cómo es un día de trabajo o cómo se hace mi producto
 
 #### 1. Cinco ganchos
-_5 min · el primer segundo_
+_el primer segundo_
 
 En TikTok, Reels y Shorts, el primer segundo decide si la gente se queda. Por eso empezamos por ahí.
 
@@ -197,7 +194,7 @@ Dame 5 ganchos para el primer segundo: la frase que digo y lo que se ve en panta
 **✅ Comprobación:** has elegido un gancho.
 
 #### 2. El guion de 30 segundos
-_5 min · lo que dices_
+_lo que dices_
 
 ```text
 Con el gancho [número], escribe el guion completo de 30 segundos, frase a frase, como lo diría yo hablando. Marca dónde cambiar de plano. Termina con una invitación a seguirme o a guardar el vídeo.
@@ -208,7 +205,7 @@ Con el gancho [número], escribe el guion completo de 30 segundos, frase a frase
 **✅ Comprobación:** tienes un guion que dura unos 30 segundos.
 
 #### 3. Qué grabar
-_5 min · la lista de planos_
+_la lista de planos_
 
 ```text
 Dame una lista de planos para grabar este guion con el móvil: qué se ve en cada frase, desde dónde grabo y si salgo yo o solo mis manos. Cosas sencillas que pueda hacer en casa o en mi trabajo.
@@ -217,7 +214,7 @@ Dame una lista de planos para grabar este guion con el móvil: qué se ve en cad
 **✅ Comprobación:** sabes qué grabar en cada momento.
 
 #### 4. Graba y pon subtítulos
-_10 min · rodaje_
+_rodaje_
 
 - Graba en vertical, con luz de ventana de frente.
 - Edítalo en la app de la red o en CapCut: corta los silencios.
@@ -226,7 +223,7 @@ _10 min · rodaje_
 **✅ Comprobación:** tienes el vídeo editado con subtítulos.
 
 #### 5. El texto de la publicación
-_3 min · descripción_
+_descripción_
 
 ```text
 Escribe el texto de la publicación: una primera línea que complemente el gancho, dos frases de valor y una pregunta para que comenten. Sin exceso de emojis ni etiquetas.
@@ -240,7 +237,6 @@ Escribe el texto de la publicación: una primera línea que complemente el ganch
 
 Diapositivas con una idea cada una, para Instagram o LinkedIn. Si tienes Canva conectado, Claude lo diseña.
 
-- ⏱ 25 min
 - 👩‍🍳 Fácil
 - 🖼 Carrusel
 - 🍽 Resultado: un carrusel de 7 diapositivas
@@ -252,7 +248,7 @@ Diapositivas con una idea cada una, para Instagram o LinkedIn. Si tienes Canva c
   - Antes y después: un antes y después de un caso real mío (con permiso del cliente)
 
 #### 1. Los textos, diapositiva a diapositiva
-_10 min · escribir_
+_escribir_
 
 ```text
 Quiero un carrusel de 7 diapositivas: [la idea de la persona].
@@ -267,7 +263,7 @@ Con mi guía de voz. Textos cortos: se leen en el móvil.
 **✅ Comprobación:** tienes los textos de las 7 diapositivas.
 
 #### 2. Diséñalo
-_10 min · aspecto_
+_aspecto_
 
 Dos caminos, el que te resulte más cómodo:
 
@@ -280,7 +276,7 @@ Dos caminos, el que te resulte más cómodo:
 **✅ Comprobación:** tienes las 7 diapositivas diseñadas.
 
 #### 3. El texto y la publicación
-_5 min · publicar_
+_publicar_
 
 ```text
 Escribe el texto de la publicación del carrusel: una primera línea que invite a deslizar, un resumen en dos frases y una pregunta al final.
@@ -294,7 +290,6 @@ Escribe el texto de la publicación del carrusel: una primera línea que invite 
 
 Una historia o un aprendizaje real contado con tu voz, con una primera línea que invita a leer.
 
-- ⏱ 20 min
 - 👩‍🍳 Fácil
 - 💼 LinkedIn
 - 🍽 Resultado: una publicación lista
@@ -306,7 +301,7 @@ Una historia o un aprendizaje real contado con tu voz, con una primera línea qu
   - Un consejo práctico: un consejo práctico para quien empieza en mi profesión
 
 #### 1. Cuéntaselo como a un amigo
-_5 min · la materia prima_
+_la materia prima_
 
 Escribe lo que pasó con tus palabras, sin cuidar la forma. Lo real es lo que engancha en LinkedIn.
 
@@ -321,7 +316,7 @@ Hazme 2 preguntas si te falta algo importante.
 **✅ Comprobación:** Claude tiene la historia completa.
 
 #### 2. La publicación
-_5 min · escribir_
+_escribir_
 
 ```text
 Escribe la publicación con mi guía de voz: una primera línea que invite a pulsar «ver más», frases cortas, la historia y un aprendizaje claro al final. Sin emojis de lista, sin etiquetas y sin vender. Dame 2 primeras líneas alternativas.
@@ -330,7 +325,7 @@ Escribe la publicación con mi guía de voz: una primera línea que invite a pul
 **✅ Comprobación:** tienes la publicación y dos primeras líneas para elegir.
 
 #### 3. Quítale el tono de anuncio
-_3 min · repaso_
+_repaso_
 
 ```text
 Léela como un lector escéptico. ¿Hay algo que suene a presumir, a vender o a frase hecha? Corrígelo y dime qué has cambiado.
@@ -339,7 +334,7 @@ Léela como un lector escéptico. ¿Hay algo que suene a presumir, a vender o a 
 **✅ Comprobación:** al leerla en voz alta, suena a ti.
 
 #### 4. Publica y responde
-_5 min · conversación_
+_conversación_
 
 - Publícala desde LinkedIn.
 - Durante la primera hora, responde a cada comentario con algo más que «gracias».
@@ -354,7 +349,6 @@ _5 min · conversación_
 
 El truco de los creadores: una buena idea convertida en vídeo corto, carrusel y texto, cada uno con el formato de su red.
 
-- ⏱ 25 min
 - 👩‍🍳 Fácil
 - ♻️ Reutilizar
 - 🍽 Resultado: la misma idea lista para 3 formatos
@@ -365,7 +359,7 @@ El truco de los creadores: una buena idea convertida en vídeo corto, carrusel y
   - Solo redes de texto: LinkedIn, X y Threads
 
 #### 1. Adapta la idea
-_10 min · tres formatos_
+_tres formatos_
 
 ```text
 Coge esta idea: [escribe tu idea].
@@ -388,7 +382,7 @@ Con mi guía de voz. Si falta un dato, deja [dato] en lugar de inventarlo.
 **✅ Comprobación:** tienes la idea en los tres formatos.
 
 #### 2. Reparte la semana
-_5 min · cuándo_
+_cuándo_
 
 ```text
 Propón en qué día publico cada pieza esta semana para no repetir la misma idea dos días seguidos en la misma red.
@@ -397,7 +391,7 @@ Propón en qué día publico cada pieza esta semana para no repetir la misma ide
 **✅ Comprobación:** sabes qué publicar cada día.
 
 #### 3. Termina cada pieza
-_10 min · con las otras recetas_
+_con las otras recetas_
 
 Para grabar y diseñar cada formato, usa las recetas del libro:
 
@@ -409,62 +403,10 @@ Para grabar y diseñar cada formato, usa las recetas del libro:
 
 **Al terminar:** Una idea, tres publicaciones. Repártelas a lo largo de la semana.
 
-### Receta 6: De un contenido largo a una semana de redes
-
-Un vídeo largo, un pódcast, un artículo o una charla tienen material para una semana entera.
-
-- ⏱ 20 min
-- 👩‍🍳 Fácil
-- ♻️ Reutilizar
-- 🍽 Resultado: 10 piezas sacadas de un solo contenido
-- Versión web: https://amri.es/recetas/redes-sociales--largo-a-corto.html
-- Ideas de ejemplo:
-  - Vídeo de YouTube: mi vídeo largo de YouTube
-  - Pódcast: un episodio de mi pódcast
-  - Artículo o newsletter: un artículo de mi blog o mi newsletter
-  - Charla o clase: una charla o una clase que he dado
-
-#### 1. Consigue el texto
-_5 min · la transcripción_
-
-- **Vídeo de YouTube**: debajo del vídeo, pulsa **Más → Mostrar transcripción** y cópiala.
-- **Pódcast, vídeo o charla**: si tienes el audio, súbelo al chat y pide la transcripción, o usa la transcripción automática de tu app de grabación.
-- **Artículo**: copia el texto.
-
-**✅ Comprobación:** tienes el texto completo.
-
-#### 2. Saca las piezas
-_10 min · cortar_
-
-```text
-Este es el texto de [la idea de la persona]: [pégalo].
-
-Sácame:
-- 5 vídeos cortos (gancho + guion de 30 s), cada uno con una idea distinta.
-- 2 carruseles de 7 diapositivas.
-- 3 publicaciones de texto.
-
-Cada pieza tiene que entenderse sola, sin haber visto el original. Con mi guía de voz.
-```
-
-**✅ Comprobación:** tienes 10 piezas.
-
-#### 3. Elige y ordena
-_5 min · la semana_
-
-```text
-Ordena las 10 piezas de mejor a peor según lo útil que es cada una para mi público, y propón cuáles publico esta semana.
-```
-
-**✅ Comprobación:** sabes qué publicar esta semana.
-
-**Al terminar:** De un contenido has sacado una semana. Guarda las piezas que no uses: sirven para más adelante.
-
-### Receta 7: Tu mes planificado
+### Receta 6: Tu mes planificado
 
 Un calendario realista de publicaciones para 4 semanas, con tus temas fijos.
 
-- ⏱ 15 min
 - 👩‍🍳 Fácil
 - 📅 Plan
 - 🍽 Resultado: un mes de publicaciones en una tabla
@@ -475,7 +417,7 @@ Un calendario realista de publicaciones para 4 semanas, con tus temas fijos.
   - Casi cada día: 5 publicaciones por semana
 
 #### 1. El calendario
-_5 min · la tabla_
+_la tabla_
 
 ```text
 Hazme un calendario de publicaciones para las próximas 4 semanas en mis redes, en una tabla: día, red, tema fijo, formato, idea y gancho. Ritmo: [la idea de la persona]. Que sea realista y que alterne los formatos.
@@ -484,7 +426,7 @@ Hazme un calendario de publicaciones para las próximas 4 semanas en mis redes, 
 **✅ Comprobación:** tienes la tabla del mes.
 
 #### 2. Fechas que importan
-_3 min · repasar_
+_repasar_
 
 ```text
 ¿Hay fechas este mes que encajen con mi tema (días mundiales, temporadas, fiestas)? Si las hay, cambia alguna idea para aprovecharlas.
@@ -493,7 +435,7 @@ _3 min · repasar_
 **✅ Comprobación:** el calendario tiene en cuenta las fechas del mes.
 
 #### 3. Guárdalo donde lo veas
-_5 min · a la vista_
+_a la vista_
 
 - Copia la tabla en una hoja de cálculo o en tus notas.
 - Con la receta [Gmail y Calendar](gmail-calendario.html), Claude puede pasarla a tu agenda.
@@ -505,11 +447,10 @@ _5 min · a la vista_
 
 **Al terminar:** Tienes el mes planificado. Publicar con constancia importa más que publicar mucho.
 
-### Receta 8: Mide y mejora cada semana
+### Receta 7: Mide y mejora cada semana
 
 Con tus datos reales, Claude te dice qué funcionó, qué repetir y cómo responder a tu comunidad.
 
-- ⏱ 15 min
 - 👩‍🍳 Fácil
 - 📈 Datos
 - 🍽 Resultado: qué repetir la semana que viene
@@ -520,7 +461,7 @@ Con tus datos reales, Claude te dice qué funcionó, qué repetir y cómo respon
   - Responder a mi comunidad: cómo responder a los comentarios y mensajes de esta semana
 
 #### 1. Copia tus datos
-_5 min · las estadísticas_
+_las estadísticas_
 
 En cada red, abre las estadísticas de tus publicaciones de la semana y apunta para cada una: alcance (cuánta gente la vio), guardados, compartidos, comentarios y seguidores nuevos.
 
@@ -529,7 +470,7 @@ En cada red, abre las estadísticas de tus publicaciones de la semana y apunta p
 **✅ Comprobación:** tienes los datos de la semana.
 
 #### 2. Que Claude los lea
-_5 min · análisis_
+_análisis_
 
 ```text
 Estos son los datos de mis publicaciones de esta semana: [pégalos o sube las capturas].
@@ -540,7 +481,7 @@ Quiero saber [la idea de la persona]. Dime qué patrón ves y 3 cosas concretas 
 **✅ Comprobación:** sabes qué funcionó y qué vas a cambiar.
 
 #### 3. Responde a tu comunidad
-_5 min · conversación_
+_conversación_
 
 ```text
 Estos son los comentarios y mensajes de esta semana: [pégalos]. Propón una respuesta corta para cada uno, con mi voz. Marca los que debería responder yo en persona.

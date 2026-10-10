@@ -64,8 +64,15 @@ for f in sorted(glob.glob('recetas/data/*.es.js')):
         print('skip',slug,'(redirección)')
         continue
     P=load(f)
+    if P.get('off'):
+        # Libro oculto: su página lleva al libro donde vive ahora (o a la portada) y sus recetas se borran abajo
+        to=f"{P['moved']}.html" if P.get('moved') else '../index.html'
+        open(dest,'w',encoding='utf-8').write(f'<!DOCTYPE html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url={to}"><link rel="canonical" href="{to}"><title>AMRI</title><a href="{to}">AMRI</a>\n')
+        print('oculto',slug)
+        continue
+    recs=[r for r in P.get('recetas',[]) if not r.get('off')]
+    P['meta']=[f"📕 {len(recs)} recetas" if m.startswith('📕') else m for m in P['meta']]
     page(dest,slug,'',P['title'],P['meta'],P['ing'],P.get('q',''))
-    recs=P.get('recetas',[])
     for r in recs:
         page(f"recetas/{slug}--{r['s']}.html",slug,r['s'],r['t'],r.get('meta',[]),r.get('ingT','Ingredientes'),r.get('q',''))
     if recs:

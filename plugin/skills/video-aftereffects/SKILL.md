@@ -9,7 +9,6 @@ argument-hint: "[tu idea]"
 Conecta Claude con After Effects y pídele en español: una intro con tu logo, títulos y rótulos, un vídeo vertical con texto animado o un anuncio de producto.
 
 - 📕 4 recetas
-- ⏱ 25-30 min cada una
 - 💶 After Effects es de pago
 - 🍽 Resultado: vídeos animados en MP4
 - Categoría: Estudio creativo
@@ -49,7 +48,7 @@ Tiene una preparación común («Antes de empezar») y 4 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Prepara los ingredientes
-_10 min · instalar programas_
+_instalar programas_
 
 Necesitas tres programas en el mismo ordenador. El conector solo funciona si todo está en la misma máquina.
 
@@ -70,7 +69,7 @@ node --version
 **✅ Comprobación:** la terminal responde con un número que empieza por v24 o más.
 
 ### 2. Da permiso a After Effects
-_2 min · un ajuste_
+_un ajuste_
 
 Para que Claude pueda mover cosas dentro del programa, After Effects tiene que permitir scripts.
 
@@ -87,7 +86,7 @@ Para que Claude pueda mover cosas dentro del programa, After Effects tiene que p
 **✅ Comprobación:** has marcado la casilla y guardado las preferencias.
 
 ### 3. Conecta Claude con After Effects
-_10 min · el archivo de configuración_
+_el archivo de configuración_
 
 Aquí le dices a Claude Desktop que existe el conector. Es el paso más técnico, pero solo se hace una vez.
 
@@ -124,7 +123,7 @@ Aquí le dices a Claude Desktop que existe el conector. Es el paso más técnico
 **✅ Comprobación:** al abrir un chat nuevo en Claude Desktop no sale ningún error y el conector aparece entre las herramientas.
 
 ### 4. Abre After Effects y guarda el proyecto
-_5 min · el proyecto de trabajo_
+_el proyecto de trabajo_
 
 El conector trabaja sobre el proyecto que tengas abierto, así que primero tiene que existir.
 
@@ -146,7 +145,6 @@ El conector trabaja sobre el proyecto que tengas abierto, así que primero tiene
 
 Tu logo apareciendo con un brillo, 5 segundos en horizontal, para el principio de tus vídeos.
 
-- ⏱ 25 min
 - 👩‍🍳 Media
 - 🎬 Intro
 - 🍽 Resultado: tu intro en MP4 (1920×1080)
@@ -156,7 +154,7 @@ Tu logo apareciendo con un brillo, 5 segundos en horizontal, para el principio d
   - Entrada con rebote: una intro de 4 segundos en la que mi logo cae, rebota un poco y se queda en el centro, con un fondo de mi color
 
 #### 1. Importa tu logo
-_5 min · el material_
+_el material_
 
 - Ten tu logo como **PNG con fondo transparente** (o SVG/AI si lo tienes).
 - En After Effects: **File → Import → File…** y elige el logo.
@@ -167,7 +165,7 @@ _5 min · el material_
 **✅ Comprobación:** el logo está en el panel Project.
 
 #### 2. Pide la intro
-_10 min · Claude anima_
+_Claude anima_
 
 ```text
 Tienes acceso a mi After Effects a través del conector. Quiero [la idea de la persona].
@@ -180,7 +178,7 @@ Antes de tocar nada, dime el plan en pasos cortos. Pon nombres claros a las capa
 **✅ Comprobación:** en After Effects hay una composición nueva con el logo animado.
 
 #### 3. Revísala con la barra espaciadora
-_5 min · pulir_
+_pulir_
 
 - Abre la composición y pulsa la **barra espaciadora**.
 - Pide cambios de uno en uno:
@@ -194,7 +192,7 @@ Haz la entrada del logo más lenta (1,5 segundos) y el brillo más sutil. Cambia
 **✅ Comprobación:** la intro dura unos 5 segundos y te gusta.
 
 #### 4. Exporta a MP4
-_5 min · Media Encoder_
+_Media Encoder_
 
 - Selecciona la composición y elige **Composition → Add to Adobe Media Encoder Queue**.
 - Formato **H.264**, preset **«Match Source - High bitrate»**.
@@ -208,7 +206,6 @@ _5 min · Media Encoder_
 
 El título de tu canal y un rótulo con tu nombre y cargo, con fondo transparente para ponerlos encima de tus vídeos.
 
-- ⏱ 25 min
 - 👩‍🍳 Media
 - 🔤 Títulos
 - 🍽 Resultado: títulos con fondo transparente (.mov)
@@ -218,14 +215,14 @@ El título de tu canal y un rótulo con tu nombre y cargo, con fondo transparent
   - Rótulo de sección: un rótulo de sección que aparece en una esquina con el nombre de cada parte del vídeo
 
 #### 1. Decide textos y colores
-_3 min · antes_
+_antes_
 
 Ten a mano los textos exactos y el color de tu marca. Los títulos tienen que leerse en el móvil en menos de 2 segundos.
 
 **✅ Comprobación:** tienes los textos y el color.
 
 #### 2. Pide los títulos
-_12 min · Claude anima_
+_Claude anima_
 
 ```text
 Tienes acceso a mi After Effects a través del conector. Quiero [la idea de la persona]. Textos: [tus textos].
@@ -238,7 +235,7 @@ Dime el plan antes de empezar.
 **✅ Comprobación:** hay una composición con los títulos y sin fondo.
 
 #### 3. Pruébalo sobre un vídeo
-_5 min · legibilidad_
+_legibilidad_
 
 - Arrastra uno de tus vídeos debajo de los títulos en la composición, solo para probar.
 - Comprueba que se lee bien. Después borra esa capa.
@@ -250,7 +247,7 @@ El texto se lee mal sobre fondos claros. Haz la barra un poco más opaca. Cambia
 **✅ Comprobación:** los títulos se leen bien sobre tu vídeo.
 
 #### 4. Exporta con fondo transparente
-_5 min · Media Encoder_
+_Media Encoder_
 
 - **Composition → Add to Adobe Media Encoder Queue**.
 - Formato **QuickTime**, códec **Apple ProRes 4444**, y en el vídeo activa el canal **alfa** (RGB + Alpha).
@@ -270,7 +267,6 @@ _5 min · Media Encoder_
 
 15 segundos en 9:16 con tu clip de fondo y un texto grande que se mueve, para Reels, TikTok o Shorts.
 
-- ⏱ 30 min
 - 👩‍🍳 Media
 - 📱 Vertical
 - 🍽 Resultado: un vídeo vertical en MP4 (1080×1920)
@@ -280,7 +276,7 @@ _5 min · Media Encoder_
   - 3 frases que van apareciendo: un vídeo vertical de 15 segundos con mi clip de fondo y 3 frases cortas que aparecen una detrás de otra
 
 #### 1. Importa tu clip
-_5 min · el material_
+_el material_
 
 - Graba o elige un clip vertical de al menos 15 segundos.
 - **File → Import → File…** y llámalo `clip.mp4` en el panel Project.
@@ -288,7 +284,7 @@ _5 min · el material_
 **✅ Comprobación:** el clip está en el panel Project.
 
 #### 2. Pide el vídeo
-_12 min · Claude anima_
+_Claude anima_
 
 ```text
 Tienes acceso a mi After Effects a través del conector. Quiero [la idea de la persona]. Texto: [tu texto].
@@ -301,7 +297,7 @@ Dime el plan antes de empezar.
 **✅ Comprobación:** hay una composición vertical con tu clip y los textos.
 
 #### 3. Revísalo como en el móvil
-_8 min · pulir_
+_pulir_
 
 - Reprodúcelo a tamaño pequeño, como lo verías en el móvil.
 - ¿Se lee cada texto sin pausar? Si no:
@@ -313,7 +309,7 @@ El segundo texto desaparece antes de poder leerlo. Déjalo 1 segundo más y adel
 **✅ Comprobación:** cada texto se lee sin pausar el vídeo.
 
 #### 4. Exporta para redes
-_5 min · Media Encoder_
+_Media Encoder_
 
 - **Composition → Add to Adobe Media Encoder Queue**.
 - Formato **H.264**, preset **«Match Source - High bitrate»** (mantiene el 1080×1920).
@@ -327,7 +323,6 @@ _5 min · Media Encoder_
 
 10 segundos con fondo de color, el nombre de tu producto entrando con movimiento y el precio al final.
 
-- ⏱ 30 min
 - 👩‍🍳 Media
 - 🛍 Anuncio
 - 🍽 Resultado: un anuncio en MP4, cuadrado y vertical
@@ -337,7 +332,7 @@ _5 min · Media Encoder_
   - Oferta con fecha: un anuncio de 8 segundos que anuncia una oferta con el descuento muy grande y la fecha de fin
 
 #### 1. Tu material
-_5 min · producto_
+_producto_
 
 - Importa una foto de tu producto con fondo transparente (`producto.png`) y tu logo.
 - Ten claros el nombre, el precio y una sola ventaja.
@@ -347,7 +342,7 @@ _5 min · producto_
 **✅ Comprobación:** producto y logo están en el panel Project.
 
 #### 2. Pide el anuncio
-_12 min · Claude anima_
+_Claude anima_
 
 ```text
 Tienes acceso a mi After Effects a través del conector. Quiero [la idea de la persona]. Producto: [nombre], precio: [precio], ventaja: [una frase].
@@ -360,7 +355,7 @@ Dime el plan antes de empezar.
 **✅ Comprobación:** tienes el anuncio cuadrado.
 
 #### 3. La versión vertical
-_5 min · reaprovechar_
+_reaprovechar_
 
 ```text
 Duplica la composición en 1080×1920 y recoloca los elementos para el formato vertical, respetando la zona segura de arriba y abajo. No cambies los tiempos.
@@ -369,7 +364,7 @@ Duplica la composición en 1080×1920 y recoloca los elementos para el formato v
 **✅ Comprobación:** tienes el anuncio también en vertical.
 
 #### 4. Exporta las dos
-_8 min · Media Encoder_
+_Media Encoder_
 
 - Añade las dos composiciones a la cola de Media Encoder.
 - Formato **H.264**, «Match Source - High bitrate», y **Play**.
@@ -385,7 +380,7 @@ After Effects está conectado con Claude. Elige qué vídeo quieres hacer.
 ## Extras (opcionales, después de servir)
 
 ### Extra 1. Deja una plantilla reutilizable
-_15 min · opcional_
+_opcional_
 
 Si vas a repetir este vídeo con otros textos, pídele a Claude que lo deje preparado.
 

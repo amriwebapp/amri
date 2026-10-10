@@ -1,15 +1,14 @@
 ---
 name: asistente-ia
-description: "Receta de AMRI «Tu asistente personal con IA». Un asistente que te conoce: correos difíciles, documentos largos, estudiar, organizar tu semana, responder a clientes y tus atajos. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Tu asistente personal con IA». Un asistente que te conoce: correos difíciles, documentos largos, estudiar, estudiar y organizar tu semana. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Tu asistente personal con IA
 
-Un asistente que te conoce: correos difíciles, documentos largos, estudiar, organizar tu semana, responder a clientes y tus atajos.
+Un asistente que te conoce: correos difíciles, documentos largos, estudiar, estudiar y organizar tu semana.
 
-- 📕 6 recetas
-- ⏱ 10-20 min cada una
+- 📕 4 recetas
 - 💶 Gratis
 - 🍽 Resultado: un ayudante que te conoce
 - Categoría: Primeros pasos
@@ -39,7 +38,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Este es un libro de recetas
 
-Tiene una preparación común («Antes de empezar») y 6 recetas concretas. Según la idea de la persona:
+Tiene una preparación común («Antes de empezar») y 4 recetas concretas. Según la idea de la persona:
 1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
 2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
 3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
@@ -47,7 +46,7 @@ Tiene una preparación común («Antes de empezar») y 6 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Que Claude te entreviste
-_10 min · tu ficha_
+_tu ficha_
 
 En vez de escribir tú las instrucciones, deja que Claude te haga preguntas y las escriba por ti.
 
@@ -62,7 +61,7 @@ Hazme 8 preguntas, de una en una, para conocerme: a qué me dedico, cómo escrib
 **✅ Comprobación:** Claude te ha dado un texto con tus instrucciones personales.
 
 ### 2. Crea el proyecto «Mi asistente»
-_5 min · su cuaderno_
+_su cuaderno_
 
 - En Claude, en el menú lateral, pulsa **Proyectos → Crear proyecto** y llámalo **Mi asistente**.
 - Pulsa **Instrucciones del proyecto** y pega el texto del paso anterior.
@@ -75,7 +74,7 @@ _5 min · su cuaderno_
 **✅ Comprobación:** tienes un proyecto con tus instrucciones.
 
 ### 3. Pruébalo
-_3 min · primera tarea_
+_primera tarea_
 
 ```text
 Ayúdame con esto: [pega un correo, una duda o una tarea real de hoy]. Respóndeme como lo haría yo.
@@ -91,7 +90,6 @@ Ayúdame con esto: [pega un correo, una duda o una tarea real de hoy]. Respónde
 
 Un cliente enfadado, un no educado o un recordatorio incómodo, con tu tono.
 
-- ⏱ 10 min
 - 👩‍🍳 Muy fácil
 - ✉️ Correo
 - 🍽 Resultado: un correo listo para enviar
@@ -102,7 +100,7 @@ Un cliente enfadado, un no educado o un recordatorio incómodo, con tu tono.
   - Reclamar un pago: recordar a un cliente un pago pendiente con educación y firmeza
 
 #### 1. Pega el contexto
-_3 min · qué pasa_
+_qué pasa_
 
 ```text
 Quiero [la idea de la persona]. Este es el correo que he recibido (o la situación): [pégalo].
@@ -113,7 +111,7 @@ Lo que quiero conseguir: [qué]. Lo que no quiero: [qué].
 **✅ Comprobación:** Claude tiene toda la información.
 
 #### 2. Dos versiones
-_4 min · elegir_
+_elegir_
 
 ```text
 Escribe 2 versiones con mi tono: una más cálida y otra más directa. Que no pasen de 120 palabras.
@@ -122,7 +120,7 @@ Escribe 2 versiones con mi tono: una más cálida y otra más directa. Que no pa
 **✅ Comprobación:** tienes dos versiones para elegir.
 
 #### 3. Repásalo y envíalo tú
-_3 min · enviar_
+_enviar_
 
 - Lee el correo en voz alta.
 - Cambia lo que no dirías tú.
@@ -136,7 +134,6 @@ _3 min · enviar_
 
 Sube un PDF, un contrato o un informe y quédate con lo importante en 5 puntos.
 
-- ⏱ 10 min
 - 👩‍🍳 Muy fácil
 - 📄 Documentos
 - 🍽 Resultado: lo importante de un documento, con citas
@@ -147,7 +144,7 @@ Sube un PDF, un contrato o un informe y quédate con lo importante en 5 puntos.
   - Una normativa: una normativa o unas bases
 
 #### 1. Súbelo
-_2 min · el clip_
+_el clip_
 
 - Abre un chat dentro de **Mi asistente** y arrastra el documento (o pulsa 📎).
 
@@ -156,7 +153,7 @@ _2 min · el clip_
 **✅ Comprobación:** ves el documento en el chat.
 
 #### 2. Pide el resumen
-_5 min · lo importante_
+_lo importante_
 
 ```text
 Te he subido [la idea de la persona]. Resúmelo en 5 puntos, con palabras sencillas. Después dime: plazos y fechas, lo que me obliga a hacer, lo que me puede costar dinero y lo que deberías mirar con lupa. Cita la parte del documento de cada cosa.
@@ -165,7 +162,7 @@ Te he subido [la idea de la persona]. Resúmelo en 5 puntos, con palabras sencil
 **✅ Comprobación:** tienes el resumen con las citas.
 
 #### 3. Pregunta tus dudas
-_3 min · lo tuyo_
+_lo tuyo_
 
 ```text
 En mi caso, [explica tu situación]. ¿Qué parte del documento me afecta más y qué me recomiendas preguntar?
@@ -181,7 +178,6 @@ En mi caso, [explica tu situación]. ¿Qué parte del documento me afecta más y
 
 Sube tus apuntes y Claude te hace resúmenes, preguntas tipo test y te explica lo que no entiendes.
 
-- ⏱ 20 min
 - 👩‍🍳 Fácil
 - 🎓 Estudios
 - 🍽 Resultado: resumen, test y dudas resueltas
@@ -192,14 +188,14 @@ Sube tus apuntes y Claude te hace resúmenes, preguntas tipo test y te explica l
   - Practicar un idioma: practicar un idioma conversando
 
 #### 1. Sube tus apuntes
-_3 min · tu material_
+_tu material_
 
 - Sube tus apuntes o el tema (PDF, fotos de tus apuntes o texto).
 
 **✅ Comprobación:** Claude tiene tus apuntes.
 
 #### 2. Resumen y test
-_10 min · estudiar_
+_estudiar_
 
 ```text
 Quiero [la idea de la persona]. Con mis apuntes:
@@ -211,7 +207,7 @@ Usa solo lo que está en mis apuntes.
 **✅ Comprobación:** has hecho el test y sabes en qué fallas.
 
 #### 3. Lo que no entiendes
-_7 min · dudas_
+_dudas_
 
 ```text
 No entiendo [qué]. Explícamelo como a alguien de 12 años, con un ejemplo de la vida real. Después hazme una pregunta para ver si lo he entendido.
@@ -225,7 +221,6 @@ No entiendo [qué]. Explícamelo como a alguien de 12 años, con un ejemplo de l
 
 Tareas, citas y descansos en un plan realista que cabe en tu semana.
 
-- ⏱ 15 min
 - 👩‍🍳 Muy fácil
 - 📅 Organización
 - 🍽 Resultado: tu semana planificada en una tabla
@@ -236,7 +231,7 @@ Tareas, citas y descansos en un plan realista que cabe en tu semana.
   - Comidas y compra: el menú de la semana y la lista de la compra
 
 #### 1. Vacía la cabeza
-_5 min · todo lo pendiente_
+_todo lo pendiente_
 
 ```text
 Ayúdame a organizar [la idea de la persona]. Esto es todo lo que tengo pendiente, sin orden: [escríbelo todo]. Mis horarios fijos son: [cuáles].
@@ -245,7 +240,7 @@ Ayúdame a organizar [la idea de la persona]. Esto es todo lo que tengo pendient
 **✅ Comprobación:** Claude tiene todo lo pendiente.
 
 #### 2. El plan
-_5 min · una tabla_
+_una tabla_
 
 ```text
 Hazme un plan realista en una tabla, día a día. Primero lo urgente, deja huecos libres y avísame si no cabe todo.
@@ -254,7 +249,7 @@ Hazme un plan realista en una tabla, día a día. Primero lo urgente, deja hueco
 **✅ Comprobación:** tienes la semana en una tabla.
 
 #### 3. Llévalo a tu agenda
-_5 min · donde lo veas_
+_donde lo veas_
 
 - Cópialo en tu agenda o en una nota.
 - Con el libro [Gmail y Calendar](gmail-calendario.html), Claude puede apuntarlo en tu calendario.
@@ -262,80 +257,6 @@ _5 min · donde lo veas_
 **✅ Comprobación:** el plan está donde lo vas a ver.
 
 **Al terminar:** Tu semana tiene un plan. El viernes, cuéntale cómo ha ido y ajusta la siguiente.
-
-### Receta 5: Responde dudas de clientes con tus documentos
-
-Sube tus precios, horarios y condiciones, y tu asistente contesta con tu información, sin inventar.
-
-- ⏱ 20 min
-- 👩‍🍳 Fácil
-- 🏪 Negocio
-- 🍽 Resultado: respuestas a clientes basadas en tus documentos
-- Versión web: https://amri.es/recetas/asistente-ia--clientes.html
-- Ideas de ejemplo:
-  - Tienda: una tienda
-  - Servicios: un negocio de servicios con citas
-  - Clases o cursos: una academia o unos cursos
-
-#### 1. Sube tus documentos al proyecto
-_5 min · la despensa_
-
-- Reúne precios, horarios, condiciones y preguntas frecuentes. Mejor pocos y claros.
-- En **Mi asistente**, pulsa **Añadir contenido** y súbelos.
-
-**✅ Comprobación:** los documentos están en el proyecto.
-
-#### 2. Comprueba que lo entiende
-_5 min · el examen_
-
-```text
-Tengo [la idea de la persona]. Lee los documentos del proyecto y dime en 5 puntos qué has entendido. Si algo es confuso o falta, dímelo. A partir de ahora, si no encuentras algo en mis documentos, dilo en vez de inventarlo.
-```
-
-**✅ Comprobación:** Claude resume bien tu negocio.
-
-#### 3. Responde una duda real
-_10 min · probar_
-
-```text
-Un cliente me pregunta esto: [pega la pregunta]. Respóndele con mi tono usando solo mis documentos. Si no está, dime qué información falta.
-```
-
-**✅ Comprobación:** la respuesta es correcta y no inventa nada.
-
-**Al terminar:** Tu asistente responde con tu información. Si quieres que lo haga solo en tu web, mira el libro «Un chatbot para tu web».
-
-### Receta 6: Tu libreta de atajos
-
-Los mensajes que repites cada semana, listos para pegar en un segundo.
-
-- ⏱ 10 min
-- 👩‍🍳 Muy fácil
-- ⚡ Atajos
-- 🍽 Resultado: 5 mensajes listos para usar a diario
-- Versión web: https://amri.es/recetas/asistente-ia--atajos.html
-- Ideas de ejemplo:
-  - Trabajo: mi trabajo
-  - Casa: mi vida diaria
-
-#### 1. Pide tus atajos
-_5 min · a medida_
-
-```text
-Según lo que sabes de mí, dame 5 mensajes cortos que podría usar a diario contigo para ahorrar tiempo en [la idea de la persona]. Déjalos listos para copiar, con [huecos] donde tenga que poner lo mío.
-```
-
-**✅ Comprobación:** tienes 5 mensajes.
-
-#### 2. Guárdalos
-_5 min · a mano_
-
-- Cópialos en una nota del móvil llamada «Atajos de Claude».
-- Añade los que ya te han funcionado en otras recetas.
-
-**✅ Comprobación:** tienes tus atajos guardados.
-
-**Al terminar:** Tienes tus atajos. Cuantos más uses, más tiempo ahorras.
 
 ## Al terminar
 
@@ -354,7 +275,7 @@ Con los conectores, tu asistente puede leer tu correo, tu calendario o tus docum
 > 💡 Conecta solo lo que necesites. Mira el libro [Gmail y Calendar](gmail-calendario.html).
 
 ### Extra 2. Mantenlo al día
-_Cada mes · 5 minutos_
+_Cada mes_
 
 ```text
 Revisa tus instrucciones y propón mejoras según nuestras últimas conversaciones. Dime qué cambiarías y por qué.

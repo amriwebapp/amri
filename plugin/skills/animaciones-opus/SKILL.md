@@ -9,7 +9,6 @@ argument-hint: "[tu idea]"
 Tu logo animado, una explicación animada, un reel vertical, datos en movimiento o una animación para tu web. En el navegador o en MP4.
 
 - 📕 5 recetas
-- ⏱ 30-40 min cada una
 - 💶 Mejor con un plan de pago de Claude
 - 🍽 Resultado: animaciones en tu navegador o en MP4
 - Categoría: Estudio creativo
@@ -48,7 +47,7 @@ Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Elige al chef: Claude Opus 5.5
-_2 min · antes de empezar_
+_antes de empezar_
 
 Una animación tiene muchas piezas que deben encajar: tiempos, entradas, salidas y colores. Opus 5.5 es el modelo de Claude que mejor mantiene la coherencia en tareas largas como esta.
 
@@ -70,7 +69,6 @@ Una animación tiene muchas piezas que deben encajar: tiempos, entradas, salidas
 
 Tu logo apareciendo letra a letra con un brillo final, listo para tu web o tus vídeos.
 
-- ⏱ 30 min
 - 👩‍🍳 Fácil
 - ✨ Logo
 - 🍽 Resultado: tu logo animado en tu navegador
@@ -80,7 +78,7 @@ Tu logo apareciendo letra a letra con un brillo final, listo para tu web o tus v
   - Se dibuja solo: mi logo dibujándose trazo a trazo, como si alguien lo escribiera, 4 segundos
 
 #### 1. Dale tu logo
-_5 min · el material_
+_el material_
 
 Funciona mejor con el logo en **SVG**. Si solo tienes PNG, súbelo igual: Claude puede redibujarlo en SVG.
 
@@ -91,7 +89,7 @@ Te adjunto mi logo. Si no es SVG, redibújalo en SVG lo más fiel posible y ens�
 **✅ Comprobación:** Claude tiene tu logo en SVG.
 
 #### 2. El guion de 5 segundos
-_5 min · storyboard_
+_storyboard_
 
 ```text
 Quiero [la idea de la persona]. Escribe el storyboard en una tabla: segundo, qué parte del logo se mueve y cómo. Deja 1 segundo quieto al final. No escribas código todavía.
@@ -100,7 +98,7 @@ Quiero [la idea de la persona]. Escribe el storyboard en una tabla: segundo, qu�
 **✅ Comprobación:** has aprobado el storyboard.
 
 #### 3. Anímalo
-_10 min · artefacto_
+_artefacto_
 
 ```text
 Crea la animación como un artefacto HTML de una sola página, sin librerías externas, con el SVG del logo. Movimientos suaves (nada lineal). Abajo, un botón para volver a reproducirla.
@@ -109,7 +107,7 @@ Crea la animación como un artefacto HTML de una sola página, sin librerías ex
 **✅ Comprobación:** ves tu logo animado en el artefacto.
 
 #### 4. Ajusta y guarda
-_10 min · pulir_
+_pulir_
 
 ```text
 En el segundo [x], [lo que pasa] → [lo que quiero]. Cambia solo eso.
@@ -125,7 +123,6 @@ En el segundo [x], [lo que pasa] → [lo que quiero]. Cambia solo eso.
 
 30 segundos que explican cómo funciona tu servicio en 3 pasos, con iconos y textos grandes, en MP4.
 
-- ⏱ 40 min
 - 👩‍🍳 Media
 - 💡 Explicar
 - 🍽 Resultado: una animación explicativa en MP4
@@ -135,7 +132,7 @@ En el segundo [x], [lo que pasa] → [lo que quiero]. Cambia solo eso.
   - Antes y después: una animación de 20 segundos con el problema de mi cliente antes y cómo queda después de mi servicio
 
 #### 1. El guion
-_10 min · storyboard_
+_storyboard_
 
 ```text
 Quiero [la idea de la persona]. Mis pasos: [escríbelos].
@@ -146,7 +143,7 @@ Escribe el storyboard en una tabla: segundo de inicio y fin, qué se ve, qué ic
 **✅ Comprobación:** has aprobado el storyboard.
 
 #### 2. Anímala
-_10 min · artefacto_
+_artefacto_
 
 ```text
 Crea la animación como un artefacto HTML de una sola página, sin librerías externas, siguiendo el storyboard. Todo el movimiento depende de una función render(t) y una constante DUR. Abajo, play/pausa y una barra para saltar a cualquier segundo. Iconos dibujados en SVG.
@@ -160,7 +157,7 @@ Crea la animación como un artefacto HTML de una sola página, sin librerías ex
 **✅ Comprobación:** ves la animación con su barra.
 
 #### 3. Hazla tuya
-_5 min · tu marca_
+_tu marca_
 
 ```text
 Aplica mi marca: colores [#xxxxxx, #xxxxxx], tipografía [nombre de Google Fonts] y mi logo al final. Mantén los tiempos.
@@ -169,7 +166,7 @@ Aplica mi marca: colores [#xxxxxx, #xxxxxx], tipografía [nombre de Google Fonts
 **✅ Comprobación:** se reconoce tu marca.
 
 #### 4. Conviértela en MP4
-_15 min · Claude Code_
+_Claude Code_
 
 - Guarda el código como `animacion.html` en una carpeta nueva y ábrela en Claude Code.
 - Pega:
@@ -188,7 +185,6 @@ En esta carpeta está animacion.html, con una función render(t) y una constante
 
 15 segundos en vertical con textos grandes que presentan tu oferta, en MP4 para redes.
 
-- ⏱ 40 min
 - 👩‍🍳 Media
 - 📱 Reel
 - 🍽 Resultado: un reel en MP4 (1080×1920)
@@ -198,7 +194,7 @@ En esta carpeta está animacion.html, con una función render(t) y una constante
   - 3 consejos: un reel vertical de 15 segundos con 3 consejos cortos de mi sector, uno por pantalla
 
 #### 1. El guion vertical
-_10 min · storyboard_
+_storyboard_
 
 ```text
 Quiero [la idea de la persona]. Escribe el storyboard: segundo, texto (máximo 5 palabras), cómo entra. El primer segundo tiene que enganchar. Formato 9:16. Deja los textos dentro de la zona segura (lejos de arriba y de abajo, donde las redes ponen sus botones). No escribas código todavía.
@@ -207,7 +203,7 @@ Quiero [la idea de la persona]. Escribe el storyboard: segundo, texto (máximo 5
 **✅ Comprobación:** has aprobado el storyboard.
 
 #### 2. Anímalo
-_10 min · artefacto_
+_artefacto_
 
 ```text
 Crea la animación como un artefacto HTML vertical (1080×1920), sin librerías externas, con render(t) y DUR, play/pausa y barra de tiempo. Textos enormes y con buen contraste.
@@ -216,7 +212,7 @@ Crea la animación como un artefacto HTML vertical (1080×1920), sin librerías 
 **✅ Comprobación:** ves el reel en el artefacto.
 
 #### 3. Revísalo en pequeño
-_5 min · como en el móvil_
+_como en el móvil_
 
 Míralo a tamaño de móvil. ¿Se lee cada texto sin pausar?
 
@@ -227,7 +223,7 @@ En el segundo [x], el texto dura poco. Déjalo 1 segundo más y ajusta el resto.
 **✅ Comprobación:** cada texto se lee sin pausar.
 
 #### 4. Conviértelo en MP4
-_15 min · Claude Code_
+_Claude Code_
 
 - Guarda el código como `reel.html` en una carpeta y ábrela en Claude Code.
 
@@ -243,7 +239,6 @@ En esta carpeta está reel.html con render(t) y DUR. Crea un script que lo grabe
 
 Un gráfico que crece y cuenta una historia con tus números.
 
-- ⏱ 35 min
 - 👩‍🍳 Media
 - 📊 Datos
 - 🍽 Resultado: un gráfico animado
@@ -253,7 +248,7 @@ Un gráfico que crece y cuenta una historia con tus números.
   - Antes y ahora: una comparación animada entre dos años, con el porcentaje de mejora destacado al final
 
 #### 1. La historia de tus números
-_10 min · el mensaje_
+_el mensaje_
 
 ```text
 Estos son mis datos: [pégalos]. Quiero [la idea de la persona]. ¿Cuál es la historia más interesante que cuentan? Propón el titular y el orden en que aparece cada dato. No escribas código todavía.
@@ -264,7 +259,7 @@ Estos son mis datos: [pégalos]. Quiero [la idea de la persona]. ¿Cuál es la h
 **✅ Comprobación:** tienes el titular y el orden.
 
 #### 2. Anímalo
-_10 min · artefacto_
+_artefacto_
 
 ```text
 Crea la animación como artefacto HTML, sin librerías externas, con render(t), DUR, play/pausa y barra. Que los números cuenten hacia arriba mientras crecen las barras y que el titular aparezca al final. Usa exactamente mis datos.
@@ -273,14 +268,14 @@ Crea la animación como artefacto HTML, sin librerías externas, con render(t), 
 **✅ Comprobación:** ves el gráfico animado.
 
 #### 3. Comprueba los números
-_5 min · con lupa_
+_con lupa_
 
 Para el gráfico al final y compara cada número con tus datos originales.
 
 **✅ Comprobación:** todos los números coinciden.
 
 #### 4. Hazlo tuyo y guárdalo
-_10 min · marca_
+_marca_
 
 ```text
 Aplica mis colores [#xxxxxx, #xxxxxx] y mi tipografía. Después dame el código para guardarlo.
@@ -294,7 +289,6 @@ Aplica mis colores [#xxxxxx, #xxxxxx] y mi tipografía. Después dame el código
 
 Un fondo suave con formas que flotan para tu portada, que no distrae ni ralentiza.
 
-- ⏱ 30 min
 - 👩‍🍳 Fácil
 - 🌐 Web
 - 🍽 Resultado: una animación lista para pegar en tu web
@@ -304,7 +298,7 @@ Un fondo suave con formas que flotan para tu portada, que no distrae ni ralentiz
   - Detalles al pasar el ratón: pequeñas animaciones en mis botones y tarjetas al pasar el ratón
 
 #### 1. Pídela pensada para web
-_10 min · artefacto_
+_artefacto_
 
 ```text
 Quiero [la idea de la persona]. Hazla con CSS y, solo si hace falta, un poco de JavaScript, sin librerías. Requisitos: que no tape ni compita con el texto, que sea ligera para el móvil y que se pare si la persona tiene activado «reducir movimiento» en su sistema. Enséñamela en un artefacto con un texto de ejemplo encima.
@@ -318,7 +312,7 @@ Quiero [la idea de la persona]. Hazla con CSS y, solo si hace falta, un poco de 
 **✅ Comprobación:** la ves en el artefacto y el texto se lee bien.
 
 #### 2. Hazla tuya
-_5 min · marca_
+_marca_
 
 ```text
 Usa mis colores [#xxxxxx, #xxxxxx] y hazla más lenta y sutil. Cambia solo eso.
@@ -327,7 +321,7 @@ Usa mis colores [#xxxxxx, #xxxxxx] y hazla más lenta y sutil. Cambia solo eso.
 **✅ Comprobación:** encaja con tu web.
 
 #### 3. Pégala en tu web
-_15 min · instalar_
+_instalar_
 
 ```text
 Dame el código para pegar en mi web y dime exactamente dónde va. Este es mi index.html: [pégalo o dime el repositorio].

@@ -11,6 +11,9 @@
 (function(){
 "use strict";
 var B=window.RECIPE&&RECIPE.es;if(!B||!B.recetas)return;
+/* Recetas ocultas (off:1 en los datos): no se publican ni se cuentan */
+B.recetas=B.recetas.filter(function(x){return !x.off});
+B.meta=(B.meta||[]).map(function(m){return /^📕/.test(m)?"📕 "+B.recetas.length+" recetas":m});
 var body=document.body,rs=body.dataset.receta,slug=body.dataset.slug;
 var R=rs?B.recetas.filter(function(x){return x.s===rs})[0]:null;
 var KEY=B.R.key;
@@ -35,7 +38,7 @@ if(!B.R.apps){B.R.apps={base:{n:"",db:true,d:""}};B.R.def="base";}
 function card(r,i){var st=recState(r);
   var lead=r.portada?'<img class="lb-img" alt="" loading="lazy" src="../'+esc(r.portada)+'">':'<span class="lb-n">'+(st.ok?"✓":i+1)+'</span>';
   return '<a class="lb-card'+(st.ok?" ok":"")+(r.portada?" has-img":"")+'" href="'+slug+'--'+r.s+'.html">'+lead+'<span class="lb-tx"><b>'+esc(r.t)+'</b>'+
-    (r.d?'<small>'+esc(r.d)+'</small>':'')+'<span class="lb-ch">'+(r.meta||[]).slice(0,2).map(function(m){return '<i>'+esc(m)+'</i>'}).join("")+
+    (r.d?'<small>'+esc(r.d)+'</small>':'')+'<span class="lb-ch">'+(r.meta||[]).slice(0,1).map(function(m){return '<i>'+esc(m)+'</i>'}).join("")+
     (st.n&&!st.ok?'<i class="lb-pr">'+st.n+' de '+st.of+' pasos</i>':'')+'</span></span><span class="lb-go" aria-hidden="true">→</span></a>'}
 
 function bookPage(){
@@ -69,12 +72,12 @@ function recipePage(){
   showcase();
   var i=B.recetas.indexOf(R),h1=document.getElementById("rh1");
   var crumb=document.createElement("a");crumb.className="lb-crumb";crumb.href=slug+".html";
-  crumb.innerHTML='📕 Libro: <b>'+esc(B.title.replace(/^Libro:\s*/,""))+'</b> · receta '+(i+1)+' de '+B.recetas.length;
+  crumb.innerHTML='← Libro: <b>'+esc(B.title.replace(/^Libro:\s*/,""))+'</b> · '+(i+1)+'/'+B.recetas.length;
   h1.parentNode.insertBefore(crumb,h1);
   var ing=document.querySelector("main .ing");
   var warn=document.createElement("div");warn.className="lb-prep"+(prepReady()?" ok":"");
-  warn.innerHTML=prepReady()?'✅ <b>Cocina preparada.</b> Ya hiciste «Antes de empezar» de este libro: puedes ir directo a los pasos.'
-    :'🧺 <b>Antes de esta receta</b>, prepara la cocina del libro (cuentas y conexión). Solo se hace una vez. <a href="'+slug+'.html">Ir a «Antes de empezar» →</a>';
+  warn.innerHTML=prepReady()?'✓ Cocina preparada'
+    :'Antes, prepara la cocina del libro (una sola vez). <a href="'+slug+'.html">Ir a «Antes de empezar» →</a>';
   if(ing)ing.parentNode.insertBefore(warn,ing);
   var nx=B.recetas[i+1],foot=document.querySelector("main .foot");
   var box=document.createElement("section");box.className="lb-list lb-more";

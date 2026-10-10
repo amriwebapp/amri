@@ -1,15 +1,14 @@
 ---
 name: figma-a-web
-description: "Receta de AMRI «De Figma a web real». Una página completa, componentes, pantallas de app, tus estilos como variables y publicarla en internet. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «De Figma a web real». Una página completa, componentes, pantallas de app y tus estilos como variables. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # De Figma a web real
 
-Una página completa, componentes, pantallas de app, tus estilos como variables y publicarla en internet.
+Una página completa, componentes, pantallas de app y tus estilos como variables.
 
-- 📕 5 recetas
-- ⏱ 15-40 min cada una
+- 📕 4 recetas
 - 💶 Gratis si tu plan de Claude incluye conectores
 - 🍽 Resultado: tu diseño convertido en web
 - Categoría: Crea y publica
@@ -39,7 +38,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Este es un libro de recetas
 
-Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Según la idea de la persona:
+Tiene una preparación común («Antes de empezar») y 4 recetas concretas. Según la idea de la persona:
 1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
 2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
 3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
@@ -47,7 +46,7 @@ Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Ten un diseño en Figma
-_5 min · el plano_
+_el plano_
 
 - Entra en [Figma](https://www.figma.com) con una cuenta gratuita.
 - Si no tienes diseño, busca en **Figma Community** una plantilla gratuita de web y pulsa **Open in Figma**.
@@ -55,7 +54,7 @@ _5 min · el plano_
 **✅ Comprobación:** tienes un diseño abierto en Figma.
 
 ### 2. Conecta Figma con Claude
-_3 min · el conector_
+_el conector_
 
 - En Claude abre **Personalizar → Conectores** (en inglés: **Customize → Connectors**).
 - Pulsa **Explorar conectores**, busca «Figma» y pulsa **Conectar**.
@@ -64,7 +63,7 @@ _3 min · el conector_
 **✅ Comprobación:** Figma aparece activado.
 
 ### 3. Ordena el diseño
-_10 min · cortar los ingredientes_
+_cortar los ingredientes_
 
 Un diseño ordenado se convierte en una web mucho mejor.
 
@@ -75,7 +74,7 @@ Un diseño ordenado se convierte en una web mucho mejor.
 **✅ Comprobación:** tu frame principal tiene nombre y sus capas se entienden.
 
 ### 4. Copiar el enlace de un frame
-_1 min · señalar_
+_señalar_
 
 En cada receta tendrás que darle a Claude el enlace de lo que quieres convertir:
 
@@ -90,7 +89,6 @@ En cada receta tendrás que darle a Claude el enlace de lo que quieres convertir
 
 Tu página de inicio o tu portfolio, convertidos en un index.html fiel al diseño.
 
-- ⏱ 40 min
 - 👩‍🍳 Media
 - 🖥 Página
 - 🍽 Resultado: tu página como web
@@ -100,7 +98,7 @@ Tu página de inicio o tu portfolio, convertidos en un index.html fiel al diseñ
   - Portfolio: un portfolio con mi presentación, una galería de proyectos y un formulario de contacto
 
 #### 1. Pide la web
-_15 min · la orden_
+_la orden_
 
 ```text
 Este es el enlace a un frame de Figma: [pega tu enlace]
@@ -113,7 +111,7 @@ Conviértelo en una web en un único archivo index.html con HTML y CSS. Respeta 
 **✅ Comprobación:** tienes el archivo index.html.
 
 #### 2. Compara al lado
-_15 min · ajustar_
+_ajustar_
 
 - Guarda el archivo y ábrelo con doble clic, al lado de Figma.
 - Pide los ajustes de uno en uno:
@@ -127,7 +125,7 @@ El espacio entre la cabecera y la sección de servicios es más grande que en Fi
 **✅ Comprobación:** la web y el diseño se parecen mucho.
 
 #### 3. Guarda la versión buena
-_5 min · copia_
+_copia_
 
 Guarda el archivo y la conversación: si cambias el diseño, pedirás solo esa parte.
 
@@ -139,7 +137,6 @@ Guarda el archivo y la conversación: si cambias el diseño, pedirás solo esa p
 
 Una pieza suelta, con sus estados (normal, al pasar el ratón), lista para reutilizar.
 
-- ⏱ 15 min
 - 👩‍🍳 Fácil
 - 🧩 Componente
 - 🍽 Resultado: el código de un componente
@@ -149,7 +146,7 @@ Una pieza suelta, con sus estados (normal, al pasar el ratón), lista para reuti
   - Menú: un menú de navegación que en el móvil se convierte en un botón desplegable
 
 #### 1. Pídelo
-_10 min · la pieza_
+_la pieza_
 
 ```text
 Este es el enlace a un componente de Figma: [enlace]. Conviértelo en HTML y CSS: [la idea de la persona]. Dame una página de prueba con el componente y su código por separado para copiarlo.
@@ -158,7 +155,7 @@ Este es el enlace a un componente de Figma: [enlace]. Conviértelo en HTML y CSS
 **✅ Comprobación:** ves el componente funcionando en la página de prueba.
 
 #### 2. Pruébalo
-_5 min · estados_
+_estados_
 
 Pasa el ratón por encima, pulsa y míralo en el móvil.
 
@@ -170,7 +167,6 @@ Pasa el ratón por encima, pulsa y míralo en el móvil.
 
 La pantalla principal de tu app, como web que se ve en el móvil.
 
-- ⏱ 30 min
 - 👩‍🍳 Media
 - 📱 App
 - 🍽 Resultado: tu pantalla de app funcionando en el navegador
@@ -180,7 +176,7 @@ La pantalla principal de tu app, como web que se ve en el móvil.
   - Perfil: la pantalla de perfil de usuario
 
 #### 1. Pídela
-_20 min · la pantalla_
+_la pantalla_
 
 ```text
 Este es el enlace al frame de Figma: [enlace]. Es [la idea de la persona]. Conviértelo en una web pensada para móvil, en un único index.html, que se pueda tocar (menú y botones). Fiel a colores, tamaños y espacios.
@@ -189,7 +185,7 @@ Este es el enlace al frame de Figma: [enlace]. Es [la idea de la persona]. Convi
 **✅ Comprobación:** tienes el archivo.
 
 #### 2. Pruébala en tu móvil
-_10 min · tocar_
+_tocar_
 
 - Ábrela en el navegador con el modo móvil (F12 e icono del teléfono).
 - Pide ajustes de uno en uno.
@@ -202,7 +198,6 @@ _10 min · tocar_
 
 Convierte los estilos de Figma en variables CSS: cambias un color y cambia en toda la web.
 
-- ⏱ 15 min
 - 👩‍🍳 Media
 - 🎨 Estilos
 - 🍽 Resultado: tu web lista para cambiar de colores en un minuto
@@ -211,7 +206,7 @@ Convierte los estilos de Figma en variables CSS: cambias un color y cambia en to
   - Colores y textos: los estilos y variables de color y texto
 
 #### 1. Conviértelos
-_10 min · variables_
+_variables_
 
 ```text
 Lee [la idea de la persona] de mi archivo de Figma y conviértelos en variables CSS al principio de mi web. Usa esas variables en toda la web en lugar de los colores escritos a mano. Este es el código: [pégalo].
@@ -220,7 +215,7 @@ Lee [la idea de la persona] de mi archivo de Figma y conviértelos en variables 
 **✅ Comprobación:** tu web usa variables.
 
 #### 2. Pruébalo
-_5 min · un cambio_
+_un cambio_
 
 ```text
 Cambia el color principal por [color] para ver cómo queda. Luego vuelve al original.
@@ -229,26 +224,6 @@ Cambia el color principal por [color] para ver cómo queda. Luego vuelve al orig
 **✅ Comprobación:** toda la web cambia de color con un solo cambio.
 
 **Al terminar:** Ahora cambiar la marca de tu web es cuestión de un minuto.
-
-### Receta 5: Publícala en internet
-
-Tu index.html convertido en una web pública y gratuita.
-
-- ⏱ 20 min
-- 👩‍🍳 Fácil
-- 🚀 Publicar
-- 🍽 Resultado: tu diseño en una dirección web
-- Versión web: https://amri.es/recetas/figma-a-web--publicar.html
-
-#### 1. Sigue el libro de la web
-_20 min · publicar_
-
-- Si no tienes cuentas, haz «Antes de empezar» del libro [Tu web online y gratis](webapp-gratis.html).
-- Después sigue [Tu primera web](webapp-gratis--primera-web.html) desde el paso 3 («Guárdala en GitHub»), subiendo tu `index.html` y tus imágenes.
-
-**✅ Comprobación:** tienes una dirección web que se abre desde el móvil.
-
-**Al terminar:** Tu diseño está en internet.
 
 ## Al terminar
 

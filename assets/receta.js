@@ -22,12 +22,12 @@ root.setAttribute("data-theme",theme);
 
 
 /* Portada ilustrada encima del título */
-var h1=document.querySelector("main h1");
-if(h1&&ORDER.indexOf(slug)>-1){
-  var fig=document.createElement("div");fig.className="r-cover";fig.setAttribute("aria-hidden","true");
-  var im=new Image();im.alt="";im.src=img(slug);im.onerror=function(){fig.remove()};fig.appendChild(im);
-  var tb=document.createElement("div");tb.className="tools-badge";tb.setAttribute("data-tools",slug);fig.appendChild(tb);if(window.AMRI_LOGO)AMRI_LOGO.fillTools(fig);
-  h1.parentNode.insertBefore(fig,document.getElementById("i18n-note")||h1);
+var h1=document.querySelector("main h1"),isBook=!inBook&&window.RECIPE&&RECIPE.es&&RECIPE.es.recetas;
+if(h1&&ORDER.indexOf(slug)>-1&&!inBook){
+  var fig=document.createElement("div");fig.className="r-cover"+(isBook?" r-book":"");fig.setAttribute("aria-hidden","true");
+  var im=new Image();im.alt="";im.src=isBook?"../img/portadas/"+slug+".jpg":img(slug);
+  im.onerror=function(){if(isBook&&im.src.indexOf("portadas")>-1){im.src=img(slug)}else fig.remove()};fig.appendChild(im);
+  h1.parentNode.insertBefore(fig,h1);
 }
 
 /* Línea de lectura + parallax suave de la portada */
@@ -37,7 +37,7 @@ function onScroll(){
   var H=document.documentElement.scrollHeight-innerHeight,y=scrollY;
   line.style.transform="scaleX("+(H>0?y/H:0)+")";
   var c=document.querySelector(".r-cover img");
-  if(c&&!RM){var r=c.parentNode.getBoundingClientRect();if(r.bottom>0){c.style.transform="translateY("+(-6+Math.min(r.top<0?-r.top:0,400)*.04)+"%)";}}
+  if(c&&!RM&&!c.parentNode.classList.contains("r-book")){var r=c.parentNode.getBoundingClientRect();if(r.bottom>0){c.style.transform="translateY("+(-6+Math.min(r.top<0?-r.top:0,400)*.04)+"%)";}}
   ticking=false;
 }
 addEventListener("scroll",function(){if(!ticking){ticking=true;requestAnimationFrame(onScroll)}},{passive:true});
@@ -60,7 +60,7 @@ document.addEventListener("langchange",next);
 function pluginBox(){
   var old=document.querySelector(".r-plugin");if(old)old.remove();
   var map=window.AMRI_PLUGIN&&AMRI_PLUGIN.skills;if(!map||!map[slug])return;
-  var ing=document.querySelector("main .ing");if(!ing)return;
+  var foot=document.querySelector("main .foot");if(!foot)return;
   var rt=inBook&&window.RECIPE?RECIPE.es.title+": ":"";
   var cmd="/amri:"+map[slug]+" "+rt+t("pl_idea","tu idea");
   var box=document.createElement("aside");box.className="r-plugin";
@@ -72,10 +72,25 @@ function pluginBox(){
   btn.onclick=function(){var done=function(){btn.textContent=t("pl_copied","¡Copiado!");setTimeout(function(){btn.textContent=t("pl_copy","Copiar")},1800)};
     if(navigator.clipboard)navigator.clipboard.writeText(cmd).then(done,function(){});};
   box.querySelector("a").textContent=t("pl_how","Cómo instalar el plugin →");
-  ing.parentNode.insertBefore(box,ing.nextSibling);
+  foot.parentNode.insertBefore(box,foot);
 }
 pluginBox();
 document.addEventListener("langchange",pluginBox);
+
+/* Ingredientes plegados */
+(function(){
+  var box=document.querySelector("main .ing"),ul=document.getElementById("ing"),h=document.getElementById("ring");if(!box||!ul||!h)return;
+  box.classList.add("ing-c");h.setAttribute("role","button");h.tabIndex=0;h.setAttribute("aria-expanded","false");
+  var sum=document.createElement("span");sum.className="ing-s";h.appendChild(sum);
+  var names=function(){var n=[].map.call(ul.querySelectorAll("li > b:first-child"),function(b){return b.textContent.trim()});
+    sum.textContent=n.length?n.join(" · "):"";};
+  var toggle=function(){var o=box.classList.toggle("open");h.setAttribute("aria-expanded",o)};
+  h.addEventListener("click",function(e){if(e.target!==sum&&e.target!==h&&!h.contains(e.target))return;toggle()});
+  h.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();toggle()}});
+  new MutationObserver(function(){if(!h.contains(sum))h.appendChild(sum);names()}).observe(ul,{childList:true});
+  new MutationObserver(function(){if(!h.contains(sum))h.appendChild(sum)}).observe(h,{childList:true});
+  names();
+})();
 
 /* Entrada tranquila */
 if(!RM){document.body.classList.add("r-enter");setTimeout(function(){document.body.classList.remove("r-enter")},1800);}

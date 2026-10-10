@@ -1,15 +1,14 @@
 ---
 name: blender-3d
-description: "Receta de AMRI «Crea 3D con Claude y Blender». Sin saber modelar: un objeto, una escena, tu logo en 3D, tu producto girando o un personaje simpático. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Crea 3D con Claude y Blender». Sin saber modelar: un objeto, una escena, tu logo en 3D, o tu producto girando. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Crea 3D con Claude y Blender
 
-Sin saber modelar: un objeto, una escena, tu logo en 3D, tu producto girando o un personaje simpático.
+Sin saber modelar: un objeto, una escena, tu logo en 3D, o tu producto girando.
 
-- 📕 5 recetas
-- ⏱ 25-40 min cada una
+- 📕 4 recetas
 - 💶 Gratis
 - 🍽 Resultado: imágenes y vídeos en 3D
 - Categoría: Estudio creativo
@@ -40,7 +39,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Este es un libro de recetas
 
-Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Según la idea de la persona:
+Tiene una preparación común («Antes de empezar») y 4 recetas concretas. Según la idea de la persona:
 1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
 2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
 3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
@@ -48,7 +47,7 @@ Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Prepara los ingredientes
-_10 min · instalar programas_
+_instalar programas_
 
 Necesitas dos programas gratuitos en el mismo ordenador.
 
@@ -65,7 +64,7 @@ Necesitas dos programas gratuitos en el mismo ordenador.
 **✅ Comprobación:** Blender se abre y ves el cubo, la luz y la cámara de la escena inicial.
 
 ### 2. Añade el conector a Claude Desktop
-_3 min · el camarero_
+_el camarero_
 
 Blender tiene un conector oficial que se añade desde el directorio de Claude.
 
@@ -80,7 +79,7 @@ Blender tiene un conector oficial que se añade desde el directorio de Claude.
 **✅ Comprobación:** el conector de Blender aparece en tu lista de conectores.
 
 ### 3. Instala el complemento en Blender
-_10 min · una sola vez_
+_una sola vez_
 
 El conector necesita un complemento dentro de Blender para poder hablar con él.
 
@@ -99,7 +98,7 @@ El conector necesita un complemento dentro de Blender para poder hablar con él.
 **✅ Comprobación:** Blender te avisa de que se ha instalado el complemento.
 
 ### 4. Enciende la conexión
-_3 min · cada vez que trabajes_
+_cada vez que trabajes_
 
 La conexión hay que encenderla desde Blender cada vez que empieces a trabajar.
 
@@ -125,7 +124,6 @@ La conexión hay que encenderla desde Blender cada vez que empieces a trabajar.
 
 Una taza, una lámpara o lo que quieras, con su material, su luz y una imagen final.
 
-- ⏱ 25 min
 - 👩‍🍳 Fácil
 - 🧊 Objeto
 - 🍽 Resultado: una imagen PNG de tu objeto (1920×1080)
@@ -135,7 +133,7 @@ Una taza, una lámpara o lo que quieras, con su material, su luz y una imagen fi
   - Lámpara: una lámpara de mesa moderna encendida, sobre un escritorio de madera clara
 
 #### 1. Pide el objeto
-_10 min · Claude modela_
+_Claude modela_
 
 ```text
 Estás conectado a mi Blender. Quiero crear [la idea de la persona].
@@ -146,7 +144,7 @@ Dime primero el plan en pasos cortos. Después: borra el cubo inicial, modela el
 **✅ Comprobación:** ves el objeto en la vista 3D.
 
 #### 2. Míralo con luz de verdad
-_5 min · Rendered_
+_Rendered_
 
 - Pasa el ratón por la vista 3D, pulsa **Z** y elige **Rendered**.
 - Pide cambios de uno en uno:
@@ -160,7 +158,7 @@ Haz que la cerámica sea más brillante y la luz más cálida. Cambia solo eso.
 **✅ Comprobación:** el objeto se ve como lo imaginabas.
 
 #### 3. Saca la imagen
-_10 min · render_
+_render_
 
 ```text
 Configura el render a 1920×1080 con el motor EEVEE, que es rápido.
@@ -178,7 +176,6 @@ Configura el render a 1920×1080 con el motor EEVEE, que es rápido.
 
 Una habitación o un rincón con varios objetos y luz de atardecer.
 
-- ⏱ 35 min
 - 👩‍🍳 Media
 - 🏠 Escena
 - 🍽 Resultado: una imagen de tu escena
@@ -188,7 +185,7 @@ Una habitación o un rincón con varios objetos y luz de atardecer.
   - Mi tienda o local: el mostrador de una pequeña tienda con estanterías, productos y luz natural
 
 #### 1. Primero, el plano
-_5 min · organizar_
+_organizar_
 
 ```text
 Quiero crear [la idea de la persona]. Antes de construir nada, dame una lista de los objetos, dónde va cada uno y desde dónde mira la cámara. Espera mi OK.
@@ -197,7 +194,7 @@ Quiero crear [la idea de la persona]. Antes de construir nada, dame una lista de
 **✅ Comprobación:** has aprobado la lista de objetos.
 
 #### 2. Construye por partes
-_15 min · Claude modela_
+_Claude modela_
 
 ```text
 OK. Construye primero la habitación (suelo y paredes), después los muebles grandes y al final los detalles. Enséñamelo después de cada parte. Pon nombres claros y agrupa los objetos en colecciones.
@@ -208,7 +205,7 @@ OK. Construye primero la habitación (suelo y paredes), después los muebles gra
 **✅ Comprobación:** la escena tiene todos sus objetos.
 
 #### 3. La luz de atardecer
-_5 min · ambiente_
+_ambiente_
 
 ```text
 Pon luz de atardecer entrando por una ventana, cálida y con sombras largas, y una luz de relleno suave para que no quede muy oscuro.
@@ -219,7 +216,7 @@ Mírala en modo **Rendered** (tecla Z).
 **✅ Comprobación:** la escena tiene ambiente.
 
 #### 4. Saca la imagen
-_10 min · render_
+_render_
 
 ```text
 Configura el render a 1920×1080 con EEVEE y encuadra la cámara para que se vea toda la escena.
@@ -235,7 +232,6 @@ Configura el render a 1920×1080 con EEVEE y encuadra la cámara para que se vea
 
 Tu logo en relieve, con material dorado, girando despacio.
 
-- ⏱ 35 min
 - 👩‍🍳 Media
 - ✨ Logo
 - 🍽 Resultado: tu logo 3D en imagen y en vídeo
@@ -245,7 +241,7 @@ Tu logo en relieve, con material dorado, girando despacio.
   - Cristal: mi logo en 3D de cristal, con reflejos, sobre un fondo de degradado
 
 #### 1. Importa tu logo en SVG
-_5 min · el material_
+_el material_
 
 - Necesitas tu logo en **SVG** (formato vectorial).
 - En Blender: **File → Import → Scalable Vector Graphics (.svg)**.
@@ -255,7 +251,7 @@ _5 min · el material_
 **✅ Comprobación:** ves las curvas de tu logo en la escena (muy pequeñas: es normal).
 
 #### 2. Dale volumen
-_10 min · Claude modela_
+_Claude modela_
 
 ```text
 Estás conectado a mi Blender. He importado mi logo en SVG. Quiero [la idea de la persona].
@@ -266,7 +262,7 @@ Une las curvas, escálalo a un tamaño cómodo, dale grosor (extrusión) y bisel
 **✅ Comprobación:** tu logo tiene volumen y se reconoce.
 
 #### 3. Que gire en bucle
-_10 min · animación_
+_animación_
 
 ```text
 Anímalo: que gire una vuelta completa sobre sí mismo en 5 segundos (120 fotogramas a 24 fps), con un movimiento constante para que el bucle no se note.
@@ -277,7 +273,7 @@ Pulsa la barra espaciadora para verlo.
 **✅ Comprobación:** gira suave y el final enlaza con el principio.
 
 #### 4. Renderiza imagen y vídeo
-_10 min · render_
+_render_
 
 ```text
 Configura el render para exportar un vídeo MP4 en 1080p con EEVEE y dime dónde se guardará.
@@ -294,7 +290,6 @@ Configura el render para exportar un vídeo MP4 en 1080p con EEVEE y dime dónde
 
 Tu producto sobre un pedestal, con la cámara girando alrededor en bucle, como en una tienda online.
 
-- ⏱ 40 min
 - 👩‍🍳 Media
 - 🔄 Producto
 - 🍽 Resultado: un vídeo en bucle de tu producto
@@ -304,14 +299,14 @@ Tu producto sobre un pedestal, con la cámara girando alrededor en bucle, como e
   - Caja o paquete: la caja de mi producto sobre un pedestal, con la cámara girando alrededor en un bucle suave
 
 #### 1. Describe tu producto con medidas
-_5 min · precisión_
+_precisión_
 
 Cuanto más precisa la descripción (medidas, materiales, colores), más se parecerá. Si tienes fotos, súbelas al chat como referencia.
 
 **✅ Comprobación:** tienes la descripción y alguna foto.
 
 #### 2. Modela el producto y el pedestal
-_15 min · Claude modela_
+_Claude modela_
 
 ```text
 Estás conectado a mi Blender. Quiero [la idea de la persona]. Mi producto: [descripción con medidas]. Te adjunto fotos de referencia.
@@ -322,7 +317,7 @@ Modélalo con proporciones reales, ponle materiales creíbles, colócalo sobre u
 **✅ Comprobación:** tu producto se reconoce en la escena.
 
 #### 3. Cámara que gira en bucle
-_10 min · animación_
+_animación_
 
 ```text
 Haz que la cámara gire alrededor del producto una vuelta completa en 6 segundos (144 fotogramas a 24 fps), siempre mirando al producto, a velocidad constante para que el bucle sea perfecto.
@@ -331,7 +326,7 @@ Haz que la cámara gire alrededor del producto una vuelta completa en 6 segundos
 **✅ Comprobación:** el giro es suave y el bucle no se nota.
 
 #### 4. Renderiza en cuadrado y vertical
-_10 min · render_
+_render_
 
 ```text
 Exporta el vídeo en MP4 con EEVEE, primero en 1080×1080 y después en 1080×1920, sin cambiar la animación.
@@ -342,65 +337,6 @@ Exporta el vídeo en MP4 con EEVEE, primero en 1080×1080 y después en 1080×19
 **✅ Comprobación:** tienes los dos vídeos.
 
 **Al terminar:** Tu producto gira como en un anuncio. Úsalo en tu tienda o en redes.
-
-### Receta 5: Un personaje simpático
-
-Un personaje hecho con formas simples que saluda con la mano.
-
-- ⏱ 40 min
-- 👩‍🍳 Media
-- 🙂 Personaje
-- 🍽 Resultado: tu personaje saludando en vídeo
-- Versión web: https://amri.es/recetas/blender-3d--personaje.html
-- Ideas de ejemplo:
-  - Formas simples: un personaje simpático hecho con formas simples (una esfera con ojos y brazos) que saluda
-  - Mascota de mi marca: la mascota de mi marca, con mis colores, hecha con formas simples, que saluda
-
-#### 1. Constrúyelo con formas
-_15 min · Claude modela_
-
-```text
-Estás conectado a mi Blender. Quiero [la idea de la persona].
-
-Hazlo con formas sencillas (esferas, cilindros), con ojos grandes y amables, colores alegres y materiales mate. Pon cada parte con su nombre (cuerpo, ojo_izq, brazo_der…) y emparenta los brazos al cuerpo. Dime el plan antes.
-```
-
-> 💡 Formas simples = más simpático y más fácil de animar.
-
-**✅ Comprobación:** ves a tu personaje en la escena.
-
-#### 2. Que salude
-_10 min · animación_
-
-```text
-Anima el brazo derecho para que salude: sube en 0,5 s, se mueve de lado a lado tres veces y baja. Que el cuerpo se balancee un poco a la vez. 4 segundos en total a 24 fps.
-```
-
-Reprodúcelo con la barra espaciadora.
-
-**✅ Comprobación:** tu personaje saluda con un movimiento natural.
-
-#### 3. Ajusta la expresión
-_5 min · carácter_
-
-```text
-Hazle parpadear una vez en el segundo 2 y que sonría un poco más. Cambia solo eso.
-```
-
-**✅ Comprobación:** tiene la expresión que querías.
-
-#### 4. Renderiza el saludo
-_10 min · render_
-
-```text
-Exporta el vídeo en MP4 1080p con EEVEE, con fondo de un color liso [tu color].
-```
-
-- **Render → Render Animation**.
-
-**✅ Comprobación:** tienes el vídeo de tu personaje saludando.
-
-**Al terminar:** Tu personaje saluda. Puedes usarlo como mascota en tus redes.
 
 ## Al terminar
 
@@ -422,7 +358,7 @@ Claude ejecuta órdenes dentro de Blender, y algunos cambios grandes no se desha
 - Pídele cosas concretas: cuanto más claro, menos riesgo de sorpresas.
 
 ### Extra 2. Llévalo a tu web
-_10 min · opcional_
+_opcional_
 
 Puedes mostrar tu objeto 3D en una página web para que lo giren tus visitantes.
 

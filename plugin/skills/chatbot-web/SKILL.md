@@ -1,15 +1,14 @@
 ---
 name: chatbot-web
-description: "Receta de AMRI «Un chatbot para tu web». Monta tu chatbot, ponlo en tu web, recoge contactos, mejóralo cada semana y dale una bienvenida que invite a preguntar. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Un chatbot para tu web». Monta tu chatbot, ponlo en tu web, recoge contactos, y mejóralo cada semana. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Un chatbot para tu web
 
-Monta tu chatbot, ponlo en tu web, recoge contactos, mejóralo cada semana y dale una bienvenida que invite a preguntar.
+Monta tu chatbot, ponlo en tu web, recoge contactos, y mejóralo cada semana.
 
-- 📕 5 recetas
-- ⏱ 10-20 min cada una
+- 📕 4 recetas
 - 💶 Gratis (con los límites del plan gratuito de Chatbase)
 - 🍽 Resultado: un asistente 24/7 en tu web
 - Categoría: Crea y publica
@@ -39,7 +38,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Este es un libro de recetas
 
-Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Según la idea de la persona:
+Tiene una preparación común («Antes de empezar») y 4 recetas concretas. Según la idea de la persona:
 1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
 2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
 3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
@@ -47,7 +46,7 @@ Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Crea tus cuentas
-_5 min · gratis_
+_gratis_
 
 - Crea tu cuenta en [Claude](https://claude.ai).
 - Crea tu cuenta en [Chatbase](https://www.chatbase.co) (botón «Sign in with Google»).
@@ -58,7 +57,7 @@ _5 min · gratis_
 **✅ Comprobación:** has entrado en Claude y en Chatbase.
 
 ### 2. Escribe la chuleta con Claude
-_15 min · lo que debe saber_
+_lo que debe saber_
 
 Tu bot solo sabe lo que tú le enseñas. Claude te ayuda a escribir una «chuleta» con todo lo importante.
 
@@ -78,7 +77,6 @@ Hazme preguntas, de una en una, para reunir toda la información que necesita: q
 
 Sube la chuleta, dale personalidad y comprueba que no inventa.
 
-- ⏱ 20 min
 - 👩‍🍳 Fácil
 - 🤖 Chatbase
 - 🍽 Resultado: un chatbot que responde bien
@@ -89,7 +87,7 @@ Sube la chuleta, dale personalidad y comprueba que no inventa.
   - Servicios: un negocio de servicios: qué ofrezco, precios orientativos y cómo pedir cita
 
 #### 1. Sube la chuleta
-_5 min · aprender_
+_aprender_
 
 - En Chatbase pulsa **New AI agent** (o **Create**).
 - Elige **Text** y pega la chuleta. Si tu web ya tiene información, añade también **Website**.
@@ -98,7 +96,7 @@ _5 min · aprender_
 **✅ Comprobación:** en la ventana de prueba responde bien a una pregunta de tu negocio.
 
 #### 2. Dale personalidad
-_10 min · cómo habla_
+_cómo habla_
 
 En Chatbase abre **Settings → AI** (o **Instructions**) y pega, cambiando lo que está entre corchetes:
 
@@ -111,12 +109,12 @@ Eres el asistente de [nombre], [la idea de la persona]. Respondes siempre en esp
 **✅ Comprobación:** le preguntas algo que no está en la chuleta y te remite a tu contacto.
 
 #### 3. Intenta liarlo
-_5 min · prueba de fuego_
+_prueba de fuego_
 
 - «¿Me haces un descuento del 90%?» → no debe prometer nada.
 - «¿Abrís el día de Navidad?» (si no está en la chuleta) → debe remitirte a tu contacto.
 
-> 💡 Para una protección más fuerte, mira el libro [Un guardián para tu chatbot](jev-guardian.html).
+> 💡 Para una protección más fuerte, mira el libro [Guardián para el chatbot de tu web](jev-decisiones--chatbot.html).
 
 **✅ Comprobación:** no promete ni inventa nada.
 
@@ -126,7 +124,6 @@ _5 min · prueba de fuego_
 
 Pega un pequeño código y aparece la burbuja del chat.
 
-- ⏱ 10 min
 - 👩‍🍳 Fácil
 - 🌐 Web
 - 🍽 Resultado: el chat en tu web
@@ -136,14 +133,14 @@ Pega un pequeño código y aparece la burbuja del chat.
   - WordPress, Wix u otra: mi web, hecha con otra plataforma
 
 #### 1. Copia el código
-_2 min · Chatbase_
+_Chatbase_
 
 - En Chatbase abre **Deploy → Chat widget** y copia el código.
 
 **✅ Comprobación:** tienes el código copiado.
 
 #### 2. Pégalo
-_8 min · instalar_
+_instalar_
 
 - Pide a Claude: «Pega este código en mi web, justo antes de </body>, y súbelo a mi repositorio» (o hazlo a mano en `index.html`).
 - Cloudflare publica el cambio en 1-2 minutos.
@@ -156,7 +153,6 @@ _8 min · instalar_
 
 El bot pide nombre y correo a quien está interesado, y tú los recibes.
 
-- ⏱ 15 min
 - 👩‍🍳 Fácil
 - 📇 Contactos
 - 🍽 Resultado: contactos de clientes potenciales
@@ -166,7 +162,7 @@ El bot pide nombre y correo a quien está interesado, y tú los recibes.
   - Nombre y teléfono: nombre y teléfono
 
 #### 1. Actívalo
-_5 min · Chatbase_
+_Chatbase_
 
 - En Chatbase busca **Actions** o **Leads** y activa la recogida de contactos.
 - Pide solo [la idea de la persona]: no más de lo necesario.
@@ -175,7 +171,7 @@ _5 min · Chatbase_
 **✅ Comprobación:** está activado.
 
 #### 2. Privacidad
-_10 min · obligatorio_
+_obligatorio_
 
 ```text
 Escríbeme un texto corto de privacidad para mi web: qué datos recoge el chatbot, para qué, cuánto tiempo los guardo y cómo pedir que se borren.
@@ -191,7 +187,6 @@ Escríbeme un texto corto de privacidad para mi web: qué datos recoge el chatbo
 
 Lee las conversaciones, encuentra lo que falta y añádelo a la chuleta.
 
-- ⏱ 10 min
 - 👩‍🍳 Muy fácil
 - 🔁 Rutina
 - 🍽 Resultado: un bot que responde mejor cada semana
@@ -200,7 +195,7 @@ Lee las conversaciones, encuentra lo que falta y añádelo a la chuleta.
   - Revisión semanal: la revisión de esta semana
 
 #### 1. Lee las conversaciones
-_5 min · aprender_
+_aprender_
 
 - En Chatbase abre **Activity → Chat logs**.
 - Copia las preguntas con respuestas flojas o sin respuesta.
@@ -208,7 +203,7 @@ _5 min · aprender_
 **✅ Comprobación:** tienes las preguntas a mejorar.
 
 #### 2. Respuestas nuevas
-_5 min · Claude escribe_
+_Claude escribe_
 
 ```text
 Estas son preguntas que mi chatbot no ha sabido responder bien: [pégalas]. Escríbeme respuestas cortas y claras para añadirlas a su chuleta. Si te falta información, pregúntame.
@@ -219,38 +214,6 @@ Estas son preguntas que mi chatbot no ha sabido responder bien: [pégalas]. Escr
 **✅ Comprobación:** el bot responde bien esas preguntas.
 
 **Al terminar:** Tu bot ha aprendido. Repite cada semana.
-
-### Receta 5: Bienvenida y preguntas sugeridas
-
-Un saludo claro, botones con las preguntas típicas y los colores de tu marca.
-
-- ⏱ 10 min
-- 👩‍🍳 Muy fácil
-- 🎨 Aspecto
-- 🍽 Resultado: un chat que invita a preguntar
-- Versión web: https://amri.es/recetas/chatbot-web--bienvenida.html
-- Ideas de ejemplo:
-  - Cercano: cercano
-  - Formal: formal
-
-#### 1. El saludo y las sugerencias
-_5 min · Claude escribe_
-
-```text
-Escribe un mensaje de bienvenida para mi chatbot con tono [la idea de la persona], que diga que es un asistente automático, y 4 preguntas sugeridas cortas con lo que más me preguntan.
-```
-
-**✅ Comprobación:** tienes el saludo y las preguntas.
-
-#### 2. Ponlo en Chatbase
-_5 min · ajustes_
-
-- En los ajustes del chat (**Chat interface** o similar), pega el saludo y las preguntas sugeridas.
-- Pon tus colores y tu logo.
-
-**✅ Comprobación:** el chat se ve con tu marca y sus sugerencias.
-
-**Al terminar:** Tu chat invita a preguntar.
 
 ## Al terminar
 

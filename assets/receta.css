@@ -142,3 +142,103 @@ h1{letter-spacing:-.03em}
 .lb-ej h2{margin:0 0 10px;font-size:18px}
 .lb-ej img{width:100%;border-radius:12px;border:1px solid var(--line);margin:0 0 10px}
 .lb-ej p{margin:0 0 8px}.lb-ej a{color:var(--acc);font-weight:700}
+
+/* ---------- Minimal: menos cajas, menos ruido, lo justo para cocinar ---------- */
+body::before,body::after{display:none}
+.r-cover{aspect-ratio:16/6;margin:0 0 20px;border-radius:18px;box-shadow:none}
+.r-cover::after{display:none}
+h1{font-size:clamp(28px,6vw,40px);margin-bottom:8px}
+.meta{gap:2px 16px;margin:0 0 20px;color:var(--mute);font-size:14.5px}
+.meta span{background:none;border:0;border-radius:0;padding:0;font-size:inherit}
+.g-rev{display:none}
+.lb-crumb{font-size:14px;margin-bottom:6px}
+.lb-prep{background:none;border:0;border-radius:0;padding:0;margin:0 0 18px;font-size:14.5px;color:var(--mute)}
+.lb-prep.ok{background:none;color:var(--ok);font-weight:600}
+.ing{background:none;box-shadow:none;padding:14px 16px;margin-bottom:18px}
+.ing h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin-bottom:6px}
+.ing .logo-strip{display:none}
+.ing li{margin:3px 0;font-size:15.5px}
+.r-plugin{margin:0 0 22px;padding:0;border:0;background:none;gap:6px}
+.r-plugin .pt{font-size:14.5px;color:var(--mute);font-weight:600}
+.r-plugin p,.r-plugin a{display:none}
+.r-plugin code{font-size:13px;padding:7px 10px}
+.r-plugin button{padding:7px 12px;font-size:12.5px}
+.step,.ing{box-shadow:none}
+.step{border-radius:14px;margin-bottom:8px}
+.step:hover{transform:none}
+.hd{padding:14px 16px;gap:12px}
+.num{width:30px;height:30px;font-size:14px}
+.tt strong{font-size:17px}.tt small{font-size:13.5px}
+.prog{padding:8px 0}.bar{height:4px}
+.gx{margin:14px 0 4px}
+.gx-t{background:none;border:0;padding:2px 0;margin-right:14px;color:var(--mute);font-size:13.5px;font-weight:600}
+.gx-t[aria-expanded=true]{background:none;color:var(--acc)}
+.btn{margin-top:12px}
+.lb-intro{font-size:16.5px}
+.lb-h{font-size:19px}.lb-h small{font-size:14px}
+
+/* ---------- Minimal 2: la receta como una lista limpia ---------- */
+main{max-width:700px}
+.abrand{margin-bottom:10px}
+.back{border:0;background:none;padding:0;margin-bottom:22px;font-size:14px}
+.back:hover{color:var(--acc)}
+/* Página del libro: el librito vertical junto al título */
+.r-cover.r-book{float:left;width:118px;aspect-ratio:3/4;margin:4px 22px 12px 0;border:0;border-radius:3px 9px 9px 3px;
+  box-shadow:3px 3px 0 -1px var(--card),3px 3px 0 0 var(--line),0 14px 26px -16px rgba(42,31,20,.55)}
+.r-cover.r-book img{height:100%;transform:none}
+.lb-jump,.ing,.prog{clear:both}
+@media(max-width:480px){.r-cover.r-book{width:92px;margin-right:16px}}
+/* Ingredientes en una línea */
+.ing.ing-c{border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:0;padding:12px 0;margin-bottom:22px}
+.ing-c h2{cursor:pointer;margin:0;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.ing-c h2::after{content:"+";margin-left:auto;font-size:18px;color:var(--mute);font-weight:600}
+.ing-c.open h2::after{content:"−"}
+.ing-c .ing-s{text-transform:none;letter-spacing:0;font-size:15px;font-weight:600;color:var(--ink)}
+.ing-c ul{display:none;margin-top:10px}.ing-c.open ul{display:block}
+.ing-c h2:focus-visible{outline:3px solid var(--acc);outline-offset:4px;border-radius:6px}
+/* Pasos: filas con separadores, sin tarjetas */
+.step,.step.open,.step.done{background:none;border:0;border-bottom:1px solid var(--line);border-radius:0;margin:0;box-shadow:none}
+#steps{border-top:1px solid var(--line)}
+.hd{padding:16px 0}
+.tt small{display:none}
+.num{width:28px;height:28px;font-size:13px;background:none;border:1.5px solid var(--line);color:var(--mute)}
+.step.open .num{background:var(--acc);border-color:var(--acc)}
+.step.done .num{background:var(--ok);border-color:var(--ok);transform:none}
+.step.done .tt strong{color:var(--mute)}
+.chev{font-size:11px;opacity:.6}
+.bd{padding:0 0 22px 42px}
+@media(max-width:480px){.bd{padding-left:0}}
+/* Dentro del paso: sin cajas de color */
+.tip{background:none;border-left:2px solid var(--acc);border-radius:0;padding:2px 0 2px 12px;color:var(--mute)}
+.check{background:none;padding:0;margin-top:14px;color:var(--ok)}
+.check b{color:inherit}
+details{border:0;padding:0;margin:10px 0}
+summary{font-weight:600;color:var(--mute)}
+.bd details ul{color:var(--mute)}
+.prog{padding:10px 0 12px}
+.pl{font-size:12.5px}
+/* Final */
+.fin{border:0;padding:22px 0}
+.xt{font-size:17px;margin:34px 0 6px;color:var(--mute)}.xs{display:none}
+#extras .step:first-child{border-top:1px solid var(--line)}
+.comunidad{margin-top:36px}.comunidad h2{font-size:19px}
+.lb-more .lb-h{font-size:17px}
+.r-plugin{margin:30px 0 0;padding-top:18px;border-top:1px solid var(--line)}
+.foot{justify-content:flex-start}.foot .back{display:none}
+.reset{margin-top:6px;font-size:14px}
+/* En una receta, la miga de pan ya lleva al libro */
+body[data-receta] main>.back{display:none}
+.lb-crumb{margin-bottom:14px}
+/* Índice del libro y siguiente receta: filas, sin cajas */
+.lb-grid{gap:0;border-top:1px solid var(--line)}
+.lb-card,.lb-card.has-img{background:none;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:14px 0;box-shadow:none;gap:14px}
+.lb-card:hover{transform:none;box-shadow:none;border-color:var(--line)}
+.lb-card:hover b{color:var(--acc)}
+.lb-n{width:28px;height:28px;font-size:13px;background:none;border:1.5px solid var(--line)}
+.lb-tx b{font-size:16.5px}.lb-tx small{font-size:14px}
+.lb-ch i:not(.lb-pr){display:none}
+.lb-go{font-size:16px}
+.lb-h{margin-top:30px}
+main>.back{display:flex;width:fit-content}
+/* Sin extras, sin título de extras */
+.xt:has(+.xs+#extras:empty){display:none}

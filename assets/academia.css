@@ -509,3 +509,21 @@ footer.foot{position:relative;overflow:hidden;border-top:1px solid var(--line);p
 .featured-content .gets{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:6px;font-size:16px}
 .featured-content .gets li{padding-left:28px;position:relative}
 .featured-content .gets li::before{content:"✓";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--ok);color:#fff;font-size:12px;font-weight:800;display:grid;place-items:center}
+
+/* ---------- Libritos: portada, título, nº de recetas y categoría ---------- */
+.grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:30px 22px}
+.card.book,.card.book.in:hover{background:none;border:0;box-shadow:none;overflow:visible;border-radius:0}
+.card.book .card-thumb{height:auto;aspect-ratio:3/4;font-size:40px;border-radius:3px 10px 10px 3px;
+  box-shadow:3px 3px 0 -1px var(--card),3px 3px 0 0 var(--line),0 14px 26px -16px rgba(42,31,20,.55);transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.card.book .card-thumb::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;border-radius:inherit;
+  background:linear-gradient(90deg,rgba(0,0,0,.18) 0,rgba(255,255,255,.22) 5px,rgba(0,0,0,.06) 9px,transparent 16px)}
+.card.book .card-thumb img{object-position:center}
+.card.book.in:hover .card-thumb{transform:translateY(-6px) rotate(-1deg);box-shadow:3px 3px 0 -1px var(--card),3px 3px 0 0 var(--line),0 22px 34px -18px rgba(42,31,20,.6)}
+.card.book.in:hover{transform:none}
+.card.book .card-body{padding:12px 2px 0;gap:4px}
+.card.book h3{font-size:16px;line-height:1.25;margin:0}
+.card.book .bk-meta{font-size:13px;color:var(--mute);font-weight:600}
+@media(max-width:480px){.grid{grid-template-columns:repeat(2,1fr);gap:24px 14px}}
+/* El título ya va en la portada: debajo solo para lectores de pantalla */
+.card.book h3{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.card.book .card-body{padding-top:10px}

@@ -20,11 +20,11 @@ const ORDER = ["webapp-gratis","imagenes-ia","asistente-ia","automatiza-tareas",
   "higgsfield-cine","canva-diseno","figma-a-web","notion-cerebro","gmail-calendario","navegador-chrome","skills-propias","conector-propio","slack-equipo","gurusup-brain","redes-sociales","animaciones-opus","jev-decisiones","jev-guardian","empieza-aqui","primer-agente"];
 const CATS = [
   ["Primeros pasos", ["empieza-aqui","asistente-ia","imagenes-ia","logo-ia"]],
-  ["Conecta tus apps", ["gmail-calendario","notion-cerebro","canva-diseno","navegador-chrome","slack-equipo"]],
+  ["Conecta tus apps", ["gmail-calendario","notion-cerebro","canva-diseno","navegador-chrome"]],
   ["Crea y publica", ["webapp-gratis","chatbot-web","figma-a-web","automatiza-tareas"]],
   ["Estudio creativo", ["higgsfield-cine","video-aftereffects","blender-3d","redes-sociales","animaciones-opus"]],
   ["Claude a tu medida", ["primer-agente","skills-propias","conector-propio"]],
-  ["Para empresas (de pago)", ["gurusup-brain","jev-decisiones","jev-guardian"]]
+  ["Para empresas (de pago)", ["gurusup-brain","jev-decisiones"]]
 ];
 const catOf = s => CATS.find(c => c[1].includes(s));
 const card = s => CARDS[ORDER.indexOf(s)];
@@ -68,6 +68,7 @@ function build(slug) {
   ctx.window.RECIPE = {};
   vm.runInNewContext(fs.readFileSync(file, "utf8"), ctx);
   const P = ctx.window.RECIPE.es, R = P.R;
+  if (P.recetas) { P.recetas = P.recetas.filter(r => !r.off); P.meta = (P.meta || []).map(m => m.startsWith("📕") ? "📕 " + P.recetas.length + " recetas" : m); }
   if (!R.apps) { R.apps = { base: { n: "", db: true, d: "" } }; R.def = "base"; }
   const APPS = R.apps, app = R.def;
   const IDEA = "[la idea de la persona]";
@@ -145,7 +146,9 @@ ${next || "- `/amri:chef` para planificar tu siguiente proyecto"}
   return { slug, name, titulo: c.titulo, desc: c.desc, cat: cat ? cat[0] : "" };
 }
 
-const list = ORDER.map(build);
+/* Libros ocultos (off:1 en sus datos): sin skill */
+const isOff = slug => /^\s*off:1,/m.test(fs.readFileSync(path.join(ROOT, "recetas", "data", slug + ".es.js"), "utf8").split("\n").slice(0, 4).join("\n"));
+const list = ORDER.filter(s => !isOff(s)).map(build);
 
 /* Borra las skills de recetas que ya no existen (por ejemplo, recetas renombradas o fusionadas) */
 const keep = new Set(list.map(r => r.name).concat("chef"));

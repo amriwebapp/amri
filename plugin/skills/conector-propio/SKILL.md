@@ -9,7 +9,6 @@ argument-hint: "[tu idea]"
 Que Claude use tus propios datos: tu hoja de cálculo, tu carpeta de notas, un archivo propio o una API pública. Claude escribe el código.
 
 - 📕 4 recetas
-- ⏱ 40-60 min cada una
 - 💶 Gratis
 - 🍽 Resultado: Claude usando tus propios datos
 - Categoría: Claude a tu medida
@@ -49,7 +48,7 @@ Tiene una preparación común («Antes de empezar») y 4 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Entiende cómo funciona
-_3 min · la idea_
+_la idea_
 
 MCP (Model Context Protocol) es un idioma común para que Claude hable con otras apps. Un conector es un pequeño programa que ofrece **herramientas**.
 
@@ -60,7 +59,7 @@ MCP (Model Context Protocol) es un idioma común para que Claude hable con otras
 **✅ Comprobación:** sabrías explicar qué es una herramienta MCP.
 
 ### 2. Prepara los ingredientes
-_10 min · instalar_
+_instalar_
 
 - Instala [Claude Desktop](https://claude.ai/download) e inicia sesión.
 - Instala [Node.js](https://nodejs.org) (versión **LTS**).
@@ -79,7 +78,6 @@ node --version
 
 Claude busca, filtra y suma en tu hoja de clientes (CSV), sin que la subas cada vez.
 
-- ⏱ 50 min
 - 👩‍🍳 Avanzada
 - 📊 CSV
 - 🍽 Resultado: un conector para tu hoja
@@ -88,7 +86,7 @@ Claude busca, filtra y suma en tu hoja de clientes (CSV), sin que la subas cada 
   - Clientes: consultar una hoja de cálculo (CSV) con mis clientes: buscar por nombre, filtrar y sumar importes
 
 #### 1. Prepara una copia en CSV
-_5 min · los datos_
+_los datos_
 
 - Crea la carpeta **mi-conector** en tu carpeta de usuario.
 - Guarda **una copia** de tu hoja como CSV (Archivo → Guardar como → CSV) dentro, con el nombre `datos.csv`.
@@ -97,7 +95,7 @@ _5 min · los datos_
 **✅ Comprobación:** datos.csv está en la carpeta.
 
 #### 2. Pide el código
-_10 min · Claude programa_
+_Claude programa_
 
 ```text
 Quiero crear mi propio servidor MCP en Node.js (JavaScript sencillo, sin TypeScript) con el SDK oficial @modelcontextprotocol/sdk y transporte stdio, para [la idea de la persona].
@@ -115,7 +113,7 @@ Dame package.json, server.js, los comandos para instalarlo y el bloque para clau
 **✅ Comprobación:** tienes package.json y server.js.
 
 #### 3. Instálalo
-_10 min · terminal y configuración_
+_terminal y configuración_
 
 - Guarda los dos archivos en **mi-conector** y, en la terminal:
 
@@ -132,7 +130,7 @@ npm install
 **✅ Comprobación:** en un chat nuevo, «mi-conector» aparece en la lista de herramientas.
 
 #### 4. Pruébalo con preguntas reales
-_10 min · el examen_
+_el examen_
 
 ```text
 Usando mi-conector: ¿cuántos clientes tengo en [ciudad]? ¿Cuánto suman sus cuotas? ¿Quién se dio de alta este año?
@@ -148,7 +146,6 @@ Comprueba dos respuestas abriendo la hoja.
 
 Claude busca y lee tus notas en archivos de texto de tu ordenador.
 
-- ⏱ 50 min
 - 👩‍🍳 Avanzada
 - 🗒 Notas
 - 🍽 Resultado: un conector para tus notas
@@ -157,7 +154,7 @@ Claude busca y lee tus notas en archivos de texto de tu ordenador.
   - Carpeta de notas: buscar y leer mis notas en archivos de texto de una carpeta de mi ordenador
 
 #### 1. Elige la carpeta
-_5 min · los datos_
+_los datos_
 
 - Crea la carpeta **mi-conector**.
 - Decide qué carpeta de notas quieres que lea (solo esa) y apunta su ruta completa.
@@ -167,7 +164,7 @@ _5 min · los datos_
 **✅ Comprobación:** tienes la ruta de tu carpeta de notas.
 
 #### 2. Pide el código
-_10 min · Claude programa_
+_Claude programa_
 
 ```text
 Quiero crear mi propio servidor MCP en Node.js (JavaScript sencillo) con el SDK oficial @modelcontextprotocol/sdk y transporte stdio, para [la idea de la persona].
@@ -185,7 +182,7 @@ Que nunca lea fuera de esa carpeta (ni con ../). Dame package.json, server.js, l
 **✅ Comprobación:** tienes los archivos.
 
 #### 3. Instálalo
-_10 min · terminal y configuración_
+_terminal y configuración_
 
 ```text
 cd mi-conector
@@ -198,7 +195,7 @@ npm install
 **✅ Comprobación:** «mi-conector» aparece en las herramientas.
 
 #### 4. Pruébalo
-_10 min · el examen_
+_el examen_
 
 ```text
 Usando mi-conector, busca lo que tengo sobre [tema] y resúmemelo. Cita el nombre de cada nota.
@@ -214,7 +211,6 @@ Prueba también que no sale de la carpeta: «lee el archivo ../secreto.txt» deb
 
 Claude consulta un archivo tuyo (por ejemplo, tu recetario en JSON) por ingrediente y tiempo.
 
-- ⏱ 50 min
 - 👩‍🍳 Avanzada
 - 📁 JSON
 - 🍽 Resultado: un conector para tu archivo
@@ -223,7 +219,7 @@ Claude consulta un archivo tuyo (por ejemplo, tu recetario en JSON) por ingredie
   - Mi recetario: buscar recetas en mi recetario (un archivo JSON) por ingrediente y tiempo
 
 #### 1. Crea el archivo
-_10 min · los datos_
+_los datos_
 
 Si tus datos están en notas o en Word, pide a Claude que los pase a JSON:
 
@@ -236,7 +232,7 @@ Convierte estas recetas en un archivo JSON con, para cada una: nombre, ingredien
 **✅ Comprobación:** datos.json está en la carpeta.
 
 #### 2. Pide el código
-_10 min · Claude programa_
+_Claude programa_
 
 ```text
 Quiero crear mi propio servidor MCP en Node.js (JavaScript sencillo) con el SDK oficial @modelcontextprotocol/sdk y transporte stdio, para [la idea de la persona].
@@ -254,7 +250,7 @@ Dame package.json, server.js, los comandos y el bloque para claude_desktop_confi
 **✅ Comprobación:** tienes los archivos.
 
 #### 3. Instálalo
-_10 min · terminal y configuración_
+_terminal y configuración_
 
 ```text
 cd mi-conector
@@ -266,7 +262,7 @@ npm install
 **✅ Comprobación:** «mi-conector» aparece en las herramientas.
 
 #### 4. Pruébalo
-_10 min · el examen_
+_el examen_
 
 ```text
 Usando mi-conector: tengo pollo, limón y 30 minutos. ¿Qué puedo hacer? Después, hazme el menú de la semana con recetas de menos de 40 minutos.
@@ -280,7 +276,6 @@ Usando mi-conector: tengo pollo, limón y 30 minutos. ¿Qué puedo hacer? Despu�
 
 Claude consulta el tiempo de cualquier ciudad con la API gratuita de Open-Meteo, sin clave.
 
-- ⏱ 40 min
 - 👩‍🍳 Avanzada
 - 🌦 API
 - 🍽 Resultado: un conector a una API de internet
@@ -289,14 +284,14 @@ Claude consulta el tiempo de cualquier ciudad con la API gratuita de Open-Meteo,
   - El tiempo: consultar el tiempo de cualquier ciudad usando la API gratuita de Open-Meteo, sin clave
 
 #### 1. Qué es una API
-_3 min · la idea_
+_la idea_
 
 Una API es una puerta para que dos programas hablen. Open-Meteo ofrece el tiempo gratis y sin clave: perfecta para aprender.
 
 **✅ Comprobación:** sabes qué es una API.
 
 #### 2. Pide el código
-_10 min · Claude programa_
+_Claude programa_
 
 ```text
 Quiero crear mi propio servidor MCP en Node.js (JavaScript sencillo) con el SDK oficial @modelcontextprotocol/sdk y transporte stdio, para [la idea de la persona].
@@ -310,7 +305,7 @@ Usa fetch, sin claves. Si la ciudad no existe, devuelve un mensaje claro. Dame p
 **✅ Comprobación:** tienes los archivos.
 
 #### 3. Instálalo
-_12 min · terminal y configuración_
+_terminal y configuración_
 
 - Crea la carpeta **mi-conector**, guarda los archivos y en la terminal:
 
@@ -324,7 +319,7 @@ npm install
 **✅ Comprobación:** «mi-conector» aparece en las herramientas.
 
 #### 4. Pruébalo
-_10 min · el examen_
+_el examen_
 
 ```text
 Usando mi-conector: ¿lloverá este fin de semana en [ciudad]? ¿Y en una ciudad que no existe, como Pueblolandia?

@@ -9,7 +9,6 @@ argument-hint: "[tu idea]"
 Convierte tu forma de trabajar en Skills: informes con tu formato, correos con tu estilo, fichas de producto o material de clase.
 
 - 📕 4 recetas
-- ⏱ 25-30 min cada una
 - 💶 Gratis si tu plan de Claude incluye Skills
 - 🍽 Resultado: Skills que Claude usa solo
 - Categoría: Claude a tu medida
@@ -48,7 +47,7 @@ Tiene una preparación común («Antes de empezar») y 4 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Entiende qué es una Skill
-_3 min · la idea_
+_la idea_
 
 Una Skill es como una ficha de receta que Claude guarda en su cajón. No la usa siempre: la saca solo cuando la tarea encaja con su descripción.
 
@@ -59,7 +58,7 @@ Una Skill es como una ficha de receta que Claude guarda en su cajón. No la usa 
 **✅ Comprobación:** sabrías explicar a alguien qué es una Skill en una frase.
 
 ### 2. Activa las Skills
-_2 min · ajustes_
+_ajustes_
 
 - En Claude, abre los ajustes y busca **Capacidades** (_Capabilities_) o **Personalizar → Skills**.
 - Activa la **ejecución de código** (_Code execution_) si te lo pide.
@@ -75,7 +74,6 @@ _2 min · ajustes_
 
 Tu estructura, tu tono y tus gráficos, en cada informe, sin repetir instrucciones.
 
-- ⏱ 30 min
 - 👩‍🍳 Media
 - 📊 Informes
 - 🍽 Resultado: una Skill de informes instalada
@@ -84,7 +82,7 @@ Tu estructura, tu tono y tus gráficos, en cada informe, sin repetir instruccion
   - Informe mensual: escribir informes mensuales siempre con la misma estructura, tono y gráficos
 
 #### 1. Que Claude te entreviste
-_10 min · tu método_
+_tu método_
 
 ```text
 Quiero crear una Skill para [la idea de la persona].
@@ -95,7 +93,7 @@ Entrevístame, de una en una, con estas preguntas y las que necesites: ¿para qu
 **✅ Comprobación:** has respondido a todas las preguntas.
 
 #### 2. Dale un informe bueno
-_3 min · el modelo_
+_el modelo_
 
 - Adjunta un informe tuyo que te guste (sin datos confidenciales).
 
@@ -106,7 +104,7 @@ Este es un informe que me gusta. Inclúyelo en la Skill como modelo de estructur
 **✅ Comprobación:** Claude ha entendido tu modelo.
 
 #### 3. Que escriba la Skill
-_5 min · el archivo_
+_el archivo_
 
 ```text
 Escribe la Skill: una carpeta con SKILL.md (nombre corto, descripción que diga cuándo usarla y las instrucciones paso a paso) y una plantilla del informe en un archivo aparte. La descripción debe empezar por: «Úsala cuando haya que preparar el informe mensual…». Empaquétala en un .zip.
@@ -115,7 +113,7 @@ Escribe la Skill: una carpeta con SKILL.md (nombre corto, descripción que diga 
 **✅ Comprobación:** tienes el .zip descargado.
 
 #### 4. Instálala y pruébala sin nombrarla
-_7 min · el examen_
+_el examen_
 
 - En la sección de Skills de los ajustes, pulsa **Subir Skill** y elige el .zip.
 - En un chat nuevo, pide:
@@ -134,7 +132,6 @@ Prepárame el informe de este mes con estos datos: [pega tus datos].
 
 Tu tono, tu firma y tus respuestas habituales, en cada correo a clientes.
 
-- ⏱ 25 min
 - 👩‍🍳 Media
 - ✉️ Correos
 - 🍽 Resultado: una Skill de correos instalada
@@ -143,7 +140,7 @@ Tu tono, tu firma y tus respuestas habituales, en cada correo a clientes.
   - Correos a clientes: responder correos de clientes con mi tono, mis firmas y mis respuestas habituales
 
 #### 1. Que Claude te entreviste
-_8 min · tu estilo_
+_tu estilo_
 
 ```text
 Quiero crear una Skill para [la idea de la persona].
@@ -154,7 +151,7 @@ Pregúntame, de una en una: ¿tuteo o usted? ¿cómo saludo y cómo me despido? 
 **✅ Comprobación:** has respondido a todo.
 
 #### 2. Pega tres correos tuyos
-_3 min · tu voz_
+_tu voz_
 
 ```text
 Estos son tres correos que escribí yo y me gustan: [pégalos, sin datos de clientes]. Úsalos en la Skill como ejemplo de mi tono.
@@ -163,7 +160,7 @@ Estos son tres correos que escribí yo y me gustan: [pégalos, sin datos de clie
 **✅ Comprobación:** Claude ha visto tus correos.
 
 #### 3. Que escriba la Skill
-_5 min · el archivo_
+_el archivo_
 
 ```text
 Escribe la Skill: SKILL.md con nombre corto, una descripción que empiece por «Úsala cuando haya que responder a un cliente…», mis reglas de tono, mi firma y mis respuestas habituales en un archivo aparte. Empaquétala en un .zip.
@@ -172,7 +169,7 @@ Escribe la Skill: SKILL.md con nombre corto, una descripción que empiece por «
 **✅ Comprobación:** tienes el .zip.
 
 #### 4. Instálala y pruébala
-_9 min · el examen_
+_el examen_
 
 - Súbela en **Subir Skill**.
 - En un chat nuevo, pega un correo real de un cliente (sin datos personales) y pide: «Respóndele».
@@ -185,7 +182,6 @@ _9 min · el examen_
 
 Título, descripción, ventajas y medidas, siempre igual de completas.
 
-- ⏱ 25 min
 - 👩‍🍳 Media
 - 🏷 Tienda
 - 🍽 Resultado: una Skill de fichas de producto instalada
@@ -194,7 +190,7 @@ Título, descripción, ventajas y medidas, siempre igual de completas.
   - Mi tienda: escribir fichas de producto para mi tienda con título, descripción, ventajas y medidas
 
 #### 1. Que Claude te entreviste
-_8 min · tu formato_
+_tu formato_
 
 ```text
 Quiero crear una Skill para [la idea de la persona].
@@ -205,7 +201,7 @@ Pregúntame, de una en una: ¿qué secciones lleva cada ficha? ¿cuánto de larg
 **✅ Comprobación:** has respondido a todo.
 
 #### 2. Dale tu mejor ficha
-_3 min · el modelo_
+_el modelo_
 
 ```text
 Esta es la mejor ficha de mi tienda: [pégala]. Úsala como modelo en la Skill.
@@ -214,7 +210,7 @@ Esta es la mejor ficha de mi tienda: [pégala]. Úsala como modelo en la Skill.
 **✅ Comprobación:** Claude tiene tu modelo.
 
 #### 3. Que escriba la Skill
-_5 min · el archivo_
+_el archivo_
 
 ```text
 Escribe la Skill: SKILL.md con descripción que empiece por «Úsala cuando haya que escribir la ficha de un producto…», las reglas y una plantilla. Que nunca invente medidas ni materiales: si falta un dato, que lo pregunte. Empaquétala en un .zip.
@@ -223,7 +219,7 @@ Escribe la Skill: SKILL.md con descripción que empiece por «Úsala cuando haya
 **✅ Comprobación:** tienes el .zip.
 
 #### 4. Instálala y pruébala
-_9 min · el examen_
+_el examen_
 
 - Súbela en **Subir Skill**.
 - Pide: «Ficha para este producto: [datos y una foto]».
@@ -236,7 +232,6 @@ _9 min · el examen_
 
 Fichas de ejercicios con nivel, objetivos y soluciones, siempre con tu estructura.
 
-- ⏱ 25 min
 - 👩‍🍳 Media
 - 🎓 Clases
 - 🍽 Resultado: una Skill de material de clase instalada
@@ -245,7 +240,7 @@ Fichas de ejercicios con nivel, objetivos y soluciones, siempre con tu estructur
   - Fichas de ejercicios: preparar fichas de ejercicios para mis alumnos con nivel, objetivos y soluciones
 
 #### 1. Que Claude te entreviste
-_8 min · tu método_
+_tu método_
 
 ```text
 Quiero crear una Skill para [la idea de la persona]. Enseño [qué] a [quién].
@@ -256,7 +251,7 @@ Pregúntame, de una en una: ¿qué partes lleva cada ficha? ¿cómo ordeno los e
 **✅ Comprobación:** has respondido a todo.
 
 #### 2. Que escriba la Skill
-_5 min · el archivo_
+_el archivo_
 
 ```text
 Escribe la Skill: SKILL.md con descripción que empiece por «Úsala cuando haya que preparar una ficha de ejercicios…», la estructura, las reglas de dificultad y una plantilla. Empaquétala en un .zip.
@@ -265,7 +260,7 @@ Escribe la Skill: SKILL.md con descripción que empiece por «Úsala cuando haya
 **✅ Comprobación:** tienes el .zip.
 
 #### 3. Instálala y pruébala
-_12 min · el examen_
+_el examen_
 
 - Súbela en **Subir Skill**.
 - Pide: «Prepárame una ficha sobre [tema] para la clase de mañana».

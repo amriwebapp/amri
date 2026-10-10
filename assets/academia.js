@@ -9,7 +9,7 @@
 const REPO = "https://github.com/amriwebapp/amri";
 
 /* ---------- Datos (los textos traducibles viven en i18n.js) ---------- */
-// f = categoría · c = usa conectores · n = nueva · top = sale primero en el recetario
+// f = categoría · c = usa conectores · n = nueva · top = sale primero en el recetario · off = libro oculto
 const RECETAS = [
   {slug:"webapp-gratis",f:"web",emoji:"🌐",bg:"#FFE4D6",bg2:"#FBF6EE"},
   {slug:"imagenes-ia",f:"imagen",emoji:"🎨",bg:"#E4E0FF",bg2:"#EFEAFF"},
@@ -27,12 +27,12 @@ const RECETAS = [
   {slug:"navegador-chrome",f:"auto",emoji:"🧭",bg:"#E2EEF8",bg2:"#FBF6EE",c:1,n:1,svg:1},
   {slug:"skills-propias",f:"texto",emoji:"📖",bg:"#E6F2DC",bg2:"#FBF6EE",n:1,svg:1},
   {slug:"conector-propio",f:"web",emoji:"🔌",bg:"#FFE4D6",bg2:"#FBF6EE",c:1,n:1,svg:1},
-  {slug:"slack-equipo",f:"auto",emoji:"💬",bg:"#EDE4FF",bg2:"#FBF6EE",c:1,n:1,svg:1},
+  {slug:"slack-equipo",off:1,f:"auto",emoji:"💬",bg:"#EDE4FF",bg2:"#FBF6EE",c:1,n:1,svg:1},
   {slug:"gurusup-brain",f:"texto",emoji:"🧠",bg:"#E4EEF6",bg2:"#FBF6EE",c:1,n:1,svg:1},
   {slug:"redes-sociales",f:"imagen",emoji:"📣",bg:"#FCE3EC",bg2:"#FBF6EE",n:1,svg:1},
   {slug:"animaciones-opus",f:"video",emoji:"🎞️",bg:"#FFE9C7",bg2:"#FBF6EE",n:1,svg:1},
   {slug:"jev-decisiones",f:"auto",emoji:"⚖️",bg:"#DCEFE6",bg2:"#FBF6EE",n:1,svg:1},
-  {slug:"jev-guardian",f:"web",emoji:"🛡️",bg:"#E3E8F7",bg2:"#FBF6EE",n:1,svg:1},
+  {slug:"jev-guardian",off:1,f:"web",emoji:"🛡️",bg:"#E3E8F7",bg2:"#FBF6EE",n:1,svg:1},
   {slug:"empieza-aqui",f:"texto",emoji:"🌱",bg:"#E7F0E4",bg2:"#FBF6EE",n:1,svg:1,top:2},
   {slug:"primer-agente",f:"auto",emoji:"🤖",bg:"#FFE4D6",bg2:"#FBF6EE",n:1,svg:1,top:1}
 ];
@@ -42,11 +42,11 @@ const LIBROS = window.AMRI_LIBROS || {};
 const subs = slug => LIBROS[slug] || [];
 const PATHS = [
   {ic:"🌱",r:["empieza-aqui","asistente-ia","imagenes-ia","logo-ia"]},
-  {ic:"🔌",r:["gmail-calendario","notion-cerebro","canva-diseno","navegador-chrome","slack-equipo"]},
+  {ic:"🔌",r:["gmail-calendario","notion-cerebro","canva-diseno","navegador-chrome"]},
   {ic:"🛠️",r:["webapp-gratis","chatbot-web","figma-a-web","automatiza-tareas"]},
   {ic:"🎬",r:["higgsfield-cine","video-aftereffects","blender-3d","redes-sociales","animaciones-opus"]},
   {ic:"🧠",r:["primer-agente","skills-propias","conector-propio"]},
-  {ic:"🏢",r:["gurusup-brain","jev-decisiones","jev-guardian"]}
+  {ic:"🏢",r:["gurusup-brain","jev-decisiones"]}
 ];
 const CONNS = [
   {n:"Higgsfield",ic:"🎥",c:"#FFD9C4"},{n:"Canva",ic:"🖌️",c:"#CDEDE8"},{n:"Figma",ic:"📐",c:"#E3D9FF"},
@@ -197,31 +197,25 @@ const grid=$("#grid");let filter="all",query="";
 function norm(s){return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");}
 function renderGrid(){
   const list=RECETAS.map((r,i)=>Object.assign({},r,I18N.card(i)))
+    .filter(r=>!r.off)
     .sort((a,b)=>(b.top||0)-(a.top||0))
     .filter(r=>filter==="all"||(filter==="conn"?r.c:CAT_OF[r.slug]===filter))
     .filter(r=>!query||norm(r.titulo+" "+r.desc+" "+r.tag+" "+subs(r.slug).map(x=>x.t+" "+x.d).join(" ")).includes(norm(query)));
   renderHits();
   if(!list.length){grid.innerHTML=`<div class="empty">${T("empty")}</div>`;return;}
-  const count=n=>`📕 ${n} ${n===1?T("lib_one"):T("lib_many")}`;
-  grid.innerHTML=list.map((r,i)=>{const rs=subs(r.slug),n=rs.length||1;return `
-    <a class="card book" href="recetas/${r.slug}.html" style="transition-delay:${Math.min(i,8)*.07}s">
+  const catName=slug=>{const c=CAT_OF[slug];return c?T("p"+(+c.slice(1)+1)+"t"):"";};
+  grid.innerHTML=list.map((r,i)=>{const n=subs(r.slug).length||1;return `
+    <a class="card book" href="recetas/${r.slug}.html" style="transition-delay:${Math.min(i,8)*.05}s">
       <div class="card-thumb" style="background:linear-gradient(135deg,${r.bg},${r.bg2})">
-        <span class="tag">${esc(r.tag)}</span><span class="conn book">${count(n)}</span>${r.n?`<span class="new">${T("new")}</span>`:""}
         ${r.emoji}
-        <img src="img/${r.slug}.${r.svg?"svg":"jpg"}" alt="" loading="lazy" onerror="nextImg(this)">
-        <div class="tools-badge" data-tools="${r.slug}"></div>
+        <img src="img/portadas/${r.slug}.jpg" alt="" loading="lazy" onerror="this.onerror=()=>nextImg(this);this.src='img/${r.slug}.${r.svg?"svg":"jpg"}'">
       </div>
       <div class="card-body">
-        <span class="kick">${esc(T("lib_k"))}${r.c?` · 🔌 ${esc(T("card_conn"))}`:""}</span>
         <h3>${esc(r.titulo)}</h3>
-        <p class="desc">${esc(r.desc)}</p>
-        ${rs.length?`<ul class="toc">${rs.slice(0,3).map(x=>`<li>${esc(x.t)}</li>`).join("")}${rs.length>3?`<li class="more-r">${esc(T("lib_more").replace("{n}",rs.length-3))}</li>`:""}</ul>`:""}
-        <div class="chips">${r.chips.map(c=>`<span>${esc(c)}</span>`).join("")}</div>
-        <span class="more">${T("card_open")} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <span class="bk-meta">${n} ${n===1?T("lib_one"):T("lib_many")} · ${esc(catName(r.slug))}</span>
       </div>
     </a>`}).join("");
   const cards=$$(".card",grid);
-  if(window.AMRI_LOGO)AMRI_LOGO.fillTools(grid);
   if(RM){cards.forEach(c=>c.classList.add("in"));return;}
   requestAnimationFrame(()=>requestAnimationFrame(()=>cards.forEach(c=>{const r=c.getBoundingClientRect();if(r.top<innerHeight)c.classList.add("in");else io.observe(c);})));
   cards.forEach(c=>c.addEventListener("transitionend",()=>c.style.transitionDelay="0s",{once:true}));
@@ -231,7 +225,7 @@ function renderHits(){
   const box=$("#hits");if(!box)return;
   if(!query||query.length<3){box.innerHTML="";return;}
   const q=norm(query),hits=[];
-  RECETAS.forEach((r,i)=>subs(r.slug).forEach(x=>{if(norm(x.t+" "+x.d).includes(q))hits.push({b:I18N.card(i).titulo,slug:r.slug,x})}));
+  RECETAS.forEach((r,i)=>!r.off&&subs(r.slug).forEach(x=>{if(norm(x.t+" "+x.d).includes(q))hits.push({b:I18N.card(i).titulo,slug:r.slug,x})}));
   box.innerHTML=hits.length?`<h3>${esc(T("lib_hits"))}</h3><div class="hit-list">${hits.slice(0,8).map(h=>`<a class="hit" href="recetas/${h.slug}--${h.x.s}.html"><b>${esc(h.x.t)}</b><small>${esc(T("lib_in"))} «${esc(h.b)}»</small><span aria-hidden="true">→</span></a>`).join("")}</div>`:"";
 }
 function setFilter(f){filter=f;$$(".fchip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.f===f));renderGrid();}
@@ -246,8 +240,9 @@ function observe(els){els.forEach(el=>RM?el.classList.add("in"):io.observe(el));
 const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,to=+el.dataset.count;
   if(RM){el.textContent=to;return;}const t0=performance.now(),D=1800;
   const step=t=>{const p=clamp((t-t0)/D,0,1);el.textContent=Math.round(to*(1-Math.pow(1-p,4)));if(p<1)requestAnimationFrame(step);};requestAnimationFrame(step);}),{threshold:.6});
-$$("[data-books]").forEach(el=>el.dataset.count=RECETAS.length);
-$$("[data-recipes]").forEach(el=>el.dataset.count=RECETAS.reduce((n,r)=>n+(subs(r.slug).length||1),0));
+const VIS=RECETAS.filter(r=>!r.off);
+$$("[data-books]").forEach(el=>el.dataset.count=VIS.length);
+$$("[data-recipes]").forEach(el=>el.dataset.count=VIS.reduce((n,r)=>n+(subs(r.slug).length||1),0));
 $$("[data-count]").forEach(el=>{el.textContent="0";cio.observe(el);});
 
 /* ---------- Máquina de escribir ---------- */
