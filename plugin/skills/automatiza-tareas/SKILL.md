@@ -1,15 +1,14 @@
 ---
 name: automatiza-tareas
-description: "Receta de AMRI «Automatiza tareas aburridas con IA». Cinco automatizaciones con Zapier: correos resumidos en una hoja, facturas a Drive, citas al calendario, formularios con aviso y mensajes clasificados. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Automatiza tareas aburridas con IA». Automatizaciones con Zapier: correos resumidos en una hoja, citas al calendario, formularios con aviso y mensajes clasificados. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Automatiza tareas aburridas con IA
 
-Cinco automatizaciones con Zapier: correos resumidos en una hoja, facturas a Drive, citas al calendario, formularios con aviso y mensajes clasificados.
+Automatizaciones con Zapier: correos resumidos en una hoja, citas al calendario, formularios con aviso y mensajes clasificados.
 
-- 📕 5 recetas
-- ⏱ 25-40 min cada una
+- 📕 4 recetas
 - 💶 Gratis (con los límites del plan gratuito de Zapier)
 - 🍽 Resultado: tareas que se hacen solas
 - Categoría: Crea y publica
@@ -39,7 +38,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Este es un libro de recetas
 
-Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Según la idea de la persona:
+Tiene una preparación común («Antes de empezar») y 4 recetas concretas. Según la idea de la persona:
 1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
 2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
 3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
@@ -47,7 +46,7 @@ Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Crea tus cuentas
-_5 min · gratis_
+_gratis_
 
 - Crea tu cuenta en [Zapier](https://zapier.com) (botón «Sign up with Google»).
 - Crea tu cuenta en [Claude](https://claude.ai).
@@ -55,7 +54,7 @@ _5 min · gratis_
 **✅ Comprobación:** has entrado en Zapier y en Claude.
 
 ### 2. Cómo funciona una automatización
-_3 min · la idea_
+_la idea_
 
 - **Zap**: el nombre que Zapier da a cada automatización.
 - **Disparador** (_trigger_): el momento en que empieza. Ejemplo: «llega un correo».
@@ -65,7 +64,7 @@ _3 min · la idea_
 **✅ Comprobación:** sabrías explicar qué es un disparador y una acción.
 
 ### 3. Tu ayudante para montar Zaps
-_3 min · un proyecto_
+_un proyecto_
 
 - En Claude crea un proyecto **Mis automatizaciones**.
 - En sus instrucciones, pega:
@@ -82,7 +81,6 @@ Me ayudas a montar automatizaciones en Zapier aunque nunca lo haya usado. Explí
 
 Cuando llega un correo con una etiqueta, la IA lo resume en 3 puntos y lo apunta en Google Sheets.
 
-- ⏱ 40 min
 - 👩‍🍳 Media
 - 📧 Gmail + IA + Sheets
 - 🍽 Resultado: una hoja que se rellena sola
@@ -92,7 +90,7 @@ Cuando llega un correo con una etiqueta, la IA lo resume en 3 puntos y lo apunta
   - De proveedores: los correos de proveedores
 
 #### 1. Prepara la etiqueta y la hoja
-_5 min · antes_
+_antes_
 
 - En Gmail, crea una etiqueta llamada **automatizar** y pónsela a un correo de ejemplo de [la idea de la persona].
 - En Google Sheets, crea una hoja con estos títulos en la primera fila: **Fecha, De, Asunto, Resumen**.
@@ -100,7 +98,7 @@ _5 min · antes_
 **✅ Comprobación:** tienes la etiqueta con un correo de ejemplo y la hoja.
 
 #### 2. El disparador
-_10 min · cuándo empieza_
+_cuándo empieza_
 
 - En Zapier pulsa **+ Create → Zaps**.
 - Pulsa **Trigger** y elige **Gmail → New Labeled Email** (o «New Email» con la etiqueta).
@@ -110,7 +108,7 @@ _10 min · cuándo empieza_
 **✅ Comprobación:** el test encuentra tu correo de ejemplo.
 
 #### 3. El paso de IA
-_10 min · resumir_
+_resumir_
 
 - Pulsa **+** y busca **AI by Zapier**. Elige la opción de analizar o transformar texto.
 - En las instrucciones pega esto y, al final, inserta con **+** el campo **Body** del correo:
@@ -127,7 +125,7 @@ Resume este correo en 3 puntos cortos, en español. Si aparece una fecha o un im
 **✅ Comprobación:** el test devuelve el resumen del ejemplo.
 
 #### 4. La acción y la prueba
-_15 min · encender_
+_encender_
 
 - Pulsa **+** y elige **Google Sheets → Create Spreadsheet Row**.
 - Elige tu hoja y rellena cada columna con **+**: fecha, remitente, asunto y el resumen de la IA.
@@ -138,50 +136,10 @@ _15 min · encender_
 
 **Al terminar:** Cada correo con la etiqueta se resume y se apunta solo.
 
-### Receta 2: Facturas adjuntas guardadas en Drive
-
-Cuando llega un correo con una factura adjunta, el archivo se guarda solo en una carpeta.
-
-- ⏱ 25 min
-- 👩‍🍳 Fácil
-- 🧾 Gmail + Drive
-- 🍽 Resultado: tus facturas en una carpeta, solas
-- Versión web: https://amri.es/recetas/automatiza-tareas--facturas-drive.html
-- Ideas de ejemplo:
-  - Todas las facturas: todas las facturas que llegan con la etiqueta
-  - De un proveedor: las facturas de un proveedor concreto
-
-#### 1. Prepara la etiqueta y la carpeta
-_5 min · antes_
-
-- En Gmail, crea un filtro que ponga la etiqueta **facturas** a [la idea de la persona] (pide ayuda a Claude si no sabes crear filtros).
-- En Google Drive, crea una carpeta **Facturas**.
-
-**✅ Comprobación:** tienes la etiqueta y la carpeta.
-
-#### 2. El disparador
-_10 min · cuándo_
-
-- En Zapier crea un Zap con el disparador **Gmail → New Attachment**.
-- Elige la etiqueta **facturas** y pulsa **Test trigger**.
-
-**✅ Comprobación:** el test encuentra un adjunto de ejemplo.
-
-#### 3. La acción y la prueba
-_10 min · encender_
-
-- Añade **Google Drive → Upload File**, elige la carpeta **Facturas** y, en el archivo, el adjunto del paso anterior.
-- Pulsa **Test step** y luego **Publish**.
-
-**✅ Comprobación:** la factura de prueba aparece en la carpeta.
-
-**Al terminar:** Tus facturas se guardan solas. Revisa la carpeta a fin de mes.
-
-### Receta 3: Citas de los correos al calendario
+### Receta 2: Citas de los correos al calendario
 
 Cuando un correo menciona una cita con fecha y hora, la IA la extrae y crea el evento.
 
-- ⏱ 35 min
 - 👩‍🍳 Media
 - 📅 Gmail + IA + Calendar
 - 🍽 Resultado: eventos creados solos
@@ -191,7 +149,7 @@ Cuando un correo menciona una cita con fecha y hora, la IA la extrae y crea el e
   - Médicos y gestiones: las confirmaciones de citas médicas y gestiones
 
 #### 1. El disparador
-_10 min · cuándo_
+_cuándo_
 
 - Pon la etiqueta **citas** a un correo de ejemplo de [la idea de la persona].
 - En Zapier, disparador **Gmail → New Labeled Email** con esa etiqueta. Pulsa **Test trigger**.
@@ -199,7 +157,7 @@ _10 min · cuándo_
 **✅ Comprobación:** el test encuentra tu correo.
 
 #### 2. Que la IA saque la fecha
-_10 min · leer_
+_leer_
 
 - Añade **AI by Zapier** y pega estas instrucciones, insertando el **Body** al final:
 
@@ -210,7 +168,7 @@ Del siguiente correo, extrae: título de la cita, fecha de inicio (formato AAAA-
 **✅ Comprobación:** el test devuelve los datos de la cita.
 
 #### 3. Crea el evento
-_15 min · encender_
+_encender_
 
 - Añade **Google Calendar → Create Detailed Event** y rellena título, inicio y lugar con los datos de la IA.
 - Pulsa **Test step** y luego **Publish**.
@@ -221,11 +179,10 @@ _15 min · encender_
 
 **Al terminar:** Las citas llegan solas a tu calendario. Revísalas de vez en cuando: la IA puede equivocarse con una fecha.
 
-### Receta 4: Formulario a hoja, con aviso
+### Receta 3: Formulario a hoja, con aviso
 
 Cuando alguien rellena tu formulario, se apunta en una hoja y te llega un correo.
 
-- ⏱ 25 min
 - 👩‍🍳 Fácil
 - 📋 Forms + Sheets + Gmail
 - 🍽 Resultado: respuestas ordenadas y aviso al momento
@@ -235,7 +192,7 @@ Cuando alguien rellena tu formulario, se apunta en una hoja y te llega un correo
   - Contacto: mi formulario de contacto
 
 #### 1. El formulario
-_5 min · Google Forms_
+_Google Forms_
 
 - Crea [la idea de la persona] en [Google Forms](https://forms.google.com) (pide a Claude las preguntas si no las tienes).
 - Respóndelo una vez tú para tener un ejemplo.
@@ -243,7 +200,7 @@ _5 min · Google Forms_
 **✅ Comprobación:** tienes el formulario con una respuesta de prueba.
 
 #### 2. Disparador y hoja
-_10 min · apuntar_
+_apuntar_
 
 - En Zapier, disparador **Google Forms → New Form Response**. Test.
 - Acción **Google Sheets → Create Spreadsheet Row** con cada respuesta en su columna.
@@ -251,7 +208,7 @@ _10 min · apuntar_
 **✅ Comprobación:** la respuesta de prueba aparece en la hoja.
 
 #### 3. El aviso
-_10 min · enterarte_
+_enterarte_
 
 - Añade **Gmail → Send Email** a tu propio correo, con el nombre y la respuesta en el texto.
 - Pulsa **Publish** y rellena el formulario otra vez.
@@ -260,11 +217,10 @@ _10 min · enterarte_
 
 **Al terminar:** Cada respuesta se apunta sola y te avisa.
 
-### Receta 5: Clasifica mensajes y avísame de lo urgente
+### Receta 4: Clasifica mensajes y avísame de lo urgente
 
 La IA lee cada correo de cliente, lo clasifica (duda, queja, pedido) y solo te avisa de lo urgente.
 
-- ⏱ 40 min
 - 👩‍🍳 Media
 - ⚖️ IA + filtro
 - 🍽 Resultado: solo te enteras de lo urgente
@@ -274,7 +230,7 @@ La IA lee cada correo de cliente, lo clasifica (duda, queja, pedido) y solo te a
   - Soporte: los correos de soporte
 
 #### 1. El disparador
-_10 min · cuándo_
+_cuándo_
 
 - Etiqueta como **clasificar** [la idea de la persona] (con un filtro de Gmail).
 - En Zapier, disparador **Gmail → New Labeled Email**. Test.
@@ -282,7 +238,7 @@ _10 min · cuándo_
 **✅ Comprobación:** el test encuentra un correo de ejemplo.
 
 #### 2. Que la IA clasifique
-_10 min · decidir_
+_decidir_
 
 - Añade **AI by Zapier** con estas instrucciones (inserta el **Body** al final):
 
@@ -293,7 +249,7 @@ Lee el correo y responde solo con: categoría (duda, queja, pedido u otro), urge
 **✅ Comprobación:** el test devuelve la categoría y si es urgente.
 
 #### 3. Filtro y aviso
-_20 min · solo lo urgente_
+_solo lo urgente_
 
 - Añade **Filter**: que siga solo si «urgente» contiene «sí».
 - Añade **Gmail → Send Email** a ti con la categoría y el resumen.

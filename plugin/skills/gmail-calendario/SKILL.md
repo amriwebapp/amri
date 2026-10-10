@@ -1,15 +1,14 @@
 ---
 name: gmail-calendario
-description: "Receta de AMRI «Tu secretaría: Gmail y Calendar». Tu resumen de cada mañana, borradores con tu tono, reuniones preparadas, huecos en la agenda, facturas localizadas y la bandeja en orden. Claude nunca envía nada por ti. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Tu secretaría: Gmail y Calendar». Tu resumen de cada mañana, borradores con tu tono, reuniones preparadas y la bandeja en orden. Claude nunca envía nada por ti. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Tu secretaría: Gmail y Calendar
 
-Tu resumen de cada mañana, borradores con tu tono, reuniones preparadas, huecos en la agenda, facturas localizadas y la bandeja en orden. Claude nunca envía nada por ti.
+Tu resumen de cada mañana, borradores con tu tono, reuniones preparadas y la bandeja en orden. Claude nunca envía nada por ti.
 
-- 📕 6 recetas
-- ⏱ 10-20 min cada una
+- 📕 4 recetas
 - 💶 Gratis si tu plan de Claude incluye conectores
 - 🍽 Resultado: tu correo y tu agenda en orden
 - Categoría: Conecta tus apps
@@ -39,7 +38,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Este es un libro de recetas
 
-Tiene una preparación común («Antes de empezar») y 6 recetas concretas. Según la idea de la persona:
+Tiene una preparación común («Antes de empezar») y 4 recetas concretas. Según la idea de la persona:
 1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
 2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
 3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
@@ -47,7 +46,7 @@ Tiene una preparación común («Antes de empezar») y 6 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Conecta Gmail y Calendar
-_5 min · dos conectores_
+_dos conectores_
 
 - En Claude (web o app de escritorio) abre **Personalizar → Conectores** (en inglés: **Customize → Connectors**).
 - Pulsa **Explorar conectores**, busca «Gmail» y pulsa **Conectar**. Inicia sesión y pulsa **Permitir**.
@@ -59,7 +58,7 @@ _5 min · dos conectores_
 **✅ Comprobación:** Gmail y Google Calendar aparecen activados.
 
 ### 2. Crea «Mi secretaría»
-_5 min · las reglas_
+_las reglas_
 
 - En Claude: **Proyectos → Crear proyecto**, llámalo **Mi secretaría**.
 - En **Instrucciones**, pega:
@@ -82,7 +81,6 @@ Reglas:
 
 En un minuto: lo urgente de tu correo y tus reuniones del día.
 
-- ⏱ 10 min
 - 👩‍🍳 Muy fácil
 - ☀️ Rutina
 - 🍽 Resultado: sabes qué te espera hoy
@@ -92,7 +90,7 @@ En un minuto: lo urgente de tu correo y tus reuniones del día.
   - Solo clientes: solo los correos de clientes
 
 #### 1. El mensaje de buenos días
-_5 min · probar_
+_probar_
 
 Abre un chat dentro de **Mi secretaría** y pega:
 
@@ -106,7 +104,7 @@ Revisa mis correos de las últimas 24 horas (fíjate sobre todo en [la idea de l
 **✅ Comprobación:** en un minuto sabes qué te espera hoy.
 
 #### 2. Hazlo costumbre
-_5 min · la rutina_
+_la rutina_
 
 - Guarda el mensaje en una nota.
 - Úsalo cada mañana dentro del proyecto.
@@ -121,7 +119,6 @@ _5 min · la rutina_
 
 Claude escribe; tú revisas y envías.
 
-- ⏱ 15 min
 - 👩‍🍳 Fácil
 - ✉️ Responder
 - 🍽 Resultado: borradores listos para enviar
@@ -131,7 +128,7 @@ Claude escribe; tú revisas y envías.
   - Los que se repiten: los correos que se repiten (precios, horarios, disponibilidad)
 
 #### 1. Pide los borradores
-_5 min · Claude escribe_
+_Claude escribe_
 
 ```text
 Prepara borradores de respuesta para [la idea de la persona], con mi tono. No envíes nada. Si el conector permite crear borradores en Gmail, déjalos ahí; si no, escríbemelos aquí para copiarlos.
@@ -140,7 +137,7 @@ Prepara borradores de respuesta para [la idea de la persona], con mi tono. No en
 **✅ Comprobación:** tienes los borradores.
 
 #### 2. Revisa y envía tú
-_10 min · firmar_
+_firmar_
 
 - Abre cada borrador en Gmail (o cópialo).
 - Cambia lo que no dirías tú.
@@ -154,7 +151,6 @@ _10 min · firmar_
 
 Quién viene, de qué hablasteis la última vez y qué hay que decidir.
 
-- ⏱ 10 min
 - 👩‍🍳 Fácil
 - 🗓 Reuniones
 - 🍽 Resultado: una ficha de la reunión
@@ -164,7 +160,7 @@ Quién viene, de qué hablasteis la última vez y qué hay que decidir.
   - Con un cliente: mi reunión con un cliente
 
 #### 1. La ficha
-_5 min · contexto_
+_contexto_
 
 ```text
 Prepárame [la idea de la persona]: quién viene, qué nos hemos escrito últimamente, qué quedó pendiente y 3 cosas que debería decidir o preguntar. Una ficha corta.
@@ -173,7 +169,7 @@ Prepárame [la idea de la persona]: quién viene, qué nos hemos escrito última
 **✅ Comprobación:** tienes la ficha de la reunión.
 
 #### 2. Después: el resumen
-_5 min · cerrar_
+_cerrar_
 
 ```text
 Ya ha terminado la reunión. Mis notas: [pégalas]. Escribe un borrador de correo de resumen para los asistentes, con acuerdos y próximos pasos. No lo envíes.
@@ -183,75 +179,10 @@ Ya ha terminado la reunión. Mis notas: [pégalas]. Escribe un borrador de corre
 
 **Al terminar:** Llegas preparado. Después de la reunión, pide un correo de resumen.
 
-### Receta 4: Encuentra huecos y planifica la semana
-
-Huecos para una reunión, tiempo para concentrarte y tu semana ordenada.
-
-- ⏱ 15 min
-- 👩‍🍳 Fácil
-- 📅 Agenda
-- 🍽 Resultado: tu semana con huecos protegidos
-- Versión web: https://amri.es/recetas/gmail-calendario--huecos.html
-- Ideas de ejemplo:
-  - Planificar la semana: planificar mi semana: agrupar reuniones y proteger tiempo para concentrarme
-  - Hueco para reunión: encontrar huecos libres para una reunión de 1 hora
-
-#### 1. Mira tu agenda
-_5 min · huecos_
-
-```text
-Mira mi agenda de esta semana y ayúdame a [la idea de la persona]. Propón opciones y no crees nada todavía.
-```
-
-**✅ Comprobación:** tienes opciones de horarios.
-
-#### 2. Apúntalo
-_10 min · con permiso_
-
-```text
-Me quedo con [opción]. Si el conector lo permite, crea los eventos en mi calendario y enséñamelos antes de guardarlos. Si no, dime cómo crearlos yo.
-```
-
-**✅ Comprobación:** los eventos están en tu calendario.
-
-**Al terminar:** Tu semana tiene sitio para lo importante. Los eventos los creas tú o los apruebas antes.
-
-### Receta 5: Encuentra facturas y pagos
-
-Busca facturas en tu correo y apúntalas en una tabla.
-
-- ⏱ 15 min
-- 👩‍🍳 Fácil
-- 🧾 Papeleo
-- 🍽 Resultado: una tabla con tus facturas del mes
-- Versión web: https://amri.es/recetas/gmail-calendario--facturas.html
-- Ideas de ejemplo:
-  - Las del mes: las facturas del último mes
-  - Las del trimestre: las facturas del último trimestre
-
-#### 1. Búscalas
-_10 min · la tabla_
-
-```text
-Busca en mi correo [la idea de la persona]. Hazme una tabla con fecha, empresa, concepto, importe y si trae el PDF adjunto. Si un dato no aparece, déjalo vacío: no lo inventes.
-```
-
-**✅ Comprobación:** tienes la tabla.
-
-#### 2. Comprueba
-_5 min · con lupa_
-
-Abre dos o tres correos al azar y compara el importe con la tabla.
-
-**✅ Comprobación:** los datos que has comprobado coinciden.
-
-**Al terminar:** Tienes tus facturas localizadas. Para que se guarden solas, mira el libro «Automatiza tareas aburridas».
-
-### Receta 6: Ordena tu bandeja de entrada
+### Receta 4: Ordena tu bandeja de entrada
 
 Qué es newsletter, qué es importante y de qué te puedes dar de baja.
 
-- ⏱ 20 min
 - 👩‍🍳 Fácil
 - 🧹 Orden
 - 🍽 Resultado: un plan para vaciar tu bandeja
@@ -261,7 +192,7 @@ Qué es newsletter, qué es importante y de qué te puedes dar de baja.
   - Demasiadas newsletters: demasiadas newsletters y publicidad
 
 #### 1. El diagnóstico
-_10 min · qué hay_
+_qué hay_
 
 ```text
 Tengo [la idea de la persona]. Mira mis correos de las últimas semanas y dime: quién me escribe más, qué newsletters no abro nunca y qué correos importantes llevan tiempo sin respuesta. No borres ni cambies nada.
@@ -270,7 +201,7 @@ Tengo [la idea de la persona]. Mira mis correos de las últimas semanas y dime: 
 **✅ Comprobación:** sabes qué ocupa tu bandeja.
 
 #### 2. El plan
-_10 min · poco a poco_
+_poco a poco_
 
 ```text
 Propón un plan en 3 pasos para vaciar mi bandeja: de qué me doy de baja, qué filtros o etiquetas creo en Gmail y qué respondo primero. Explícame cómo hacer cada cosa yo.
@@ -304,5 +235,4 @@ _Siempre · revisa esto_
 - `/amri:notion-cerebro` · Tu segundo cerebro en Notion
 - `/amri:canva-diseno` · Diseña en Canva hablando con Claude
 - `/amri:navegador-chrome` · Claude navega por ti con Chrome
-- `/amri:slack-equipo` · Claude en tu Slack
 - `/amri:chef` · combina varias recetas en un proyecto propio

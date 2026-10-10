@@ -59,6 +59,15 @@ El primero es `recetas/data/higgsfield-cine.es.js`: cópialo como plantilla.
 - `python3 tools/shells.py` crea la página del libro (`recetas/<libro>.html`), una página por receta (`recetas/<libro>--<receta>.html`) y `assets/libros.js`.
 - El progreso se guarda por separado: el libro en `R.key` y cada receta en `R.key/<receta>`.
 - En el plugin, cada libro es una sola skill que elige la receta adecuada.
+- **Portada y ejemplo real** (opcionales) de cada receta: añade `portada:"img/recetas/<libro>--<receta>.jpg"` y `ejemplo:{t:"Título",d:"Qué se hizo y cómo quedó",img:"img/recetas/…",url:"https://…"}`. La portada sustituye a la ilustración del libro en la página de la receta y sale en el índice del libro; el ejemplo aparece como «📸 Así quedó» antes de los ingredientes.
+
+## Afinar una receta con un proyecto real
+
+1. Sigue la receta tú, de principio a fin, haciendo un proyecto de verdad.
+2. Mejora los mensajes que se copian (los bloques `cb(...)`) con lo que te haya funcionado: datos concretos, el orden de las preguntas, los errores que tuviste que corregir.
+3. Pon la captura del resultado en `img/recetas/<libro>--<receta>.jpg` y añade a la receta `portada` y `ejemplo` (ver «Libros de recetas»).
+4. Pon la fecha en `revised` de `assets/datos.js` para que la receta muestre «Revisada el…».
+5. Ejecuta `python3 tools/shells.py` y `node tools/plugin.js` y súbelo.
 
 ## Añadir una receta
 

@@ -9,7 +9,6 @@ argument-hint: "[tu idea]"
 Tu logo animado, una explicación animada, un reel vertical, datos en movimiento o una animación para tu web. En el navegador o en MP4.
 
 - 📕 5 recetas
-- ⏱ 30-40 min cada una
 - 💶 Mejor con un plan de pago de Claude
 - 🍽 Resultado: animaciones en tu navegador o en MP4
 - Categoría: Estudio creativo
@@ -48,7 +47,7 @@ Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Elige al chef: Claude Opus 5.5
-_2 min · antes de empezar_
+_antes de empezar_
 
 Una animación tiene muchas piezas que deben encajar: tiempos, entradas, salidas y colores. Opus 5.5 es el modelo de Claude que mejor mantiene la coherencia en tareas largas como esta.
 
@@ -68,813 +67,275 @@ Una animación tiene muchas piezas que deben encajar: tiempos, entradas, salidas
 
 ### Receta 1: Tu logo animado
 
-Tu logo apareciendo letra a letra con un brillo final.
+Tu logo apareciendo letra a letra con un brillo final, listo para tu web o tus vídeos.
 
-- ⏱ 30 min
 - 👩‍🍳 Fácil
 - ✨ Logo
-- 🍽 Resultado: tu logo animado
+- 🍽 Resultado: tu logo animado en tu navegador
 - Versión web: https://amri.es/recetas/animaciones-opus--logo.html
 - Ideas de ejemplo:
-  - Logo animado: mi logo apareciendo letra a letra con un brillo final, 5 segundos, fondo crema
+  - Letra a letra: mi logo apareciendo letra a letra con un brillo final, 5 segundos, fondo crema
+  - Se dibuja solo: mi logo dibujándose trazo a trazo, como si alguien lo escribiera, 4 segundos
 
-#### 1. Escribe el storyboard
-_5 min · primero el guion, luego el código_
+#### 1. Dale tu logo
+_el material_
 
-Los animadores profesionales dibujan antes de animar. Un **storyboard** es el guion visual: qué aparece, en qué segundo y cómo se mueve. Así corriges la idea antes de gastar tiempo en detalles.
-
-```text
-Quiero [la idea de la persona].
-
-Antes de animar nada, escribe un storyboard en una tabla: segundo de inicio y de fin, qué aparece, cómo entra y cómo sale, y qué texto se lee. Propón también la duración total, 3 colores y una tipografía. Formato: [vertical 9:16 / horizontal 16:9 / cuadrado 1:1].
-
-Deja cada texto en pantalla el tiempo suficiente para leerlo con calma. No escribas código todavía.
-```
-
-**¿Por qué no pedir la animación directamente?**
-
-- Cambiar una tabla cuesta segundos; cambiar una animación terminada cuesta mucho más.
-- El storyboard es también tu guía para revisar: sabrás qué debería pasar en cada segundo.
-- Si no te convence el ritmo, pide «hazlo más tranquilo» o «más enérgico» y Claude rehace la tabla.
-
-**✅ Comprobación:** tienes un storyboard que, al leerlo, te imaginas la animación.
-
-#### 2. Anímalo en un artefacto
-_5 min · el plato principal_
-
-Un **artefacto** es una ventana al lado del chat donde Claude muestra lo que crea. Ahí verás tu animación moverse sin instalar nada.
+Funciona mejor con el logo en **SVG**. Si solo tienes PNG, súbelo igual: Claude puede redibujarlo en SVG.
 
 ```text
-Perfecto. Ahora crea la animación como un artefacto HTML de una sola página, sin librerías externas, siguiendo el storyboard.
-
-Requisitos:
-- Todo el movimiento depende de una función render(t) que dibuja el fotograma del segundo t, y una constante DUR con la duración total.
-- Abajo, un botón de play/pausa y una barra para saltar a cualquier segundo.
-- Movimientos con suavizado (nada lineal) y textos grandes que se lean en un móvil.
-- Que se vea bien en el formato del storyboard.
+Te adjunto mi logo. Si no es SVG, redibújalo en SVG lo más fiel posible y enséñamelo.
 ```
 
-**¿Qué es eso de render(t)?**
+**✅ Comprobación:** Claude tiene tu logo en SVG.
 
-- Es como una película: para cada segundo **t** hay un fotograma fijo.
-- Así la animación siempre se ve igual, y la barra te deja ir directo al segundo 7 para revisarlo.
-- Es también lo que permite convertirla en vídeo después, fotograma a fotograma.
-
-> 💡 Si no ves la animación a la derecha, pide «muéstramela en un artefacto». Si sale en blanco, dile a Claude qué ves: él lo arregla.
-
-**✅ Comprobación:** la animación se reproduce en el artefacto y la barra te deja moverte por ella.
-
-#### 3. Ajusta escena a escena
-_10 min · el punto de sal_
-
-Ahora eres el director. Mira la animación entera, luego segundo a segundo, y pide cambios concretos.
-
-#### Cómo pedir cambios que funcionan
-
-- Di **el segundo**: «en el segundo 3,5…».
-
-- Di **qué pasa ahora y qué quieres**: «el título entra de golpe; quiero que suba despacio en 0,8 segundos».
-
-- Pide **un cambio o dos** cada vez.
+#### 2. El guion de 5 segundos
+_storyboard_
 
 ```text
-Cambios: en el segundo [x], [lo que pasa ahora] → [lo que quiero]. En el segundo [y], [lo que pasa ahora] → [lo que quiero]. No toques nada más.
+Quiero [la idea de la persona]. Escribe el storyboard en una tabla: segundo, qué parte del logo se mueve y cómo. Deja 1 segundo quieto al final. No escribas código todavía.
 ```
 
-**Palabras de animador que Claude entiende**
+**✅ Comprobación:** has aprobado el storyboard.
 
-- **Suavizado (easing)**: que empiece o acabe despacio, como un coche que frena.
-- **Escalonado (stagger)**: que los elementos entren uno detrás de otro, no todos a la vez.
-- **Rebote**: que se pase un poco y vuelva, da sensación de alegría.
-- **Bucle (loop)**: que termine igual que empieza para repetirse sin corte.
-- **Pausa de lectura**: tiempo quieto para que se lea un texto.
-
-> 💡 Regla de lectura: lee cada texto en voz alta dos veces. Si no te da tiempo antes de que desaparezca, pide que se quede más.
-
-**✅ Comprobación:** la has visto entera tres veces seguidas y no cambiarías nada.
-
-#### 4. Hazla tuya
-_5 min · tu marca_
-
-Con tus colores, tu tipografía y tu logo deja de parecer una plantilla.
+#### 3. Anímalo
+_artefacto_
 
 ```text
-Aplica mi marca: colores [#xxxxxx, #xxxxxx, #xxxxxx], tipografía [nombre de Google Fonts] y este logo en SVG: [pega el código o adjunta la imagen]. Mantén los tiempos tal y como están.
+Crea la animación como un artefacto HTML de una sola página, sin librerías externas, con el SVG del logo. Movimientos suaves (nada lineal). Abajo, un botón para volver a reproducirla.
 ```
 
-> 💡 ¿No tienes logo en SVG? La receta «Diseña tu logo con IA» te lo prepara, e «Imágenes con IA, gratis» te enseña a dibujar iconos SVG con Claude.
+**✅ Comprobación:** ves tu logo animado en el artefacto.
 
-**✅ Comprobación:** al verla, se reconoce tu marca a la primera.
-
-#### 5. Conviértela en vídeo MP4
-_10 min · Claude Code_
-
-Para subirla a Instagram, TikTok o YouTube necesitas un vídeo. Claude Code abre la animación en tu ordenador, saca cada fotograma y los une en un MP4.
-
-#### Pasos
-
-- En el artefacto, copia el código (o descárgalo) y guárdalo como `animacion.html` en una carpeta nueva, por ejemplo `mi-animacion`.
-
-- Abre esa carpeta en **Claude Code** y pega:
+#### 4. Ajusta y guarda
+_pulir_
 
 ```text
-En esta carpeta está animacion.html, con una función render(t) y una constante DUR. Crea un script que:
-1. Abra la página con Playwright (Chromium) a [1080×1920 para vertical / 1920×1080 para horizontal].
-2. Para cada fotograma a 30 fps llame a render(t) y haga una captura.
-3. Una las capturas con ffmpeg en un MP4 H.264 (yuv420p) compatible con Instagram, TikTok y YouTube.
-Instala lo que falte, explícame cada comando antes de ejecutarlo y deja el vídeo en esta carpeta como animacion.mp4.
+En el segundo [x], [lo que pasa] → [lo que quiero]. Cambia solo eso.
 ```
 
-**Algo falla**
+- Cuando te guste, pide: «Dame el código para pegarlo en mi web» o descarga el archivo.
 
-- **Sale en blanco**: pide a Claude Code que espere a que carguen las fuentes antes de capturar.
-- **Va a saltos**: comprueba que todo el movimiento esté dentro de render(t) y no en temporizadores.
-- **No encuentra ffmpeg**: pídele que lo instale por ti y te explique cómo.
+**✅ Comprobación:** tienes tu logo animado guardado.
 
-**✅ Comprobación:** animacion.mp4 se reproduce suave en tu móvil.
-
-#### 6. Ponle sonido
-_5 min · opcional pero recomendable_
-
-El sonido hace que una animación parezca profesional. Usa música libre de derechos o efectos sencillos.
-
-```text
-Añade la pista musica.mp3 al vídeo animacion.mp4 con un fundido de entrada y salida de 1 segundo, a un volumen que no tape la voz. Si no tengo música, genera con código unos efectos suaves (un golpe al aparecer el título y un brillo al final) sincronizados con el storyboard.
-```
-
-> 💡 Usa solo música con licencia que te permita publicarla. Las bibliotecas de audio gratuitas de las propias redes son una buena opción.
-
-**✅ Comprobación:** el vídeo suena bien y los efectos coinciden con lo que se ve.
-
-#### 7. Sírvela
-_3 min · publicar_
-
-Tu animación está lista para el público.
-
-- **Como enlace**: en el artefacto pulsa **Compartir** (o **Publicar**) y envía el enlace.
-
-- **En tu web**: pide a Claude «adáptala para pegarla en mi web, sin ocupar más de [alto] de alto».
-
-- **En redes**: sube `animacion.mp4` desde la app del móvil, como cualquier vídeo.
-
-**✅ Comprobación:** alguien ha visto tu animación fuera de Claude.
-
-**Al terminar:** Ya tienes tu animación hecha con Claude Opus 5.5. Guarda el storyboard y el chat: para la siguiente solo tendrás que cambiar los textos y los colores.
+**Al terminar:** Tu logo se mueve. Úsalo como intro de vídeos o al cargar tu web.
 
 ### Receta 2: Una explicación animada
 
-30 segundos que explican tu servicio en 3 pasos, con iconos y textos grandes.
+30 segundos que explican cómo funciona tu servicio en 3 pasos, con iconos y textos grandes, en MP4.
 
-- ⏱ 40 min
 - 👩‍🍳 Media
 - 💡 Explicar
 - 🍽 Resultado: una animación explicativa en MP4
 - Versión web: https://amri.es/recetas/animaciones-opus--explicacion.html
 - Ideas de ejemplo:
-  - Explicación animada: una animación de 30 segundos que explica cómo funciona mi servicio en 3 pasos, con iconos y textos grandes
+  - Servicio en 3 pasos: una animación de 30 segundos que explica cómo funciona mi servicio en 3 pasos, con iconos y textos grandes
+  - Antes y después: una animación de 20 segundos con el problema de mi cliente antes y cómo queda después de mi servicio
 
-#### 1. Escribe el storyboard
-_5 min · primero el guion, luego el código_
-
-Los animadores profesionales dibujan antes de animar. Un **storyboard** es el guion visual: qué aparece, en qué segundo y cómo se mueve. Así corriges la idea antes de gastar tiempo en detalles.
-
-```text
-Quiero [la idea de la persona].
-
-Antes de animar nada, escribe un storyboard en una tabla: segundo de inicio y de fin, qué aparece, cómo entra y cómo sale, y qué texto se lee. Propón también la duración total, 3 colores y una tipografía. Formato: [vertical 9:16 / horizontal 16:9 / cuadrado 1:1].
-
-Deja cada texto en pantalla el tiempo suficiente para leerlo con calma. No escribas código todavía.
-```
-
-**¿Por qué no pedir la animación directamente?**
-
-- Cambiar una tabla cuesta segundos; cambiar una animación terminada cuesta mucho más.
-- El storyboard es también tu guía para revisar: sabrás qué debería pasar en cada segundo.
-- Si no te convence el ritmo, pide «hazlo más tranquilo» o «más enérgico» y Claude rehace la tabla.
-
-**✅ Comprobación:** tienes un storyboard que, al leerlo, te imaginas la animación.
-
-#### 2. Anímalo en un artefacto
-_5 min · el plato principal_
-
-Un **artefacto** es una ventana al lado del chat donde Claude muestra lo que crea. Ahí verás tu animación moverse sin instalar nada.
+#### 1. El guion
+_storyboard_
 
 ```text
-Perfecto. Ahora crea la animación como un artefacto HTML de una sola página, sin librerías externas, siguiendo el storyboard.
+Quiero [la idea de la persona]. Mis pasos: [escríbelos].
 
-Requisitos:
-- Todo el movimiento depende de una función render(t) que dibuja el fotograma del segundo t, y una constante DUR con la duración total.
-- Abajo, un botón de play/pausa y una barra para saltar a cualquier segundo.
-- Movimientos con suavizado (nada lineal) y textos grandes que se lean en un móvil.
-- Que se vea bien en el formato del storyboard.
+Escribe el storyboard en una tabla: segundo de inicio y fin, qué se ve, qué icono, qué texto (máximo 6 palabras por pantalla) y cómo entra. Formato horizontal 16:9. Deja cada texto el tiempo de leerlo con calma. No escribas código todavía.
 ```
 
-**¿Qué es eso de render(t)?**
+**✅ Comprobación:** has aprobado el storyboard.
 
-- Es como una película: para cada segundo **t** hay un fotograma fijo.
-- Así la animación siempre se ve igual, y la barra te deja ir directo al segundo 7 para revisarlo.
-- Es también lo que permite convertirla en vídeo después, fotograma a fotograma.
-
-> 💡 Si no ves la animación a la derecha, pide «muéstramela en un artefacto». Si sale en blanco, dile a Claude qué ves: él lo arregla.
-
-**✅ Comprobación:** la animación se reproduce en el artefacto y la barra te deja moverte por ella.
-
-#### 3. Ajusta escena a escena
-_10 min · el punto de sal_
-
-Ahora eres el director. Mira la animación entera, luego segundo a segundo, y pide cambios concretos.
-
-#### Cómo pedir cambios que funcionan
-
-- Di **el segundo**: «en el segundo 3,5…».
-
-- Di **qué pasa ahora y qué quieres**: «el título entra de golpe; quiero que suba despacio en 0,8 segundos».
-
-- Pide **un cambio o dos** cada vez.
+#### 2. Anímala
+_artefacto_
 
 ```text
-Cambios: en el segundo [x], [lo que pasa ahora] → [lo que quiero]. En el segundo [y], [lo que pasa ahora] → [lo que quiero]. No toques nada más.
+Crea la animación como un artefacto HTML de una sola página, sin librerías externas, siguiendo el storyboard. Todo el movimiento depende de una función render(t) y una constante DUR. Abajo, play/pausa y una barra para saltar a cualquier segundo. Iconos dibujados en SVG.
 ```
 
-**Palabras de animador que Claude entiende**
+**¿Por qué render(t)?**
 
-- **Suavizado (easing)**: que empiece o acabe despacio, como un coche que frena.
-- **Escalonado (stagger)**: que los elementos entren uno detrás de otro, no todos a la vez.
-- **Rebote**: que se pase un poco y vuelva, da sensación de alegría.
-- **Bucle (loop)**: que termine igual que empieza para repetirse sin corte.
-- **Pausa de lectura**: tiempo quieto para que se lea un texto.
+- Para cada segundo hay un fotograma fijo: la barra te deja ir directo al segundo 7.
+- Es lo que permite convertirla en vídeo después.
 
-> 💡 Regla de lectura: lee cada texto en voz alta dos veces. Si no te da tiempo antes de que desaparezca, pide que se quede más.
+**✅ Comprobación:** ves la animación con su barra.
 
-**✅ Comprobación:** la has visto entera tres veces seguidas y no cambiarías nada.
-
-#### 4. Hazla tuya
-_5 min · tu marca_
-
-Con tus colores, tu tipografía y tu logo deja de parecer una plantilla.
+#### 3. Hazla tuya
+_tu marca_
 
 ```text
-Aplica mi marca: colores [#xxxxxx, #xxxxxx, #xxxxxx], tipografía [nombre de Google Fonts] y este logo en SVG: [pega el código o adjunta la imagen]. Mantén los tiempos tal y como están.
+Aplica mi marca: colores [#xxxxxx, #xxxxxx], tipografía [nombre de Google Fonts] y mi logo al final. Mantén los tiempos.
 ```
 
-> 💡 ¿No tienes logo en SVG? La receta «Diseña tu logo con IA» te lo prepara, e «Imágenes con IA, gratis» te enseña a dibujar iconos SVG con Claude.
+**✅ Comprobación:** se reconoce tu marca.
 
-**✅ Comprobación:** al verla, se reconoce tu marca a la primera.
+#### 4. Conviértela en MP4
+_Claude Code_
 
-#### 5. Conviértela en vídeo MP4
-_10 min · Claude Code_
-
-Para subirla a Instagram, TikTok o YouTube necesitas un vídeo. Claude Code abre la animación en tu ordenador, saca cada fotograma y los une en un MP4.
-
-#### Pasos
-
-- En el artefacto, copia el código (o descárgalo) y guárdalo como `animacion.html` en una carpeta nueva, por ejemplo `mi-animacion`.
-
-- Abre esa carpeta en **Claude Code** y pega:
+- Guarda el código como `animacion.html` en una carpeta nueva y ábrela en Claude Code.
+- Pega:
 
 ```text
-En esta carpeta está animacion.html, con una función render(t) y una constante DUR. Crea un script que:
-1. Abra la página con Playwright (Chromium) a [1080×1920 para vertical / 1920×1080 para horizontal].
-2. Para cada fotograma a 30 fps llame a render(t) y haga una captura.
-3. Una las capturas con ffmpeg en un MP4 H.264 (yuv420p) compatible con Instagram, TikTok y YouTube.
-Instala lo que falte, explícame cada comando antes de ejecutarlo y deja el vídeo en esta carpeta como animacion.mp4.
+En esta carpeta está animacion.html, con una función render(t) y una constante DUR. Crea un script que abra la página con Playwright (Chromium) a 1920×1080, llame a render(t) para cada fotograma a 30 fps, haga una captura y las una con ffmpeg en un MP4 H.264 (yuv420p). Instala lo que falte y explícame cada comando antes de ejecutarlo.
 ```
 
-**Algo falla**
+> 💡 Sin Claude Code, puedes grabar la pantalla mientras se reproduce: queda peor, pero sirve para probar.
 
-- **Sale en blanco**: pide a Claude Code que espere a que carguen las fuentes antes de capturar.
-- **Va a saltos**: comprueba que todo el movimiento esté dentro de render(t) y no en temporizadores.
-- **No encuentra ffmpeg**: pídele que lo instale por ti y te explique cómo.
+**✅ Comprobación:** tienes animacion.mp4.
 
-**✅ Comprobación:** animacion.mp4 se reproduce suave en tu móvil.
-
-#### 6. Ponle sonido
-_5 min · opcional pero recomendable_
-
-El sonido hace que una animación parezca profesional. Usa música libre de derechos o efectos sencillos.
-
-```text
-Añade la pista musica.mp3 al vídeo animacion.mp4 con un fundido de entrada y salida de 1 segundo, a un volumen que no tape la voz. Si no tengo música, genera con código unos efectos suaves (un golpe al aparecer el título y un brillo al final) sincronizados con el storyboard.
-```
-
-> 💡 Usa solo música con licencia que te permita publicarla. Las bibliotecas de audio gratuitas de las propias redes son una buena opción.
-
-**✅ Comprobación:** el vídeo suena bien y los efectos coinciden con lo que se ve.
-
-#### 7. Sírvela
-_3 min · publicar_
-
-Tu animación está lista para el público.
-
-- **Como enlace**: en el artefacto pulsa **Compartir** (o **Publicar**) y envía el enlace.
-
-- **En tu web**: pide a Claude «adáptala para pegarla en mi web, sin ocupar más de [alto] de alto».
-
-- **En redes**: sube `animacion.mp4` desde la app del móvil, como cualquier vídeo.
-
-**✅ Comprobación:** alguien ha visto tu animación fuera de Claude.
-
-**Al terminar:** Ya tienes tu animación hecha con Claude Opus 5.5. Guarda el storyboard y el chat: para la siguiente solo tendrás que cambiar los textos y los colores.
+**Al terminar:** Tu explicación animada está lista. Ponla en tu web o en tus redes.
 
 ### Receta 3: Un reel vertical animado
 
-15 segundos en vertical con textos grandes que presentan tu oferta.
+15 segundos en vertical con textos grandes que presentan tu oferta, en MP4 para redes.
 
-- ⏱ 40 min
 - 👩‍🍳 Media
 - 📱 Reel
-- 🍽 Resultado: un reel en MP4
+- 🍽 Resultado: un reel en MP4 (1080×1920)
 - Versión web: https://amri.es/recetas/animaciones-opus--reel.html
 - Ideas de ejemplo:
-  - Reel vertical: un reel vertical de 15 segundos con textos grandes que presentan mi oferta de verano
+  - Oferta: un reel vertical de 15 segundos con textos grandes que presentan mi oferta de verano
+  - 3 consejos: un reel vertical de 15 segundos con 3 consejos cortos de mi sector, uno por pantalla
 
-#### 1. Escribe el storyboard
-_5 min · primero el guion, luego el código_
-
-Los animadores profesionales dibujan antes de animar. Un **storyboard** es el guion visual: qué aparece, en qué segundo y cómo se mueve. Así corriges la idea antes de gastar tiempo en detalles.
-
-```text
-Quiero [la idea de la persona].
-
-Antes de animar nada, escribe un storyboard en una tabla: segundo de inicio y de fin, qué aparece, cómo entra y cómo sale, y qué texto se lee. Propón también la duración total, 3 colores y una tipografía. Formato: [vertical 9:16 / horizontal 16:9 / cuadrado 1:1].
-
-Deja cada texto en pantalla el tiempo suficiente para leerlo con calma. No escribas código todavía.
-```
-
-**¿Por qué no pedir la animación directamente?**
-
-- Cambiar una tabla cuesta segundos; cambiar una animación terminada cuesta mucho más.
-- El storyboard es también tu guía para revisar: sabrás qué debería pasar en cada segundo.
-- Si no te convence el ritmo, pide «hazlo más tranquilo» o «más enérgico» y Claude rehace la tabla.
-
-**✅ Comprobación:** tienes un storyboard que, al leerlo, te imaginas la animación.
-
-#### 2. Anímalo en un artefacto
-_5 min · el plato principal_
-
-Un **artefacto** es una ventana al lado del chat donde Claude muestra lo que crea. Ahí verás tu animación moverse sin instalar nada.
+#### 1. El guion vertical
+_storyboard_
 
 ```text
-Perfecto. Ahora crea la animación como un artefacto HTML de una sola página, sin librerías externas, siguiendo el storyboard.
-
-Requisitos:
-- Todo el movimiento depende de una función render(t) que dibuja el fotograma del segundo t, y una constante DUR con la duración total.
-- Abajo, un botón de play/pausa y una barra para saltar a cualquier segundo.
-- Movimientos con suavizado (nada lineal) y textos grandes que se lean en un móvil.
-- Que se vea bien en el formato del storyboard.
+Quiero [la idea de la persona]. Escribe el storyboard: segundo, texto (máximo 5 palabras), cómo entra. El primer segundo tiene que enganchar. Formato 9:16. Deja los textos dentro de la zona segura (lejos de arriba y de abajo, donde las redes ponen sus botones). No escribas código todavía.
 ```
 
-**¿Qué es eso de render(t)?**
+**✅ Comprobación:** has aprobado el storyboard.
 
-- Es como una película: para cada segundo **t** hay un fotograma fijo.
-- Así la animación siempre se ve igual, y la barra te deja ir directo al segundo 7 para revisarlo.
-- Es también lo que permite convertirla en vídeo después, fotograma a fotograma.
-
-> 💡 Si no ves la animación a la derecha, pide «muéstramela en un artefacto». Si sale en blanco, dile a Claude qué ves: él lo arregla.
-
-**✅ Comprobación:** la animación se reproduce en el artefacto y la barra te deja moverte por ella.
-
-#### 3. Ajusta escena a escena
-_10 min · el punto de sal_
-
-Ahora eres el director. Mira la animación entera, luego segundo a segundo, y pide cambios concretos.
-
-#### Cómo pedir cambios que funcionan
-
-- Di **el segundo**: «en el segundo 3,5…».
-
-- Di **qué pasa ahora y qué quieres**: «el título entra de golpe; quiero que suba despacio en 0,8 segundos».
-
-- Pide **un cambio o dos** cada vez.
+#### 2. Anímalo
+_artefacto_
 
 ```text
-Cambios: en el segundo [x], [lo que pasa ahora] → [lo que quiero]. En el segundo [y], [lo que pasa ahora] → [lo que quiero]. No toques nada más.
+Crea la animación como un artefacto HTML vertical (1080×1920), sin librerías externas, con render(t) y DUR, play/pausa y barra de tiempo. Textos enormes y con buen contraste.
 ```
 
-**Palabras de animador que Claude entiende**
+**✅ Comprobación:** ves el reel en el artefacto.
 
-- **Suavizado (easing)**: que empiece o acabe despacio, como un coche que frena.
-- **Escalonado (stagger)**: que los elementos entren uno detrás de otro, no todos a la vez.
-- **Rebote**: que se pase un poco y vuelva, da sensación de alegría.
-- **Bucle (loop)**: que termine igual que empieza para repetirse sin corte.
-- **Pausa de lectura**: tiempo quieto para que se lea un texto.
+#### 3. Revísalo en pequeño
+_como en el móvil_
 
-> 💡 Regla de lectura: lee cada texto en voz alta dos veces. Si no te da tiempo antes de que desaparezca, pide que se quede más.
-
-**✅ Comprobación:** la has visto entera tres veces seguidas y no cambiarías nada.
-
-#### 4. Hazla tuya
-_5 min · tu marca_
-
-Con tus colores, tu tipografía y tu logo deja de parecer una plantilla.
+Míralo a tamaño de móvil. ¿Se lee cada texto sin pausar?
 
 ```text
-Aplica mi marca: colores [#xxxxxx, #xxxxxx, #xxxxxx], tipografía [nombre de Google Fonts] y este logo en SVG: [pega el código o adjunta la imagen]. Mantén los tiempos tal y como están.
+En el segundo [x], el texto dura poco. Déjalo 1 segundo más y ajusta el resto. No cambies nada más.
 ```
 
-> 💡 ¿No tienes logo en SVG? La receta «Diseña tu logo con IA» te lo prepara, e «Imágenes con IA, gratis» te enseña a dibujar iconos SVG con Claude.
+**✅ Comprobación:** cada texto se lee sin pausar.
 
-**✅ Comprobación:** al verla, se reconoce tu marca a la primera.
+#### 4. Conviértelo en MP4
+_Claude Code_
 
-#### 5. Conviértela en vídeo MP4
-_10 min · Claude Code_
-
-Para subirla a Instagram, TikTok o YouTube necesitas un vídeo. Claude Code abre la animación en tu ordenador, saca cada fotograma y los une en un MP4.
-
-#### Pasos
-
-- En el artefacto, copia el código (o descárgalo) y guárdalo como `animacion.html` en una carpeta nueva, por ejemplo `mi-animacion`.
-
-- Abre esa carpeta en **Claude Code** y pega:
+- Guarda el código como `reel.html` en una carpeta y ábrela en Claude Code.
 
 ```text
-En esta carpeta está animacion.html, con una función render(t) y una constante DUR. Crea un script que:
-1. Abra la página con Playwright (Chromium) a [1080×1920 para vertical / 1920×1080 para horizontal].
-2. Para cada fotograma a 30 fps llame a render(t) y haga una captura.
-3. Una las capturas con ffmpeg en un MP4 H.264 (yuv420p) compatible con Instagram, TikTok y YouTube.
-Instala lo que falte, explícame cada comando antes de ejecutarlo y deja el vídeo en esta carpeta como animacion.mp4.
+En esta carpeta está reel.html con render(t) y DUR. Crea un script que lo grabe con Playwright a 1080×1920, 30 fps, y lo una con ffmpeg en un MP4 H.264 (yuv420p) compatible con Instagram y TikTok. Explícame cada comando antes de ejecutarlo.
 ```
 
-**Algo falla**
+**✅ Comprobación:** tienes reel.mp4 y se ve bien en tu móvil.
 
-- **Sale en blanco**: pide a Claude Code que espere a que carguen las fuentes antes de capturar.
-- **Va a saltos**: comprueba que todo el movimiento esté dentro de render(t) y no en temporizadores.
-- **No encuentra ffmpeg**: pídele que lo instale por ti y te explique cómo.
-
-**✅ Comprobación:** animacion.mp4 se reproduce suave en tu móvil.
-
-#### 6. Ponle sonido
-_5 min · opcional pero recomendable_
-
-El sonido hace que una animación parezca profesional. Usa música libre de derechos o efectos sencillos.
-
-```text
-Añade la pista musica.mp3 al vídeo animacion.mp4 con un fundido de entrada y salida de 1 segundo, a un volumen que no tape la voz. Si no tengo música, genera con código unos efectos suaves (un golpe al aparecer el título y un brillo al final) sincronizados con el storyboard.
-```
-
-> 💡 Usa solo música con licencia que te permita publicarla. Las bibliotecas de audio gratuitas de las propias redes son una buena opción.
-
-**✅ Comprobación:** el vídeo suena bien y los efectos coinciden con lo que se ve.
-
-#### 7. Sírvela
-_3 min · publicar_
-
-Tu animación está lista para el público.
-
-- **Como enlace**: en el artefacto pulsa **Compartir** (o **Publicar**) y envía el enlace.
-
-- **En tu web**: pide a Claude «adáptala para pegarla en mi web, sin ocupar más de [alto] de alto».
-
-- **En redes**: sube `animacion.mp4` desde la app del móvil, como cualquier vídeo.
-
-**✅ Comprobación:** alguien ha visto tu animación fuera de Claude.
-
-**Al terminar:** Ya tienes tu animación hecha con Claude Opus 5.5. Guarda el storyboard y el chat: para la siguiente solo tendrás que cambiar los textos y los colores.
+**Al terminar:** Tu reel está listo. Súbelo desde el móvil con una música de la biblioteca de la red.
 
 ### Receta 4: Datos en movimiento
 
 Un gráfico que crece y cuenta una historia con tus números.
 
-- ⏱ 35 min
 - 👩‍🍳 Media
 - 📊 Datos
 - 🍽 Resultado: un gráfico animado
 - Versión web: https://amri.es/recetas/animaciones-opus--datos.html
 - Ideas de ejemplo:
-  - Datos en movimiento: un gráfico de barras que crece mes a mes mostrando las ventas del año, con el número final destacado
+  - Barras que crecen: un gráfico de barras que crece mes a mes mostrando las ventas del año, con el número final destacado
+  - Antes y ahora: una comparación animada entre dos años, con el porcentaje de mejora destacado al final
 
-#### 1. Escribe el storyboard
-_5 min · primero el guion, luego el código_
-
-Los animadores profesionales dibujan antes de animar. Un **storyboard** es el guion visual: qué aparece, en qué segundo y cómo se mueve. Así corriges la idea antes de gastar tiempo en detalles.
-
-```text
-Quiero [la idea de la persona].
-
-Antes de animar nada, escribe un storyboard en una tabla: segundo de inicio y de fin, qué aparece, cómo entra y cómo sale, y qué texto se lee. Propón también la duración total, 3 colores y una tipografía. Formato: [vertical 9:16 / horizontal 16:9 / cuadrado 1:1].
-
-Deja cada texto en pantalla el tiempo suficiente para leerlo con calma. No escribas código todavía.
-```
-
-**¿Por qué no pedir la animación directamente?**
-
-- Cambiar una tabla cuesta segundos; cambiar una animación terminada cuesta mucho más.
-- El storyboard es también tu guía para revisar: sabrás qué debería pasar en cada segundo.
-- Si no te convence el ritmo, pide «hazlo más tranquilo» o «más enérgico» y Claude rehace la tabla.
-
-**✅ Comprobación:** tienes un storyboard que, al leerlo, te imaginas la animación.
-
-#### 2. Anímalo en un artefacto
-_5 min · el plato principal_
-
-Un **artefacto** es una ventana al lado del chat donde Claude muestra lo que crea. Ahí verás tu animación moverse sin instalar nada.
+#### 1. La historia de tus números
+_el mensaje_
 
 ```text
-Perfecto. Ahora crea la animación como un artefacto HTML de una sola página, sin librerías externas, siguiendo el storyboard.
-
-Requisitos:
-- Todo el movimiento depende de una función render(t) que dibuja el fotograma del segundo t, y una constante DUR con la duración total.
-- Abajo, un botón de play/pausa y una barra para saltar a cualquier segundo.
-- Movimientos con suavizado (nada lineal) y textos grandes que se lean en un móvil.
-- Que se vea bien en el formato del storyboard.
+Estos son mis datos: [pégalos]. Quiero [la idea de la persona]. ¿Cuál es la historia más interesante que cuentan? Propón el titular y el orden en que aparece cada dato. No escribas código todavía.
 ```
 
-**¿Qué es eso de render(t)?**
+> 💡 Un buen gráfico animado dice una sola cosa. Elige cuál.
 
-- Es como una película: para cada segundo **t** hay un fotograma fijo.
-- Así la animación siempre se ve igual, y la barra te deja ir directo al segundo 7 para revisarlo.
-- Es también lo que permite convertirla en vídeo después, fotograma a fotograma.
+**✅ Comprobación:** tienes el titular y el orden.
 
-> 💡 Si no ves la animación a la derecha, pide «muéstramela en un artefacto». Si sale en blanco, dile a Claude qué ves: él lo arregla.
-
-**✅ Comprobación:** la animación se reproduce en el artefacto y la barra te deja moverte por ella.
-
-#### 3. Ajusta escena a escena
-_10 min · el punto de sal_
-
-Ahora eres el director. Mira la animación entera, luego segundo a segundo, y pide cambios concretos.
-
-#### Cómo pedir cambios que funcionan
-
-- Di **el segundo**: «en el segundo 3,5…».
-
-- Di **qué pasa ahora y qué quieres**: «el título entra de golpe; quiero que suba despacio en 0,8 segundos».
-
-- Pide **un cambio o dos** cada vez.
+#### 2. Anímalo
+_artefacto_
 
 ```text
-Cambios: en el segundo [x], [lo que pasa ahora] → [lo que quiero]. En el segundo [y], [lo que pasa ahora] → [lo que quiero]. No toques nada más.
+Crea la animación como artefacto HTML, sin librerías externas, con render(t), DUR, play/pausa y barra. Que los números cuenten hacia arriba mientras crecen las barras y que el titular aparezca al final. Usa exactamente mis datos.
 ```
 
-**Palabras de animador que Claude entiende**
+**✅ Comprobación:** ves el gráfico animado.
 
-- **Suavizado (easing)**: que empiece o acabe despacio, como un coche que frena.
-- **Escalonado (stagger)**: que los elementos entren uno detrás de otro, no todos a la vez.
-- **Rebote**: que se pase un poco y vuelva, da sensación de alegría.
-- **Bucle (loop)**: que termine igual que empieza para repetirse sin corte.
-- **Pausa de lectura**: tiempo quieto para que se lea un texto.
+#### 3. Comprueba los números
+_con lupa_
 
-> 💡 Regla de lectura: lee cada texto en voz alta dos veces. Si no te da tiempo antes de que desaparezca, pide que se quede más.
+Para el gráfico al final y compara cada número con tus datos originales.
 
-**✅ Comprobación:** la has visto entera tres veces seguidas y no cambiarías nada.
+**✅ Comprobación:** todos los números coinciden.
 
-#### 4. Hazla tuya
-_5 min · tu marca_
-
-Con tus colores, tu tipografía y tu logo deja de parecer una plantilla.
+#### 4. Hazlo tuyo y guárdalo
+_marca_
 
 ```text
-Aplica mi marca: colores [#xxxxxx, #xxxxxx, #xxxxxx], tipografía [nombre de Google Fonts] y este logo en SVG: [pega el código o adjunta la imagen]. Mantén los tiempos tal y como están.
+Aplica mis colores [#xxxxxx, #xxxxxx] y mi tipografía. Después dame el código para guardarlo.
 ```
 
-> 💡 ¿No tienes logo en SVG? La receta «Diseña tu logo con IA» te lo prepara, e «Imágenes con IA, gratis» te enseña a dibujar iconos SVG con Claude.
+**✅ Comprobación:** tienes tu gráfico animado guardado.
 
-**✅ Comprobación:** al verla, se reconoce tu marca a la primera.
-
-#### 5. Conviértela en vídeo MP4
-_10 min · Claude Code_
-
-Para subirla a Instagram, TikTok o YouTube necesitas un vídeo. Claude Code abre la animación en tu ordenador, saca cada fotograma y los une en un MP4.
-
-#### Pasos
-
-- En el artefacto, copia el código (o descárgalo) y guárdalo como `animacion.html` en una carpeta nueva, por ejemplo `mi-animacion`.
-
-- Abre esa carpeta en **Claude Code** y pega:
-
-```text
-En esta carpeta está animacion.html, con una función render(t) y una constante DUR. Crea un script que:
-1. Abra la página con Playwright (Chromium) a [1080×1920 para vertical / 1920×1080 para horizontal].
-2. Para cada fotograma a 30 fps llame a render(t) y haga una captura.
-3. Una las capturas con ffmpeg en un MP4 H.264 (yuv420p) compatible con Instagram, TikTok y YouTube.
-Instala lo que falte, explícame cada comando antes de ejecutarlo y deja el vídeo en esta carpeta como animacion.mp4.
-```
-
-**Algo falla**
-
-- **Sale en blanco**: pide a Claude Code que espere a que carguen las fuentes antes de capturar.
-- **Va a saltos**: comprueba que todo el movimiento esté dentro de render(t) y no en temporizadores.
-- **No encuentra ffmpeg**: pídele que lo instale por ti y te explique cómo.
-
-**✅ Comprobación:** animacion.mp4 se reproduce suave en tu móvil.
-
-#### 6. Ponle sonido
-_5 min · opcional pero recomendable_
-
-El sonido hace que una animación parezca profesional. Usa música libre de derechos o efectos sencillos.
-
-```text
-Añade la pista musica.mp3 al vídeo animacion.mp4 con un fundido de entrada y salida de 1 segundo, a un volumen que no tape la voz. Si no tengo música, genera con código unos efectos suaves (un golpe al aparecer el título y un brillo al final) sincronizados con el storyboard.
-```
-
-> 💡 Usa solo música con licencia que te permita publicarla. Las bibliotecas de audio gratuitas de las propias redes son una buena opción.
-
-**✅ Comprobación:** el vídeo suena bien y los efectos coinciden con lo que se ve.
-
-#### 7. Sírvela
-_3 min · publicar_
-
-Tu animación está lista para el público.
-
-- **Como enlace**: en el artefacto pulsa **Compartir** (o **Publicar**) y envía el enlace.
-
-- **En tu web**: pide a Claude «adáptala para pegarla en mi web, sin ocupar más de [alto] de alto».
-
-- **En redes**: sube `animacion.mp4` desde la app del móvil, como cualquier vídeo.
-
-**✅ Comprobación:** alguien ha visto tu animación fuera de Claude.
-
-**Al terminar:** Ya tienes tu animación hecha con Claude Opus 5.5. Guarda el storyboard y el chat: para la siguiente solo tendrás que cambiar los textos y los colores.
+**Al terminar:** Tus datos cuentan una historia. Ponlo en una presentación o en redes.
 
 ### Receta 5: Una animación para tu web
 
-Un fondo suave con formas que flotan para tu portada, sin distraer.
+Un fondo suave con formas que flotan para tu portada, que no distrae ni ralentiza.
 
-- ⏱ 30 min
 - 👩‍🍳 Fácil
 - 🌐 Web
-- 🍽 Resultado: una animación lista para tu web
+- 🍽 Resultado: una animación lista para pegar en tu web
 - Versión web: https://amri.es/recetas/animaciones-opus--web.html
 - Ideas de ejemplo:
-  - Animación para tu web: un fondo suave con formas que flotan para la portada de mi web, que no distraiga del texto
+  - Fondo de portada: un fondo suave con formas que flotan para la portada de mi web, que no distraiga del texto
+  - Detalles al pasar el ratón: pequeñas animaciones en mis botones y tarjetas al pasar el ratón
 
-#### 1. Escribe el storyboard
-_5 min · primero el guion, luego el código_
-
-Los animadores profesionales dibujan antes de animar. Un **storyboard** es el guion visual: qué aparece, en qué segundo y cómo se mueve. Así corriges la idea antes de gastar tiempo en detalles.
-
-```text
-Quiero [la idea de la persona].
-
-Antes de animar nada, escribe un storyboard en una tabla: segundo de inicio y de fin, qué aparece, cómo entra y cómo sale, y qué texto se lee. Propón también la duración total, 3 colores y una tipografía. Formato: [vertical 9:16 / horizontal 16:9 / cuadrado 1:1].
-
-Deja cada texto en pantalla el tiempo suficiente para leerlo con calma. No escribas código todavía.
-```
-
-**¿Por qué no pedir la animación directamente?**
-
-- Cambiar una tabla cuesta segundos; cambiar una animación terminada cuesta mucho más.
-- El storyboard es también tu guía para revisar: sabrás qué debería pasar en cada segundo.
-- Si no te convence el ritmo, pide «hazlo más tranquilo» o «más enérgico» y Claude rehace la tabla.
-
-**✅ Comprobación:** tienes un storyboard que, al leerlo, te imaginas la animación.
-
-#### 2. Anímalo en un artefacto
-_5 min · el plato principal_
-
-Un **artefacto** es una ventana al lado del chat donde Claude muestra lo que crea. Ahí verás tu animación moverse sin instalar nada.
+#### 1. Pídela pensada para web
+_artefacto_
 
 ```text
-Perfecto. Ahora crea la animación como un artefacto HTML de una sola página, sin librerías externas, siguiendo el storyboard.
-
-Requisitos:
-- Todo el movimiento depende de una función render(t) que dibuja el fotograma del segundo t, y una constante DUR con la duración total.
-- Abajo, un botón de play/pausa y una barra para saltar a cualquier segundo.
-- Movimientos con suavizado (nada lineal) y textos grandes que se lean en un móvil.
-- Que se vea bien en el formato del storyboard.
+Quiero [la idea de la persona]. Hazla con CSS y, solo si hace falta, un poco de JavaScript, sin librerías. Requisitos: que no tape ni compita con el texto, que sea ligera para el móvil y que se pare si la persona tiene activado «reducir movimiento» en su sistema. Enséñamela en un artefacto con un texto de ejemplo encima.
 ```
 
-**¿Qué es eso de render(t)?**
+**¿Qué es «reducir movimiento»?**
 
-- Es como una película: para cada segundo **t** hay un fotograma fijo.
-- Así la animación siempre se ve igual, y la barra te deja ir directo al segundo 7 para revisarlo.
-- Es también lo que permite convertirla en vídeo después, fotograma a fotograma.
+- Una opción del móvil y del ordenador para personas a las que el movimiento marea.
+- Respetarla es accesible y educado.
 
-> 💡 Si no ves la animación a la derecha, pide «muéstramela en un artefacto». Si sale en blanco, dile a Claude qué ves: él lo arregla.
+**✅ Comprobación:** la ves en el artefacto y el texto se lee bien.
 
-**✅ Comprobación:** la animación se reproduce en el artefacto y la barra te deja moverte por ella.
-
-#### 3. Ajusta escena a escena
-_10 min · el punto de sal_
-
-Ahora eres el director. Mira la animación entera, luego segundo a segundo, y pide cambios concretos.
-
-#### Cómo pedir cambios que funcionan
-
-- Di **el segundo**: «en el segundo 3,5…».
-
-- Di **qué pasa ahora y qué quieres**: «el título entra de golpe; quiero que suba despacio en 0,8 segundos».
-
-- Pide **un cambio o dos** cada vez.
+#### 2. Hazla tuya
+_marca_
 
 ```text
-Cambios: en el segundo [x], [lo que pasa ahora] → [lo que quiero]. En el segundo [y], [lo que pasa ahora] → [lo que quiero]. No toques nada más.
+Usa mis colores [#xxxxxx, #xxxxxx] y hazla más lenta y sutil. Cambia solo eso.
 ```
 
-**Palabras de animador que Claude entiende**
+**✅ Comprobación:** encaja con tu web.
 
-- **Suavizado (easing)**: que empiece o acabe despacio, como un coche que frena.
-- **Escalonado (stagger)**: que los elementos entren uno detrás de otro, no todos a la vez.
-- **Rebote**: que se pase un poco y vuelva, da sensación de alegría.
-- **Bucle (loop)**: que termine igual que empieza para repetirse sin corte.
-- **Pausa de lectura**: tiempo quieto para que se lea un texto.
-
-> 💡 Regla de lectura: lee cada texto en voz alta dos veces. Si no te da tiempo antes de que desaparezca, pide que se quede más.
-
-**✅ Comprobación:** la has visto entera tres veces seguidas y no cambiarías nada.
-
-#### 4. Hazla tuya
-_5 min · tu marca_
-
-Con tus colores, tu tipografía y tu logo deja de parecer una plantilla.
+#### 3. Pégala en tu web
+_instalar_
 
 ```text
-Aplica mi marca: colores [#xxxxxx, #xxxxxx, #xxxxxx], tipografía [nombre de Google Fonts] y este logo en SVG: [pega el código o adjunta la imagen]. Mantén los tiempos tal y como están.
+Dame el código para pegar en mi web y dime exactamente dónde va. Este es mi index.html: [pégalo o dime el repositorio].
 ```
 
-> 💡 ¿No tienes logo en SVG? La receta «Diseña tu logo con IA» te lo prepara, e «Imágenes con IA, gratis» te enseña a dibujar iconos SVG con Claude.
+> 💡 Si tu web es del libro [Tu web online y gratis](webapp-gratis.html), usa la receta «Cambia tu web sin romperla».
 
-**✅ Comprobación:** al verla, se reconoce tu marca a la primera.
+**✅ Comprobación:** la animación se ve en tu web publicada.
 
-#### 5. Conviértela en vídeo MP4
-_10 min · Claude Code_
-
-Para subirla a Instagram, TikTok o YouTube necesitas un vídeo. Claude Code abre la animación en tu ordenador, saca cada fotograma y los une en un MP4.
-
-#### Pasos
-
-- En el artefacto, copia el código (o descárgalo) y guárdalo como `animacion.html` en una carpeta nueva, por ejemplo `mi-animacion`.
-
-- Abre esa carpeta en **Claude Code** y pega:
-
-```text
-En esta carpeta está animacion.html, con una función render(t) y una constante DUR. Crea un script que:
-1. Abra la página con Playwright (Chromium) a [1080×1920 para vertical / 1920×1080 para horizontal].
-2. Para cada fotograma a 30 fps llame a render(t) y haga una captura.
-3. Una las capturas con ffmpeg en un MP4 H.264 (yuv420p) compatible con Instagram, TikTok y YouTube.
-Instala lo que falte, explícame cada comando antes de ejecutarlo y deja el vídeo en esta carpeta como animacion.mp4.
-```
-
-**Algo falla**
-
-- **Sale en blanco**: pide a Claude Code que espere a que carguen las fuentes antes de capturar.
-- **Va a saltos**: comprueba que todo el movimiento esté dentro de render(t) y no en temporizadores.
-- **No encuentra ffmpeg**: pídele que lo instale por ti y te explique cómo.
-
-**✅ Comprobación:** animacion.mp4 se reproduce suave en tu móvil.
-
-#### 6. Ponle sonido
-_5 min · opcional pero recomendable_
-
-El sonido hace que una animación parezca profesional. Usa música libre de derechos o efectos sencillos.
-
-```text
-Añade la pista musica.mp3 al vídeo animacion.mp4 con un fundido de entrada y salida de 1 segundo, a un volumen que no tape la voz. Si no tengo música, genera con código unos efectos suaves (un golpe al aparecer el título y un brillo al final) sincronizados con el storyboard.
-```
-
-> 💡 Usa solo música con licencia que te permita publicarla. Las bibliotecas de audio gratuitas de las propias redes son una buena opción.
-
-**✅ Comprobación:** el vídeo suena bien y los efectos coinciden con lo que se ve.
-
-#### 7. Sírvela
-_3 min · publicar_
-
-Tu animación está lista para el público.
-
-- **Como enlace**: en el artefacto pulsa **Compartir** (o **Publicar**) y envía el enlace.
-
-- **En tu web**: pide a Claude «adáptala para pegarla en mi web, sin ocupar más de [alto] de alto».
-
-- **En redes**: sube `animacion.mp4` desde la app del móvil, como cualquier vídeo.
-
-**✅ Comprobación:** alguien ha visto tu animación fuera de Claude.
-
-**Al terminar:** Ya tienes tu animación hecha con Claude Opus 5.5. Guarda el storyboard y el chat: para la siguiente solo tendrás que cambiar los textos y los colores.
+**Al terminar:** Tu web se mueve con calma. Revisa que sigue cargando rápido en el móvil.
 
 ## Al terminar
 
 Ya tienes a Opus como chef. Elige qué animación quieres.
-
-## Extras (opcionales, después de servir)
-
-### Extra 1. Microanimaciones para tu web
-_10 min · opcional_
-
-Pequeños movimientos que hacen una web más agradable: botones que reaccionan, secciones que aparecen al bajar y números que cuentan.
-
-```text
-Este es el HTML de mi web: [pégalo o adjúntalo]. Añade microanimaciones sutiles: botones que reaccionan al pasar el ratón, secciones que aparecen suavemente al hacer scroll y contadores que suben. Solo CSS y JavaScript sin librerías. Respeta «prefers-reduced-motion» para quien prefiere menos movimiento.
-```
-
-> 💡 Menos es más: si la animación se nota más que el contenido, es demasiado.
-
-### Extra 2. Tu logo animado en SVG
-_10 min · opcional_
-
-Un logo que se dibuja solo pesa muy poco y queda perfecto en la portada de tu web o en tu firma.
-
-```text
-Este es mi logo en SVG: [pega el código]. Anímalo para que se dibuje trazo a trazo en 2 segundos y termine con un pequeño brillo. Todo en un único archivo SVG con la animación dentro, que funcione en cualquier navegador.
-```
-
-### Extra 3. Datos que cuentan una historia
-_15 min · opcional_
-
-Un gráfico que se mueve se entiende y se recuerda mejor que una tabla.
-
-```text
-Estos son mis datos: [pega la tabla o adjunta el CSV]. Crea una animación de 20 segundos que cuente la historia de estos datos: empieza por el contexto, muestra el cambio más importante y termina con una frase que resuma la conclusión. No inventes datos.
-```
 
 ## Sigue con
 

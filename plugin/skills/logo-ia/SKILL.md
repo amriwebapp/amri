@@ -1,15 +1,14 @@
 ---
 name: logo-ia
-description: "Receta de AMRI «Diseña un logo con IA». Logo con nombre, símbolo o iniciales, todos los formatos, tu kit de marca y cómo comprobar y proteger tu logo. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Diseña un logo con IA». Logo con nombre o símbolo, todos los formatos, tu kit de marca y cómo comprobar y proteger tu logo. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Diseña un logo con IA
 
-Logo con nombre, símbolo o iniciales, todos los formatos, tu kit de marca y cómo comprobar y proteger tu logo.
+Logo con nombre o símbolo, todos los formatos, tu kit de marca y cómo comprobar y proteger tu logo.
 
-- 📕 6 recetas
-- ⏱ 15-40 min cada una
+- 📕 5 recetas
 - 💶 Gratis
 - 🍽 Resultado: tu logo en todos los formatos y tu marca definida
 - Categoría: Primeros pasos
@@ -40,7 +39,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Este es un libro de recetas
 
-Tiene una preparación común («Antes de empezar») y 6 recetas concretas. Según la idea de la persona:
+Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Según la idea de la persona:
 1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
 2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
 3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
@@ -48,7 +47,7 @@ Tiene una preparación común («Antes de empezar») y 6 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Crea tus cuentas
-_5 min · gratis_
+_gratis_
 
 - Crea tu cuenta en [Claude](https://claude.ai).
 - Crea tu cuenta en [Ideogram](https://ideogram.ai).
@@ -58,7 +57,7 @@ _5 min · gratis_
 **✅ Comprobación:** has entrado en todas.
 
 ### 2. La personalidad de tu marca
-_10 min · con Claude_
+_con Claude_
 
 Un buen logo empieza por saber qué quiere transmitir. Crea un proyecto en Claude llamado **Mi marca** y, dentro, pega:
 
@@ -78,7 +77,6 @@ Al final, escribe una ficha de marca de media página: personalidad, tono, 3 col
 
 El nombre de tu marca con un estilo propio, que se lee perfecto.
 
-- ⏱ 30 min
 - 👩‍🍳 Fácil
 - 🔤 Logotipo
 - 🍽 Resultado: tu logo con nombre
@@ -89,7 +87,7 @@ El nombre de tu marca con un estilo propio, que se lee perfecto.
   - App o startup: una app de finanzas personales llamada «Hucha», moderna y de confianza
 
 #### 1. Tres estilos
-_10 min · propuestas_
+_propuestas_
 
 ```text
 Quiero un logo para [la idea de la persona]. Con mi ficha de marca, propón 3 estilos distintos (por ejemplo: minimalista, ilustrado, tipográfico) y escribe un prompt en inglés para Ideogram de cada uno, con fondo blanco liso, diseño plano y el nombre exacto entre comillas.
@@ -98,7 +96,7 @@ Quiero un logo para [la idea de la persona]. Con mi ficha de marca, propón 3 es
 **✅ Comprobación:** tienes 3 estilos con sus prompts.
 
 #### 2. Genera en Ideogram
-_10 min · el horno_
+_el horno_
 
 - Pega cada prompt en Ideogram. Si ves la opción **Design** o **Typography**, actívala.
 - Descarga tus favoritos.
@@ -107,7 +105,7 @@ _10 min · el horno_
 **✅ Comprobación:** tienes un favorito con el nombre bien escrito.
 
 #### 3. Si las letras fallan
-_10 min · el truco_
+_el truco_
 
 Quédate con el **símbolo sin texto** y escribe el nombre en Canva con una tipografía bonita. Es lo que hacen muchos diseñadores.
 
@@ -123,7 +121,6 @@ Recomiéndame 3 tipografías gratuitas de Canva que combinen con este logo y exp
 
 Un dibujo sencillo que se reconoce sin letras, para tu perfil o tu app.
 
-- ⏱ 25 min
 - 👩‍🍳 Fácil
 - 🔷 Símbolo
 - 🍽 Resultado: tu símbolo, sin texto
@@ -133,7 +130,7 @@ Un dibujo sencillo que se reconoce sin letras, para tu perfil o tu app.
   - Icono de app: el icono de una app, que se vea bien muy pequeño
 
 #### 1. Las ideas
-_10 min · símbolos_
+_símbolos_
 
 ```text
 Quiero [la idea de la persona]. Con mi ficha de marca, propón 5 ideas de símbolo (qué dibujo y por qué) y escribe un prompt en inglés para cada una: diseño plano, sin texto, fondo blanco liso, que funcione en tamaño muy pequeño.
@@ -142,7 +139,7 @@ Quiero [la idea de la persona]. Con mi ficha de marca, propón 5 ideas de símbo
 **✅ Comprobación:** tienes 5 ideas con sus prompts.
 
 #### 2. Genera y prueba en pequeño
-_15 min · elegir_
+_elegir_
 
 - Genera en Ideogram o Bing Image Creator.
 - Reduce tus favoritos al tamaño de un icono del móvil: ¿se sigue entendiendo?
@@ -155,43 +152,10 @@ Este es mi favorito [adjúntalo]. Hazlo más simple, con menos elementos y líne
 
 **Al terminar:** Tu símbolo está listo. Combínalo con tu nombre en Canva cuando lo necesites.
 
-### Receta 3: Logo con tus iniciales
-
-Un monograma elegante para tu marca personal.
-
-- ⏱ 25 min
-- 👩‍🍳 Fácil
-- ✒️ Monograma
-- 🍽 Resultado: tu monograma
-- Versión web: https://amri.es/recetas/logo-ia--iniciales.html
-- Ideas de ejemplo:
-  - Elegante: mi marca personal como fotógrafa, con mis iniciales «LM», elegante y minimalista
-  - Moderno: mis iniciales en un monograma moderno y geométrico
-
-#### 1. Propuestas
-_10 min · estilos_
-
-```text
-Quiero un monograma para [la idea de la persona]. Propón 3 estilos y escribe un prompt en inglés para Ideogram de cada uno, con las letras exactas entre comillas, fondo blanco liso y diseño plano.
-```
-
-**✅ Comprobación:** tienes 3 prompts.
-
-#### 2. Genera y revisa
-_15 min · elegir_
-
-- Genera en Ideogram.
-- Comprueba que las letras son exactamente las tuyas y se leen bien.
-
-**✅ Comprobación:** tienes tu monograma elegido.
-
-**Al terminar:** Tu monograma está listo. Queda muy bien en tu firma de correo y tu web.
-
-### Receta 4: Tu logo en todos los formatos
+### Receta 3: Tu logo en todos los formatos
 
 Sin fondo, en blanco, foto de perfil y para documentos.
 
-- ⏱ 20 min
 - 👩‍🍳 Fácil
 - 🗂 Formatos
 - 🍽 Resultado: una carpeta con todas las versiones
@@ -201,7 +165,7 @@ Sin fondo, en blanco, foto de perfil y para documentos.
   - Sobre todo en redes: redes sociales
 
 #### 1. Quita el fondo
-_3 min · transparente_
+_transparente_
 
 - Abre **remove.bg** y sube tu logo.
 - Descárgalo y comprueba que los bordes están limpios.
@@ -209,7 +173,7 @@ _3 min · transparente_
 **✅ Comprobación:** tienes un PNG con fondo transparente (se ve a cuadros en el editor).
 
 #### 2. Las versiones
-_12 min · en Canva_
+_en Canva_
 
 - En Canva, crea un diseño de 1000 × 1000 px y sube tu logo.
 - Descarga: **PNG transparente** (web y redes) y **JPG con fondo blanco** (documentos).
@@ -219,7 +183,7 @@ _12 min · en Canva_
 **✅ Comprobación:** tienes al menos 4 versiones.
 
 #### 3. ¿Y para imprimir en grande?
-_5 min · vectorial_
+_vectorial_
 
 Para imprimir en grande hace falta un formato **vectorial** (SVG), que se amplía sin perder calidad.
 
@@ -230,11 +194,10 @@ Para imprimir en grande hace falta un formato **vectorial** (SVG), que se amplí
 
 **Al terminar:** Tienes tu carpeta de logos. Guárdala con el nombre de tu marca para tenerla siempre a mano.
 
-### Receta 5: Tu kit de marca
+### Receta 4: Tu kit de marca
 
 Colores, tipografías y reglas para que todo lo que hagas se vea coherente.
 
-- ⏱ 15 min
 - 👩‍🍳 Fácil
 - 🎨 Marca
 - 🍽 Resultado: una página con tu kit de marca
@@ -244,7 +207,7 @@ Colores, tipografías y reglas para que todo lo que hagas se vea coherente.
   - Guía completa: una guía de marca de 3 páginas
 
 #### 1. Pídelo
-_10 min · con tu logo_
+_con tu logo_
 
 ```text
 Con este logo [adjúntalo] y mi ficha de marca, hazme [la idea de la persona]: 3 colores con su código, 2 tipografías gratuitas y 5 reglas de uso (tamaño mínimo, qué no hacer…). Déjalo en una página que pueda imprimir.
@@ -253,7 +216,7 @@ Con este logo [adjúntalo] y mi ficha de marca, hazme [la idea de la persona]: 3
 **✅ Comprobación:** tienes tu kit de marca.
 
 #### 2. Guárdalo en Canva
-_5 min · a mano_
+_a mano_
 
 - En Canva, guarda tus colores y tu logo en **Marca** o **Kit de marca**, si tu plan lo permite.
 - Si no, crea un diseño «Mi marca» con los colores y cópialos cuando los necesites.
@@ -262,11 +225,10 @@ _5 min · a mano_
 
 **Al terminar:** Tu kit de marca está listo. Úsalo en el libro de Canva para que todo salga con tu estilo.
 
-### Receta 6: Comprueba y protege tu logo
+### Receta 5: Comprueba y protege tu logo
 
 Que no se parezca a otro, que puedas usarlo comercialmente y, si vas en serio, registrarlo.
 
-- ⏱ 20 min
 - 👩‍🍳 Fácil
 - 🛡 Protección
 - 🍽 Resultado: tu logo comprobado
@@ -276,7 +238,7 @@ Que no se parezca a otro, que puedas usarlo comercialmente y, si vas en serio, r
   - Registrarlo: registrar mi marca
 
 #### 1. Busca parecidos
-_5 min · Google_
+_Google_
 
 - Haz una búsqueda por imagen en Google con tu logo.
 - Si aparece algo muy parecido de tu sector, cambia el diseño.
@@ -284,14 +246,14 @@ _5 min · Google_
 **✅ Comprobación:** no has encontrado logos demasiado parecidos.
 
 #### 2. Uso comercial
-_5 min · condiciones_
+_condiciones_
 
 Revisa las condiciones de la herramienta de IA que usaste sobre uso comercial: cambian con el tiempo.
 
 **✅ Comprobación:** sabes si puedes usarlo para tu negocio.
 
 #### 3. Registro de marca
-_10 min · si vas en serio_
+_si vas en serio_
 
 Si quieres protegerlo, el registro se hace en la [OEPM](https://www.oepm.es) (España) o en la [EUIPO](https://www.euipo.europa.eu) (Unión Europea).
 

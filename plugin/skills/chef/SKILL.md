@@ -30,46 +30,44 @@ Ayudas a la persona a construir **su propio proyecto** combinando recetas de AMR
 ## El recetario
 
 ### Primeros pasos
-- `amri:empieza-aqui` · **Empieza aquí: conoce a Claude**: El primer libro: tu primera conversación, cómo pedir bien, darle tus archivos y el mapa de todo lo demás (proyectos, conectores, Skills, plugins y agentes).
-- `amri:asistente-ia` · **Tu asistente personal con IA**: Un asistente que te conoce: correos difíciles, documentos largos, estudiar, organizar tu semana, responder a clientes y tus atajos.
-- `amri:imagenes-ia` · **Crea imágenes con IA gratis**: Ilustraciones, fotos de producto, carteles con texto, series con el mismo estilo, personajes, edición de fotos e iconos. Con herramientas gratuitas.
-- `amri:logo-ia` · **Diseña un logo con IA**: Logo con nombre, símbolo o iniciales, todos los formatos, tu kit de marca y cómo comprobar y proteger tu logo.
+- `amri:empieza-aqui` · **Empieza aquí: conoce a Claude**: El primer libro: tu primera conversación, cómo pedir bien, darle tus archivos y dónde usar Claude.
+- `amri:asistente-ia` · **Tu asistente personal con IA**: Un asistente que te conoce: correos difíciles, documentos largos, estudiar, estudiar y organizar tu semana.
+- `amri:imagenes-ia` · **Crea imágenes con IA gratis**: Ilustraciones, fotos de producto, carteles con texto, edición de fotos e iconos. Con herramientas gratuitas.
+- `amri:logo-ia` · **Diseña un logo con IA**: Logo con nombre o símbolo, todos los formatos, tu kit de marca y cómo comprobar y proteger tu logo.
 
 ### Conecta tus apps
-- `amri:gmail-calendario` · **Tu secretaría: Gmail y Calendar**: Tu resumen de cada mañana, borradores con tu tono, reuniones preparadas, huecos en la agenda, facturas localizadas y la bandeja en orden. Claude nunca envía nada por ti.
-- `amri:notion-cerebro` · **Tu segundo cerebro en Notion**: Ordena tus notas, un tablero de proyectos, tu repaso de los viernes, tu biblioteca de lecturas, actas de reuniones y preguntas a tu Notion.
-- `amri:canva-diseno` · **Diseña en Canva hablando con Claude**: Claude diseña en tu Canva: posts, presentaciones, carteles, currículum, tarjetas y versiones nuevas de diseños que ya tienes.
-- `amri:navegador-chrome` · **Claude navega por ti con Chrome**: Compara precios, investiga con fuentes, rellena formularios sin enviarlos, planea viajes y revisa tu propia web. Comprar y pagar, siempre tú.
-- `amri:slack-equipo` · **Claude en tu Slack**: Ponte al día en un minuto, encuentra qué se decidió, publica anuncios con tu permiso, el canvas de los viernes y reuniones preparadas.
+- `amri:gmail-calendario` · **Tu secretaría: Gmail y Calendar**: Tu resumen de cada mañana, borradores con tu tono, reuniones preparadas y la bandeja en orden. Claude nunca envía nada por ti.
+- `amri:notion-cerebro` · **Tu segundo cerebro en Notion**: Ordena tus notas, un tablero de proyectos, tu repaso de los viernes y actas de reuniones.
+- `amri:canva-diseno` · **Diseña en Canva hablando con Claude**: Claude diseña en tu Canva: posts, presentaciones, carteles y tu currículum.
+- `amri:navegador-chrome` · **Claude navega por ti con Chrome**: Compara precios, investiga con fuentes, rellena formularios sin enviarlos y revisa tu propia web. Comprar y pagar, siempre tú.
 
 ### Crea y publica
-- `amri:webapp-gratis` · **Tu web online y gratis**: Un libro con 8 recetas: tu primera web, cuentas de usuario, reservas, dominio propio, Google y visitas. Con Claude, GitHub y Cloudflare, sin programar.
-- `amri:chatbot-web` · **Un chatbot para tu web**: Monta tu chatbot, ponlo en tu web, recoge contactos, mejóralo cada semana y dale una bienvenida que invite a preguntar.
-- `amri:figma-a-web` · **De Figma a web real**: Una página completa, componentes, pantallas de app, tus estilos como variables y publicarla en internet.
-- `amri:automatiza-tareas` · **Automatiza tareas aburridas con IA**: Cinco automatizaciones con Zapier: correos resumidos en una hoja, facturas a Drive, citas al calendario, formularios con aviso y mensajes clasificados.
+- `amri:webapp-gratis` · **Tu web online y gratis**: Tu primera web, cuentas de usuario, reservas, cambios sin romperla, dominio propio y Google. Con Claude, GitHub y Cloudflare, sin programar.
+- `amri:chatbot-web` · **Un chatbot para tu web**: Monta tu chatbot, ponlo en tu web, recoge contactos, y mejóralo cada semana.
+- `amri:figma-a-web` · **De Figma a web real**: Una página completa, componentes, pantallas de app y tus estilos como variables.
+- `amri:automatiza-tareas` · **Automatiza tareas aburridas con IA**: Automatizaciones con Zapier: correos resumidos en una hoja, citas al calendario, formularios con aviso y mensajes clasificados.
 
 ### Estudio creativo
-- `amri:higgsfield-cine` · **Imágenes y vídeos de cine con Higgsfield**: Un libro con 7 recetas: foto de producto, vídeo realista, vídeo UGC, animación, foto a vídeo, personajes y anuncios. Hablando en español con Claude.
+- `amri:higgsfield-cine` · **Imágenes y vídeos de cine con Higgsfield**: Foto de producto, vídeo realista, vídeo UGC, personajes y anuncios. Hablando en español con Claude.
 - `amri:video-aftereffects` · **Edita vídeo con Claude y After Effects**: Conecta Claude con After Effects y pídele en español: una intro con tu logo, títulos y rótulos, un vídeo vertical con texto animado o un anuncio de producto.
-- `amri:blender-3d` · **Crea 3D con Claude y Blender**: Sin saber modelar: un objeto, una escena, tu logo en 3D, tu producto girando o un personaje simpático.
-- `amri:redes-sociales` · **Tus redes sociales con Claude**: Un libro con 8 recetas: biografía, reels, carruseles, LinkedIn, una idea para todas tus redes, un mes planificado y medir. Con tu propia voz.
+- `amri:blender-3d` · **Crea 3D con Claude y Blender**: Sin saber modelar: un objeto, una escena, tu logo en 3D, o tu producto girando.
+- `amri:redes-sociales` · **Tus redes sociales con Claude**: Biografía, reels, carruseles, LinkedIn, una idea para todas tus redes, un mes planificado y medir. Con tu propia voz.
 - `amri:animaciones-opus` · **Animaciones con Claude Opus 5.5**: Tu logo animado, una explicación animada, un reel vertical, datos en movimiento o una animación para tu web. En el navegador o en MP4.
 
 ### Claude a tu medida
-- `amri:primer-agente` · **Tu primer agente: Claude trabaja por ti**: Claude hace tareas largas en tu ordenador: ordenar carpetas, informes, hojas de cálculo, una web, la terminal y tu primer subagente. Siempre con tu permiso.
+- `amri:primer-agente` · **Tu primer agente: Claude trabaja por ti**: Claude hace tareas largas en tu ordenador: ordenar carpetas, informes, una web y tu primer subagente. Siempre con tu permiso.
 - `amri:skills-propias` · **Enséñale tu método con Skills**: Convierte tu forma de trabajar en Skills: informes con tu formato, correos con tu estilo, fichas de producto o material de clase.
 - `amri:conector-propio` · **Cocina tu propio conector**: Que Claude use tus propios datos: tu hoja de cálculo, tu carpeta de notas, un archivo propio o una API pública. Claude escribe el código.
 
 ### Para empresas (de pago)
-- `amri:gurusup-brain` · **El cerebro de tu empresa con GuruSup**: Claude responde con el conocimiento real de tu empresa: dudas del equipo, clientes, guía de bienvenida y propuestas de venta.
-- `amri:jev-decisiones` · **Decisiones automáticas con Jev**: Clasifica mensajes, prioriza incidencias, puntúa contactos, lee reseñas o modera comentarios. Jev decide y te pasa lo dudoso.
-- `amri:jev-guardian` · **Un guardián para tu chatbot con Jev**: Un guardián para el chatbot de tu web, para respuestas con fuentes, para tu tienda online o para un asistente interno.
+- `amri:gurusup-brain` · **El cerebro de tu empresa con GuruSup**: Claude responde con el conocimiento real de tu empresa: respuestas a clientes, guía de bienvenida y propuestas de venta.
+- `amri:jev-decisiones` · **Decisiones y guardianes con Jev**: Clasifica mensajes, prioriza incidencias, puntúa contactos o lee reseñas, y pon un guardián a tu chatbot. Jev decide y te pasa lo dudoso.
 
 ## Ejemplos de menú
 
 - **«Nunca he usado Claude y quiero aprender»** → `empieza-aqui` (primera conversación y mapa de conceptos) → `asistente-ia` (un asistente que te conoce) → `primer-agente` (Claude haciendo una tarea larga por ti).
 - **«Una web para mi panadería con reservas»** → `webapp-gratis` (web con reservas y base de datos) → `logo-ia` (marca) → `chatbot-web` (responde dudas de clientes) → `gmail-calendario` (avisos de reservas).
 - **«Quiero empezar un canal de vídeos cortos»** → `asistente-ia` (guiones e ideas) → `higgsfield-cine` (clips) → `canva-diseno` (portadas) → `redes-sociales` (textos, plan semanal y medición).
-- **«Ordenar automáticamente los mensajes que me llegan»** → `jev-decisiones` (clasifica con Jev y te pasa lo dudoso) → `jev-guardian` (si además tienes un chatbot, que revise lo que entra y sale) → `slack-equipo` (avisos).
+- **«Ordenar automáticamente los mensajes que me llegan»** → `jev-decisiones` (clasifica con Jev, te pasa lo dudoso y, si tienes un chatbot, le pone un guardián) → `gmail-calendario` (borradores de respuesta).
 - **«Una intro animada para mis vídeos»** → `logo-ia` (marca) → `animaciones-opus` (storyboard, animación y MP4) → `redes-sociales` (publicar y medir).
-- **«Que mi equipo encuentre la información al momento»** → `notion-cerebro` (documentación) → `gurusup-brain` (base de conocimiento) → `slack-equipo` (respuestas en Slack).
+- **«Que mi equipo encuentre la información al momento»** → `notion-cerebro` (documentación) → `gurusup-brain` (base de conocimiento con fuentes).
