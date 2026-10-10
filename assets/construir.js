@@ -21,8 +21,8 @@ var META={
  "redes-sociales":{m:45,p:0,f:4},"higgsfield-cine":{m:30,p:1,f:4},"video-aftereffects":{m:45,p:2,f:4,t:"desk"},"animaciones-opus":{m:40,p:2,f:4},"blender-3d":{m:45,p:0,f:4,t:"desk"},
  "gmail-calendario":{m:25,p:0,f:5},"notion-cerebro":{m:30,p:0,f:5},"slack-equipo":{m:25,p:0,f:5},"gurusup-brain":{m:30,p:2,f:5},"automatiza-tareas":{m:45,p:0,f:5},"jev-decisiones":{m:50,p:2,f:5,t:"cc"},"navegador-chrome":{m:20,p:2,f:5}
 };
-var ORDER=["empieza-aqui","asistente-ia","primer-agente","skills-propias","logo-ia","imagenes-ia","canva-diseno","webapp-gratis","figma-a-web","chatbot-web","jev-guardian","conector-propio",
- "redes-sociales","higgsfield-cine","video-aftereffects","animaciones-opus","blender-3d","gmail-calendario","notion-cerebro","slack-equipo","gurusup-brain","automatiza-tareas","jev-decisiones","navegador-chrome"];
+var ORDER=["empieza-aqui","asistente-ia","primer-agente","skills-propias","logo-ia","imagenes-ia","canva-diseno","webapp-gratis","figma-a-web","chatbot-web","conector-propio",
+ "redes-sociales","higgsfield-cine","video-aftereffects","animaciones-opus","blender-3d","gmail-calendario","notion-cerebro","gurusup-brain","automatiza-tareas","jev-decisiones","navegador-chrome"];
 
 /* ---------- Necesidades: lo que la persona quiere conseguir ----------
    g grupo · r recetas · a necesidades relacionadas · k palabras clave (es/en/ar; una palabra = raíz, varias = frase) */
@@ -39,7 +39,7 @@ var NEEDS=[
   k:["figma","mockup","maqueta","prototipo","prototype","wireframe","نموذج اولي"]},
  {id:"chatbot",g:1,ic:"🤖",l:{es:"Un chatbot que atienda clientes"},r:["chatbot-web"],a:["guardian","conocimiento","web"],
   k:["chatbot","chat bot","bot","atencion al cliente","atender clientes","responda","responder clientes","preguntas frecuentes","faq","customer service","customer support","answer customers","روبوت","محادثه","خدمه العملاء","اسئله شائعه"]},
- {id:"guardian",g:1,ic:"🛡️",l:{es:"Que tu chatbot sea seguro"},r:["jev-guardian"],a:["chatbot","clasificar"],
+ {id:"guardian",g:1,ic:"🛡️",l:{es:"Que tu chatbot sea seguro"},r:["jev-decisiones"],a:["chatbot","clasificar"],
   k:["seguro","seguridad","guardian","proteger","no se invente","no invente","invente","alucina","fiable","safe","safety","guardrail","protect","hallucinat","made up","make things up","reliable","امان","حمايه","حارس","يختلق"]},
  {id:"logo",g:2,ic:"✨",l:{es:"Logo e identidad de marca"},r:["logo-ia"],a:["diseno","web","redes"],
   k:["logo","logotipo","marca","branding","identidad","brand","identity","شعار","هويه","علامه تجاريه"]},
@@ -59,11 +59,9 @@ var NEEDS=[
   k:["3d","blender","modelo 3d","render","maqueta 3d","3d model","ثلاثي","مجسم"]},
  {id:"correo",g:3,ic:"📬",l:{es:"Ordenar correo y agenda"},r:["gmail-calendario"],a:["clasificar","notas","automatizar"],
   k:["correo","email","mail","gmail","bandeja","agenda","calendario","reunion","inbox","calendar","meeting","بريد","تقويم","اجتماع"]},
- {id:"notas",g:3,ic:"🗂️",l:{es:"Notas y documentación ordenadas"},r:["notion-cerebro"],a:["conocimiento","equipo"],
+ {id:"notas",g:3,ic:"🗂️",l:{es:"Notas y documentación ordenadas"},r:["notion-cerebro"],a:["conocimiento"],
   k:["notion","nota","apunte","documentacion","wiki","organizar","segundo cerebro","notes","docs","organise","organize","second brain","ملاحظات","توثيق","تنظيم"]},
- {id:"equipo",g:3,ic:"💬",l:{es:"Tu equipo en Slack"},r:["slack-equipo"],a:["notas","conocimiento"],
-  k:["slack","equipo","companero","empleado","team","colleague","staff","فريق","زملاء","موظفين"]},
- {id:"conocimiento",g:3,ic:"🧠",l:{es:"Respuestas con el saber de tu empresa"},r:["gurusup-brain"],a:["chatbot","equipo","notas"],
+ {id:"conocimiento",g:3,ic:"🧠",l:{es:"Respuestas con el saber de tu empresa"},r:["gurusup-brain"],a:["chatbot","notas"],
   k:["base de conocimiento","conocimiento","manuales","soporte","procedimiento","knowledge","support","manuals","procedure","معرفه","دعم","دليل"]},
  {id:"automatizar",g:3,ic:"⚡",l:{es:"Automatizar tareas repetitivas"},r:["automatiza-tareas"],a:["clasificar","correo"],
   k:["automatiz","automatic","repetitiv","excel","hoja de calculo","factura","informe","copiar y pegar","ahorrar tiempo","automate","spreadsheet","invoice","report","save time","اتمته","تلقائي","متكرر","جدول","فواتير","تقارير"]},
@@ -94,7 +92,7 @@ var SECTORS=[
   k:["artesania","ceramica","ropa","joyeria","cosmetica","handmade","crafts","clothing","jewellery","jewelry","حرف يدويه","ملابس","مجوهرات"]},
  {id:"freelance",l:{es:"un profesional independiente"},def:["portfolio","logo","redes"],sug:["correo","escribir","diseno"],
   k:["freelance","autonomo","consultor","disenador","fotografo","abogado","coach","profesor","traductor","arquitecto","freelancer","consultant","designer","photographer","lawyer","teacher","translator","مستقل","مصمم","مصور","محامي","مدرس"]},
- {id:"empresa",l:{es:"una empresa o un equipo"},def:["correo","automatizar","notas"],sug:["equipo","conocimiento","clasificar"],
+ {id:"empresa",l:{es:"una empresa o un equipo"},def:["correo","automatizar","notas"],sug:["conocimiento","clasificar"],
   k:["empresa","oficina","pyme","departamento","startup","negocio","company","office","business","small business","department","شركه","مكتب","مشروع"]}
 ];
 var STOP=["quiero","pero","y","necesito","busco","para","and","but","want","need","so","i","اريد","لكن","و","احتاج"];
@@ -145,7 +143,6 @@ function plan(){
   var rec={},add=function(s,why){(rec[s]=rec[s]||{why:[]}).why.push(why)};
   S.sel.forEach(function(id){NI[id].r.forEach(function(s){add(s,tr(NI[id].l))})});
   if(S.lvl===0&&!rec["asistente-ia"])add("asistente-ia",T("b_start"));
-  if(rec["jev-guardian"]&&!rec["chatbot-web"]&&S.have.indexOf("chatbot")<0)add("chatbot-web",T("b_dep"));
   var all=ORDER.filter(function(s){return rec[s]});
   var main=all,paid=[];
   if(S.bud===0){main=all.filter(function(s){return META[s].p<2});paid=all.filter(function(s){return META[s].p===2})}
@@ -189,7 +186,7 @@ function stepLi(s,i,why){
   if(m.p)b+='<em class="bdg pay">'+esc(c[2])+'</em>';
   return '<li class="bld-step"><a href="recetas/'+s+'.html"><span class="n">'+(i+1)+'</span><span class="th"><img alt="" loading="lazy" src="'+img(s)+'"></span>'+
     '<span class="tx"><b>'+esc(D.title(s))+'</b><small class="why">'+esc(T("b_for"))+' '+esc(uniq(why).join(" · "))+'</small>'+
-    '<span class="meta"><i>⏱ '+esc(c[0])+'</i><i>'+esc(c[1])+'</i>'+b+'</span></span><span class="go">→</span></a></li>';
+    '<span class="meta"><i>'+esc(c[1])+'</i>'+b+'</span></span><span class="go">→</span></a></li>';
 }
 function render(){
   paintUnd();paintPicker();paintCtx();
@@ -200,7 +197,7 @@ function render(){
   if(P.main.some(function(s){return META[s].t==="cc"})||S.lvl===2)tools.push("Claude Code");
   if(P.main.some(function(s){return META[s].t==="desk"}))tools.push(T("b_bdesk"));
   if(P.main.some(function(s){return META[s].p===2}))tools.push(T("b_tpaid"));
-  h+='<div class="bld-plan"><div class="bld-ph"><h3>'+esc(T("b_res"))+'</h3><p class="bld-sum"><b>'+P.main.length+' '+esc(T(P.main.length===1?"b_r1":"pj_n"))+'</b> · '+esc(T("b_about"))+' '+esc(dur(mins))+'</p>'+
+  h+='<div class="bld-plan"><div class="bld-ph"><h3>'+esc(T("b_res"))+'</h3><p class="bld-sum"><b>'+P.main.length+' '+esc(T(P.main.length===1?"b_r1":"pj_n"))+'</b></p>'+
      '<p class="bld-tools">'+esc(T("b_need"))+' '+tools.map(function(t){return '<i>'+esc(t)+'</i>'}).join("")+'</p></div>';
   var n=0,fn=0;[1,2,3,4,5].forEach(function(f){
     var list=P.main.filter(function(s){return META[s].f===f});if(!list.length)return;

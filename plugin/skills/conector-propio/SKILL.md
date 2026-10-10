@@ -9,7 +9,6 @@ argument-hint: "[tu idea]"
 Que Claude use tus propios datos: tu hoja de cálculo, tu carpeta de notas, un archivo propio o una API pública. Claude escribe el código.
 
 - 📕 4 recetas
-- ⏱ 40-60 min cada una
 - 💶 Gratis
 - 🍽 Resultado: Claude usando tus propios datos
 - Categoría: Claude a tu medida
@@ -49,7 +48,7 @@ Tiene una preparación común («Antes de empezar») y 4 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Entiende cómo funciona
-_3 min · la idea_
+_la idea_
 
 MCP (Model Context Protocol) es un idioma común para que Claude hable con otras apps. Un conector es un pequeño programa que ofrece **herramientas**.
 
@@ -60,7 +59,7 @@ MCP (Model Context Protocol) es un idioma común para que Claude hable con otras
 **✅ Comprobación:** sabrías explicar qué es una herramienta MCP.
 
 ### 2. Prepara los ingredientes
-_10 min · instalar_
+_instalar_
 
 - Instala [Claude Desktop](https://claude.ai/download) e inicia sesión.
 - Instala [Node.js](https://nodejs.org) (versión **LTS**).
@@ -77,215 +76,141 @@ node --version
 
 ### Receta 1: Conecta tu hoja de datos
 
-Claude busca, filtra y suma en tu hoja de clientes (CSV).
+Claude busca, filtra y suma en tu hoja de clientes (CSV), sin que la subas cada vez.
 
-- ⏱ 50 min
 - 👩‍🍳 Avanzada
 - 📊 CSV
 - 🍽 Resultado: un conector para tu hoja
 - Versión web: https://amri.es/recetas/conector-propio--hoja.html
 - Ideas de ejemplo:
-  - Mi hoja de datos: consultar una hoja de cálculo (CSV) con mis clientes: buscar por nombre, filtrar y sumar importes
+  - Clientes: consultar una hoja de cálculo (CSV) con mis clientes: buscar por nombre, filtrar y sumar importes
 
-#### 1. Pide el código a Claude
-_10 min · la receta_
+#### 1. Prepara una copia en CSV
+_los datos_
 
-Tú describes; Claude programa.
+- Crea la carpeta **mi-conector** en tu carpeta de usuario.
+- Guarda **una copia** de tu hoja como CSV (Archivo → Guardar como → CSV) dentro, con el nombre `datos.csv`.
+- Comprueba que la primera fila tiene los nombres de las columnas.
+
+**✅ Comprobación:** datos.csv está en la carpeta.
+
+#### 2. Pide el código
+_Claude programa_
 
 ```text
-Quiero crear mi propio servidor MCP en Node.js (JavaScript sencillo, sin TypeScript) usando el SDK oficial @modelcontextprotocol/sdk, con transporte stdio.
+Quiero crear mi propio servidor MCP en Node.js (JavaScript sencillo, sin TypeScript) con el SDK oficial @modelcontextprotocol/sdk y transporte stdio, para [la idea de la persona].
 
-Objetivo: [la idea de la persona].
+Mi archivo es datos.csv, en la misma carpeta, con estas columnas: [tus columnas].
 
-Dame:
-1) package.json
-2) server.js con 2 o 3 herramientas pequeñas, con descripciones muy claras
-3) los comandos exactos para instalarlo
-4) el bloque para claude_desktop_config.json
+Herramientas (solo lectura, nunca modifican el archivo):
+- buscar(texto): filas que contienen el texto.
+- filtrar(columna, valor): filas donde la columna coincide.
+- sumar(columna, filtro opcional): la suma de una columna numérica.
 
-Explícame cada archivo en una frase. Soy principiante.
+Dame package.json, server.js, los comandos para instalarlo y el bloque para claude_desktop_config.json. Explícame cada archivo en una frase.
 ```
 
-**¿Por qué pocas herramientas?**
+**✅ Comprobación:** tienes package.json y server.js.
 
-- Cada herramienta hace una cosa bien.
-- Descripciones claras = Claude acierta cuándo usarlas.
-- Siempre puedes añadir más después.
+#### 3. Instálalo
+_terminal y configuración_
 
-**✅ Comprobación:** Claude te ha dado los archivos y las instrucciones.
-
-#### 2. Guarda e instala
-_5 min · montar_
-
-- Guarda **package.json** y **server.js** dentro de **mi-conector**.
-- En la terminal, entra en la carpeta e instala:
+- Guarda los dos archivos en **mi-conector** y, en la terminal:
 
 ```text
 cd mi-conector
 npm install
 ```
 
-> 💡 Si sale algún error en rojo, cópialo entero y pégaselo a Claude. Es la forma más rápida de arreglarlo.
+- En Claude Desktop: **Settings → Developer → Edit Config** y añade el bloque que te dio Claude, con la ruta completa a server.js.
+- Cierra Claude Desktop del todo y vuelve a abrirlo.
 
-**✅ Comprobación:** aparece una carpeta node_modules dentro de mi-conector.
+> 💡 ¿Error en rojo? Cópialo entero y pégaselo a Claude.
 
-#### 3. Pon tus datos en la despensa
-_3 min · los datos_
+**✅ Comprobación:** en un chat nuevo, «mi-conector» aparece en la lista de herramientas.
 
-- Copia tu archivo de datos dentro de **mi-conector** (por ejemplo, **datos.csv**).
-- Si es un Excel, guárdalo como **CSV** (Archivo → Guardar como → CSV).
-- Comprueba que el nombre coincide con el que usa server.js.
-
-> 💡 Empieza con una copia de tus datos, no con el original.
-
-**✅ Comprobación:** el archivo está en la carpeta con el nombre correcto.
-
-#### 4. Conéctalo a Claude Desktop
-_5 min · el enchufe_
-
-- En Claude Desktop: **Settings → Developer → Edit Config**.
-- Abre **claude_desktop_config.json** y añade tu conector (cambia la ruta por la tuya completa):
+#### 4. Pruébalo con preguntas reales
+_el examen_
 
 ```text
-{
-  "mcpServers": {
-    "mi-conector": {
-      "command": "node",
-      "args": ["/ruta/completa/a/mi-conector/server.js"]
-    }
-  }
-}
+Usando mi-conector: ¿cuántos clientes tengo en [ciudad]? ¿Cuánto suman sus cuotas? ¿Quién se dio de alta este año?
 ```
 
-- Si ya había otros conectores, añade solo el bloque **«mi-conector»** dentro de **mcpServers**.
-- Guarda y **cierra Claude Desktop del todo**. Vuelve a abrirlo.
+Comprueba dos respuestas abriendo la hoja.
 
-**¿Cómo sé la ruta completa?**
+**✅ Comprobación:** las respuestas coinciden con tu hoja.
 
-- Mac: arrastra server.js a la Terminal y se escribe solo.
-- Windows: mantén Mayús, clic derecho en server.js → «Copiar como ruta». Usa barras dobles \\ o barras /.
-
-**✅ Comprobación:** en un chat nuevo, tu conector aparece en la lista de herramientas.
-
-#### 5. Pruébalo
-_5 min · a probar_
-
-```text
-¿Qué herramientas tienes de «mi-conector»? Usa una de ellas con un ejemplo sencillo y explícame qué ha pasado.
-```
-
-**✅ Comprobación:** Claude usa tu herramienta y te da un resultado con tus datos.
-
-**Al terminar:** Has cocinado tu propio conector: Claude ya puede usar tus datos con herramientas que tú has definido. Esto es exactamente lo que hay detrás de Canva, Notion o Higgsfield.
+**Al terminar:** Claude ya consulta tu hoja. Cuando la actualices, guarda el CSV encima y listo.
 
 ### Receta 2: Conecta tu carpeta de notas
 
 Claude busca y lee tus notas en archivos de texto de tu ordenador.
 
-- ⏱ 50 min
 - 👩‍🍳 Avanzada
 - 🗒 Notas
 - 🍽 Resultado: un conector para tus notas
 - Versión web: https://amri.es/recetas/conector-propio--notas.html
 - Ideas de ejemplo:
-  - Mi carpeta de notas: buscar y leer mis notas en archivos de texto de una carpeta de mi ordenador
+  - Carpeta de notas: buscar y leer mis notas en archivos de texto de una carpeta de mi ordenador
 
-#### 1. Pide el código a Claude
-_10 min · la receta_
+#### 1. Elige la carpeta
+_los datos_
 
-Tú describes; Claude programa.
+- Crea la carpeta **mi-conector**.
+- Decide qué carpeta de notas quieres que lea (solo esa) y apunta su ruta completa.
+
+> 💡 ⚠️ No le des acceso a carpetas con contraseñas, documentos de identidad o datos de otras personas.
+
+**✅ Comprobación:** tienes la ruta de tu carpeta de notas.
+
+#### 2. Pide el código
+_Claude programa_
 
 ```text
-Quiero crear mi propio servidor MCP en Node.js (JavaScript sencillo, sin TypeScript) usando el SDK oficial @modelcontextprotocol/sdk, con transporte stdio.
+Quiero crear mi propio servidor MCP en Node.js (JavaScript sencillo) con el SDK oficial @modelcontextprotocol/sdk y transporte stdio, para [la idea de la persona].
 
-Objetivo: [la idea de la persona].
+La carpeta de notas es: [ruta completa]. Archivos .md y .txt.
 
-Dame:
-1) package.json
-2) server.js con 2 o 3 herramientas pequeñas, con descripciones muy claras
-3) los comandos exactos para instalarlo
-4) el bloque para claude_desktop_config.json
+Herramientas (solo lectura):
+- listar(): títulos de las notas, con fecha.
+- buscar(texto): las notas que contienen el texto, con una línea de contexto.
+- leer(nombre): el contenido de una nota.
 
-Explícame cada archivo en una frase. Soy principiante.
+Que nunca lea fuera de esa carpeta (ni con ../). Dame package.json, server.js, los comandos y el bloque para claude_desktop_config.json.
 ```
 
-**¿Por qué pocas herramientas?**
+**✅ Comprobación:** tienes los archivos.
 
-- Cada herramienta hace una cosa bien.
-- Descripciones claras = Claude acierta cuándo usarlas.
-- Siempre puedes añadir más después.
-
-**✅ Comprobación:** Claude te ha dado los archivos y las instrucciones.
-
-#### 2. Guarda e instala
-_5 min · montar_
-
-- Guarda **package.json** y **server.js** dentro de **mi-conector**.
-- En la terminal, entra en la carpeta e instala:
+#### 3. Instálalo
+_terminal y configuración_
 
 ```text
 cd mi-conector
 npm install
 ```
 
-> 💡 Si sale algún error en rojo, cópialo entero y pégaselo a Claude. Es la forma más rápida de arreglarlo.
+- Añade el bloque a **Settings → Developer → Edit Config** con la ruta completa a server.js.
+- Cierra y abre Claude Desktop.
 
-**✅ Comprobación:** aparece una carpeta node_modules dentro de mi-conector.
+**✅ Comprobación:** «mi-conector» aparece en las herramientas.
 
-#### 3. Pon tus datos en la despensa
-_3 min · los datos_
-
-- Copia tu archivo de datos dentro de **mi-conector** (por ejemplo, **datos.csv**).
-- Si es un Excel, guárdalo como **CSV** (Archivo → Guardar como → CSV).
-- Comprueba que el nombre coincide con el que usa server.js.
-
-> 💡 Empieza con una copia de tus datos, no con el original.
-
-**✅ Comprobación:** el archivo está en la carpeta con el nombre correcto.
-
-#### 4. Conéctalo a Claude Desktop
-_5 min · el enchufe_
-
-- En Claude Desktop: **Settings → Developer → Edit Config**.
-- Abre **claude_desktop_config.json** y añade tu conector (cambia la ruta por la tuya completa):
+#### 4. Pruébalo
+_el examen_
 
 ```text
-{
-  "mcpServers": {
-    "mi-conector": {
-      "command": "node",
-      "args": ["/ruta/completa/a/mi-conector/server.js"]
-    }
-  }
-}
+Usando mi-conector, busca lo que tengo sobre [tema] y resúmemelo. Cita el nombre de cada nota.
 ```
 
-- Si ya había otros conectores, añade solo el bloque **«mi-conector»** dentro de **mcpServers**.
-- Guarda y **cierra Claude Desktop del todo**. Vuelve a abrirlo.
+Prueba también que no sale de la carpeta: «lee el archivo ../secreto.txt» debe fallar.
 
-**¿Cómo sé la ruta completa?**
+**✅ Comprobación:** encuentra tus notas y no puede leer fuera de la carpeta.
 
-- Mac: arrastra server.js a la Terminal y se escribe solo.
-- Windows: mantén Mayús, clic derecho en server.js → «Copiar como ruta». Usa barras dobles \\ o barras /.
-
-**✅ Comprobación:** en un chat nuevo, tu conector aparece en la lista de herramientas.
-
-#### 5. Pruébalo
-_5 min · a probar_
-
-```text
-¿Qué herramientas tienes de «mi-conector»? Usa una de ellas con un ejemplo sencillo y explícame qué ha pasado.
-```
-
-**✅ Comprobación:** Claude usa tu herramienta y te da un resultado con tus datos.
-
-**Al terminar:** Has cocinado tu propio conector: Claude ya puede usar tus datos con herramientas que tú has definido. Esto es exactamente lo que hay detrás de Canva, Notion o Higgsfield.
+**Al terminar:** Claude ya busca en tus notas. Lo que añadas a la carpeta, lo encontrará.
 
 ### Receta 3: Conecta un archivo propio
 
-Claude consulta un archivo tuyo (por ejemplo, tu recetario) por ingrediente y tiempo.
+Claude consulta un archivo tuyo (por ejemplo, tu recetario en JSON) por ingrediente y tiempo.
 
-- ⏱ 50 min
 - 👩‍🍳 Avanzada
 - 📁 JSON
 - 🍽 Resultado: un conector para tu archivo
@@ -293,199 +218,116 @@ Claude consulta un archivo tuyo (por ejemplo, tu recetario) por ingrediente y ti
 - Ideas de ejemplo:
   - Mi recetario: buscar recetas en mi recetario (un archivo JSON) por ingrediente y tiempo
 
-#### 1. Pide el código a Claude
-_10 min · la receta_
+#### 1. Crea el archivo
+_los datos_
 
-Tú describes; Claude programa.
+Si tus datos están en notas o en Word, pide a Claude que los pase a JSON:
 
 ```text
-Quiero crear mi propio servidor MCP en Node.js (JavaScript sencillo, sin TypeScript) usando el SDK oficial @modelcontextprotocol/sdk, con transporte stdio.
-
-Objetivo: [la idea de la persona].
-
-Dame:
-1) package.json
-2) server.js con 2 o 3 herramientas pequeñas, con descripciones muy claras
-3) los comandos exactos para instalarlo
-4) el bloque para claude_desktop_config.json
-
-Explícame cada archivo en una frase. Soy principiante.
+Convierte estas recetas en un archivo JSON con, para cada una: nombre, ingredientes (lista), minutos y raciones. [pega tus recetas]
 ```
 
-**¿Por qué pocas herramientas?**
+- Guárdalo como `datos.json` en la carpeta **mi-conector**.
 
-- Cada herramienta hace una cosa bien.
-- Descripciones claras = Claude acierta cuándo usarlas.
-- Siempre puedes añadir más después.
+**✅ Comprobación:** datos.json está en la carpeta.
 
-**✅ Comprobación:** Claude te ha dado los archivos y las instrucciones.
+#### 2. Pide el código
+_Claude programa_
 
-#### 2. Guarda e instala
-_5 min · montar_
+```text
+Quiero crear mi propio servidor MCP en Node.js (JavaScript sencillo) con el SDK oficial @modelcontextprotocol/sdk y transporte stdio, para [la idea de la persona].
 
-- Guarda **package.json** y **server.js** dentro de **mi-conector**.
-- En la terminal, entra en la carpeta e instala:
+Archivo: datos.json en la misma carpeta.
+
+Herramientas (solo lectura):
+- por_ingrediente(ingredientes): recetas que usan esos ingredientes.
+- rapidas(max_minutos): recetas que se hacen en ese tiempo o menos.
+- detalle(nombre): la receta completa.
+
+Dame package.json, server.js, los comandos y el bloque para claude_desktop_config.json.
+```
+
+**✅ Comprobación:** tienes los archivos.
+
+#### 3. Instálalo
+_terminal y configuración_
 
 ```text
 cd mi-conector
 npm install
 ```
 
-> 💡 Si sale algún error en rojo, cópialo entero y pégaselo a Claude. Es la forma más rápida de arreglarlo.
+- Añade el bloque en **Settings → Developer → Edit Config** y reinicia Claude Desktop.
 
-**✅ Comprobación:** aparece una carpeta node_modules dentro de mi-conector.
+**✅ Comprobación:** «mi-conector» aparece en las herramientas.
 
-#### 3. Pon tus datos en la despensa
-_3 min · los datos_
-
-- Copia tu archivo de datos dentro de **mi-conector** (por ejemplo, **datos.csv**).
-- Si es un Excel, guárdalo como **CSV** (Archivo → Guardar como → CSV).
-- Comprueba que el nombre coincide con el que usa server.js.
-
-> 💡 Empieza con una copia de tus datos, no con el original.
-
-**✅ Comprobación:** el archivo está en la carpeta con el nombre correcto.
-
-#### 4. Conéctalo a Claude Desktop
-_5 min · el enchufe_
-
-- En Claude Desktop: **Settings → Developer → Edit Config**.
-- Abre **claude_desktop_config.json** y añade tu conector (cambia la ruta por la tuya completa):
+#### 4. Pruébalo
+_el examen_
 
 ```text
-{
-  "mcpServers": {
-    "mi-conector": {
-      "command": "node",
-      "args": ["/ruta/completa/a/mi-conector/server.js"]
-    }
-  }
-}
+Usando mi-conector: tengo pollo, limón y 30 minutos. ¿Qué puedo hacer? Después, hazme el menú de la semana con recetas de menos de 40 minutos.
 ```
 
-- Si ya había otros conectores, añade solo el bloque **«mi-conector»** dentro de **mcpServers**.
-- Guarda y **cierra Claude Desktop del todo**. Vuelve a abrirlo.
+**✅ Comprobación:** te propone recetas de tu archivo, no inventadas.
 
-**¿Cómo sé la ruta completa?**
-
-- Mac: arrastra server.js a la Terminal y se escribe solo.
-- Windows: mantén Mayús, clic derecho en server.js → «Copiar como ruta». Usa barras dobles \\ o barras /.
-
-**✅ Comprobación:** en un chat nuevo, tu conector aparece en la lista de herramientas.
-
-#### 5. Pruébalo
-_5 min · a probar_
-
-```text
-¿Qué herramientas tienes de «mi-conector»? Usa una de ellas con un ejemplo sencillo y explícame qué ha pasado.
-```
-
-**✅ Comprobación:** Claude usa tu herramienta y te da un resultado con tus datos.
-
-**Al terminar:** Has cocinado tu propio conector: Claude ya puede usar tus datos con herramientas que tú has definido. Esto es exactamente lo que hay detrás de Canva, Notion o Higgsfield.
+**Al terminar:** Claude ya consulta tu archivo. Pídele menús de la semana con lo que tienes en la nevera.
 
 ### Receta 4: Conecta una API pública
 
-Claude consulta el tiempo de cualquier ciudad con una API gratuita, sin clave.
+Claude consulta el tiempo de cualquier ciudad con la API gratuita de Open-Meteo, sin clave.
 
-- ⏱ 40 min
 - 👩‍🍳 Avanzada
 - 🌦 API
-- 🍽 Resultado: un conector a una API
+- 🍽 Resultado: un conector a una API de internet
 - Versión web: https://amri.es/recetas/conector-propio--api.html
 - Ideas de ejemplo:
-  - Una API pública: consultar el tiempo de cualquier ciudad usando la API gratuita de Open-Meteo, sin clave
+  - El tiempo: consultar el tiempo de cualquier ciudad usando la API gratuita de Open-Meteo, sin clave
 
-#### 1. Pide el código a Claude
-_10 min · la receta_
+#### 1. Qué es una API
+_la idea_
 
-Tú describes; Claude programa.
+Una API es una puerta para que dos programas hablen. Open-Meteo ofrece el tiempo gratis y sin clave: perfecta para aprender.
+
+**✅ Comprobación:** sabes qué es una API.
+
+#### 2. Pide el código
+_Claude programa_
 
 ```text
-Quiero crear mi propio servidor MCP en Node.js (JavaScript sencillo, sin TypeScript) usando el SDK oficial @modelcontextprotocol/sdk, con transporte stdio.
+Quiero crear mi propio servidor MCP en Node.js (JavaScript sencillo) con el SDK oficial @modelcontextprotocol/sdk y transporte stdio, para [la idea de la persona].
 
-Objetivo: [la idea de la persona].
+Herramientas:
+- previsión(ciudad, días): busca las coordenadas con la API de geocodificación de Open-Meteo y devuelve temperatura máxima y mínima y probabilidad de lluvia de cada día.
 
-Dame:
-1) package.json
-2) server.js con 2 o 3 herramientas pequeñas, con descripciones muy claras
-3) los comandos exactos para instalarlo
-4) el bloque para claude_desktop_config.json
-
-Explícame cada archivo en una frase. Soy principiante.
+Usa fetch, sin claves. Si la ciudad no existe, devuelve un mensaje claro. Dame package.json, server.js, los comandos y el bloque para claude_desktop_config.json.
 ```
 
-**¿Por qué pocas herramientas?**
+**✅ Comprobación:** tienes los archivos.
 
-- Cada herramienta hace una cosa bien.
-- Descripciones claras = Claude acierta cuándo usarlas.
-- Siempre puedes añadir más después.
+#### 3. Instálalo
+_terminal y configuración_
 
-**✅ Comprobación:** Claude te ha dado los archivos y las instrucciones.
-
-#### 2. Guarda e instala
-_5 min · montar_
-
-- Guarda **package.json** y **server.js** dentro de **mi-conector**.
-- En la terminal, entra en la carpeta e instala:
+- Crea la carpeta **mi-conector**, guarda los archivos y en la terminal:
 
 ```text
 cd mi-conector
 npm install
 ```
 
-> 💡 Si sale algún error en rojo, cópialo entero y pégaselo a Claude. Es la forma más rápida de arreglarlo.
+- Añade el bloque en **Settings → Developer → Edit Config** y reinicia Claude Desktop.
 
-**✅ Comprobación:** aparece una carpeta node_modules dentro de mi-conector.
+**✅ Comprobación:** «mi-conector» aparece en las herramientas.
 
-#### 3. Pon tus datos en la despensa
-_3 min · los datos_
-
-- Copia tu archivo de datos dentro de **mi-conector** (por ejemplo, **datos.csv**).
-- Si es un Excel, guárdalo como **CSV** (Archivo → Guardar como → CSV).
-- Comprueba que el nombre coincide con el que usa server.js.
-
-> 💡 Empieza con una copia de tus datos, no con el original.
-
-**✅ Comprobación:** el archivo está en la carpeta con el nombre correcto.
-
-#### 4. Conéctalo a Claude Desktop
-_5 min · el enchufe_
-
-- En Claude Desktop: **Settings → Developer → Edit Config**.
-- Abre **claude_desktop_config.json** y añade tu conector (cambia la ruta por la tuya completa):
+#### 4. Pruébalo
+_el examen_
 
 ```text
-{
-  "mcpServers": {
-    "mi-conector": {
-      "command": "node",
-      "args": ["/ruta/completa/a/mi-conector/server.js"]
-    }
-  }
-}
+Usando mi-conector: ¿lloverá este fin de semana en [ciudad]? ¿Y en una ciudad que no existe, como Pueblolandia?
 ```
 
-- Si ya había otros conectores, añade solo el bloque **«mi-conector»** dentro de **mcpServers**.
-- Guarda y **cierra Claude Desktop del todo**. Vuelve a abrirlo.
+**✅ Comprobación:** te da la previsión real y un mensaje claro para la ciudad inventada.
 
-**¿Cómo sé la ruta completa?**
-
-- Mac: arrastra server.js a la Terminal y se escribe solo.
-- Windows: mantén Mayús, clic derecho en server.js → «Copiar como ruta». Usa barras dobles \\ o barras /.
-
-**✅ Comprobación:** en un chat nuevo, tu conector aparece en la lista de herramientas.
-
-#### 5. Pruébalo
-_5 min · a probar_
-
-```text
-¿Qué herramientas tienes de «mi-conector»? Usa una de ellas con un ejemplo sencillo y explícame qué ha pasado.
-```
-
-**✅ Comprobación:** Claude usa tu herramienta y te da un resultado con tus datos.
-
-**Al terminar:** Has cocinado tu propio conector: Claude ya puede usar tus datos con herramientas que tú has definido. Esto es exactamente lo que hay detrás de Canva, Notion o Higgsfield.
+**Al terminar:** Has conectado Claude a un servicio de internet. Así funcionan muchos conectores de verdad.
 
 ## Al terminar
 

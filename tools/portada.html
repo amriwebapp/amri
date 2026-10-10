@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Portada</title>
+<!-- Plantilla de portada vertical de cada librito. La usa tools/portadas.py: ?s=<slug>&bg=<color>&img=<ruta> -->
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{width:600px;height:800px;overflow:hidden;background:#FBF4E9}
+.cv{position:relative;width:600px;height:800px;overflow:hidden;background:#FBF4E9;font-family:"Bricolage Grotesque",system-ui,sans-serif;color:#2A1F14}
+.blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.75}
+.b1{width:520px;height:520px;left:-160px;top:-180px;background:var(--bg)}
+.b2{width:360px;height:360px;right:-140px;top:180px;background:#E7F0E4;opacity:.6}
+.top{position:absolute;left:52px;right:52px;top:50px;display:flex;align-items:center;gap:12px}
+.top img{width:34px;height:34px;border-radius:9px;box-shadow:0 6px 14px -6px rgba(210,86,31,.6)}
+.top span{font-weight:800;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:#D2561F}
+h1{position:absolute;left:52px;right:48px;top:118px;font-weight:800;font-size:60px;line-height:1.02;letter-spacing:-.035em}
+.rule{position:absolute;left:52px;width:56px;height:5px;border-radius:5px;background:#D2561F}
+.art{position:absolute;left:-30px;right:-30px;bottom:-6px;height:440px;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 22%);mask-image:linear-gradient(180deg,transparent 0,#000 22%)}
+.art img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.grain{position:absolute;inset:0;opacity:.35;mix-blend-mode:multiply;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .4 0 0 0 0 .3 0 0 0 .12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+</style>
+</head>
+<body>
+<div class="cv" id="cv">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="art"><img id="art" alt=""></div>
+  <div class="top"><img src="../img/brand/amri-monograma.svg" alt=""><span>Libro de recetas</span></div>
+  <h1 id="t"></h1><div class="rule" id="rule"></div>
+  <div class="grain"></div>
+</div>
+<script src="../i18n.js"></script>
+<script src="../assets/datos.js"></script>
+<script>
+(function(){
+var q=new URLSearchParams(location.search),s=q.get("s");
+document.getElementById("cv").style.setProperty("--bg",q.get("bg")||"#FBE3D2");
+var art=document.getElementById("art");art.src="../"+q.get("img");
+var t=document.getElementById("t");t.textContent=AMRI_DATA.title(s);
+/* El título cabe siempre en el hueco de arriba: se encoge si es largo */
+function fit(){var f=60;t.style.fontSize=f+"px";while(t.offsetHeight>250&&f>36){f-=2;t.style.fontSize=f+"px";}
+  document.getElementById("rule").style.top=(t.offsetTop+t.offsetHeight+22)+"px";document.title="ok";}
+Promise.all([document.fonts.ready,new Promise(function(r){art.complete?r():(art.onload=art.onerror=r)})]).then(fit);
+})();
+</script>
+</body>
+</html>

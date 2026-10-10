@@ -1,15 +1,14 @@
 ---
 name: webapp-gratis
-description: "Receta de AMRI «Tu web online y gratis». Un libro con 8 recetas: tu primera web, cuentas de usuario, reservas, dominio propio, Google y visitas. Con Claude, GitHub y Cloudflare, sin programar. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Tu web online y gratis». Tu primera web, cuentas de usuario, reservas, cambios sin romperla, dominio propio y Google. Con Claude, GitHub y Cloudflare, sin programar. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Tu web online y gratis
 
-Un libro con 8 recetas: tu primera web, cuentas de usuario, reservas, dominio propio, Google y visitas. Con Claude, GitHub y Cloudflare, sin programar.
+Tu primera web, cuentas de usuario, reservas, cambios sin romperla, dominio propio y Google. Con Claude, GitHub y Cloudflare, sin programar.
 
-- 📕 8 recetas
-- ⏱ 20-90 min cada una
+- 📕 6 recetas
 - 💶 Gratis (el dominio propio es de pago)
 - 🍽 Resultado: tu web online, a tu medida
 - Categoría: Crea y publica
@@ -40,7 +39,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Este es un libro de recetas
 
-Tiene una preparación común («Antes de empezar») y 8 recetas concretas. Según la idea de la persona:
+Tiene una preparación común («Antes de empezar») y 6 recetas concretas. Según la idea de la persona:
 1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
 2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
 3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
@@ -48,7 +47,7 @@ Tiene una preparación común («Antes de empezar») y 8 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Crea tus cuentas
-_5 min · tres cuentas gratis_
+_tres cuentas gratis_
 
 Empieza por GitHub: con esa cuenta podrás entrar en las demás.
 
@@ -63,7 +62,7 @@ Empieza por GitHub: con esa cuenta podrás entrar en las demás.
 **✅ Comprobación:** has entrado en las tres cuentas.
 
 ### 2. Conecta GitHub con Claude
-_3 min · el conector_
+_el conector_
 
 Un conector es un permiso para que Claude use GitHub por ti: así sube los archivos él, sin que tengas que copiar y pegar.
 
@@ -75,7 +74,7 @@ Un conector es un permiso para que Claude use GitHub por ti: así sube los archi
 **✅ Comprobación:** GitHub aparece como «Conectado».
 
 ### 3. Crea el proyecto «Mi web»
-_3 min · las reglas_
+_las reglas_
 
 Un proyecto de Claude guarda tus reglas para siempre. Así Claude trabaja igual en todas las recetas.
 
@@ -104,7 +103,6 @@ Reglas:
 
 Una web de una o varias secciones, publicada en internet con candado, sin base de datos.
 
-- ⏱ 45 min
 - 👩‍🍳 Fácil
 - 🌐 Web
 - 🍽 Resultado: tu web online en una dirección .pages.dev o .workers.dev
@@ -116,7 +114,7 @@ Una web de una o varias secciones, publicada en internet con candado, sin base d
   - Evento: una web para un evento con fecha, lugar, programa y cómo apuntarse
 
 #### 1. Pide la web a Claude
-_10 min · los archivos_
+_los archivos_
 
 Abre un chat dentro de **Mi web**. Claude crea **3 archivos** que forman tu web; no tienes que entenderlos.
 
@@ -137,7 +135,7 @@ Hazla con tres archivos: index.html, styles.css y app.js. Que se vea bien en el 
 **✅ Comprobación:** Claude te ha enseñado los tres archivos.
 
 #### 2. Baja los archivos
-_5 min · a tu ordenador_
+_a tu ordenador_
 
 - Crea en tu ordenador una carpeta llamada **mi-web**.
 - En el chat, cada archivo tiene un botón de **descargar**. Guárdalos en **mi-web**.
@@ -148,7 +146,7 @@ _5 min · a tu ordenador_
 **✅ Comprobación:** ves tu web en el navegador de tu ordenador.
 
 #### 3. Guárdala en GitHub
-_5 min · subir_
+_subir_
 
 #### Con el conector
 
@@ -164,7 +162,7 @@ Crea un repositorio en mi GitHub llamado mi-web y sube estos tres archivos.
 **✅ Comprobación:** ves tus archivos dentro del repositorio mi-web en GitHub.
 
 #### 4. Publícala en Cloudflare
-_10 min · online_
+_online_
 
 - En Cloudflare abre **Workers & Pages → Create** y elige importar un repositorio de GitHub (**Import a repository** o **Connect to Git**).
 
@@ -179,7 +177,7 @@ _10 min · online_
 **✅ Comprobación:** abres tu dirección (termina en `.pages.dev` o `.workers.dev`) y tu web carga con candado.
 
 #### 5. Pruébala en el móvil
-_5 min · revisión_
+_revisión_
 
 - Abre la dirección en tu móvil.
 - Pulsa cada botón y cada enlace.
@@ -197,7 +195,6 @@ Así se ve mi web en el móvil: [describe o sube una captura]. Esto no me gusta:
 
 Cada persona crea su cuenta y guarda sus cosas: tareas, notas, mensajes de un formulario o un catálogo que actualizas tú.
 
-- ⏱ 90 min
 - 👩‍🍳 Media
 - 🗄 Base de datos
 - 🍽 Resultado: una web con cuentas de usuario y datos guardados
@@ -209,7 +206,7 @@ Cada persona crea su cuenta y guarda sus cosas: tareas, notas, mensajes de un fo
   - Catálogo que actualizo yo: un catálogo de productos que yo actualizo desde un panel privado, sin cobro online
 
 #### 1. Crea tu proyecto en Supabase
-_5 min · la despensa_
+_la despensa_
 
 - Entra en [Supabase](https://supabase.com) con el botón **Sign in with GitHub**.
 - Pulsa **New project**, ponle nombre y elige una región cercana. Espera un par de minutos.
@@ -218,7 +215,7 @@ _5 min · la despensa_
 **✅ Comprobación:** tienes un proyecto en Supabase.
 
 #### 2. Pide la web a Claude
-_10 min · los archivos_
+_los archivos_
 
 ```text
 Quiero [la idea de la persona].
@@ -231,7 +228,7 @@ Hazla con estos archivos: index.html, styles.css, app.js y config.js. Que guarde
 **✅ Comprobación:** tienes los cuatro archivos en tu ordenador.
 
 #### 3. Que Claude cree las tablas
-_10 min · con seguridad_
+_con seguridad_
 
 Una tabla es como una hoja de cálculo donde se guardan tus datos. La seguridad (se llama RLS) hace que **cada persona vea solo lo suyo**.
 
@@ -247,7 +244,7 @@ Crea en mi proyecto de Supabase las tablas que necesita esta web. Usa los mismos
 **✅ Comprobación:** en Supabase, en **Table Editor**, ves tu tabla con la seguridad (RLS) activada.
 
 #### 4. Pega las dos llaves
-_5 min · conectar_
+_conectar_
 
 - En Supabase abre **Project Settings → API**.
 - Copia la **Project URL** y la **clave publicable** (_publishable key_; en proyectos antiguos se llama **anon public**).
@@ -260,7 +257,7 @@ _5 min · conectar_
 **✅ Comprobación:** config.js tiene tu Project URL y tu clave publicable.
 
 #### 5. Súbela y publícala
-_15 min · online_
+_online_
 
 - Sube los archivos a GitHub y publícala en Cloudflare, igual que en [Tu primera web](webapp-gratis--primera-web.html) (pasos 3 y 4).
 - En Supabase, **Authentication → URL Configuration**: pega la dirección de tu web en «Site URL».
@@ -268,7 +265,7 @@ _15 min · online_
 **✅ Comprobación:** tu web está online.
 
 #### 6. Prueba con dos cuentas
-_10 min · la prueba de fuego_
+_la prueba de fuego_
 
 - Crea una cuenta en tu web y guarda algo.
 - Abre una ventana de incógnito, crea **otra cuenta** con otro correo y comprueba que **no ve lo de la primera**.
@@ -282,7 +279,6 @@ _10 min · la prueba de fuego_
 
 Tus clientes eligen un hueco libre y tú ves todas las reservas en una página privada.
 
-- ⏱ 90 min
 - 👩‍🍳 Media
 - 📅 Reservas
 - 🍽 Resultado: un sistema de reservas en tu web
@@ -293,7 +289,7 @@ Tus clientes eligen un hueco libre y tú ves todas las reservas en una página p
   - Clases con plazas: clases con un número de plazas, en las que la gente se apunta hasta que se llenan
 
 #### 1. Define tus reglas
-_10 min · antes del código_
+_antes del código_
 
 Antes de programar, deja claro cómo funcionan tus reservas. Es lo que más errores evita.
 
@@ -306,7 +302,7 @@ Hazme preguntas de una en una para definir las reglas: horario, duración, días
 **✅ Comprobación:** tienes las reglas de tus reservas en una lista.
 
 #### 2. Supabase y la web
-_20 min · construir_
+_construir_
 
 - Si aún no tienes un proyecto en Supabase, créalo como en [Una web con cuentas y datos](webapp-gratis--web-con-datos.html) (paso 1).
 - Pide la web:
@@ -318,7 +314,7 @@ Con esas reglas, crea la web de reservas: una página pública donde se ven los 
 **✅ Comprobación:** tienes los archivos de la web de reservas.
 
 #### 3. Tablas con seguridad
-_10 min · RLS_
+_RLS_
 
 ```text
 Crea las tablas en mi proyecto de Supabase con seguridad (RLS): cualquiera puede crear una reserva, pero solo yo puedo ver la lista completa, con los datos de contacto, y cancelar. Antes de ejecutar, explícame qué vas a crear.
@@ -329,7 +325,7 @@ Crea las tablas en mi proyecto de Supabase con seguridad (RLS): cualquiera puede
 **✅ Comprobación:** las tablas están creadas con RLS activada.
 
 #### 4. Publica y prueba
-_20 min · online_
+_online_
 
 - Pega las llaves en `config.js`, súbela a GitHub y publícala en Cloudflare (como en [Tu primera web](webapp-gratis--primera-web.html)).
 - Haz una reserva de prueba desde el móvil.
@@ -339,7 +335,7 @@ _20 min · online_
 **✅ Comprobación:** no se puede reservar dos veces el mismo hueco y ves las reservas en tu página privada.
 
 #### 5. Privacidad
-_5 min · obligatorio_
+_obligatorio_
 
 Guardas nombres, correos y teléfonos: son datos personales.
 
@@ -357,7 +353,6 @@ Escríbeme un texto corto de privacidad para el formulario de reservas: quién g
 
 Añade secciones, cambia textos o colores y vuelve atrás si algo sale mal.
 
-- ⏱ 20 min
 - 👩‍🍳 Fácil
 - 🛠 Mantenimiento
 - 🍽 Resultado: tu web mejorada, con el historial a salvo
@@ -369,7 +364,7 @@ Añade secciones, cambia textos o colores y vuelve atrás si algo sale mal.
   - Arreglar algo roto: arreglar algo que no funciona
 
 #### 1. Pide el cambio
-_5 min · con el código delante_
+_con el código delante_
 
 ```text
 Este es el código de mi web: [pega tus archivos o dime el repositorio de GitHub]. Quiero [la idea de la persona]: [detalla qué].
@@ -380,7 +375,7 @@ Antes de cambiar nada, dime qué archivos vas a tocar. Cambia solo lo necesario.
 **✅ Comprobación:** Claude te ha dicho qué va a tocar.
 
 #### 2. Sube el cambio
-_5 min · a GitHub_
+_a GitHub_
 
 - **Con el conector**: «Sube estos cambios a mi repositorio mi-web con una nota de qué has cambiado».
 - **A mano**: abre el archivo en GitHub, pulsa el lápiz, pega el código nuevo y pulsa **Commit changes**.
@@ -388,7 +383,7 @@ _5 min · a GitHub_
 **✅ Comprobación:** el cambio está en GitHub y Cloudflare lo publica en 1-2 minutos.
 
 #### 3. Comprueba
-_5 min · en el móvil_
+_en el móvil_
 
 - Abre tu web en el móvil (si no ves el cambio, recarga la página).
 - Revisa la parte cambiada y también el resto: a veces un cambio afecta a otra cosa.
@@ -396,7 +391,7 @@ _5 min · en el móvil_
 **✅ Comprobación:** el cambio se ve bien y lo demás sigue funcionando.
 
 #### 4. Si algo se rompió, vuelve atrás
-_5 min · deshacer_
+_deshacer_
 
 GitHub guarda cada versión. Puedes volver a la anterior.
 
@@ -418,7 +413,6 @@ Mi web se ha roto después del último cambio. Vuelve mi repositorio mi-web a la
 
 Que tu web tenga una dirección como tunombre.com, con candado.
 
-- ⏱ 20 min
 - 👩‍🍳 Fácil
 - 🌍 Dominio
 - 💶 El dominio es de pago (cada año)
@@ -428,7 +422,7 @@ Que tu web tenga una dirección como tunombre.com, con candado.
   - Ya lo compré en otro sitio: usar un dominio que ya tengo en otra empresa
 
 #### 1. Elige el nombre
-_5 min · ideas_
+_ideas_
 
 ```text
 Ayúdame a elegir un dominio para mi web: [de qué va]. Propón 10 nombres cortos, fáciles de decir en voz alta y de escribir, con .com o .es.
@@ -439,7 +433,7 @@ Ayúdame a elegir un dominio para mi web: [de qué va]. Propón 10 nombres corto
 **✅ Comprobación:** tienes un nombre elegido.
 
 #### 2. Cómpralo o tráelo a Cloudflare
-_10 min · el dominio_
+_el dominio_
 
 #### Si aún no lo tienes
 
@@ -454,7 +448,7 @@ _10 min · el dominio_
 **✅ Comprobación:** el dominio aparece en tu cuenta de Cloudflare.
 
 #### 3. Únelo a tu web
-_5 min · conectar_
+_conectar_
 
 - Ve a **Workers & Pages** y abre tu web.
 - Pulsa **Custom domains → Set up a custom domain**.
@@ -469,7 +463,6 @@ _5 min · conectar_
 
 Títulos, descripciones y el registro en Google para que tu web aparezca al buscarte.
 
-- ⏱ 40 min
 - 👩‍🍳 Fácil
 - 🔎 Buscadores
 - 🍽 Resultado: tu web lista para aparecer en Google
@@ -480,7 +473,7 @@ Títulos, descripciones y el registro en Google para que tu web aparezca al busc
   - Web personal: mi web personal o portfolio
 
 #### 1. Las palabras que busca tu cliente
-_10 min · pensar como él_
+_pensar como él_
 
 ```text
 Mi web es de [la idea de la persona]: [qué haces y dónde]. ¿Qué escribiría en Google alguien que necesita lo que ofrezco? Dame 10 búsquedas reales, de más a menos probables.
@@ -489,7 +482,7 @@ Mi web es de [la idea de la persona]: [qué haces y dónde]. ¿Qué escribiría 
 **✅ Comprobación:** tienes la lista de búsquedas.
 
 #### 2. Título, descripción y textos
-_10 min · la web_
+_la web_
 
 ```text
 Este es el código de mi web: [pégalo o dime el repositorio]. Con esas búsquedas, mejora el título de cada página, la descripción que sale en Google y los títulos de las secciones. Añade también un archivo sitemap.xml. Que suene natural, sin repetir palabras a lo loco.
@@ -500,7 +493,7 @@ Este es el código de mi web: [pégalo o dime el repositorio]. Con esas búsqued
 **✅ Comprobación:** tus páginas tienen título y descripción, y tienes sitemap.xml.
 
 #### 3. Avisa a Google
-_15 min · Search Console_
+_Search Console_
 
 - Entra en [Google Search Console](https://search.google.com/search-console) con tu cuenta de Google.
 - Añade tu web. Google te pedirá demostrar que es tuya: si no entiendes el método, haz una captura y pregúntale a Claude.
@@ -511,7 +504,7 @@ _15 min · Search Console_
 **✅ Comprobación:** Search Console dice que ha recibido tu sitemap.
 
 #### 4. Tu ficha de Google Maps
-_15 min · negocio local_
+_negocio local_
 
 Si tienes local, la ficha de Google (Perfil de Empresa) es lo que más te hace aparecer en el mapa.
 
@@ -527,100 +520,6 @@ Escribe la descripción de mi negocio para Google Maps (máximo 750 caracteres):
 **✅ Comprobación:** tu ficha de Google tiene descripción, horario, fotos y enlace a tu web.
 
 **Al terminar:** Tu web está preparada. Google tarda unos días o semanas en mostrarla: sé paciente y sigue mejorando el contenido.
-
-### Receta 7: Cuántas visitas tienes (sin cookies)
-
-Estadísticas sencillas de tu web con Cloudflare, sin banner de cookies.
-
-- ⏱ 15 min
-- 👩‍🍳 Fácil
-- 📈 Estadísticas
-- 🍽 Resultado: sabes cuánta gente visita tu web y qué mira
-- Versión web: https://amri.es/recetas/webapp-gratis--visitas.html
-- Ideas de ejemplo:
-  - Visitas en general: cuánta gente visita mi web y qué páginas mira
-  - De dónde llegan: de dónde llega la gente: Google, redes o enlaces
-
-#### 1. Activa la analítica de Cloudflare
-_5 min · un interruptor_
-
-Cloudflare tiene estadísticas de visitas gratuitas que no usan cookies, así que no necesitas el aviso de cookies por ellas.
-
-- En Cloudflare busca **Web Analytics** en el menú (suele estar dentro de **Analytics & Logs**).
-- Añade tu web. Si te da un fragmento de código, pídele a Claude que lo añada a tu web y súbelo.
-
-**✅ Comprobación:** ves tu web en la lista de Web Analytics.
-
-#### 2. Espera unos días
-_La paciencia del cocinero_
-
-Las estadísticas necesitan visitas para decir algo. Comparte tu web y vuelve dentro de una semana.
-
-**✅ Comprobación:** han pasado unos días desde que la activaste.
-
-#### 3. Que Claude lo interprete
-_5 min · aprender_
-
-```text
-Estas son las estadísticas de mi web del último mes: [captura o datos]. Quiero saber [la idea de la persona]. Dime qué ves y 3 cambios concretos para mejorar.
-```
-
-**✅ Comprobación:** sabes qué mejorar en tu web.
-
-**Al terminar:** Ya ves tus visitas. Mira las estadísticas una vez al mes y pregúntale a Claude qué mejorar.
-
-### Receta 8: Hazla con Claude Code, sin copiar y pegar
-
-Claude trabaja en una carpeta de tu ordenador: crea los archivos, los sube y la publica él.
-
-- ⏱ 30 min
-- 👩‍🍳 Media
-- 🤖 Agente
-- 💶 Necesita un plan de pago de Claude
-- Versión web: https://amri.es/recetas/webapp-gratis--claude-code.html
-- Ideas de ejemplo:
-  - Una web nueva: una web nueva
-  - Mejorar la que ya tengo: mejorar mi web, que está en mi repositorio de GitHub
-
-#### 1. Abre Claude Code
-_10 min · preparar_
-
-Claude Code es Claude trabajando en tu ordenador. Puedes usarlo en la app de escritorio de Claude (sin terminal) o en la terminal.
-
-- Si nunca lo has usado, haz antes la receta [Tu primer agente](primer-agente.html).
-- Crea una carpeta **mi-web** y ábrela en Claude Code.
-
-**✅ Comprobación:** Claude Code está abierto en la carpeta mi-web.
-
-#### 2. Añade el plugin de AMRI (opcional)
-_3 min · la receta, en comando_
-
-Con el plugin, Claude sigue este mismo libro paso a paso.
-
-```text
-/plugin marketplace add amriwebapp/amri
-```
-
-```text
-/plugin install amri@amri
-```
-
-**✅ Comprobación:** tienes los comandos que empiezan por /amri:.
-
-#### 3. Pídela
-_15 min · Claude trabaja_
-
-```text
-/amri:webapp-gratis [la idea de la persona]: [descríbela]. Explícame cada paso con palabras sencillas antes de hacerlo y pídeme permiso antes de subir o publicar nada.
-```
-
-> 💡 ¿Sin el plugin? Escribe lo mismo sin el comando del principio.
-
-> 💡 Las cuentas, los inicios de sesión y los pagos los haces siempre tú: Claude te dirá qué pulsar.
-
-**✅ Comprobación:** Claude ha creado la web, la ha subido a GitHub y te da la dirección publicada.
-
-**Al terminar:** Claude ha hecho la web contigo de principio a fin. Así es trabajar con un agente.
 
 ## Al terminar
 

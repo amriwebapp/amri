@@ -34,11 +34,9 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
   <div class="nav">
     <a class="brand" href="index.html" aria-label="AMRI"><span class="logo"><img src="img/brand/amri-monograma.svg" alt="" width="34" height="34"></span><svg class="bwm" viewBox="315 436.5 389 130" role="img" aria-label="AMRI"><path d="M325.5,556L368.5,456L411.5,556M347,523L390,523" fill="none" class="ai" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path d="M445.5,556L445.5,456L493.5,514L541.5,456L541.5,556" fill="none" class="mr" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path d="M577.5,556L577.5,456L611.1,456C648.9,456,648.9,512,611.1,512L577.5,512M612.5,512L647.5,556" fill="none" class="mr" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path d="M674.5,556L674.5,496" fill="none" class="ai" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><path class="ais" d="M674.5,447C677.92,462.58 677.92,462.58 693.5,466C677.92,469.42 677.92,469.42 674.5,485C671.08,469.42 671.08,469.42 655.5,466C671.08,462.58 671.08,462.58 674.5,447Z"/></svg> <span class="sub" data-i="brand_sub">Plataforma de IA</span></a>
     <nav class="navlinks" aria-label="Secciones">
+      <a href="recetas/empieza-aqui.html" data-i="nav_start">Empieza aquí</a>
+      <a href="#recetas" data-i="nav_recipes">Biblioteca</a>
       <a href="#como" data-i="nav_how">Cómo funciona</a>
-      <a href="#categorias" data-i="nav_paths">Categorías</a>
-      <a href="#conectores" data-i="nav_conn">Conectores</a>
-      <a href="#recetas" data-i="nav_recipes">Recetas</a>
-      <a href="#abierta" data-i="nav_open">Open source</a>
       <a href="plugin.html" data-i="nav_plugin">Plugin</a>
     </nav>
     <div class="nav-right">
@@ -58,8 +56,9 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
       <p class="lead fade-up" style="transition-delay:.9s" data-i="lead">Recetas paso a paso para aprender a usar Claude de verdad: desde tu primera conversación hasta agentes que trabajan por ti. Sin jerga, sin prisas y sin saber programar.</p>
       <div class="cta-row fade-up" style="transition-delay:1.1s">
         <a class="btn btn-primary" href="recetas/empieza-aqui.html"><span data-i="cta1">Empieza por aquí</span> <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="#recetas" data-i="cta2">Ver todos los libros</a>
+        <a class="btn btn-ghost" href="#recetas" data-i="cta2">Ver la biblioteca</a>
       </div>
+      <p class="hero-note fade-up" style="transition-delay:1.25s" data-i="hero_note">Sin registrarte en AMRI. Solo necesitas una cuenta de Claude, que también es gratis.</p>
     </div>
     <div class="orbit fade-up" id="orbit" style="transition-delay:.5s" aria-hidden="true">
       <div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div>
@@ -73,109 +72,24 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
 <div class="wrap">
   <div class="stats reveal">
     <div class="stat"><div class="n" data-count="22" data-recipes>22</div><div class="l" data-i="st1l">recetas guiadas</div></div>
-    <div class="stat"><div class="n" data-count="12">12</div><div class="l" data-i="st2l">conectores explicados</div></div>
+    <div class="stat"><div class="n" data-count="24" data-books>24</div><div class="l" data-i="st2l">libros</div></div>
     <div class="stat"><div class="n" data-i="st3n">0 €</div><div class="l" data-i="st3l">para siempre</div></div>
     <div class="stat"><div class="n">100%</div><div class="l" data-i="st4l">código abierto</div></div>
   </div>
 </div>
 
-<!-- ============ ¿QUÉ QUIERES CONSTRUIR? ============ -->
-<section class="block" id="construir" style="padding-top:30px">
+<!-- ============ TU PRIMER PASO ============ -->
+<section class="block" id="primer-paso" style="padding-top:20px;padding-bottom:30px">
   <div class="wrap">
-    <div class="bld reveal">
-      <span class="kicker" data-i="b_k">Tu proyecto</span>
-      <h2 class="big" data-i="b_t">¿Qué quieres <em>construir</em>?</h2>
-      <p class="sublead" data-i="b_l"></p>
-      <form class="bld-f" id="bldForm" autocomplete="off">
-        <label class="sr" for="bldIn" data-i="b_t">¿Qué quieres construir?</label>
-        <input id="bldIn" type="text" data-i-ph="b_ph" placeholder="Ej.: una web para mi peluquería con reservas e Instagram" maxlength="200">
-        <button type="submit" class="btn btn-primary"><span data-i="b_btn">Prepárame el menú</span> <span class="arr">→</span></button>
-      </form>
-      <div class="bld-ex" id="bldEx"></div>
-      <div class="bld-res" id="bldRes" hidden>
-      <div class="bld-und" id="bldUnd" aria-live="polite"></div>
-      <details class="bld-more-box" id="bldMore"><summary data-i="b_pick">Elige o ajusta lo que necesitas</summary><div class="bld-pick" id="bldPick"></div></details>
-      <div class="bld-ctx" id="bldCtx"></div>
-      <div class="bld-out" id="bldOut" aria-live="polite"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ MANIFIESTO ============ -->
-<section class="block">
-  <div class="wrap manifesto">
-    <span class="kicker reveal" data-i="m_kicker">Qué es AMRI</span>
-    <p id="manifesto" data-i="m_text">AMRI es una plataforma abierta para aprender inteligencia artificial *con calma*. Aquí no hay cursos de pago ni palabras raras: hay recetas cortas que puedes seguir con un café al lado. Y esta misma web es la primera lección: *la cocinamos con Claude*, y su código es tuyo.</p>
-  </div>
-</section>
-
-<!-- ============ CÓMO FUNCIONA (historia fija con un ejemplo real) ============ -->
-<section class="block" id="como" style="padding-top:40px">
-  <div class="wrap">
-    <span class="kicker reveal" data-i="h_kicker">Cómo funciona</span>
-    <h2 class="big reveal" data-i="h_title">Así se cocina <em>una receta</em>.</h2>
-    <p class="sublead reveal" data-i="h_lead">Te lo enseñamos con un ejemplo real: la web de una panadería, de principio a fin.</p>
-    <div class="story" style="margin-top:30px">
-      <div class="story-sticky"><div class="howv" id="howv" aria-hidden="true"></div></div>
-      <ol class="steps" id="steps">
-        <li class="stp" data-s="0"><div class="num"><span>1</span></div><div class="stx"><h3 data-i="h_s1t">Elige qué quieres hacer</h3><p data-i="h_s1d"></p></div><div class="mview" aria-hidden="true"></div></li>
-        <li class="stp" data-s="1"><div class="num"><span>2</span></div><div class="stx"><h3 data-i="h_s2t">Prepara los ingredientes</h3><p data-i="h_s2d"></p></div><div class="mview" aria-hidden="true"></div></li>
-        <li class="stp" data-s="2"><div class="num"><span>3</span></div><div class="stx"><h3 data-i="h_s3t">Copia la orden y pégala en Claude</h3><p data-i="h_s3d"></p></div><div class="mview" aria-hidden="true"></div></li>
-        <li class="stp" data-s="3"><div class="num"><span>4</span></div><div class="stx"><h3 data-i="h_s4t">Disfruta el resultado y compártelo</h3><p data-i="h_s4d"></p></div><div class="mview" aria-hidden="true"></div></li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CATEGORÍAS ============ -->
-<section class="block" id="categorias">
-  <div class="wrap">
-    <span class="kicker reveal" data-i="p_kicker">Categorías</span>
-    <h2 class="big reveal" data-i="p_title">Empieza por <em>lo que te interese</em>.</h2>
-    <p class="sublead reveal" data-i="p_lead">Sin niveles ni orden obligatorio: elige una categoría y abre cualquier receta. Cada una se sostiene sola.</p>
-    <div class="cats" id="cats"></div>
-  </div>
-</section>
-
-<!-- ============ PROYECTOS COMPLETOS ============ -->
-<section class="block" id="proyectos" style="padding-top:20px">
-  <div class="wrap">
-    <span class="kicker reveal" data-i="pj_k">Proyectos completos</span>
-    <h2 class="big reveal" data-i="pj_t">Recetas que juntas <em>son un proyecto</em>.</h2>
-    <p class="sublead reveal" data-i="pj_l"></p>
-    <div class="pjs" id="pjs"></div>
-  </div>
-</section>
-
-<!-- ============ CONECTORES ============ -->
-<section class="block" id="conectores" style="background:linear-gradient(180deg,transparent,var(--bg2) 20%,var(--bg2) 80%,transparent)">
-  <div class="wrap">
-    <span class="kicker reveal" data-i="c_kicker">Conectores (MCP)</span>
-    <h2 class="big reveal" data-i="c_title">Claude ya sabe pensar.<br><em>Los conectores le dan manos.</em></h2>
-    <p class="sublead reveal" data-i="c_lead">Un conector es un puente entre Claude y otra aplicación. Con él, Claude no solo te dice cómo hacer algo: lo hace contigo, dentro de tus herramientas.</p>
-  </div>
-  <div class="marquee reveal" id="marquee"></div>
-  <div class="wrap">
-    <div class="analogy">
-      <div class="an reveal" style="--d:.0s"><div class="e">👩‍🍳</div><h4 data-i="c_a1t">Claude es el cocinero</h4><p data-i="c_a1d">Entiende lo que quieres y decide los pasos.</p></div>
-      <div class="an reveal" style="--d:.15s"><div class="e">🧑‍🍳</div><h4 data-i="c_a2t">El conector es el camarero</h4><p data-i="c_a2d">Lleva los pedidos a la app correcta y trae la respuesta.</p></div>
-      <div class="an reveal" style="--d:.3s"><div class="e">🍳</div><h4 data-i="c_a3t">Tus apps son los fogones</h4><p data-i="c_a3d">Canva, Notion, Gmail… donde de verdad se cocina.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ DESTACADA ============ -->
-<section class="block" style="padding-bottom:40px">
-  <div class="wrap">
-    <a class="featured-card reveal" href="recetas/primer-agente.html" id="featured">
-      <div class="featured-visual"><img src="img/primer-agente.svg" alt="" onerror="nextImg(this)"><div class="tools-badge" data-tools="primer-agente"></div></div>
+    <a class="featured-card reveal" href="recetas/empieza-aqui.html" id="featured">
+      <div class="featured-visual"><img src="img/empieza-aqui.svg" alt="" onerror="nextImg(this)"><div class="tools-badge" data-tools="empieza-aqui"></div></div>
       <div class="featured-content">
-        <span class="badge" data-i="f_badge">✦ Nueva receta</span>
-        <h3 data-i="f_title">Tu primer agente: Claude trabaja por ti</h3>
-        <p data-i="f_desc">Dale una tarea de varios pasos y mira cómo Claude hace un plan, lo ejecuta en tu ordenador y te pide permiso antes de lo importante. Sin saber programar.</p>
-        <div class="chips"><span data-i="f_c1">⏱ 40 min</span><span data-i="f_c2">👩‍🍳 Sin programar</span><span data-i="f_c3">🤖 Agentes</span></div>
-        <span class="more"><span data-i="f_open">Abrir receta</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <span class="badge" data-i="fp_badge">✦ Tu primer paso</span>
+        <h3 data-i="fp_title">Empieza aquí: conoce a Claude</h3>
+        <p data-i="fp_desc">En 15 minutos y gratis: creas tu cuenta, haces tu primera tarea útil con Claude y entiendes todo lo que verás después.</p>
+        <ul class="gets" data-i="fp_gets"><li>Tu cuenta de Claude lista</li><li>Una tarea real hecha con Claude</li><li>Saber qué libro abrir después</li></ul>
+        <div class="chips"><span data-i="fp_c2">💶 Gratis</span><span data-i="fp_c3">👩‍🍳 Sin saber nada</span></div>
+        <span class="more"><span data-i="fp_open">Abrir el primer libro</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </div>
     </a>
   </div>
@@ -200,9 +114,85 @@ function nextImg(el){const src=el.getAttribute("src");const base=src.replace(/(\
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         <input type="search" id="q" placeholder="Buscar receta…" data-i-ph="search_ph"></label>
     </div>
-    <p class="price-note reveal" data-i="r_price">Precio en cada tarjeta: <b>Gratis</b> · <b>Según tu plan</b> (usa funciones que dependen de tu plan de Claude) · <b>Plan de pago</b> de Claude · <b>De pago</b> (otra herramienta).</p>
     <div class="hits" id="hits" aria-live="polite"></div>
     <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- ============ CÓMO FUNCIONA (historia fija con un ejemplo real) ============ -->
+<section class="block" id="como" style="padding-top:40px">
+  <div class="wrap">
+    <span class="kicker reveal" data-i="h_kicker">Cómo funciona</span>
+    <h2 class="big reveal" data-i="h_title">Así se cocina <em>una receta</em>.</h2>
+    <p class="sublead reveal" data-i="h_lead">Te lo enseñamos con un ejemplo real: la web de una panadería, de principio a fin.</p>
+    <div class="story" style="margin-top:30px">
+      <div class="story-sticky"><div class="howv" id="howv" aria-hidden="true"></div></div>
+      <ol class="steps" id="steps">
+        <li class="stp" data-s="0"><div class="num"><span>1</span></div><div class="stx"><h3 data-i="h_s1t">Elige qué quieres hacer</h3><p data-i="h_s1d"></p></div><div class="mview" aria-hidden="true"></div></li>
+        <li class="stp" data-s="1"><div class="num"><span>2</span></div><div class="stx"><h3 data-i="h_s2t">Prepara los ingredientes</h3><p data-i="h_s2d"></p></div><div class="mview" aria-hidden="true"></div></li>
+        <li class="stp" data-s="2"><div class="num"><span>3</span></div><div class="stx"><h3 data-i="h_s3t">Copia la orden y pégala en Claude</h3><p data-i="h_s3d"></p></div><div class="mview" aria-hidden="true"></div></li>
+        <li class="stp" data-s="3"><div class="num"><span>4</span></div><div class="stx"><h3 data-i="h_s4t">Disfruta el resultado y compártelo</h3><p data-i="h_s4d"></p></div><div class="mview" aria-hidden="true"></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ¿QUÉ QUIERES CONSTRUIR? ============ -->
+<section class="block" id="construir" style="padding-top:30px">
+  <div class="wrap">
+    <div class="bld reveal">
+      <span class="kicker" data-i="b_k">Tu proyecto</span>
+      <h2 class="big" data-i="b_t">¿Qué quieres <em>construir</em>?</h2>
+      <p class="sublead" data-i="b_l"></p>
+      <form class="bld-f" id="bldForm" autocomplete="off">
+        <label class="sr" for="bldIn" data-i="b_t">¿Qué quieres construir?</label>
+        <input id="bldIn" type="text" data-i-ph="b_ph" placeholder="Ej.: una web para mi peluquería con reservas e Instagram" maxlength="200">
+        <button type="submit" class="btn btn-primary"><span data-i="b_btn">Prepárame el menú</span> <span class="arr">→</span></button>
+      </form>
+      <div class="bld-ex" id="bldEx"></div>
+      <div class="bld-res" id="bldRes" hidden>
+      <div class="bld-und" id="bldUnd" aria-live="polite"></div>
+      <details class="bld-more-box" id="bldMore"><summary data-i="b_pick">Elige o ajusta lo que necesitas</summary><div class="bld-pick" id="bldPick"></div></details>
+      <div class="bld-ctx" id="bldCtx"></div>
+      <div class="bld-out" id="bldOut" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROYECTOS COMPLETOS ============ -->
+<section class="block" id="proyectos" style="padding-top:20px">
+  <div class="wrap">
+    <span class="kicker reveal" data-i="pj_k">Proyectos completos</span>
+    <h2 class="big reveal" data-i="pj_t">Recetas que juntas <em>son un proyecto</em>.</h2>
+    <p class="sublead reveal" data-i="pj_l"></p>
+    <div class="pjs" id="pjs"></div>
+  </div>
+</section>
+
+<!-- ============ PARA IR MÁS ALLÁ ============ -->
+<section class="block" id="mas" style="padding-bottom:0">
+  <div class="wrap">
+    <span class="kicker reveal" data-i="mx_k">Para ir más allá</span>
+    <h2 class="big reveal" data-i="mx_t">Cuando ya te muevas <em>con soltura</em>.</h2>
+    <p class="sublead reveal" data-i="mx_l">Nada de esto hace falta para empezar. Son las piezas que usan los libros más avanzados: conectores para que Claude use tus apps, el plugin para Claude Code y el código de esta misma web.</p>
+  </div>
+</section>
+
+<!-- ============ CONECTORES ============ -->
+<section class="block" id="conectores" style="background:linear-gradient(180deg,transparent,var(--bg2) 20%,var(--bg2) 80%,transparent)">
+  <div class="wrap">
+    <span class="kicker reveal" data-i="c_kicker">Conectores (MCP)</span>
+    <h2 class="big reveal" data-i="c_title">Claude ya sabe pensar.<br><em>Los conectores le dan manos.</em></h2>
+    <p class="sublead reveal" data-i="c_lead">Un conector es un puente entre Claude y otra aplicación. Con él, Claude no solo te dice cómo hacer algo: lo hace contigo, dentro de tus herramientas.</p>
+  </div>
+  <div class="marquee reveal" id="marquee"></div>
+  <div class="wrap">
+    <div class="analogy">
+      <div class="an reveal" style="--d:.0s"><div class="e">👩‍🍳</div><h4 data-i="c_a1t">Claude es el cocinero</h4><p data-i="c_a1d">Entiende lo que quieres y decide los pasos.</p></div>
+      <div class="an reveal" style="--d:.15s"><div class="e">🧑‍🍳</div><h4 data-i="c_a2t">El conector es el camarero</h4><p data-i="c_a2d">Lleva los pedidos a la app correcta y trae la respuesta.</p></div>
+      <div class="an reveal" style="--d:.3s"><div class="e">🍳</div><h4 data-i="c_a3t">Tus apps son los fogones</h4><p data-i="c_a3d">Canva, Notion, Gmail… donde de verdad se cocina.</p></div>
+    </div>
   </div>
 </section>
 

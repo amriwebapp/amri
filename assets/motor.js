@@ -60,7 +60,7 @@ function render(){
   $("ing").innerHTML=P.R.ing();if(window.AMRI_LOGO)AMRI_LOGO.decorateList($("ing"));
   var card=function(t,n){var d=done.has(t.id),o=open===t.id;
     return '<section class="step'+(t.x?" x":"")+(d?" done":"")+(o?" open":"")+'" id="s'+t.id+'">'+
-    '<button class="hd" data-h="'+t.id+'" aria-expanded="'+o+'"><span class="num">'+(d?"✓":t.x?"★":n+1)+'</span><span class="tt"><strong>'+t.t+'</strong><small>'+t.s+'</small></span><span class="chev">▶</span></button>'+
+    '<button class="hd" data-h="'+t.id+'" aria-expanded="'+o+'"><span class="num">'+(d?"✓":t.x?"★":n+1)+'</span><span class="tt"><strong>'+t.t+'</strong>'+(t.s?'<small>'+t.s+'</small>':'')+'</span><span class="chev">▶</span></button>'+
     '<div class="bd">'+(o?t.b():"")+'<button class="btn" data-d="'+t.id+'">'+(d?U.undo:(t.x?U.gotit:(n<N-1?U.next:U.end)))+'</button></div></section>'};
   $("steps").innerHTML=main.map(card).join("");
   $("extras").innerHTML=v.filter(function(t){return t.x}).map(card).join("");

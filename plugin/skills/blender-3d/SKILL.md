@@ -1,15 +1,14 @@
 ---
 name: blender-3d
-description: "Receta de AMRI «Crea 3D con Claude y Blender». Sin saber modelar: un objeto, una escena, tu logo en 3D, tu producto girando o un personaje simpático. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
+description: "Receta de AMRI «Crea 3D con Claude y Blender». Sin saber modelar: un objeto, una escena, tu logo en 3D, o tu producto girando. Úsala cuando la persona quiera hacer esto o algo parecido, paso a paso y aunque no sepa programar."
 argument-hint: "[tu idea]"
 ---
 
 # Crea 3D con Claude y Blender
 
-Sin saber modelar: un objeto, una escena, tu logo en 3D, tu producto girando o un personaje simpático.
+Sin saber modelar: un objeto, una escena, tu logo en 3D, o tu producto girando.
 
-- 📕 5 recetas
-- ⏱ 25-40 min cada una
+- 📕 4 recetas
 - 💶 Gratis
 - 🍽 Resultado: imágenes y vídeos en 3D
 - Categoría: Estudio creativo
@@ -40,7 +39,7 @@ Eres el chef de AMRI y cocinas esta receta **con** la persona usuaria, que puede
 
 ## Este es un libro de recetas
 
-Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Según la idea de la persona:
+Tiene una preparación común («Antes de empezar») y 4 recetas concretas. Según la idea de la persona:
 1. Elige la receta del libro que mejor encaje (si dudas, propón dos y deja que elija).
 2. Haz «Antes de empezar» solo si todavía no está hecho (pregúntalo o compruébalo tú).
 3. Cocina esa receta. Al terminar, propón otra del libro que encaje con su idea.
@@ -48,7 +47,7 @@ Tiene una preparación común («Antes de empezar») y 5 recetas concretas. Seg�
 ## Antes de empezar
 
 ### 1. Prepara los ingredientes
-_10 min · instalar programas_
+_instalar programas_
 
 Necesitas dos programas gratuitos en el mismo ordenador.
 
@@ -65,7 +64,7 @@ Necesitas dos programas gratuitos en el mismo ordenador.
 **✅ Comprobación:** Blender se abre y ves el cubo, la luz y la cámara de la escena inicial.
 
 ### 2. Añade el conector a Claude Desktop
-_3 min · el camarero_
+_el camarero_
 
 Blender tiene un conector oficial que se añade desde el directorio de Claude.
 
@@ -80,7 +79,7 @@ Blender tiene un conector oficial que se añade desde el directorio de Claude.
 **✅ Comprobación:** el conector de Blender aparece en tu lista de conectores.
 
 ### 3. Instala el complemento en Blender
-_10 min · una sola vez_
+_una sola vez_
 
 El conector necesita un complemento dentro de Blender para poder hablar con él.
 
@@ -99,7 +98,7 @@ El conector necesita un complemento dentro de Blender para poder hablar con él.
 **✅ Comprobación:** Blender te avisa de que se ha instalado el complemento.
 
 ### 4. Enciende la conexión
-_3 min · cada vez que trabajes_
+_cada vez que trabajes_
 
 La conexión hay que encenderla desde Blender cada vez que empieces a trabajar.
 
@@ -123,493 +122,221 @@ La conexión hay que encenderla desde Blender cada vez que empieces a trabajar.
 
 ### Receta 1: Un objeto en 3D
 
-Una taza, una lámpara o lo que quieras, con su material y su luz.
+Una taza, una lámpara o lo que quieras, con su material, su luz y una imagen final.
 
-- ⏱ 25 min
 - 👩‍🍳 Fácil
 - 🧊 Objeto
-- 🍽 Resultado: una imagen 3D de tu objeto
+- 🍽 Resultado: una imagen PNG de tu objeto (1920×1080)
 - Versión web: https://amri.es/recetas/blender-3d--objeto.html
 - Ideas de ejemplo:
-  - Un objeto: una taza de cerámica azul sobre una mesa de madera, con luz cálida de mañana
+  - Taza: una taza de cerámica azul sobre una mesa de madera, con luz cálida de mañana
+  - Lámpara: una lámpara de mesa moderna encendida, sobre un escritorio de madera clara
 
-#### 1. Pídele la escena a Claude
-_10 min · la orden_
-
-Claude construye la escena escribiendo órdenes dentro de Blender. Tú verás cómo aparecen los objetos.
-
-#### Pasos
-
-- En el mismo chat de Claude, copia este mensaje y pégalo:
+#### 1. Pide el objeto
+_Claude modela_
 
 ```text
 Estás conectado a mi Blender. Quiero crear [la idea de la persona].
 
-Dime primero el plan en pasos cortos. Después constrúyelo en mi escena: borra el cubo inicial, crea los objetos con formas y proporciones creíbles, ponles materiales, coloca una luz y una cámara con un buen encuadre, y ponles nombres claros.
+Dime primero el plan en pasos cortos. Después: borra el cubo inicial, modela el objeto con proporciones reales (en centímetros), ponle un material creíble, una superficie debajo, una luz principal suave y una cámara a la altura de los ojos con el objeto centrado. Nombra cada objeto.
 ```
 
-**¿Qué significa cada parte del mensaje?**
+**✅ Comprobación:** ves el objeto en la vista 3D.
 
-- **«Quiero crear…»**: tu idea. Cámbiala por la tuya.
-- **Dime primero el plan**: así puedes corregirlo antes de que toque tu escena.
-- **Materiales**: el aspecto de cada superficie (madera, metal, cerámica…).
-- **Luz y cámara**: lo que hace que la escena se vea bien, igual que en una foto.
+#### 2. Míralo con luz de verdad
+_Rendered_
 
-> 💡 Empieza con algo simple: un objeto o una escena pequeña. Cuando funcione, añade cosas poco a poco.
-
-**✅ Comprobación:** en Blender ves aparecer los objetos y Claude te explica lo que ha hecho.
-
-#### 2. Ajusta materiales y luz
-_10 min · pulir el resultado_
-
-El primer intento casi nunca es el definitivo. Pide cambios pequeños, de uno en uno.
-
-#### Pasos
-
-- Pasa el ratón por la vista 3D y pulsa la tecla **Z**. En el menú circular elige **Rendered**: así ves la luz y los materiales de verdad.
-
-- Gira la vista arrastrando con la **rueda del ratón** pulsada.
-
-- Pídele a Claude un cambio cada vez:
+- Pasa el ratón por la vista 3D, pulsa **Z** y elige **Rendered**.
+- Pide cambios de uno en uno:
 
 ```text
-Haz que la luz sea más cálida y suave, y que el material de [objeto] parezca más [brillante / mate / rugoso]. Cambia solo eso y no toques lo demás.
+Haz que la cerámica sea más brillante y la luz más cálida. Cambia solo eso.
 ```
 
-> 💡 Si no sabes cómo describir algo, usa comparaciones: «como madera de roble», «como un metal cepillado».
+> 💡 Usa comparaciones: «como madera de roble», «como metal cepillado».
 
-**✅ Comprobación:** la vista Rendered se parece a lo que tenías en mente.
+**✅ Comprobación:** el objeto se ve como lo imaginabas.
 
-#### 3. Ponle movimiento
-_10 min · la animación_
-
-Una animación son muchos dibujos seguidos. Claude coloca los puntos clave del movimiento y Blender rellena el resto.
-
-#### Pasos
-
-- Pídele a Claude:
+#### 3. Saca la imagen
+_render_
 
 ```text
-Anímalo durante 5 segundos a 24 fotogramas por segundo, es decir, 120 fotogramas. Que [la cámara gire alrededor del objeto / el objeto gire sobre sí mismo] con un movimiento suave que se pueda repetir en bucle. Ajusta la línea de tiempo.
+Configura el render a 1920×1080 con el motor EEVEE, que es rápido.
 ```
 
-- Pulsa la **barra espaciadora** en Blender para reproducirla.
+- Pulsa **F12**.
+- En la ventana de la imagen: **Image → Save As** y guárdala como PNG.
+- Guarda también el proyecto: **File → Save**.
 
-**✅ Comprobación:** al reproducir, el movimiento es suave y termina donde empieza.
+**✅ Comprobación:** tienes la imagen PNG y el archivo .blend guardados.
 
-#### 4. Renderiza y guarda
-_5-20 min · el emplatado_
-
-Renderizar es que Blender calcule cada imagen final. Le pedimos a Claude que lo deje configurado para sacar un vídeo.
-
-#### Pasos
-
-- Pídele a Claude:
-
-```text
-Configura el render para exportar un vídeo MP4 en 1080p con el motor EEVEE, que es más rápido, y dime dónde se guardará.
-```
-
-- En Blender: **Render → Render Animation** (o **Ctrl+F12**).
-- Espera a que termine: verás cada fotograma calculándose.
-
-> 💡 Si tarda demasiado, pídele a Claude «baja la calidad a 720p para probar». Cuando te guste, vuelve a 1080p.
-
-**✅ Comprobación:** tienes un archivo .mp4 que se ve como tu animación.
-
-**Al terminar:** Ya tienes tu resultado en 3D. Guarda el proyecto y la orden que le diste a Claude: son tu receta para repetirlo con otras ideas.
+**Al terminar:** Tienes tu primer objeto en 3D. Guarda el archivo .blend: podrás cambiarlo cuando quieras.
 
 ### Receta 2: Una escena completa
 
-Una habitación, un rincón o un paisaje, con varios objetos y luz de atardecer.
+Una habitación o un rincón con varios objetos y luz de atardecer.
 
-- ⏱ 35 min
 - 👩‍🍳 Media
 - 🏠 Escena
 - 🍽 Resultado: una imagen de tu escena
 - Versión web: https://amri.es/recetas/blender-3d--escena.html
 - Ideas de ejemplo:
-  - Una escena: una habitación pequeña y acogedora con un escritorio, una lámpara encendida y una planta, con luz de atardecer
+  - Habitación acogedora: una habitación pequeña y acogedora con un escritorio, una lámpara encendida y una planta, con luz de atardecer
+  - Mi tienda o local: el mostrador de una pequeña tienda con estanterías, productos y luz natural
 
-#### 1. Pídele la escena a Claude
-_10 min · la orden_
-
-Claude construye la escena escribiendo órdenes dentro de Blender. Tú verás cómo aparecen los objetos.
-
-#### Pasos
-
-- En el mismo chat de Claude, copia este mensaje y pégalo:
+#### 1. Primero, el plano
+_organizar_
 
 ```text
-Estás conectado a mi Blender. Quiero crear [la idea de la persona].
-
-Dime primero el plan en pasos cortos. Después constrúyelo en mi escena: borra el cubo inicial, crea los objetos con formas y proporciones creíbles, ponles materiales, coloca una luz y una cámara con un buen encuadre, y ponles nombres claros.
+Quiero crear [la idea de la persona]. Antes de construir nada, dame una lista de los objetos, dónde va cada uno y desde dónde mira la cámara. Espera mi OK.
 ```
 
-**¿Qué significa cada parte del mensaje?**
+**✅ Comprobación:** has aprobado la lista de objetos.
 
-- **«Quiero crear…»**: tu idea. Cámbiala por la tuya.
-- **Dime primero el plan**: así puedes corregirlo antes de que toque tu escena.
-- **Materiales**: el aspecto de cada superficie (madera, metal, cerámica…).
-- **Luz y cámara**: lo que hace que la escena se vea bien, igual que en una foto.
-
-> 💡 Empieza con algo simple: un objeto o una escena pequeña. Cuando funcione, añade cosas poco a poco.
-
-**✅ Comprobación:** en Blender ves aparecer los objetos y Claude te explica lo que ha hecho.
-
-#### 2. Ajusta materiales y luz
-_10 min · pulir el resultado_
-
-El primer intento casi nunca es el definitivo. Pide cambios pequeños, de uno en uno.
-
-#### Pasos
-
-- Pasa el ratón por la vista 3D y pulsa la tecla **Z**. En el menú circular elige **Rendered**: así ves la luz y los materiales de verdad.
-
-- Gira la vista arrastrando con la **rueda del ratón** pulsada.
-
-- Pídele a Claude un cambio cada vez:
+#### 2. Construye por partes
+_Claude modela_
 
 ```text
-Haz que la luz sea más cálida y suave, y que el material de [objeto] parezca más [brillante / mate / rugoso]. Cambia solo eso y no toques lo demás.
+OK. Construye primero la habitación (suelo y paredes), después los muebles grandes y al final los detalles. Enséñamelo después de cada parte. Pon nombres claros y agrupa los objetos en colecciones.
 ```
 
-> 💡 Si no sabes cómo describir algo, usa comparaciones: «como madera de roble», «como un metal cepillado».
+> 💡 Por partes es más fácil corregir: si algo no te gusta, lo dices antes de seguir.
 
-**✅ Comprobación:** la vista Rendered se parece a lo que tenías en mente.
+**✅ Comprobación:** la escena tiene todos sus objetos.
 
-#### 3. Ponle movimiento
-_10 min · la animación_
-
-Una animación son muchos dibujos seguidos. Claude coloca los puntos clave del movimiento y Blender rellena el resto.
-
-#### Pasos
-
-- Pídele a Claude:
+#### 3. La luz de atardecer
+_ambiente_
 
 ```text
-Anímalo durante 5 segundos a 24 fotogramas por segundo, es decir, 120 fotogramas. Que [la cámara gire alrededor del objeto / el objeto gire sobre sí mismo] con un movimiento suave que se pueda repetir en bucle. Ajusta la línea de tiempo.
+Pon luz de atardecer entrando por una ventana, cálida y con sombras largas, y una luz de relleno suave para que no quede muy oscuro.
 ```
 
-- Pulsa la **barra espaciadora** en Blender para reproducirla.
+Mírala en modo **Rendered** (tecla Z).
 
-**✅ Comprobación:** al reproducir, el movimiento es suave y termina donde empieza.
+**✅ Comprobación:** la escena tiene ambiente.
 
-#### 4. Renderiza y guarda
-_5-20 min · el emplatado_
-
-Renderizar es que Blender calcule cada imagen final. Le pedimos a Claude que lo deje configurado para sacar un vídeo.
-
-#### Pasos
-
-- Pídele a Claude:
+#### 4. Saca la imagen
+_render_
 
 ```text
-Configura el render para exportar un vídeo MP4 en 1080p con el motor EEVEE, que es más rápido, y dime dónde se guardará.
+Configura el render a 1920×1080 con EEVEE y encuadra la cámara para que se vea toda la escena.
 ```
 
-- En Blender: **Render → Render Animation** (o **Ctrl+F12**).
-- Espera a que termine: verás cada fotograma calculándose.
+- Pulsa **F12** y guárdala con **Image → Save As**.
 
-> 💡 Si tarda demasiado, pídele a Claude «baja la calidad a 720p para probar». Cuando te guste, vuelve a 1080p.
+**✅ Comprobación:** tienes la imagen de tu escena.
 
-**✅ Comprobación:** tienes un archivo .mp4 que se ve como tu animación.
-
-**Al terminar:** Ya tienes tu resultado en 3D. Guarda el proyecto y la orden que le diste a Claude: son tu receta para repetirlo con otras ideas.
+**Al terminar:** Tienes tu escena. Prueba a cambiar la hora del día pidiendo otra luz.
 
 ### Receta 3: Tu logo en 3D
 
-Tu logo en relieve, con un material dorado, girando despacio.
+Tu logo en relieve, con material dorado, girando despacio.
 
-- ⏱ 35 min
 - 👩‍🍳 Media
 - ✨ Logo
-- 🍽 Resultado: tu logo 3D en imagen y vídeo
+- 🍽 Resultado: tu logo 3D en imagen y en vídeo
 - Versión web: https://amri.es/recetas/blender-3d--logo-3d.html
 - Ideas de ejemplo:
-  - Mi logo en 3D: un logo sencillo en 3D, con forma de letra A en relieve y material dorado, girando despacio sobre un fondo liso
+  - Dorado girando: mi logo en 3D, en relieve y material dorado, girando despacio sobre un fondo liso
+  - Cristal: mi logo en 3D de cristal, con reflejos, sobre un fondo de degradado
 
-#### 1. Pídele la escena a Claude
-_10 min · la orden_
+#### 1. Importa tu logo en SVG
+_el material_
 
-Claude construye la escena escribiendo órdenes dentro de Blender. Tú verás cómo aparecen los objetos.
+- Necesitas tu logo en **SVG** (formato vectorial).
+- En Blender: **File → Import → Scalable Vector Graphics (.svg)**.
 
-#### Pasos
+> 💡 ¿Solo tienes PNG? Mira «Tu logo en todos los formatos» en el libro [del logo](logo-ia--formatos.html).
 
-- En el mismo chat de Claude, copia este mensaje y pégalo:
+**✅ Comprobación:** ves las curvas de tu logo en la escena (muy pequeñas: es normal).
 
-```text
-Estás conectado a mi Blender. Quiero crear [la idea de la persona].
-
-Dime primero el plan en pasos cortos. Después constrúyelo en mi escena: borra el cubo inicial, crea los objetos con formas y proporciones creíbles, ponles materiales, coloca una luz y una cámara con un buen encuadre, y ponles nombres claros.
-```
-
-**¿Qué significa cada parte del mensaje?**
-
-- **«Quiero crear…»**: tu idea. Cámbiala por la tuya.
-- **Dime primero el plan**: así puedes corregirlo antes de que toque tu escena.
-- **Materiales**: el aspecto de cada superficie (madera, metal, cerámica…).
-- **Luz y cámara**: lo que hace que la escena se vea bien, igual que en una foto.
-
-> 💡 Empieza con algo simple: un objeto o una escena pequeña. Cuando funcione, añade cosas poco a poco.
-
-**✅ Comprobación:** en Blender ves aparecer los objetos y Claude te explica lo que ha hecho.
-
-#### 2. Ajusta materiales y luz
-_10 min · pulir el resultado_
-
-El primer intento casi nunca es el definitivo. Pide cambios pequeños, de uno en uno.
-
-#### Pasos
-
-- Pasa el ratón por la vista 3D y pulsa la tecla **Z**. En el menú circular elige **Rendered**: así ves la luz y los materiales de verdad.
-
-- Gira la vista arrastrando con la **rueda del ratón** pulsada.
-
-- Pídele a Claude un cambio cada vez:
+#### 2. Dale volumen
+_Claude modela_
 
 ```text
-Haz que la luz sea más cálida y suave, y que el material de [objeto] parezca más [brillante / mate / rugoso]. Cambia solo eso y no toques lo demás.
+Estás conectado a mi Blender. He importado mi logo en SVG. Quiero [la idea de la persona].
+
+Une las curvas, escálalo a un tamaño cómodo, dale grosor (extrusión) y bisel suave en los bordes, y colócalo de pie en el centro. Pon el material, una luz de estudio y una cámara de frente. Dime el plan antes.
 ```
 
-> 💡 Si no sabes cómo describir algo, usa comparaciones: «como madera de roble», «como un metal cepillado».
+**✅ Comprobación:** tu logo tiene volumen y se reconoce.
 
-**✅ Comprobación:** la vista Rendered se parece a lo que tenías en mente.
-
-#### 3. Ponle movimiento
-_10 min · la animación_
-
-Una animación son muchos dibujos seguidos. Claude coloca los puntos clave del movimiento y Blender rellena el resto.
-
-#### Pasos
-
-- Pídele a Claude:
+#### 3. Que gire en bucle
+_animación_
 
 ```text
-Anímalo durante 5 segundos a 24 fotogramas por segundo, es decir, 120 fotogramas. Que [la cámara gire alrededor del objeto / el objeto gire sobre sí mismo] con un movimiento suave que se pueda repetir en bucle. Ajusta la línea de tiempo.
+Anímalo: que gire una vuelta completa sobre sí mismo en 5 segundos (120 fotogramas a 24 fps), con un movimiento constante para que el bucle no se note.
 ```
 
-- Pulsa la **barra espaciadora** en Blender para reproducirla.
+Pulsa la barra espaciadora para verlo.
 
-**✅ Comprobación:** al reproducir, el movimiento es suave y termina donde empieza.
+**✅ Comprobación:** gira suave y el final enlaza con el principio.
 
-#### 4. Renderiza y guarda
-_5-20 min · el emplatado_
-
-Renderizar es que Blender calcule cada imagen final. Le pedimos a Claude que lo deje configurado para sacar un vídeo.
-
-#### Pasos
-
-- Pídele a Claude:
+#### 4. Renderiza imagen y vídeo
+_render_
 
 ```text
-Configura el render para exportar un vídeo MP4 en 1080p con el motor EEVEE, que es más rápido, y dime dónde se guardará.
+Configura el render para exportar un vídeo MP4 en 1080p con EEVEE y dime dónde se guardará.
 ```
 
-- En Blender: **Render → Render Animation** (o **Ctrl+F12**).
-- Espera a que termine: verás cada fotograma calculándose.
+- **Render → Render Animation** (Ctrl+F12).
+- Para una imagen fija, ve a un fotograma bonito y pulsa **F12**.
 
-> 💡 Si tarda demasiado, pídele a Claude «baja la calidad a 720p para probar». Cuando te guste, vuelve a 1080p.
+**✅ Comprobación:** tienes el vídeo y una imagen de tu logo.
 
-**✅ Comprobación:** tienes un archivo .mp4 que se ve como tu animación.
-
-**Al terminar:** Ya tienes tu resultado en 3D. Guarda el proyecto y la orden que le diste a Claude: son tu receta para repetirlo con otras ideas.
+**Al terminar:** Tu logo en 3D está listo. Úsalo como intro de tus vídeos o en tu web.
 
 ### Receta 4: Tu producto girando
 
-Tu producto sobre un pedestal, con la cámara girando alrededor en bucle.
+Tu producto sobre un pedestal, con la cámara girando alrededor en bucle, como en una tienda online.
 
-- ⏱ 40 min
 - 👩‍🍳 Media
 - 🔄 Producto
 - 🍽 Resultado: un vídeo en bucle de tu producto
 - Versión web: https://amri.es/recetas/blender-3d--producto.html
 - Ideas de ejemplo:
-  - Producto girando: una botella de perfume sobre un pedestal blanco, con la cámara girando alrededor en un bucle suave
+  - Botella o frasco: una botella de perfume sobre un pedestal blanco, con la cámara girando alrededor en un bucle suave
+  - Caja o paquete: la caja de mi producto sobre un pedestal, con la cámara girando alrededor en un bucle suave
 
-#### 1. Pídele la escena a Claude
-_10 min · la orden_
+#### 1. Describe tu producto con medidas
+_precisión_
 
-Claude construye la escena escribiendo órdenes dentro de Blender. Tú verás cómo aparecen los objetos.
+Cuanto más precisa la descripción (medidas, materiales, colores), más se parecerá. Si tienes fotos, súbelas al chat como referencia.
 
-#### Pasos
+**✅ Comprobación:** tienes la descripción y alguna foto.
 
-- En el mismo chat de Claude, copia este mensaje y pégalo:
-
-```text
-Estás conectado a mi Blender. Quiero crear [la idea de la persona].
-
-Dime primero el plan en pasos cortos. Después constrúyelo en mi escena: borra el cubo inicial, crea los objetos con formas y proporciones creíbles, ponles materiales, coloca una luz y una cámara con un buen encuadre, y ponles nombres claros.
-```
-
-**¿Qué significa cada parte del mensaje?**
-
-- **«Quiero crear…»**: tu idea. Cámbiala por la tuya.
-- **Dime primero el plan**: así puedes corregirlo antes de que toque tu escena.
-- **Materiales**: el aspecto de cada superficie (madera, metal, cerámica…).
-- **Luz y cámara**: lo que hace que la escena se vea bien, igual que en una foto.
-
-> 💡 Empieza con algo simple: un objeto o una escena pequeña. Cuando funcione, añade cosas poco a poco.
-
-**✅ Comprobación:** en Blender ves aparecer los objetos y Claude te explica lo que ha hecho.
-
-#### 2. Ajusta materiales y luz
-_10 min · pulir el resultado_
-
-El primer intento casi nunca es el definitivo. Pide cambios pequeños, de uno en uno.
-
-#### Pasos
-
-- Pasa el ratón por la vista 3D y pulsa la tecla **Z**. En el menú circular elige **Rendered**: así ves la luz y los materiales de verdad.
-
-- Gira la vista arrastrando con la **rueda del ratón** pulsada.
-
-- Pídele a Claude un cambio cada vez:
+#### 2. Modela el producto y el pedestal
+_Claude modela_
 
 ```text
-Haz que la luz sea más cálida y suave, y que el material de [objeto] parezca más [brillante / mate / rugoso]. Cambia solo eso y no toques lo demás.
+Estás conectado a mi Blender. Quiero [la idea de la persona]. Mi producto: [descripción con medidas]. Te adjunto fotos de referencia.
+
+Modélalo con proporciones reales, ponle materiales creíbles, colócalo sobre un pedestal cilíndrico blanco y usa una luz de estudio suave con fondo liso. Dime el plan antes.
 ```
 
-> 💡 Si no sabes cómo describir algo, usa comparaciones: «como madera de roble», «como un metal cepillado».
+**✅ Comprobación:** tu producto se reconoce en la escena.
 
-**✅ Comprobación:** la vista Rendered se parece a lo que tenías en mente.
-
-#### 3. Ponle movimiento
-_10 min · la animación_
-
-Una animación son muchos dibujos seguidos. Claude coloca los puntos clave del movimiento y Blender rellena el resto.
-
-#### Pasos
-
-- Pídele a Claude:
+#### 3. Cámara que gira en bucle
+_animación_
 
 ```text
-Anímalo durante 5 segundos a 24 fotogramas por segundo, es decir, 120 fotogramas. Que [la cámara gire alrededor del objeto / el objeto gire sobre sí mismo] con un movimiento suave que se pueda repetir en bucle. Ajusta la línea de tiempo.
+Haz que la cámara gire alrededor del producto una vuelta completa en 6 segundos (144 fotogramas a 24 fps), siempre mirando al producto, a velocidad constante para que el bucle sea perfecto.
 ```
 
-- Pulsa la **barra espaciadora** en Blender para reproducirla.
+**✅ Comprobación:** el giro es suave y el bucle no se nota.
 
-**✅ Comprobación:** al reproducir, el movimiento es suave y termina donde empieza.
-
-#### 4. Renderiza y guarda
-_5-20 min · el emplatado_
-
-Renderizar es que Blender calcule cada imagen final. Le pedimos a Claude que lo deje configurado para sacar un vídeo.
-
-#### Pasos
-
-- Pídele a Claude:
+#### 4. Renderiza en cuadrado y vertical
+_render_
 
 ```text
-Configura el render para exportar un vídeo MP4 en 1080p con el motor EEVEE, que es más rápido, y dime dónde se guardará.
+Exporta el vídeo en MP4 con EEVEE, primero en 1080×1080 y después en 1080×1920, sin cambiar la animación.
 ```
 
-- En Blender: **Render → Render Animation** (o **Ctrl+F12**).
-- Espera a que termine: verás cada fotograma calculándose.
+- **Render → Render Animation** para cada formato.
 
-> 💡 Si tarda demasiado, pídele a Claude «baja la calidad a 720p para probar». Cuando te guste, vuelve a 1080p.
+**✅ Comprobación:** tienes los dos vídeos.
 
-**✅ Comprobación:** tienes un archivo .mp4 que se ve como tu animación.
-
-**Al terminar:** Ya tienes tu resultado en 3D. Guarda el proyecto y la orden que le diste a Claude: son tu receta para repetirlo con otras ideas.
-
-### Receta 5: Un personaje simpático
-
-Un personaje hecho con formas simples que saluda.
-
-- ⏱ 40 min
-- 👩‍🍳 Media
-- 🙂 Personaje
-- 🍽 Resultado: tu personaje animado
-- Versión web: https://amri.es/recetas/blender-3d--personaje.html
-- Ideas de ejemplo:
-  - Personaje simpático: un personaje simpático hecho con formas simples (una esfera con ojos y brazos) que saluda
-
-#### 1. Pídele la escena a Claude
-_10 min · la orden_
-
-Claude construye la escena escribiendo órdenes dentro de Blender. Tú verás cómo aparecen los objetos.
-
-#### Pasos
-
-- En el mismo chat de Claude, copia este mensaje y pégalo:
-
-```text
-Estás conectado a mi Blender. Quiero crear [la idea de la persona].
-
-Dime primero el plan en pasos cortos. Después constrúyelo en mi escena: borra el cubo inicial, crea los objetos con formas y proporciones creíbles, ponles materiales, coloca una luz y una cámara con un buen encuadre, y ponles nombres claros.
-```
-
-**¿Qué significa cada parte del mensaje?**
-
-- **«Quiero crear…»**: tu idea. Cámbiala por la tuya.
-- **Dime primero el plan**: así puedes corregirlo antes de que toque tu escena.
-- **Materiales**: el aspecto de cada superficie (madera, metal, cerámica…).
-- **Luz y cámara**: lo que hace que la escena se vea bien, igual que en una foto.
-
-> 💡 Empieza con algo simple: un objeto o una escena pequeña. Cuando funcione, añade cosas poco a poco.
-
-**✅ Comprobación:** en Blender ves aparecer los objetos y Claude te explica lo que ha hecho.
-
-#### 2. Ajusta materiales y luz
-_10 min · pulir el resultado_
-
-El primer intento casi nunca es el definitivo. Pide cambios pequeños, de uno en uno.
-
-#### Pasos
-
-- Pasa el ratón por la vista 3D y pulsa la tecla **Z**. En el menú circular elige **Rendered**: así ves la luz y los materiales de verdad.
-
-- Gira la vista arrastrando con la **rueda del ratón** pulsada.
-
-- Pídele a Claude un cambio cada vez:
-
-```text
-Haz que la luz sea más cálida y suave, y que el material de [objeto] parezca más [brillante / mate / rugoso]. Cambia solo eso y no toques lo demás.
-```
-
-> 💡 Si no sabes cómo describir algo, usa comparaciones: «como madera de roble», «como un metal cepillado».
-
-**✅ Comprobación:** la vista Rendered se parece a lo que tenías en mente.
-
-#### 3. Ponle movimiento
-_10 min · la animación_
-
-Una animación son muchos dibujos seguidos. Claude coloca los puntos clave del movimiento y Blender rellena el resto.
-
-#### Pasos
-
-- Pídele a Claude:
-
-```text
-Anímalo durante 5 segundos a 24 fotogramas por segundo, es decir, 120 fotogramas. Que [la cámara gire alrededor del objeto / el objeto gire sobre sí mismo] con un movimiento suave que se pueda repetir en bucle. Ajusta la línea de tiempo.
-```
-
-- Pulsa la **barra espaciadora** en Blender para reproducirla.
-
-**✅ Comprobación:** al reproducir, el movimiento es suave y termina donde empieza.
-
-#### 4. Renderiza y guarda
-_5-20 min · el emplatado_
-
-Renderizar es que Blender calcule cada imagen final. Le pedimos a Claude que lo deje configurado para sacar un vídeo.
-
-#### Pasos
-
-- Pídele a Claude:
-
-```text
-Configura el render para exportar un vídeo MP4 en 1080p con el motor EEVEE, que es más rápido, y dime dónde se guardará.
-```
-
-- En Blender: **Render → Render Animation** (o **Ctrl+F12**).
-- Espera a que termine: verás cada fotograma calculándose.
-
-> 💡 Si tarda demasiado, pídele a Claude «baja la calidad a 720p para probar». Cuando te guste, vuelve a 1080p.
-
-**✅ Comprobación:** tienes un archivo .mp4 que se ve como tu animación.
-
-**Al terminar:** Ya tienes tu resultado en 3D. Guarda el proyecto y la orden que le diste a Claude: son tu receta para repetirlo con otras ideas.
+**Al terminar:** Tu producto gira como en un anuncio. Úsalo en tu tienda o en redes.
 
 ## Al terminar
 
@@ -631,7 +358,7 @@ Claude ejecuta órdenes dentro de Blender, y algunos cambios grandes no se desha
 - Pídele cosas concretas: cuanto más claro, menos riesgo de sorpresas.
 
 ### Extra 2. Llévalo a tu web
-_10 min · opcional_
+_opcional_
 
 Puedes mostrar tu objeto 3D en una página web para que lo giren tus visitantes.
 

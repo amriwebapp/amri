@@ -169,7 +169,7 @@ function decorate(){
   var ing=document.getElementById("ing"),f=ing&&ing.firstElementChild;if(f&&!f.dataset.gl){f.dataset.gl="1";gloss(ing);}
 }
 
-function all(){RX=null;revised();map();decorate();}
+function all(){RX=null;revised();decorate();}
 var mo=new MutationObserver(function(){decorate()});
 ["steps","extras","ing"].forEach(function(id){var el=document.getElementById(id);if(el)mo.observe(el,{childList:true})});
 all();
