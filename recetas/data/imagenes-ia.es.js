@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: imágenes con IA, gratis",
 intro:"Ilustraciones, fotos de producto, carteles con texto, ediciones e iconos con herramientas gratuitas. Claude escribe la descripción perfecta (el «prompt») y el generador hace la imagen. Prepara las herramientas una vez y elige la receta.",
+kid:"Hay herramientas gratis que hacen imágenes a partir de una frase. Claude escribe la frase perfecta y tú la pegas allí.",
 meta:["📕 7 recetas", "💶 Gratis", "🍽 Resultado: imágenes listas para usar"],
 ing:"Ingredientes (todos gratuitos)",
 fin:"Tu cocina está lista. Elige la imagen que quieres hacer.",
@@ -22,6 +23,7 @@ ${tip("Describe lo que SÍ quieres. La IA entiende mal los «no»: en vez de «s
 ]},
 recetas:[
 {s:"ilustracion",t:"Una ilustración con tu estilo",d:"Para una camiseta, un cuento, tu web o una tarjeta.",
+kid:"Claude escribe cómo es el dibujo que quieres y una herramienta gratis lo dibuja.",ej:"un gato astronauta en acuarela para la portada de un cuento",min:20,
 meta:["👩‍🍳 Fácil", "🎨 Ilustración", "🍽 Resultado: una ilustración que te gusta"],
 q:"¿Qué ilustración?",ph:"Descríbela. Ejemplo: mi perro como astronauta para una camiseta",
 fin:"Tienes tu ilustración. Guarda el prompt ganador para repetir el estilo.",
@@ -38,6 +40,7 @@ steps:[
 {t:"Ajusta",s:"un cambio cada vez",b:()=>`${cb("Me ha salido esto con el prompt [pégalo]. Me gusta [qué], pero quiero cambiar [qué]. Reescribe el prompt cambiando solo eso.")}${ok("tienes la ilustración como querías.")}`}
 ]},
 {s:"producto",t:"Foto de producto realista",d:"Tu producto en una escena bonita, como de catálogo.",
+kid:"Haces que tu producto salga en un sitio bonito, como en un catálogo.",ej:"tu vela aromática en una mesa con flores secas y luz suave",min:20,
 meta:["👩‍🍳 Fácil", "📸 Producto", "🍽 Resultado: una foto de producto para tu tienda o redes"],
 q:"¿Qué producto?",ph:"Descríbelo. Ejemplo: una taza de cerámica artesanal azul",
 fin:"Tienes tu foto. Si necesitas que sea tu producto exacto, mira el libro de Higgsfield: trabaja con tu foto de referencia.",
@@ -54,6 +57,7 @@ steps:[
 {t:"Ajusta el tamaño en Canva",s:"emplatar",b:()=>`<ol><li>En Canva, crea un diseño del tamaño que necesites y sube la imagen.</li><li>Descarga: <b>JPG</b> para fotos.</li></ol>${ok("tienes la foto en el tamaño justo.")}`}
 ]},
 {s:"con-texto",t:"Una imagen con texto: cartel o portada",d:"Carteles, portadas y anuncios con letras que se leen bien.",
+kid:"Haces un cartel con letras que se leen bien, algo que a las IA les cuesta.",ej:"un cartel que dice «MERCADILLO SOLIDARIO · SÁBADO 10:00»",min:20,
 meta:["👩‍🍳 Fácil", "🔤 Texto", "🍽 Resultado: un cartel o una portada sin faltas"],
 q:"¿Qué quieres hacer?",ph:"Di qué y con qué texto. Ejemplo: un cartel para un concierto con «Jazz en la terraza · 12 de julio»",
 fin:"Tu imagen con texto está lista y se lee perfecta.",
@@ -100,6 +104,7 @@ steps:[
 {t:"Las demás escenas",s:"coherencia",b:()=>`<ol><li>En las siguientes, pega la ficha completa sin cambiar ni una palabra.</li><li>Si tu herramienta deja subir una imagen de referencia, sube la buena.</li></ol>${tip("Para un personaje que salga siempre idéntico en vídeo, mira la receta «Un personaje que siempre sale igual» del libro de Higgsfield.")}${ok("se reconoce al mismo personaje en las 3 escenas.")}`}
 ]},
 {s:"editar",t:"Edita una foto que ya tienes",d:"Quita el fondo, borra un objeto o amplía el encuadre de una foto tuya.",
+kid:"Arreglas una foto tuya: quitas el fondo, borras algo que sobra o la haces más grande.",ej:"quitar a la persona que pasaba por detrás en tu foto de vacaciones",min:15,
 meta:["👩‍🍳 Fácil", "✂️ Edición", "🍽 Resultado: tu foto editada"],
 q:"¿Qué quieres cambiar?",ph:"Di qué. Ejemplo: quitar a la gente del fondo de mi foto de la playa",
 fin:"Tu foto está editada. Guarda siempre la original aparte.",
@@ -116,6 +121,7 @@ steps:[
 ${tip("Edita solo fotos tuyas o con permiso. Nunca cambies la cara de una persona real ni hagas que parezca que dijo o hizo algo que no ocurrió.")}${ok("tienes la versión editada y la original guardadas por separado.")}`}
 ]},
 {s:"iconos",t:"Iconos y gráficos dibujados por Claude",d:"Claude dibuja con código (SVG): iconos y gráficos nítidos a cualquier tamaño.",
+kid:"Claude dibuja iconos con código, que se ven perfectos aunque los hagas enormes.",ej:"6 iconos a juego para los servicios de tu web: corte, tinte, peinado…",min:15,
 meta:["👩‍🍳 Fácil", "🔷 SVG", "🍽 Resultado: un set de iconos coherentes"],
 q:"¿Qué iconos?",ph:"Di para qué. Ejemplo: 6 iconos para los servicios de mi peluquería",
 fin:"Tus iconos se ven nítidos a cualquier tamaño y puedes cambiarles el color cuando quieras.",

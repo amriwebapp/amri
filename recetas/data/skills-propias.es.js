@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: enséñale tu método con Skills",
 intro:"Una Skill es una ficha con tu forma de hacer algo: Claude la saca sola cuando la tarea encaja. Activa las Skills una vez y después crea la que necesites: informes, correos, fichas de producto o material de clase.",
+kid:"Una Skill es una ficha con tu forma de hacer algo. La guardas una vez y Claude la usa sola cuando hace falta.",
 meta:["📕 4 recetas","💶 Gratis si tu plan de Claude incluye Skills","🍽 Resultado: Skills que Claude usa solo"],
 ing:"Ingredientes",
 fin:"Las Skills están activadas. Elige qué método quieres enseñarle.",
@@ -14,6 +15,7 @@ steps:[
 ]},
 recetas:[
 {s:"informes",t:"Informes siempre con tu formato",d:"Tu estructura, tu tono y tus gráficos, en cada informe, sin repetir instrucciones.",
+kid:"Le enseñas a Claude cómo te gustan los informes y desde entonces los hace siempre así.",ej:"el informe mensual de ventas siempre con resumen, tabla, gráfico y próximos pasos",min:35,
 meta:["👩‍🍳 Media","📊 Informes","🍽 Resultado: una Skill de informes instalada"],
 q:"¿Qué informes haces?",ph:"Di cuáles. Ejemplo: el informe mensual de ventas para la dirección",
 fin:"Claude ya hace tus informes a tu manera. Pídele uno sin nombrar la Skill y verás.",
@@ -27,6 +29,7 @@ steps:[
 {t:"Instálala y pruébala sin nombrarla",s:"el examen",b:()=>`<ol><li>En la sección de Skills de los ajustes, pulsa <b>Subir Skill</b> y elige el .zip.</li><li>En un chat nuevo, pide:</li></ol>${cb("Prepárame el informe de este mes con estos datos: [pega tus datos].")}${tip("Si no usa tu formato, mejora la descripción con las palabras exactas que usas al pedirlo.")}${ok("el informe sale con tu estructura sin que se lo recuerdes.")}`}
 ]},
 {s:"correos",t:"Correos con tu estilo",d:"Tu tono, tu firma y tus respuestas habituales, en cada correo a clientes.",
+kid:"Le enseñas a Claude cómo escribes tus correos y los escribe siempre con tu estilo.",ej:"tus correos a clientes siempre con tu saludo, frases cortas y tu firma",min:30,
 meta:["👩‍🍳 Media","✉️ Correos","🍽 Resultado: una Skill de correos instalada"],
 q:"¿Qué correos escribes?",ph:"Di cuáles. Ejemplo: respuestas a clientes que piden presupuesto",
 fin:"Tus correos ya suenan a ti sin explicárselo cada vez.",
@@ -40,6 +43,7 @@ steps:[
 {t:"Instálala y pruébala",s:"el examen",b:()=>`<ol><li>Súbela en <b>Subir Skill</b>.</li><li>En un chat nuevo, pega un correo real de un cliente (sin datos personales) y pide: «Respóndele».</li></ol>${ok("la respuesta suena a ti y lleva tu firma.")}`}
 ]},
 {s:"fichas",t:"Fichas de producto",d:"Título, descripción, ventajas y medidas, siempre igual de completas.",
+kid:"Le enseñas a Claude cómo son tus fichas de producto y las hace siempre completas.",ej:"cada ficha con título, 3 ventajas, medidas, materiales y cuidados",min:30,
 meta:["👩‍🍳 Media","🏷 Tienda","🍽 Resultado: una Skill de fichas de producto instalada"],
 q:"¿Qué vendes?",ph:"Di qué. Ejemplo: cerámica hecha a mano",
 fin:"Cada producto nuevo tendrá su ficha completa en un minuto.",
@@ -53,6 +57,7 @@ steps:[
 {t:"Instálala y pruébala",s:"el examen",b:()=>`<ol><li>Súbela en <b>Subir Skill</b>.</li><li>Pide: «Ficha para este producto: [datos y una foto]».</li></ol>${ok("la ficha sale completa, con tu formato y sin datos inventados.")}`}
 ]},
 {s:"clases",t:"Material de clase",d:"Fichas de ejercicios con nivel, objetivos y soluciones, siempre con tu estructura.",
+kid:"Le enseñas a Claude cómo preparas tus ejercicios y los hace siempre con tu estructura.",ej:"una ficha de fracciones para 4º con objetivo, 10 ejercicios y soluciones",min:30,
 meta:["👩‍🍳 Media","🎓 Clases","🍽 Resultado: una Skill de material de clase instalada"],
 q:"¿Qué enseñas?",ph:"Di qué y a quién. Ejemplo: matemáticas a 2.º de la ESO",
 fin:"Ya tienes un ayudante que prepara material a tu manera.",

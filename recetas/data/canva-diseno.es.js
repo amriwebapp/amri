@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: diseña en Canva hablando con Claude",
 intro:"Con el conector de Canva, Claude crea diseños directamente en tu cuenta: posts, presentaciones, carteles y currículums, con tu marca. Conecta Canva una vez y elige qué diseñar.",
+kid:"Canva es una app para diseñar. Claude entra en tu Canva y te hace los diseños mientras se lo cuentas.",
 meta:["📕 6 recetas", "💶 Gratis si tu plan de Claude incluye conectores", "🍽 Resultado: diseños editables en tu Canva"],
 ing:"Ingredientes",
 fin:"Canva está conectado y Claude conoce tu marca. Elige qué quieres diseñar.",
@@ -16,7 +17,8 @@ ${tip("¿No tienes logo ni colores? Mira el libro <a href=\"logo-ia.html\">Dise�
 {x:1,t:"Si algo no funciona",s:"Siempre · revisa esto",b:()=>`<ol><li><b>Claude dibuja en vez de usar Canva</b>: empieza el mensaje con «Usa el conector de Canva».</li><li><b>No encuentra tu logo</b>: dile el nombre exacto del archivo subido.</li><li>Algunas funciones son de <b>Canva Pro</b> (kit de marca, quitar fondos); el resto funciona con el plan gratuito.</li></ol>`}
 ]},
 recetas:[
-{s:"posts",t:"Posts para Instagram",d:"Tres posts con tu marca, listos para publicar o retocar.",
+{s:"posts",t:"Tres posts para Instagram",d:"Tres publicaciones cuadradas con tus colores y tus textos, listas para subir o retocar en Canva.",
+kid:"Claude te diseña tres imágenes bonitas para Instagram con tus colores.",ej:"tres posts para presentar el menú de otoño de tu cafetería",min:20,
 meta:["👩‍🍳 Fácil", "📱 Redes", "🍽 Resultado: 3 posts en tu Canva"],
 q:"¿Qué quieres anunciar?",ph:"Di qué. Ejemplo: mi nuevo pan de centeno, que sale los viernes",
 fin:"Tus posts están en Canva. Para el texto que acompaña a cada post, mira el libro de redes sociales.",
@@ -32,7 +34,8 @@ steps:[
 {t:"El diseño",s:"Claude diseña",b:()=>`${cb("OK. Crea los diseños con mi marca y dame los enlaces para abrirlos en Canva.")}${ok("tienes los enlaces a 3 diseños nuevos en tu Canva.")}`},
 {t:"Retoca y descarga",s:"tu toque",b:()=>`<ol><li>Abre los enlaces y cambia lo que quieras a mano.</li><li>O pídeselo a Claude, un cambio cada vez: «haz el titular más grande en el segundo».</li><li>Descarga en <b>PNG</b> desde <b>Compartir → Descargar</b>.</li></ol>${ok("tienes los 3 posts descargados.")}`}
 ]},
-{s:"presentacion",t:"Una presentación",d:"Diapositivas claras y visuales para explicar tu proyecto o tu clase.",
+{s:"presentacion",t:"Una presentación para explicar algo",d:"Entre 6 y 10 diapositivas claras, con poco texto y una idea por diapositiva, para una clase, un proyecto o una reunión.",
+kid:"Claude te hace las diapositivas para que expliques algo delante de otras personas.",ej:"8 diapositivas para explicar tu proyecto de fin de curso",min:30,
 meta:["👩‍🍳 Fácil", "📊 Presentación", "🍽 Resultado: una presentación en tu Canva"],
 q:"¿Para qué es?",ph:"Di para qué y para quién. Ejemplo: presentar mi servicio a una empresa",
 fin:"Tu presentación está en Canva. Ensáyala en voz alta una vez con el cronómetro.",
@@ -49,6 +52,7 @@ steps:[
 {t:"Las notas para hablar",s:"el discurso",b:()=>`${cb("Escríbeme lo que diría en cada diapositiva, en frases cortas, para no leer la pantalla.")}${ok("tienes tus notas.")}`}
 ]},
 {s:"cartel",t:"Cartel o flyer para imprimir",d:"Un cartel A4 para un evento, con la fecha y el lugar bien visibles.",
+kid:"Claude te hace un cartel para imprimir, con la fecha y el lugar bien grandes.",ej:"un cartel A4 para la fiesta del barrio del sábado 14 a las 18:00",min:20,
 meta:["👩‍🍳 Fácil", "🖨 Impresión", "🍽 Resultado: un cartel en PDF listo para imprimir"],
 q:"¿Qué evento?",ph:"Qué, cuándo y dónde. Ejemplo: mercadillo del barrio, sábado 12, plaza mayor",
 fin:"Tu cartel está listo para imprimir. Imprime una prueba antes de hacer muchas copias.",
@@ -64,6 +68,7 @@ steps:[
 {t:"Exporta para imprimir",s:"PDF",b:()=>`${cb("Exporta el diseño como PDF para imprimir y dame el enlace de descarga.")}${tip("También puedes hacerlo desde Canva: <b>Compartir → Descargar → PDF para imprimir</b>.")}${ok("tienes el PDF.")}`}
 ]},
 {s:"cv",t:"Tu currículum",d:"Un currículum de una página, limpio y moderno, con tu experiencia bien contada.",
+kid:"Le cuentas a Claude lo que has hecho y él te hace un currículum bonito de una página.",ej:"un currículum de camarero con 3 años de experiencia, listo para imprimir en PDF",min:30,
 meta:["👩‍🍳 Fácil", "📄 CV", "🍽 Resultado: tu CV en PDF"],
 q:"¿Para qué puesto?",ph:"Di el puesto. Ejemplo: recepcionista de hotel",
 fin:"Tu currículum está listo. Adáptalo un poco a cada oferta: Claude te ayuda en un minuto.",

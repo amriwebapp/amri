@@ -3,47 +3,77 @@
 <head>
 <meta charset="utf-8">
 <title>Portada</title>
-<!-- Plantilla de portada vertical de cada librito. La usa tools/portadas.py: ?s=<slug>&bg=<color>&img=<ruta> -->
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
+<!-- Plantilla de portada vertical de cada librito. La usa tools/portadas.py: ?s=<slug>&bg=<color>
+     Diseño de colección: fondo de color del libro, un pictograma geométrico y el título. -->
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0}
-html,body{width:600px;height:800px;overflow:hidden;background:#FBF4E9}
-.cv{position:relative;width:600px;height:800px;overflow:hidden;background:#FBF4E9;font-family:"Bricolage Grotesque",system-ui,sans-serif;color:#2A1F14}
-.blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.75}
-.b1{width:520px;height:520px;left:-160px;top:-180px;background:var(--bg)}
-.b2{width:360px;height:360px;right:-140px;top:180px;background:#E7F0E4;opacity:.6}
-.top{position:absolute;left:52px;right:52px;top:50px;display:flex;align-items:center;gap:12px}
-.top img{width:34px;height:34px;border-radius:9px;box-shadow:0 6px 14px -6px rgba(210,86,31,.6)}
-.top span{font-weight:800;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:#D2561F}
-h1{position:absolute;left:52px;right:48px;top:118px;font-weight:800;font-size:60px;line-height:1.02;letter-spacing:-.035em}
-.rule{position:absolute;left:52px;width:56px;height:5px;border-radius:5px;background:#D2561F}
-.art{position:absolute;left:-30px;right:-30px;bottom:-6px;height:440px;
-  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 22%);mask-image:linear-gradient(180deg,transparent 0,#000 22%)}
-.art img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
-.grain{position:absolute;inset:0;opacity:.35;mix-blend-mode:multiply;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .4 0 0 0 0 .3 0 0 0 .12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+html,body{width:600px;height:800px;overflow:hidden}
+.cv{position:relative;width:600px;height:800px;overflow:hidden;background:var(--bg);font-family:"Bricolage Grotesque",system-ui,sans-serif;color:#1F1A14}
+.cv::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 70% at 50% 34%,rgba(255,255,255,.55),rgba(255,255,255,0) 70%)}
+.top,.foot{position:absolute;left:48px;right:48px;display:flex;align-items:center;justify-content:space-between;font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.top{top:44px}.foot{bottom:40px;font-weight:600;letter-spacing:.14em;color:rgba(31,26,20,.62)}
+.brand{display:flex;align-items:center;gap:12px}.brand img{width:30px;height:30px;border-radius:8px}
+.no{font-variant-numeric:tabular-nums;color:rgba(31,26,20,.62)}
+.hr{position:absolute;left:48px;right:48px;height:2px;background:rgba(31,26,20,.14)}
+.hr.a{top:100px}.hr.b{bottom:86px}
+.pic{position:absolute;left:50%;top:146px;width:316px;height:316px;margin-left:-158px}
+.pic svg{width:100%;height:100%;overflow:visible}
+.pic svg *{fill:none;stroke:#1F1A14;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.pic svg .f{fill:#D2561F;stroke:#D2561F}
+.pic svg .k{fill:#1F1A14}
+.pic svg .w{fill:#FFFDF9}
+h1{position:absolute;left:48px;right:48px;bottom:118px;font-weight:800;font-size:54px;line-height:1.02;letter-spacing:-.035em;text-wrap:balance}
 </style>
 </head>
 <body>
 <div class="cv" id="cv">
-  <div class="blob b1"></div><div class="blob b2"></div>
-  <div class="art"><img id="art" alt=""></div>
-  <div class="top"><img src="../img/brand/amri-monograma.svg" alt=""><span>Libro de recetas</span></div>
-  <h1 id="t"></h1><div class="rule" id="rule"></div>
-  <div class="grain"></div>
+  <div class="top"><span class="brand"><img src="../img/brand/amri-monograma.svg" alt="">Libro de recetas</span><span class="no" id="no"></span></div>
+  <div class="hr a"></div>
+  <div class="pic" id="pic"></div>
+  <h1 id="t"></h1>
+  <div class="hr b"></div>
+  <div class="foot"><span id="n"></span><span>amri.es</span></div>
 </div>
 <script src="../i18n.js"></script>
 <script src="../assets/datos.js"></script>
+<script src="../assets/libros.js"></script>
 <script>
+/* Pictogramas: viewBox 0 0 240 240, trazo negro y un solo detalle en naranja (clase f) */
+var P={
+"empieza-aqui":'<path d="M120 212V112"/><path class="f" d="M120 128c-6-40-34-62-74-62 0 42 30 66 74 62z"/><path d="M120 106c4-38 30-62 72-64 2 42-28 68-72 64z"/><path d="M68 212h104"/>',
+"asistente-ia":'<path d="M40 64a24 24 0 0 1 24-24h112a24 24 0 0 1 24 24v76a24 24 0 0 1-24 24h-70l-42 34v-34h0a24 24 0 0 1-24-24z"/><circle class="k" cx="86" cy="102" r="9"/><circle class="f" cx="120" cy="102" r="9"/><circle class="k" cx="154" cy="102" r="9"/>',
+"logo-ia":'<path d="M120 26l58 86-58 102-58-102z"/><path d="M120 26v110"/><circle class="f" cx="120" cy="140" r="15"/><path d="M84 214h72"/>',
+"imagenes-ia":'<rect x="30" y="46" width="180" height="148" rx="18"/><path d="M30 168l52-52 44 44 26-26 58 58"/><circle class="f" cx="160" cy="92" r="18"/>',
+"webapp-gratis":'<rect x="24" y="40" width="192" height="160" rx="18"/><path d="M24 80h192"/><circle class="f" cx="50" cy="60" r="7"/><circle class="k" cx="72" cy="60" r="7"/><circle class="k" cx="94" cy="60" r="7"/><path d="M52 116h80M52 144h136M52 172h100"/>',
+"figma-a-web":'<rect x="40" y="40" width="140" height="140"/><rect class="w" x="28" y="28" width="24" height="24"/><rect class="w" x="168" y="28" width="24" height="24"/><rect class="w" x="28" y="168" width="24" height="24"/><path class="f" d="M150 150l66 26-28 10-10 28z"/>',
+"chatbot-web":'<rect x="42" y="74" width="156" height="120" rx="30"/><path d="M120 74V46"/><circle class="f" cx="120" cy="34" r="14"/><circle class="k" cx="90" cy="128" r="11"/><circle class="k" cx="150" cy="128" r="11"/><path d="M98 162h44"/><path d="M42 124H24M198 124h18"/>',
+"canva-diseno":'<path d="M196 36L104 128"/><path d="M100 132c-30-4-50 14-52 40-2 20-12 30-26 34 42 10 82 2 96-26 8-16 0-34-18-48z" class="f"/><path d="M178 54l16 16"/>',
+"higgsfield-cine":'<rect x="34" y="96" width="172" height="108" rx="10"/><path d="M34 96l-6-36 166-28 8 36z" class="w"/><path class="f" d="M64 54l28 32 38-6-28-32z"/><path d="M134 46l28 32"/><path d="M60 140h80M60 168h50"/>',
+"video-aftereffects":'<rect x="30" y="40" width="180" height="116" rx="16"/><path class="f" d="M104 72l42 26-42 26z"/><path d="M30 196h180"/><path class="w" d="M84 184l12 12-12 12-12-12z"/><path class="w" d="M154 184l12 12-12 12-12-12z"/>',
+"blender-3d":'<path d="M120 30l80 44v92l-80 44-80-44V74z"/><path class="f" d="M120 30l80 44-80 44-80-44z"/><path d="M120 118v92"/>',
+"animaciones-opus":'<circle cx="52" cy="160" r="14" opacity=".25"/><circle cx="92" cy="118" r="18" opacity=".45"/><circle cx="136" cy="90" r="22" opacity=".7"/><circle class="f" cx="186" cy="76" r="28"/><path d="M28 206h184"/>',
+"redes-sociales":'<rect x="64" y="22" width="112" height="196" rx="22"/><path d="M106 42h28"/><path class="f" d="M120 158c-30-20-42-34-42-50 0-14 10-24 22-24 9 0 16 5 20 13 4-8 11-13 20-13 12 0 22 10 22 24 0 16-12 30-42 50z"/>',
+"notion-cerebro":'<rect x="70" y="30" width="130" height="160" rx="12"/><rect class="w" x="40" y="54" width="130" height="160" rx="12"/><path d="M68 100h74M68 128h74M68 156h46"/><rect class="f" x="68" y="74" width="30" height="8" rx="4"/>',
+"gmail-calendario":'<rect x="32" y="50" width="176" height="156" rx="16"/><path d="M32 92h176M80 32v34M160 32v34"/><rect class="f" x="128" y="140" width="38" height="38" rx="6"/><path d="M66 124h28M66 160h28"/>',
+"gurusup-brain":'<path d="M120 76L60 160M120 76l60 84M60 160h120"/><circle class="w" cx="60" cy="160" r="22"/><circle class="w" cx="180" cy="160" r="22"/><circle class="f" cx="120" cy="76" r="30"/><circle class="w" cx="120" cy="196" r="0"/>',
+"automatiza-tareas":'<circle cx="104" cy="128" r="54"/><circle cx="104" cy="128" r="18"/><path d="M104 50v20M104 186v20M26 128h20M162 128h20M49 73l14 14M145 169l14 14M49 183l14-14M145 87l14-14"/><path class="f" d="M182 22l-30 52h26l-14 44 36-58h-26z"/>',
+"navegador-chrome":'<circle cx="120" cy="120" r="92"/><path class="f" d="M120 120l38-62-14 76z"/><path class="k" d="M120 120l-38 62 14-76z"/><circle class="w" cx="120" cy="120" r="9"/>',
+"primer-agente":'<rect x="44" y="28" width="152" height="188" rx="16"/><path class="f" d="M70 74l14 14 26-28" style="fill:none"/><path d="M128 76h44M70 124l14 14 26-28M128 126h44M70 176h40M128 176h44"/>',
+"skills-propias":'<path d="M120 62c-24-16-56-22-92-18v148c36-4 68 2 92 18 24-16 56-22 92-18V44c-36-4-68 2-92 18z"/><path d="M120 62v148"/><path class="f" d="M156 46v62l14-12 14 12V44z"/>',
+"conector-propio":'<path d="M80 98h80v42a40 40 0 0 1-80 0z"/><path class="f" d="M98 98V44M142 98V44" style="stroke-width:12"/><path d="M120 180v40"/>',
+"jev-decisiones":'<path d="M120 36v176M76 212h88M44 72h152"/><path d="M44 72l-26 66h52z"/><path class="f" d="M18 138a26 18 0 0 0 52 0z"/><path d="M196 72l-26 66h52z"/><path d="M170 138a26 18 0 0 0 52 0z"/><circle class="k" cx="120" cy="36" r="9"/>'
+};
 (function(){
 var q=new URLSearchParams(location.search),s=q.get("s");
 document.getElementById("cv").style.setProperty("--bg",q.get("bg")||"#FBE3D2");
-var art=document.getElementById("art");art.src="../"+q.get("img");
+document.getElementById("pic").innerHTML='<svg viewBox="0 0 240 240">'+(P[s]||"")+'</svg>';
 var t=document.getElementById("t");t.textContent=AMRI_DATA.title(s);
-/* El título cabe siempre en el hueco de arriba: se encoge si es largo */
-function fit(){var f=60;t.style.fontSize=f+"px";while(t.offsetHeight>250&&f>36){f-=2;t.style.fontSize=f+"px";}
-  document.getElementById("rule").style.top=(t.offsetTop+t.offsetHeight+22)+"px";document.title="ok";}
-Promise.all([document.fonts.ready,new Promise(function(r){art.complete?r():(art.onload=art.onerror=r)})]).then(fit);
+var i=(AMRI_DATA.buildOrder||[]).indexOf(s);document.getElementById("no").textContent=i>-1?"Nº "+String(i+1).padStart(2,"0"):"";
+var n=((window.AMRI_LIBROS||{})[s]||[]).length;document.getElementById("n").textContent=n?n+(n===1?" receta":" recetas"):"";
+/* El título cabe en tres líneas como máximo: se encoge si es largo */
+function fit(){var f=54;t.style.fontSize=f+"px";while(t.offsetHeight>f*1.02*3+4&&f>34){f-=2;t.style.fontSize=f+"px";}document.title="ok";}
+document.fonts.ready.then(fit);
 })();
 </script>
 </body>

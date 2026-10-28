@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: tu asistente personal con IA",
 intro:"Un asistente que te conoce: sabe a qué te dedicas, cómo escribes y qué necesitas. Lo preparas una vez (Claude te entrevista y guarda tus instrucciones en un proyecto) y después lo usas para correos, documentos, estudios o tu semana.",
+kid:"Le cuentas a Claude quién eres una sola vez, y después te ayuda con correos, documentos, estudios y tu semana.",
 meta:["📕 6 recetas", "💶 Gratis", "🍽 Resultado: un ayudante que te conoce"],
 ing:"Ingredientes (todos gratuitos)",
 fin:"Tu asistente ya te conoce. Abre cada receta dentro de tu proyecto «Mi asistente».",
@@ -18,6 +19,7 @@ ${det("No veo la opción de Proyectos",["Tu plan puede tener límites. Alternati
 ]},
 recetas:[
 {s:"correos",t:"Responde correos difíciles",d:"Un cliente enfadado, un no educado o un recordatorio incómodo, con tu tono.",
+kid:"Le cuentas a Claude qué correo tienes que contestar y él te escribe la respuesta. Tú la lees y la envías.",ej:"contestar con calma a un cliente enfadado porque su pedido llegó tarde",min:10,
 meta:["👩‍🍳 Muy fácil", "✉️ Correo", "🍽 Resultado: un correo listo para enviar"],
 q:"¿Qué correo?",ph:"Di qué pasa. Ejemplo: un cliente se queja de que el pedido llegó tarde",
 fin:"Listo. Guarda el mensaje que mejor te ha funcionado como atajo.",
@@ -34,6 +36,7 @@ steps:[
 {t:"Repásalo y envíalo tú",s:"enviar",b:()=>`<ol><li>Lee el correo en voz alta.</li><li>Cambia lo que no dirías tú.</li><li>Envíalo desde tu correo.</li></ol>${ok("el correo está enviado.")}`}
 ]},
 {s:"documentos",t:"Resume documentos largos",d:"Sube un PDF, un contrato o un informe y quédate con lo importante en 5 puntos.",
+kid:"Le das a Claude un documento muy largo y él te cuenta lo importante en 5 frases.",ej:"un contrato de alquiler de 20 páginas resumido en 5 puntos y sus trampas",min:10,
 meta:["👩‍🍳 Muy fácil", "📄 Documentos", "🍽 Resultado: lo importante de un documento, con citas"],
 q:"¿Qué documento?",ph:"Di qué es. Ejemplo: el contrato de una nueva tarifa de luz",
 fin:"Ya tienes lo importante. Para documentos que uses a menudo, súbelos al proyecto: así no tendrás que subirlos cada vez.",
@@ -50,6 +53,7 @@ steps:[
 {t:"Pregunta tus dudas",s:"lo tuyo",b:()=>`${cb("En mi caso, [explica tu situación]. ¿Qué parte del documento me afecta más y qué me recomiendas preguntar?")}${tip("Para decisiones legales o de dinero importantes, consulta además con un profesional.")}${ok("sabes qué te afecta y qué preguntar.")}`}
 ]},
 {s:"estudiar",t:"Estudia con Claude: resúmenes y test",d:"Sube tus apuntes y Claude te hace resúmenes, preguntas tipo test y te explica lo que no entiendes.",
+kid:"Le das tus apuntes a Claude y él te hace un resumen y un examen de prueba.",ej:"el tema 4 de Historia convertido en resumen y 10 preguntas tipo test",min:20,
 meta:["👩‍🍳 Fácil", "🎓 Estudios", "🍽 Resultado: resumen, test y dudas resueltas"],
 q:"¿Qué estudias?",ph:"Di la asignatura y el tema. Ejemplo: Historia, la Revolución francesa",
 fin:"Repite el test dentro de dos días: lo que se repasa espaciado se recuerda mucho mejor.",
@@ -66,6 +70,7 @@ steps:[
 {t:"Lo que no entiendes",s:"dudas",b:()=>`${cb("No entiendo [qué]. Explícamelo como a alguien de 12 años, con un ejemplo de la vida real. Después hazme una pregunta para ver si lo he entendido.")}${ok("entiendes lo que antes no.")}`}
 ]},
 {s:"semana",t:"Organiza tu semana",d:"Tareas, citas y descansos en un plan realista que cabe en tu semana.",
+kid:"Le cuentas a Claude todo lo que tienes que hacer y él te lo ordena por días.",ej:"trabajo, médico, gimnasio y la compra repartidos de lunes a domingo",min:15,
 meta:["👩‍🍳 Muy fácil", "📅 Organización", "🍽 Resultado: tu semana planificada en una tabla"],
 q:"¿Qué semana tienes?",ph:"Di cómo es. Ejemplo: mucho trabajo, dos médicos y quiero hacer deporte",
 fin:"Tu semana tiene un plan. El viernes, cuéntale cómo ha ido y ajusta la siguiente.",

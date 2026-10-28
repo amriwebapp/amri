@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: tu primer agente, Claude trabaja por ti",
 intro:"Un agente es Claude trabajando por su cuenta en una tarea de varios pasos: hace un plan, abre y crea archivos, comprueba el resultado y te pide permiso antes de lo importante. Prepara la app y tu carpeta de prueba una vez, y después elige qué tarea le das.",
+kid:"Un agente es Claude haciendo una tarea larga él solo en tu ordenador. Te pide permiso antes de lo importante.",
 meta:["📕 6 recetas", "💶 Necesita un plan de pago de Claude", "🍽 Resultado: tareas largas hechas por Claude, con tu permiso"],
 ing:"Ingredientes",
 fin:"Tu cocina está lista. Empieza por «Tu primera tarea» y después elige la receta que quieras.",
@@ -20,6 +21,7 @@ ${tip("Los nombres de los menús cambian de vez en cuando. Si no ves Cowork ni C
 ]},
 recetas:[
 {s:"primera-tarea",t:"Tu primera tarea: ordena una carpeta",d:"La tarea perfecta para empezar: Claude ordena archivos y tú apruebas cada paso.",
+kid:"Claude ordena una carpeta de tu ordenador y tú dices «sí» o «no» a cada paso.",ej:"tu carpeta de Descargas ordenada en Fotos, Facturas, Documentos y Otros",min:20,
 meta:["👩‍🍳 Fácil", "🗂 Cowork", "🍽 Resultado: una carpeta ordenada por Claude"],
 q:"¿Qué carpeta quieres ordenar?",ph:"Di qué hay dentro. Ejemplo: las fotos del viaje mezcladas con documentos",
 fin:"Tu primera tarea con un agente: objetivo, plan, permiso y revisión. Ese es el método para todo.",
@@ -37,6 +39,7 @@ steps:[
 {t:"Revisa y deshaz si hace falta",s:"tú decides",b:()=>`<p class="what">Abre la carpeta y mira el resultado. Si algo no te convence:</p>${cb("Deshaz el último cambio y explícame qué habías hecho y por qué.")}${ok("la carpeta está como querías.")}`}
 ]},
 {s:"informe",t:"Un informe con tus documentos",d:"Claude lee varios documentos de una carpeta y te prepara un informe de una página.",
+kid:"Claude lee varios documentos de una carpeta y te escribe un resumen de una página.",ej:"10 presupuestos de proveedores resumidos en una tabla con el más barato",min:25,
 meta:["👩‍🍳 Fácil", "📄 Cowork", "🍽 Resultado: un informe en un documento nuevo"],
 q:"¿Qué documentos?",ph:"Di qué son. Ejemplo: las actas de las reuniones del último trimestre",
 fin:"Tienes tu informe. Guarda el mensaje: el mes que viene solo cambias la carpeta.",
@@ -69,6 +72,7 @@ steps:[
 {t:"Comprueba los totales",s:"con calma",b:()=>`<p class="what">Suma tú una columna o un mes a mano y compáralo con el resumen.</p>${cb("Explícame cómo has calculado este total: [cuál]. ¿Has quitado o cambiado alguna fila?")}${ok("los totales que has comprobado cuadran.")}`}
 ]},
 {s:"web",t:"Una web sencilla con Claude Code",d:"Claude crea una web de una página, la abre en el navegador y la mejora contigo.",
+kid:"Claude crea una web sencilla en tu ordenador y la mejoráis juntos con frases cortas.",ej:"una página para tu club de lectura con el libro del mes y la fecha",min:30,
 meta:["👩‍🍳 Media", "💻 Claude Code", "🍽 Resultado: una web en tu ordenador"],
 q:"¿Qué web?",ph:"Descríbela. Ejemplo: una página para presentarme como fotógrafa",
 fin:"Tienes tu web en tu ordenador. Para publicarla gratis, sigue el libro «Tu web online y gratis».",
@@ -100,6 +104,7 @@ ${tip("¿Sale «command not found» después? Cierra la terminal del todo y vuel
 {t:"Cuatro trucos",s:"control",b:()=>`<ul><li><b>Mayús + Tab</b>: cambia de modo. En el <b>modo plan</b>, Claude solo propone y no toca nada.</li><li><b>/rewind</b> (o <b>Esc</b> dos veces): vuelve a un punto anterior y deshace los cambios.</li><li><b>/init</b>: crea un archivo CLAUDE.md con notas de tu proyecto, que leerá cada vez.</li><li><b>/help</b>: todo lo que puedes hacer.</li></ul>${ok("has probado el modo plan y sabes cómo deshacer.")}`}
 ]},
 {s:"equipo",t:"Agentes en equipo: tu primer subagente",d:"Crea un ayudante especializado (por ejemplo, un revisor) al que Claude le pasa parte del trabajo.",
+kid:"Creas un ayudante para Claude, por ejemplo un revisor, que le ayuda con una parte del trabajo.",ej:"un revisor que lee lo que escribe Claude y busca faltas antes de dártelo",min:30,
 meta:["👩‍🍳 Avanzada", "🧑‍🤝‍🧑 Claude Code", "🍽 Resultado: un subagente revisor que Claude usa solo"],
 q:"¿Qué ayudante quieres?",ph:"Di qué haría. Ejemplo: un corrector que revise faltas y tono antes de entregar",
 fin:"Ya tienes tu primer subagente. Puedes crear más, pero empieza con pocos y muy concretos.",

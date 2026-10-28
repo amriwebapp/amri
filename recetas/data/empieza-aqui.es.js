@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: empieza aquí, conoce a Claude",
 intro:"El primer libro para quien nunca ha usado Claude. Creas tu cuenta y después, receta a receta, aprendes a hablar con Claude, a pedirle bien las cosas, a darle tus archivos y a saber dónde usarlo.",
+kid:"Claude es una inteligencia artificial con la que hablas escribiendo, como en un chat. Aquí aprendes a usarlo desde cero.",
 meta:["📕 5 recetas", "💶 Gratis", "🍽 Resultado: sabes usar Claude y entiendes todo lo demás"],
 ing:"Ingredientes (todos gratuitos)",
 fin:"Ya tienes tu cuenta. Empieza por «Tu primera conversación» y sigue en el orden que quieras.",
@@ -22,6 +23,7 @@ ${ok("ves tus conversaciones en la app, o has decidido usar solo el navegador.")
 ]},
 recetas:[
 {s:"primera-conversacion",t:"Tu primera conversación",d:"Háblale como a una persona y consigue algo útil en 5 minutos.",
+kid:"Le escribes a Claude como a una persona y te ayuda con algo de verdad.",ej:"pedirle ideas para la cena con lo que tienes en la nevera",min:10,
 meta:["👩‍🍳 Muy fácil", "💬 Chat", "🍽 Resultado: tu primera tarea hecha con Claude"],
 q:"¿Qué te gustaría probar?",ph:"Cuéntalo con tus palabras. Ejemplo: ayudarme a escribir una carta para mi casero",
 fin:"Ya has hablado con Claude. Sigue con «Pide mejor»: con cuatro trucos, sus respuestas mejoran muchísimo.",
@@ -39,6 +41,7 @@ steps:[
 {t:"Comprueba lo importante",s:"con cabeza",b:()=>`${cb("¿Hay algo en tu respuesta de lo que no estés seguro? Dime qué debería comprobar yo.")}${ok("sabes qué partes conviene revisar antes de usarlo.")}`}
 ]},
 {s:"pide-mejor",t:"Pide mejor: el mensaje perfecto",d:"Cuatro ingredientes que hacen que Claude acierte a la primera.",
+kid:"Aprendes a pedirle las cosas a Claude para que te salgan bien a la primera.",ej:"en vez de «hazme un correo», decir para quién es, qué quieres conseguir y con qué tono",min:15,
 meta:["👩‍🍳 Fácil", "✍️ Mensajes", "🍽 Resultado: tu plantilla de mensaje para cualquier tarea"],
 q:"¿Para qué lo quieres practicar?",ph:"Una tarea real. Ejemplo: preparar una reunión con un cliente nuevo",
 fin:"Ya tienes tu plantilla. Guárdala en una nota del móvil: te servirá para casi todo.",
@@ -55,6 +58,7 @@ steps:[
 {t:"Que Claude mejore tu mensaje",s:"el truco",b:()=>`<p class="what">Si no sabes cómo pedir algo, pídele a Claude que te ayude a pedirlo.</p>${cb("Quiero pedirte esto: [explícalo como te salga]. Antes de hacerlo, escríbeme el mensaje perfecto para pedírtelo, con quién eres, contexto, tarea y forma. Después hazlo.")}${ok("tienes un mensaje bien escrito y su resultado.")}`}
 ]},
 {s:"archivos",t:"Dale tus archivos: PDF, fotos y capturas",d:"Sube un documento, una foto o una captura de pantalla y pregúntale lo que quieras.",
+kid:"Le enseñas a Claude una foto o un documento y le preguntas lo que quieras sobre él.",ej:"una foto de una factura y la pregunta «¿cuánto pago de luz este mes?»",min:10,
 meta:["👩‍🍳 Muy fácil", "📎 Archivos", "🍽 Resultado: un documento entendido en minutos"],
 q:"¿Qué quieres subir?",ph:"Di qué archivo tienes. Ejemplo: el contrato del alquiler en PDF",
 fin:"Ya sabes darle archivos a Claude. Es una de las cosas que más tiempo ahorra.",
@@ -94,6 +98,7 @@ ${ok("sabrías explicar qué es un conector y qué es un agente.")}`},
 {t:"Elige tu siguiente libro",s:"¿y ahora?",b:()=>`<ul><li>Que Claude te conozca → <a href="asistente-ia.html">Tu asistente personal</a>.</li><li>Que trabaje en tus apps → <a href="gmail-calendario.html">Gmail y Calendar</a>, <a href="canva-diseno.html">Canva</a> o <a href="notion-cerebro.html">Notion</a>.</li><li>Crear algo para internet → <a href="webapp-gratis.html">Tu web online y gratis</a>.</li><li>Que haga tareas largas → <a href="primer-agente.html">Tu primer agente</a>.</li><li>¿Tienes un proyecto? Cuéntalo en <a href="../index.html#construir">«¿Qué quieres construir?»</a>.</li></ul>${ok("has elegido tu siguiente libro.")}`}
 ]},
 {s:"planes",t:"Dónde usar Claude, planes y privacidad",d:"Web, móvil, escritorio, Chrome y Claude Code; qué es gratis y cómo cuidar tus datos.",
+kid:"Descubres dónde puedes usar Claude, qué es gratis y cómo cuidar tus datos.",ej:"usar Claude en el móvil gratis y saber qué no debes pegarle nunca",min:10,
 meta:["👩‍🍳 Muy fácil", "⚙️ Ajustes", "🍽 Resultado: Claude configurado a tu gusto"],
 q:"¿Qué te preocupa?",ph:"Di tu duda. Ejemplo: si mis conversaciones son privadas",
 fin:"Ya sabes dónde usar Claude, qué cuesta y cómo cuidar tu privacidad.",

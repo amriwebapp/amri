@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: Claude navega por ti con Chrome",
 intro:"Con la extensión Claude in Chrome, Claude usa webs por ti mientras miras: compara precios, investiga, rellena formularios y revisa tu web. Instala la extensión una vez y elige la tarea. Comprar, pagar y enviar, siempre tú.",
+kid:"Claude puede usar páginas web por ti dentro de Chrome mientras tú miras. Comprar y pagar lo haces siempre tú.",
 meta:["📕 5 recetas", "💶 Requiere un plan de pago de Claude", "🍽 Resultado: tareas web hechas mientras miras"],
 ing:"Ingredientes",
 fin:"La extensión está lista. Empieza con tareas pequeñas y ve dándole confianza poco a poco.",
@@ -19,6 +20,7 @@ steps:[
 ]},
 recetas:[
 {s:"comparar",t:"Compara precios en varias tiendas",d:"Una tabla con precio, envío y valoraciones de un producto en 4 tiendas.",
+kid:"Claude mira el mismo producto en varias tiendas y te hace una tabla con los precios.",ej:"unos auriculares en 4 tiendas: precio, envío y opiniones en una tabla",min:15,
 meta:["👩‍🍳 Fácil", "🛒 Compras", "🍽 Resultado: una tabla comparativa con enlaces"],
 q:"¿Qué producto?",ph:"Di cuál. Ejemplo: una freidora de aire de 5 litros",
 fin:"Ya sabes dónde comprarlo. La compra, tú.",
@@ -33,6 +35,7 @@ steps:[
 {t:"Comprueba dos datos",s:"con lupa",b:()=>`<p class="what">Abre dos enlaces y comprueba el precio. La IA puede equivocarse al leer una web.</p>${ok("los precios comprobados coinciden.")}`}
 ]},
 {s:"investigar",t:"Investiga un tema con fuentes",d:"Lee las mejores fuentes sobre un tema y te resume lo importante, con enlaces.",
+kid:"Claude lee varias páginas sobre un tema y te cuenta lo importante, con los enlaces.",ej:"«¿qué patinete eléctrico es mejor para la ciudad?» con 5 fuentes",min:20,
 meta:["👩‍🍳 Fácil", "🔎 Investigar", "🍽 Resultado: un resumen con sus fuentes"],
 q:"¿Qué tema?",ph:"Di cuál. Ejemplo: ayudas para autónomos que empiezan en Andalucía",
 fin:"Tienes tu resumen. Para decisiones importantes, lee tú las fuentes originales.",
@@ -47,6 +50,7 @@ steps:[
 {t:"Revisa las fuentes",s:"confianza",b:()=>`${cb("¿Cuáles de esas fuentes son oficiales y cuáles no? ¿Hay algo en lo que se contradigan?")}${ok("sabes qué fuentes son fiables.")}`}
 ]},
 {s:"formulario",t:"Rellena un formulario largo (sin enviarlo)",d:"Claude rellena con tus datos y tú revisas y pulsas enviar.",
+kid:"Claude rellena un formulario largo con tus datos. Tú lo revisas y pulsas enviar.",ej:"la inscripción a un curso con 25 campos, rellenada y esperando tu visto bueno",min:15,
 meta:["👩‍🍳 Fácil", "📝 Formularios", "🍽 Resultado: un formulario relleno, listo para que lo envíes"],
 q:"¿Qué formulario?",ph:"Di cuál. Ejemplo: la inscripción a un curso",
 fin:"El formulario está listo. El botón de enviar lo pulsas tú.",
@@ -75,6 +79,7 @@ steps:[
 {t:"Decide tú",s:"elegir",b:()=>`${cb("De estas opciones, ¿cuál me recomiendas y por qué? Dime también qué letra pequeña debería revisar.")}${ok("has elegido y sabes qué revisar antes de reservar.")}`}
 ]},
 {s:"tu-web",t:"Revisa tu propia web",d:"Comprueba enlaces rotos, textos confusos y cómo se ve desde fuera.",
+kid:"Claude visita tu web como si fuera un cliente y te dice qué está roto o qué no se entiende.",ej:"encuentra 2 enlaces que no funcionan y un botón que en el móvil no se ve",min:20,
 meta:["👩‍🍳 Fácil", "🧪 Revisión", "🍽 Resultado: una lista de mejoras de tu web"],
 q:"¿Qué web?",ph:"Pega la dirección. Ejemplo: tunombre.com",
 fin:"Tienes tu lista de mejoras. Para cambiarlas, mira el libro de la web.",

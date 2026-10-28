@@ -235,9 +235,9 @@ En esta carpeta está reel.html con render(t) y DUR. Crea un script que lo grabe
 
 **Al terminar:** Tu reel está listo. Súbelo desde el móvil con una música de la biblioteca de la red.
 
-### Receta 4: Datos en movimiento
+### Receta 4: Un gráfico animado con tus números
 
-Un gráfico que crece y cuenta una historia con tus números.
+Barras o líneas que crecen solas y cuentan una historia con tus números: ventas, visitas o clientes.
 
 - 👩‍🍳 Media
 - 📊 Datos

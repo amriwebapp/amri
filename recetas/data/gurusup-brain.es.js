@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: el cerebro de tu empresa con GuruSup",
 intro:"Conecta GuruSup Brain a Claude para que responda con el conocimiento real de tu empresa, citando la fuente. Alimenta el Brain y conéctalo una vez; después úsalo para responder a clientes, preparar bienvenidas o propuestas.",
+kid:"GuruSup guarda lo que sabe tu empresa. Lo conectas a Claude y Claude contesta con esa información, diciendo de dónde la saca.",
 meta:["📕 4 recetas","💶 GuruSup es de pago (pide demo)","🍽 Resultado: Claude responde con lo que sabe tu empresa"],
 ing:"Ingredientes",
 fin:"El Brain está conectado. Elige para qué lo quieres usar.",
@@ -37,6 +38,7 @@ steps:[
 {t:"Rellena los huecos",s:"mejorar",b:()=>`${cb("Hazme una lista de las dudas que el Brain no pudo responder bien y dime qué persona o documento podría completarlas.")}${ok("tienes la lista de huecos y a quién preguntar.")}`}
 ]},
 {s:"clientes",t:"Respuestas a clientes",d:"Borradores de respuesta basados en vuestras condiciones, precios y casos resueltos, sin prometer de más.",
+kid:"Claude escribe la respuesta a un cliente usando las normas de tu empresa, y te dice de dónde lo sacó.",ej:"«¿puedo devolver el producto a los 40 días?» contestado con tu política de devoluciones",min:15,
 meta:["👩‍🍳 Fácil","💬 Clientes","🍽 Resultado: respuestas a clientes con fuente"],
 q:"¿Qué pregunta el cliente?",ph:"Pega una consulta real. Ejemplo: ¿puedo cambiar mi plan a mitad de mes?",
 fin:"Tienes respuestas basadas en la información oficial. Revisa cada una antes de enviarla.",
@@ -49,6 +51,7 @@ steps:[
 {t:"Envíalo tú",s:"firmar",b:()=>`<ol><li>Ajusta el tono si hace falta y envíalo desde tu herramienta de soporte.</li><li>Si la consulta era nueva, añádela al Brain para la próxima vez.</li></ol>${ok("la respuesta está enviada.")}`}
 ]},
 {s:"bienvenida",t:"Guía de bienvenida",d:"Todo lo que necesita saber una persona nueva, sacado de vuestra documentación.",
+kid:"Claude junta todo lo que tiene que saber una persona nueva en tu empresa en una guía.",ej:"la guía del primer día: horarios, herramientas, a quién preguntar y las normas",min:30,
 meta:["👩‍🍳 Fácil","👋 Onboarding","🍽 Resultado: una guía de bienvenida"],
 q:"¿Para qué puesto?",ph:"Di cuál. Ejemplo: una persona nueva en atención al cliente",
 fin:"La guía está lista. Pide a la persona nueva que te diga qué echó en falta.",
@@ -61,6 +64,7 @@ steps:[
 {t:"Completa y comparte",s:"cerrar",b:()=>`<ol><li>Rellena los [FALTA] con quien corresponda.</li><li>Comparte la guía con la persona nueva.</li></ol>${ok("la guía está completa y compartida.")}`}
 ]},
 {s:"propuestas",t:"Propuestas de venta",d:"Servicios, casos de éxito y precios actualizados en una propuesta para un cliente concreto.",
+kid:"Claude prepara una propuesta para un cliente con tus servicios y precios de verdad.",ej:"una propuesta para un hotel con 3 servicios, 2 casos de éxito y precios actuales",min:30,
 meta:["👩‍🍳 Fácil","📈 Ventas","🍽 Resultado: una propuesta comercial"],
 q:"¿Para qué cliente?",ph:"Describe al cliente y lo que necesita. Ejemplo: una cadena de 5 gimnasios que quiere automatizar reservas",
 fin:"Tu propuesta está lista. Revisa los precios antes de enviarla.",

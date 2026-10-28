@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: imágenes y vídeo de cine con Higgsfield",
 intro:"Higgsfield es un estudio de imagen y vídeo con IA. Con su conector, se lo pides a Claude en español y Claude lo genera por ti. Prepara la cocina una vez y después elige la receta: foto de producto, vídeo realista, vídeo UGC, personajes y anuncios.",
+kid:"Higgsfield hace fotos y vídeos con inteligencia artificial. Tú se lo pides a Claude en español y Claude los crea por ti.",
 meta:["📕 7 recetas", "💶 Higgsfield usa créditos (hay prueba)", "🍽 Resultado: imágenes y vídeos listos para publicar"],
 ing:"Ingredientes",
 fin:"Tu estudio está listo. Ahora elige una receta del libro: todas parten de aquí.",
@@ -35,6 +36,7 @@ ${det("Formato",["<b>9:16</b>: vertical, para Reels, TikTok y Shorts.","<b>1:1</
 recetas:[
 /* ---------------------------------------------------------------- */
 {s:"foto-producto",t:"Foto de producto de estudio",d:"Fotos de tu producto que parecen hechas en un estudio profesional, a partir de una foto con el móvil.",
+kid:"Haces una foto a tu producto con el móvil y Claude la convierte en una foto de estudio profesional.",ej:"un bote de miel fotografiado en la cocina convertido en una foto de catálogo",min:30,
 meta:["👩‍🍳 Fácil", "🖼 Imagen", "🍽 Resultado: 3 fotos de producto listas para tu tienda o redes"],
 q:"¿Qué tipo de foto necesitas?",ph:"Describe tu producto y la foto. Ejemplo: mi vela de soja en un tarro de cristal, sobre mármol, con luz de tarde",
 fin:"Ya tienes una serie de fotos de producto. Guarda la indicación final: la próxima vez solo tendrás que cambiar la foto de referencia.",
@@ -60,6 +62,7 @@ ${ok("tienes 3 fotos que parecen de la misma sesión.")}`},
 ]},
 /* ---------------------------------------------------------------- */
 {s:"video-realista",t:"Vídeo realista de cine",d:"Un plano corto que parece rodado con una cámara de cine: paisaje, comida, ciudad o tu producto.",
+kid:"Claude crea un vídeo cortito que parece grabado con una cámara de cine.",ej:"5 segundos de una taza de café humeando con la luz de la mañana",min:30,
 meta:["👩‍🍳 Fácil", "🎥 Vídeo", "🍽 Resultado: un clip de 5 a 10 segundos"],
 q:"¿Qué quieres rodar?",ph:"Describe la escena. Ejemplo: olas rompiendo contra unas rocas al atardecer, a cámara lenta",
 fin:"Tienes tu plano de cine. Junta varios y ya tienes un vídeo: mira la receta «Anuncio vertical para redes».",
@@ -85,6 +88,7 @@ ${tip("Si necesitas un texto en el vídeo (un precio, tu web), no lo pidas a la 
 ]},
 /* ---------------------------------------------------------------- */
 {s:"video-ugc",t:"Vídeo UGC: alguien recomienda tu producto",d:"El estilo de vídeo de redes en el que una persona habla a cámara y enseña un producto, hecho con IA.",
+kid:"Claude crea un vídeo en el que una persona enseña tu producto y habla de él, como en las redes.",ej:"15 segundos de una chica enseñando tu crema y diciendo por qué le gusta",min:40,
 meta:["👩‍🍳 Media", "🎥 Vídeo con voz", "🍽 Resultado: un vídeo vertical de 15 segundos"],
 q:"¿Qué tipo de vídeo UGC quieres?",ph:"Describe tu producto y el vídeo. Ejemplo: una chica de 30 años enseña mi crema de manos en su baño y cuenta por qué le gusta",
 fin:"Tienes tu vídeo UGC. Pruébalo con dos frases de inicio distintas y quédate con la que mejor funcione.",
@@ -158,6 +162,7 @@ ${ok("has elegido un movimiento.")}`},
 ]},
 /* ---------------------------------------------------------------- */
 {s:"personaje",t:"Un personaje que siempre sale igual",d:"Crea la mascota o el presentador de tu marca y úsalo en todas tus imágenes y vídeos.",
+kid:"Creas un personaje para tu marca y Claude lo dibuja siempre igual en todas las fotos y vídeos.",ej:"un zorro naranja con gafas que sale en todos los anuncios de tu librería",min:45,
 meta:["👩‍🍳 Media", "🧑‍🎨 Personaje", "🍽 Resultado: tu personaje en varias escenas, siempre reconocible"],
 q:"¿Qué personaje quieres?",ph:"Describe tu personaje. Ejemplo: un erizo con delantal que es el panadero de mi marca",
 fin:"Tu personaje ya tiene ficha y se reconoce en cada escena. Úsalo en las otras recetas del libro: anuncios, animación o vídeo UGC.",
@@ -181,6 +186,7 @@ ${ok("tu personaje está guardado en Higgsfield, o tienes sus imágenes listas p
 ]},
 /* ---------------------------------------------------------------- */
 {s:"anuncio-redes",t:"Anuncio vertical para redes",d:"Un anuncio de 15 segundos para Reels, TikTok o Shorts, con 3 planos, tu logo y música.",
+kid:"Claude crea un anuncio vertical de 15 segundos para el móvil, con 3 escenas y tu logo.",ej:"un anuncio para Instagram de tu nueva zapatilla: zapatilla, persona corriendo y logo",min:45,
 meta:["👩‍🍳 Media", "📱 Vídeo vertical", "🍽 Resultado: un anuncio de 15 segundos listo para publicar"],
 q:"¿Qué quieres anunciar?",ph:"Describe qué anuncias y para quién. Ejemplo: el lanzamiento de mi nueva colección de tazas para gente que teletrabaja",
 fin:"Tienes tu anuncio. Publica dos versiones con distinto principio y mira cuál funciona mejor.",

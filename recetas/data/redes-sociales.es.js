@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: tus redes sociales con Claude",
 intro:"Instagram, TikTok, LinkedIn, X o Threads, con tu propia voz. Primero le enseñas a Claude cómo hablas y de qué vas a hablar; después eliges la receta: una biografía, un reel, un carrusel, un mes planificado… Claude escribe; tú decides y publicas.",
+kid:"Le enseñas a Claude cómo hablas y de qué quieres hablar. Después te ayuda con tus publicaciones. Publicas tú.",
 meta:["📕 8 recetas", "💶 Gratis", "🍽 Resultado: contenido que suena a ti, cada semana"],
 ing:"Ingredientes",
 fin:"Claude ya conoce tu voz y tus temas. Ahora elige una receta del libro: todas parten de aquí.",
@@ -31,6 +32,7 @@ ${tip("Antes de instalar un plugin de otra persona, echa un vistazo a su reposit
 recetas:[
 /* ---------------------------------------------------------------- */
 {s:"biografia",t:"Una biografía que hace que te sigan",d:"En tres segundos alguien decide si te sigue. Tu biografía tiene que decir qué haces, para quién y por qué seguirte.",
+kid:"Claude te escribe las pocas palabras que salen debajo de tu nombre, para que la gente quiera seguirte.",ej:"«Recetas veganas en 15 minutos 🌱 · Nuevo vídeo cada martes»",min:15,
 meta:["👩‍🍳 Fácil", "👤 Perfil", "🍽 Resultado: tu biografía nueva en cada red"],
 q:"¿En qué red?",ph:"Pega tu biografía actual o di qué haces. Ejemplo: soy fisioterapeuta en Valencia y hablo de postura",
 fin:"Tu perfil ya dice qué haces y para quién. Repite la receta en cada red: no es lo mismo una biografía de LinkedIn que una de TikTok.",
@@ -51,6 +53,7 @@ ${tip("En el nombre visible puedes añadir a qué te dedicas («Ana · Fisio de 
 ]},
 /* ---------------------------------------------------------------- */
 {s:"reel",t:"Un reel o TikTok que engancha",d:"Gancho para el primer segundo, guion de 30 segundos, qué grabar y los subtítulos.",
+kid:"Claude te ayuda a hacer un vídeo corto que engancha desde el primer segundo.",ej:"un reel de 30 segundos que empieza con «3 errores al regar tus plantas»",min:40,
 meta:["👩‍🍳 Fácil", "🎥 Vídeo corto", "🍽 Resultado: un vídeo corto listo para grabar y publicar"],
 q:"¿De qué tipo?",ph:"Di de qué va el vídeo. Ejemplo: 3 errores al sentarte delante del ordenador",
 fin:"Tienes tu vídeo corto. Publica y, dentro de una semana, mira la receta «Mide y mejora» para saber si el gancho funcionó.",
@@ -73,6 +76,7 @@ ${tip("Léelo en voz alta con el cronómetro del móvil. Si pasa de 35 segundos,
 ]},
 /* ---------------------------------------------------------------- */
 {s:"carrusel",t:"Un carrusel que la gente guarda",d:"Diapositivas con una idea cada una, para Instagram o LinkedIn. Si tienes Canva conectado, Claude lo diseña.",
+kid:"Claude te hace varias imágenes seguidas, una idea en cada una, que la gente guarda.",ej:"7 diapositivas: «Cómo ahorrar 100 € al mes sin darte cuenta»",min:30,
 meta:["👩‍🍳 Fácil", "🖼 Carrusel", "🍽 Resultado: un carrusel de 7 diapositivas"],
 q:"¿Qué tipo de carrusel?",ph:"Di de qué va. Ejemplo: 5 ejercicios para la espalda que puedes hacer en la oficina",
 fin:"Tu carrusel está listo. Los carruseles útiles se guardan mucho: es una señal que las redes valoran.",
@@ -94,6 +98,7 @@ ${tip("Letra grande, poco texto y el mismo estilo en todas las diapositivas. La 
 ]},
 /* ---------------------------------------------------------------- */
 {s:"linkedin",t:"Una publicación de LinkedIn que no suena a anuncio",d:"Una historia o un aprendizaje real contado con tu voz, con una primera línea que invita a leer.",
+kid:"Claude te ayuda a contar algo que te pasó en el trabajo sin que suene a anuncio.",ej:"lo que aprendiste al perder tu primer cliente, contado en 150 palabras",min:20,
 meta:["👩‍🍳 Fácil", "💼 LinkedIn", "🍽 Resultado: una publicación lista"],
 q:"¿Sobre qué?",ph:"Cuenta lo que pasó. Ejemplo: este mes perdí un cliente grande y aprendí a cobrar por adelantado",
 fin:"Publicada. En LinkedIn ayuda mucho responder a los comentarios durante la primera hora.",
@@ -113,6 +118,7 @@ steps:[
 ]},
 /* ---------------------------------------------------------------- */
 {s:"una-idea",t:"Una idea, todas tus redes",d:"El truco de los creadores: una buena idea convertida en vídeo corto, carrusel y texto, cada uno con el formato de su red.",
+kid:"Con una sola idea, Claude te prepara un vídeo, un carrusel y un texto para tus redes.",ej:"la idea «cómo elegir un buen melón» en un reel, un carrusel y un post de LinkedIn",min:30,
 meta:["👩‍🍳 Fácil", "♻️ Reutilizar", "🍽 Resultado: la misma idea lista para 3 formatos"],
 q:"¿Qué idea?",ph:"Escribe la idea. Ejemplo: por qué no deberías estirar en frío",
 fin:"Una idea, tres publicaciones. Repártelas a lo largo de la semana.",
@@ -149,6 +155,7 @@ steps:[
 ]},
 /* ---------------------------------------------------------------- */
 {s:"calendario",t:"Tu mes planificado",d:"Un calendario realista de publicaciones para 4 semanas, con tus temas fijos.",
+kid:"Claude te hace un calendario con qué publicar cada día durante un mes.",ej:"4 semanas con lunes de consejo, miércoles de vídeo y viernes de pregunta",min:25,
 meta:["👩‍🍳 Fácil", "📅 Plan", "🍽 Resultado: un mes de publicaciones en una tabla"],
 q:"¿Cuánto quieres publicar?",ph:"Di cuánto tiempo tienes. Ejemplo: solo tengo 2 horas a la semana",
 fin:"Tienes el mes planificado. Publicar con constancia importa más que publicar mucho.",
@@ -167,6 +174,7 @@ ${tip("Graba o escribe varias piezas el mismo día: es más rápido que hacer un
 ]},
 /* ---------------------------------------------------------------- */
 {s:"medir",t:"Mide y mejora cada semana",d:"Con tus datos reales, Claude te dice qué funcionó, qué repetir y cómo responder a tu comunidad.",
+kid:"Le pasas a Claude los números de tus publicaciones y te dice cuáles gustaron más y qué repetir.",ej:"«los vídeos con receta gustan 3 veces más que las fotos: haz más vídeos»",min:20,
 meta:["👩‍🍳 Fácil", "📈 Datos", "🍽 Resultado: qué repetir la semana que viene"],
 q:"¿Qué quieres revisar?",ph:"Di qué te preocupa. Ejemplo: mis reels tienen visitas pero nadie me sigue",
 fin:"Ya sabes qué repetir. Haz esta receta cada semana: en un mes notarás la diferencia.",

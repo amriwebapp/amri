@@ -45,6 +45,8 @@ Leyenda: ☐ pendiente · ☑ hecho
 - ☑ **Recetas específicas en los libros técnicos.** Las 35 recetas de After Effects, Blender, Animaciones, Skills, Conector, GuruSup y Jev tienen ya sus propios pasos, medidas y pruebas.
 - ☑ **Portada más clara.** Un primer paso («Empieza aquí · 15 min, gratis») y qué te llevas; la biblioteca justo después; lo avanzado (conectores, plugin, código) agrupado en «Para ir más allá»; menú de 4 enlaces; fuera las secciones de categorías y manifiesto.
 - ☑ **Hueco para proyectos reales.** Cada receta acepta `portada` y `ejemplo` («📸 Así quedó»).
+- ☑ **Portadas de colección.** Las 22 portadas rehechas con un mismo diseño minimalista: color del libro, pictograma geométrico propio, número de la colección y nº de recetas.
+- ☑ **Entendible por cualquiera al entrar.** Bloque «En pocas palabras» en cada libro (qué es y cómo funciona en 3 pasos) y en cada una de las 99 recetas (una frase sencilla, un ejemplo concreto, el mapa de pasos y el tiempo). Títulos y descripciones vagos, más concretos.
 - ☐ **Afinar cada receta con un proyecto real** (portada, ejemplo y mensajes mejorados). Guía en el README.
 - ☐ **Probar el libro de Higgsfield con una cuenta real**, sobre todo UGC y Soul ID, que dependen de lo que permita el conector.
 

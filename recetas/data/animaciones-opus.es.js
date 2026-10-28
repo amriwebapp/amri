@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: animaciones con Claude Opus 5.5",
 intro:"Claude Opus 5.5 anima con código: del guion a una animación que se mueve en tu navegador, con tu marca, y si quieres un vídeo MP4. Elige el modelo una vez y después la animación que quieres hacer.",
+kid:"Claude puede hacer dibujos que se mueven. Tú le cuentas qué quieres ver y él lo anima en tu navegador.",
 meta:["📕 5 recetas","💶 Mejor con un plan de pago de Claude","🍽 Resultado: animaciones en tu navegador o en MP4"],
 ing:"Ingredientes",
 fin:"Ya tienes a Opus como chef. Elige qué animación quieres.",
@@ -18,6 +19,7 @@ ${tip("Haz toda la animación en el mismo chat. Así Claude recuerda el storyboa
 ]},
 recetas:[
 {s:"logo",t:"Tu logo animado",d:"Tu logo apareciendo letra a letra con un brillo final, listo para tu web o tus vídeos.",
+kid:"Le das tu logo a Claude y él hace que aparezca poco a poco, como por arte de magia.",ej:"el logo de tu panadería apareciendo letra a letra en 5 segundos",min:20,
 meta:["👩‍🍳 Fácil","✨ Logo","🍽 Resultado: tu logo animado en tu navegador"],
 q:"¿Cómo quieres que aparezca?",ph:"Descríbelo. Ejemplo: que se dibuje como si alguien lo escribiera a mano",
 fin:"Tu logo se mueve. Úsalo como intro de vídeos o al cargar tu web.",
@@ -32,6 +34,7 @@ steps:[
 {t:"Ajusta y guarda",s:"pulir",b:()=>`${cb("En el segundo [x], [lo que pasa] → [lo que quiero]. Cambia solo eso.")}<ol><li>Cuando te guste, pide: «Dame el código para pegarlo en mi web» o descarga el archivo.</li></ol>${ok("tienes tu logo animado guardado.")}`}
 ]},
 {s:"explicacion",t:"Una explicación animada",d:"30 segundos que explican cómo funciona tu servicio en 3 pasos, con iconos y textos grandes, en MP4.",
+kid:"Claude hace un vídeo cortito con dibujos que explica lo que haces, en 3 pasos fáciles.",ej:"«Pides, cocinamos, te lo llevamos»: 30 segundos para la web de un restaurante",min:40,
 meta:["👩‍🍳 Media","💡 Explicar","🍽 Resultado: una animación explicativa en MP4"],
 q:"¿Qué quieres explicar?",ph:"Escribe los 3 pasos. Ejemplo: eliges el menú, lo cocinamos, te llega a casa",
 fin:"Tu explicación animada está lista. Ponla en tu web o en tus redes.",
@@ -46,6 +49,7 @@ steps:[
 {t:"Conviértela en MP4",s:"Claude Code",b:()=>`<ol><li>Guarda el código como <code>animacion.html</code> en una carpeta nueva y ábrela en Claude Code.</li><li>Pega:</li></ol>${cb("En esta carpeta está animacion.html, con una función render(t) y una constante DUR. Crea un script que abra la página con Playwright (Chromium) a 1920×1080, llame a render(t) para cada fotograma a 30 fps, haga una captura y las una con ffmpeg en un MP4 H.264 (yuv420p). Instala lo que falte y explícame cada comando antes de ejecutarlo.")}${tip("Sin Claude Code, puedes grabar la pantalla mientras se reproduce: queda peor, pero sirve para probar.")}${ok("tienes animacion.mp4.")}`}
 ]},
 {s:"reel",t:"Un reel vertical animado",d:"15 segundos en vertical con textos grandes que presentan tu oferta, en MP4 para redes.",
+kid:"Claude hace un vídeo vertical con letras grandes que se mueven, para el móvil.",ej:"un reel de 15 segundos que anuncia «2x1 en cafés este viernes»",min:30,
 meta:["👩‍🍳 Media","📱 Reel","🍽 Resultado: un reel en MP4 (1080×1920)"],
 q:"¿Qué quieres presentar?",ph:"Di qué. Ejemplo: mi oferta de verano: 3 clases de yoga por 30 €",
 fin:"Tu reel está listo. Súbelo desde el móvil con una música de la biblioteca de la red.",
@@ -59,7 +63,8 @@ steps:[
 {t:"Revísalo en pequeño",s:"como en el móvil",b:()=>`<p class="what">Míralo a tamaño de móvil. ¿Se lee cada texto sin pausar?</p>${cb("En el segundo [x], el texto dura poco. Déjalo 1 segundo más y ajusta el resto. No cambies nada más.")}${ok("cada texto se lee sin pausar.")}`},
 {t:"Conviértelo en MP4",s:"Claude Code",b:()=>`<ol><li>Guarda el código como <code>reel.html</code> en una carpeta y ábrela en Claude Code.</li></ol>${cb("En esta carpeta está reel.html con render(t) y DUR. Crea un script que lo grabe con Playwright a 1080×1920, 30 fps, y lo una con ffmpeg en un MP4 H.264 (yuv420p) compatible con Instagram y TikTok. Explícame cada comando antes de ejecutarlo.")}${ok("tienes reel.mp4 y se ve bien en tu móvil.")}`}
 ]},
-{s:"datos",t:"Datos en movimiento",d:"Un gráfico que crece y cuenta una historia con tus números.",
+{s:"datos",t:"Un gráfico animado con tus números",d:"Barras o líneas que crecen solas y cuentan una historia con tus números: ventas, visitas o clientes.",
+kid:"Le das tus números a Claude y él hace un gráfico que crece solo, como una planta.",ej:"las ventas de tu tienda de enero a junio, subiendo mes a mes",min:30,
 meta:["👩‍🍳 Media","📊 Datos","🍽 Resultado: un gráfico animado"],
 q:"¿Qué datos?",ph:"Pega tus números. Ejemplo: ventas de enero a diciembre",
 fin:"Tus datos cuentan una historia. Ponlo en una presentación o en redes.",
@@ -74,6 +79,7 @@ steps:[
 {t:"Hazlo tuyo y guárdalo",s:"marca",b:()=>`${cb("Aplica mis colores [#xxxxxx, #xxxxxx] y mi tipografía. Después dame el código para guardarlo.")}${ok("tienes tu gráfico animado guardado.")}`}
 ]},
 {s:"web",t:"Una animación para tu web",d:"Un fondo suave con formas que flotan para tu portada, que no distrae ni ralentiza.",
+kid:"Claude hace un fondo con formas que flotan despacito para que tu web se vea bonita.",ej:"círculos suaves con tus colores moviéndose detrás del título de tu web",min:25,
 meta:["👩‍🍳 Fácil","🌐 Web","🍽 Resultado: una animación lista para pegar en tu web"],
 q:"¿Dónde va?",ph:"Di dónde. Ejemplo: detrás del título de mi portada",
 fin:"Tu web se mueve con calma. Revisa que sigue cargando rápido en el móvil.",

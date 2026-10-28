@@ -122,7 +122,7 @@ _prueba de fuego_
 
 ### Receta 2: Ponlo en tu web
 
-Pega un pequeño código y aparece la burbuja del chat.
+Copias un trozo de código, lo pegas en tu web y aparece la burbuja del chat abajo a la derecha.
 
 - 👩‍🍳 Fácil
 - 🌐 Web

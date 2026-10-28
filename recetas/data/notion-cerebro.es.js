@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: tu segundo cerebro en Notion",
 intro:"Con el conector de Notion, Claude ordena tus notas, crea bases de datos y te resume la semana dentro de tu propio Notion. Conecta Notion una vez y elige qué organizar.",
+kid:"Notion es una libreta digital. Claude entra en tu Notion y te ordena las notas, los proyectos y las reuniones.",
 meta:["📕 6 recetas", "💶 Gratis si tu plan de Claude incluye conectores", "🍽 Resultado: un Notion ordenado que se resume solo"],
 ing:"Ingredientes (todos gratuitos)",
 fin:"Notion está conectado. Elige qué quieres organizar.",
@@ -16,6 +17,7 @@ steps:[
 ]},
 recetas:[
 {s:"ordenar",t:"Ordena tus notas sueltas",d:"Claude revisa lo que tienes, propone una estructura y la monta.",
+kid:"Claude mira tus notas desordenadas y las coloca en carpetas que tienen sentido.",ej:"40 notas sueltas ordenadas en Trabajo, Casa, Ideas y Viajes",min:30,
 meta:["👩‍🍳 Fácil", "🗂 Orden", "🍽 Resultado: tus notas agrupadas por tema"],
 q:"¿Qué quieres ordenar?",ph:"Di qué. Ejemplo: las ideas para mi tesis, con fuentes y citas",
 fin:"Tus notas tienen sitio. Sigue con «Tu repaso de los viernes» para mantenerlo.",
@@ -31,6 +33,7 @@ steps:[
 {t:"Que lo monte",s:"con permiso",b:()=>`${cb("OK. Crea la estructura y mueve o copia ahí mis páginas. Dime cuáles has tocado. No borres nada.")}${ok("abres Notion y ves tus notas ordenadas.")}`}
 ]},
 {s:"proyectos",t:"Proyectos y tareas en un tablero",d:"Una base de datos con tus proyectos, fechas y estado, con vista de tablero y calendario.",
+kid:"Claude te hace un tablero con tus proyectos y tareas, con columnas de «por hacer», «haciendo» y «hecho».",ej:"un tablero con las tareas de la mudanza y la fecha de cada una",min:25,
 meta:["👩‍🍳 Fácil", "✅ Tareas", "🍽 Resultado: tu tablero de proyectos"],
 q:"¿Qué proyectos?",ph:"Di cuáles. Ejemplo: los encargos de mis clientes de diseño",
 fin:"Tu tablero está listo. Añade tareas con un mensaje: «Añade al tablero: …».",
@@ -46,6 +49,7 @@ steps:[
 {t:"Añade tareas hablando",s:"usarlo",b:()=>`${cb("Añade a «Mis proyectos»: [tarea, proyecto, fecha]. Y dime qué vence esta semana.")}${ok("la tarea aparece en el tablero.")}`}
 ]},
 {s:"repaso",t:"Tu repaso de los viernes",d:"Cada viernes, un resumen de la semana, tus prioridades y lo que se está olvidando.",
+kid:"Cada viernes Claude te cuenta qué hiciste en la semana y qué se te está olvidando.",ej:"«Esta semana terminaste 6 tareas; la factura de Juan lleva 10 días esperando»",min:10,
 meta:["👩‍🍳 Muy fácil", "🔁 Rutina", "🍽 Resultado: tu resumen semanal guardado en Notion"],
 q:"¿Qué quieres repasar?",ph:"Di qué. Ejemplo: mis proyectos y mis notas de reuniones",
 fin:"Repite cada viernes. En un mes tendrás un diario de tu trabajo.",
@@ -74,6 +78,7 @@ steps:[
 {t:"Tu primera ficha",s:"probar",b:()=>`${cb("Acabo de leer [título]. Mis notas: [pégalas]. Crea su ficha con un resumen de 5 líneas y mis 3 mejores citas.")}${ok("tienes tu primera ficha.")}`}
 ]},
 {s:"actas",t:"Actas de reuniones en Notion",d:"Pegas tus notas desordenadas y Claude crea un acta limpia con acuerdos y tareas.",
+kid:"Pegas tus apuntes desordenados de una reunión y Claude los convierte en un resumen limpio.",ej:"tus notas de la reunión del lunes convertidas en acuerdos y tareas con nombre y fecha",min:10,
 meta:["👩‍🍳 Muy fácil", "📝 Actas", "🍽 Resultado: un acta en Notion"],
 q:"¿Qué reunión?",ph:"Di cuál. Ejemplo: la reunión mensual de la asociación de vecinos",
 fin:"Tu acta está guardada. Si usas el tablero de proyectos, Claude puede añadir ahí las tareas.",
