@@ -84,9 +84,9 @@ Antes de diseñar, propón siempre los textos y espera mi OK.
 
 ## Recetas del libro
 
-### Receta 1: Posts para Instagram
+### Receta 1: Tres posts para Instagram
 
-Tres posts con tu marca, listos para publicar o retocar.
+Tres publicaciones cuadradas con tus colores y tus textos, listas para subir o retocar en Canva.
 
 - 👩‍🍳 Fácil
 - 📱 Redes
@@ -126,9 +126,9 @@ _tu toque_
 
 **Al terminar:** Tus posts están en Canva. Para el texto que acompaña a cada post, mira el libro de redes sociales.
 
-### Receta 2: Una presentación
+### Receta 2: Una presentación para explicar algo
 
-Diapositivas claras y visuales para explicar tu proyecto o tu clase.
+Entre 6 y 10 diapositivas claras, con poco texto y una idea por diapositiva, para una clase, un proyecto o una reunión.
 
 - 👩‍🍳 Fácil
 - 📊 Presentación

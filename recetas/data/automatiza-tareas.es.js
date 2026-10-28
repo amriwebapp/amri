@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: automatiza tareas aburridas con IA",
 intro:"Con Zapier, una tarea se hace sola cada vez que pasa algo: llega un correo, alguien rellena un formulario… Claude te ayuda a montar cada automatización paso a paso. Prepara tu cuenta una vez y elige qué automatizar.",
+kid:"Algunas tareas se pueden hacer solas. Tú dices «cuando pase esto, haz aquello» y Zapier lo hace siempre por ti.",
 meta:["📕 5 recetas", "💶 Gratis (con los límites del plan gratuito de Zapier)", "🍽 Resultado: tareas que se hacen solas"],
 ing:"Ingredientes (todos gratuitos)",
 fin:"Tu cocina está lista. Elige la primera tarea que quieres quitarte de encima.",
@@ -17,6 +18,7 @@ steps:[
 ]},
 recetas:[
 {s:"resumir-correos",t:"Correos importantes resumidos en una hoja",d:"Cuando llega un correo con una etiqueta, la IA lo resume en 3 puntos y lo apunta en Google Sheets.",
+kid:"Cada vez que llega un correo importante, un robot lo resume y lo apunta en una lista.",ej:"cada correo con la etiqueta «Clientes» resumido en 3 puntos en una hoja de Google",min:30,
 meta:["👩‍🍳 Media", "📧 Gmail + IA + Sheets", "🍽 Resultado: una hoja que se rellena sola"],
 q:"¿Qué correos?",ph:"Di cuáles. Ejemplo: los de clientes que piden presupuesto",
 fin:"Cada correo con la etiqueta se resume y se apunta solo.",
@@ -49,6 +51,7 @@ steps:[
 {t:"La acción y la prueba",s:"encender",b:()=>`<ol><li>Añade <b>Google Drive → Upload File</b>, elige la carpeta <b>Facturas</b> y, en el archivo, el adjunto del paso anterior.</li><li>Pulsa <b>Test step</b> y luego <b>Publish</b>.</li></ol>${ok("la factura de prueba aparece en la carpeta.")}`}
 ]},
 {s:"citas-calendario",t:"Citas de los correos al calendario",d:"Cuando un correo menciona una cita con fecha y hora, la IA la extrae y crea el evento.",
+kid:"Si un correo dice «nos vemos el martes a las 5», la cita aparece sola en tu calendario.",ej:"la confirmación del dentista se convierte en un evento del martes a las 17:00",min:30,
 meta:["👩‍🍳 Media", "📅 Gmail + IA + Calendar", "🍽 Resultado: eventos creados solos"],
 q:"¿Qué citas?",ph:"Di cuáles. Ejemplo: las reservas que me mandan los clientes por correo",
 fin:"Las citas llegan solas a tu calendario. Revísalas de vez en cuando: la IA puede equivocarse con una fecha.",
@@ -64,6 +67,7 @@ steps:[
 {t:"Crea el evento",s:"encender",b:()=>`<ol><li>Añade <b>Google Calendar → Create Detailed Event</b> y rellena título, inicio y lugar con los datos de la IA.</li><li>Pulsa <b>Test step</b> y luego <b>Publish</b>.</li></ol>${tip("Añade un <b>Filter</b> antes del evento: que siga solo si la IA ha encontrado fecha.")}${ok("el evento de prueba aparece en tu calendario.")}`}
 ]},
 {s:"formulario-hoja",t:"Formulario a hoja, con aviso",d:"Cuando alguien rellena tu formulario, se apunta en una hoja y te llega un correo.",
+kid:"Cuando alguien rellena tu formulario, se apunta solo en una lista y te llega un aviso.",ej:"cada inscripción a tu taller apuntada en una hoja y un correo que dice «¡Nueva inscripción!»",min:25,
 meta:["👩‍🍳 Fácil", "📋 Forms + Sheets + Gmail", "🍽 Resultado: respuestas ordenadas y aviso al momento"],
 q:"¿Qué formulario?",ph:"Di cuál. Ejemplo: el de inscripción a mi taller",
 fin:"Cada respuesta se apunta sola y te avisa.",
@@ -79,6 +83,7 @@ steps:[
 {t:"El aviso",s:"enterarte",b:()=>`<ol><li>Añade <b>Gmail → Send Email</b> a tu propio correo, con el nombre y la respuesta en el texto.</li><li>Pulsa <b>Publish</b> y rellena el formulario otra vez.</li></ol>${ok("te llega el correo de aviso y la fila nueva.")}`}
 ]},
 {s:"clasificar",t:"Clasifica mensajes y avísame de lo urgente",d:"La IA lee cada correo de cliente, lo clasifica (duda, queja, pedido) y solo te avisa de lo urgente.",
+kid:"Un robot lee los mensajes de tus clientes, los ordena y solo te avisa de lo urgente.",ej:"«mi pedido no ha llegado» va a Quejas y te avisa; «¿abrís el sábado?» va a Dudas",min:35,
 meta:["👩‍🍳 Media", "⚖️ IA + filtro", "🍽 Resultado: solo te enteras de lo urgente"],
 q:"¿Qué mensajes?",ph:"Di cuáles. Ejemplo: los correos que llegan a info@ de mi tienda",
 fin:"Ya solo te llegan avisos de lo urgente. Para clasificar a gran escala, mira el libro de Jev.",

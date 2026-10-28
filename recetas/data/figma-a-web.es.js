@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: de Figma a web real",
 intro:"Con el conector de Figma, Claude lee tu diseño (capas, colores, textos y medidas) y lo convierte en una web que funciona. Conecta Figma y ordena tu diseño una vez; después elige qué convertir.",
+kid:"Figma es una app para dibujar cómo será una web. Claude mira tu dibujo y lo convierte en una web que funciona.",
 meta:["📕 5 recetas", "💶 Gratis si tu plan de Claude incluye conectores", "🍽 Resultado: tu diseño convertido en web"],
 ing:"Ingredientes (todos gratuitos)",
 fin:"Figma está conectado y tu diseño ordenado. Elige qué convertir.",
@@ -16,6 +17,7 @@ steps:[
 ]},
 recetas:[
 {s:"pagina",t:"Una página completa",d:"Tu página de inicio o tu portfolio, convertidos en un index.html fiel al diseño.",
+kid:"Claude mira tu diseño de Figma y lo convierte en una página web de verdad.",ej:"el diseño de tu portfolio convertido en una web que se abre en el navegador",min:40,
 meta:["👩‍🍳 Media", "🖥 Página", "🍽 Resultado: tu página como web"],
 q:"¿Qué página?",ph:"Di qué hay. Ejemplo: la página de inicio de mi estudio de yoga",
 fin:"Tu diseño ya es una web. Para publicarla, mira «Publícala».",
@@ -31,6 +33,7 @@ steps:[
 {t:"Guarda la versión buena",s:"copia",b:()=>`<p class="what">Guarda el archivo y la conversación: si cambias el diseño, pedirás solo esa parte.</p>${ok("tienes la versión final guardada.")}`}
 ]},
 {s:"componente",t:"Un componente: botón, tarjeta o menú",d:"Una pieza suelta, con sus estados (normal, al pasar el ratón), lista para reutilizar.",
+kid:"Claude convierte una pieza de tu diseño, como un botón, en código que puedes reutilizar.",ej:"un botón que cambia de color al pasar el ratón por encima",min:20,
 meta:["👩‍🍳 Fácil", "🧩 Componente", "🍽 Resultado: el código de un componente"],
 q:"¿Qué componente?",ph:"Di cuál. Ejemplo: la tarjeta de producto con precio y botón",
 fin:"Tu componente está listo para usarlo en cualquier página.",
@@ -45,6 +48,7 @@ steps:[
 {t:"Pruébalo",s:"estados",b:()=>`<p class="what">Pasa el ratón por encima, pulsa y míralo en el móvil.</p>${ok("se comporta como en el diseño.")}`}
 ]},
 {s:"app",t:"Una pantalla de app móvil",d:"La pantalla principal de tu app, como web que se ve en el móvil.",
+kid:"Claude convierte la pantalla de tu app dibujada en Figma en algo que puedes tocar en el móvil.",ej:"la pantalla de inicio de una app de recetas, funcionando en tu móvil",min:35,
 meta:["👩‍🍳 Media", "📱 App", "🍽 Resultado: tu pantalla de app funcionando en el navegador"],
 q:"¿Qué pantalla?",ph:"Descríbela. Ejemplo: la pantalla de inicio con menú inferior y lista de tarjetas",
 fin:"Tu pantalla funciona. Es un prototipo: para una app real hará falta más trabajo.",
@@ -59,6 +63,7 @@ steps:[
 {t:"Pruébala en tu móvil",s:"tocar",b:()=>`<ol><li>Ábrela en el navegador con el modo móvil (F12 e icono del teléfono).</li><li>Pide ajustes de uno en uno.</li></ol>${ok("se ve y se toca como en el diseño.")}`}
 ]},
 {s:"variables",t:"Tus colores y letras como variables",d:"Convierte los estilos de Figma en variables CSS: cambias un color y cambia en toda la web.",
+kid:"Claude guarda tus colores y letras en un sitio, para cambiarlos todos de una vez.",ej:"cambias tu azul por verde en un solo sitio y toda la web se vuelve verde",min:20,
 meta:["👩‍🍳 Media", "🎨 Estilos", "🍽 Resultado: tu web lista para cambiar de colores en un minuto"],
 q:"¿Qué estilos tienes?",ph:"Di cuáles. Ejemplo: 4 colores y 2 tipografías en Figma",
 fin:"Ahora cambiar la marca de tu web es cuestión de un minuto.",

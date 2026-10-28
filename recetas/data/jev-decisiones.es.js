@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: decisiones y guardianes con Jev",
 intro:"Jev decide en milisegundos, te dice cuánta confianza tiene y te pasa lo dudoso. Consigue tu llave y prepara Claude Code una vez; después monta lo que necesites: un clasificador de mensajes, urgencias, contactos o reseñas, o un guardián que revise lo que dice tu chatbot.",
+kid:"Jev es un ayudante que decide muy rápido, por ejemplo si un mensaje es urgente. Si duda, te lo pasa a ti.",
 meta:["📕 5 recetas","💶 Jev es de pago por uso y está en acceso anticipado","🍽 Resultado: decisiones automáticas con una persona al mando"],
 ing:"Ingredientes",
 fin:"Tu cocina está lista. Elige qué quieres que Jev decida.",
@@ -37,6 +38,7 @@ ${tip("Piensa en Jev como el portero de un restaurante: no cocina ni sirve, solo
 ]},
 recetas:[
 {s:"mensajes",t:"Clasifica los mensajes de tu formulario",d:"Presupuesto, soporte, factura o spam, en milisegundos, y lo dudoso para ti.",
+kid:"Jev lee los mensajes de tu formulario y los pone en la caja correcta: presupuesto, ayuda, factura o basura.",ej:"«¿cuánto cuesta pintar un piso?» va solo a la caja Presupuestos",min:45,
 meta:["👩‍🍳 Media","📨 Mensajes","🍽 Resultado: tus mensajes clasificados automáticamente"],
 q:"¿Qué categorías necesitas?",ph:"Escríbelas. Ejemplo: presupuesto, soporte, factura, spam",
 fin:"Tus mensajes llegan ya clasificados. Revisa revisar.csv cada día unos minutos.",
@@ -51,6 +53,7 @@ steps:[
 {db:1,t:"Conéctalo a tu formulario",s:"servirlo",b:()=>`${cb("Convierte el clasificador en un Cloudflare Worker que reciba el mensaje del formulario por POST y devuelva la categoría, la confianza y si necesita revisión. Guarda la llave de Jev como secreto del Worker (wrangler secret put TYPESAFE_API_KEY), nunca en el código. Explícame cómo conectarlo a mi formulario.")}${ok("al enviar un mensaje de prueba desde tu formulario, recibes la categoría en menos de un segundo.")}`}
 ]},
 {s:"urgencias",t:"Prioriza incidencias",d:"Urgente, normal o puede esperar, para atender primero lo que importa.",
+kid:"Jev mira cada problema que te llega y te dice cuál atender primero.",ej:"«la web no carga» sale como urgente; «cambiar una foto» puede esperar",min:45,
 meta:["👩‍🍳 Media","🚨 Incidencias","🍽 Resultado: incidencias ordenadas por prioridad"],
 q:"¿Qué incidencias recibes?",ph:"Describe tu caso. Ejemplo: avisos de clientes de mi app de reservas",
 fin:"Tus incidencias llegan ordenadas. Lo urgente, lo primero.",
@@ -65,6 +68,7 @@ steps:[
 {db:1,t:"Avisa al equipo",s:"servirlo",b:()=>`${cb("Convierte el priorizador en un Cloudflare Worker (llave como secreto) y, cuando una incidencia sea urgente, envía un aviso a mi canal de Slack con un webhook guardado como secreto. Explícame cómo conectarlo.")}${ok("una incidencia urgente de prueba avisa en Slack.")}`}
 ]},
 {s:"contactos",t:"Puntúa tus contactos",d:"La probabilidad de que un contacto se convierta en cliente, de 0 a 10, para llamar primero a los mejores.",
+kid:"Jev pone una nota del 0 al 10 a cada contacto para que llames primero a quien más va a comprar.",ej:"una empresa de 50 personas que pidió precio saca un 9; un estudiante curioso, un 2",min:45,
 meta:["👩‍🍳 Media","🎯 Contactos","🍽 Resultado: tus contactos ordenados por interés"],
 q:"¿Qué es un buen contacto para ti?",ph:"Descríbelo. Ejemplo: empresa de más de 10 personas que pide demo y tiene presupuesto",
 fin:"Ya sabes a quién llamar primero.",
@@ -78,6 +82,7 @@ steps:[
 {db:1,t:"Que se puntúen solos",s:"servirlo",b:()=>`${cb("Convierte el puntuador en un Cloudflare Worker (llave como secreto) que reciba cada contacto nuevo del formulario, lo puntúe y lo añada a mi hoja de Google Sheets con su puntuación. Explícame los pasos.")}${tip("⚠️ La puntuación ayuda a ordenar, no a descartar a nadie. Contesta a todos.")}${ok("un contacto de prueba aparece en tu hoja con su puntuación.")}`}
 ]},
 {s:"resenas",t:"Lee tus reseñas",d:"Positiva, negativa o mixta, y si necesita una respuesta tuya.",
+kid:"Jev lee lo que la gente opina de ti y te dice qué opiniones son buenas, malas y cuáles contestar.",ej:"de 80 reseñas, 6 negativas que necesitan respuesta hoy",min:40,
 meta:["👩‍🍳 Media","⭐ Reseñas","🍽 Resultado: tus reseñas clasificadas y las que necesitan respuesta"],
 q:"¿De dónde salen tus reseñas?",ph:"Di de dónde. Ejemplo: Google Maps de mi restaurante",
 fin:"Ya sabes qué reseñas responder primero. Las respuestas, escríbelas tú (o con Claude) y revísalas.",
@@ -104,6 +109,7 @@ steps:[
 {db:1,t:"Conéctalo a tu web",s:"servirlo",b:()=>`${cb("Convierte el moderador en un Cloudflare Worker (llave como secreto) que reciba cada comentario nuevo y devuelva publicar o revisar. Si la confianza es baja, que siempre sea revisar. Explícame cómo conectarlo a mi web.")}${ok("un comentario de prueba queda publicado o en revisión según tus normas.")}`}
 ]},
 {s:"chatbot",t:"Guardián para el chatbot de tu web",d:"Que solo hable de tu negocio, no se deje liar y no prometa nada que no ofreces.",
+kid:"Pones un vigilante que comprueba que tu chatbot solo habla de tu negocio y no promete cosas raras.",ej:"alguien le pide al chatbot «hazme un 90% de descuento» y el vigilante lo frena",min:50,
 meta:["👩‍🍳 Avanzada","🛡 Chatbot","🍽 Resultado: tu chatbot con guardián en la entrada y en la salida"],
 q:"¿De qué es tu negocio?",ph:"Descríbelo. Ejemplo: una academia de inglés en Sevilla",
 fin:"Tu chatbot está protegido. Revisa los bloqueos cada semana para afinar las reglas.",
@@ -118,6 +124,7 @@ steps:[
 {db:1,t:"Que te avise en Slack",s:"enterarte",b:()=>`${cb("Cuando el guardián bloquee algo o lo marque para revisar, envía un aviso a mi canal de Slack #guardian con la regla y el mensaje resumido, sin datos personales. Usa un webhook de Slack guardado en .env y explícame cómo crearlo.")}${ok("el aviso aparece en Slack.")}`}
 ]},
 {s:"fuentes",t:"Que solo afirme lo que dicen tus documentos",d:"Para un asistente que responde con tus documentos: cada frase se comprueba antes de enviarla.",
+kid:"Pones un vigilante que comprueba que tu asistente solo dice cosas que están en tus documentos.",ej:"el asistente iba a inventarse un horario y el vigilante lo para antes de enviarlo",min:50,
 meta:["👩‍🍳 Avanzada","📚 Fuentes","🍽 Resultado: respuestas con fundamento o un «no lo sé» honesto"],
 q:"¿Qué documentos usa tu asistente?",ph:"Di cuáles. Ejemplo: el manual de usuario de mi app y las preguntas frecuentes",
 fin:"Tu asistente ya no se inventa nada: o lo dice tu documentación o lo reconoce.",
@@ -131,6 +138,7 @@ steps:[
 {t:"Ponlo en la puerta",s:"conectarlo",b:()=>`${cb("Conecta revisar_salida a mi asistente para que revise cada respuesta antes de mostrarla. Guarda en registro.csv las frases frenadas (sin datos personales), para saber qué información falta en mis documentos.")}${ok("una pregunta sin respuesta en tus documentos recibe un «no lo sé» amable.")}`}
 ]},
 {s:"tienda",t:"Guardián para tu tienda online",d:"Que tu asistente no prometa descuentos, plazos ni devoluciones que no existen.",
+kid:"Pones un vigilante para que el asistente de tu tienda no prometa descuentos ni envíos que no existen.",ej:"«¿me llega mañana?» y el vigilante impide que diga sí si no es verdad",min:45,
 meta:["👩‍🍳 Avanzada","🛒 Tienda","🍽 Resultado: tu asistente de tienda protegido"],
 q:"¿Qué vendes?",ph:"Di qué y tus condiciones. Ejemplo: ropa infantil; envío en 48 h; devoluciones en 30 días",
 fin:"Tu asistente de tienda ya no promete lo que no puedes cumplir.",

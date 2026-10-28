@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: edita vídeo con Claude y After Effects",
 intro:"Conecta Claude con After Effects una vez y después pídele en español intros, títulos, vídeos verticales y anuncios animados. Claude crea las capas y las animaciones dentro de tu proyecto; tú previsualizas, ajustas y exportas.",
+kid:"After Effects es un programa para hacer vídeos con movimiento. Claude lo maneja por ti mientras se lo pides en español.",
 meta:["📕 4 recetas","💶 After Effects es de pago","🍽 Resultado: vídeos animados en MP4"],
 ing:"Ingredientes (todos gratuitos)",
 fin:"After Effects está conectado con Claude. Elige qué vídeo quieres hacer.",
@@ -50,6 +51,7 @@ ${tip("Es un proyecto de la comunidad, no de Adobe ni de Anthropic. Úsalo con t
 ]},
 recetas:[
 {s:"intro-logo",t:"Una intro con tu logo",d:"Tu logo apareciendo con un brillo, 5 segundos en horizontal, para el principio de tus vídeos.",
+kid:"Claude hace que tu logo aparezca con un brillo al principio de tus vídeos.",ej:"5 segundos con tu logo apareciendo antes de cada vídeo de tu canal",min:30,
 meta:["👩‍🍳 Media","🎬 Intro","🍽 Resultado: tu intro en MP4 (1920×1080)"],
 q:"¿Qué estilo de intro?",ph:"Describe cómo quieres que aparezca tu logo. Ejemplo: que se dibuje solo y termine con un destello dorado",
 fin:"Tu intro está lista. Pégala al principio de tus vídeos en cualquier editor.",
@@ -64,6 +66,7 @@ steps:[
 {t:"Exporta a MP4",s:"Media Encoder",b:()=>`<ol><li>Selecciona la composición y elige <b>Composition → Add to Adobe Media Encoder Queue</b>.</li><li>Formato <b>H.264</b>, preset <b>«Match Source - High bitrate»</b>.</li><li>Pulsa el botón verde de <b>Play</b>.</li></ol>${ok("tienes intro.mp4 y se ve igual que en After Effects.")}`}
 ]},
 {s:"titulos",t:"Títulos y rótulos animados",d:"El título de tu canal y un rótulo con tu nombre y cargo, con fondo transparente para ponerlos encima de tus vídeos.",
+kid:"Claude crea letras que se mueven para poner encima de tus vídeos, como tu nombre y tu cargo.",ej:"«Ana Ruiz · Nutricionista» entrando por la izquierda en tu entrevista",min:30,
 meta:["👩‍🍳 Media","🔤 Títulos","🍽 Resultado: títulos con fondo transparente (.mov)"],
 q:"¿Qué títulos necesitas?",ph:"Escribe los textos. Ejemplo: «Recetas de la abuela» y «Lola Martín · Cocinera»",
 fin:"Tus títulos están listos. Arrástralos encima de tus vídeos en el editor que uses.",
@@ -78,6 +81,7 @@ steps:[
 {t:"Exporta con fondo transparente",s:"Media Encoder",b:()=>`<ol><li><b>Composition → Add to Adobe Media Encoder Queue</b>.</li><li>Formato <b>QuickTime</b>, códec <b>Apple ProRes 4444</b>, y en el vídeo activa el canal <b>alfa</b> (RGB + Alpha).</li><li>Pulsa <b>Play</b>.</li></ol>${tip("Un MP4 no guarda transparencia: por eso aquí se usa .mov. Tu editor lo pondrá encima de tus vídeos sin fondo negro.")}${cb("¿Cómo exporto esta composición con fondo transparente desde Media Encoder? Dime exactamente qué elegir en cada desplegable.")}${ok("al poner el .mov sobre un vídeo, no aparece fondo negro.")}`}
 ]},
 {s:"vertical",t:"Vídeo vertical con texto animado",d:"15 segundos en 9:16 con tu clip de fondo y un texto grande que se mueve, para Reels, TikTok o Shorts.",
+kid:"Claude pone un texto grande que se mueve encima de tu vídeo, en formato de móvil.",ej:"tu vídeo de la playa con el texto «5 calas secretas de Menorca»",min:35,
 meta:["👩‍🍳 Media","📱 Vertical","🍽 Resultado: un vídeo vertical en MP4 (1080×1920)"],
 q:"¿Qué vídeo quieres?",ph:"Describe el clip y el texto. Ejemplo: mi clip amasando pan con el texto «Pan de verdad, cada mañana»",
 fin:"Tu vídeo vertical está listo para subirlo desde el móvil.",
@@ -92,6 +96,7 @@ steps:[
 {t:"Exporta para redes",s:"Media Encoder",b:()=>`<ol><li><b>Composition → Add to Adobe Media Encoder Queue</b>.</li><li>Formato <b>H.264</b>, preset <b>«Match Source - High bitrate»</b> (mantiene el 1080×1920).</li><li>Pulsa <b>Play</b> y pásalo al móvil.</li></ol>${ok("tienes el MP4 vertical y se ve bien en tu móvil.")}`}
 ]},
 {s:"anuncio",t:"Anuncio animado de producto",d:"10 segundos con fondo de color, el nombre de tu producto entrando con movimiento y el precio al final.",
+kid:"Claude crea un anuncio de 10 segundos con el nombre de tu producto y su precio.",ej:"un fondo amarillo, «Zumo Sol» entrando con un salto y «2,50 €» al final",min:40,
 meta:["👩‍🍳 Media","🛍 Anuncio","🍽 Resultado: un anuncio en MP4, cuadrado y vertical"],
 q:"¿Qué producto?",ph:"Nombre, precio y una ventaja. Ejemplo: «Vela Lavanda», 18 €, dura 40 horas",
 fin:"Tu anuncio está listo en dos formatos. Pruébalo en redes con dos colores de fondo distintos.",

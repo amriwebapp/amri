@@ -41,9 +41,31 @@ function card(r,i){var st=recState(r);
     (r.d?'<small>'+esc(r.d)+'</small>':'')+'<span class="lb-ch">'+(r.meta||[]).slice(0,1).map(function(m){return '<i>'+esc(m)+'</i>'}).join("")+
     (st.n&&!st.ok?'<i class="lb-pr">'+st.n+' de '+st.of+' pasos</i>':'')+'</span></span><span class="lb-go" aria-hidden="true">→</span></a>'}
 
+/* «En pocas palabras»: lo primero que se lee al entrar, para que lo entienda cualquiera.
+   Datos: kid (una frase sencilla) en el libro y en cada receta; ej (un ejemplo) y min (minutos) en cada receta */
+function mins(m){var h=Math.floor(m/60),r=m%60;return h?h+" h"+(r?" "+r+" min":""):m+" min"}
+function easy(after,html){if(!after)return;var box=document.createElement("section");box.className="lb-easy";box.innerHTML=html;after.parentNode.insertBefore(box,after.nextSibling)}
+function easyRecipe(){
+  if(!R.kid)return;
+  var st=mainSteps(R.steps).map(function(t){return R.steps[t.i].t});
+  easy(document.getElementById("rmeta"),'<p class="ez-k">En pocas palabras</p><p class="ez-kid">'+R.kid+'</p>'+
+    (R.ej?'<p class="ez-ej"><b>Por ejemplo:</b> '+R.ej+'</p>':'')+
+    '<ol class="ez-map">'+st.map(function(t){return '<li>'+t+'</li>'}).join("")+'</ol>'+
+    '<p class="ez-t">'+(R.min?'⏱ Más o menos '+mins(R.min)+' · ':'')+st.length+' pasos. Haz uno, pulsa «Listo» y pasa al siguiente.</p>');
+}
+function easyBook(){
+  if(!B.kid)return;
+  var n=mainSteps(B.R.steps).length;
+  easy(document.getElementById("rmeta"),'<p class="ez-k">¿De qué va este libro?</p><p class="ez-kid">'+B.kid+'</p>'+
+    '<ol class="ez-map ez-how"><li><b>Prepara la cocina</b><small>'+n+' pasos, una sola vez</small></li>'+
+    '<li><b>Elige una receta</b><small>'+B.recetas.length+' para elegir, en el orden que quieras</small></li>'+
+    '<li><b>Sigue los pasos</b><small>copia, pega y marca cada uno</small></li></ol>');
+}
+
 function bookPage(){
   var h1=document.getElementById("rh1"),meta=document.getElementById("rmeta");
   if(B.intro&&meta){var p=document.createElement("p");p.className="lb-intro";p.innerHTML=B.intro;meta.parentNode.insertBefore(p,meta.nextSibling);}
+  easyBook();
   var prog=document.querySelector(".prog");
   if(prog){var h=document.createElement("h2");h.className="lb-h";h.innerHTML="🧺 Antes de empezar <small>Se hace una sola vez y sirve para todas las recetas del libro.</small>";prog.parentNode.insertBefore(h,prog);}
   var fin=document.getElementById("fin");
@@ -69,6 +91,7 @@ function showcase(){
 }
 
 function recipePage(){
+  easyRecipe();
   showcase();
   var i=B.recetas.indexOf(R),h1=document.getElementById("rh1");
   var crumb=document.createElement("a");crumb.className="lb-crumb";crumb.href=slug+".html";

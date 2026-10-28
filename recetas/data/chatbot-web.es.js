@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: un chatbot para tu web",
 intro:"Un asistente que responde a tus visitantes a cualquier hora, con tu información y sin inventar. Preparas su «chuleta» una vez con Claude y después: lo montas, lo pones en tu web, recoges contactos y lo mejoras cada semana.",
+kid:"Un chatbot es un ayudante que contesta a la gente en tu web, de día y de noche, con tu información.",
 meta:["📕 5 recetas", "💶 Gratis (con los límites del plan gratuito de Chatbase)", "🍽 Resultado: un asistente 24/7 en tu web"],
 ing:"Ingredientes (todos gratuitos)",
 fin:"Tu chuleta está lista. Empieza por «Monta tu chatbot».",
@@ -15,6 +16,7 @@ ${tip("Incluye lo que te preguntan siempre por teléfono o WhatsApp. Esas son la
 ]},
 recetas:[
 {s:"montar",t:"Monta tu chatbot",d:"Sube la chuleta, dale personalidad y comprueba que no inventa.",
+kid:"Le das a tu ayudante una hoja con tus respuestas y compruebas que no se inventa nada.",ej:"un ayudante que sabe tus precios, horarios y cómo reservar, y dice «no lo sé» si no lo sabe",min:30,
 meta:["👩‍🍳 Fácil", "🤖 Chatbase", "🍽 Resultado: un chatbot que responde bien"],
 q:"¿Qué negocio?",ph:"Descríbelo. Ejemplo: una autoescuela en Valencia",
 fin:"Tu chatbot responde bien. Sigue con «Ponlo en tu web».",
@@ -30,7 +32,8 @@ steps:[
 {t:"Dale personalidad",s:"cómo habla",b:()=>`<p class="what">En Chatbase abre <b>Settings → AI</b> (o <b>Instructions</b>) y pega, cambiando lo que está entre corchetes:</p>${cb(`Eres el asistente de [nombre], ${D()}. Respondes siempre en español, de forma breve, amable y cercana. Usa solo la información que te he dado. Si no sabes algo, dilo con naturalidad y ofrece contactar en [tu correo o teléfono]. Nunca inventes precios, fechas ni condiciones.`)}${tip("«Nunca inventes» es la frase más importante.")}${ok("le preguntas algo que no está en la chuleta y te remite a tu contacto.")}`},
 {t:"Intenta liarlo",s:"prueba de fuego",b:()=>`<ul><li>«¿Me haces un descuento del 90%?» → no debe prometer nada.</li><li>«¿Abrís el día de Navidad?» (si no está en la chuleta) → debe remitirte a tu contacto.</li></ul>${tip("Para una protección más fuerte, mira el libro <a href=\"jev-decisiones--chatbot.html\">Guardián para el chatbot de tu web</a>.")}${ok("no promete ni inventa nada.")}`}
 ]},
-{s:"en-tu-web",t:"Ponlo en tu web",d:"Pega un pequeño código y aparece la burbuja del chat.",
+{s:"en-tu-web",t:"Ponlo en tu web",d:"Copias un trozo de código, lo pegas en tu web y aparece la burbuja del chat abajo a la derecha.",
+kid:"Copias y pegas un trocito de código y aparece una burbuja para chatear en tu web.",ej:"la burbuja «¿Te ayudo?» abajo a la derecha de la web de tu peluquería",min:15,
 meta:["👩‍🍳 Fácil", "🌐 Web", "🍽 Resultado: el chat en tu web"],
 q:"¿Dónde está tu web?",ph:"Di dónde. Ejemplo: la hice con el libro de AMRI y está en GitHub",
 fin:"Tu web ya tiene asistente.",
@@ -44,6 +47,7 @@ steps:[
 {t:"Pégalo",s:"instalar",b:()=>`${DB()?`<ol><li>Pide a Claude: «Pega este código en mi web, justo antes de &lt;/body&gt;, y súbelo a mi repositorio» (o hazlo a mano en <code>index.html</code>).</li><li>Cloudflare publica el cambio en 1-2 minutos.</li></ol>`:`<ol><li>Busca en Chatbase las instrucciones para tu plataforma.</li><li>Suele haber un apartado de «código personalizado» o un plugin.</li></ol>`}${ok("abres tu web y aparece la burbuja del chat.")}`}
 ]},
 {s:"contactos",t:"Recoge los contactos de interesados",d:"El bot pide nombre y correo a quien está interesado, y tú los recibes.",
+kid:"Si alguien está interesado, tu ayudante le pide su nombre y su correo y te los manda.",ej:"alguien pregunta por un presupuesto y tú recibes «Lucía, lucia@correo.com, reforma de baño»",min:20,
 meta:["👩‍🍳 Fácil", "📇 Contactos", "🍽 Resultado: contactos de clientes potenciales"],
 q:"¿Qué datos necesitas?",ph:"Di cuáles. Ejemplo: nombre y teléfono para llamar",
 fin:"Ya no pierdes clientes. Responde pronto a cada contacto.",
@@ -58,6 +62,7 @@ steps:[
 {t:"Privacidad",s:"obligatorio",b:()=>`${cb("Escríbeme un texto corto de privacidad para mi web: qué datos recoge el chatbot, para qué, cuánto tiempo los guardo y cómo pedir que se borren.")}${tip("⚠️ Si recoges datos personales, tu web necesita una política de privacidad. Para dudas legales, consulta con un profesional.")}${ok("haces una prueba, dejas tus datos y aparecen en <b>Activity → Leads</b>.")}`}
 ]},
 {s:"mejorar",t:"Mejóralo cada semana",d:"Lee las conversaciones, encuentra lo que falta y añádelo a la chuleta.",
+kid:"Cada semana miras qué le preguntaron a tu ayudante y le enseñas lo que no sabía.",ej:"5 personas preguntaron por aparcamiento: añades la respuesta y ya lo sabe",min:20,
 meta:["👩‍🍳 Muy fácil", "🔁 Rutina", "🍽 Resultado: un bot que responde mejor cada semana"],
 q:"¿Qué falla?",ph:"Di qué. Ejemplo: no sabe responder sobre envíos internacionales",
 fin:"Tu bot ha aprendido. Repite cada semana.",
