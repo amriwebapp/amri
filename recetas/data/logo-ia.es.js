@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: diseña tu logo con IA",
 intro:"Tu logo y tu marca sin saber diseñar. Primero defines con Claude la personalidad de tu marca; después eliges la receta: logo con nombre, símbolo, todos los formatos, tu kit de marca y cómo protegerlo.",
+kid:"Un logo es el dibujo o las letras que hacen que la gente reconozca tu marca. Aquí lo haces con ayuda de Claude.",
 meta:["📕 6 recetas", "💶 Gratis", "🍽 Resultado: tu logo en todos los formatos y tu marca definida"],
 ing:"Ingredientes (todos gratuitos)",
 fin:"Tu marca tiene personalidad. Elige qué tipo de logo quieres hacer.",
@@ -15,6 +16,7 @@ steps:[
 ]},
 recetas:[
 {s:"con-nombre",t:"Logo con el nombre",d:"El nombre de tu marca con un estilo propio, que se lee perfecto.",
+kid:"Haces un logo con el nombre de tu marca escrito de una forma especial.",ej:"«Café Lunar» con letras redondas y una luna pequeña sobre la «u»",min:30,
 meta:["👩‍🍳 Fácil", "🔤 Logotipo", "🍽 Resultado: tu logo con nombre"],
 q:"¿Qué marca?",ph:"Nombre y de qué va. Ejemplo: «La Tostadora», una cafetería de barrio cálida",
 fin:"Tu logo con nombre está listo. Sigue con «Tu logo en todos los formatos».",
@@ -31,6 +33,7 @@ steps:[
 {t:"Si las letras fallan",s:"el truco",b:()=>`<p class="what">Quédate con el <b>símbolo sin texto</b> y escribe el nombre en Canva con una tipografía bonita. Es lo que hacen muchos diseñadores.</p>${cb("Recomiéndame 3 tipografías gratuitas de Canva que combinen con este logo y explícame por qué.")}${ok("el nombre se lee perfecto.")}`}
 ]},
 {s:"simbolo",t:"Un símbolo o icono",d:"Un dibujo sencillo que se reconoce sin letras, para tu perfil o tu app.",
+kid:"Haces un dibujo sencillo que la gente reconoce sin leer nada.",ej:"una hoja con forma de gota para una marca de cosmética natural",min:25,
 meta:["👩‍🍳 Fácil", "🔷 Símbolo", "🍽 Resultado: tu símbolo, sin texto"],
 q:"¿Para qué es?",ph:"Di de qué va. Ejemplo: una comunidad de senderismo",
 fin:"Tu símbolo está listo. Combínalo con tu nombre en Canva cuando lo necesites.",
@@ -59,6 +62,7 @@ steps:[
 {t:"Genera y revisa",s:"elegir",b:()=>`<ol><li>Genera en Ideogram.</li><li>Comprueba que las letras son exactamente las tuyas y se leen bien.</li></ol>${ok("tienes tu monograma elegido.")}`}
 ]},
 {s:"formatos",t:"Tu logo en todos los formatos",d:"Sin fondo, en blanco, foto de perfil y para documentos.",
+kid:"Preparas tu logo en todas las versiones que vas a necesitar: sin fondo, blanco y para tu foto de perfil.",ej:"tu logo en PNG sin fondo, en blanco para fondos oscuros y en círculo para Instagram",min:20,
 meta:["👩‍🍳 Fácil", "🗂 Formatos", "🍽 Resultado: una carpeta con todas las versiones"],
 q:"¿Dónde lo vas a usar?",ph:"Di dónde. Ejemplo: Instagram, mi web y facturas",
 fin:"Tienes tu carpeta de logos. Guárdala con el nombre de tu marca para tenerla siempre a mano.",
@@ -74,6 +78,7 @@ steps:[
 {t:"¿Y para imprimir en grande?",s:"vectorial",b:()=>`<p class="what">Para imprimir en grande hace falta un formato <b>vectorial</b> (SVG), que se amplía sin perder calidad.</p><ul><li>Herramientas como vectorizer.ai convierten tu PNG a SVG. Revisa sus condiciones antes.</li><li>Si tu logo es sencillo, Claude puede redibujarlo en SVG: «Redibuja este logo en SVG, lo más fiel posible».</li></ul>${ok("sabes cómo conseguir la versión para imprimir.")}`}
 ]},
 {s:"kit",t:"Tu kit de marca",d:"Colores, tipografías y reglas para que todo lo que hagas se vea coherente.",
+kid:"Apuntas tus colores y tus letras para que todo lo que hagas se vea igual de bonito.",ej:"3 colores con su código, 2 tipos de letra y 5 reglas para usar tu logo",min:20,
 meta:["👩‍🍳 Fácil", "🎨 Marca", "🍽 Resultado: una página con tu kit de marca"],
 q:"¿Qué necesitas?",ph:"Di para qué. Ejemplo: que mis posts y mi web tengan el mismo estilo",
 fin:"Tu kit de marca está listo. Úsalo en el libro de Canva para que todo salga con tu estilo.",
@@ -88,6 +93,7 @@ steps:[
 {t:"Guárdalo en Canva",s:"a mano",b:()=>`<ol><li>En Canva, guarda tus colores y tu logo en <b>Marca</b> o <b>Kit de marca</b>, si tu plan lo permite.</li><li>Si no, crea un diseño «Mi marca» con los colores y cópialos cuando los necesites.</li></ol>${ok("tienes tus colores a mano en Canva.")}`}
 ]},
 {s:"proteger",t:"Comprueba y protege tu logo",d:"Que no se parezca a otro, que puedas usarlo comercialmente y, si vas en serio, registrarlo.",
+kid:"Compruebas que tu logo no se parece a otro y aprendes cómo registrarlo para que sea solo tuyo.",ej:"buscar parecidos en Google Imágenes y ver cuánto cuesta registrarlo en la OEPM",min:25,
 meta:["👩‍🍳 Fácil", "🛡 Protección", "🍽 Resultado: tu logo comprobado"],
 q:"¿Qué te preocupa?",ph:"Di qué. Ejemplo: que se parezca a otra marca",
 fin:"Has comprobado tu logo. Para dudas legales importantes, consulta con un profesional.",

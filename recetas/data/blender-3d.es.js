@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: crea 3D con Claude y Blender",
 intro:"Conecta Claude con Blender una vez y después crea en 3D sin saber modelar: un objeto, una escena, tu logo o un producto girando. Tú describes; Claude construye la escena dentro de Blender.",
+kid:"Blender es un programa para hacer cosas en 3D. Tú le dices a Claude qué quieres y él lo construye dentro de Blender.",
 meta:["📕 5 recetas","💶 Gratis","🍽 Resultado: imágenes y vídeos en 3D"],
 ing:"Ingredientes (todos gratuitos)",
 fin:"Blender está conectado con Claude. Elige qué quieres crear.",
@@ -41,6 +42,7 @@ steps:[
 ]},
 recetas:[
 {s:"objeto",t:"Un objeto en 3D",d:"Una taza, una lámpara o lo que quieras, con su material, su luz y una imagen final.",
+kid:"Le pides a Claude un objeto, como una taza, y él lo construye en 3D y le saca una foto.",ej:"una taza de cerámica azul sobre una mesa de madera",min:25,
 meta:["👩‍🍳 Fácil","🧊 Objeto","🍽 Resultado: una imagen PNG de tu objeto (1920×1080)"],
 q:"¿Qué objeto?",ph:"Descríbelo. Ejemplo: una taza de cerámica azul sobre una mesa de madera",
 fin:"Tienes tu primer objeto en 3D. Guarda el archivo .blend: podrás cambiarlo cuando quieras.",
@@ -54,6 +56,7 @@ steps:[
 {t:"Saca la imagen",s:"render",b:()=>`${cb("Configura el render a 1920×1080 con el motor EEVEE, que es rápido.")}<ol><li>Pulsa <b>F12</b>.</li><li>En la ventana de la imagen: <b>Image → Save As</b> y guárdala como PNG.</li><li>Guarda también el proyecto: <b>File → Save</b>.</li></ol>${ok("tienes la imagen PNG y el archivo .blend guardados.")}`}
 ]},
 {s:"escena",t:"Una escena completa",d:"Una habitación o un rincón con varios objetos y luz de atardecer.",
+kid:"Claude construye una habitación entera en 3D, con muebles y la luz del atardecer.",ej:"un rincón de lectura con sillón, lámpara, estantería y una ventana",min:45,
 meta:["👩‍🍳 Media","🏠 Escena","🍽 Resultado: una imagen de tu escena"],
 q:"¿Qué escena?",ph:"Descríbela. Ejemplo: un rincón de lectura con sillón, lámpara y estantería",
 fin:"Tienes tu escena. Prueba a cambiar la hora del día pidiendo otra luz.",
@@ -68,6 +71,7 @@ steps:[
 {t:"Saca la imagen",s:"render",b:()=>`${cb("Configura el render a 1920×1080 con EEVEE y encuadra la cámara para que se vea toda la escena.")}<ol><li>Pulsa <b>F12</b> y guárdala con <b>Image → Save As</b>.</li></ol>${ok("tienes la imagen de tu escena.")}`}
 ]},
 {s:"logo-3d",t:"Tu logo en 3D",d:"Tu logo en relieve, con material dorado, girando despacio.",
+kid:"Claude convierte tu logo plano en una pieza dorada que da vueltas.",ej:"las letras de tu marca en oro, girando despacio en un vídeo de 5 segundos",min:35,
 meta:["👩‍🍳 Media","✨ Logo","🍽 Resultado: tu logo 3D en imagen y en vídeo"],
 q:"¿Qué acabado?",ph:"Describe el material. Ejemplo: dorado brillante sobre fondo negro",
 fin:"Tu logo en 3D está listo. Úsalo como intro de tus vídeos o en tu web.",
@@ -82,6 +86,7 @@ steps:[
 {t:"Renderiza imagen y vídeo",s:"render",b:()=>`${cb("Configura el render para exportar un vídeo MP4 en 1080p con EEVEE y dime dónde se guardará.")}<ol><li><b>Render → Render Animation</b> (Ctrl+F12).</li><li>Para una imagen fija, ve a un fotograma bonito y pulsa <b>F12</b>.</li></ol>${ok("tienes el vídeo y una imagen de tu logo.")}`}
 ]},
 {s:"producto",t:"Tu producto girando",d:"Tu producto sobre un pedestal, con la cámara girando alrededor en bucle, como en una tienda online.",
+kid:"Claude pone tu producto en un pedestal y la cámara da vueltas a su alrededor, como en una tienda.",ej:"una botella de perfume girando 360° para tu tienda online",min:45,
 meta:["👩‍🍳 Media","🔄 Producto","🍽 Resultado: un vídeo en bucle de tu producto"],
 q:"¿Qué producto?",ph:"Descríbelo con medidas. Ejemplo: un frasco de perfume de 12 cm, cristal y tapón dorado",
 fin:"Tu producto gira como en un anuncio. Úsalo en tu tienda o en redes.",

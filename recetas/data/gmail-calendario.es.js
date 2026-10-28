@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: tu secretaría con Gmail y Calendar",
 intro:"Claude lee tu correo y tu agenda (solo con tu permiso) y te ayuda a ponerte al día, responder, preparar reuniones y ordenar tu bandeja. Conecta Gmail y Calendar una vez y elige la receta. Claude nunca envía nada por ti: solo prepara borradores.",
+kid:"Claude lee tu correo y tu agenda (solo si le das permiso) y te ayuda a ponerte al día. Nunca envía nada por ti.",
 meta:["📕 6 recetas", "💶 Gratis si tu plan de Claude incluye conectores", "🍽 Resultado: tu correo y tu agenda en orden"],
 ing:"Ingredientes",
 fin:"Tu secretaría está conectada. Elige la receta que más tiempo te ahorre hoy.",
@@ -16,6 +17,7 @@ ${tip("Si usas una cuenta de trabajo, puede que tu empresa tenga que autorizar l
 ]},
 recetas:[
 {s:"buenos-dias",t:"Tu resumen de cada mañana",d:"En un minuto: lo urgente de tu correo y tus reuniones del día.",
+kid:"Cada mañana Claude te cuenta en un minuto qué correos importan y qué reuniones tienes.",ej:"«Hoy: 2 correos urgentes de clientes y reunión con Marta a las 11»",min:10,
 meta:["👩‍🍳 Muy fácil", "☀️ Rutina", "🍽 Resultado: sabes qué te espera hoy"],
 q:"¿Qué te preocupa más?",ph:"Di qué. Ejemplo: que se me pasen los correos de proveedores",
 fin:"Guarda el mensaje en una nota y úsalo cada mañana dentro del proyecto.",
@@ -30,6 +32,7 @@ steps:[
 {t:"Hazlo costumbre",s:"la rutina",b:()=>`<ol><li>Guarda el mensaje en una nota.</li><li>Úsalo cada mañana dentro del proyecto.</li></ol>${tip("Si usas Cowork en la app de escritorio, puedes preguntarle si puede convertirlo en una tarea que se repita cada mañana laborable.")}${ok("mañana lo repites y tardas menos de un minuto.")}`}
 ]},
 {s:"borradores",t:"Borradores de respuesta con tu tono",d:"Claude escribe; tú revisas y envías.",
+kid:"Claude escribe las respuestas a tus correos como las escribirías tú. Tú las lees y las envías.",ej:"tres respuestas preparadas a presupuestos que llevaban días esperando",min:15,
 meta:["👩‍🍳 Fácil", "✉️ Responder", "🍽 Resultado: borradores listos para enviar"],
 q:"¿Qué correos?",ph:"Di cuáles. Ejemplo: los de clientes que preguntan precios",
 fin:"Tienes los borradores. Lee cada uno antes de enviarlo: tú firmas, tú decides.",
@@ -44,6 +47,7 @@ steps:[
 {t:"Revisa y envía tú",s:"firmar",b:()=>`<ol><li>Abre cada borrador en Gmail (o cópialo).</li><li>Cambia lo que no dirías tú.</li><li>Envíalo.</li></ol>${ok("has enviado las respuestas que querías.")}`}
 ]},
 {s:"reuniones",t:"Prepara una reunión en 5 minutos",d:"Quién viene, de qué hablasteis la última vez y qué hay que decidir.",
+kid:"Antes de una reunión, Claude te cuenta quién viene y de qué hablasteis la última vez.",ej:"una ficha de la reunión con tu proveedor: quién es, qué quedó pendiente y qué decidir",min:10,
 meta:["👩‍🍳 Fácil", "🗓 Reuniones", "🍽 Resultado: una ficha de la reunión"],
 q:"¿Qué reunión?",ph:"Di cuál. Ejemplo: la de mañana con el proveedor de envíos",
 fin:"Llegas preparado. Después de la reunión, pide un correo de resumen.",
@@ -86,6 +90,7 @@ steps:[
 {t:"Comprueba",s:"con lupa",b:()=>`<p class="what">Abre dos o tres correos al azar y compara el importe con la tabla.</p>${ok("los datos que has comprobado coinciden.")}`}
 ]},
 {s:"limpiar",t:"Ordena tu bandeja de entrada",d:"Qué es newsletter, qué es importante y de qué te puedes dar de baja.",
+kid:"Claude mira tu bandeja de entrada y te dice qué es basura, qué importa y de qué darte de baja.",ej:"descubrir que 300 correos son de 6 tiendas y darte de baja de 4",min:20,
 meta:["👩‍🍳 Fácil", "🧹 Orden", "🍽 Resultado: un plan para vaciar tu bandeja"],
 q:"¿Cómo está tu bandeja?",ph:"Di cómo. Ejemplo: 3.000 correos sin leer",
 fin:"Tienes un plan. Las bajas y los borrados los haces tú, poco a poco.",

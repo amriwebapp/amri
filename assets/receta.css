@@ -242,3 +242,17 @@ body[data-receta] main>.back{display:none}
 main>.back{display:flex;width:fit-content}
 /* Sin extras, sin título de extras */
 .xt:has(+.xs+#extras:empty){display:none}
+
+/* ---------- «En pocas palabras»: lo primero al entrar ---------- */
+.lb-easy{clear:both;margin:0 0 22px;padding:20px 22px;border:1px solid var(--line);border-radius:18px;background:var(--card)}
+.ez-k{margin:0 0 6px;font-size:12.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
+.ez-kid{margin:0 0 10px;font-size:clamp(19px,4.4vw,22px);line-height:1.4;font-weight:600;color:var(--ink);text-wrap:pretty}
+.ez-ej{margin:0 0 14px;font-size:15.5px;color:var(--mute)}.ez-ej b{color:var(--ink)}
+.ez-map{list-style:none;counter-reset:ez;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.ez-map li{counter-increment:ez;display:flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border-radius:999px;background:var(--soft);font-size:14px;font-weight:600;line-height:1.2}
+.ez-map li::before{content:counter(ez);flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--acc);color:#fff;font-size:12px;font-weight:800}
+.ez-how{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ez-how li{flex-direction:column;align-items:flex-start;gap:6px;border-radius:14px;padding:12px}
+.ez-how b{font-size:15.5px}.ez-how small{font-weight:500;color:var(--mute);font-size:13.5px}
+.ez-t{margin:12px 0 0;font-size:14px;color:var(--mute)}
+@media(max-width:560px){.lb-easy{padding:16px}.ez-how{grid-template-columns:1fr}.ez-how li{flex-direction:row;align-items:center;flex-wrap:wrap}.ez-how small{flex-basis:100%;padding-left:30px;margin-top:-4px}}

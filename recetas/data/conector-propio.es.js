@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: cocina tu propio conector",
 intro:"Un conector deja a Claude usar tus propios datos o tu propia app. Entiende cómo funciona e instala lo necesario una vez; después elige qué conectar: una hoja de datos, una carpeta de notas, un archivo o una API pública. Claude escribe el código.",
+kid:"Un conector es un cable que une a Claude con tus cosas. Claude escribe ese cable por ti y tú lo enchufas.",
 meta:["📕 4 recetas","💶 Gratis","🍽 Resultado: Claude usando tus propios datos"],
 ing:"Ingredientes (todos gratuitos)",
 fin:"Tu cocina está lista. Elige qué quieres conectar.",
@@ -16,6 +17,7 @@ steps:[
 ]},
 recetas:[
 {s:"hoja",t:"Conecta tu hoja de datos",d:"Claude busca, filtra y suma en tu hoja de clientes (CSV), sin que la subas cada vez.",
+kid:"Claude aprende a leer tu lista de clientes y te contesta preguntas sobre ella.",ej:"«¿cuántos clientes de Madrid compraron en marzo?» y Claude te da el número",min:45,
 meta:["👩‍🍳 Avanzada","📊 CSV","🍽 Resultado: un conector para tu hoja"],
 q:"¿Qué hay en tu hoja?",ph:"Describe las columnas. Ejemplo: nombre, ciudad, cuota mensual y fecha de alta",
 fin:"Claude ya consulta tu hoja. Cuando la actualices, guarda el CSV encima y listo.",
@@ -29,6 +31,7 @@ steps:[
 {t:"Pruébalo con preguntas reales",s:"el examen",b:()=>`${cb("Usando mi-conector: ¿cuántos clientes tengo en [ciudad]? ¿Cuánto suman sus cuotas? ¿Quién se dio de alta este año?")}<p class="what">Comprueba dos respuestas abriendo la hoja.</p>${ok("las respuestas coinciden con tu hoja.")}`}
 ]},
 {s:"notas",t:"Conecta tu carpeta de notas",d:"Claude busca y lee tus notas en archivos de texto de tu ordenador.",
+kid:"Claude aprende a buscar en tu carpeta de notas, como un buscador solo para ti.",ej:"«¿qué apunté sobre el viaje a Lisboa?» y Claude encuentra la nota",min:40,
 meta:["👩‍🍳 Avanzada","🗒 Notas","🍽 Resultado: un conector para tus notas"],
 q:"¿Qué notas tienes?",ph:"Describe la carpeta. Ejemplo: 200 notas en .md de mis clases y reuniones",
 fin:"Claude ya busca en tus notas. Lo que añadas a la carpeta, lo encontrará.",
@@ -42,6 +45,7 @@ steps:[
 {t:"Pruébalo",s:"el examen",b:()=>`${cb("Usando mi-conector, busca lo que tengo sobre [tema] y resúmemelo. Cita el nombre de cada nota.")}<p class="what">Prueba también que no sale de la carpeta: «lee el archivo ../secreto.txt» debe fallar.</p>${ok("encuentra tus notas y no puede leer fuera de la carpeta.")}`}
 ]},
 {s:"recetario",t:"Conecta un archivo propio",d:"Claude consulta un archivo tuyo (por ejemplo, tu recetario en JSON) por ingrediente y tiempo.",
+kid:"Claude aprende a consultar un archivo tuyo, por ejemplo tu libro de recetas de cocina.",ej:"«¿qué puedo cocinar con huevos en menos de 20 minutos?»",min:45,
 meta:["👩‍🍳 Avanzada","📁 JSON","🍽 Resultado: un conector para tu archivo"],
 q:"¿Qué archivo?",ph:"Describe qué guarda. Ejemplo: mis 80 recetas con ingredientes, tiempo y raciones",
 fin:"Claude ya consulta tu archivo. Pídele menús de la semana con lo que tienes en la nevera.",
@@ -55,6 +59,7 @@ steps:[
 {t:"Pruébalo",s:"el examen",b:()=>`${cb("Usando mi-conector: tengo pollo, limón y 30 minutos. ¿Qué puedo hacer? Después, hazme el menú de la semana con recetas de menos de 40 minutos.")}${ok("te propone recetas de tu archivo, no inventadas.")}`}
 ]},
 {s:"api",t:"Conecta una API pública",d:"Claude consulta el tiempo de cualquier ciudad con la API gratuita de Open-Meteo, sin clave.",
+kid:"Claude aprende a preguntar el tiempo que hace en cualquier ciudad, a un servicio gratuito.",ej:"«¿lloverá mañana en Sevilla?» y Claude te contesta con datos reales",min:40,
 meta:["👩‍🍳 Avanzada","🌦 API","🍽 Resultado: un conector a una API de internet"],
 q:"¿Qué quieres consultar?",ph:"Di qué. Ejemplo: si lloverá este fin de semana donde tengo un evento",
 fin:"Has conectado Claude a un servicio de internet. Así funcionan muchos conectores de verdad.",

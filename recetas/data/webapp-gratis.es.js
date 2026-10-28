@@ -1,6 +1,7 @@
 (window.RECIPE=window.RECIPE||{}).es={
 title:"Libro: tu web online y gratis",
 intro:"Claude escribe el código, GitHub lo guarda y Cloudflare lo publica, gratis y sin saber programar. Prepara las cuentas una vez y después elige la receta: tu primera web, una web con cuentas de usuario, reservas, tu dominio, que te encuentren en Google…",
+kid:"Claude escribe tu web, GitHub la guarda y Cloudflare la pone en internet para que todo el mundo la vea. Gratis.",
 meta:["📕 8 recetas", "💶 Gratis (el dominio propio es de pago)", "🍽 Resultado: tu web online, a tu medida"],
 ing:"Ingredientes (todos gratuitos)",
 fin:"Tu cocina está lista. Empieza por «Tu primera web» y, después, elige la receta que quieras.",
@@ -26,6 +27,7 @@ ${tip("Abre siempre los chats de las recetas <b>dentro de este proyecto</b>.")}$
 recetas:[
 /* ---------------------------------------------------------------- */
 {s:"primera-web",t:"Tu primera web: presentación o negocio",d:"Una web de una o varias secciones, publicada en internet con candado, sin base de datos.",
+kid:"Le cuentas a Claude cómo quieres tu web, él la hace y tú la pones en internet.",ej:"la web de tu peluquería con servicios, precios, horario y un botón de WhatsApp",min:60,
 meta:["👩‍🍳 Fácil", "🌐 Web", "🍽 Resultado: tu web online en una dirección .pages.dev o .workers.dev"],
 q:"¿Qué web quieres?",ph:"Descríbela con tus palabras. Ejemplo: la web de mi peluquería con servicios, precios, horario y un botón de WhatsApp",
 fin:"Tu web está online. Cada vez que cambies algo y lo subas a GitHub, Cloudflare la actualiza sola. Sigue con «Tu propio dominio» o «Que te encuentren en Google».",
@@ -57,6 +59,7 @@ ${cb("Así se ve mi web en el móvil: [describe o sube una captura]. Esto no me 
 ]},
 /* ---------------------------------------------------------------- */
 {s:"web-con-datos",t:"Una web con cuentas y datos",d:"Cada persona crea su cuenta y guarda sus cosas: tareas, notas, mensajes de un formulario o un catálogo que actualizas tú.",
+kid:"Haces una web donde cada persona tiene su cuenta y guarda sus cosas.",ej:"una lista de la compra que comparte toda tu familia, cada uno con su cuenta",min:90,
 meta:["👩‍🍳 Media", "🗄 Base de datos", "🍽 Resultado: una web con cuentas de usuario y datos guardados"],
 q:"¿Qué quieres que guarde?",ph:"Descríbelo. Ejemplo: una lista de la compra compartida con mi familia",
 fin:"Tu web ya guarda datos de forma segura: cada persona ve solo lo suyo. Recuerda: los proyectos gratuitos de Supabase se pausan tras una semana sin uso y se reactivan con un clic.",
@@ -84,6 +87,7 @@ ${tip("Si abres <code>index.html</code> con doble clic, crear cuentas puede fall
 ]},
 /* ---------------------------------------------------------------- */
 {s:"reservas",t:"Reservas y citas online",d:"Tus clientes eligen un hueco libre y tú ves todas las reservas en una página privada.",
+kid:"Tus clientes eligen día y hora en tu web, y tú ves todas las reservas en una página secreta.",ej:"las citas de tu centro de masajes: el cliente elige «jueves 17:00» y tú lo ves",min:90,
 meta:["👩‍🍳 Media", "📅 Reservas", "🍽 Resultado: un sistema de reservas en tu web"],
 q:"¿Qué tipo de reservas?",ph:"Describe tu caso. Ejemplo: citas de 45 minutos de lunes a viernes de 9 a 14 en mi consulta",
 fin:"Ya aceptas reservas online. Revisa la página privada cada día y avisa a tus clientes si algo cambia.",
@@ -105,6 +109,7 @@ ${tip("Si tienes dudas legales, consúltalo con un profesional. Este texto es un
 ]},
 /* ---------------------------------------------------------------- */
 {s:"cambios",t:"Cambia tu web sin romperla",d:"Añade secciones, cambia textos o colores y vuelve atrás si algo sale mal.",
+kid:"Cambias cosas de tu web y, si algo sale mal, vuelves atrás como con un botón de deshacer.",ej:"añadir una sección de opiniones y volver a la versión anterior si no te gusta",min:20,
 meta:["👩‍🍳 Fácil", "🛠 Mantenimiento", "🍽 Resultado: tu web mejorada, con el historial a salvo"],
 q:"¿Qué quieres cambiar?",ph:"Descríbelo. Ejemplo: añadir una sección con opiniones de clientes",
 fin:"Cambio publicado. Regla de oro: un cambio pequeño cada vez y pruébalo antes del siguiente.",
@@ -126,6 +131,7 @@ ${det("A mano",["En GitHub, abre el archivo y pulsa <b>History</b>.","Abre la ve
 ]},
 /* ---------------------------------------------------------------- */
 {s:"dominio",t:"Tu propio dominio",d:"Que tu web tenga una dirección como tunombre.com, con candado.",
+kid:"Haces que tu web tenga un nombre fácil, como tunombre.com.",ej:"pasar de mi-web.pages.dev a peluqueriaana.com",min:30,
 meta:["👩‍🍳 Fácil", "🌍 Dominio", "💶 El dominio es de pago (cada año)"],
 q:"¿Ya tienes dominio?",ph:"Escribe el nombre que quieres. Ejemplo: peluquerialola.es",
 fin:"Tu web ya tiene su propia dirección. Activa la renovación automática: si el dominio caduca, tu web deja de cargar.",
@@ -145,6 +151,7 @@ ${ok("abres <code>https://tudominio</code> y tu web carga con candado.")}`}
 ]},
 /* ---------------------------------------------------------------- */
 {s:"google",t:"Que te encuentren en Google",d:"Títulos, descripciones y el registro en Google para que tu web aparezca al buscarte.",
+kid:"Preparas tu web para que salga en Google cuando alguien busca lo que haces.",ej:"que salgas al buscar «peluquería en Getafe»",min:45,
 meta:["👩‍🍳 Fácil", "🔎 Buscadores", "🍽 Resultado: tu web lista para aparecer en Google"],
 q:"¿Qué tipo de web es?",ph:"Di qué haces y dónde. Ejemplo: fisioterapeuta en Zaragoza",
 fin:"Tu web está preparada. Google tarda unos días o semanas en mostrarla: sé paciente y sigue mejorando el contenido.",
